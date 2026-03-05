@@ -1,0 +1,38 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2026, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing stable\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:14+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../rest/db-override-post.rst:2
+msgid "POST /rest/db/override"
+msgstr ""
+
+#: ../../../rest/db-override-post.rst:4
+msgid ""
+"Request override of a send only folder. Override means to make the local "
+"version latest, overriding changes made on other devices. This API call does "
+"nothing if the folder is not a send only folder."
+msgstr ""
+
+#: ../../../rest/db-override-post.rst:8
+msgid "Takes the mandatory parameter `folder` (folder ID)."
+msgstr ""
+
+#: ../../../rest/db-override-post.rst:10
+msgid ""
+"curl -X POST -H X-API-key:... http://127.0.0.1:8384/rest/db/override?"
+"folder=default"
+msgstr ""
