@@ -1,0 +1,47 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2026, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../events/remotedownloadprogress.rst:2
+msgid "RemoteDownloadProgress"
+msgstr ""
+
+#: ../../../events/remotedownloadprogress.rst:4
+msgid ""
+"This event is emitted when a :ref:`download-progress` message is received. "
+"It returns a map ``data`` of filenames with a count of downloaded blocks. "
+"The files in questions are currently being downloaded on the remote "
+"``device`` and belong to ``folder``."
+msgstr ""
+
+#: ../../../events/remotedownloadprogress.rst:9
+msgid ""
+"{\n"
+"   \"time\" : \"2017-03-07T00:11:37.65838955+01:00\",\n"
+"   \"globalID\" : 170,\n"
+"   \"data\" : {\n"
+"      \"state\" : {\n"
+"         \"tahr64-6.0.5.iso\" : 1784\n"
+"      },\n"
+"      \"device\" : \"F4HSJVO-CP2C3IL-YLQYLSU-XTYODAG-PPU4LGV-PH3MU4N-G6K56DV-"
+"IPN47A\",\n"
+"      \"folder\" : \"Dokumente\"\n"
+"   },\n"
+"   \"type\" : \"RemoteDownloadProgress\",\n"
+"   \"id\" : 163\n"
+"}"
+msgstr ""
