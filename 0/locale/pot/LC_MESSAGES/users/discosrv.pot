@@ -1,0 +1,312 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing 0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../users/discosrv.rst:2
+msgid "Custom Discovery Server"
+msgstr ""
+
+#: ../../../users/discosrv.rst:5
+msgid "Description"
+msgstr ""
+
+#: ../../../users/discosrv.rst:7
+msgid ""
+"This guide assumes that you have already set up Syncthing. If you haven't "
+"yet, head over to :ref:`getting-started` first."
+msgstr ""
+
+#: ../../../users/discosrv.rst:11
+msgid "Installing"
+msgstr ""
+
+#: ../../../users/discosrv.rst:13
+msgid ""
+"Go to `releases <https://github.com/syncthing/discosrv/releases>`__ and "
+"download the file appropriate for your operating system. Unpacking it will "
+"yield a binary called ``discosrv`` (or ``discosrv.exe`` on Windows). Start "
+"this in whatever way you are most comfortable with; double clicking should "
+"work in any graphical environment. At first start, discosrv will generate "
+"the directory ``/var/discosrv`` (``X:\\var\\discosrv`` on Windows, where X "
+"is the partition ``discosrv.exe`` is executed from) with configuration. If "
+"the user running ``discosrv`` doesn't have permission to do so, create the "
+"directory and set the owner appropriately or use the command line switches "
+"(see below) to select a different location."
+msgstr ""
+
+#: ../../../users/discosrv.rst:25
+msgid "Configuring"
+msgstr ""
+
+#: ../../../users/discosrv.rst:28
+msgid ""
+"If you are running an instance of syncthing on the discovery server, you "
+"must either add that instance to other nodes using a static address or bind "
+"the discovery server and syncthing instances to different IP addresses."
+msgstr ""
+
+#: ../../../users/discosrv.rst:33
+msgid ""
+"Running discosrv with non-default settings requires passing the respective "
+"parameters to discosrv on every start. ``discosrv -help`` gives you all the "
+"tweakables with their defaults:"
+msgstr ""
+
+#: ../../../users/discosrv.rst:39
+msgid ""
+"Usage of discosrv:\n"
+"  -cert string\n"
+"      Certificate file (default \"cert.pem\")\n"
+"  -db-backend string\n"
+"      Database backend to use (default \"ql\")\n"
+"  -db-dsn string\n"
+"      Database DSN (default \"memory://discosrv\")\n"
+"  -debug\n"
+"      Debug\n"
+"  -http\n"
+"      Listen on HTTP (behind an HTTPS proxy)\n"
+"  -key string\n"
+"      Key file (default \"key.pem\")\n"
+"  -limit-avg int\n"
+"      Allowed average package rate, per 10 s (default 5)\n"
+"  -limit-burst int\n"
+"      Allowed burst size, packets (default 20)\n"
+"  -limit-cache int\n"
+"      Limiter cache entries (default 10240)\n"
+"  -listen string\n"
+"      Listen address (default \":8443\")\n"
+"  -stats-file string\n"
+"      File to write periodic operation stats to"
+msgstr ""
+
+#: ../../../users/discosrv.rst:64
+msgid "Certificates"
+msgstr ""
+
+#: ../../../users/discosrv.rst:66
+msgid ""
+"The discovery server provides service over HTTPS. To ensure secure "
+"connections from clients there are three options:"
+msgstr ""
+
+#: ../../../users/discosrv.rst:69
+msgid ""
+"Use a CA-signed certificate pair for the domain name you will use for the "
+"discovery server. This is like any other HTTPS website; clients will "
+"authenticate the server based on it's certificate and domain name."
+msgstr ""
+
+#: ../../../users/discosrv.rst:73
+msgid ""
+"Use any certificate pair and let clients authenticate the server based on "
+"it's \"device ID\" (similar to Syncthing-to-Syncthing authentication). In "
+"this case, using ``syncthing -generate`` is a good option to create a "
+"certificate pair."
+msgstr ""
+
+#: ../../../users/discosrv.rst:78
+msgid ""
+"Pass the ``-http`` flag if the discovery server is behind an SSL-secured "
+"reverse proxy. See below for configuration."
+msgstr ""
+
+#: ../../../users/discosrv.rst:81
+msgid ""
+"For the first two options, the discovery server must be given the paths to "
+"the certificate and key at startup. This isn't necessary with the ``http`` "
+"flag::"
+msgstr ""
+
+#: ../../../users/discosrv.rst:84
+msgid ""
+"$ discosrv -cert /path/to/cert.pem -key /path/to/key.pem\n"
+"Server device ID is 7DDRT7J-UICR4PM-PBIZYL3-MZOJ7X7-EX56JP6-IK6HHMW-S7EK32W-"
+"G3EUPQA"
+msgstr ""
+
+#: ../../../users/discosrv.rst:87
+msgid ""
+"The discovery server prints it's device ID at startup. In the case where you "
+"are using a non CA signed certificate, this device ID (fingerprint) must be "
+"given to the clients in the discovery server URL::"
+msgstr ""
+
+#: ../../../users/discosrv.rst:91
+msgid ""
+"https://disco.example.com:8443/v2/?id=7DDRT7J-UICR4PM-PBIZYL3-MZOJ7X7-"
+"EX56JP6-IK6HHMW-S7EK32W-G3EUPQA"
+msgstr ""
+
+#: ../../../users/discosrv.rst:93
+msgid "Otherwise, the URL (note the trailing slash after the ``v2``) will be::"
+msgstr ""
+
+#: ../../../users/discosrv.rst:95
+msgid "https://disco.example.com:8443/v2/"
+msgstr ""
+
+#: ../../../users/discosrv.rst:98
+msgid "Pointing Syncthing at Your Discovery Server"
+msgstr ""
+
+#: ../../../users/discosrv.rst:100
+msgid ""
+"By default, Syncthing uses a number of global discovery servers, signified "
+"by the entry ``default`` in the list of discovery servers. To make Syncthing "
+"use your own instance of discosrv, open up Syncthing's web GUI. Go to "
+"settings, Global Discovery Server and add discosrv's host address to the "
+"comma-separated list, e.g. ``https://disco.example.com:8443/v2/``. Note that "
+"discosrv uses port 8443 by default. For discosrv to be available over the "
+"internet with a dynamic IP address, you will need a dynamic DNS service."
+msgstr ""
+
+#: ../../../users/discosrv.rst:108
+msgid ""
+"If you wish to use *only* your own discovery server, remove the ``default`` "
+"entry from the list."
+msgstr ""
+
+#: ../../../users/discosrv.rst:112
+msgid "Reverse Proxy Setup"
+msgstr ""
+
+#: ../../../users/discosrv.rst:114
+msgid ""
+"The discovery server can be run behind an SSL-secured reverse proxy. This "
+"allows:"
+msgstr ""
+
+#: ../../../users/discosrv.rst:117
+msgid ""
+"Use of a subdomain name without requiring a port number added to the URL"
+msgstr ""
+
+#: ../../../users/discosrv.rst:118
+msgid "Sharing an SSL certificate with multiple services on the same server"
+msgstr ""
+
+#: ../../../users/discosrv.rst:121
+msgid "Requirements"
+msgstr ""
+
+#: ../../../users/discosrv.rst:123
+msgid "Run the discovery server using the -http flag  :code:`discosrv -http`."
+msgstr ""
+
+#: ../../../users/discosrv.rst:124
+msgid "SSL certificate/key configured for the reverse proxy"
+msgstr ""
+
+#: ../../../users/discosrv.rst:125
+msgid ""
+"The \"X-Forwarded-For\" http header must be passed through with the client's "
+"real IP address"
+msgstr ""
+
+#: ../../../users/discosrv.rst:127
+msgid ""
+"The \"X-SSL-Cert\" must be passed through with the PEM-encoded client SSL "
+"certificate"
+msgstr ""
+
+#: ../../../users/discosrv.rst:129
+msgid ""
+"The proxy must request the client SSL certificate but not require it to be "
+"signed by a trusted CA."
+msgstr ""
+
+#: ../../../users/discosrv.rst:133
+msgid "Nginx"
+msgstr ""
+
+#: ../../../users/discosrv.rst:135
+msgid ""
+"These three lines in the configuration take care of the last three "
+"requirements listed above:"
+msgstr ""
+
+#: ../../../users/discosrv.rst:138
+msgid ""
+"proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n"
+"proxy_set_header X-SSL-Cert $ssl_client_cert;\n"
+"ssl_verify_client optional_no_ca;"
+msgstr ""
+
+#: ../../../users/discosrv.rst:144
+msgid ""
+"The following is a complete example Nginx configuration file. With this "
+"setup, clients can use https://discovery.mydomain.com as the discovery "
+"server URL in the Syncthing settings."
+msgstr ""
+
+#: ../../../users/discosrv.rst:148
+msgid ""
+"# HTTP 1.1 support\n"
+"proxy_http_version 1.1;\n"
+"proxy_buffering off;\n"
+"proxy_set_header Host $http_host;\n"
+"proxy_set_header Upgrade $http_upgrade;\n"
+"proxy_set_header Connection $proxy_connection;\n"
+"proxy_set_header X-Real-IP $remote_addr;\n"
+"proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n"
+"proxy_set_header X-Forwarded-Proto $proxy_x_forwarded_proto;\n"
+"proxy_set_header X-SSL-Cert $ssl_client_cert;\n"
+"upstream discovery.mydomain.com {\n"
+"    # Local IP address:port for discovery server\n"
+"    server 172.17.0.6:8443;\n"
+"}\n"
+"server {\n"
+"        server_name discovery.mydomain.com;\n"
+"        listen 80;\n"
+"        access_log /var/log/nginx/access.log vhost;\n"
+"        return 301 https://$host$request_uri;\n"
+"}\n"
+"server {\n"
+"        server_name discovery.mydomain.com;\n"
+"        listen 443 ssl http2;\n"
+"        access_log /var/log/nginx/access.log vhost;\n"
+"        ssl_protocols TLSv1 TLSv1.1 TLSv1.2;\n"
+"        ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-GCM-"
+"SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384: DHE-RSA-"
+"AES128-GCM-SHA256:DHE-DSS-AES128-GCM-SHA256:kEDH+AESGCM:ECDHE-RSA-AES128-"
+"SHA256:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA:E CDHE-ECDSA-AES128-"
+"SHA:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:"
+"ECDHE-ECDSA-AES256-SHA:DHE-RSA-AES128-SHA25 6:DHE-RSA-AES128-SHA:DHE-DSS-"
+"AES128-SHA256:DHE-RSA-AES256-SHA256:DHE-DSS-AES256-SHA:DHE-RSA-AES256-SHA:"
+"AES128-GCM-SHA256:AES256-GCM-SHA3 84:AES128-SHA256:AES256-SHA256:AES128-SHA:"
+"AES256-SHA:AES:CAMELLIA:DES-CBC3-SHA:!aNULL:!eNULL:!EXPORT:!DES:!RC4:!MD5:!"
+"PSK:!aECDH:!EDH-DSS -DES-CBC3-SHA:!EDH-RSA-DES-CBC3-SHA:!KRB5-DES-CBC3-SHA;\n"
+"        ssl_prefer_server_ciphers on;\n"
+"        ssl_session_timeout 5m;\n"
+"        ssl_session_cache shared:SSL:50m;\n"
+"        ssl_certificate /etc/nginx/certs/discovery.mydomain.com.crt;\n"
+"        ssl_certificate_key /etc/nginx/certs/discovery.mydomain.com.key;\n"
+"        ssl_dhparam /etc/nginx/certs/discovery.mydomain.com.dhparam.pem;\n"
+"        add_header Strict-Transport-Security \"max-age=31536000\";\n"
+"        ssl_verify_client optional_no_ca;\n"
+"        location / {\n"
+"                proxy_pass http://discovery.mydomain.com;\n"
+"        }\n"
+"}"
+msgstr ""
+
+#: ../../../users/discosrv.rst:189
+msgid ""
+"An example of automating the SSL certificates and reverse-proxying the "
+"Discovery Server and Syncthing using Nginx, `Let's Encrypt`_ and Docker can "
+"be found here_."
+msgstr ""

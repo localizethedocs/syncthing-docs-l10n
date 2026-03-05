@@ -1,0 +1,154 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing 0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../draft/localver.rst:4
+msgid "Understanding the Local Version Counter"
+msgstr ""
+
+#: ../../../draft/localver.rst:7
+msgid "Description"
+msgstr ""
+
+#: ../../../draft/localver.rst:9
+msgid ""
+"Changes to files are tracked by so called *version vectors*, which can be "
+"used to understand a file's provenance in terms of who changed it after "
+"receiving a copy from whom, etc. However, for other purposes we just need to "
+"know which files have changed since a certain point in time. For example "
+"this is used to determine which files to send information about when "
+"connecting to a device that we have already exchanged some index information "
+"with at an earlier time. For this purpose we have the *local version "
+"counter*."
+msgstr ""
+
+#: ../../../draft/localver.rst:17
+msgid ""
+"Conceptually it is an ever increasing integer kept for each folder by each "
+"device. Each time a change is made to the index information of an item (file "
+"or directory), that item is tagged with the current value of the local "
+"version counter, and the counter is increased."
+msgstr ""
+
+#: ../../../draft/localver.rst:23
+msgid "Principal of Operation"
+msgstr ""
+
+#: ../../../draft/localver.rst:25
+msgid ""
+"Assume that the starting value of the counter is ``0``. The next change that "
+"happens will be assigned local version ``1``. Local scanning reveals the "
+"presence of three new files, ``foo``, ``bar`` and ``baz``. When ``foo`` is "
+"discovered, it's index entry gets assigned local version ``1`` and the "
+"counter is increased. Likewise ``bar`` gets ``2`` and ``baz`` gets ``3``."
+msgstr ""
+
+#: ../../../draft/localver.rst:32 ../../../draft/localver.rst:43
+msgid "File"
+msgstr ""
+
+#: ../../../draft/localver.rst:32 ../../../draft/localver.rst:43
+msgid "Local Version"
+msgstr ""
+
+#: ../../../draft/localver.rst:34 ../../../draft/localver.rst:45
+msgid "foo"
+msgstr ""
+
+#: ../../../draft/localver.rst:34 ../../../draft/localver.rst:45
+msgid "1"
+msgstr ""
+
+#: ../../../draft/localver.rst:35 ../../../draft/localver.rst:46
+msgid "bar"
+msgstr ""
+
+#: ../../../draft/localver.rst:35
+msgid "2"
+msgstr ""
+
+#: ../../../draft/localver.rst:36 ../../../draft/localver.rst:47
+msgid "baz"
+msgstr ""
+
+#: ../../../draft/localver.rst:36 ../../../draft/localver.rst:47
+msgid "3"
+msgstr ""
+
+#: ../../../draft/localver.rst:39
+msgid ""
+"The next change to happen will be assigned the value ``4``. If the file "
+"``bar`` is updated, the index will look like:"
+msgstr ""
+
+#: ../../../draft/localver.rst:46
+msgid "4"
+msgstr ""
+
+#: ../../../draft/localver.rst:50
+msgid ""
+"If we had already given the first index above to another device, and they "
+"tell us that they see a maximum local version value of ``3``, then we know "
+"that we only need to send them information about entries with local version "
+"number ``4`` or higher -- in this case the entry for ``bar``."
+msgstr ""
+
+#: ../../../draft/localver.rst:56
+msgid "Implementation Details"
+msgstr ""
+
+#: ../../../draft/localver.rst:58
+msgid ""
+"In actual operation, the local version is assigned from the current "
+"timestamp in Unix epoch nanoseconds, potentially incremented in case of "
+"multiple changes happening during the same clock nanosecond. This guarantees "
+"that local version numbers are monotonically increasing even in the case of "
+"losing the local index database, and allows for detecting that case."
+msgstr ""
+
+#: ../../../draft/localver.rst:64
+msgid ""
+"During the initial protocol handshake (the \"Cluster Configuration\" "
+"message) each device sends the maximum known local version number (per "
+"folder) to the other device. That device can then send index information "
+"based on the difference between the received maximum local version number "
+"and the current local version counter."
+msgstr ""
+
+#: ../../../draft/localver.rst:70
+msgid ""
+"If the received maximum local version is lower than the *minimum* local "
+"version number in our index, the other device is fully out of date with our "
+"index information or a database reset has occurred. We send a *full index* "
+"(\"Index message\" followed by one or more \"Index Update\" messages)"
+msgstr ""
+
+#: ../../../draft/localver.rst:75
+msgid ""
+"If the received maximum local version number is lower than the *maximum* "
+"local version number in our index, the other device is missing some of our "
+"index information. We send an *incremental index* (\"Index Update\" messages "
+"only) containing all index entries with higher local version numbers than "
+"the received maximum."
+msgstr ""
+
+#: ../../../draft/localver.rst:81
+msgid ""
+"If the received maximum local version number is equal to the maximum local "
+"version number in our index, the other device is fully up to date with our "
+"index information."
+msgstr ""
