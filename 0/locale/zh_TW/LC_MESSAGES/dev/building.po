@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../dev/building.rst:4
 msgid "Building Syncthing"
-msgstr ""
+msgstr "建置 Syncthing"
 
 #: ../../../dev/building.rst:7
 msgid ""

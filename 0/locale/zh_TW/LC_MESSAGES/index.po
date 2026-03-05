@@ -43,7 +43,7 @@ msgstr ""
 
 #: ../../../index.rst:6
 msgid "Welcome to Syncthing's documentation!"
-msgstr ""
+msgstr "歡迎閱讀 Syncthing 文件！"
 
 #: ../../../index.rst:8
 msgid ""
@@ -53,6 +53,9 @@ msgid ""
 "`firewall setup <firewall-setup>` explains the networking necessary to get "
 "it to work."
 msgstr ""
+"新使用者可以從\\ :ref:`開始使用指南 <getting-started>`\\ 開始，接著或許可以參"
+"考\\ :ref:`常見問題 <faq>`\\ 。如果在裝置之間連接遇到問題，\\ :ref:`防火牆設"
+"定 <firewall-setup>`\\ 頁面會解釋需要哪些網路設定才能讓它正常運作。"
 
 #: ../../../index.rst:14
 msgid ""
@@ -63,7 +66,7 @@ msgstr ""
 
 #: ../../../index.rst:19
 msgid "Contact"
-msgstr ""
+msgstr "聯絡方式"
 
 #: ../../../index.rst:21
 msgid ""
@@ -83,6 +86,7 @@ msgid ""
 "To report security issues, please follow the instructions on the `Security "
 "page`_."
 msgstr ""
+"若要回報安全性議題，請依照\\ `安全頁面 <Security page_>`_\\ 上的指示操作。"
 
 #: ../../../index.rst:33
 msgid ""

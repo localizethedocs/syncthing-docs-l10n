@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../dev/infrastructure.rst:2
 msgid "Syncthing Infrastructure"
-msgstr ""
+msgstr "Syncthing 基礎設施"
 
 #: ../../../dev/infrastructure.rst:4
 msgid ""
