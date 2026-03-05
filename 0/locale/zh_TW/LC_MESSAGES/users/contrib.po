@@ -1,0 +1,335 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing 0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../users/contrib.rst:4
+msgid "Community Contributions"
+msgstr ""
+
+#: ../../../users/contrib.rst:6
+msgid ""
+"This page lists integrations, addons and packagings of Syncthing created by "
+"the community. Like all documentation pages, it's wiki editable so please do "
+"edit and add your own."
+msgstr ""
+
+#: ../../../users/contrib.rst:11
+msgid "GUI Wrappers"
+msgstr ""
+
+#: ../../../users/contrib.rst:16
+msgid "Cross-platform"
+msgstr ""
+
+#: ../../../users/contrib.rst:18
+msgid "https://github.com/syncthing/syncthing-gtk"
+msgstr ""
+
+#: ../../../users/contrib.rst:19
+msgid "https://github.com/sieren/QSyncthingTray"
+msgstr ""
+
+#: ../../../users/contrib.rst:20
+msgid "https://github.com/graboluk/stiko"
+msgstr ""
+
+#: ../../../users/contrib.rst:23
+msgid "Android"
+msgstr ""
+
+#: ../../../users/contrib.rst:25
+msgid "https://github.com/syncthing/syncthing-android"
+msgstr ""
+
+#: ../../../users/contrib.rst:30 ../../../users/contrib.rst:129
+msgid "Windows"
+msgstr ""
+
+#: ../../../users/contrib.rst:32
+msgid ""
+"https://github.com/canton7/SyncTrayzor (Windows host for Syncthing. "
+"Installer, auto-start, built-in browser, tray icon, folder watcher, and more)"
+msgstr ""
+
+#: ../../../users/contrib.rst:37
+msgid "OS X"
+msgstr ""
+
+#: ../../../users/contrib.rst:39
+msgid "https://github.com/xor-gate/syncthing-macosx"
+msgstr ""
+
+#: ../../../users/contrib.rst:40
+msgid "https://github.com/m0ppers/syncthing-bar (OSX 10.10 only)"
+msgstr ""
+
+#: ../../../users/contrib.rst:43
+msgid "Kindle Touch"
+msgstr ""
+
+#: ../../../users/contrib.rst:45
+msgid "https://github.com/gutenye/syncthing-kindle"
+msgstr ""
+
+#: ../../../users/contrib.rst:48
+msgid "Packages and Bundlings"
+msgstr ""
+
+#: ../../../users/contrib.rst:51
+msgid "Debian / Ubuntu"
+msgstr ""
+
+#: ../../../users/contrib.rst:53
+msgid "**Official packages:** http://apt.syncthing.net/"
+msgstr ""
+
+#: ../../../users/contrib.rst:54
+msgid ""
+"Syncthing GTK PPA: https://launchpad.net/~nilarimogard/+archive/ubuntu/"
+"webupd8/"
+msgstr ""
+
+#: ../../../users/contrib.rst:58
+msgid "CentOS"
+msgstr ""
+
+#: ../../../users/contrib.rst:60
+msgid "**UnOfficial packages:** https://github.com/mlazarov/syncthing-centos"
+msgstr ""
+
+#: ../../../users/contrib.rst:64
+msgid "ArchLinux"
+msgstr ""
+
+#: ../../../users/contrib.rst:66
+msgid "https://www.archlinux.org/packages/?name=syncthing"
+msgstr ""
+
+#: ../../../users/contrib.rst:67
+msgid "https://www.archlinux.org/packages/?name=syncthing-gtk"
+msgstr ""
+
+#: ../../../users/contrib.rst:68
+msgid "https://www.archlinux.org/packages/?name=syncthing-inotify"
+msgstr ""
+
+#: ../../../users/contrib.rst:69
+msgid "https://aur.archlinux.org/packages/syncthing-discosrv"
+msgstr ""
+
+#: ../../../users/contrib.rst:72
+msgid "arkOS"
+msgstr ""
+
+#: ../../../users/contrib.rst:74
+msgid "Syncthing is included in arkOS, https://arkos.io/."
+msgstr ""
+
+#: ../../../users/contrib.rst:77
+msgid "Docker"
+msgstr ""
+
+#: ../../../users/contrib.rst:79
+msgid ""
+"https://github.com/firecat53/dockerfiles/tree/master/syncthing (runs "
+"Syncthing and/or builds the binary from source)"
+msgstr ""
+
+#: ../../../users/contrib.rst:81
+msgid ""
+"https://github.com/firecat53/dockerfiles/tree/master/syncthing\\_discovery "
+"(Global announce server in a container)"
+msgstr ""
+
+#: ../../../users/contrib.rst:83
+msgid ""
+"https://github.com/joeybaker/docker-syncthing/ A fully baked docker "
+"container that allows custom config and will keep your settings and data "
+"past docker image restarts."
+msgstr ""
+
+#: ../../../users/contrib.rst:86
+msgid ""
+"https://github.com/djtm/syncthing-docker-scratch (builds docker containers "
+"from scratch base and/or runs the containers in docker or rkt)"
+msgstr ""
+
+#: ../../../users/contrib.rst:91
+msgid "Gentoo"
+msgstr ""
+
+#: ../../../users/contrib.rst:93
+msgid "https://packages.gentoo.org/packages/net-p2p/syncthing"
+msgstr ""
+
+#: ../../../users/contrib.rst:96
+msgid "FreeBSD"
+msgstr ""
+
+#: ../../../users/contrib.rst:98
+msgid "http://www.freshports.org/net/syncthing/"
+msgstr ""
+
+#: ../../../users/contrib.rst:101
+msgid "OpenBSD"
+msgstr ""
+
+#: ../../../users/contrib.rst:103
+msgid "http://cvsweb.openbsd.org/cgi-bin/cvsweb/ports/net/syncthing"
+msgstr ""
+
+#: ../../../users/contrib.rst:106
+msgid "OpenSUSE"
+msgstr ""
+
+#: ../../../users/contrib.rst:108
+msgid "http://software.opensuse.org/package/syncthing"
+msgstr ""
+
+#: ../../../users/contrib.rst:109
+msgid "https://susestudio.com/a/qkdvwb/syncthing"
+msgstr ""
+
+#: ../../../users/contrib.rst:112
+msgid "Synology NAS"
+msgstr ""
+
+#: ../../../users/contrib.rst:114
+msgid ""
+"http://packages.synocommunity.com/ Add the URL to Package Center in DSM. "
+"(NOTE: This page is not readable in your web browser. You can browse the "
+"files at https://synocommunity.com/packages). Numerous CPU architectures are "
+"supported. SPK's may be older versions, however you can execute a Syncthing "
+"version upgrade via Web-GUI after installation on Synology device."
+msgstr ""
+
+#: ../../../users/contrib.rst:122
+msgid "QNAP NAS"
+msgstr ""
+
+#: ../../../users/contrib.rst:124
+msgid ""
+"http://forum.qnap.com/viewtopic.php?f=320&t=97035&start=45#p429896 QPKG "
+"(Qnap Package) Available for ALL models x86, x86\\_64, Arm (all including "
+"new models)"
+msgstr ""
+
+#: ../../../users/contrib.rst:131
+msgid ""
+"https://github.com/sodacode/Windows-Syncthing-Installer A very minimalist "
+"Windows installer."
+msgstr ""
+
+#: ../../../users/contrib.rst:134
+msgid "Integrations"
+msgstr ""
+
+#: ../../../users/contrib.rst:137
+msgid "REST API Bindings"
+msgstr ""
+
+#: ../../../users/contrib.rst:139
+msgid "Ruby: https://github.com/retgoat/syncthing-ruby"
+msgstr ""
+
+#: ../../../users/contrib.rst:140
+msgid ""
+"Python: https://github.com/blakev/python-syncthing (https://pypi.python.org/"
+"pypi/syncthing)"
+msgstr ""
+
+#: ../../../users/contrib.rst:141
+msgid ""
+"Python: https://github.com/akissa/pysyncthing (https://pypi.python.org/pypi/"
+"pysyncthing)"
+msgstr ""
+
+#: ../../../users/contrib.rst:144
+msgid "Ports"
+msgstr ""
+
+#: ../../../users/contrib.rst:146
+msgid "Swift: https://source.ind.ie/project/pulse-swift/tree/master"
+msgstr ""
+
+#: ../../../users/contrib.rst:149
+msgid "Configuration management"
+msgstr ""
+
+#: ../../../users/contrib.rst:151
+msgid "Puppet: https://github.com/whefter/puppet-syncthing"
+msgstr ""
+
+#: ../../../users/contrib.rst:152
+msgid "Ansible: https://github.com/le9i0nx/ansible-syncthing"
+msgstr ""
+
+#: ../../../users/contrib.rst:153
+msgid "Salt: https://github.com/ALinuxNinja/salt-syncthing"
+msgstr ""
+
+#: ../../../users/contrib.rst:154
+msgid "Command line interface: https://github.com/syncthing/syncthing-cli"
+msgstr ""
+
+#: ../../../users/contrib.rst:157
+msgid "Older, Possibly Unmaintained"
+msgstr ""
+
+#: ../../../users/contrib.rst:160
+msgid ""
+"These projects have not been updated in quite a while. They may still be "
+"usable, or they may be in disrepair. If you are the maintainer of one of "
+"these and you have revived the project, please update this page accordingly."
+msgstr ""
+
+#: ../../../users/contrib.rst:165
+msgid "https://github.com/alex2108/syncthing-tray"
+msgstr ""
+
+#: ../../../users/contrib.rst:166
+msgid "https://github.com/icaruseffect/syncthing-ubuntu-indicator"
+msgstr ""
+
+#: ../../../users/contrib.rst:167
+msgid "https://github.com/iss0/SyncthingTray"
+msgstr ""
+
+#: ../../../users/contrib.rst:168
+msgid "https://github.com/bloones/SyncThingWin"
+msgstr ""
+
+#: ../../../users/contrib.rst:169
+msgid "https://github.com/thunderbirdtr/syncthing_rpm"
+msgstr ""
+
+#: ../../../users/contrib.rst:170
+msgid "https://copr.fedoraproject.org/coprs/tune2fs/syncthing/"
+msgstr ""
+
+#: ../../../users/contrib.rst:171
+msgid "https://github.com/dapperstout/pulse-java"
+msgstr ""
+
+#: ../../../users/contrib.rst:172
+msgid "https://github.com/cebe/pulse-php-discover"
+msgstr ""
+
+#: ../../../users/contrib.rst:173
+msgid "https://bitbucket.org/StartledPhoenix/saltstack-syncthing"
+msgstr ""

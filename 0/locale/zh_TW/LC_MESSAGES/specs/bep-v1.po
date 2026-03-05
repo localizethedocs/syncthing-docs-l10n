@@ -1,0 +1,1984 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing 0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../specs/bep-v1.rst:4
+msgid "Block Exchange Protocol v1"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:7
+msgid "Introduction and Definitions"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:9
+msgid ""
+"BEP is used between two or more *devices* thus forming a *cluster*. Each "
+"device has one or more *folders* of files described by the *local model*, "
+"containing metadata and block hashes. The local model is sent to the other "
+"devices in the cluster. The union of all files in the local models, with "
+"files selected for highest change version, forms the *global model*. Each "
+"device strives to get its folders in sync with the global model by "
+"requesting missing or outdated blocks from the other devices in the cluster."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:18
+msgid ""
+"File data is described and transferred in units of *blocks*, each being 128 "
+"KiB (131072 bytes) in size."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:21
+msgid ""
+"The key words \"MUST\", \"MUST NOT\", \"REQUIRED\", \"SHALL\", \"SHALL "
+"NOT\", \"SHOULD\", \"SHOULD NOT\", \"RECOMMENDED\", \"MAY\", and "
+"\"OPTIONAL\" in this document are to be interpreted as described in RFC 2119."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:26
+msgid "Transport and Authentication"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:28
+msgid ""
+"BEP is deployed as the highest level in a protocol stack, with the lower "
+"level protocols providing encryption and authentication."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:33
+msgid ""
+"+-----------------------------+\n"
+"|   Block Exchange Protocol   |\n"
+"|-----------------------------|\n"
+"| Encryption & Auth (TLS 1.2) |\n"
+"|-----------------------------|\n"
+"|             TCP             |\n"
+"|-----------------------------|\n"
+"v             ...             v"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:42
+msgid ""
+"The encryption and authentication layer SHALL use TLS 1.2 or a higher "
+"revision. A strong cipher suite SHALL be used, with \"strong cipher suite\" "
+"being defined as being without known weaknesses and providing Perfect "
+"Forward Secrecy (PFS). Examples of strong cipher suites are given at the end "
+"of this document. This is not to be taken as an exhaustive list of allowed "
+"cipher suites but represents best practices at the time of writing."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:50
+msgid ""
+"The exact nature of the authentication is up to the application, however it "
+"SHALL be based on the TLS certificate presented at the start of the "
+"connection. Possibilities include certificates signed by a common trusted "
+"CA, preshared certificates, preshared certificate fingerprints or "
+"certificate pinning combined with some out of band first verification. The "
+"reference implementation uses preshared certificate fingerprints (SHA-256) "
+"referred to as \"Device IDs\"."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:58
+msgid ""
+"There is no required order or synchronization among BEP messages except as "
+"noted per message type - any message type may be sent at any time and the "
+"sender need not await a response to one message before sending another."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:63
+msgid ""
+"The underlying transport protocol MUST guarantee reliable packet delivery."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:66
+msgid "Pre-authentication messages"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:68
+msgid ""
+"AFTER establishing a connection, but BEFORE performing any authentication, "
+"*devices* MUST exchange Hello messages."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:71
+msgid ""
+"Hello messages are used to carry additional information about the peer, "
+"which might be of interest to the user even if the peer is not permitted to "
+"communicate due to failing authentication."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:75
+msgid ""
+"Hello messages MUST be prefixed with a magic number **0x9F79BC40** "
+"represented in network byte order (BE), followed by 4 bytes representing the "
+"size of the message in network byte order (BE), followed by the content of "
+"the Hello message itself. The size of the contents of Hello message MUST be "
+"less or equal to 1024 bytes."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:83
+msgid ""
+"Prefix Structure:\n"
+"\n"
+" 0                   1                   2                   3\n"
+" 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                             Magic                             |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                            Length                             |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"/                                                               /\n"
+"\\                    Content of HelloMessage                    \\\n"
+"/                                                               /\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"\n"
+"HelloMessage Structure:\n"
+"\n"
+" 0                   1                   2                   3\n"
+" 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"/                                                               /\n"
+"\\              Device Name (length + padded data)               \\\n"
+"/                                                               /\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"/                                                               /\n"
+"\\              Client Name (length + padded data)               \\\n"
+"/                                                               /\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"/                                                               /\n"
+"\\             Client Version (length + padded data)             \\\n"
+"/                                                               /\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:117
+msgid "Fields (HelloMessage)"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:119
+msgid ""
+"The **Device Name** is a human readable (configured or auto detected) device "
+"name or host name, for the remote device."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:122
+msgid ""
+"The **Client Name** and **Client Version** identifies the implementation. "
+"The values SHOULD  be simple strings identifying the implementation name, as "
+"a user would expect to see it, and the version string in the same manner. An "
+"example Client Name is \"syncthing\" and an example Client Version is "
+"\"v0.7.2\". The Client Version field SHOULD follow the patterns laid out in "
+"the `Semantic Versioning <http://semver.org/>`__ standard."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:130 ../../../specs/bep-v1.rst:492
+#: ../../../specs/bep-v1.rst:729 ../../../specs/bep-v1.rst:843
+#: ../../../specs/bep-v1.rst:903 ../../../specs/bep-v1.rst:1035
+msgid "XDR"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:134
+msgid ""
+"struct HelloMessage {\n"
+"    string DeviceName<64>;\n"
+"    string ClientName<64>;\n"
+"    string ClientVersion<64>;\n"
+"};"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:140
+msgid ""
+"Immediately after exchanging Hello messages, the connection should be "
+"dropped if device does not pass authentication."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:144
+msgid "Post-authentication Messages"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:146
+msgid ""
+"Every message starts with one 32 bit word indicating the message version, "
+"type and ID, followed by the length of the message. The header is in network "
+"byte order, i.e. big endian. In this document, in diagrams and text, \"bit "
+"0\" refers to the *most significant* bit of a word; \"bit 31\" is thus the "
+"least significant bit of a 32 bit word."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:154
+msgid ""
+" 0                   1                   2                   3\n"
+" 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|  Ver  |       Message ID      |      Type     |   Reserved  |C|\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                            Length                             |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:162
+msgid ""
+"For BEP v1 the **Version** field is set to zero. Future versions with "
+"incompatible message formats will increment the Version field. A message "
+"with an unknown version is a protocol error and MUST result in the "
+"connection being terminated. A client supporting multiple versions MAY retry "
+"with a different protocol version upon disconnection."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:168
+msgid ""
+"The **Message ID** is set to a unique value for each transmitted Request "
+"message. In Response messages it is set to the Message ID of the "
+"corresponding Request message. The uniqueness requirement implies that no "
+"more than 4096 request messages may be outstanding at any given moment. For "
+"message types that do not have a corresponding response (Cluster "
+"Configuration, Index, etc.) the Message ID field is irrelevant and SHOULD be "
+"set to zero."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:175
+msgid ""
+"The **Type** field indicates the type of data following the message header "
+"and is one of the integers defined below. A message of an unknown type is a "
+"protocol error and MUST result in the connection being terminated."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:179
+msgid ""
+"The **Compression** bit \"C\" indicates the compression used for the message."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:181
+msgid "For C=0:"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:183
+msgid ""
+"The Length field contains the length, in bytes, of the uncompressed message "
+"data."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:186
+msgid "The message is not compressed."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:188
+msgid "For C=1:"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:190
+msgid ""
+"The Length field contains the length, in bytes, of the compressed message "
+"data plus a four byte uncompressed length field."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:193
+msgid ""
+"The compressed message data is preceded by a 32 bit field denoting the "
+"length of the uncompressed message."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:196
+msgid ""
+"The message data is compressed using the LZ4 format and algorithm described "
+"in http://www.lz4.org/."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:199
+msgid ""
+"All data within the message (post decompression, if compression is in use) "
+"MUST be in XDR (RFC 1014) encoding. All fields shorter than 32 bits and all "
+"variable length data MUST be padded to a multiple of 32 bits. The actual "
+"data types in use by BEP, in XDR naming convention, are the following:"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:205
+msgid "(unsigned) int:"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:206
+msgid "(unsigned) 32 bit integer"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:208
+msgid "(unsigned) hyper:"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:209
+msgid "(unsigned) 64 bit integer"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:211
+msgid "opaque<>"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:212
+msgid "variable length opaque data"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:214
+msgid "string<>"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:215
+msgid "variable length string"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:217
+msgid ""
+"The transmitted length of string and opaque data is the length of actual "
+"data, excluding any added padding. The encoding of opaque<> and string<> are "
+"identical, the distinction being solely one of interpretation. Opaque data "
+"should not be interpreted but can be compared bytewise to other opaque data. "
+"All strings MUST use the Unicode UTF-8 encoding, normalization form C."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:225
+msgid "Cluster Config (Type = 0)"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:233
+msgid ""
+"This informational message provides information about the cluster "
+"configuration as it pertains to the current connection. A Cluster Config "
+"message MUST be the first message sent on a BEP connection. Additional "
+"Cluster Config messages MUST NOT be sent after the initial exchange."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:239 ../../../specs/bep-v1.rst:537
+#: ../../../specs/bep-v1.rst:770 ../../../specs/bep-v1.rst:863
+#: ../../../specs/bep-v1.rst:922 ../../../specs/bep-v1.rst:1071
+msgid "Graphical Representation"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:243
+msgid ""
+"ClusterConfigMessage Structure:\n"
+"\n"
+" 0                   1                   2                   3\n"
+" 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                       Number of Folders                       |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"/                                                               /\n"
+"\\                Zero or more Folder Structures                 \\\n"
+"/                                                               /\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                       Number of Options                       |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"/                                                               /\n"
+"\\                Zero or more Option Structures                 \\\n"
+"/                                                               /\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"\n"
+"Folder Structure:\n"
+"\n"
+" 0                   1                   2                   3\n"
+" 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                         Length of ID                          |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"/                                                               /\n"
+"\\                     ID (variable length)                      \\\n"
+"/                                                               /\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"/                                                               /\n"
+"\\                 Label (length + padded data)                  \\\n"
+"/                                                               /\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                       Number of Devices                       |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"/                                                               /\n"
+"\\                Zero or more Device Structures                 \\\n"
+"/                                                               /\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                             Flags                             |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                       Number of Options                       |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"/                                                               /\n"
+"\\                Zero or more Option Structures                 \\\n"
+"/                                                               /\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"\n"
+"Device Structure:\n"
+"\n"
+" 0                   1                   2                   3\n"
+" 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                         Length of ID                          |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"/                                                               /\n"
+"\\                     ID (variable length)                      \\\n"
+"/                                                               /\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                        Length of Name                         |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"/                                                               /\n"
+"\\                    Name (variable length)                     \\\n"
+"/                                                               /\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                      Number of Addresses                      |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                       Length of Address                       |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"/                                                               /\n"
+"\\                   Address (variable length)                   \\\n"
+"/                                                               /\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                          Compression                          |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                      Length of Cert Name                      |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"/                                                               /\n"
+"\\                  Cert Name (variable length)                  \\\n"
+"/                                                               /\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                                                               |\n"
+"+                  Max Local Version (64 bits)                  +\n"
+"|                                                               |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                             Flags                             |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                       Number of Options                       |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"/                                                               /\n"
+"\\                Zero or more Option Structures                 \\\n"
+"/                                                               /\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"\n"
+"Option Structure:\n"
+"\n"
+" 0                   1                   2                   3\n"
+" 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                         Length of Key                         |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"/                                                               /\n"
+"\\                     Key (variable length)                     \\\n"
+"/                                                               /\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                        Length of Value                        |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"/                                                               /\n"
+"\\                    Value (variable length)                    \\\n"
+"/                                                               /\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:356
+msgid "Fields (ClusterConfigMessage)"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:362
+msgid ""
+"The **Folders** field contains the list of folders that will be synchronized "
+"over the current connection."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:365
+msgid ""
+"The **Options** field is a list of options that apply to the current "
+"connection. The options are used in an implementation specific manner. The "
+"options list is conceptually a map of keys to values, although it is "
+"transmitted in the form of a list of key and value pairs, both of string "
+"type. Key ID:s are implementation specific. An implementation MUST ignore "
+"unknown keys. An implementation MAY impose limits on the length keys and "
+"values. The options list may be used to inform devices of relevant local "
+"configuration options such as rate limiting or make recommendations about "
+"request parallelism, device priorities, etc. An empty options list is valid "
+"for devices not having any such information to share. Devices MAY NOT make "
+"any assumptions about peers acting in a specific manner as a result of sent "
+"options."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:380
+msgid "Fields (Folder Structure)"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:382
+msgid "The **ID** field contains the folder ID, as a human readable string."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:384
+msgid ""
+"The **Label** field contains the folder label, as human readable name for "
+"the folder."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:386
+msgid ""
+"The **Devices** field is list of devices participating in sharing this "
+"folder."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:388
+msgid ""
+"The **Flags** field contains flags that affect the behavior of the folder. "
+"The folder Flags field contains the following single bit flags:"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:393
+msgid ""
+" 0                   1                   2                   3\n"
+" 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                           Reserved                    |T|D|P|R|\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:0
+msgid "Bit 31 (\"R\", Read Only)"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:400
+msgid ""
+"is set for folders that the device will accept no updates from the network "
+"for."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:0
+msgid "Bit 30 (\"P\", Ignore Permissions)"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:404
+msgid ""
+"is set for folders that the device will not accept or announce file "
+"permissions for."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:0
+msgid "Bit 29 (\"D\", Ignore Deletes)"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:408
+msgid "is set for folders that the device will ignore deletes for."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:0
+msgid "Bit 28 (\"T\", Disable Temporary Indexes)"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:411
+msgid ""
+"is set for folders that will not dispatch and do not wish to receive "
+"progress updates about partially downloaded files via DownloadProgress "
+"messages."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:415
+msgid ""
+"The **Options** field contains a list of options that apply to the folder."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:418
+msgid "Fields (Device Structure)"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:420
+msgid ""
+"The device **ID** field is a 32 byte number that uniquely identifies the "
+"device. For instance, the reference implementation uses the SHA-256 of the "
+"device X.509 certificate."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:424
+msgid ""
+"The **Name** field is a human readable name assigned to the described device "
+"by the sending device. It MAY be empty and it need not be unique."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:427
+msgid ""
+"The list of **Addressess** is that used by the sending device to connect to "
+"the described device."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:430
+msgid ""
+"The **Compression** field indicates the compression mode in use for this "
+"device and folder. The following values are valid:"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:0
+msgid "0"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:433
+msgid ""
+"Compress metadata. This enables compression of metadata messages such as "
+"Index."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:0 ../../../specs/bep-v1.rst:1200
+msgid "1"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:434
+msgid "Compression disabled. No compression is used on any message."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:0 ../../../specs/bep-v1.rst:1201
+msgid "2"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:435
+msgid ""
+"Compress always. Metadata messages as well as Response messages are "
+"compressed."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:437
+msgid ""
+"The **Cert Name** field indicates the expected certificate name for this "
+"device. It is commonly blank, indicating to use the implementation default."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:440
+msgid ""
+"The **Max Local Version** field contains the highest local file version "
+"number of the files already known to be in the index sent by this device. If "
+"nothing is known about the index of a given device, this field MUST be set "
+"to zero. When receiving a Cluster Config message with a non-zero Max Local "
+"Version for the local device ID, a device MAY elect to send an Index Update "
+"message containing only files with higher local version numbers in place of "
+"the initial Index message."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:448
+msgid ""
+"The **Flags** field indicates the sharing mode of the folder and other "
+"device & folder specific settings. See the discussion on Sharing Modes. The "
+"Device Flags field contains the following single bit flags:"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:454
+msgid ""
+" 0                   1                   2                   3\n"
+" 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|          Reserved         |Pri|          Reserved       |I|R|T|\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:0
+msgid "Bit 31 (\"T\", Trusted)"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:460
+msgid "is set for devices that participate in trusted mode."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:0
+msgid "Bit 30 (\"R\", Read Only)"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:463
+msgid "is set for devices that participate in read only mode."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:0
+msgid "Bit 29 (\"I\", Introducer)"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:466
+msgid "is set for devices that are trusted as cluster introducers."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:0
+msgid "Bits 16 through 28"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:469 ../../../specs/bep-v1.rst:485
+msgid "are reserved and MUST be set to zero."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:0
+msgid "Bits 14-15 (\"Pri\", Priority)"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:471
+msgid ""
+"indicate the device's upload priority for this folder. Possible values are:"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:0
+msgid "00"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:474
+msgid "The default. Normal priority."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:0
+msgid "01"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:476
+msgid ""
+"High priority. Other devices SHOULD favour requesting files from this device "
+"over devices with normal or low priority."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:0 ../../../specs/bep-v1.rst:1209
+msgid "10"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:479
+msgid ""
+"Low priority. Other devices SHOULD avoid requesting files from this device "
+"when they are available from other devices."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:0 ../../../specs/bep-v1.rst:1210
+msgid "11"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:482
+msgid ""
+"Sharing disabled. Other devices SHOULD NOT request files from this device."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:0
+msgid "Bits 0 through 14"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:487
+msgid "Exactly one of the T and R bits MUST be set."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:489
+msgid ""
+"The **Options** field contains a list of options that apply to the device."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:496
+msgid ""
+"struct ClusterConfigMessage {\n"
+"    Folder Folders<1000000>;\n"
+"    Option Options<64>;\n"
+"};\n"
+"\n"
+"struct Folder {\n"
+"    string ID<256>;\n"
+"    string Label<256>;\n"
+"    Device Devices<1000000>;\n"
+"    unsigned int Flags;\n"
+"    Option Options<64>;\n"
+"};\n"
+"\n"
+"struct Device {\n"
+"    opaque ID<32>;\n"
+"    string Name<64>;\n"
+"    string Addresses<64>;\n"
+"    unsigned int Compression;\n"
+"    string CertName<64>;\n"
+"    hyper MaxLocalVersion;\n"
+"    unsigned int Flags;\n"
+"    Option Options<64>;\n"
+"};\n"
+"\n"
+"struct Option {\n"
+"    string Key<64>;\n"
+"    string Value<1024>;\n"
+"};"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:526
+msgid "Index (Type = 1) and Index Update (Type = 6)"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:528
+msgid ""
+"The Index and Index Update messages define the contents of the senders "
+"folder. An Index message represents the full contents of the folder and thus "
+"supersedes any previous index. An Index Update amends an existing index with "
+"new information, not affecting any entries not included in the message. An "
+"Index Update MAY NOT be sent unless preceded by an Index, unless a non-zero "
+"Max Local Version has been announced for the given folder by the peer device."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:541
+msgid ""
+"IndexMessage Structure:\n"
+"\n"
+" 0                   1                   2                   3\n"
+" 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                       Length of Folder                        |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"/                                                               /\n"
+"\\                   Folder (variable length)                    \\\n"
+"/                                                               /\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                        Number of Files                        |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"/                                                               /\n"
+"\\               Zero or more FileInfo Structures                \\\n"
+"/                                                               /\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                             Flags                             |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                       Number of Options                       |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"/                                                               /\n"
+"\\                Zero or more Option Structures                 \\\n"
+"/                                                               /\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"\n"
+"FileInfo Structure:\n"
+"\n"
+" 0                   1                   2                   3\n"
+" 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                        Length of Name                         |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"/                                                               /\n"
+"\\                    Name (variable length)                     \\\n"
+"/                                                               /\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                             Flags                             |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                                                               |\n"
+"+                      Modified (64 bits)                       +\n"
+"|                                                               |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"/                                                               /\n"
+"\\                   Version (variable length)                   \\\n"
+"/                                                               /\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                                                               |\n"
+"+                    Local Version (64 bits)                    +\n"
+"|                                                               |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                       Number of Blocks                        |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"/                                                               /\n"
+"\\               Zero or more BlockInfo Structures               \\\n"
+"/                                                               /\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"\n"
+"Vector Structure:\n"
+"\n"
+" 0                   1                   2                   3\n"
+" 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                      Number of Counters                       |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"/                                                               /\n"
+"\\                Zero or more Counter Structures                \\\n"
+"/                                                               /\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"\n"
+"Counter Structure:\n"
+"\n"
+" 0                   1                   2                   3\n"
+" 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                                                               |\n"
+"+                          ID (64 bits)                         +\n"
+"|                                                               |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                                                               |\n"
+"+                        Value (64 bits)                        +\n"
+"|                                                               |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"\n"
+"\n"
+"BlockInfo Structure:\n"
+"\n"
+" 0                   1                   2                   3\n"
+" 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                             Size                              |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                        Length of Hash                         |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"/                                                               /\n"
+"\\                    Hash (variable length)                     \\\n"
+"/                                                               /\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:641
+msgid "Fields (Index Message)"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:643
+msgid ""
+"The **Folder** field identifies the folder that the index message pertains "
+"to."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:645
+msgid "**Files**"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:647
+msgid ""
+"The **Flags** field is reserved for future use and MUST currently be set to "
+"zero."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:650
+msgid ""
+"The **Options** list is implementation defined and as described in the "
+"ClusterConfig message section."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:654
+msgid "Fields (FileInfo Structure)"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:656
+msgid ""
+"The **Name** is the file name path relative to the folder root. Like all "
+"strings in BEP, the Name is always in UTF-8 NFC regardless of operating "
+"system or file system specific conventions. The Name field uses the slash "
+"character (\"/\") as path separator, regardless of the implementation's "
+"operating system conventions. The combination of Folder and Name uniquely "
+"identifies each file in a cluster."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:663
+msgid "The **Flags** field is made up of the following single bit flags:"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:667
+msgid ""
+" 0                   1                   2                   3\n"
+" 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|            Reserved       |U|S|P|D|I|R|   Unix Perm. & Mode   |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:0
+msgid "The lower 12 bits"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:673
+msgid ""
+"hold the common Unix permission and mode bits. An implementation MAY ignore "
+"or interpret these as is suitable on the host operating system."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:0
+msgid "Bit 19 (\"R\")"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:677
+msgid ""
+"is set when the file has been deleted. The block list SHALL be of length "
+"zero and the modification time indicates the time of deletion or, if the "
+"time of deletion is not reliably determinable, the last known modification "
+"time."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:0
+msgid "Bit 18 (\"I\")"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:682
+msgid ""
+"is set when the file is invalid and unavailable for synchronization. A peer "
+"MAY set this bit to indicate that it can temporarily not serve data for the "
+"file."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:0
+msgid "Bit 17 (\"D\")"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:686
+msgid ""
+"is set when the item represents a directory. The block list SHALL be of "
+"length zero."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:0
+msgid "Bit 16 (\"P\")"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:689
+msgid ""
+"is set when there is no permission information for the file. This is the "
+"case when it originates on a file system which does not support permissions. "
+"Changes to only permission bits SHOULD be disregarded on files with this bit "
+"set. The permissions bits MUST be set to the octal value 0666."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:0
+msgid "Bit 15 (\"S\")"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:695
+msgid ""
+"is set when the file is a symbolic link. The block list SHALL be of one or "
+"more blocks since the target of the symlink is stored within the blocks of "
+"the file."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:0
+msgid "Bit 14 (\"U\")"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:699
+msgid ""
+"is set when the symbolic links target does not exist. On systems where "
+"symbolic links have types, this bit being means that the default file "
+"symlink SHALL be used. If this bit is unset bit 19 will decide the type of "
+"symlink to be created."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:0
+msgid "Bit 0 through 13"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:704
+msgid "are reserved for future use and SHALL be set to zero."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:707
+msgid ""
+"The **Modified** time is expressed as the number of seconds since the Unix "
+"Epoch (1970-01-01 00:00:00 UTC)."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:710
+msgid ""
+"The **Version** field is a version vector describing the updates performed "
+"to a file by all members in the cluster. Each counter in the version vector "
+"is an ID-Value tuple. The ID is used the first 64 bits of the device ID. The "
+"Value is a simple incrementing counter, starting at zero. The combination of "
+"Folder, Name and Version uniquely identifies the contents of a file at a "
+"given point in time."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:717
+msgid ""
+"The **Local Version** field is the value of a device local monotonic clock "
+"at the time of last local database update to a file. The clock ticks on "
+"every local database update."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:721
+msgid ""
+"The **Blocks** list contains the size and hash for each block in the file. "
+"Each block represents a 128 KiB slice of the file, except for the last block "
+"which may represent a smaller amount of data."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:725
+msgid ""
+"The hash algorithm is implied by the **Hash** length. Currently, the hash "
+"MUST be 32 bytes long and computed by SHA256."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:733
+msgid ""
+"struct IndexMessage {\n"
+"    string Folder<256>;\n"
+"    FileInfo Files<1000000>;\n"
+"    unsigned int Flags;\n"
+"    Option Options<64>;\n"
+"};\n"
+"\n"
+"struct FileInfo {\n"
+"    string Name<8192>;\n"
+"    unsigned int Flags;\n"
+"    hyper Modified;\n"
+"    Vector Version;\n"
+"    hyper LocalVersion;\n"
+"    BlockInfo Blocks<10000000>;\n"
+"};\n"
+"\n"
+"struct Vector {\n"
+"    Counter Counters<>;\n"
+"};\n"
+"\n"
+"struct Counter {\n"
+"    unsigned hyper ID;\n"
+"    unsigned hyper Value;\n"
+"};\n"
+"\n"
+"struct BlockInfo {\n"
+"    unsigned int Size;\n"
+"    opaque Hash<64>;\n"
+"};"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:764
+msgid "Request (Type = 2)"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:766
+msgid ""
+"The Request message expresses the desire to receive a data block "
+"corresponding to a part of a certain file in the peer's folder."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:774
+msgid ""
+"RequestMessage Structure:\n"
+"\n"
+" 0                   1                   2                   3\n"
+" 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                       Length of Folder                        |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"/                                                               /\n"
+"\\                   Folder (variable length)                    \\\n"
+"/                                                               /\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                        Length of Name                         |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"/                                                               /\n"
+"\\                    Name (variable length)                     \\\n"
+"/                                                               /\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                                                               |\n"
+"+                       Offset (64 bits)                        +\n"
+"|                                                               |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                             Size                              |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                        Length of Hash                         |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"/                                                               /\n"
+"\\                    Hash (variable length)                     \\\n"
+"/                                                               /\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                             Flags                             |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                       Number of Options                       |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"/                                                               /\n"
+"\\                Zero or more Option Structures                 \\\n"
+"/                                                               /\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:813 ../../../specs/bep-v1.rst:882
+#: ../../../specs/bep-v1.rst:1090
+msgid "Fields"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:815
+msgid ""
+"The Folder and Name fields are as documented for the Index message. The "
+"Offset and Size fields specify the region of the file to be transferred. "
+"This SHOULD equate to exactly one block as seen in an Index message."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:819
+msgid ""
+"The Hash field MAY be set to the expected hash value of the block, or may be "
+"left empty (zero length). If set, the other device SHOULD ensure that the "
+"transmitted block matches the requested hash. The other device MAY reuse a "
+"block from a different file and offset having the same size and hash, if one "
+"exists."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:825
+msgid "The **Flags** field is made up of the following single bit flags: ::"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:828
+msgid ""
+" 0                   1                   2                   3\n"
+" 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                           Reserved                          |T|\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:0
+msgid "Bit 31 (\"T\", Temporary)"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:834
+msgid ""
+"is set to indicate that the read should be performed from the temporary file "
+"(converting Name to it's temporary form) and falling back to the non "
+"temporary file if any error occurs. Knowledge of content inside temporary "
+"files comes from DownloadProgress messages."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:839
+msgid ""
+"The Options list is implementation defined and as described in the "
+"ClusterConfig message section."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:847
+msgid ""
+"struct RequestMessage {\n"
+"    string Folder<64>;\n"
+"    string Name<8192>;\n"
+"    hyper Offset;\n"
+"    int Size;\n"
+"    opaque Hash<64>;\n"
+"    unsigned int Flags;\n"
+"    Option Options<64>;\n"
+"};"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:858
+msgid "Response (Type = 3)"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:860
+msgid "The Response message is sent in response to a Request message."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:865
+msgid "ResponseMessage Structure:"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:869
+msgid ""
+" 0                   1                   2                   3\n"
+" 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                        Length of Data                         |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"/                                                               /\n"
+"\\                    Data (variable length)                     \\\n"
+"/                                                               /\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                             Code                              |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:884
+msgid ""
+"The **Data** field contains either a full 128 KiB block, a shorter block in "
+"the case of the last block in a file, or is empty (zero length) if the "
+"requested block is not available."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:888
+msgid ""
+"The **Code** field contains an error code describing the reason a Request "
+"could not be fulfilled, in the case where a zero length Data was returned. "
+"The following values are defined:"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:892
+msgid "No Error (Data should be present)"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:894
+msgid "Generic Error"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:896
+msgid ""
+"No Such File (the requested file does not exist, or the offset is outside "
+"the acceptable range for the file)"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:0 ../../../specs/bep-v1.rst:1202
+msgid "3"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:899
+msgid ""
+"Invalid (file exists but has invalid bit set or is otherwise unavailable)"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:907
+msgid ""
+"struct ResponseMessage {\n"
+"    opaque Data<>;\n"
+"    int Code;\n"
+"}"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:913
+msgid "DownloadProgress (Type = 8)"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:915
+msgid ""
+"The DownloadProgress message is used to notify remote devices about partial "
+"availability of files. By default, these messages are sent every 5 seconds, "
+"and only in the cases where progress or state changes have been detected. "
+"Each DownloadProgress message is addressed to a specific folder and MUST "
+"contain zero or more FileDownloadProgressUpdate structures."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:926
+msgid ""
+"DownloadProgressMessage Structure:\n"
+"\n"
+" 0                   1                   2                   3\n"
+" 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"/                                                               /\n"
+"\\                 Folder (length + padded data)                 \\\n"
+"/                                                               /\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                       Number of Updates                       |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"/                                                               /\n"
+"\\      Zero or more FileDownloadProgressUpdate Structures       \\\n"
+"/                                                               /\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                             Flags                             |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                       Number of Options                       |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"/                                                               /\n"
+"\\                Zero or more Option Structures                 \\\n"
+"/                                                               /\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"\n"
+"FileDownloadProgressUpdate Structure:\n"
+"\n"
+" 0                   1                   2                   3\n"
+" 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                          Update Type                          |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"/                                                               /\n"
+"\\                  Name (length + padded data)                  \\\n"
+"/                                                               /\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"/                                                               /\n"
+"\\                      Version Structure                        \\\n"
+"/                                                               /\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                    Number of Block Indexes                    |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"/                                                               /\n"
+"|                    Block Indexes (n items)                    |\n"
+"/                                                               /\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:973
+msgid "Each"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:976
+msgid "Fields (DownloadProgress Message)"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:977
+msgid ""
+"**Folder** represents the ID of the folder for which the update is being "
+"provided."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:980
+msgid ""
+"The **Flags** field is reserved for future use and MUST currently be set to "
+"zero. The **Options** field contains a list of options that apply to the "
+"update."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:984
+msgid "Fields (FileDownloadProgressUpdate Structure)"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:986
+msgid ""
+"The **Update Type** field is made up of the following single bit flags: ::"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:989
+msgid ""
+" 0                   1                   2                   3\n"
+" 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                           Reserved                          |F|\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:0
+msgid "Bit 31 (\"F\", Forget)"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:995
+msgid ""
+"is set to notify that the file that was previously advertised is no longer "
+"available (at least as a temporary file)."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:998
+msgid ""
+"The **Name** field defines the file name from the global index for which "
+"this update is being sent."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1001
+msgid ""
+"The **Version** structure defines the version of the file for which this "
+"update is being sent."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1004
+msgid ""
+"**Block Indexes** is a list of positive integers, where each integer "
+"represents the index of the block in the FileInfo structure Blocks array "
+"that has become available for download. For example an integer with with "
+"value 3 represents that the data defined in the fourth BlockInfo structure "
+"of the FileInfo structure of that file is now available. Please note that "
+"matching should be done on **Name** AND **Version**. Furthermore, each "
+"update received is incremental, for example the initial update structure "
+"might contain indexes 0, 1, 2, an update 5 seconds later might contain "
+"indexes 3, 4, 5 which should be appended to the original list, which implies "
+"that blocks 0-5 are currently available."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1015
+msgid ""
+"Block indexes MAY be added in any order. An implementation MUST NOT assume "
+"that block indexes are added in any specific order."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1019
+msgid ""
+"**Forget** bit being set implies that the file that was previously "
+"advertised is no longer available, therefore the list of block indexes "
+"should be truncated."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1022
+msgid "Messages with **Forget** bit set MUST NOT have any block indexes."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1024
+msgid ""
+"Any update message which is being sent for a different **Version** of the "
+"same file name must be preceded with an update message for the old version "
+"of that file with the **Forget** bit set."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1028
+msgid ""
+"As a safeguard on the receiving side, value of **Version** changing between "
+"update messages implies that the file has changed, and that any indexes "
+"previously advertised are no longer available. The list of available block "
+"indexes MUST be replaced (rather than appended) with the indexes specified "
+"in this message."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1039
+msgid ""
+"struct DownloadProgressMessage {\n"
+"    string Folder<64>;\n"
+"    FileDownloadProgressUpdate Updates<1000000>;\n"
+"    unsigned int Flags;\n"
+"    Option Options<64>;\n"
+"}\n"
+"\n"
+"struct FileDownloadProgressUpdate {\n"
+"    unsigned int UpdateType;\n"
+"    string Name<8192>;\n"
+"    Vector Version;\n"
+"    int BlockIndexes<1000000>;\n"
+"}"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1055
+msgid "Ping (Type = 4)"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1057
+msgid ""
+"The Ping message is used to determine that a connection is alive, and to "
+"keep connections alive through state tracking network elements such as "
+"firewalls and NAT gateways. The Ping message has no contents. A Ping message "
+"is sent every 90 seconds, if no other message has been sent in the preceding "
+"90 seconds."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1064
+msgid "Close (Type = 7)"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1066
+msgid ""
+"The Close message MAY be sent to indicate that the connection will be torn "
+"down due to an error condition. A Close message MUST NOT be followed by "
+"further messages."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1075
+msgid ""
+"CloseMessage Structure:\n"
+"\n"
+" 0                   1                   2                   3\n"
+" 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                       Length of Reason                        |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"/                                                               /\n"
+"\\                   Reason (variable length)                    \\\n"
+"/                                                               /\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                             Code                              |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1092
+msgid ""
+"The **Reason** field contains a human description of the error condition, "
+"suitable for consumption by a human. The **Code** field is for a machine "
+"readable error code. Codes are reserved for future use and MUST currently be "
+"set to zero."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1099
+msgid ""
+"struct CloseMessage {\n"
+"    string Reason<1024>;\n"
+"    int Code;\n"
+"}"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1105
+msgid "Sharing Modes"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1108
+msgid "Trusted"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1110
+msgid ""
+"Trusted mode is the default sharing mode. Updates are exchanged in both "
+"directions."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1115
+msgid ""
+"+------------+     Updates      /---------\\\n"
+"|            |  ----------->   /           \\\n"
+"|   Device   |                 |  Cluster  |\n"
+"|            |  <-----------   \\           /\n"
+"+------------+     Updates      \\---------/"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1122
+msgid "Read Only"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1124
+msgid ""
+"In read only mode, a device does not apply any updates from the cluster, but "
+"publishes changes of its local folder to the cluster as usual. The local "
+"folder can be seen as a \"master copy\" that is never affected by the "
+"actions of other cluster devices."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1131
+msgid ""
+"+------------+     Updates      /---------\\\n"
+"|            |  ----------->   /           \\\n"
+"|   Device   |                 |  Cluster  |\n"
+"|            |                 \\           /\n"
+"+------------+                  \\---------/"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1138
+msgid "Message Limits"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1140
+msgid ""
+"An implementation MAY impose reasonable limits on the length of messages and "
+"message fields to aid robustness in the face of corruption or broken "
+"implementations. These limits, if imposed, SHOULD NOT be more restrictive "
+"than the following. An implementation should strive to keep messages short "
+"and to the point, favouring more and smaller messages over fewer and larger. "
+"For example, favour a smaller Index message followed by one or more Index "
+"Update messages rather than sending a very large Index message."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1150
+msgid "Message Type"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1150
+msgid "Field"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1150
+msgid "Limit"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1152
+msgid "**All Messages**"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1154
+msgid "Total length"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1154
+msgid "512 MiB"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1156
+msgid "**Index and Index Update Messages**"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1158 ../../../specs/bep-v1.rst:1167
+#: ../../../specs/bep-v1.rst:1184
+msgid "Folder"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1158 ../../../specs/bep-v1.rst:1162
+#: ../../../specs/bep-v1.rst:1167 ../../../specs/bep-v1.rst:1179
+#: ../../../specs/bep-v1.rst:1184
+msgid "64 bytes"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1159
+msgid "Number of Files"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1159 ../../../specs/bep-v1.rst:1163
+#: ../../../specs/bep-v1.rst:1176 ../../../specs/bep-v1.rst:1177
+#: ../../../specs/bep-v1.rst:1185 ../../../specs/bep-v1.rst:1187
+msgid "1.000.000"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1160 ../../../specs/bep-v1.rst:1168
+#: ../../../specs/bep-v1.rst:1186 ../../../specs/bep-v1.rst:1233
+msgid "Name"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1160 ../../../specs/bep-v1.rst:1168
+#: ../../../specs/bep-v1.rst:1186
+msgid "8192 bytes"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1161
+msgid "Number of Blocks"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1161
+msgid "10.000.000"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1162
+msgid "Hash"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1163
+msgid "Number of Counters"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1165
+msgid "**Request Messages**"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1170
+msgid "**Response Messages**"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1172
+msgid "Data"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1172
+msgid "256 KiB"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1174
+msgid "**Cluster Config Message**"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1176
+msgid "Number of Folders"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1177
+msgid "Number of Devices"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1178
+msgid "Number of Options"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1178
+msgid "64"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1179
+msgid "Key"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1180
+msgid "Value"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1180
+msgid "1024 bytes"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1182
+msgid "**Download Progress Messages**"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1185
+msgid "Number of Updates"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1187
+msgid "Number of Indexes"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1190
+msgid ""
+"The currently defined values allow maximum file size of 1220 GiB (10.000.000 "
+"x 128 KiB). The maximum message size covers an Index message for the maximum "
+"file."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1195
+msgid "Example Exchange"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1198
+msgid "#"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1198
+msgid "A"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1198
+msgid "B"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1200
+msgid "ClusterConfiguration->"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1200
+msgid "<-ClusterConfiguration"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1201
+msgid "Index->"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1201
+msgid "<-Index"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1202 ../../../specs/bep-v1.rst:1203
+msgid "IndexUpdate->"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1202
+msgid "<-IndexUpdate"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1203
+msgid "4"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1204
+msgid "5"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1204 ../../../specs/bep-v1.rst:1205
+#: ../../../specs/bep-v1.rst:1206 ../../../specs/bep-v1.rst:1207
+msgid "Request->"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1205
+msgid "6"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1206
+msgid "7"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1207
+msgid "8"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1208
+msgid "9"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1208 ../../../specs/bep-v1.rst:1209
+#: ../../../specs/bep-v1.rst:1210 ../../../specs/bep-v1.rst:1211
+msgid "<-Response"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1211
+msgid "12"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1212
+msgid "13"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1212
+msgid "Index Update->"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1213
+msgid "..."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1214
+msgid "14"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1214
+msgid "<-Ping"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1215
+msgid "15"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1215
+msgid "Ping->"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1218
+msgid ""
+"The connection is established and at 1. both peers send ClusterConfiguration "
+"messages and then Index records. The Index records are received and both "
+"peers recompute their knowledge of the data in the cluster. In this example, "
+"peer A has four missing or outdated blocks. At 5 through 8 peer A sends "
+"requests for these blocks. The requests are received by peer B, who "
+"retrieves the data from the folder and transmits Response records (9 through "
+"12). Device A updates their folder contents and transmits an Index Update "
+"message (13). Both peers enter idle state after 13. At some later time 14, "
+"the ping timer on device B expires and a Ping message is sent. The same "
+"process occurs for device A at 15."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1230
+msgid "Examples of Strong Cipher Suites"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1233
+msgid "ID"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1233
+msgid "Description"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1235
+msgid "0x009F"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1235
+msgid "DHE-RSA-AES256-GCM-SHA384"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1235
+msgid "TLSv1.2 DH RSA AESGCM(256) AEAD"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1236
+msgid "0x006B"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1236
+msgid "DHE-RSA-AES256-SHA256"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1236
+msgid "TLSv1.2 DH RSA AES(256) SHA256"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1237
+msgid "0xC030"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1237
+msgid "ECDHE-RSA-AES256-GCM-SHA384"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1237
+msgid "TLSv1.2 ECDH RSA AESGCM(256) AEAD"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1238
+msgid "0xC028"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1238
+msgid "ECDHE-RSA-AES256-SHA384"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1238
+msgid "TLSv1.2 ECDH RSA AES(256) SHA384"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1239
+msgid "0x009E"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1239
+msgid "DHE-RSA-AES128-GCM-SHA256"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1239
+msgid "TLSv1.2 DH RSA AESGCM(128) AEAD"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1240
+msgid "0x0067"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1240
+msgid "DHE-RSA-AES128-SHA256"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1240
+msgid "TLSv1.2 DH RSA AES(128) SHA256"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1241
+msgid "0xC02F"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1241
+msgid "ECDHE-RSA-AES128-GCM-SHA256"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1241
+msgid "TLSv1.2 ECDH RSA AESGCM(128) AEAD"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1242
+msgid "0xC027"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1242
+msgid "ECDHE-RSA-AES128-SHA256"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:1242
+msgid "TLSv1.2 ECDH RSA AES(128) SHA256"
+msgstr ""

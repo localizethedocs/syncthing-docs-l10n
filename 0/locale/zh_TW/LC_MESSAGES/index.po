@@ -1,0 +1,109 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing 0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../index.rst:45 ../../../index.rst:81
+msgid "Introduction"
+msgstr ""
+
+#: ../../../index.rst:54
+msgid "Command Line Operation"
+msgstr ""
+
+#: ../../../index.rst:54
+msgid "Configuration"
+msgstr ""
+
+#: ../../../index.rst:54
+msgid "For Users"
+msgstr ""
+
+#: ../../../index.rst:81
+msgid "For Developers"
+msgstr ""
+
+#: ../../../index.rst:89
+msgid "Specifications"
+msgstr ""
+
+#: ../../../index.rst:6
+msgid "Welcome to Syncthing's documentation!"
+msgstr ""
+
+#: ../../../index.rst:8
+msgid ""
+"As a new user, the :ref:`getting started guide <getting-started>` is a good "
+"place to start, then perhaps moving on to :ref:`the FAQ <faq>`. If you run "
+"into trouble getting devices to connect to each other, the page about :ref:"
+"`firewall setup <firewall-setup>` explains the networking necessary to get "
+"it to work."
+msgstr ""
+
+#: ../../../index.rst:14
+msgid ""
+"As a developer looking to get started with a contribution, see :ref:`how to "
+"build <building>`, :ref:`how to debug <debugging>` and the `contribution "
+"guidelines`_. This documentation site can be edited on Github_."
+msgstr ""
+
+#: ../../../index.rst:19
+msgid "Contact"
+msgstr ""
+
+#: ../../../index.rst:21
+msgid ""
+"If you're looking for specific people to talk to, check out the :ref:"
+"`project-presentation`."
+msgstr ""
+
+#: ../../../index.rst:24
+msgid ""
+"To report bugs or request features, please use the `issue tracker`_ Before "
+"you do so, make sure you are running the `latest version`_, and please do a "
+"quick search to see if the issue has already been reported."
+msgstr ""
+
+#: ../../../index.rst:30
+msgid ""
+"To report security issues, please follow the instructions on the `Security "
+"page`_."
+msgstr ""
+
+#: ../../../index.rst:33
+msgid ""
+"To get help and support, to discuss scenarios, or just connect with other "
+"users and developers you can head over to the `friendly forum`_."
+msgstr ""
+
+#: ../../../index.rst:36
+msgid ""
+"For a more real time experience, there's also an IRC channel ``#syncthing`` "
+"on `Freenode <https://freenode.net/>`_."
+msgstr ""
+
+#: ../../../index.rst:39
+msgid ""
+"For other concerns you may reach out to members of the core team, currently :"
+"user:`calmh`, :user:`AudriusButkevicius` and :user:`Zillode`."
+msgstr ""
+
+#: ../../../index.rst:42
+msgid ""
+"The main documentation for the site is organized into a couple of sections. "
+"You can use the headings in the left sidebar to navigate the site."
+msgstr ""
