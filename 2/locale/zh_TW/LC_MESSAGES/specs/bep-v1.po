@@ -1,0 +1,1415 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2026, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../specs/bep-v1.rst:4
+msgid "Block Exchange Protocol v1"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:7
+msgid "Introduction and Definitions"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:9
+msgid ""
+"The Block Exchange Protocol (BEP) is used between two or more *devices* thus "
+"forming a *cluster*. Each device has one or more *folders* of files "
+"described by the *local model*, containing metadata and block hashes. The "
+"local model is sent to the other devices in the cluster. The union of all "
+"files in the local models, with files selected for highest change version, "
+"forms the *global model*. Each device strives to get its folders in sync "
+"with the global model by requesting missing or outdated blocks from the "
+"other devices in the cluster."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:18
+msgid ""
+"File data is described and transferred in units of *blocks*, each being from "
+"128 KiB (131072 bytes) to 16 MiB in size, in steps of powers of two. The "
+"block size may vary between files but is constant in any given file, except "
+"for the last block which may be smaller."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:23
+msgid ""
+"The key words \"MUST\", \"MUST NOT\", \"REQUIRED\", \"SHALL\", \"SHALL "
+"NOT\", \"SHOULD\", \"SHOULD NOT\", \"RECOMMENDED\", \"MAY\", and "
+"\"OPTIONAL\" in this document are to be interpreted as described in :rfc:"
+"`2119`."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:28
+msgid "Transport and Authentication"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:30
+msgid ""
+"BEP is deployed as the highest level in a protocol stack, with the lower "
+"level protocols providing encryption and authentication."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:35
+msgid ""
+"+-----------------------------+\n"
+"|   Block Exchange Protocol   |\n"
+"|-----------------------------|\n"
+"| Encryption & Auth (TLS 1.3) |\n"
+"|-----------------------------|\n"
+"|      Reliable Transport     |\n"
+"|-----------------------------|\n"
+"v             ...             v"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:44
+msgid ""
+"The encryption and authentication layer SHALL use TLS 1.3 or a higher "
+"revision."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:47
+msgid ""
+"The exact nature of the authentication is up to the application, however it "
+"SHALL be based on the TLS certificate presented at the start of the "
+"connection. Possibilities include certificates signed by a common trusted "
+"CA, preshared certificates, preshared certificate fingerprints or "
+"certificate pinning combined with some out of band first verification. The "
+"reference implementation uses preshared certificate fingerprints (SHA-256) "
+"referred to as \"Device IDs\"."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:55
+msgid ""
+"There is no required order or synchronization among BEP messages except as "
+"noted per message type - any message type may be sent at any time and the "
+"sender need not await a response to one message before sending another."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:60
+msgid ""
+"The underlying transport protocol MUST guarantee reliable packet delivery."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:62
+msgid ""
+"In this document, in diagrams and text, \"bit 0\" refers to the *most "
+"significant* bit of a word; \"bit 15\" is thus the least significant bit of "
+"a 16 bit word (int16) and \"bit 31\" is the least significant bit of a 32 "
+"bit word (int32). Non protocol buffer integers are always represented in "
+"network byte order (i.e., big endian) and are signed unless stated "
+"otherwise, but when describing message lengths negative values do not make "
+"sense and the most significant bit MUST be zero."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:70
+msgid ""
+"The protocol buffer schemas in this document are in ``proto3`` syntax. This "
+"means, among other things, that all fields are optional and will assume "
+"their default value when missing. This does not necessarily mean that a "
+"message is *valid* with all fields empty - for example, an index entry for a "
+"file that does not have a name is not useful and MAY be rejected by the "
+"implementation. However the folder label is for human consumption only so an "
+"empty label should be accepted - the implementation will have to choose some "
+"way to represent the folder, perhaps by using the ID in it's place or "
+"automatically generating a label."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:81
+msgid "Pre-authentication messages"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:83
+msgid ""
+"AFTER establishing a connection, but BEFORE performing any authentication, "
+"devices MUST exchange Hello messages."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:86
+msgid ""
+"Hello messages are used to carry additional information about the peer, "
+"which might be of interest to the user even if the peer is not permitted to "
+"communicate due to failing authentication. Note that the certificate based "
+"authentication may be considered part of the TLS handshake that precedes the "
+"Hello message exchange, but even in the case that a connection is rejected a "
+"Hello message must be sent before the connection is terminated."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:93
+msgid ""
+"Hello messages MUST be prefixed with an int32 containing the magic number "
+"**0x2EA7D90B**, followed by an int16 representing the size of the message, "
+"followed by the contents of the Hello message itself."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:97
+msgid ""
+" 0                   1\n"
+" 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|             Magic             |\n"
+"|           (32 bits)           |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|             Length            |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"/                               /\n"
+"\\             Hello             \\\n"
+"/                               /\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:112
+msgid ""
+"The Hello message itself is in protocol buffer format with the following "
+"schema:"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:114
+msgid ""
+"message Hello {\n"
+"    string device_name    = 1;\n"
+"    string client_name    = 2;\n"
+"    string client_version = 3;\n"
+"}"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:123
+msgid "Fields (Hello message)"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:125
+msgid ""
+"The **device_name** is a human readable (configured or auto detected) device "
+"name or host name, for the remote device."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:128
+msgid ""
+"The **client_name** and **client_version** identifies the implementation. "
+"The values SHOULD  be simple strings identifying the implementation name, as "
+"a user would expect to see it, and the version string in the same manner. An "
+"example client name is \"syncthing\" and an example client version is "
+"\"v0.7.2\". The client version field SHOULD follow the patterns laid out in "
+"the `Semantic Versioning <https://semver.org/>`__ standard."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:135
+msgid ""
+"Immediately after exchanging Hello messages, the connection MUST be dropped "
+"if the remote device does not pass authentication."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:139
+msgid "Post-authentication Messages"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:141
+msgid "Every message post authentication is made up of several parts:"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:143
+msgid "A header length word"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:144
+msgid "A **Header**"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:145
+msgid "A message length word"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:146
+msgid "A **Message**"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:148
+msgid ""
+" 0                   1\n"
+" 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|         Header Length         |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"/                               /\n"
+"\\            Header             \\\n"
+"/                               /\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|         Message Length        |\n"
+"|           (32 bits)           |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"/                               /\n"
+"\\            Message            \\\n"
+"/                               /\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:167
+msgid ""
+"The header length word is 16 bits. It indicates the length of the following "
+"**Header** message. The Header is in protocol buffer format. The Header "
+"describes the type and compression status of the following message."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:171
+msgid ""
+"The message is preceded by the 32 bit message length word and is one of the "
+"concrete BEP messages described below, identified by the **type** field of "
+"the Header."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:175
+msgid "As always, the length words are in network byte order (big endian)."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:177
+msgid ""
+"message Header {\n"
+"    MessageType        type        = 1;\n"
+"    MessageCompression compression = 2;\n"
+"}\n"
+"\n"
+"enum MessageType {\n"
+"    CLUSTER_CONFIG    = 0;\n"
+"    INDEX             = 1;\n"
+"    INDEX_UPDATE      = 2;\n"
+"    REQUEST           = 3;\n"
+"    RESPONSE          = 4;\n"
+"    DOWNLOAD_PROGRESS = 5;\n"
+"    PING              = 6;\n"
+"    CLOSE             = 7;\n"
+"}\n"
+"\n"
+"enum MessageCompression {\n"
+"    NONE = 0;\n"
+"    LZ4  = 1;\n"
+"}"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:200
+msgid ""
+"When the **compression** field is **NONE**, the message is directly in "
+"protocol buffer format."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:203
+msgid ""
+"When the compression field is **LZ4**, the message consists of a 32 bit "
+"integer describing the uncompressed message length followed by a single LZ4 "
+"block. After decompressing the LZ4 block it should be interpreted as a "
+"protocol buffer message just as in the uncompressed case."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:209
+msgid "Message Subtypes"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:214
+msgid "Cluster Config"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:221
+msgid ""
+"This informational message provides information about the cluster "
+"configuration as it pertains to the current connection. A Cluster Config "
+"message MUST be the first post authentication message sent on a BEP "
+"connection. Additional Cluster Config messages MAY be sent after the initial "
+"exchange to change the connection in place with the update configuration. If "
+"an implementation does not support that, it SHOULD close the connection."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:229 ../../../specs/bep-v1.rst:364
+#: ../../../specs/bep-v1.rst:504 ../../../specs/bep-v1.rst:548
+#: ../../../specs/bep-v1.rst:598 ../../../specs/bep-v1.rst:679
+#: ../../../specs/bep-v1.rst:695
+msgid "Protocol Buffer Schema"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:231
+msgid ""
+"message ClusterConfig {\n"
+"    repeated Folder folders = 1;\n"
+"}\n"
+"\n"
+"message Folder {\n"
+"    string id                    = 1;\n"
+"    string label                 = 2;\n"
+"    FolderType type              = 3;\n"
+"    FolderStopReason stop_reason = 7;\n"
+"    reserved 4 to 6;\n"
+"\n"
+"    repeated Device devices = 16;\n"
+"}\n"
+"\n"
+"message Device {\n"
+"    bytes           id                         = 1;\n"
+"    string          name                       = 2;\n"
+"    repeated string addresses                  = 3;\n"
+"    Compression     compression                = 4;\n"
+"    string          cert_name                  = 5;\n"
+"    int64           max_sequence               = 6;\n"
+"    bool            introducer                 = 7;\n"
+"    uint64          index_id                   = 8;\n"
+"    bool            skip_introduction_removals = 9;\n"
+"    bytes           encryption_password_token  = 10;\n"
+"}\n"
+"\n"
+"enum Compression {\n"
+"    METADATA = 0;\n"
+"    NEVER    = 1;\n"
+"    ALWAYS   = 2;\n"
+"}\n"
+"\n"
+"enum FolderType {\n"
+"    FOLDER_TYPE_SEND_RECEIVE      = 0;\n"
+"    FOLDER_TYPE_SEND_ONLY         = 1;\n"
+"    FOLDER_TYPE_RECEIVE_ONLY      = 2;\n"
+"    FOLDER_TYPE_RECEIVE_ENCRYPTED = 3;\n"
+"}\n"
+"\n"
+"enum FolderStopReason {\n"
+"    FOLDER_STOP_REASON_RUNNING = 0;\n"
+"    FOLDER_STOP_REASON_PAUSED  = 1;\n"
+"}"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:279
+msgid "Fields (Cluster Config Message)"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:285
+msgid ""
+"The **folders** field contains the list of folders that will be synchronized "
+"over the current connection."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:289
+msgid "Fields (Folder Message)"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:291
+msgid ""
+"The **id** field contains the folder ID, which is the unique identifier of "
+"the folder."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:294
+msgid ""
+"The **label** field contains the folder label, the human readable name of "
+"the folder."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:297
+msgid ""
+"The **folder_type** field contains the type of the folder as defined by the "
+"FolderType enumeration."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:300
+msgid ""
+"The **stop_reason** field is set for folders that are currently stopped for "
+"any reason. The zero means that the folder is not stopped; further reasons "
+"are defined by the FolderStopReason enumeration."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:304
+msgid ""
+"The **devices** field is a list of devices participating in sharing this "
+"folder."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:308
+msgid "Fields (Device Message)"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:310
+msgid ""
+"The device **id** field is a 32 byte number that uniquely identifies the "
+"device. For instance, the reference implementation uses the SHA-256 of the "
+"device X.509 certificate."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:314
+msgid ""
+"The **name** field is a human readable name assigned to the described device "
+"by the sending device. It MAY be empty and it need not be unique."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:317
+msgid ""
+"The list of **addresses** is that used by the sending device to connect to "
+"the described device."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:320
+msgid ""
+"The **compression** field indicates the compression mode in use for this "
+"device and folder. The following values are valid:"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:0
+msgid "0"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:323
+msgid ""
+"Compress metadata. This enables compression of metadata messages such as "
+"Index."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:0 ../../../specs/bep-v1.rst:864
+msgid "1"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:324
+msgid "Compression disabled. No compression is used on any message."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:0 ../../../specs/bep-v1.rst:865
+msgid "2"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:325
+msgid ""
+"Compress always. Metadata messages as well as Response messages are "
+"compressed."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:327
+msgid ""
+"The **cert_name** field indicates the expected certificate name for this "
+"device. It is commonly blank, indicating to use the implementation default."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:330
+msgid ""
+"The **max_sequence** field contains the highest sequence number of the files "
+"in the index. See :ref:`deltaidx` for the usage of this field."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:333
+msgid ""
+"The **introducer** field is set for devices that are trusted as cluster "
+"introducers."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:336
+msgid ""
+"The **index_id** field contains the unique identifier for the current set of "
+"index data. See :ref:`deltaidx` for the usage of this field."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:339
+msgid ""
+"The **skip_introduction_removals** field signifies if the remote device has "
+"opted to ignore introduction removals for the given device. This setting is "
+"copied across as we are being introduced to a new device."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:343
+msgid ""
+"The **encryption_password_token** field contains a token derived from the "
+"password, that is used to encrypt data sent to this device. If the device is "
+"the same as the device sending the message, it signifies that the device "
+"itself has encrypted data that was encrypted with the given token. It is "
+"empty or missing if there is no encryption. See :ref:`untrusted` for details "
+"on the encryption scheme."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:350
+msgid "Index and Index Update"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:352
+msgid ""
+"The Index and Index Update messages define the contents of the senders "
+"folder. An Index message represents the full contents of the folder and thus "
+"supersedes any previous index. An Index Update amends an existing index with "
+"new information, not affecting any entries not included in the message. An "
+"Index Update MAY NOT be sent unless preceded by an Index, unless a non-zero "
+"Max Sequence has been announced for the given folder by the peer device."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:360
+msgid ""
+"The Index and Index Update messages are currently identical in format, "
+"although this is not guaranteed to be the case in the future."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:366
+msgid ""
+"message Index {\n"
+"    string            folder = 1;\n"
+"    repeated FileInfo files  = 2;\n"
+"}\n"
+"\n"
+"message IndexUpdate {\n"
+"    string            folder = 1;\n"
+"    repeated FileInfo files  = 2;\n"
+"}\n"
+"\n"
+"message FileInfo {\n"
+"    string       name           = 1;\n"
+"    FileInfoType type           = 2;\n"
+"    int64        size           = 3;\n"
+"    uint32       permissions    = 4;\n"
+"    int64        modified_s     = 5;\n"
+"    int32        modified_ns    = 11;\n"
+"    uint64       modified_by    = 12;\n"
+"    bool         deleted        = 6;\n"
+"    bool         invalid        = 7;\n"
+"    bool         no_permissions = 8;\n"
+"    Vector       version        = 9;\n"
+"    int64        sequence       = 10;\n"
+"    int32        block_size     = 13;\n"
+"\n"
+"    repeated BlockInfo Blocks         = 16;\n"
+"    string             symlink_target = 17;\n"
+"}\n"
+"\n"
+"enum FileInfoType {\n"
+"    FILE              = 0;\n"
+"    DIRECTORY         = 1;\n"
+"    SYMLINK_FILE      = 2 [deprecated = true];\n"
+"    SYMLINK_DIRECTORY = 3 [deprecated = true];\n"
+"    SYMLINK           = 4;\n"
+"}\n"
+"\n"
+"message BlockInfo {\n"
+"    int64 offset = 1;\n"
+"    int32 size   = 2;\n"
+"    bytes hash   = 3;\n"
+"    reserved 4;\n"
+"}\n"
+"\n"
+"message Vector {\n"
+"    repeated Counter counters = 1;\n"
+"}\n"
+"\n"
+"message Counter {\n"
+"    uint64 id    = 1;\n"
+"    uint64 value = 2;\n"
+"}"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:422
+msgid "Fields (Index Message)"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:424
+msgid ""
+"The **folder** field identifies the folder that the index message pertains "
+"to."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:426
+msgid "The **files** field is a list of files making up the index information."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:429
+msgid "Fields (FileInfo Message)"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:431
+msgid ""
+"The **name** is the file name path relative to the folder root. Like all "
+"strings in BEP, the Name is always in UTF-8 NFC regardless of operating "
+"system or file system specific conventions. The name field uses the slash "
+"character (\"/\") as path separator, regardless of the implementation's "
+"operating system conventions. The combination of folder and name uniquely "
+"identifies each file in a cluster."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:438
+msgid ""
+"The **type** field contains the type of the described item. The type is one "
+"of **file (0)**, **directory (1)**, or **symlink (4)**."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:441
+msgid ""
+"The **size** field contains the size of the file, in bytes. For directories "
+"and symlinks the size is zero."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:444
+msgid ""
+"The **permissions** field holds the common Unix permission bits. An "
+"implementation MAY ignore or interpret these as is suitable on the host "
+"operating system."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:448
+msgid ""
+"The **modified_s** time is expressed as the number of seconds since the Unix "
+"Epoch (1970-01-01 00:00:00 UTC). The **modified_ns** field holds the "
+"nanosecond part of the modification time."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:452
+msgid ""
+"The **modified_by** field holds the short id of the client that last made "
+"any modification to the file whether add, change or delete.  This will be "
+"overwritten every time a change is made to the file by the last client to do "
+"so and so does not hold history."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:457
+msgid ""
+"The **deleted** field is set when the file has been deleted. The block list "
+"SHALL be of length zero and the modification time indicates the time of "
+"deletion or, if the time of deletion is not reliably determinable, the last "
+"known modification time."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:462
+msgid ""
+"The **invalid** field is set when the file is invalid and unavailable for "
+"synchronization. A peer MAY set this bit to indicate that it can temporarily "
+"not serve data for the file."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:466
+msgid ""
+"The **no_permissions** field is set when there is no permission information "
+"for the file. This is the case when it originates on a file system which "
+"does not support permissions. Changes to only permission bits SHOULD be "
+"disregarded on files with this bit set. The permissions bits MUST be set to "
+"the octal value 0666."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:472
+msgid ""
+"The **version** field is a version vector describing the updates performed "
+"to a file by all members in the cluster. Each counter in the version vector "
+"is an ID-Value tuple. The ID is the first 64 bits of the device ID. The "
+"Value is a simple incrementing counter, starting at zero. The combination of "
+"Folder, Name and Version uniquely identifies the contents of a file at a "
+"given point in time."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:479
+msgid ""
+"The **sequence** field is the value of a device local monotonic clock at the "
+"time of last local database update to a file. The clock ticks on every local "
+"database update, thus forming a sequence number over database updates."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:483
+msgid ""
+"The **block_size** field is the size, in bytes, of each individual block in "
+"the block list (except, possibly, the last block). If this field is missing "
+"or zero, the block size is assumed to be 128 KiB (131072 bytes). Valid "
+"values of this field are the powers of two from 128 KiB through 16 MiB. See "
+"also :ref:`blocksize`."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:489
+msgid ""
+"The **blocks** list contains the size and hash for each block in the file. "
+"Each block represents a **block_size**-sized slice of the file, except for "
+"the last block which may represent a smaller amount of data. The block list "
+"is empty for directories and symlinks."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:494
+msgid ""
+"The **symlink_target** field contains the symlink target, for entries of "
+"symlink type. It is empty for all other entry types."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:498
+msgid "Request"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:500
+msgid ""
+"The Request message expresses the desire to receive a data block "
+"corresponding to a part of a certain file in the peer's folder."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:506
+msgid ""
+"message Request {\n"
+"    int32  id             = 1;\n"
+"    string folder         = 2;\n"
+"    string name           = 3;\n"
+"    int64  offset         = 4;\n"
+"    int32  size           = 5;\n"
+"    bytes  hash           = 6;\n"
+"    bool   from_temporary = 7;\n"
+"    int32 block_no        = 9;\n"
+"    reserved 8;\n"
+"}"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:521 ../../../specs/bep-v1.rst:566
+#: ../../../specs/bep-v1.rst:704
+msgid "Fields"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:523
+msgid ""
+"The **id** is the request identifier. It will be matched in the "
+"corresponding **Response** message. Each outstanding request must have a "
+"unique ID."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:527
+msgid ""
+"The **folder** and **name** fields are as documented for the Index message. "
+"The **offset** and **size** fields specify the region of the file to be "
+"transferred. This SHOULD equate to exactly one block as seen in an Index "
+"message."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:532
+msgid ""
+"The *hash* field MAY be set to the expected hash value of the block. If set, "
+"the other device SHOULD ensure that the transmitted block matches the "
+"requested hash. The other device MAY reuse a block from a different file and "
+"offset having the same size and hash, if one exists."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:537
+msgid ""
+"The **from_temporary** field is set to indicate that the read should be "
+"performed from the temporary file (converting name to it's temporary form) "
+"and falling back to the non temporary file if any error occurs. Knowledge of "
+"contents of temporary files comes from DownloadProgress messages."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:543
+msgid "Response"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:545
+msgid "The Response message is sent in response to a Request message."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:550
+msgid ""
+"message Response {\n"
+"    int32     id   = 1;\n"
+"    bytes     data = 2;\n"
+"    ErrorCode code = 3;\n"
+"}\n"
+"\n"
+"enum ErrorCode {\n"
+"    NO_ERROR     = 0;\n"
+"    GENERIC      = 1;\n"
+"    NO_SUCH_FILE = 2;\n"
+"    INVALID_FILE = 3;\n"
+"}"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:568
+msgid ""
+"The **id** field is the request identifier. It must match the ID of the "
+"**Request** that is being responded to."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:571
+msgid ""
+"The **data** field contains either the requested data block or is empty if "
+"the requested block is not available."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:574
+msgid ""
+"The **code** field contains an error code describing the reason a Request "
+"could not be fulfilled, in the case where zero length data was returned. The "
+"following values are defined:"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:578
+msgid "No Error (data should be present)"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:580
+msgid "Generic Error"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:582
+msgid ""
+"No Such File (the requested file does not exist, or the offset is outside "
+"the acceptable range for the file)"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:0 ../../../specs/bep-v1.rst:866
+msgid "3"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:585
+msgid ""
+"Invalid (file exists but has invalid bit set or is otherwise unavailable)"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:589
+msgid "DownloadProgress"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:591
+msgid ""
+"The DownloadProgress message is used to notify remote devices about partial "
+"availability of files. By default, these messages are sent every 5 seconds, "
+"and only in the cases where progress or state changes have been detected. "
+"Each DownloadProgress message is addressed to a specific folder and MUST "
+"contain zero or more FileDownloadProgressUpdate messages."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:600
+msgid ""
+"message DownloadProgress {\n"
+"    string                              folder  = 1;\n"
+"    repeated FileDownloadProgressUpdate updates = 2;\n"
+"}\n"
+"\n"
+"message FileDownloadProgressUpdate {\n"
+"    FileDownloadProgressUpdateType update_type   = 1;\n"
+"    string                         name          = 2;\n"
+"    Vector                         version       = 3;\n"
+"    repeated int32                 block_indexes = 4;\n"
+"}\n"
+"\n"
+"enum FileDownloadProgressUpdateType {\n"
+"    APPEND = 0;\n"
+"    FORGET = 1;\n"
+"}"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:620
+msgid "Fields (DownloadProgress Message)"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:622
+msgid ""
+"The **folder** field represents the ID of the folder for which the update is "
+"being provided."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:625
+msgid "The **updates** field is a list of progress update messages."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:628
+msgid "Fields (FileDownloadProgressUpdate Message)"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:630
+msgid ""
+"The **update_type** indicates whether the update is of type **append (0)** "
+"(new blocks are available) or **forget (1)** (the file transfer has "
+"completed or failed)."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:634
+msgid ""
+"The **name** field defines the file name from the global index for which "
+"this update is being sent."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:637
+msgid ""
+"The **version** message defines the version of the file for which this "
+"update is being sent."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:640
+msgid ""
+"The **block_indexes** field is a list of positive integers, where each "
+"integer represents the index of the block in the FileInfo message Blocks "
+"array that has become available for download."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:644
+msgid ""
+"For example an integer with value 3 represents that the data defined in the "
+"fourth BlockInfo message of the FileInfo message of that file is now "
+"available. Please note that matching should be done on **name** AND "
+"**version**. Furthermore, each update received is incremental, for example "
+"the initial update message might contain indexes 0, 1, 2, an update 5 "
+"seconds later might contain indexes 3, 4, 5 which should be appended to the "
+"original list, which implies that blocks 0-5 are currently available."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:652
+msgid ""
+"Block indexes MAY be added in any order. An implementation MUST NOT assume "
+"that block indexes are added in any specific order."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:655
+msgid ""
+"The **forget** field being set implies that previously advertised file is no "
+"longer available, therefore the list of block indexes should be truncated."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:658
+msgid "Messages with the **forget** field set MUST NOT have any block indexes."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:660
+msgid ""
+"Any update message which is being sent for a different **version** of the "
+"same file name must be preceded with an update message for the old version "
+"of that file with the **forget** field set."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:664
+msgid ""
+"As a safeguard on the receiving side, the value of **version** changing "
+"between update messages implies that the file has changed and that any "
+"indexes previously advertised are no longer available. The list of available "
+"block indexes MUST be replaced (rather than appended) with the indexes "
+"specified in this message."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:671
+msgid "Ping"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:673
+msgid ""
+"The Ping message is used to determine that a connection is alive, and to "
+"keep connections alive through state tracking network elements such as "
+"firewalls and NAT gateways. A Ping message is sent every 90 seconds, if no "
+"other message has been sent in the preceding 90 seconds."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:681
+msgid ""
+"message Ping {\n"
+"}"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:688
+msgid "Close"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:690
+msgid ""
+"The Close message MAY be sent to indicate that the connection will be torn "
+"down due to an error condition. A Close message MUST NOT be followed by "
+"further messages."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:697
+msgid ""
+"message Close {\n"
+"    string reason = 1;\n"
+"}"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:706
+msgid ""
+"The **reason** field contains a human readable description of the error "
+"condition."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:710
+msgid "Sharing Modes"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:713
+msgid "Trusted"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:715
+msgid ""
+"Trusted mode is the default sharing mode. Updates are exchanged in both "
+"directions."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:720
+msgid ""
+"+------------+     Updates      /---------\\\n"
+"|            |  ----------->   /           \\\n"
+"|   Device   |                 |  Cluster  |\n"
+"|            |  <-----------   \\           /\n"
+"+------------+     Updates      \\---------/"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:727
+msgid "Send Only"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:729
+msgid ""
+"In send only mode, a device does not apply any updates from the cluster, but "
+"publishes changes of its local folder to the cluster as usual."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:734
+msgid ""
+"+------------+     Updates      /---------\\\n"
+"|            |  ----------->   /           \\\n"
+"|   Device   |                 |  Cluster  |\n"
+"|            |                 \\           /\n"
+"+------------+                  \\---------/"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:741
+msgid "Receive Only"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:743
+msgid ""
+"In receive only mode, a device does not send any updates to the cluster, but "
+"accepts changes to its local folder from the cluster as usual."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:748
+msgid ""
+"+------------+     Updates      /---------\\\n"
+"|            |  <-----------   /           \\\n"
+"|   Device   |                 |  Cluster  |\n"
+"|            |                 \\           /\n"
+"+------------+                  \\---------/"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:757
+msgid "Delta Index Exchange"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:759
+msgid ""
+"Index data must be exchanged whenever two devices connect so that one knows "
+"the files available on the other. In the most basic case this happens by way "
+"of sending an ``Index`` message followed by one or more ``Index Update`` "
+"messages. Any previous index data known for a remote device is removed and "
+"replaced with the new index data received in an ``Index`` message, while the "
+"contents of an ``Index Update`` message is simply added to the existing "
+"index data."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:767
+msgid ""
+"For situations with large indexes or frequent reconnects this can be quite "
+"inefficient. A mechanism can then be used to retain index data between "
+"connections and only transmit any changes since that data on connection "
+"start. This is called \"delta indexes\". To enable this mechanism the "
+"**sequence** and **index ID** fields are used."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:773
+msgid "Sequence:"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:774
+msgid ""
+"Each index item (i.e., file, directory or symlink) has a sequence number "
+"field. It contains the value of a counter at the time the index item was "
+"updated. The counter increments by one for each change. That is, as files "
+"are scanned and added to the index they get assigned sequence numbers 1, 2, "
+"3 and so on. The next file to be changed or detected gets sequence number 4, "
+"and future updates continue in the same fashion."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:781
+msgid "Index ID:"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:782
+msgid ""
+"Each folder has an Index ID. This is a 64 bit random identifier set at index "
+"creation time."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:785
+msgid ""
+"Given the above, we know that the tuple {index ID, maximum sequence number} "
+"uniquely identifies a point in time of a given index. Any further changes "
+"will increase the sequence number of some item, and thus the maximum "
+"sequence number for the index itself. Should the index be reset or removed "
+"(i.e., the sequence number reset to zero), a new index ID must be generated."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:791
+msgid ""
+"By letting a device know the {index ID, maximum sequence number} we have for "
+"their index data, that device can arrange to only transmit ``Index Update`` "
+"messages for items with a higher sequence number. This is the delta index "
+"mechanism."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:796
+msgid ""
+"The index ID and maximum sequence number known for each device is "
+"transmitted in the ``Cluster Config`` message at connection start."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:799
+msgid ""
+"For this mechanism to be reliable it is essential that outgoing index "
+"information is ordered by increasing sequence number. Devices announcing a "
+"non-zero index ID in the ``Cluster Config`` message MUST send all index data "
+"ordered by increasing sequence number. Devices not intending to participate "
+"in delta index exchange MUST send a zero index ID or, equivalently, not send "
+"the ``index_id`` attribute at all."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:807
+msgid "Message Limits"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:809
+msgid ""
+"An implementation MAY impose reasonable limits on the length of messages and "
+"message fields to aid robustness in the face of corruption or broken "
+"implementations. An implementation should strive to keep messages short and "
+"to the point, favouring more and smaller messages over fewer and larger. For "
+"example, favour a smaller Index message followed by one or more Index Update "
+"messages rather than sending a very large Index message."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:816
+msgid ""
+"The Syncthing implementation imposes a hard limit of 500,000,000 bytes on "
+"all messages. Attempting to send or receive a larger message will result in "
+"a connection close. This size was chosen to accommodate Index messages "
+"containing a large block list. It's intended that the limit may be further "
+"reduced in a future protocol update supporting variable block sizes (and "
+"thus shorter block lists for large files)."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:826
+msgid "Selection of Block Size"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:828
+msgid ""
+"The desired block size for any given file is the smallest block size that "
+"results in fewer than 2000 blocks, or the maximum block size for larger "
+"files. This rule results in the following table of block sizes per file size:"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:834
+msgid "File Size"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:834
+msgid "Block Size"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:836
+msgid "0 - 250 MiB"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:836
+msgid "128 KiB"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:837
+msgid "250 MiB - 500 MiB"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:837
+msgid "256 KiB"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:838
+msgid "500 MiB - 1 GiB"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:838
+msgid "512 KiB"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:839
+msgid "1 GiB - 2 GiB"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:839
+msgid "1 MiB"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:840
+msgid "2 GiB - 4 GiB"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:840
+msgid "2 MiB"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:841
+msgid "4 GiB - 8 GiB"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:841
+msgid "4 MiB"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:842
+msgid "8 GiB - 16 GiB"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:842
+msgid "8 MiB"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:843
+msgid "16 GiB - up"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:843
+msgid "16 MiB"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:846
+msgid ""
+"An implementation MAY deviate from the block size rule when there is good "
+"reason to do so. For example, if a file has been indexed at a certain block "
+"size and grows beyond 2000 blocks it may be retained at the current block "
+"size for practical reasons. When there is no overriding reason to the "
+"contrary, such as when indexing a new file for the first time, the block "
+"size rule above SHOULD be followed."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:853
+msgid ""
+"An implementation MUST therefore accept files with a block size differing "
+"from the above rule. This does not mean that arbitrary block sizes are "
+"allowed. The block size used MUST be exactly one of the power-of-two block "
+"sizes listed in the table above."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:859
+msgid "Example Exchange"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:862
+msgid "#"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:862
+msgid "A"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:862
+msgid "B"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:864
+msgid "ClusterConfiguration->"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:864
+msgid "<-ClusterConfiguration"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:865
+msgid "Index->"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:865
+msgid "<-Index"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:866 ../../../specs/bep-v1.rst:867
+msgid "IndexUpdate->"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:866
+msgid "<-IndexUpdate"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:867
+msgid "4"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:868
+msgid "5"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:868 ../../../specs/bep-v1.rst:869
+#: ../../../specs/bep-v1.rst:870 ../../../specs/bep-v1.rst:871
+msgid "Request->"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:869
+msgid "6"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:870
+msgid "7"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:871
+msgid "8"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:872
+msgid "9"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:872 ../../../specs/bep-v1.rst:873
+#: ../../../specs/bep-v1.rst:874 ../../../specs/bep-v1.rst:875
+msgid "<-Response"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:873
+msgid "10"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:874
+msgid "11"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:875
+msgid "12"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:876
+msgid "13"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:876
+msgid "Index Update->"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:877
+msgid "..."
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:878
+msgid "14"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:878
+msgid "<-Ping"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:879
+msgid "15"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:879
+msgid "Ping->"
+msgstr ""
+
+#: ../../../specs/bep-v1.rst:882
+msgid ""
+"The connection is established and at 1. both peers send ClusterConfiguration "
+"messages and then Index records. The Index records are received and both "
+"peers recompute their knowledge of the data in the cluster. In this example, "
+"peer A has four missing or outdated blocks. At 5 through 8 peer A sends "
+"requests for these blocks. The requests are received by peer B, who "
+"retrieves the data from the folder and transmits Response records (9 through "
+"12). Device A updates their folder contents and transmits an Index Update "
+"message (13). Both peers enter idle state after 13. At some later time 14, "
+"the ping timer on device B expires and a Ping message is sent. The same "
+"process occurs for device A at 15."
+msgstr ""

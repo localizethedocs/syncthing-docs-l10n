@@ -1,0 +1,148 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2026, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../specs/localdisco-v4.rst:4
+msgid "Local Discovery Protocol v4"
+msgstr ""
+
+#: ../../../specs/localdisco-v4.rst:7
+msgid "Mode of Operation"
+msgstr ""
+
+#: ../../../specs/localdisco-v4.rst:9
+msgid ""
+"Each participating device periodically sends an Announcement packet. It also "
+"keeps a table of the announcements it has seen. There is no way to solicit a "
+"reply; the only message type is Announcement."
+msgstr ""
+
+#: ../../../specs/localdisco-v4.rst:13
+msgid ""
+"On multihomed hosts the announcement packets should be sent on each "
+"interface on which Syncthing will accept connections."
+msgstr ""
+
+#: ../../../specs/localdisco-v4.rst:16
+msgid "The announcement packet is sent over UDP."
+msgstr ""
+
+#: ../../../specs/localdisco-v4.rst:18
+msgid ""
+"For IPv4, the Announcement packet is broadcast either to the link-specific "
+"broadcast address, or to the generic link-local broadcast address "
+"``255.255.255.255``, with destination port 21027."
+msgstr ""
+
+#: ../../../specs/localdisco-v4.rst:22
+msgid ""
+"For IPv6, the Announcement packet is multicast to the transient link-local "
+"multicast address ``ff12::8384``, with destination port 21027."
+msgstr ""
+
+#: ../../../specs/localdisco-v4.rst:25
+msgid ""
+"It is recommended that local discovery Announcement packets be sent on a 30 "
+"to 60 second interval, possibly with immediate transmissions when a "
+"previously unknown device is discovered or a device has restarted (see the "
+"``instance_id`` field)."
+msgstr ""
+
+#: ../../../specs/localdisco-v4.rst:31
+msgid "Device ID"
+msgstr ""
+
+#: ../../../specs/localdisco-v4.rst:33
+msgid ""
+"The device ID is the SHA-256 (32 bytes) of the device X.509 certificate. "
+"See :ref:`device-ids` in the Syncthing documentation."
+msgstr ""
+
+#: ../../../specs/localdisco-v4.rst:37
+msgid "Announcement packet"
+msgstr ""
+
+#: ../../../specs/localdisco-v4.rst:39
+msgid "The Announcement packet has the following structure:"
+msgstr ""
+
+#: ../../../specs/localdisco-v4.rst:41
+msgid ""
+" 0                   1                   2                   3\n"
+" 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                             Magic                             |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"/                                                               /\n"
+"\\                       Announce Message                        \\\n"
+"/                                                               /\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+"
+msgstr ""
+
+#: ../../../specs/localdisco-v4.rst:53
+msgid ""
+"There is no explicit length field as the length is given by the length of "
+"the discovery announcement packet itself."
+msgstr ""
+
+#: ../../../specs/localdisco-v4.rst:56
+msgid ""
+"The Magic field is a 32 bit word representing 0x2EA7D90B in network (big "
+"endian) byte order. It identifies the packet as being a Syncthing discovery "
+"protocol packet."
+msgstr ""
+
+#: ../../../specs/localdisco-v4.rst:60
+msgid ""
+"The Announce Message contents are in protocol buffer format using the "
+"following schema:"
+msgstr ""
+
+#: ../../../specs/localdisco-v4.rst:63
+msgid ""
+"message Announce {\n"
+"    bytes           id          = 1;\n"
+"    repeated string addresses   = 2;\n"
+"    int64           instance_id = 3;\n"
+"}"
+msgstr ""
+
+#: ../../../specs/localdisco-v4.rst:71
+msgid "The ``id`` field contains the Device ID of the sending device."
+msgstr ""
+
+#: ../../../specs/localdisco-v4.rst:73
+msgid ""
+"The ``addresses`` field contains a list of addresses where the device can be "
+"contacted. Direct connections will typically have the ``tcp://`` scheme. "
+"Relay connections will typically use the ``relay://`` scheme."
+msgstr ""
+
+#: ../../../specs/localdisco-v4.rst:77
+msgid ""
+"When interpreting addresses with an unspecified address, e.g., "
+"``tcp://0.0.0.0:22000`` or ``tcp://:42424``, the source address of the "
+"discovery announcement is to be used."
+msgstr ""
+
+#: ../../../specs/localdisco-v4.rst:81
+msgid ""
+"The ``instance_id`` field is set to a randomly generated ID at client "
+"startup. Other devices on the network can detect a change in instance ID "
+"between two announces and conclude that the announcing device has restarted."
+msgstr ""

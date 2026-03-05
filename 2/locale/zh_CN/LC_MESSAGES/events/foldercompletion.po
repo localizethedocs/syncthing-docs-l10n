@@ -1,0 +1,61 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2026, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../events/foldercompletion.rst:2
+msgid "FolderCompletion"
+msgstr ""
+
+#: ../../../events/foldercompletion.rst:4
+msgid ""
+"The ``FolderCompletion`` event is emitted when the local or remote contents "
+"for a folder changes. It contains the completion percentage for a given "
+"remote device and is emitted once per currently connected remote device."
+msgstr ""
+
+#: ../../../events/foldercompletion.rst:11
+msgid ""
+"Indication whether the remote device has accepted the folder (shares it with "
+"us) as well, and whether it is paused.  The ``remoteState`` field is "
+"``unknown`` when the remote device is not connected.  Otherwise it can be "
+"either ``paused``, ``notSharing``, or ``valid`` if the remote is sharing "
+"back."
+msgstr ""
+
+#: ../../../events/foldercompletion.rst:16
+msgid ""
+"{\n"
+"    \"id\": 84,\n"
+"    \"globalID\": 84,\n"
+"    \"type\": \"FolderCompletion\",\n"
+"    \"time\": \"2022-04-27T14:14:27.043576583+09:00\",\n"
+"    \"data\": {\n"
+"        \"completion\": 100,\n"
+"        \"device\": \"I6KAH76-66SLLLB-5PFXSOA-UFJCDZC-YAOMLEK-CP2GB32-"
+"BV5RQST-3PSROAU\",\n"
+"        \"folder\": \"default\",\n"
+"        \"globalBytes\": 17,\n"
+"        \"globalItems\": 4,\n"
+"        \"needBytes\": 0,\n"
+"        \"needDeletes\": 0,\n"
+"        \"needItems\": 0,\n"
+"        \"remoteState\": \"valid\",\n"
+"        \"sequence\": 12\n"
+"    }\n"
+"}"
+msgstr ""

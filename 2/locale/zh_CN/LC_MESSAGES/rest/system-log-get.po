@@ -1,0 +1,51 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2026, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../rest/system-log-get.rst:2
+msgid "GET /rest/system/log"
+msgstr ""
+
+#: ../../../rest/system-log-get.rst:6
+msgid ""
+"Returns the list of recent log entries.  The optional ``since`` parameter "
+"limits the results to message newer than the given timestamp in :rfc:`3339` "
+"format."
+msgstr ""
+
+#: ../../../rest/system-log-get.rst:9
+msgid ""
+"{\n"
+"  \"messages\": [\n"
+"    {\n"
+"      \"when\": \"2014-09-18T12:59:26.549953186+02:00\",\n"
+"      \"message\": \"This is a log entry\"\n"
+"    }\n"
+"  ]\n"
+"}"
+msgstr ""
+
+#: ../../../rest/system-log-get.rst:21
+msgid "GET /rest/system/log.txt"
+msgstr ""
+
+#: ../../../rest/system-log-get.rst:23
+msgid ""
+"Returns the same information, formatted as a text log instead of a JSON "
+"object."
+msgstr ""

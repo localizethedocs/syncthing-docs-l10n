@@ -1,0 +1,77 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2026, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../rest/debug.rst:2
+msgid "Debug Endpoints"
+msgstr ""
+
+#: ../../../rest/debug.rst:5
+msgid "GET /rest/debug/cpuprof"
+msgstr ""
+
+#: ../../../rest/debug.rst:7
+msgid ""
+"Used to capture a profile of what Syncthing is doing on the CPU.  See :doc:`/"
+"users/profiling`."
+msgstr ""
+
+#: ../../../rest/debug.rst:12
+msgid "GET /rest/debug/heapprof"
+msgstr ""
+
+#: ../../../rest/debug.rst:14
+msgid ""
+"Used to capture a profile of what Syncthing is doing with the heap memory.  "
+"See :doc:`/users/profiling`."
+msgstr ""
+
+#: ../../../rest/debug.rst:19
+msgid "GET /rest/debug/support"
+msgstr ""
+
+#: ../../../rest/debug.rst:21
+msgid ""
+"Collects information about the running instance for troubleshooting "
+"purposes. Returns a \"support bundle\" as a zipped archive, which should be "
+"sent to the developers after verifying it contains no sensitive personal "
+"information. Credentials for the web GUI and the API key are automatically "
+"redacted already."
+msgstr ""
+
+#: ../../../rest/debug.rst:28
+msgid "GET /rest/debug/file"
+msgstr ""
+
+#: ../../../rest/debug.rst:30
+msgid ""
+"Shows diagnostics about a certain file in a shared folder.  Takes the "
+"``folder`` (folder ID) and ``file`` (folder relative path) parameters."
+msgstr ""
+
+#: ../../../rest/debug.rst:33
+msgid ""
+"$ curl -H X-API-Key:... \"http://localhost:8384/rest/debug/file?"
+"folder=default&file=foo/bar\""
+msgstr ""
+
+#: ../../../rest/debug.rst:37
+msgid ""
+"The returned object contains the same info as :doc:`db-file-get`, plus a "
+"summary of ``globalVersions``."
+msgstr ""
