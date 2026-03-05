@@ -1,0 +1,45 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2019, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../events/folderscanprogress.rst:2
+msgid "FolderScanProgress"
+msgstr ""
+
+#: ../../../events/folderscanprogress.rst:4
+msgid ""
+"Emitted in regular intervals (folder setting ProgressIntervalS, 2s by "
+"default) during scans giving the amount of bytes already scanned and to be "
+"scanned in total , as well as the current scanning rates in bytes per second."
+msgstr ""
+
+#: ../../../events/folderscanprogress.rst:8
+msgid ""
+"{\n"
+"   \"data\" : {\n"
+"      \"total\" : 1,\n"
+"      \"rate\" : 0,\n"
+"      \"current\" : 0,\n"
+"      \"folder\" : \"bd7q3-zskm5\"\n"
+"   },\n"
+"   \"globalID\" : 29,\n"
+"   \"type\" : \"FolderScanProgress\",\n"
+"   \"time\" : \"2017-03-06T15:00:58.072004209+01:00\",\n"
+"   \"id\" : 29\n"
+"}"
+msgstr ""
