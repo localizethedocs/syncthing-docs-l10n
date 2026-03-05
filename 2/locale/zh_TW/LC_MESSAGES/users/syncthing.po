@@ -494,7 +494,7 @@ msgstr ""
 
 #: ../../../users/syncthing.rst:322
 msgid "Development Settings"
-msgstr ""
+msgstr "開發設定"
 
 #: ../../../users/syncthing.rst:324
 msgid ""
