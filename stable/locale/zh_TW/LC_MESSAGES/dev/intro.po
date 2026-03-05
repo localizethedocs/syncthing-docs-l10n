@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../dev/intro.rst:2
 msgid "Syncthing Development"
-msgstr ""
+msgstr "Syncthing 開發"
 
 #: ../../../dev/intro.rst:5
 msgid "Controlling Syncthing from External Applications"

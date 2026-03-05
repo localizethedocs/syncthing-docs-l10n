@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../users/autostart.rst:2
 msgid "Starting Syncthing Automatically"
-msgstr ""
+msgstr "自動啟動 Syncthing"
 
 #: ../../../users/autostart.rst:4
 msgid "Jump to configuration for your system:"
