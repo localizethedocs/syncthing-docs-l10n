@@ -1,0 +1,41 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2026, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing stable\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:14+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../rest/system-discovery-post.rst:2
+msgid "POST /rest/system/discovery"
+msgstr ""
+
+#: ../../../rest/system-discovery-post.rst:4
+msgid "Removed in v0.12.0."
+msgstr ""
+
+#: ../../../rest/system-discovery-post.rst:6
+msgid ""
+"Post with the query parameters ``device`` and ``addr`` to add entries to the "
+"discovery cache."
+msgstr ""
+
+#: ../../../rest/system-discovery-post.rst:9
+msgid ""
+"curl -X POST http://127.0.0.1:8384/rest/system/discovery?"
+"device=LGFPDIT7SKNNJVJZA4FC7QNCRKCE753K72BW5QD2FOZ7FRFEP57Q\\&addr=192.162.129.11:22000\n"
+"# Or with the X-API-Key header:\n"
+"curl -X POST --header \"X-API-Key: TcE28kVPdtJ8COws1JdM0b2nodj77WeQ\" "
+"http://127.0.0.1:8384/rest/system/discovery?"
+"device=LGFPDIT7SKNNJVJZA4FC7QNCRKCE753K72BW5QD2FOZ7FRFEP57Q\\&addr=192.162.129.11:22000"
+msgstr ""

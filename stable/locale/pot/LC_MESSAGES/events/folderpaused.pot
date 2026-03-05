@@ -1,0 +1,41 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2026, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing stable\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:14+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../events/folderpaused.rst:2
+msgid "FolderPaused"
+msgstr ""
+
+#: ../../../events/folderpaused.rst:4
+msgid ""
+"Generated when the configuration changes regarding the \"paused\" state of a "
+"folder.  Sent repeatedly for each changed folder."
+msgstr ""
+
+#: ../../../events/folderpaused.rst:7
+msgid ""
+"{\n"
+"  \"id\": 93,\n"
+"  \"globalID\": 93,\n"
+"  \"type\": \"FolderPaused\",\n"
+"  \"time\": \"2021-06-07T23:45:03.414609034+02:00\",\n"
+"  \"data\": {\n"
+"    \"id\": \"abcde-fghij\",\n"
+"    \"label\": \"My folder\"\n"
+"  }\n"
+"}"
+msgstr ""
