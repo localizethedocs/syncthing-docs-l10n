@@ -1,0 +1,51 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2026, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../advanced/folder-caseSensitiveFS.rst:4
+msgid "caseSensitiveFS"
+msgstr ""
+
+#: ../../../advanced/folder-caseSensitiveFS.rst:8
+msgid ""
+"``caseSensitiveFS`` is an advanced folder setting that affects file name "
+"handling."
+msgstr ""
+
+#: ../../../advanced/folder-caseSensitiveFS.rst:11
+msgid ""
+"With ``caseSensitiveFS`` set to  ``false`` (the default setting) Syncthing's "
+"case sensitivity safety checks are enabled. Syncthing will then attempt to "
+"detect and prevent case-only file name collisions that can occur on case "
+"insensitive systems such as Windows and macOS, or other systems with case "
+"insensitive file systems."
+msgstr ""
+
+#: ../../../advanced/folder-caseSensitiveFS.rst:17
+msgid ""
+"When set to ``true`` the extra safety checks for case insensitive "
+"filesystems are disabled. This will provide a small improvement in "
+"performance when the underlying filesystem is positively known to be case-"
+"sensitive already. This was the behavior of Syncthing 1.8.0 and earlier."
+msgstr ""
+
+#: ../../../advanced/folder-caseSensitiveFS.rst:22
+msgid ""
+"This option should normally be set to ``false``. It is **not** meant to "
+"change the basic principles of how Syncthing :ref:`handles case-sensitivity "
+"<case-sensitivity>`."
+msgstr ""

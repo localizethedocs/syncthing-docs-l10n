@@ -1,0 +1,44 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2026, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../events/deviceconnected.rst:2
+msgid "DeviceConnected"
+msgstr ""
+
+#: ../../../events/deviceconnected.rst:4
+msgid "Generated each time a connection to a device has been established."
+msgstr ""
+
+#: ../../../events/deviceconnected.rst:6
+msgid ""
+"{\n"
+"    \"id\": 2,\n"
+"    \"globalID\": 2,\n"
+"    \"type\": \"DeviceConnected\",\n"
+"    \"time\": \"2014-07-13T21:04:33.687836696+02:00\",\n"
+"    \"data\": {\n"
+"        \"addr\": \"172.16.32.25:22000\",\n"
+"        \"id\": \"NFGKEKE-7Z6RTH7-I3PRZXS-DEJF3UJ-FRWJBFO-VBBTDND-4SGNGVZ-"
+"QUQHJAG\",\n"
+"        \"deviceName\": \"Laptop\",\n"
+"        \"clientName\": \"syncthing\",\n"
+"        \"clientVersion\": \"v0.13.4\",\n"
+"        \"type\": \"TCP (Client)\"\n"
+"    }\n"
+"}"
+msgstr ""
