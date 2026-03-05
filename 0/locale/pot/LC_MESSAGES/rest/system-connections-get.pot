@@ -1,0 +1,88 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing 0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../rest/system-connections-get.rst:2
+msgid "GET /rest/system/connections"
+msgstr ""
+
+#: ../../../rest/system-connections-get.rst:5
+msgid "Return format changed in 0.13.0."
+msgstr ""
+
+#: ../../../rest/system-connections-get.rst:8
+msgid ""
+"Returns the list of configured devices and some metadata associated with "
+"them. The list also contains the local device itself as not connected."
+msgstr ""
+
+#: ../../../rest/system-connections-get.rst:11
+msgid ""
+"The connection types are ``TCP (Client)``, ``TCP (Server)``, ``Relay "
+"(Client)`` and ``Relay (Server)``."
+msgstr ""
+
+#: ../../../rest/system-connections-get.rst:13
+msgid ""
+"{\n"
+"   \"total\" : {\n"
+"          \"paused\" : false,\n"
+"          \"clientVersion\" : \"\",\n"
+"          \"at\" : \"2015-11-07T17:29:47.691637262+01:00\",\n"
+"          \"connected\" : false,\n"
+"          \"inBytesTotal\" : 1479,\n"
+"          \"type\" : \"\",\n"
+"          \"outBytesTotal\" : 1318,\n"
+"          \"address\" : \"\"\n"
+"   },\n"
+"   \"connections\" : {\n"
+"          \"YZJBJFX-RDBL7WY-6ZGKJ2D-4MJB4E7-ZATSDUY-LD6Y3L3-MLFUYWE-"
+"AEMXJAC\" : {\n"
+"             \"connected\" : true,\n"
+"             \"inBytesTotal\" : 556,\n"
+"             \"paused\" : false,\n"
+"             \"at\" : \"2015-11-07T17:29:47.691548971+01:00\",\n"
+"             \"clientVersion\" : \"v0.12.1\",\n"
+"             \"address\" : \"127.0.0.1:22002\",\n"
+"             \"type\" : \"TCP (Client)\",\n"
+"             \"outBytesTotal\" : 550\n"
+"          },\n"
+"          \"DOVII4U-SQEEESM-VZ2CVTC-CJM4YN5-QNV7DCU-5U3ASRL-YVFG6TH-"
+"W5DV5AA\" : {\n"
+"             \"outBytesTotal\" : 0,\n"
+"             \"type\" : \"\",\n"
+"             \"address\" : \"\",\n"
+"             \"at\" : \"0001-01-01T00:00:00Z\",\n"
+"             \"clientVersion\" : \"\",\n"
+"             \"paused\" : false,\n"
+"             \"inBytesTotal\" : 0,\n"
+"             \"connected\" : false\n"
+"          },\n"
+"          \"UYGDMA4-TPHOFO5-2VQYDCC-7CWX7XW-INZINQT-LE4B42N-4JUZTSM-"
+"IWCSXA4\" : {\n"
+"             \"address\" : \"\",\n"
+"             \"type\" : \"\",\n"
+"             \"outBytesTotal\" : 0,\n"
+"             \"connected\" : false,\n"
+"             \"inBytesTotal\" : 0,\n"
+"             \"paused\" : false,\n"
+"             \"at\" : \"0001-01-01T00:00:00Z\",\n"
+"             \"clientVersion\" : \"\"\n"
+"          }\n"
+"   }\n"
+"}"
+msgstr ""

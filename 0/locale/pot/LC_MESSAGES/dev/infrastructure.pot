@@ -1,0 +1,225 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing 0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../dev/infrastructure.rst:2
+msgid "Syncthing Infrastructure"
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:4
+msgid ""
+"This is a list of the infrastructure that powers the Syncthing project. "
+"Unless otherwise noted, the default is that it's a VM hosted by :user:"
+"`calmh`."
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:8
+msgid "GitHub"
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:10
+msgid ""
+"All repos, issue trackers and binary releases are hosted at `GitHub <https://"
+"github.com/syncthing>`__."
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:13
+msgid "Main & Documentation Websites"
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:15
+msgid "Static HTML, served by Nginx."
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:17
+msgid "`syncthing.net <https://syncthing.net/>`__ (SmartOS container, 1024 MB)"
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:18
+msgid ""
+"`docs.syncthing.net <http://docs.syncthing.net/>`__ (Sphinx for site "
+"generation)"
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:21
+msgid "Forum Website"
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:23
+msgid "Powered by Discourse."
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:25
+msgid ""
+"`forum.syncthing.net <https://forum.syncthing.net/>`__ (Ubuntu Linux, 2048 "
+"MB)"
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:28
+msgid "Global Discovery Servers"
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:30
+msgid "Runs the ``discosrv`` instances for v0.11 and v0.12."
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:32
+msgid ""
+"discovery-v4-1.syncthing.net (Ubuntu 14.04, 512 MB, hosted by :user:`calmh`)"
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:33
+msgid "discovery-v6-1.syncthing.net (alias for above)"
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:34
+msgid ""
+"discovery-v4-2.syncthing.net (Ubuntu 14.04, 512 MB, hosted at DigitalOcean)"
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:35
+msgid "discovery-v6-2.syncthing.net (alias for above)"
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:36
+msgid ""
+"discovery-v4-3.syncthing.net (Ubuntu 14.04, 512 MB, hosted at DigitalOcean)"
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:37
+msgid "discovery-v6-3.syncthing.net (alias for above)"
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:40
+msgid "Relay Pool Server"
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:42
+msgid ""
+"Runs the ``relaypoolsrv`` to handle dynamic registration and announcement of "
+"relays."
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:44
+msgid ""
+"`relays.syncthing.net <http://relays.syncthing.net>`__ (SmartOS container, "
+"256 MB)"
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:47
+msgid "Relay Servers"
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:49
+msgid "Hosted by friendly people on the internet."
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:52
+msgid "Usage Reporting Server"
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:54
+msgid "Runs the ``ursrv`` instance, PostgreSQL and Nginx."
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:56
+msgid ""
+"`data.syncthing.net <http://data.syncthing.net/>`__ (Ubuntu Linux, 512 MB)"
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:59
+msgid "Build Servers, Core and Android"
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:61
+msgid "Runs Jenkins and does the core and Android builds, Ubuntu Linux."
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:63
+msgid ""
+"`build.syncthing.net <http://build.syncthing.net/>`__ (Jenkins frontend, "
+"SmartOS container, 2048 MB)"
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:64
+msgid ""
+"`android.syncthing.net <http://android.syncthing.net/>`__ (Ubuntu Linux, "
+"3072 MB)"
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:67
+msgid "Build Servers, Other"
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:69
+msgid "Runs a Jenkins slave and builds release builds for their respective OS."
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:71
+msgid "native-windows-amd64 (Windows 2012 R2, Amazon EC2 t2.micro)"
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:72
+msgid "native-darwin-amd64 (Mac OS X 10.8.5, MacBookPro5,1 in calmh's garage)"
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:73
+msgid "native-ubuntu-amd64 (Ubuntu 14.04, 2048 MB, hosted at DigitalOcean)"
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:74
+msgid "native-ubuntu-386 (Ubuntu 14.04, 512 MB, hosted at DigitalOcean)"
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:77
+msgid "APT Server"
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:79
+msgid "Serves the APT repository for Debian/Ubuntu users. Runs Nginx."
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:81
+msgid ""
+"`apt.syncthing.net <http://apt.syncthing.net>`__ (SmartOS container, 256 MB)"
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:84
+msgid "Signing Server"
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:86
+msgid "Signs and uploads the release bundles to Github."
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:88
+msgid "secure.syncthing.net (SmartOS container, 2048 MB)"
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:91
+msgid "Code Review Server"
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:93
+msgid "Runs Crucible & Fisheye."
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:95
+msgid ""
+"`reviews.syncthing.net <https://reviews.syncthing.net>`__ (Ubuntu 14.04, "
+"1024 MB, hosted at DigitalOcean)"
+msgstr ""
