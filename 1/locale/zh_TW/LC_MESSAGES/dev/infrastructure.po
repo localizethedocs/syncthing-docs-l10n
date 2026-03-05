@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../dev/infrastructure.rst:2
 msgid "Syncthing Infrastructure"
-msgstr ""
+msgstr "Syncthing 基礎設施"
 
 #: ../../../dev/infrastructure.rst:4
 msgid "This is a list of the infrastructure that powers the Syncthing project."
@@ -117,7 +117,7 @@ msgstr ""
 
 #: ../../../dev/infrastructure.rst:47
 msgid "`data.syncthing.net <https://data.syncthing.net/>`__"
-msgstr ""
+msgstr "`data.syncthing.net <https://data.syncthing.net/>`__"
 
 #: ../../../dev/infrastructure.rst:50
 msgid "Signing Server"
@@ -129,7 +129,7 @@ msgstr ""
 
 #: ../../../dev/infrastructure.rst:54
 msgid "secure.syncthing.net"
-msgstr ""
+msgstr "secure.syncthing.net"
 
 #: ../../../dev/infrastructure.rst:57
 msgid "External Monitoring"
