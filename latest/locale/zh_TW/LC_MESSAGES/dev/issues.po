@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../dev/issues.rst:2
 msgid "Issue Management"
-msgstr ""
+msgstr "議題管理"
 
 #: ../../../dev/issues.rst:4
 msgid ""
@@ -31,7 +31,7 @@ msgstr ""
 
 #: ../../../dev/issues.rst:10
 msgid "Labels"
-msgstr ""
+msgstr "標籤"
 
 #: ../../../dev/issues.rst:12
 msgid ""

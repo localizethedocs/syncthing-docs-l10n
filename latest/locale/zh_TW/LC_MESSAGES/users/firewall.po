@@ -19,11 +19,11 @@ msgstr ""
 
 #: ../../../users/firewall.rst:4
 msgid "Firewall Setup"
-msgstr ""
+msgstr "防火牆設定"
 
 #: ../../../users/firewall.rst:7
 msgid "Router Setup"
-msgstr ""
+msgstr "路由器設定"
 
 #: ../../../users/firewall.rst:10
 msgid "Port Forwards"

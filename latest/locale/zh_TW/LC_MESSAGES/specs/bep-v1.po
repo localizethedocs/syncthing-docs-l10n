@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../specs/bep-v1.rst:4
 msgid "Block Exchange Protocol v1"
-msgstr ""
+msgstr "區塊交換協定 v1"
 
 #: ../../../specs/bep-v1.rst:7
 msgid "Introduction and Definitions"

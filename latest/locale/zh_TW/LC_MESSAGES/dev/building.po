@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../dev/building.rst:4
 msgid "Building Syncthing"
-msgstr ""
+msgstr "建置 Syncthing"
 
 #: ../../../dev/building.rst:7
 msgid ""
@@ -307,6 +307,9 @@ msgid ""
 "$ ./bin/syncthing --version\n"
 "syncthing v1.8.0 ... builder@buildhost.local 2020-07-30 11:49:14 UTC"
 msgstr ""
+"$ BUILD_USER=builder BUILD_HOST=buildhost.local go run build.go\n"
+"$ ./bin/syncthing --version\n"
+"syncthing v1.8.0 ... builder@buildhost.local 2020-07-30 11:49:14 UTC"
 
 #: ../../../dev/building.rst:181
 msgid ""
