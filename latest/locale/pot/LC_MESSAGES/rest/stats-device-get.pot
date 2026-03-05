@@ -1,0 +1,38 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2026, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../rest/stats-device-get.rst:2
+msgid "GET /rest/stats/device"
+msgstr ""
+
+#: ../../../rest/stats-device-get.rst:4
+msgid ""
+"Returns general statistics about devices. Currently, only contains the time "
+"the device was last seen and the last connection duration."
+msgstr ""
+
+#: ../../../rest/stats-device-get.rst:7
+msgid ""
+"$ curl -s http://localhost:8384/rest/stats/device | json\n"
+"{\n"
+"  \"P56IOI7-MZJNU2Y-IQGDREY-DM2MGTI-MGL3BXN-PQ6W5BM-TBBZ4TJ-XZWICQ2\": {\n"
+"    \"lastSeen\" : \"2015-04-18T11:21:31.3256277+01:00\"\n"
+"    \"lastConnectionDurationS\": 556335.421708141\n"
+"  }\n"
+"}"
+msgstr ""

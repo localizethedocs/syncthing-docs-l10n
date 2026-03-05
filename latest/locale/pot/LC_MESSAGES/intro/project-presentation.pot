@@ -1,0 +1,61 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2026, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../intro/project-presentation.rst:4
+msgid "Project Presentation"
+msgstr ""
+
+#: ../../../intro/project-presentation.rst:6
+msgid ""
+"These are the various projects under the Syncthing umbrella and the people "
+"chiefly responsible for maintaining them."
+msgstr ""
+
+#: ../../../intro/project-presentation.rst:10
+msgid "Syncthing"
+msgstr ""
+
+#: ../../../intro/project-presentation.rst:12
+msgid ""
+"Syncthing_ is the core CLI application, used by the Android and native UI "
+"wrappers."
+msgstr ""
+
+#: ../../../intro/project-presentation.rst:15
+msgid "Jakob Borg / :user:`calmh`"
+msgstr ""
+
+#: ../../../intro/project-presentation.rst:16
+msgid "Audrius Butkevicius / :user:`AudriusButkevicius`"
+msgstr ""
+
+#: ../../../intro/project-presentation.rst:17
+msgid "Simon Frei / :user:`imsodin`"
+msgstr ""
+
+#: ../../../intro/project-presentation.rst:20
+msgid "syncthing-macos"
+msgstr ""
+
+#: ../../../intro/project-presentation.rst:22
+msgid "`syncthing-macos`_ is a native macOS Syncthing application bundle."
+msgstr ""
+
+#: ../../../intro/project-presentation.rst:24
+msgid "Jerry Jacobs / :user:`xor-gate`"
+msgstr ""

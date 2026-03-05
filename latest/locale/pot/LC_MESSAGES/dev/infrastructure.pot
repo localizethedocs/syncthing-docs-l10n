@@ -1,0 +1,146 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2026, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../dev/infrastructure.rst:2
+msgid "Syncthing Infrastructure"
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:4
+msgid "This is a list of the infrastructure that powers the Syncthing project."
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:7
+msgid "GitHub"
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:9
+msgid ""
+"All repos, issue trackers and binary releases are hosted at `GitHub <https://"
+"github.com/syncthing>`__. GitHub Actions powers our builds and tests (CI)."
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:13
+msgid "Main & Documentation Websites"
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:15
+msgid "Websites are published to GitHub Pages."
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:17
+msgid "`syncthing.net <https://syncthing.net/>`__ (Hugo for site generation)"
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:18
+msgid ""
+"`docs.syncthing.net <https://docs.syncthing.net/>`__ (Sphinx for site "
+"generation)"
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:21
+msgid "General Services"
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:23
+msgid "Several services run in a Kubernetes cluster at Scaleway:"
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:25
+msgid "Crash reporting server"
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:26
+msgid ""
+"`Debian/APT packages <https://apt.syncthing.net>`__, with the actual "
+"packages served from object storage at Scaleway"
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:28
+msgid "Global discovery"
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:29
+msgid "`Relay pool server <https://relays.syncthing.net>`__"
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:30
+msgid "`Roadmap voting site <https://roadmap.syncthing.net>`__"
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:31
+msgid "`Service monitoring (Mimir/Loki/Grafana) <https://mon.syncthing.net>`__"
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:32
+msgid "Upgrade server"
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:34
+msgid ""
+"The `forum <https://forum.syncthing.net/>`__ is a separate VM, though also "
+"at Scaleway."
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:37
+msgid "Relay Servers"
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:39
+msgid "Hosted by friendly people on the internet."
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:42
+msgid "Usage Reporting Server"
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:44
+msgid ""
+"Runs the `ursrv <https://github.com/syncthing/syncthing/tree/main/cmd/"
+"ursrv>`__ daemon with PostgreSQL and Nginx."
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:47
+msgid "`data.syncthing.net <https://data.syncthing.net/>`__"
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:50
+msgid "Signing Server"
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:52
+msgid "Signs and uploads the release bundles to GitHub."
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:54
+msgid "secure.syncthing.net"
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:57
+msgid "External Monitoring"
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:59
+msgid ""
+"The infrastructure is monitored and its status is publicly accessible on the "
+"following urls:"
+msgstr ""
+
+#: ../../../dev/infrastructure.rst:61
+msgid ""
+"`status.syncthing.net <https://status.syncthing.net>`__ (updown.io service)"
+msgstr ""
