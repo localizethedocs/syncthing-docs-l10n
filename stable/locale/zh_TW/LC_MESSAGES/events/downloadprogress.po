@@ -1,0 +1,135 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2026, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing stable\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:14+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../events/downloadprogress.rst:4
+msgid "DownloadProgress"
+msgstr ""
+
+#: ../../../events/downloadprogress.rst:6
+msgid ""
+"Emitted during file downloads for each folder for each file. By default only "
+"a single file in a folder is handled at the same time, but custom "
+"configuration can cause multiple files to be shown."
+msgstr ""
+
+#: ../../../events/downloadprogress.rst:10
+msgid ""
+"{\n"
+"    \"id\": 221,\n"
+"    \"globalID\": 221,\n"
+"    \"type\": \"DownloadProgress\",\n"
+"    \"time\": \"2014-12-13T00:26:12.9876937Z\",\n"
+"    \"data\": {\n"
+"        \"folder1\": {\n"
+"            \"file1\": {\n"
+"                \"total\": 800,\n"
+"                \"pulling\": 2,\n"
+"                \"copiedFromOrigin\": 0,\n"
+"                \"reused\": 633,\n"
+"                \"copiedFromElsewhere\": 0,\n"
+"                \"pulled\": 38,\n"
+"                \"bytesTotal\": 104792064,\n"
+"                \"bytesDone\": 87883776\n"
+"            },\n"
+"            \"dir\\\\file2\": {\n"
+"                \"total\": 80,\n"
+"                \"pulling\": 2,\n"
+"                \"copiedFromOrigin\": 0,\n"
+"                \"reused\": 0,\n"
+"                \"copiedFromElsewhere\": 0,\n"
+"                \"pulled\": 32,\n"
+"                \"bytesTotal\": 10420224,\n"
+"                \"bytesDone\": 4128768\n"
+"            }\n"
+"        },\n"
+"        \"folder2\": {\n"
+"            \"file3\": {\n"
+"                \"total\": 800,\n"
+"                \"pulling\": 2,\n"
+"                \"copiedFromOrigin\": 0,\n"
+"                \"reused\": 633,\n"
+"                \"copiedFromElsewhere\": 0,\n"
+"                \"pulled\": 38,\n"
+"                \"bytesTotal\": 104792064,\n"
+"                \"bytesDone\": 87883776\n"
+"            },\n"
+"            \"dir\\\\file4\": {\n"
+"                \"total\": 80,\n"
+"                \"pulling\": 2,\n"
+"                \"copiedFromOrigin\": 0,\n"
+"                \"reused\": 0,\n"
+"                \"copiedFromElsewhere\": 0,\n"
+"                \"pulled\": 32,\n"
+"                \"bytesTotal\": 10420224,\n"
+"                \"bytesDone\": 4128768\n"
+"            }\n"
+"        }\n"
+"    }\n"
+"}"
+msgstr ""
+
+#: ../../../events/downloadprogress.rst:65
+msgid "``total`` - total number of blocks in the file"
+msgstr ""
+
+#: ../../../events/downloadprogress.rst:66
+msgid "``pulling`` - number of blocks currently being downloaded"
+msgstr ""
+
+#: ../../../events/downloadprogress.rst:67
+msgid ""
+"``copiedFromOrigin`` - number of blocks copied from the file we are about to "
+"replace"
+msgstr ""
+
+#: ../../../events/downloadprogress.rst:69
+msgid "``reused`` - number of blocks reused from a previous temporary file"
+msgstr ""
+
+#: ../../../events/downloadprogress.rst:70
+msgid ""
+"``copiedFromElsewhere`` - number of blocks copied from other files or "
+"potentially other folders"
+msgstr ""
+
+#: ../../../events/downloadprogress.rst:72
+msgid "``pulled`` - number of blocks actually downloaded so far"
+msgstr ""
+
+#: ../../../events/downloadprogress.rst:73
+msgid "``bytesTotal`` - approximate total file size"
+msgstr ""
+
+#: ../../../events/downloadprogress.rst:74
+msgid ""
+"``bytesDone`` - approximate number of bytes already handled (already reused, "
+"copied or pulled)"
+msgstr ""
+
+#: ../../../events/downloadprogress.rst:77
+msgid "Where block size is 128KB."
+msgstr ""
+
+#: ../../../events/downloadprogress.rst:79
+msgid ""
+"Files/folders appearing in the event data imply that the download has been "
+"started for that file/folder, where disappearing implies that the downloads "
+"have been finished or failed for that file/folder. There is always a last "
+"event emitted with no data, which implies all downloads have finished/failed."
+msgstr ""

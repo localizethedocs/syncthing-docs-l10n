@@ -1,0 +1,167 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2026, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing stable\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:14+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../users/ldap.rst:2
+msgid "LDAP Authentication"
+msgstr ""
+
+#: ../../../users/ldap.rst:4
+msgid ""
+"Syncthing can be configured to delegate authentication to an external LDAP "
+"source. Typical examples include Microsoft Active Directory and OpenLDAP / "
+"OpenDirectory servers."
+msgstr ""
+
+#: ../../../users/ldap.rst:8
+msgid ""
+"To enable LDAP authentication some configuration options must be set in the "
+"advanced config editor. Under \"Actions > Advanced\", select and expand the "
+"LDAP tab. The following options are available:"
+msgstr ""
+
+#: ../../../users/ldap.rst:12
+msgid "``Address``"
+msgstr ""
+
+#: ../../../users/ldap.rst:13
+msgid ""
+"Set to the address of the LDAP server, with hostname and port. For example, "
+"``dc1.example.com:389`` for standard LDAP, or ``dc1.example.com:636`` for "
+"LDAPS. (See also ``Transport``)"
+msgstr ""
+
+#: ../../../users/ldap.rst:17
+msgid "``Bind DN``"
+msgstr ""
+
+#: ../../../users/ldap.rst:18
+msgid ""
+"This is the pattern for the bind user. The special token ``%s`` must be "
+"inserted to represent the username entered by the user at the login prompt. "
+"Typical examples are ``%s@ad.example.com`` for Active Directory or something "
+"like ``CN=%s,CN=Users,DC=example,DC=com`` for standard LDAP servers."
+msgstr ""
+
+#: ../../../users/ldap.rst:24
+msgid "``Insecure Skip Verify``"
+msgstr ""
+
+#: ../../../users/ldap.rst:25
+msgid ""
+"When set, this option disables all certificate verification for LDAPS. Use "
+"with care and only when absolutely necessary."
+msgstr ""
+
+#: ../../../users/ldap.rst:28
+msgid "``Search Base DN``"
+msgstr ""
+
+#: ../../../users/ldap.rst:29
+msgid ""
+"Optional, base DN to use for user searches. See :ref:`groupmembership` below."
+msgstr ""
+
+#: ../../../users/ldap.rst:32
+msgid "``Search Filter``"
+msgstr ""
+
+#: ../../../users/ldap.rst:33
+msgid ""
+"Optional, search filter to use for user searches. See :ref:`groupmembership` "
+"below."
+msgstr ""
+
+#: ../../../users/ldap.rst:36
+msgid "``Transport``"
+msgstr ""
+
+#: ../../../users/ldap.rst:37
+msgid ""
+"Set to ``plain`` for unencrypted LDAP (port 389), ``tls`` for LDAPS (port "
+"636), or ``starttls`` for Start TLS (port 389 typically)."
+msgstr ""
+
+#: ../../../users/ldap.rst:40
+msgid "A simple setup might look like this:"
+msgstr ""
+
+#: ../../../users/ldap.rst:44
+msgid ""
+"Once these settings are correct, LDAP authentication must be **enabled** by "
+"setting the authentication mode to ``ldap`` in the advanced GUI "
+"configuration:"
+msgstr ""
+
+#: ../../../users/ldap.rst:53
+msgid "Enforcing Group Membership"
+msgstr ""
+
+#: ../../../users/ldap.rst:57
+msgid ""
+"In some cases it may be desirable to restrict login to members of a certain "
+"group. We do this by using a custom search filter that matches users who "
+"belong to the group only."
+msgstr ""
+
+#: ../../../users/ldap.rst:61
+msgid "We need to know three things to specify the required search:"
+msgstr ""
+
+#: ../../../users/ldap.rst:63
+msgid ""
+"The base DN under which users are stored. This can be something like "
+"``CN=Users,DC=example,DC=com`` for AD, or it can be a specific OU for a "
+"subset of users."
+msgstr ""
+
+#: ../../../users/ldap.rst:66
+msgid ""
+"The DN for the group we need to match, and the user attribute that stores "
+"group memberships. This varies depending on the LDAP schema and layout, for "
+"AD the membership attribute is ``memberOf``."
+msgstr ""
+
+#: ../../../users/ldap.rst:69
+msgid ""
+"The attribute that stores the user ID that the user enters at the login "
+"prompt. Again this varies, and it can be either ``CN``, ``UID``, or "
+"something else. For AD it is ``sAMAccountName``."
+msgstr ""
+
+#: ../../../users/ldap.rst:73
+msgid ""
+"With these at hand we can enter the base DN in the ``Search Base DN`` "
+"configuration option, and build our search filter. The search filter needs "
+"to match both the user ID and the group membership. For an AD setup with a "
+"group ``Syncthing`` in the standard location, a valid search filter is::"
+msgstr ""
+
+#: ../../../users/ldap.rst:78
+msgid ""
+"(&\n"
+"  (sAMAccountName=%s)\n"
+"  (memberOf=CN=Syncthing,CN=Users,DC=example,DC=com)\n"
+"  )"
+msgstr ""
+
+#: ../../../users/ldap.rst:83
+msgid ""
+"Line breaks for clarity only. We enter this as one long string. For example, "
+"like this:"
+msgstr ""

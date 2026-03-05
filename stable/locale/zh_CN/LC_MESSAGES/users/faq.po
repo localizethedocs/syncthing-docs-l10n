@@ -1,0 +1,1101 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2026, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing stable\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:14+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../users/faq.rst:6
+msgid "FAQ"
+msgstr ""
+
+#: ../../../users/faq-parts/general.rst:2
+msgid "General"
+msgstr ""
+
+#: ../../../users/faq-parts/general.rst:5
+msgid "What is Syncthing?"
+msgstr ""
+
+#: ../../../users/faq-parts/general.rst:7
+msgid ""
+"Syncthing is an application that lets you synchronize your files across "
+"multiple devices. This means the creation, modification or deletion of files "
+"on one machine will automatically be replicated to your other devices. We "
+"believe your data is your data alone and you deserve to choose where it is "
+"stored. Therefore Syncthing does not upload your data to the cloud but "
+"exchanges your data across your machines as soon as they are online at the "
+"same time."
+msgstr ""
+
+#: ../../../users/faq-parts/general.rst:15
+msgid "Is it \"syncthing\", \"Syncthing\" or \"SyncThing\"?"
+msgstr ""
+
+#: ../../../users/faq-parts/general.rst:17
+msgid ""
+"It's **Syncthing**, although the command and source repository is spelled "
+"``syncthing`` so it may be referred to in that way as well. It's definitely "
+"not :strike:`SyncThing`, even though the abbreviation ``st`` is used in some "
+"circumstances and file names."
+msgstr ""
+
+#: ../../../users/faq-parts/general.rst:23
+msgid "What things are synced?"
+msgstr ""
+
+#: ../../../users/faq-parts/general.rst:25
+msgid "The following things are *always* synchronized:"
+msgstr ""
+
+#: ../../../users/faq-parts/general.rst:27
+msgid "File contents"
+msgstr ""
+
+#: ../../../users/faq-parts/general.rst:28
+msgid "File modification times"
+msgstr ""
+
+#: ../../../users/faq-parts/general.rst:30
+msgid "The following may be synchronized or not, depending:"
+msgstr ""
+
+#: ../../../users/faq-parts/general.rst:32
+msgid ""
+"File permissions (when supported by file system; on Windows only the read "
+"only bit is synchronized)"
+msgstr ""
+
+#: ../../../users/faq-parts/general.rst:34
+msgid "Symbolic links (synced, except on Windows, but never followed)"
+msgstr ""
+
+#: ../../../users/faq-parts/general.rst:35
+msgid "File or directory owners and groups (when enabled)"
+msgstr ""
+
+#: ../../../users/faq-parts/general.rst:36
+msgid "Extended attributes (when enabled)"
+msgstr ""
+
+#: ../../../users/faq-parts/general.rst:37
+msgid "POSIX or NFS ACLs (as part of extended attributes)"
+msgstr ""
+
+#: ../../../users/faq-parts/general.rst:41
+msgid ""
+"Note that what can be synced often depends on the operating system, file "
+"system, and possibly other factors. For example, even though Syncthing may "
+"try to synchronise symbolic links on Android, this will not succeed, as the "
+"OS does not support them on the user storage."
+msgstr ""
+
+#: ../../../users/faq-parts/general.rst:46
+msgid "The following are *not* synchronized;"
+msgstr ""
+
+#: ../../../users/faq-parts/general.rst:48
+msgid "Directory modification times (not preserved)"
+msgstr ""
+
+#: ../../../users/faq-parts/general.rst:49
+msgid "Hard links (followed, not preserved)"
+msgstr ""
+
+#: ../../../users/faq-parts/general.rst:50
+msgid ""
+"Windows junctions (synced as ordinary directories; require enabling in :"
+"stconf:opt:`the configuration <folder.junctionsAsDirs>` on a per-folder "
+"basis)"
+msgstr ""
+
+#: ../../../users/faq-parts/general.rst:53
+msgid "Resource forks (not preserved)"
+msgstr ""
+
+#: ../../../users/faq-parts/general.rst:54
+msgid "Windows ACLs (not preserved)"
+msgstr ""
+
+#: ../../../users/faq-parts/general.rst:55
+msgid "Devices, FIFOs, and other specials (ignored)"
+msgstr ""
+
+#: ../../../users/faq-parts/general.rst:56
+msgid ""
+"Sparse file sparseness (will become sparse, when supported by the OS & "
+"filesystem)"
+msgstr ""
+
+#: ../../../users/faq-parts/general.rst:57
+msgid ""
+"Syncthing internal files and folders (e.g. ``.stfolder``, ``.stignore``, ``."
+"stversions``, :ref:`temporary files <temporary-files>`, etc.)"
+msgstr ""
+
+#: ../../../users/faq-parts/general.rst:61
+msgid "Is synchronization fast?"
+msgstr ""
+
+#: ../../../users/faq-parts/general.rst:63
+msgid ""
+"Syncthing segments files into pieces, called blocks, to transfer data from "
+"one device to another. Therefore, multiple devices can share the "
+"synchronization load, in a similar way to the torrent protocol. The more "
+"devices you have online, the faster an additional device will receive the "
+"data because small blocks will be fetched from all devices in parallel."
+msgstr ""
+
+#: ../../../users/faq-parts/general.rst:69
+msgid ""
+"Syncthing handles renaming files and updating their metadata in an efficient "
+"manner. This means that renaming a file will not cause a retransmission of "
+"that file. Additionally, appending data to existing files should be handled "
+"efficiently as well."
+msgstr ""
+
+#: ../../../users/faq-parts/general.rst:74
+msgid ""
+":ref:`Temporary files <temporary-files>` are used to store partial data "
+"downloaded from other devices. They are automatically removed whenever a "
+"file transfer has been completed or after the configured amount of time "
+"which is set in the configuration file (24 hours by default)."
+msgstr ""
+
+#: ../../../users/faq-parts/general.rst:80
+msgid "How does Syncthing differ from BitTorrent/Resilio Sync?"
+msgstr ""
+
+#: ../../../users/faq-parts/general.rst:82
+msgid ""
+"The two are different and not related. Syncthing and BitTorrent/Resilio Sync "
+"accomplish some of the same things, namely syncing files between two or more "
+"computers."
+msgstr ""
+
+#: ../../../users/faq-parts/general.rst:85
+msgid ""
+"BitTorrent Sync, now called Resilio Sync, is a proprietary peer-to-peer file "
+"synchronization tool available for Windows, Mac, Linux, Android, iOS, "
+"Windows Phone, Amazon Kindle Fire and BSD. [#resiliosync]_ Syncthing is an "
+"open source file synchronization tool."
+msgstr ""
+
+#: ../../../users/faq-parts/general.rst:90
+msgid ""
+"Syncthing uses an open and documented protocol, and likewise the security "
+"mechanisms in use are well defined and visible in the source code. Resilio "
+"Sync uses an undocumented, closed protocol with unknown security properties."
+msgstr ""
+
+#: ../../../users/faq-parts/general.rst:94
+msgid "https://en.wikipedia.org/wiki/Resilio_Sync"
+msgstr ""
+
+#: ../../../users/faq-parts/general.rst:97
+msgid "Is there an iOS client?"
+msgstr ""
+
+#: ../../../users/faq-parts/general.rst:99
+msgid ""
+"There are no plans by the current Syncthing team to officially support iOS "
+"in the foreseeable future."
+msgstr ""
+
+#: ../../../users/faq-parts/general.rst:101
+msgid ""
+"iOS has significant restrictions on background processing that make it very "
+"hard to run Syncthing reliably and integrate it into the system."
+msgstr ""
+
+#: ../../../users/faq-parts/general.rst:104
+msgid ""
+"However, there is an open source app for iOS, incorporating Syncthing, that "
+"attempts to work within these limitations. It provides a native UI and "
+"features for selective synchronization as well as on-demand access to files. "
+"Most Syncthing features are available, but the native UI is simplified "
+"compared to the official client. [#synctrain]_"
+msgstr ""
+
+#: ../../../users/faq-parts/general.rst:109
+msgid ""
+"There is also a commercial packaging of Syncthing. It provides access to all "
+"Syncthing functionalities through the original UI. [#mobiussync]_"
+msgstr ""
+
+#: ../../../users/faq-parts/general.rst:112
+msgid "https://github.com/pixelspark/sushitrain"
+msgstr ""
+
+#: ../../../users/faq-parts/general.rst:113
+msgid "https://www.mobiussync.com"
+msgstr ""
+
+#: ../../../users/faq-parts/general.rst:116
+msgid "Should I keep my device IDs secret?"
+msgstr ""
+
+#: ../../../users/faq-parts/general.rst:118
+msgid ""
+"No. The IDs are not sensitive. Given a device ID it's possible to find the "
+"IP address for that device, if global discovery is enabled on it. Knowing "
+"the device ID doesn't help you actually establish a connection to that "
+"device or get a list of files, etc."
+msgstr ""
+
+#: ../../../users/faq-parts/general.rst:123
+msgid ""
+"For a connection to be established, both devices need to know about the "
+"other's device ID. It's not possible (in practice) to forge a device ID. (To "
+"forge a device ID you need to create a TLS certificate with that specific "
+"SHA-256 hash. If you can do that, you can spoof any TLS certificate. The "
+"world is your oyster!)"
+msgstr ""
+
+#: ../../../users/faq-parts/general.rst:130
+msgid ":ref:`device-ids`"
+msgstr ""
+
+#: ../../../users/faq-parts/troubleshooting.rst:2
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../../../users/faq-parts/troubleshooting.rst:5
+msgid "Where are the Syncthing logs?"
+msgstr ""
+
+#: ../../../users/faq-parts/troubleshooting.rst:7
+msgid ""
+"Syncthing logs to stdout by default. On Windows Syncthing by default also "
+"creates ``syncthing.log`` in Syncthing's home directory (run ``syncthing --"
+"paths`` to see where that is). The command line option ``--logfile`` can be "
+"used to specify a user-defined logfile.  If you only have access to a "
+"running instance's GUI, click the `Help` -> `About` menu item, then the "
+"`Paths` tab."
+msgstr ""
+
+#: ../../../users/faq-parts/troubleshooting.rst:13
+msgid ""
+"If you're running a process manager like systemd, check there. If you're "
+"using a GUI wrapper integration, it may keep the logs for you."
+msgstr ""
+
+#: ../../../users/faq-parts/troubleshooting.rst:17
+msgid "Why is the sync so slow?"
+msgstr ""
+
+#: ../../../users/faq-parts/troubleshooting.rst:19
+msgid ""
+"When troubleshooting a slow sync, there are a number of things to check."
+msgstr ""
+
+#: ../../../users/faq-parts/troubleshooting.rst:21
+msgid ""
+"First of all, verify that you are not connected via a relay. In the \"Remote "
+"Devices\" list on the right side of the GUI, double check that the "
+"Connection Type does *not* start with \"Relay\"."
+msgstr ""
+
+#: ../../../users/faq-parts/troubleshooting.rst:25
+msgid "Here is an example of a device connected via a relay:"
+msgstr ""
+
+#: ../../../users/faq-parts/troubleshooting.rst:29
+msgid ""
+"If you are connected via a relay, this is because a direct connection could "
+"not be established. Double check and follow the suggestions in :ref:"
+"`firewall-setup` to enable direct connections."
+msgstr ""
+
+#: ../../../users/faq-parts/troubleshooting.rst:33
+msgid ""
+"Second, if one of the devices is a very low powered machine (a Raspberry Pi, "
+"or a phone, or a NAS, or similar) you are likely constrained by the CPU on "
+"that device. See the next question for reasons Syncthing likes a faster CPU."
+msgstr ""
+
+#: ../../../users/faq-parts/troubleshooting.rst:37
+msgid ""
+"Third, verify that the network connection is OK. Tools such as iperf or just "
+"an Internet speed test can be used to verify the performance here."
+msgstr ""
+
+#: ../../../users/faq-parts/troubleshooting.rst:41
+msgid "Why does it use so much CPU?"
+msgstr ""
+
+#: ../../../users/faq-parts/troubleshooting.rst:43
+msgid ""
+"When new or changed files are detected, or Syncthing starts for the first "
+"time, your files are hashed using SHA-256."
+msgstr ""
+
+#: ../../../users/faq-parts/troubleshooting.rst:46
+msgid ""
+"Data that is sent over the network is compressed (optionally) and encrypted "
+"(always). When receiving data it must be decrypted and then (if compressed) "
+"decompressed."
+msgstr ""
+
+#: ../../../users/faq-parts/troubleshooting.rst:50
+msgid ""
+"There is a certain amount of housekeeping that must be done to track the "
+"current and available versions of each file in the index database."
+msgstr ""
+
+#: ../../../users/faq-parts/troubleshooting.rst:53
+msgid ""
+"By default Syncthing uses periodic scanning every hour when watching for "
+"changes or every minute if that's disabled to detect file changes. This "
+"means checking every file's modification time and comparing it to the "
+"database. This can cause spikes of CPU usage for large folders."
+msgstr ""
+
+#: ../../../users/faq-parts/troubleshooting.rst:59
+msgid ""
+"Hashing, compression and encryption cost CPU time. Also, using the GUI "
+"causes a certain amount of extra CPU usage to calculate the summary data it "
+"presents. Note however that once things are *in sync* CPU usage should be "
+"negligible."
+msgstr ""
+
+#: ../../../users/faq-parts/troubleshooting.rst:64
+msgid ""
+"To minimize the impact of this, Syncthing attempts to :stconf:opt:`lower the "
+"process priority <setLowPriority>` when starting up."
+msgstr ""
+
+#: ../../../users/faq-parts/troubleshooting.rst:67
+msgid ""
+"To further limit the amount of CPU used when syncing and scanning, set the "
+"environment variable ``GOMAXPROCS`` to the maximum number of CPU cores "
+"Syncthing should use at any given moment. For example, ``GOMAXPROCS=2`` on a "
+"machine with four cores will limit Syncthing to no more than half the "
+"system's CPU power."
+msgstr ""
+
+#: ../../../users/faq-parts/troubleshooting.rst:74
+msgid "Why is the setup more complicated than BitTorrent/Resilio Sync?"
+msgstr ""
+
+#: ../../../users/faq-parts/troubleshooting.rst:76
+msgid ""
+"Security over convenience. In Syncthing you have to set up both sides to "
+"connect two devices. An attacker can't do much with a stolen device ID, "
+"because you have to add the device on the other side too. You have better "
+"control where your files are transferred."
+msgstr ""
+
+#: ../../../users/faq-parts/troubleshooting.rst:81
+msgid "This is an area that we are working to improve in the long term."
+msgstr ""
+
+#: ../../../users/faq-parts/troubleshooting.rst:84
+msgid "Why do I get \"Host check error\" in the GUI/API?"
+msgstr ""
+
+#: ../../../users/faq-parts/troubleshooting.rst:86
+msgid ""
+"Since version 0.14.6 Syncthing does an extra security check when the GUI/API "
+"is bound to localhost - namely that the browser is talking to localhost. "
+"This protects against most forms of `DNS rebinding attack <https://en."
+"wikipedia.org/wiki/DNS_rebinding>`__ against the GUI."
+msgstr ""
+
+#: ../../../users/faq-parts/troubleshooting.rst:91
+msgid ""
+"To pass this test, ensure that you are accessing the GUI using an URL that "
+"begins with ``http://localhost``, ``http://127.0.0.1`` or ``http://[::1]``. "
+"HTTPS is fine too, of course."
+msgstr ""
+
+#: ../../../users/faq-parts/troubleshooting.rst:95
+msgid ""
+"If you are using a proxy in front of Syncthing you may need to disable this "
+"check, after ensuring that the proxy provides sufficient authentication to "
+"protect against unauthorized access. Either:"
+msgstr ""
+
+#: ../../../users/faq-parts/troubleshooting.rst:99
+msgid "Make sure the proxy sets a ``Host`` header containing ``localhost``, or"
+msgstr ""
+
+#: ../../../users/faq-parts/troubleshooting.rst:100
+msgid ""
+"Set :stconf:opt:`gui.insecureSkipHostcheck` in the advanced settings, or"
+msgstr ""
+
+#: ../../../users/faq-parts/troubleshooting.rst:101
+msgid "Bind the GUI/API to a non-localhost listen port."
+msgstr ""
+
+#: ../../../users/faq-parts/troubleshooting.rst:103
+msgid ""
+"In all cases, username/password authentication and HTTPS should be used."
+msgstr ""
+
+#: ../../../users/faq-parts/troubleshooting.rst:106
+msgid "My Syncthing database is corrupt"
+msgstr ""
+
+#: ../../../users/faq-parts/troubleshooting.rst:108
+msgid ""
+"This is almost always a result of bad RAM, storage device or other hardware. "
+"When the index database is found to be corrupt Syncthing cannot operate and "
+"will note this in the logs and exit. To overcome this delete the :ref:"
+"`database folder <config-locations>` inside Syncthing's data directory and "
+"re-start Syncthing. It will then need to perform a full re-hashing of all "
+"shared folders. You should check your system in case the underlying cause is "
+"indeed faulty hardware which may put the system at risk of further data loss."
+msgstr ""
+
+#: ../../../users/faq-parts/troubleshooting.rst:118
+msgid "Why do I see Syncthing twice in task manager?"
+msgstr ""
+
+#: ../../../users/faq-parts/troubleshooting.rst:120
+msgid ""
+"One process manages the other, to capture logs and manage restarts. This "
+"makes it easier to handle upgrades from within Syncthing itself, and also "
+"ensures that we get a nice log file to help us narrow down the cause for "
+"crashes and other bugs."
+msgstr ""
+
+#: ../../../users/faq-parts/troubleshooting.rst:126
+msgid "How can I view the history of changes?"
+msgstr ""
+
+#: ../../../users/faq-parts/troubleshooting.rst:128
+msgid ""
+"The web GUI contains a ``Recent Changes`` button under the device list which "
+"displays changes since the last (re)start of Syncthing. With the ``--audit`` "
+"option you can enable a persistent, detailed log of changes and most "
+"activities, which contains a JSON-formatted sequence of events in the ``~/."
+"local/state/syncthing/audit-_date_-_time_.log`` file."
+msgstr ""
+
+#: ../../../users/faq-parts/troubleshooting.rst:135
+msgid "Does the audit log contain every change?"
+msgstr ""
+
+#: ../../../users/faq-parts/troubleshooting.rst:137
+msgid ""
+"The audit log (and the ``Recent Changes`` window) sees the changes that your "
+"Syncthing sees. When Syncthing is continuously connected it usually sees "
+"every change happening immediately and thus knows which node initiated the "
+"change. When topology gets complex or when your node reconnects after some "
+"time offline, Syncthing synchronises with its neighbours: It gets the latest "
+"synchronised state from the neighbour, which is the *result* of all the "
+"changes between the last known state (before disconnect or network delay) "
+"and the current state at the neighbour, and if there were updates, deletes, "
+"creates, conflicts, which were overlapping we only see the *latest change* "
+"for a given file or directory (and the node where that latest change "
+"occurred). When we connect to multiple neighbours Syncthing decides which "
+"neighbour has the latest state, or if the states conflict it initiates the "
+"conflict resolution procedure, which in the end results in a consistent up-"
+"to-date state with all the neighbours."
+msgstr ""
+
+#: ../../../users/faq-parts/troubleshooting.rst:154
+msgid "Why does Syncthing connect to this unknown/suspicious address?"
+msgstr ""
+
+#: ../../../users/faq-parts/troubleshooting.rst:156
+msgid ""
+"If you see outgoing connections to odd and unexpected addresses these are "
+"most likely connections to :ref:`relay servers <Relaying>`. Relay servers "
+"are run by volunteers all over the world. They usually listen on ports 443 "
+"or 22067, though this is controlled by the user running it. You can compare "
+"the address you are concerned about with `the current list of active relays "
+"<https://relays.syncthing.net>`__. Relays do not and can not see the data "
+"transmitted via them."
+msgstr ""
+
+#: ../../../users/faq-parts/troubleshooting.rst:165
+msgid "I am seeing the error message \"folder marker missing\". What do I do?"
+msgstr ""
+
+#: ../../../users/faq-parts/troubleshooting.rst:167
+msgid ""
+"Syncthing uses a specific marker usually called ``.stfolder`` to determine "
+"whether a folder is healthy. This is a safety check to ensure that your "
+"folder is properly readable and present on disk. For example, if you remove "
+"a USB drive from your computer or unmount a filesystem, then syncthing must "
+"know whether you have really deleted **all** of your files. Therefore, "
+"syncthing always checks that the ``.stfolder`` is present."
+msgstr ""
+
+#: ../../../users/faq-parts/troubleshooting.rst:173
+msgid ""
+"When this error appears, syncthing assumes that the folder has encountered "
+"some type of error and will stop syncing it until the ``.stfolder`` "
+"reappears. Once that happens, all changes made to the folder locally will be "
+"synced (i.e. missing files will be considered deletions)."
+msgstr ""
+
+#: ../../../users/faq-parts/troubleshooting.rst:177
+msgid ""
+"If you get this error message, check the folder in question on your storage. "
+"If you have unmounted the folder (or a parent of it), you must remount it "
+"for syncthing to resume syncing this folder."
+msgstr ""
+
+#: ../../../users/faq-parts/troubleshooting.rst:181
+msgid ""
+"If you have moved the folder, you must either move it back to its original "
+"location, or remove the folder from within the syncthing UI and re-add it at "
+"its new location."
+msgstr ""
+
+#: ../../../users/faq-parts/troubleshooting.rst:184
+msgid ""
+"If the folder is present on disk, with all of its children files and "
+"directories, but the ``.stfolder`` is still missing:"
+msgstr ""
+
+#: ../../../users/faq-parts/troubleshooting.rst:187
+msgid ""
+"It is possible that a file cleaning software has removed the ``.stfolder``. "
+"Some software removes empty folders, and the ``.stfolder`` is often empty. "
+"This happens particularly often on Android. To remediate, recreate the ``."
+"stfolder`` and add a dummy file in it, or add an exception to your cleaning "
+"software."
+msgstr ""
+
+#: ../../../users/faq-parts/troubleshooting.rst:192
+msgid ""
+"If you are still unsure what has happened, you can remove the folder from "
+"within the syncthing UI and re-add it at the same location. This causes "
+"syncthing to attempt an automatic re-creation of the ``.stfolder``. Next, it "
+"will also reset the database state of this folder. It will be considered a "
+"\"new\" folder, meaning that its files will be merged with files from remote "
+"devices."
+msgstr ""
+
+#: ../../../users/faq-parts/troubleshooting.rst:197
+msgid ""
+"Also see the :ref:`marker FAQ <marker-faq>` for more information about the "
+"folder marker."
+msgstr ""
+
+#: ../../../users/faq-parts/troubleshooting.rst:200
+msgid "Why do my Windows computers always connect through a relay?"
+msgstr ""
+
+#: ../../../users/faq-parts/troubleshooting.rst:202
+msgid ""
+"When connecting to a new network, Windows by default sets its profile to "
+"\"Public\". While being more secure, this setting commonly prevents "
+"applications like Syncthing from being able to establish direct connections "
+"with the device in question, forcing it to connect through a relay. If you "
+"would rather connect your devices directly, please follow `the official "
+"Microsoft instructions on how to change the network profile to \"Private\" "
+"<https://support.microsoft.com/windows/essential-network-settings-and-tasks-"
+"in-windows-f21a9bbc-c582-55cd-35e0-73431160a1b9#bkmk_network_profile>`__."
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:2
+msgid "Usage"
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:5
+msgid "What if there is a conflict?"
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:8
+msgid ":ref:`conflict-handling`"
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:13
+msgid "How do I serve a folder from a read only filesystem?"
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:15
+msgid ""
+"Syncthing requires a \"folder marker\" to indicate that the folder is "
+"present and healthy. By default this is a directory called ``.stfolder`` "
+"that is created by Syncthing when the folder is added. If this folder can't "
+"be created (you are serving files from a CD or something) you can instead "
+"set the advanced config ``Marker Name`` to the name of some file or folder "
+"that you know will always exist in the folder."
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:23
+msgid "I really hate the ``.stfolder`` directory, can I remove it?"
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:25
+msgid "See the previous question."
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:28
+msgid "Am I able to nest shared folders in Syncthing?"
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:30
+msgid ""
+"Sharing a folder that is within an already shared folder is possible, but it "
+"has its caveats. What you must absolutely avoid are circular shares. This is "
+"just one example, there may be other undesired effects. Nesting shared "
+"folders is not supported, recommended or coded for, but it can be done "
+"successfully when you know what you're doing - you have been warned."
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:37
+msgid "How do I rename/move a synced folder?"
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:39
+msgid ""
+"Syncthing doesn't have a direct way to do this, as it's potentially "
+"dangerous to do so if you're not careful - it may result in data loss if "
+"something goes wrong during the move and is synchronized to your other "
+"devices."
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:44
+msgid ""
+"The easy way to rename or move a synced folder on the local system is to "
+"remove the folder in the Syncthing UI, move it on disk, then re-add it using "
+"the new path."
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:48
+msgid ""
+"It's important to do this when the folder is already in sync between your "
+"devices, as it is otherwise unpredictable which changes will \"win\" after "
+"the move. Changes made on other devices may be overwritten, or changes made "
+"locally may be overwritten by those on other devices."
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:53
+msgid ""
+"An alternative way is to shut down Syncthing, move the folder on disk "
+"(including the ``.stfolder`` marker), edit the path directly in ``config."
+"xml`` in the configuration folder (see :doc:`/users/config`) and then start "
+"Syncthing again."
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:58
+msgid "How do I configure multiple users on a single machine?"
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:60
+msgid ""
+"Each user should run their own Syncthing instance. Be aware that you might "
+"need to configure listening ports such that they do not overlap (see :doc:`/"
+"users/config`)."
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:64
+msgid "Does Syncthing support syncing between folders on the same system?"
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:66
+msgid ""
+"No. Syncthing is not designed to sync locally and the overhead involved in "
+"doing so using Syncthing's method would be wasteful. There are better "
+"programs to achieve this such as `rsync <https://rsync.samba.org/>`__ or "
+"`Unison <https://www.cis.upenn.edu/~bcpierce/unison>`__."
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:72
+msgid ""
+"When I do have two distinct Syncthing-managed folders on two hosts, how does "
+"Syncthing handle moving files between them?"
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:74
+msgid ""
+"Syncthing does not specially handle this case, and most files will most "
+"likely get re-downloaded."
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:77
+msgid ""
+"In detail, the behavior depends on the scan order. If you have folders A and "
+"B, and move files from A to B, if A gets scanned first, it will announce the "
+"removal of the files to others who will then remove the files. As you rescan "
+"B, B will announce the addition of new files, and other peers will have "
+"nowhere to get them from apart from re-downloading them."
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:83
+msgid ""
+"If B gets rescanned first, B will announce additions first, and remote peers "
+"will then reconstruct the files (not rename, more like copying block by "
+"block) from A, and then as A gets rescanned, it will remove the files from A."
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:87
+msgid ""
+"A workaround would be to copy first from A to B, rescan B, wait for B to "
+"copy the files on the remote side, and then delete from A."
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:91
+msgid "Can I help initial sync by copying files manually?"
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:93
+msgid ""
+"If you have a large folder that you want to keep in sync over a not-so-fast "
+"network, and you have the possibility to move all files to the remote device "
+"in a faster manner, here is a procedure to follow:"
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:95
+msgid ""
+"Create the folder on the local device, but don't share it with the remote "
+"device yet."
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:96
+msgid ""
+"Copy the files from the local device to the remote device using regular file "
+"copy. If this takes a long time (perhaps requiring travelling there "
+"physically), it may be a good idea to make sure that the files on the local "
+"device are not updated while you are doing this."
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:97
+msgid ""
+"Create the folder on the remote device, and copy the Folder ID from the "
+"folder on the local device, as we want the folders to be considered the "
+"same. Then wait until scanning the folder is done."
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:99
+msgid ""
+"Now share the folder with the other device, on both sides. Syncthing will "
+"exchange file information, updating the database, but existing files will "
+"not be transferred. This may still take a while initially, be patient and "
+"wait until it settled."
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:102
+msgid "Is Syncthing my ideal backup application?"
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:104
+msgid ""
+"No. Syncthing is not a great backup application because all changes to your "
+"files (modifications, deletions, etc.) will be propagated to all your "
+"devices. You can enable versioning, but we encourage you to use other tools "
+"to keep your data safe from your (or our) mistakes."
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:110
+msgid "How can I exclude files with brackets (``[]``) in the name?"
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:112
+msgid ""
+"The patterns in .stignore are glob patterns, where brackets are used to "
+"denote character ranges. That is, the pattern ``q[abc]x`` will match the "
+"files ``qax``, ``qbx`` and ``qcx``."
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:116
+msgid ""
+"To match an actual file *called* ``q[abc]x`` the pattern needs to \"escape\" "
+"the brackets, like so: ``q\\[abc\\]x``."
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:119
+msgid ""
+"On Windows, use the ``|`` character to escape the brackets (``q|[abc|]x``), "
+"as the ``\\`` character is used as a path separator."
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:123
+msgid "How do I access the web GUI from another computer?"
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:125
+msgid ""
+"The default listening address is 127.0.0.1:8384, so you can only access the "
+"GUI from the same machine.  This is for security reasons.  To access it from "
+"another computer, change the ``GUI listen address`` option in the web GUI "
+"from ``127.0.0.1:8384`` to ``0.0.0.0:8384``, or change the ``config.xml``:"
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:130
+msgid ""
+"<gui enabled=\"true\" tls=\"false\">\n"
+"  <address>127.0.0.1:8384</address>"
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:135
+msgid "to"
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:137
+msgid ""
+"<gui enabled=\"true\" tls=\"true\">\n"
+"  <address>0.0.0.0:8384</address>"
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:142
+msgid ""
+"Then the GUI is accessible from everywhere.  There is no filtering based on "
+"e.g. source address (use a firewall for that).  You should set a password "
+"and enable HTTPS with this configuration.  You can do this from inside the "
+"GUI."
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:146
+msgid ""
+"If both your computers are Unix-like (Linux, Mac, etc.) you can also leave "
+"the GUI settings at default and use an SSH port forward to access it.  For "
+"example,"
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:149
+msgid "$ ssh -L 9090:127.0.0.1:8384 user@othercomputer.example.com"
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:153
+msgid ""
+"will log you into ``othercomputer.example.com``, and present the *remote* "
+"Syncthing GUI on http://localhost:9090 on your *local* computer."
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:156
+msgid ""
+"If you only want to access the remote GUI and don't want the terminal "
+"session, use this example:"
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:159
+msgid "$ ssh -N -L 9090:127.0.0.1:8384 user@othercomputer.example.com"
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:163
+msgid ""
+"If only your remote computer is Unix-like, you can still access it with SSH "
+"from Windows.  Under Windows 10 or later you can use the same ``ssh`` "
+"command if you `install the OpenSSH Client <https://learn.microsoft.com/"
+"windows-server/administration/openssh/openssh_install_firstuse>`__."
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:168
+msgid "I don't like the GUI or the theme. Can it be changed?"
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:170
+msgid ""
+"You can change the theme in the settings. Syncthing ships with other themes "
+"than the default."
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:173
+msgid ""
+"If you want a custom theme or a completely different GUI, you can add your "
+"own. By default, Syncthing will look for a directory ``gui`` inside the "
+"Syncthing home folder. To change the directory to look for themes, you need "
+"to set the STGUIASSETS environment variable. To get the concrete directory, "
+"run syncthing with the ``--paths`` parameter. It will print all the relevant "
+"paths, including the \"GUI override directory\"."
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:181
+msgid ""
+"To add e.g. a red theme, you can create the file ``red/assets/css/theme."
+"css`` inside the GUI override directory to override the default CSS styles."
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:184
+msgid ""
+"To create a whole new GUI, you should checkout the files at https://github."
+"com/syncthing/syncthing/tree/main/gui/default to get an idea how to do that."
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:190
+msgid "How do I upgrade Syncthing?"
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:192
+msgid ""
+"If you use a package manager such as Debian's apt-get, you should upgrade "
+"using the package manager. If you use the binary packages linked from "
+"Syncthing.net, you can use Syncthing's built-in automatic upgrade "
+"functionality."
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:196
+msgid ""
+"If automatic upgrades is enabled (which is the default), Syncthing will "
+"upgrade itself automatically within 24 hours of a new release."
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:199
+msgid ""
+"The upgrade button appears in the web GUI when a new version has been "
+"released. Pressing it will perform an upgrade."
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:202
+msgid "To force an upgrade from the command line, run ``syncthing --upgrade``."
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:204
+msgid ""
+"Note that your system should have CA certificates installed which allows a "
+"secure connection to GitHub (e.g. FreeBSD requires ``sudo pkg install "
+"ca_root_nss``). If ``curl`` or ``wget`` works with normal HTTPS sites, then "
+"so should Syncthing."
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:210
+msgid "Where do I find the latest release?"
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:212
+msgid ""
+"We release new versions through GitHub. The latest release is always found "
+"`on the release page <https://github.com/syncthing/syncthing/releases/"
+"latest>`_. Unfortunately GitHub does not provide a single URL to "
+"automatically download the latest version. We suggest to use the `GitHub API "
+"<https://api.github.com/repos/syncthing/syncthing/releases/latest>`__ and "
+"parsing the JSON response."
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:221
+msgid "How do I run Syncthing as a daemon process on Linux?"
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:223
+msgid ""
+"If you're using systemd, runit, or upstart, we ship `example configurations "
+"<https://github.com/syncthing/syncthing/tree/main/etc>`__."
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:225
+msgid ""
+"If however you're not using one of these tools, you have a couple of "
+"options. If your system has a tool called ``start-stop-daemon`` installed "
+"(that's the name of the command, not the package), look into the local "
+"documentation for that, it will almost certainly cover 100% of what you want "
+"to do.  If you don't have ``start-stop-daemon``, there are a bunch of other "
+"software packages you could use to do this.  The most well known is called "
+"daemontools, and can be found in the standard package repositories for "
+"almost every modern Linux distribution. Other popular tools with similar "
+"functionality include S6 and the aforementioned runit."
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:238
+msgid ""
+"How do I increase the inotify limit to get my filesystem watcher to work?"
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:240
+msgid ""
+"You are probably reading this because you encountered the following error "
+"with the filesystem watcher on linux:"
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:243
+msgid ""
+"Failed to start filesystem watcher for folder yourLabel (yourID): failed to "
+"set up inotify handler. Please increase inotify limits, see https://docs."
+"syncthing.net/users/faq.html#inotify-limits"
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:246
+msgid ""
+"Linux typically restricts the number of watches per user (usually 8192). If "
+"you have many directories, you will need to adjust that number."
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:249
+msgid "On many Linux distributions you can run the following to fix it::"
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:251
+msgid ""
+"echo \"fs.inotify.max_user_watches=204800\" | sudo tee -a /etc/sysctl.conf"
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:253
+msgid ""
+"On Arch Linux and potentially others it is preferred to write this line into "
+"a separate file, i.e. you should run::"
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:256
+msgid ""
+"echo \"fs.inotify.max_user_watches=204800\" | sudo tee -a /etc/sysctl.d/90-"
+"override.conf"
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:258
+msgid ""
+"This only takes effect after a reboot. To adjust the limit immediately, run::"
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:260
+msgid "echo 204800 | sudo tee /proc/sys/fs/inotify/max_user_watches"
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:263
+msgid "How do I reset the GUI password?"
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:265
+msgid ""
+"If you've forgotten / lost the GUI password, you can reset it using the :"
+"option:`--gui-password` (and possibly :option:`--gui-user`) options to the "
+"``syncthing generate`` subcommand.  This should be done while Syncthing is "
+"not running."
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:270
+msgid "Stop Syncthing: ``syncthing cli operations shutdown``"
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:271
+msgid ""
+"``syncthing generate --gui-password=myNewPassword --gui-user=newUserName``"
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:272
+msgid "Restart Syncthing as usual."
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:274
+msgid ""
+"*Alternatively, in step 2*, you can manually delete the :stconf:opt:`<user> "
+"<gui.user>` and :stconf:opt:`<password> <gui.password>` XML tags from the "
+"``<gui>`` block in file ``config.xml``.  The location of the file depends on "
+"the OS and is described in the :doc:`configuration documentation </users/"
+"config>`."
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:279
+msgid ""
+"For example, the two emphasized lines below would be removed from the file."
+msgstr ""
+
+#: ../../../users/faq-parts/usage.rst:281
+msgid ""
+"<gui enabled=\"true\" tls=\"false\">\n"
+"   <address>127.0.0.1:8384</address>\n"
+"   <user>syncguy</user>\n"
+"   <password>$2a$10$s9wWHOQe...Cq7GPye69</password>\n"
+"   <apikey>9RCKohqCAyrj5RjpyZdR2wXmQ9PyQFeN</apikey>\n"
+"   <theme>default</theme>\n"
+"</gui>"
+msgstr ""

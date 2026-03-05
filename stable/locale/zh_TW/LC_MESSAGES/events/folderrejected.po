@@ -1,0 +1,50 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2026, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing stable\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:14+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../events/folderrejected.rst:2
+msgid "FolderRejected (DEPRECATED)"
+msgstr ""
+
+#: ../../../events/folderrejected.rst:4
+msgid ""
+"This event is still emitted for compatibility, but deprecated.  Use the "
+"replacement :doc:`pendingfolderschanged` event instead."
+msgstr ""
+
+#: ../../../events/folderrejected.rst:8
+msgid ""
+"Emitted when a device sends index information for a folder we do not have, "
+"or have but do not share with the device in question."
+msgstr ""
+
+#: ../../../events/folderrejected.rst:11
+msgid ""
+"{\n"
+"    \"id\": 27,\n"
+"    \"globalID\": 27,\n"
+"    \"type\": \"FolderRejected\",\n"
+"    \"time\": \"2014-08-19T10:41:06.761751399+02:00\",\n"
+"    \"data\": {\n"
+"        \"device\": \"EJHMPAQ-OGCVORE-ISB4IS3-SYYVJXF-TKJGLTU-66DIQPF-"
+"GJ5D2GX-GQ3OWQK\",\n"
+"        \"folder\": \"GXWxf-3zgnU\",\n"
+"        \"folderLabel\": \"My Pictures\"\n"
+"    }\n"
+"}"
+msgstr ""

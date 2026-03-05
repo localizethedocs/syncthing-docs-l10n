@@ -1,0 +1,41 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2026, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing stable\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:14+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../events/failure.rst:2
+msgid "Failure"
+msgstr ""
+
+#: ../../../events/failure.rst:4
+msgid ""
+"Generated for specific errors that will also be sent to the usage reporting "
+"server, if enabled in the configuration.  These are usually of special "
+"interest to the developers to troubleshoot complex errors. The ``data`` "
+"field contains a textual error message."
+msgstr ""
+
+#: ../../../events/failure.rst:9
+msgid ""
+"{\n"
+"  \"id\": 93,\n"
+"  \"globalID\": 93,\n"
+"  \"type\": \"Failure\",\n"
+"  \"time\": \"2021-06-07T21:22:03.414609034+02:00\",\n"
+"  \"data\": \"index handler got paused while already paused\"\n"
+"}"
+msgstr ""

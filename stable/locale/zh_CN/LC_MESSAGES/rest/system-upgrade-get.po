@@ -1,0 +1,38 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2026, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing stable\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:14+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../rest/system-upgrade-get.rst:2
+msgid "GET /rest/system/upgrade"
+msgstr ""
+
+#: ../../../rest/system-upgrade-get.rst:4
+msgid ""
+"Checks for a possible upgrade and returns an object describing the newest "
+"version and upgrade possibility."
+msgstr ""
+
+#: ../../../rest/system-upgrade-get.rst:7
+msgid ""
+"{\n"
+"  \"latest\": \"v0.14.47\",\n"
+"  \"majorNewer\": false,\n"
+"  \"newer\": true,\n"
+"  \"running\": \"v0.14.46\"\n"
+"}"
+msgstr ""

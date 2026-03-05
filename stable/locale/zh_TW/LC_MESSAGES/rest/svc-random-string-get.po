@@ -1,0 +1,35 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2026, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing stable\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:14+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../rest/svc-random-string-get.rst:2
+msgid "GET /rest/svc/random/string"
+msgstr ""
+
+#: ../../../rest/svc-random-string-get.rst:4
+msgid ""
+"Returns a strong random generated string (alphanumeric) of the specified "
+"length. Takes the ``length`` parameter."
+msgstr ""
+
+#: ../../../rest/svc-random-string-get.rst:6
+msgid ""
+"{\n"
+"  \"random\": \"FdPaEaZQ56sXEKYNxpgF\"\n"
+"}"
+msgstr ""

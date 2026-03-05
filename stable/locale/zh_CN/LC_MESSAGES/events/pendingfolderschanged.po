@@ -1,0 +1,62 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2026, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing stable\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:14+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../events/pendingfolderschanged.rst:2
+msgid "PendingFoldersChanged"
+msgstr ""
+
+#: ../../../events/pendingfolderschanged.rst:6
+msgid ""
+"Emitted when pending folders were added / updated (offered by some device, "
+"but not shared to them) or removed (folder ignored, dismissed or added or no "
+"longer offered from the remote device).  A removed entry without a "
+"``deviceID`` attribute means that the folder is no longer pending for any "
+"device."
+msgstr ""
+
+#: ../../../events/pendingfolderschanged.rst:12
+msgid ""
+"{\n"
+"  \"id\": 101,\n"
+"  \"type\": \"PendingFoldersChanged\",\n"
+"  \"time\": \"2020-12-22T22:36:55.66744317+01:00\",\n"
+"  \"data\": {\n"
+"    \"added\": [\n"
+"      {\n"
+"        \"deviceID\": \"EJHMPAQ-OGCVORE-ISB4IS3-SYYVJXF-TKJGLTU-66DIQPF-"
+"GJ5D2GX-GQ3OWQK\",\n"
+"        \"folderID\": \"GXWxf-3zgnU\",\n"
+"        \"folderLabel\": \"My Pictures\"\n"
+"        \"receiveEncrypted\": \"false\"\n"
+"        \"remoteEncrypted\": \"false\"\n"
+"      }\n"
+"    ],\n"
+"    \"removed\": [\n"
+"      {\n"
+"        \"deviceID\": \"P56IOI7-MZJNU2Y-IQGDREY-DM2MGTI-MGL3BXN-PQ6W5BM-"
+"TBBZ4TJ-XZWICQ2\",\n"
+"        \"folderID\": \"neyfh-sa2nu\"\n"
+"      },\n"
+"      {\n"
+"        \"folderID\": \"abcde-fghij\"\n"
+"      }\n"
+"    ]\n"
+"  }\n"
+"}"
+msgstr ""

@@ -1,0 +1,77 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2026, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing stable\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:14+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../events/itemfinished.rst:2
+msgid "ItemFinished"
+msgstr ""
+
+#: ../../../events/itemfinished.rst:4
+msgid ""
+"Generated when Syncthing ends synchronizing a file to a newer version. A "
+"successful operation:"
+msgstr ""
+
+#: ../../../events/itemfinished.rst:7
+msgid ""
+"{\n"
+"    \"id\": 93,\n"
+"    \"globalID\": 93,\n"
+"    \"type\": \"ItemFinished\",\n"
+"    \"time\": \"2014-07-13T21:22:03.414609034+02:00\",\n"
+"    \"data\": {\n"
+"        \"item\": \"test.txt\",\n"
+"        \"folder\": \"default\",\n"
+"        \"error\": null,\n"
+"        \"type\": \"file\",\n"
+"        \"action\": \"update\"\n"
+"    }\n"
+"}"
+msgstr ""
+
+#: ../../../events/itemfinished.rst:23
+msgid "An unsuccessful operation:"
+msgstr ""
+
+#: ../../../events/itemfinished.rst:25
+msgid ""
+"{\n"
+"    \"id\": 44,\n"
+"    \"globalID\": 44,\n"
+"    \"type\": \"ItemFinished\",\n"
+"    \"time\": \"2015-05-27T11:21:05.711133004+02:00\",\n"
+"    \"data\": {\n"
+"        \"action\": \"update\",\n"
+"        \"error\": \"open /Users/jb/src/github.com/syncthing/syncthing/test/"
+"s2/foo/.syncthing.hej.tmp: permission denied\",\n"
+"        \"folder\": \"default\",\n"
+"        \"item\": \"foo/hej\",\n"
+"        \"type\": \"file\"\n"
+"    }\n"
+"}"
+msgstr ""
+
+#: ../../../events/itemfinished.rst:41
+msgid ""
+"The ``action`` field is either ``update`` (contents changed), ``metadata`` "
+"(file metadata changed but not contents), or ``delete``."
+msgstr ""
+
+#: ../../../events/itemfinished.rst:43
+msgid "The ``metadata`` action."
+msgstr ""

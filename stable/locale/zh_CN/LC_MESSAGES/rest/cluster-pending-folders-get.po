@@ -1,0 +1,65 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2026, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing stable\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:14+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../rest/cluster-pending-folders-get.rst:2
+msgid "GET /rest/cluster/pending/folders"
+msgstr ""
+
+#: ../../../rest/cluster-pending-folders-get.rst:6
+msgid ""
+"Lists folders which remote devices have offered to us, but are not yet "
+"shared from our instance to them.  Takes the optional ``device`` parameter "
+"to only return folders offered by a specific remote device. Other offering "
+"devices are also omitted from the result."
+msgstr ""
+
+#: ../../../rest/cluster-pending-folders-get.rst:11
+msgid ""
+"{\n"
+"  \"cpkn4-57ysy\": {\n"
+"    \"offeredBy\": {\n"
+"      \"P56IOI7-MZJNU2Y-IQGDREY-DM2MGTI-MGL3BXN-PQ6W5BM-TBBZ4TJ-XZWICQ2\": "
+"{\n"
+"        \"time\": \"2020-03-18T11:43:07Z\",\n"
+"        \"label\": \"Joe's folder\",\n"
+"        \"receiveEncrypted\": true,\n"
+"        \"remoteEncrypted\": false\n"
+"      },\n"
+"      \"DOVII4U-SQEEESM-VZ2CVTC-CJM4YN5-QNV7DCU-5U3ASRL-YVFG6TH-W5DV5AA\": "
+"{\n"
+"        \"time\": \"2020-03-01T10:12:13Z\",\n"
+"        \"label\": \"Jane's and Joe's folder\",\n"
+"        \"receiveEncrypted\": false,\n"
+"        \"remoteEncrypted\": false\n"
+"      }\n"
+"    }\n"
+"  },\n"
+"  \"abcde-fghij\": {\n"
+"    \"offeredBy\": {\n"
+"      \"P56IOI7-MZJNU2Y-IQGDREY-DM2MGTI-MGL3BXN-PQ6W5BM-TBBZ4TJ-XZWICQ2\": "
+"{\n"
+"        \"time\": \"2020-03-18T11:43:07Z\",\n"
+"        \"label\": \"MyPics\",\n"
+"        \"receiveEncrypted\": false,\n"
+"        \"remoteEncrypted\": false\n"
+"      }\n"
+"    }\n"
+"  }\n"
+"}"
+msgstr ""
