@@ -1,0 +1,174 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2026, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../rest/db-status-get.rst:2
+msgid "GET /rest/db/status"
+msgstr ""
+
+#: ../../../rest/db-status-get.rst:4
+msgid "Returns information about the current status of a folder."
+msgstr ""
+
+#: ../../../rest/db-status-get.rst:6
+msgid "Parameters: ``folder``, the ID of a folder."
+msgstr ""
+
+#: ../../../rest/db-status-get.rst:8
+msgid ""
+"{\n"
+"  \"globalBytes\": 0,\n"
+"  \"globalDeleted\": 0,\n"
+"  \"globalDirectories\": 0,\n"
+"  \"globalFiles\": 0,\n"
+"  \"globalSymlinks\": 0,\n"
+"  \"globalTotalItems\": 0,\n"
+"  \"ignorePatterns\": false,\n"
+"  \"inSyncBytes\": 0,\n"
+"  \"inSyncFiles\": 0,\n"
+"  \"invalid\": \"\",\n"
+"  \"localBytes\": 0,\n"
+"  \"localDeleted\": 0,\n"
+"  \"localDirectories\": 0,\n"
+"  \"localFiles\": 0,\n"
+"  \"localSymlinks\": 0,\n"
+"  \"localTotalItems\": 0,\n"
+"  \"needBytes\": 0,\n"
+"  \"needDeletes\": 0,\n"
+"  \"needDirectories\": 0,\n"
+"  \"needFiles\": 0,\n"
+"  \"needSymlinks\": 0,\n"
+"  \"needTotalItems\": 0,\n"
+"  \"pullErrors\": 0,\n"
+"  \"receiveOnlyChangedBytes\": 0,\n"
+"  \"receiveOnlyChangedDeletes\": 0,\n"
+"  \"receiveOnlyChangedDirectories\": 0,\n"
+"  \"receiveOnlyChangedFiles\": 0,\n"
+"  \"receiveOnlyChangedSymlinks\": 0,\n"
+"  \"receiveOnlyTotalItems\": 0,\n"
+"  \"sequence\": 0,\n"
+"  \"state\": \"idle\",\n"
+"  \"stateChanged\": \"2018-08-08T07:04:57.301064781+02:00\",\n"
+"  \"version\": 0\n"
+"}"
+msgstr ""
+
+#: ../../../rest/db-status-get.rst:46
+msgid "The various fields have the following meaning:"
+msgstr ""
+
+#: ../../../rest/db-status-get.rst:48
+msgid "global*:"
+msgstr ""
+
+#: ../../../rest/db-status-get.rst:49
+msgid "Data in the cluster latest version."
+msgstr ""
+
+#: ../../../rest/db-status-get.rst:51
+msgid "inSync*:"
+msgstr ""
+
+#: ../../../rest/db-status-get.rst:52
+msgid "Data that is locally the same as the cluster latest version."
+msgstr ""
+
+#: ../../../rest/db-status-get.rst:54
+msgid "local*:"
+msgstr ""
+
+#: ../../../rest/db-status-get.rst:55
+msgid ""
+"Data that is locally present, regardless of whether it's the same or "
+"different version as the cluster latest version."
+msgstr ""
+
+#: ../../../rest/db-status-get.rst:57
+msgid "need*:"
+msgstr ""
+
+#: ../../../rest/db-status-get.rst:58
+msgid ""
+"Data that is needed to become up to date with the cluster latest version (i."
+"e., data that is out of sync)."
+msgstr ""
+
+#: ../../../rest/db-status-get.rst:60
+msgid "receiveOnlyChanged*:"
+msgstr ""
+
+#: ../../../rest/db-status-get.rst:61
+msgid ""
+"Data that has changed locally in a receive only folder, and thus not been "
+"sent to the cluster."
+msgstr ""
+
+#: ../../../rest/db-status-get.rst:63
+msgid "invalid:"
+msgstr ""
+
+#: ../../../rest/db-status-get.rst:64
+msgid "Deprecated, always empty."
+msgstr ""
+
+#: ../../../rest/db-status-get.rst:66
+msgid "pullErrors:"
+msgstr ""
+
+#: ../../../rest/db-status-get.rst:67
+msgid ""
+"The number of files that failed to sync during the last sync operations."
+msgstr ""
+
+#: ../../../rest/db-status-get.rst:69
+msgid "sequence:"
+msgstr ""
+
+#: ../../../rest/db-status-get.rst:70
+msgid "The current folder sequence number."
+msgstr ""
+
+#: ../../../rest/db-status-get.rst:72
+msgid "state:"
+msgstr ""
+
+#: ../../../rest/db-status-get.rst:73
+msgid "The current folder state."
+msgstr ""
+
+#: ../../../rest/db-status-get.rst:75
+msgid "stateChanged:"
+msgstr ""
+
+#: ../../../rest/db-status-get.rst:76
+msgid "When the folder state last changed."
+msgstr ""
+
+#: ../../../rest/db-status-get.rst:78
+msgid "version:"
+msgstr ""
+
+#: ../../../rest/db-status-get.rst:79
+msgid "Deprecated, equivalent to the sequence number."
+msgstr ""
+
+#: ../../../rest/db-status-get.rst:82
+msgid ""
+"This is an expensive call, increasing CPU and RAM usage on the device. Use "
+"sparingly."
+msgstr ""

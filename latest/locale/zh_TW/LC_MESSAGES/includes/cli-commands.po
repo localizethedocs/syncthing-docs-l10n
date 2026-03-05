@@ -1,0 +1,92 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2026, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../includes/cli-commands.rst:1
+msgid ""
+"The available subcommands are grouped into several nested hierarchies and "
+"some parts dynamically generated from the running Syncthing instance.  On "
+"every level, the ``--help`` option lists the available properties, actions "
+"and commands for the user to discover interactively.  The top-level groups "
+"are:"
+msgstr ""
+
+#: ../../../includes/cli-commands.rst:6
+msgid "config"
+msgstr ""
+
+#: ../../../includes/cli-commands.rst:7
+msgid ""
+"Access the live configuration in a running instance over the REST API to "
+"retrieve (get) or update (set) values in a fine-grained way.  The hierarchy "
+"is based on the same structure as used in the JSON / XML representations."
+msgstr ""
+
+#: ../../../includes/cli-commands.rst:11
+msgid "show"
+msgstr ""
+
+#: ../../../includes/cli-commands.rst:12
+msgid ""
+"Show system properties and status of a running instance.  The output is "
+"passed on directly from the REST API response and therefore requires parsing "
+"JSON format."
+msgstr ""
+
+#: ../../../includes/cli-commands.rst:16
+msgid "operations"
+msgstr ""
+
+#: ../../../includes/cli-commands.rst:17
+msgid ""
+"Control the overall program operation such as restarting or handling "
+"upgrades, as well as triggering some actions on a per-folder basis.  Can "
+"also configure the default ignore patterns from a plain text ignore file."
+msgstr ""
+
+#: ../../../includes/cli-commands.rst:21
+msgid "errors"
+msgstr ""
+
+#: ../../../includes/cli-commands.rst:22
+msgid ""
+"Examine pending error conditions that need attention from the user, or "
+"acknowledge (clear) them."
+msgstr ""
+
+#: ../../../includes/cli-commands.rst:25
+msgid "debug"
+msgstr ""
+
+#: ../../../includes/cli-commands.rst:26
+msgid ""
+"Various tools to aid in diagnosing problems or collection information for "
+"bug reports.  Some of these commands access the database directly and can "
+"therefore only work when Syncthing is not running."
+msgstr ""
+
+#: ../../../includes/cli-commands.rst:30
+msgid "``-`` (a single dash)"
+msgstr ""
+
+#: ../../../includes/cli-commands.rst:31
+msgid ""
+"Reads subsequent commands from the standard input stream, without needing to "
+"call the ``syncthing cli`` command over and over.  Exits on any invalid "
+"command or when EOF (end-of-file) is received."
+msgstr ""

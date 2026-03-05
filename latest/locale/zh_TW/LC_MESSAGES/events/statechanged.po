@@ -1,0 +1,47 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2026, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../events/statechanged.rst:4
+msgid "StateChanged"
+msgstr ""
+
+#: ../../../events/statechanged.rst:6
+msgid ""
+"Emitted when a folder changes state. Possible states are ``idle``, "
+"``scanning``, ``syncing`` and ``error``. The field ``duration`` is the "
+"number of seconds the folder spent in state ``from``. In the example below, "
+"the folder ``default`` was in state ``scanning`` for 0.198 seconds and is "
+"now in state ``idle``."
+msgstr ""
+
+#: ../../../events/statechanged.rst:12
+msgid ""
+"{\n"
+"    \"id\": 8,\n"
+"    \"globalID\": 8,\n"
+"    \"type\": \"StateChanged\",\n"
+"    \"time\": \"2014-07-17T13:14:28.697493016+02:00\",\n"
+"    \"data\": {\n"
+"        \"folder\": \"default\",\n"
+"        \"from\": \"scanning\",\n"
+"        \"duration\": 0.19782869900000002,\n"
+"        \"to\": \"idle\"\n"
+"    }\n"
+"}"
+msgstr ""

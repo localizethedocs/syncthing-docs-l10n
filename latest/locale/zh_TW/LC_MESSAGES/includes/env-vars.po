@@ -1,0 +1,273 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2026, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../includes/env-vars.rst:1
+msgid "STTRACE"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:2
+msgid ""
+"Used to increase the debugging verbosity in specific facilities, generally "
+"mapping to a Go package. Enter a comma-separated string of facilities to "
+"trace: ``api,beacon``. Optionally, a log level can be given per facility to "
+"specify something other than DEBUG: ``api:WARN,beacon:ERROR``, potentially "
+"overriding a global ``--log-level`` adjustment."
+msgstr ""
+
+#: ../../../includes/env-vars.rst:9
+msgid ""
+"The valid facility strings are listed below; additionally, ``syncthing serve "
+"--help`` always outputs the most up-to-date list."
+msgstr ""
+
+#: ../../../includes/env-vars.rst:12
+msgid "api"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:13
+msgid "REST API"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:14
+msgid "beacon"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:15
+msgid "Multicast and broadcast discovery"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:16
+msgid "config"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:17
+msgid "Configuration loading and saving"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:18
+msgid "connections"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:19
+msgid "Connection handling"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:20
+msgid "db/sqlite"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:21
+msgid "SQLite database"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:22
+msgid "dialer"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:23
+msgid "Dialing connections"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:24
+msgid "discover"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:25
+msgid "Remote device discovery"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:26
+msgid "events"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:27
+msgid "Event generation and logging"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:28
+msgid "fs"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:29
+msgid "Filesystem access"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:30
+msgid "main"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:31
+msgid "Main package"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:32
+msgid "model"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:33
+msgid "The root hub"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:34
+msgid "nat"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:35
+msgid "NAT discovery and port mapping"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:36
+msgid "pmp"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:37
+msgid "NAT-PMP discovery and port mapping"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:38
+msgid "protocol"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:39
+msgid "The BEP protocol"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:40
+msgid "relay/client"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:41
+msgid "Relay client"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:42
+msgid "scanner"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:43
+msgid "File change detection and hashing"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:44
+msgid "stun"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:45
+msgid "STUN functionality"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:46
+msgid "syncthing"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:47
+msgid "Main run facility"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:48
+msgid "upgrade"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:49
+msgid "Binary upgrades"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:50
+msgid "upnp"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:51
+msgid "UPnP discovery and port mapping"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:52
+msgid "ur"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:53
+msgid "Usage reporting"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:54
+msgid "versioner"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:55
+msgid "File versioning"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:56
+msgid "watchaggregator"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:57
+msgid "Filesystem event watcher"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:59
+msgid "STLOCKTHRESHOLD"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:60
+msgid ""
+"Used for debugging internal deadlocks; sets debug sensitivity. Use only "
+"under direction of a developer."
+msgstr ""
+
+#: ../../../includes/env-vars.rst:63
+msgid "STVERSIONEXTRA"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:64
+msgid ""
+"Add extra information to the version string in logs and the version line in "
+"the GUI. Can be set to the name of a wrapper or tool controlling syncthing "
+"to communicate this to the end user."
+msgstr ""
+
+#: ../../../includes/env-vars.rst:68
+msgid "GOMAXPROCS"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:69
+msgid ""
+"Set the maximum number of CPU cores to use. Defaults to all available CPU "
+"cores."
+msgstr ""
+
+#: ../../../includes/env-vars.rst:72
+msgid "GOGC"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:73
+msgid ""
+"Percentage of heap growth at which to trigger GC. Default is 100. Lower "
+"numbers keep peak memory usage down, at the price of CPU usage (i.e. "
+"performance)."
+msgstr ""
+
+#: ../../../includes/env-vars.rst:77
+msgid "LOGGER_DISCARD"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:78
+msgid ""
+"Hack to completely disable logging, for example when running benchmarks. Set "
+"to any nonempty value to use it."
+msgstr ""

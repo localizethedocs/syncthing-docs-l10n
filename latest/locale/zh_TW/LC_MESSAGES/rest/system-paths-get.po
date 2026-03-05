@@ -1,0 +1,51 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2026, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../rest/system-paths-get.rst:2
+msgid "GET /rest/system/paths"
+msgstr ""
+
+#: ../../../rest/system-paths-get.rst:6
+msgid ""
+"Returns the path locations used internally for storing configuration, "
+"database, and others."
+msgstr ""
+
+#: ../../../rest/system-paths-get.rst:9
+msgid ""
+"{\n"
+"  \"auditLog\": \"/home/user/.local/share/syncthing/audit-${timestamp}."
+"log\",\n"
+"  \"baseDir-config\": \"/home/user/.config/syncthing\",\n"
+"  \"baseDir-data\": \"/home/user/.local/share/syncthing\",\n"
+"  \"baseDir-userHome\": \"/home/user\",\n"
+"  \"certFile\": \"/home/user/.config/syncthing/cert.pem\",\n"
+"  \"config\": \"/home/user/.config/syncthing/config.xml\",\n"
+"  \"csrfTokens\": \"/home/user/.config/syncthing/csrftokens.txt\",\n"
+"  \"database\": \"/home/user/.local/share/syncthing/index-v2\",\n"
+"  \"defFolder\": \"/home/user/Sync\",\n"
+"  \"guiAssets\": \"/home/user/src/syncthing/gui\",\n"
+"  \"httpsCertFile\": \"/home/user/.config/syncthing/https-cert.pem\",\n"
+"  \"httpsKeyFile\": \"/home/user/.config/syncthing/https-key.pem\",\n"
+"  \"keyFile\": \"/home/user/.config/syncthing/key.pem\",\n"
+"  \"logFile\": \"-\",\n"
+"  \"panicLog\": \"/home/user/.local/share/syncthing/panic-${timestamp}."
+"log\"\n"
+"}"
+msgstr ""
