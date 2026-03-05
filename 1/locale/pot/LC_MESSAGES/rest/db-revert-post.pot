@@ -1,0 +1,38 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2019, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../rest/db-revert-post.rst:2
+msgid "POST /rest/db/revert"
+msgstr ""
+
+#: ../../../rest/db-revert-post.rst:6
+msgid ""
+"Request revert of a receive only folder. Reverting a folder means to undo "
+"all local changes. This API call does nothing if the folder is not a receive "
+"only folder."
+msgstr ""
+
+#: ../../../rest/db-revert-post.rst:10
+msgid "Takes the mandatory parameter `folder` (folder ID)."
+msgstr ""
+
+#: ../../../rest/db-revert-post.rst:12
+msgid ""
+"curl -X POST -H X-API-Key:... http://127.0.0.1:8384/rest/db/revert?"
+"folder=default"
+msgstr ""
