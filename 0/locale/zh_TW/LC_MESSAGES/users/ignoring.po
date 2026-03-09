@@ -23,15 +23,15 @@ msgstr ""
 
 #: ../../../users/ignoring.rst:7
 msgid "Synopsis"
-msgstr ""
+msgstr "概要"
 
 #: ../../../users/ignoring.rst:11
 msgid ".stignore"
-msgstr ""
+msgstr ".stignore"
 
 #: ../../../users/ignoring.rst:14
 msgid "Description"
-msgstr ""
+msgstr "描述"
 
 #: ../../../users/ignoring.rst:16
 msgid ""

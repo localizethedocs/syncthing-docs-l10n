@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../users/advanced.rst:4
 msgid "Advanced Configuration"
-msgstr ""
+msgstr "進階組態"
 
 #: ../../../users/advanced.rst:7
 msgid "Description"

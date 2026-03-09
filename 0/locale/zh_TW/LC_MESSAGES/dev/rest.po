@@ -50,7 +50,7 @@ msgstr ""
 
 #: ../../../dev/rest.rst:25
 msgid "System Endpoints"
-msgstr ""
+msgstr "系統端點"
 
 #: ../../../dev/rest.rst:34
 msgid "Database Endpoints"

@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../intro/getting-started.rst:4
 msgid "Getting Started"
-msgstr ""
+msgstr "開始使用"
 
 #: ../../../intro/getting-started.rst:6
 msgid ""
@@ -67,7 +67,7 @@ msgstr ""
 
 #: ../../../intro/getting-started.rst:40
 msgid "Syncthing"
-msgstr ""
+msgstr "Syncthing"
 
 #: ../../../intro/getting-started.rst:42
 msgid ""

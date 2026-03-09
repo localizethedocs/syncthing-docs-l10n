@@ -27,7 +27,7 @@ msgstr ""
 
 #: ../../../dev/debugging.rst:7
 msgid "Debugging Syncthing"
-msgstr ""
+msgstr "除錯 Syncthing"
 
 #: ../../../dev/debugging.rst:9
 msgid ""

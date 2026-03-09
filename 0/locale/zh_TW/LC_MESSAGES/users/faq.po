@@ -27,7 +27,7 @@ msgstr ""
 
 #: ../../../users/faq.rst:12
 msgid "What is Syncthing?"
-msgstr ""
+msgstr "什麼是 Syncthing？"
 
 #: ../../../users/faq.rst:14
 msgid ""
@@ -352,7 +352,7 @@ msgstr ""
 
 #: ../../../users/faq.rst:205
 msgid "Is Syncthing my ideal backup application?"
-msgstr ""
+msgstr "Syncthing 是我理想的備份應用程式嗎？"
 
 #: ../../../users/faq.rst:207
 msgid ""
@@ -457,7 +457,7 @@ msgstr ""
 
 #: ../../../users/faq.rst:271
 msgid "$ ssh -L 9090:127.0.0.1:8384 user@othercomputer.example.com"
-msgstr ""
+msgstr "$ ssh -L 9090:127.0.0.1:8384 user@othercomputer.example.com"
 
 #: ../../../users/faq.rst:275
 msgid ""

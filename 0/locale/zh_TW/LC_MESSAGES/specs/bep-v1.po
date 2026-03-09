@@ -23,7 +23,7 @@ msgstr "區塊交換協定 v1"
 
 #: ../../../specs/bep-v1.rst:7
 msgid "Introduction and Definitions"
-msgstr ""
+msgstr "介紹與定義"
 
 #: ../../../specs/bep-v1.rst:9
 msgid ""
@@ -1176,7 +1176,7 @@ msgstr ""
 #: ../../../specs/bep-v1.rst:813 ../../../specs/bep-v1.rst:882
 #: ../../../specs/bep-v1.rst:1090
 msgid "Fields"
-msgstr ""
+msgstr "欄位"
 
 #: ../../../specs/bep-v1.rst:815
 msgid ""

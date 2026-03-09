@@ -23,7 +23,7 @@ msgstr ""
 
 #: ../../../draft/localver.rst:7
 msgid "Description"
-msgstr ""
+msgstr "描述"
 
 #: ../../../draft/localver.rst:9
 msgid ""

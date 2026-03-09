@@ -48,7 +48,7 @@ msgstr ""
 
 #: ../../../users/reverseproxy.rst:18
 msgid "Server Configuration"
-msgstr ""
+msgstr "伺服器組態"
 
 #: ../../../users/reverseproxy.rst:20
 msgid ""
@@ -88,7 +88,7 @@ msgstr ""
 
 #: ../../../users/reverseproxy.rst:50
 msgid "Folder Configuration"
-msgstr ""
+msgstr "資料夾組態"
 
 #: ../../../users/reverseproxy.rst:52
 msgid ""

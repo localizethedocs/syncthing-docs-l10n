@@ -23,7 +23,7 @@ msgstr ""
 
 #: ../../../users/discosrv.rst:5
 msgid "Description"
-msgstr ""
+msgstr "描述"
 
 #: ../../../users/discosrv.rst:7
 msgid ""
@@ -96,7 +96,7 @@ msgstr ""
 
 #: ../../../users/discosrv.rst:64
 msgid "Certificates"
-msgstr ""
+msgstr "證書"
 
 #: ../../../users/discosrv.rst:66
 msgid ""
@@ -162,7 +162,7 @@ msgstr ""
 
 #: ../../../users/discosrv.rst:98
 msgid "Pointing Syncthing at Your Discovery Server"
-msgstr ""
+msgstr "將 Syncthing 指向您的探索伺服器"
 
 #: ../../../users/discosrv.rst:100
 msgid ""

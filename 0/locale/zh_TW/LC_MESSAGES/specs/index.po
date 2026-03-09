@@ -33,7 +33,7 @@ msgstr ""
 
 #: ../../../specs/index.rst:9
 msgid ":ref:`globaldisco-v3`"
-msgstr ""
+msgstr ":ref:`globaldisco-v3`"
 
 #: ../../../specs/index.rst:10
 msgid "The protocol used for global discovery over the Internet."
@@ -49,7 +49,7 @@ msgstr ""
 
 #: ../../../specs/index.rst:15
 msgid ":ref:`relay-v1`"
-msgstr ""
+msgstr ":ref:`relay-v1`"
 
 #: ../../../specs/index.rst:16
 msgid "The protocol used for connection relaying."

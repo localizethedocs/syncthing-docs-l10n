@@ -23,7 +23,7 @@ msgstr ""
 
 #: ../../../users/syncthing.rst:5
 msgid "Synopsis"
-msgstr ""
+msgstr "概要"
 
 #: ../../../users/syncthing.rst:9
 msgid ""
@@ -38,7 +38,7 @@ msgstr ""
 
 #: ../../../users/syncthing.rst:15
 msgid "Description"
-msgstr ""
+msgstr "描述"
 
 #: ../../../users/syncthing.rst:17
 msgid ""
@@ -414,7 +414,7 @@ msgstr ""
 
 #: ../../../users/syncthing.rst:188
 msgid "Disable automatic upgrades."
-msgstr ""
+msgstr "停用自動升級。"
 
 #: ../../../users/syncthing.rst:189
 msgid "GOMAXPROCS"

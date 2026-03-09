@@ -379,6 +379,22 @@ msgid ""
 "        int MessageLength;\n"
 "}"
 msgstr ""
+" 0                   1                   2                   3\n"
+" 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                             Magic                             |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                         Message Type                          |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"|                        Message Length                         |\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"\n"
+"\n"
+"struct Header {\n"
+"        unsigned int Magic;\n"
+"        int MessageType;\n"
+"        int MessageLength;\n"
+"}"
 
 #: ../../../specs/relay-v1.rst:192
 msgid "Ping message (Type = 0)"
@@ -394,6 +410,13 @@ msgid ""
 "struct Ping {\n"
 "}"
 msgstr ""
+" 0                   1                   2                   3\n"
+" 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1\n"
+"+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n"
+"\n"
+"\n"
+"struct Ping {\n"
+"}"
 
 #: ../../../specs/relay-v1.rst:205
 msgid "Pong message (Type = 1)"
@@ -675,100 +698,100 @@ msgstr ""
 
 #: ../../../specs/relay-v1.rst:405
 msgid "Description"
-msgstr ""
+msgstr "描述"
 
 #: ../../../specs/relay-v1.rst:407
 msgid "0x009F"
-msgstr ""
+msgstr "0x009F"
 
 #: ../../../specs/relay-v1.rst:407
 msgid "DHE-RSA-AES256-GCM-SHA384"
-msgstr ""
+msgstr "DHE-RSA-AES256-GCM-SHA384"
 
 #: ../../../specs/relay-v1.rst:407
 msgid "TLSv1.2 DH RSA AESGCM(256) AEAD"
-msgstr ""
+msgstr "TLSv1.2 DH RSA AESGCM(256) AEAD"
 
 #: ../../../specs/relay-v1.rst:408
 msgid "0x006B"
-msgstr ""
+msgstr "0x006B"
 
 #: ../../../specs/relay-v1.rst:408
 msgid "DHE-RSA-AES256-SHA256"
-msgstr ""
+msgstr "DHE-RSA-AES256-SHA256"
 
 #: ../../../specs/relay-v1.rst:408
 msgid "TLSv1.2 DH RSA AES(256) SHA256"
-msgstr ""
+msgstr "TLSv1.2 DH RSA AES(256) SHA256"
 
 #: ../../../specs/relay-v1.rst:409
 msgid "0xC030"
-msgstr ""
+msgstr "0xC030"
 
 #: ../../../specs/relay-v1.rst:409
 msgid "ECDHE-RSA-AES256-GCM-SHA384"
-msgstr ""
+msgstr "ECDHE-RSA-AES256-GCM-SHA384"
 
 #: ../../../specs/relay-v1.rst:409
 msgid "TLSv1.2 ECDH RSA AESGCM(256) AEAD"
-msgstr ""
+msgstr "TLSv1.2 ECDH RSA AESGCM(256) AEAD"
 
 #: ../../../specs/relay-v1.rst:410
 msgid "0xC028"
-msgstr ""
+msgstr "0xC028"
 
 #: ../../../specs/relay-v1.rst:410
 msgid "ECDHE-RSA-AES256-SHA384"
-msgstr ""
+msgstr "ECDHE-RSA-AES256-SHA384"
 
 #: ../../../specs/relay-v1.rst:410
 msgid "TLSv1.2 ECDH RSA AES(256) SHA384"
-msgstr ""
+msgstr "TLSv1.2 ECDH RSA AES(256) SHA384"
 
 #: ../../../specs/relay-v1.rst:411
 msgid "0x009E"
-msgstr ""
+msgstr "0x009E"
 
 #: ../../../specs/relay-v1.rst:411
 msgid "DHE-RSA-AES128-GCM-SHA256"
-msgstr ""
+msgstr "DHE-RSA-AES128-GCM-SHA256"
 
 #: ../../../specs/relay-v1.rst:411
 msgid "TLSv1.2 DH RSA AESGCM(128) AEAD"
-msgstr ""
+msgstr "TLSv1.2 DH RSA AESGCM(128) AEAD"
 
 #: ../../../specs/relay-v1.rst:412
 msgid "0x0067"
-msgstr ""
+msgstr "0x0067"
 
 #: ../../../specs/relay-v1.rst:412
 msgid "DHE-RSA-AES128-SHA256"
-msgstr ""
+msgstr "DHE-RSA-AES128-SHA256"
 
 #: ../../../specs/relay-v1.rst:412
 msgid "TLSv1.2 DH RSA AES(128) SHA256"
-msgstr ""
+msgstr "TLSv1.2 DH RSA AES(128) SHA256"
 
 #: ../../../specs/relay-v1.rst:413
 msgid "0xC02F"
-msgstr ""
+msgstr "0xC02F"
 
 #: ../../../specs/relay-v1.rst:413
 msgid "ECDHE-RSA-AES128-GCM-SHA256"
-msgstr ""
+msgstr "ECDHE-RSA-AES128-GCM-SHA256"
 
 #: ../../../specs/relay-v1.rst:413
 msgid "TLSv1.2 ECDH RSA AESGCM(128) AEAD"
-msgstr ""
+msgstr "TLSv1.2 ECDH RSA AESGCM(128) AEAD"
 
 #: ../../../specs/relay-v1.rst:414
 msgid "0xC027"
-msgstr ""
+msgstr "0xC027"
 
 #: ../../../specs/relay-v1.rst:414
 msgid "ECDHE-RSA-AES128-SHA256"
-msgstr ""
+msgstr "ECDHE-RSA-AES128-SHA256"
 
 #: ../../../specs/relay-v1.rst:414
 msgid "TLSv1.2 ECDH RSA AES(128) SHA256"
-msgstr ""
+msgstr "TLSv1.2 ECDH RSA AES(128) SHA256"

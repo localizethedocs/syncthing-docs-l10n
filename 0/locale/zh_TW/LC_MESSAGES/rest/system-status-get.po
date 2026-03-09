@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../rest/system-status-get.rst:2
 msgid "GET /rest/system/status"
-msgstr ""
+msgstr "GET /rest/system/status"
 
 #: ../../../rest/system-status-get.rst:4
 msgid "Returns information about current system status and resource usage."

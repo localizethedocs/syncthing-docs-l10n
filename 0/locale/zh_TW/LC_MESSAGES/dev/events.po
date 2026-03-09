@@ -23,7 +23,7 @@ msgstr ""
 
 #: ../../../dev/events.rst:7
 msgid "Description"
-msgstr ""
+msgstr "描述"
 
 #: ../../../dev/events.rst:9
 msgid ""
