@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../dev/index.rst:5
 msgid "Introduction"
-msgstr ""
+msgstr "介紹"
 
 #: ../../../dev/index.rst:2
 msgid "Development"

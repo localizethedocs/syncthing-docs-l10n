@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../users/index.rst:4
 msgid "Command Line Operation"
-msgstr ""
+msgstr "命令行操作"
 
 #: ../../../users/index.rst:4
 msgid "Configuration"

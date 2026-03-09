@@ -23,7 +23,7 @@ msgstr ""
 
 #: ../../../specs/globaldisco-v3.rst:7
 msgid "Announcements"
-msgstr ""
+msgstr "公告"
 
 #: ../../../specs/globaldisco-v3.rst:9
 msgid ""
@@ -93,7 +93,7 @@ msgstr ""
 
 #: ../../../specs/globaldisco-v3.rst:48
 msgid "Queries"
-msgstr ""
+msgstr "查詢"
 
 #: ../../../specs/globaldisco-v3.rst:50
 msgid ""

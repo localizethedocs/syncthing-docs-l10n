@@ -19,4 +19,4 @@ msgstr ""
 
 #: ../../../intro/index.rst:2
 msgid "Introduction"
-msgstr ""
+msgstr "介紹"

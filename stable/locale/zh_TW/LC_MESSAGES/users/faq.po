@@ -27,7 +27,7 @@ msgstr ""
 
 #: ../../../users/faq-parts/general.rst:5
 msgid "What is Syncthing?"
-msgstr ""
+msgstr "什麼是 Syncthing？"
 
 #: ../../../users/faq-parts/general.rst:7
 msgid ""
@@ -202,7 +202,7 @@ msgstr ""
 
 #: ../../../users/faq-parts/general.rst:94
 msgid "https://en.wikipedia.org/wiki/Resilio_Sync"
-msgstr ""
+msgstr "https://en.wikipedia.org/wiki/Resilio_Sync"
 
 #: ../../../users/faq-parts/general.rst:97
 msgid "Is there an iOS client?"
@@ -237,11 +237,11 @@ msgstr ""
 
 #: ../../../users/faq-parts/general.rst:112
 msgid "https://github.com/pixelspark/sushitrain"
-msgstr ""
+msgstr "https://github.com/pixelspark/sushitrain"
 
 #: ../../../users/faq-parts/general.rst:113
 msgid "https://www.mobiussync.com"
-msgstr ""
+msgstr "https://www.mobiussync.com"
 
 #: ../../../users/faq-parts/general.rst:116
 msgid "Should I keep my device IDs secret?"
@@ -787,7 +787,7 @@ msgstr ""
 
 #: ../../../users/faq-parts/usage.rst:102
 msgid "Is Syncthing my ideal backup application?"
-msgstr ""
+msgstr "Syncthing 是我理想的備份應用程式嗎？"
 
 #: ../../../users/faq-parts/usage.rst:104
 msgid ""
@@ -865,7 +865,7 @@ msgstr ""
 
 #: ../../../users/faq-parts/usage.rst:149
 msgid "$ ssh -L 9090:127.0.0.1:8384 user@othercomputer.example.com"
-msgstr ""
+msgstr "$ ssh -L 9090:127.0.0.1:8384 user@othercomputer.example.com"
 
 #: ../../../users/faq-parts/usage.rst:153
 msgid ""
@@ -881,7 +881,7 @@ msgstr ""
 
 #: ../../../users/faq-parts/usage.rst:159
 msgid "$ ssh -N -L 9090:127.0.0.1:8384 user@othercomputer.example.com"
-msgstr ""
+msgstr "$ ssh -N -L 9090:127.0.0.1:8384 user@othercomputer.example.com"
 
 #: ../../../users/faq-parts/usage.rst:163
 msgid ""
@@ -1070,6 +1070,7 @@ msgstr ""
 msgid ""
 "``syncthing generate --gui-password=myNewPassword --gui-user=newUserName``"
 msgstr ""
+"``syncthing generate --gui-password=myNewPassword --gui-user=newUserName``"
 
 #: ../../../users/faq-parts/usage.rst:272
 msgid "Restart Syncthing as usual."

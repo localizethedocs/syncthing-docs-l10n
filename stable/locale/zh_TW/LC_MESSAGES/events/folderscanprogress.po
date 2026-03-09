@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../events/folderscanprogress.rst:2
 msgid "FolderScanProgress"
-msgstr ""
+msgstr "FolderScanProgress"
 
 #: ../../../events/folderscanprogress.rst:4
 msgid ""

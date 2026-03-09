@@ -181,15 +181,15 @@ msgstr ""
 
 #: ../../../users/versioning.rst:105
 msgid "%FOLDER_PATH%"
-msgstr ""
+msgstr "%FOLDER_PATH%"
 
 #: ../../../users/versioning.rst:106
 msgid "Path to the folder"
-msgstr ""
+msgstr "資料夾路徑"
 
 #: ../../../users/versioning.rst:108
 msgid "%FILE_PATH%"
-msgstr ""
+msgstr "%FILE_PATH%"
 
 #: ../../../users/versioning.rst:109
 msgid "Path to the file within the folder"
@@ -383,7 +383,7 @@ msgstr ""
 
 #: ../../../users/versioning.rst:249
 msgid "Configuration Parameter Reference"
-msgstr ""
+msgstr "組態參數參考"
 
 #: ../../../users/versioning.rst:251
 msgid ""
