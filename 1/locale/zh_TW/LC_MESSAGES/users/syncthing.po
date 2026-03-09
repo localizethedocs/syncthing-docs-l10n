@@ -23,7 +23,7 @@ msgstr ""
 
 #: ../../../users/syncthing.rst:8
 msgid "Synopsis"
-msgstr ""
+msgstr "概要"
 
 #: ../../../users/syncthing.rst:12
 msgid ""
@@ -61,7 +61,7 @@ msgstr ""
 
 #: ../../../users/syncthing.rst:42
 msgid "Description"
-msgstr ""
+msgstr "描述"
 
 #: ../../../users/syncthing.rst:44
 msgid ""

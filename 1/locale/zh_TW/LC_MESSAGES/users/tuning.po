@@ -43,7 +43,7 @@ msgstr ""
 
 #: ../../../users/tuning.rst:19 ../../../users/tuning.rst:148
 msgid ":opt:`progressUpdateIntervalS`"
-msgstr ""
+msgstr ":opt:`progressUpdateIntervalS`"
 
 #: ../../../users/tuning.rst:20
 msgid ""
@@ -53,7 +53,7 @@ msgstr ""
 
 #: ../../../users/tuning.rst:23
 msgid ":opt:`setLowPriority`"
-msgstr ""
+msgstr ":opt:`setLowPriority`"
 
 #: ../../../users/tuning.rst:24
 msgid ""
@@ -264,7 +264,7 @@ msgstr ""
 
 #: ../../../users/tuning.rst:131 ../../../users/tuning.rst:203
 msgid "Other things:"
-msgstr ""
+msgstr "其他事項："
 
 #: ../../../users/tuning.rst:133
 msgid ""
@@ -288,7 +288,7 @@ msgstr ""
 
 #: ../../../users/tuning.rst:146
 msgid "General options:"
-msgstr ""
+msgstr "一般選項："
 
 #: ../../../users/tuning.rst:149
 msgid ""
@@ -314,7 +314,7 @@ msgstr ""
 
 #: ../../../users/tuning.rst:164
 msgid "Folders options:"
-msgstr ""
+msgstr "資料夾選項："
 
 #: ../../../users/tuning.rst:167
 msgid ""
@@ -366,13 +366,13 @@ msgstr ""
 
 #: ../../../users/tuning.rst:197
 msgid "Device options:"
-msgstr ""
+msgstr "裝置選項："
 
 #: ../../../users/tuning.rst:200
 msgid ""
 "Set to 1 to reduce the amount of overhead per device, as each connection has "
 "a memory and CPU cost."
-msgstr ""
+msgstr "設為 1 來降低每個裝置的開銷，因為每個連線都會消耗記憶體和 CPU 資源。"
 
 #: ../../../users/tuning.rst:205
 msgid "``GOMEMLIMIT`` and ``GOGC``"

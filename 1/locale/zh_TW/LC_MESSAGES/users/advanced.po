@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../users/advanced.rst:4
 msgid "Advanced Configuration"
-msgstr ""
+msgstr "進階組態"
 
 #: ../../../users/advanced.rst:6
 msgid ""
@@ -41,7 +41,7 @@ msgstr ""
 
 #: ../../../users/advanced.rst:20
 msgid "General Settings"
-msgstr ""
+msgstr "一般設定"
 
 #: ../../../users/advanced.rst:29
 msgid "Per Folder Settings"

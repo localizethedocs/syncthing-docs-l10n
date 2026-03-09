@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../rest/svc-random-string-get.rst:2
 msgid "GET /rest/svc/random/string"
-msgstr ""
+msgstr "GET /rest/svc/random/string"
 
 #: ../../../rest/svc-random-string-get.rst:4
 msgid ""
@@ -33,3 +33,6 @@ msgid ""
 "  \"random\": \"FdPaEaZQ56sXEKYNxpgF\"\n"
 "}"
 msgstr ""
+"{\n"
+"  \"random\": \"FdPaEaZQ56sXEKYNxpgF\"\n"
+"}"

@@ -28,7 +28,7 @@ msgstr ""
 
 #: ../../../rest/db-file-get.rst:7
 msgid "Request"
-msgstr ""
+msgstr "請求"
 
 #: ../../../rest/db-file-get.rst:9
 msgid ""
@@ -60,7 +60,7 @@ msgstr ""
 
 #: ../../../rest/db-file-get.rst:26
 msgid "Response"
-msgstr ""
+msgstr "響應"
 
 #: ../../../rest/db-file-get.rst:28
 msgid ""

@@ -36,4 +36,4 @@ msgstr ""
 
 #: ../../../advanced/folder-send-xattrs.rst:13
 msgid ":doc:`folder-sync-xattrs`"
-msgstr ""
+msgstr ":doc:`folder-sync-xattrs`"
