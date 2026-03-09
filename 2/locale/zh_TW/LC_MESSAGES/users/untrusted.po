@@ -130,6 +130,17 @@ msgid ""
 "    </device>\n"
 "</folder>"
 msgstr ""
+"<folder id=\"default\" ...>\n"
+"    <device id=\"373HSRP-...\">\n"
+"        <encryptionPassword></encryptionPassword>\n"
+"    </device>\n"
+"    <device id=\"CJBIJBJ-...\">\n"
+"        <encryptionPassword>foo</encryptionPassword>\n"
+"    </device>\n"
+"    <device id=\"I6KAH76-...\">\n"
+"        <encryptionPassword>bar</encryptionPassword>\n"
+"    </device>\n"
+"</folder>"
 
 #: ../../../users/untrusted.rst:131
 msgid ""
@@ -156,7 +167,7 @@ msgstr ""
 
 #: ../../../users/untrusted.rst:150
 msgid "Decrypting data"
-msgstr ""
+msgstr "解密資料"
 
 #: ../../../users/untrusted.rst:152
 msgid ""
@@ -202,7 +213,7 @@ msgstr ""
 
 #: ../../../users/untrusted.rst:174
 msgid "Folder ID and label"
-msgstr ""
+msgstr "資料夾 ID 與標籤"
 
 #: ../../../users/untrusted.rst:175
 msgid ""

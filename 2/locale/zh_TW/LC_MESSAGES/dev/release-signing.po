@@ -83,7 +83,7 @@ msgstr ""
 
 #: ../../../dev/release-signing.rst:51
 msgid "$ go install github.com/syncthing/syncthing/cmd/stsigtool"
-msgstr ""
+msgstr "$ go install github.com/syncthing/syncthing/cmd/stsigtool"
 
 #: ../../../dev/release-signing.rst:53
 msgid ""

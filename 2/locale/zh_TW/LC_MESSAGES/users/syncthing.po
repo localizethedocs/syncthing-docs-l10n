@@ -23,7 +23,7 @@ msgstr ""
 
 #: ../../../users/syncthing.rst:8
 msgid "Synopsis"
-msgstr ""
+msgstr "概要"
 
 #: ../../../users/syncthing.rst:12
 msgid ""
@@ -86,7 +86,7 @@ msgstr ""
 
 #: ../../../users/syncthing.rst:69
 msgid "Description"
-msgstr ""
+msgstr "描述"
 
 #: ../../../users/syncthing.rst:71
 msgid ""
@@ -251,7 +251,7 @@ msgstr ""
 
 #: ../../../users/syncthing.rst:211
 msgid "Decrypt options"
-msgstr ""
+msgstr "解密選項"
 
 #: ../../../users/syncthing.rst:215
 msgid "Destination directory where files should be stored after decryption."

@@ -33,7 +33,7 @@ msgstr ""
 
 #: ../../../specs/index.rst:18
 msgid ":ref:`globaldisco-v3`"
-msgstr ""
+msgstr ":ref:`globaldisco-v3`"
 
 #: ../../../specs/index.rst:19
 msgid "The protocol used for global discovery over the Internet."
@@ -41,7 +41,7 @@ msgstr ""
 
 #: ../../../specs/index.rst:21
 msgid ":ref:`localdisco-v4`"
-msgstr ""
+msgstr ":ref:`localdisco-v4`"
 
 #: ../../../specs/index.rst:22
 msgid "The protocol used for local discovery within a broadcast domain (LAN)."
@@ -49,7 +49,7 @@ msgstr ""
 
 #: ../../../specs/index.rst:24
 msgid ":ref:`relay-v1`"
-msgstr ""
+msgstr ":ref:`relay-v1`"
 
 #: ../../../specs/index.rst:25
 msgid "The protocol used for connection relaying."

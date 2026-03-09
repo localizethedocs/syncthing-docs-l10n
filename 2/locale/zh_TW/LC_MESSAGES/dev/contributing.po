@@ -23,7 +23,7 @@ msgstr ""
 
 #: ../../../dev/contributing.rst:7
 msgid "Getting Started"
-msgstr ""
+msgstr "開始使用"
 
 #: ../../../dev/contributing.rst:9
 msgid ""

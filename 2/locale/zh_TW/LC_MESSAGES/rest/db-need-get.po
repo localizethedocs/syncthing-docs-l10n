@@ -37,15 +37,15 @@ msgstr ""
 
 #: ../../../rest/db-need-get.rst:12
 msgid "``progress`` has 15 items"
-msgstr ""
+msgstr "``progress`` 有 15 個項目"
 
 #: ../../../rest/db-need-get.rst:13
 msgid "``queued`` has 3 items"
-msgstr ""
+msgstr "``queued`` 有 3 個項目"
 
 #: ../../../rest/db-need-get.rst:14
 msgid "``rest`` has 12 items"
-msgstr ""
+msgstr "``rest`` 有 12 個項目"
 
 #: ../../../rest/db-need-get.rst:16
 msgid ""
