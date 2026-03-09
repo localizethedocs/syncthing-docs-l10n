@@ -75,6 +75,8 @@ msgid ""
 "To get help and support, discuss scenarios, or just connect with other users "
 "and developers you can head over to the `friendly forum`_."
 msgstr ""
+"若要獲得幫助與支援、討論使用情境，或是與其他使用者及開發者聯繫，您可以前往\\ "
+"`友善的論壇 <friendly forum_>`_。"
 
 #: ../../../index.rst:36
 msgid ""

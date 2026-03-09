@@ -78,11 +78,11 @@ msgstr ""
 
 #: ../../../dev/rest.rst:39
 msgid "System Endpoints"
-msgstr ""
+msgstr "系統端點"
 
 #: ../../../dev/rest.rst:48
 msgid "Config Endpoints"
-msgstr ""
+msgstr "組態端點"
 
 #: ../../../dev/rest.rst:56
 msgid "Cluster Endpoints"
@@ -94,7 +94,7 @@ msgstr ""
 
 #: ../../../dev/rest.rst:67
 msgid "Folder Endpoints"
-msgstr ""
+msgstr "資料夾端點"
 
 #: ../../../dev/rest.rst:69
 msgid "Runtime state of the individual shared folders."

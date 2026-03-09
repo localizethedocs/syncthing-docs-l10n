@@ -300,7 +300,7 @@ msgstr ""
 
 #: ../../../specs/untrusted.rst:203
 msgid "Data Encryption"
-msgstr ""
+msgstr "資料加密"
 
 #: ../../../specs/untrusted.rst:205
 msgid ""

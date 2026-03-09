@@ -29,7 +29,7 @@ msgstr ""
 
 #: ../../../intro/project-presentation.rst:10
 msgid "Syncthing"
-msgstr ""
+msgstr "Syncthing"
 
 #: ../../../intro/project-presentation.rst:12
 msgid ""

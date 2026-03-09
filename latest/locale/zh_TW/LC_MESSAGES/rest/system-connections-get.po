@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../rest/system-connections-get.rst:2
 msgid "GET /rest/system/connections"
-msgstr ""
+msgstr "GET /rest/system/connections"
 
 #: ../../../rest/system-connections-get.rst:5
 msgid ""

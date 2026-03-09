@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../dev/debugging.rst:4
 msgid "Debugging Syncthing"
-msgstr ""
+msgstr "除錯 Syncthing"
 
 #: ../../../dev/debugging.rst:7
 msgid "A file isn't syncing"
@@ -233,7 +233,7 @@ msgstr ""
 
 #: ../../../includes/env-vars.rst:29
 msgid "Filesystem access"
-msgstr ""
+msgstr "檔案系統存取"
 
 #: ../../../includes/env-vars.rst:30
 msgid "main"
@@ -420,6 +420,10 @@ msgid ""
 "headless=true --api-version=2 exec ./syncthing -- --home=./_test_config --no-"
 "browser"
 msgstr ""
+"$ go run build.go -debug-binary build\n"
+"$ STNODEFAULTFOLDER=1 STNOUPGRADE=1  STNORESTART=1 dlv --listen=:2345 --"
+"headless=true --api-version=2 exec ./syncthing -- --home=./_test_config --no-"
+"browser"
 
 #: ../../../dev/debugging.rst:94
 msgid "For installing and using delve itself see:"

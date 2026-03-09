@@ -23,7 +23,7 @@ msgstr ""
 
 #: ../../../users/crashrep.rst:8
 msgid "Automatic Crash Reporting"
-msgstr ""
+msgstr "自動當機回報"
 
 #: ../../../users/crashrep.rst:10
 msgid ""

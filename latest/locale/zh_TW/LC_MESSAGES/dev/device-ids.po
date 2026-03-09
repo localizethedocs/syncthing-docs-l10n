@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../dev/device-ids.rst:4
 msgid "Understanding Device IDs"
-msgstr ""
+msgstr "理解裝置 ID"
 
 #: ../../../dev/device-ids.rst:6
 msgid ""
@@ -28,6 +28,8 @@ msgid ""
 "interchangeably have been \"key ID\" since the device ID is a direct "
 "property of the public key in use."
 msgstr ""
+"每個裝置都由一個裝置 ID 來識別。裝置 ID 用於位址解析、身份認證與授權。「裝置 "
+"ID」這個術語也可以替換為「金鑰 ID」，因為裝置 ID 是使用中公鑰的直接屬性。"
 
 #: ../../../dev/device-ids.rst:12
 msgid "Keys"
@@ -53,7 +55,7 @@ msgstr ""
 msgid ""
 "The typical certificate will look something like this, inspected with "
 "``openssl x509``::"
-msgstr ""
+msgstr "典型的證書看起來會像這樣，使用 ``openssl x509`` 檢查： ::"
 
 #: ../../../dev/device-ids.rst:27
 msgid ""
@@ -145,7 +147,7 @@ msgstr ""
 
 #: ../../../dev/device-ids.rst:93
 msgid "Connection Establishment"
-msgstr ""
+msgstr "連線建立"
 
 #: ../../../dev/device-ids.rst:95
 msgid ""
@@ -234,6 +236,8 @@ msgid ""
 "amount of inputs and a finite amount of outputs - so by definition there are "
 "infinitely many messages that result in the same hash."
 msgstr ""
+"你可能會爭辯說，碰撞當然存在——畢竟輸入的可能性是無限的，而輸出卻是有限的——因"
+"此，從定義上來說，確實有無限多個訊息會產生相同的雜湊值。"
 
 #: ../../../dev/device-ids.rst:147
 msgid ""
@@ -241,6 +245,9 @@ msgid ""
 "questions/4014090/is-it-safe-to-ignore-the-possibility-of-sha-collisions-in-"
 "practice>`__ here:"
 msgstr ""
+"我將在這裡引用 `Stack Overflow <https://stackoverflow.com/questions/4014090/"
+"is-it-safe-to-ignore-the-possibility-of-sha-collisions-in-practice>`__ 上的內"
+"容："
 
 #: ../../../dev/device-ids.rst:151
 msgid ""
