@@ -132,7 +132,7 @@ msgstr ""
 
 #: ../../../specs/untrusted.rst:66
 msgid "encryptedBlockHash = AES-SIV(blockHash, fileKey)"
-msgstr ""
+msgstr "encryptedBlockHash = AES-SIV(blockHash, fileKey)"
 
 #: ../../../specs/untrusted.rst:68
 msgid ""
@@ -143,6 +143,7 @@ msgstr ""
 #: ../../../specs/untrusted.rst:71
 msgid "encryptedBlock = nonce + XChaCha20-Poly1305.Seal(block, nonce, fileKey)"
 msgstr ""
+"encryptedBlock = nonce + XChaCha20-Poly1305.Seal(block, nonce, fileKey)"
 
 #: ../../../specs/untrusted.rst:73
 msgid ""
@@ -160,7 +161,7 @@ msgstr ""
 
 #: ../../../specs/untrusted.rst:81
 msgid "passwordToken = AES-SIV(\"syncthing\" + folderID, folderKey)"
-msgstr ""
+msgstr "passwordToken = AES-SIV(\"syncthing\" + folderID, folderKey)"
 
 #: ../../../specs/untrusted.rst:83
 msgid ""

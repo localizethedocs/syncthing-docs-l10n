@@ -141,7 +141,7 @@ msgstr ""
 
 #: ../../../users/syncthing.rst:113
 msgid "Serve options"
-msgstr ""
+msgstr "伺服選項"
 
 #: ../../../users/syncthing.rst:117
 msgid ""
@@ -209,11 +209,11 @@ msgstr ""
 
 #: ../../../users/syncthing.rst:173
 msgid "Do not start a browser."
-msgstr ""
+msgstr "不要啟動瀏覽器。"
 
 #: ../../../users/syncthing.rst:177
 msgid "Hide the console window. (On Windows only)"
-msgstr ""
+msgstr "隱藏主控台視窗。（僅限 Windows）"
 
 #: ../../../users/syncthing.rst:181
 msgid ""
@@ -283,7 +283,7 @@ msgstr ""
 
 #: ../../../users/syncthing.rst:240
 msgid "Generate options"
-msgstr ""
+msgstr "生成選項"
 
 #: ../../../users/syncthing.rst:244
 msgid ""
@@ -506,7 +506,7 @@ msgstr ""
 
 #: ../../../includes/env-vars.rst:1
 msgid "STTRACE"
-msgstr ""
+msgstr "STTRACE"
 
 #: ../../../includes/env-vars.rst:2
 msgid ""

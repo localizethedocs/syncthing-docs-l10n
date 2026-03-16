@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../users/strelaysrv.rst:4
 msgid "Syncthing Relay Server"
-msgstr ""
+msgstr "Syncthing 中繼伺服器"
 
 #: ../../../users/strelaysrv.rst:7
 msgid "Synopsis"

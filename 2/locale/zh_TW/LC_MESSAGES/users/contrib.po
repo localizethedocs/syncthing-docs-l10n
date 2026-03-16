@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../users/contrib.rst:4
 msgid "Community Contributions"
-msgstr ""
+msgstr "社群貢獻"
 
 #: ../../../users/contrib.rst:6
 msgid ""
