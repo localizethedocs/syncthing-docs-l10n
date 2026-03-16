@@ -114,11 +114,11 @@ msgstr ""
 
 #: ../../../users/syncthing.rst:65
 msgid "Do not start a browser."
-msgstr ""
+msgstr "不要啟動瀏覽器。"
 
 #: ../../../users/syncthing.rst:69
 msgid "Hide the console window. (On Windows only)"
-msgstr ""
+msgstr "隱藏主控台視窗。（僅限 Windows）"
 
 #: ../../../users/syncthing.rst:73
 msgid "Do not restart; just exit."
@@ -249,7 +249,7 @@ msgstr ""
 
 #: ../../../users/syncthing.rst:143
 msgid "STTRACE"
-msgstr ""
+msgstr "STTRACE"
 
 #: ../../../users/syncthing.rst:144
 msgid ""

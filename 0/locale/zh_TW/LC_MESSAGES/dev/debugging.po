@@ -43,7 +43,7 @@ msgstr ""
 
 #: ../../../dev/debugging.rst:18
 msgid "STTRACE"
-msgstr ""
+msgstr "STTRACE"
 
 #: ../../../dev/debugging.rst:20
 msgid ""
@@ -177,7 +177,7 @@ msgstr ""
 
 #: ../../../dev/debugging.rst:73
 msgid "``$ STTRACE=model syncthing``"
-msgstr ""
+msgstr "``$ STTRACE=model syncthing``"
 
 #: ../../../dev/debugging.rst:75
 msgid "On windows, it needs to be set prior to running Syncthing."
@@ -188,6 +188,8 @@ msgid ""
 "C:\\> set STTRACE=model\n"
 "C:\\> syncthing"
 msgstr ""
+"C:\\> set STTRACE=model\n"
+"C:\\> syncthing"
 
 #: ../../../dev/debugging.rst:83
 msgid "STPROFILER"

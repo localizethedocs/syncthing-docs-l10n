@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../rest/system-reset-post.rst:2
 msgid "POST /rest/system/reset"
-msgstr ""
+msgstr "POST /rest/system/reset"
 
 #: ../../../rest/system-reset-post.rst:4
 msgid ""

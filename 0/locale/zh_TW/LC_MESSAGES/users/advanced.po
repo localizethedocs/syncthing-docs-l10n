@@ -41,4 +41,4 @@ msgstr ""
 
 #: ../../../users/advanced.rst:19
 msgid "Per Folder Settings"
-msgstr ""
+msgstr "個別資料夾設定"

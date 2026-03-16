@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../users/faq.rst:6
 msgid "FAQ"
-msgstr ""
+msgstr "常見問題"
 
 #: ../../../users/faq.rst:9
 msgid "General"
@@ -431,6 +431,8 @@ msgid ""
 "<gui enabled=\"true\" tls=\"false\">\n"
 "  <address>127.0.0.1:8384</address>"
 msgstr ""
+"<gui enabled=\"true\" tls=\"false\">\n"
+"  <address>127.0.0.1:8384</address>"
 
 #: ../../../users/faq.rst:257
 msgid "to"
@@ -491,7 +493,7 @@ msgstr ""
 
 #: ../../../users/faq.rst:295
 msgid "How do I upgrade Syncthing?"
-msgstr ""
+msgstr "我要如何升級 Syncthing？"
 
 #: ../../../users/faq.rst:297
 msgid ""
@@ -526,7 +528,7 @@ msgstr ""
 
 #: ../../../users/faq.rst:315
 msgid "Where do I find the latest release?"
-msgstr ""
+msgstr "我在哪裡可以找到最新發行版？"
 
 #: ../../../users/faq.rst:317
 msgid ""
