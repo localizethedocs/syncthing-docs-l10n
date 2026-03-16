@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../rest/system-reset-post.rst:2
 msgid "POST /rest/system/reset"
-msgstr ""
+msgstr "POST /rest/system/reset"
 
 #: ../../../rest/system-reset-post.rst:4
 msgid ""
@@ -34,6 +34,8 @@ msgid ""
 "curl -X POST -H \"X-API-Key: abc123\" http://localhost:8384/rest/system/"
 "reset?folder=ab1c2-def3g"
 msgstr ""
+"curl -X POST -H \"X-API-Key: abc123\" http://localhost:8384/rest/system/"
+"reset?folder=ab1c2-def3g"
 
 #: ../../../rest/system-reset-post.rst:13
 msgid ""

@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../includes/env-vars.rst:1
 msgid "STTRACE"
-msgstr ""
+msgstr "STTRACE"
 
 #: ../../../includes/env-vars.rst:2
 msgid ""
