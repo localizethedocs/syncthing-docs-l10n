@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../users/faq.rst:6
 msgid "FAQ"
-msgstr ""
+msgstr "常見問題"
 
 #: ../../../users/faq-parts/general.rst:2
 msgid "General"
@@ -62,7 +62,7 @@ msgstr ""
 
 #: ../../../users/faq-parts/general.rst:27
 msgid "File contents"
-msgstr ""
+msgstr "檔案內容"
 
 #: ../../../users/faq-parts/general.rst:28
 msgid "File modification times"
@@ -837,6 +837,8 @@ msgid ""
 "<gui enabled=\"true\" tls=\"false\">\n"
 "  <address>127.0.0.1:8384</address>"
 msgstr ""
+"<gui enabled=\"true\" tls=\"false\">\n"
+"  <address>127.0.0.1:8384</address>"
 
 #: ../../../users/faq-parts/usage.rst:135
 msgid "to"
@@ -925,7 +927,7 @@ msgstr ""
 
 #: ../../../users/faq-parts/usage.rst:190
 msgid "How do I upgrade Syncthing?"
-msgstr ""
+msgstr "我要如何升級 Syncthing？"
 
 #: ../../../users/faq-parts/usage.rst:192
 msgid ""
@@ -961,7 +963,7 @@ msgstr ""
 
 #: ../../../users/faq-parts/usage.rst:210
 msgid "Where do I find the latest release?"
-msgstr ""
+msgstr "我在哪裡可以找到最新發行版？"
 
 #: ../../../users/faq-parts/usage.rst:212
 msgid ""
@@ -1019,6 +1021,8 @@ msgid ""
 "Linux typically restricts the number of watches per user (usually 8192). If "
 "you have many directories, you will need to adjust that number."
 msgstr ""
+"Linux 通常會限制每個使用者的監控數量（通常為 8192）。如果您有很多目錄，則需要"
+"調整該數量。"
 
 #: ../../../users/faq-parts/usage.rst:249
 msgid "On many Linux distributions you can run the following to fix it::"
@@ -1048,11 +1052,11 @@ msgstr ""
 
 #: ../../../users/faq-parts/usage.rst:260
 msgid "echo 204800 | sudo tee /proc/sys/fs/inotify/max_user_watches"
-msgstr ""
+msgstr "echo 204800 | sudo tee /proc/sys/fs/inotify/max_user_watches"
 
 #: ../../../users/faq-parts/usage.rst:263
 msgid "How do I reset the GUI password?"
-msgstr ""
+msgstr "我要如何重設 GUI 密碼？"
 
 #: ../../../users/faq-parts/usage.rst:265
 msgid ""
@@ -1074,7 +1078,7 @@ msgstr ""
 
 #: ../../../users/faq-parts/usage.rst:272
 msgid "Restart Syncthing as usual."
-msgstr ""
+msgstr "照常重新啟動 Syncthing。"
 
 #: ../../../users/faq-parts/usage.rst:274
 msgid ""

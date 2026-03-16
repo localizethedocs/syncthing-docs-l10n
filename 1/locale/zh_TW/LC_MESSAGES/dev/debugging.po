@@ -45,7 +45,7 @@ msgstr ""
 
 #: ../../../dev/debugging.rst:21
 msgid "``$ STTRACE=model syncthing``"
-msgstr ""
+msgstr "``$ STTRACE=model syncthing``"
 
 #: ../../../dev/debugging.rst:23
 msgid "On windows, it needs to be set prior to running Syncthing."
@@ -56,6 +56,8 @@ msgid ""
 "C:\\> set STTRACE=model\n"
 "C:\\> syncthing"
 msgstr ""
+"C:\\> set STTRACE=model\n"
+"C:\\> syncthing"
 
 #: ../../../dev/debugging.rst:31
 msgid "Environment Variables"
@@ -63,7 +65,7 @@ msgstr ""
 
 #: ../../../includes/env-vars.rst:1
 msgid "STTRACE"
-msgstr ""
+msgstr "STTRACE"
 
 #: ../../../includes/env-vars.rst:2
 msgid ""

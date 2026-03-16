@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../users/config.rst:4
 msgid "Syncthing Configuration"
-msgstr ""
+msgstr "Syncthing 組態"
 
 #: ../../../users/config.rst:7
 msgid "Synopsis"
