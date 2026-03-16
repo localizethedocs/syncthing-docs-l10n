@@ -45,8 +45,8 @@ msgstr "一般設定"
 
 #: ../../../users/advanced.rst:29
 msgid "Per Folder Settings"
-msgstr ""
+msgstr "個別資料夾設定"
 
 #: ../../../users/advanced.rst:38
 msgid "Per Device Settings"
-msgstr ""
+msgstr "個別裝置設定"

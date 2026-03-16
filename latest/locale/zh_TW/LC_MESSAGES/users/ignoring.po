@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../users/ignoring.rst:6
 msgid "Ignoring Files"
-msgstr ""
+msgstr "忽略檔案"
 
 #: ../../../users/ignoring.rst:9
 msgid "Synopsis"

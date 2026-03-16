@@ -265,7 +265,7 @@ msgstr ""
 
 #: ../../../users/releases.rst:119
 msgid "FAQ"
-msgstr ""
+msgstr "常見問題"
 
 #: ../../../users/releases.rst:122
 msgid "What's the relationship between candidate and release exactly?"
