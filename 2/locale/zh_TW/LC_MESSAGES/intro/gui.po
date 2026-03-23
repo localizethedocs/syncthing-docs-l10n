@@ -19,11 +19,11 @@ msgstr ""
 
 #: ../../../intro/gui.rst:2
 msgid "An Intro to the GUI"
-msgstr ""
+msgstr "GUI 介紹"
 
 #: ../../../intro/gui.rst:7
 msgid "Folder View"
-msgstr ""
+msgstr "資料夾檢視"
 
 #: ../../../intro/gui.rst:9
 msgid ""
@@ -39,7 +39,7 @@ msgstr ""
 
 #: ../../../intro/gui.rst:16
 msgid "Unknown"
-msgstr ""
+msgstr "未知"
 
 #: ../../../intro/gui.rst:17
 msgid "while the GUI is loading,"
@@ -47,7 +47,7 @@ msgstr ""
 
 #: ../../../intro/gui.rst:19
 msgid "Unshared"
-msgstr ""
+msgstr "未共享"
 
 #: ../../../intro/gui.rst:20
 msgid "when you have not shared this folder yet,"
@@ -55,7 +55,7 @@ msgstr ""
 
 #: ../../../intro/gui.rst:22
 msgid "Paused"
-msgstr ""
+msgstr "已暫停"
 
 #: ../../../intro/gui.rst:23
 msgid "when the folder's activity has been put on hold,"
@@ -213,7 +213,7 @@ msgstr ""
 
 #: ../../../intro/gui.rst:94
 msgid "Folder Label"
-msgstr ""
+msgstr "資料夾標籤"
 
 #: ../../../intro/gui.rst:95
 msgid ""
@@ -234,7 +234,7 @@ msgstr ""
 
 #: ../../../intro/gui.rst:104
 msgid "Folder Path"
-msgstr ""
+msgstr "資料夾路徑"
 
 #: ../../../intro/gui.rst:105
 msgid "designates the physical path to the folder, i.e. on your hard drive."

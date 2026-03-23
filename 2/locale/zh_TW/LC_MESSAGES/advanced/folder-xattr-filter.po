@@ -73,7 +73,7 @@ msgstr ""
 
 #: ../../../advanced/folder-xattr-filter.rst:35
 msgid "Setting rules"
-msgstr ""
+msgstr "設定規則"
 
 #: ../../../advanced/folder-xattr-filter.rst:37
 msgid ""
@@ -94,7 +94,7 @@ msgstr ""
 
 #: ../../../advanced/folder-xattr-filter.rst:49
 msgid "Removing rules"
-msgstr ""
+msgstr "移除規則"
 
 #: ../../../advanced/folder-xattr-filter.rst:51
 msgid ""
