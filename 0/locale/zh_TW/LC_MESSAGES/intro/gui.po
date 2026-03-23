@@ -23,7 +23,7 @@ msgstr ""
 
 #: ../../../intro/gui.rst:5
 msgid "Folder View"
-msgstr ""
+msgstr "資料夾檢視"
 
 #: ../../../intro/gui.rst:7
 msgid ""
@@ -39,7 +39,7 @@ msgstr ""
 
 #: ../../../intro/gui.rst:16
 msgid "Unknown"
-msgstr ""
+msgstr "未知"
 
 #: ../../../intro/gui.rst:17
 msgid "while the GUI is loading."
@@ -47,7 +47,7 @@ msgstr ""
 
 #: ../../../intro/gui.rst:19
 msgid "Unshared"
-msgstr ""
+msgstr "未共享"
 
 #: ../../../intro/gui.rst:20
 msgid "when you have not shared this folder,"
