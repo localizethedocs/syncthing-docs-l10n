@@ -25,7 +25,7 @@ msgstr ""
 msgid ""
 "These are the various projects under the Syncthing umbrella and the people "
 "chiefly responsible for maintaining them."
-msgstr ""
+msgstr "這些是 Syncthing 旗下的各個專案，以及主要負責維護的人員。"
 
 #: ../../../intro/project-presentation.rst:10
 msgid "Syncthing"
