@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../rest/db-override-post.rst:2
 msgid "POST /rest/db/override"
-msgstr ""
+msgstr "POST /rest/db/override"
 
 #: ../../../rest/db-override-post.rst:4
 msgid ""

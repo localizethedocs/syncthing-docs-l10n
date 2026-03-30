@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../rest/system-upgrade-get.rst:2
 msgid "GET /rest/system/upgrade"
-msgstr ""
+msgstr "GET /rest/system/upgrade"
 
 #: ../../../rest/system-upgrade-get.rst:4
 msgid ""
