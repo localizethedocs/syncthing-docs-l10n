@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../rest/db-ignores-get.rst:2
 msgid "GET /rest/db/ignores"
-msgstr ""
+msgstr "GET /rest/db/ignores"
 
 #: ../../../rest/db-ignores-get.rst:4
 msgid ""
@@ -45,3 +45,12 @@ msgid ""
 "  ]\n"
 "}"
 msgstr ""
+"{\n"
+"  \"ignore\": [\n"
+"    \"(?i)/Backups\"\n"
+"  ],\n"
+"  \"expanded\": [\n"
+"    \"(?i)Backups\",\n"
+"    \"(?i)Backups/**\"\n"
+"  ]\n"
+"}"

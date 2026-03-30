@@ -55,7 +55,7 @@ msgstr ""
 
 #: ../../../users/relaying.rst:26
 msgid "For example::"
-msgstr ""
+msgstr "例如：\\ ::"
 
 #: ../../../users/relaying.rst:28
 msgid ""

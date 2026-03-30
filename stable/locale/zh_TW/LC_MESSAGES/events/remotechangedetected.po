@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../events/remotechangedetected.rst:2
 msgid "RemoteChangeDetected"
-msgstr ""
+msgstr "RemoteChangeDetected"
 
 #: ../../../events/remotechangedetected.rst:4
 msgid ""
@@ -52,6 +52,21 @@ msgid ""
 "   \"id\" : 2\n"
 "}"
 msgstr ""
+"{\n"
+"   \"time\" : \"2017-03-06T23:58:21.844739891+01:00\",\n"
+"   \"globalID\" : 123,\n"
+"   \"data\" : {\n"
+"      \"type\" : \"file\",\n"
+"      \"action\" : \"deleted\",\n"
+"      \"folder\": \"Dokumente\",\n"
+"      \"folderID\" : \"Dokumente\",\n"
+"      \"path\" : \"testfile\",\n"
+"      \"label\" : \"Dokumente\",\n"
+"      \"modifiedBy\" : \"BPDFDTU\"\n"
+"   },\n"
+"   \"type\" : \"RemoteChangeDetected\",\n"
+"   \"id\" : 2\n"
+"}"
 
 #: ../../../events/remotechangedetected.rst:28
 msgid ""

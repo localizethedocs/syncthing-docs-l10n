@@ -232,7 +232,7 @@ msgstr ""
 
 #: ../../../users/strelaysrv.rst:165
 msgid "For example::"
-msgstr ""
+msgstr "例如：\\ ::"
 
 #: ../../../users/strelaysrv.rst:167
 msgid ""
