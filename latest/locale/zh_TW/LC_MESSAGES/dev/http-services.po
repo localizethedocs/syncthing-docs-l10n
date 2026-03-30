@@ -30,7 +30,7 @@ msgstr ""
 
 #: ../../../dev/http-services.rst:9
 msgid "GET /meta.js"
-msgstr ""
+msgstr "GET /meta.js"
 
 #: ../../../dev/http-services.rst:11
 msgid ""
@@ -46,10 +46,13 @@ msgid ""
 "var metadata = {\"deviceID\":\"S7UKX27-GI7ZTXS-GC6RKUA-7AJGZ44-C6NAYEB-"
 "HSKTJQK-KJHU2NO-CWV7EQW\"};"
 msgstr ""
+"$ curl http://localhost:8384/meta.js\n"
+"var metadata = {\"deviceID\":\"S7UKX27-GI7ZTXS-GC6RKUA-7AJGZ44-C6NAYEB-"
+"HSKTJQK-KJHU2NO-CWV7EQW\"};"
 
 #: ../../../dev/http-services.rst:23
 msgid "GET /qr/"
-msgstr ""
+msgstr "GET /qr/"
 
 #: ../../../dev/http-services.rst:25
 msgid ""
@@ -60,4 +63,4 @@ msgstr ""
 
 #: ../../../dev/http-services.rst:29
 msgid "$ curl http://localhost:8384/qr/?text=Hello%2C%20world%21 | display"
-msgstr ""
+msgstr "$ curl http://localhost:8384/qr/?text=Hello%2C%20world%21 | display"

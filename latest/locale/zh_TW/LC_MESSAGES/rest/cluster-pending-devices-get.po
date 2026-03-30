@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../rest/cluster-pending-devices-get.rst:2
 msgid "GET /rest/cluster/pending/devices"
-msgstr ""
+msgstr "GET /rest/cluster/pending/devices"
 
 #: ../../../rest/cluster-pending-devices-get.rst:6
 msgid ""
@@ -37,3 +37,10 @@ msgid ""
 "  }\n"
 "}"
 msgstr ""
+"{\n"
+"  \"P56IOI7-MZJNU2Y-IQGDREY-DM2MGTI-MGL3BXN-PQ6W5BM-TBBZ4TJ-XZWICQ2\": {\n"
+"    \"time\": \"2020-03-18T11:43:07Z\",\n"
+"    \"name\": \"Friend Joe\",\n"
+"    \"address\": \"192.168.1.2:22000\"\n"
+"  }\n"
+"}"
