@@ -86,7 +86,7 @@ msgstr ""
 
 #: ../../../index.rst:49
 msgid "Thanks"
-msgstr ""
+msgstr "感謝"
 
 #: ../../../index.rst:51
 msgid "We thank all the documentation contributors for their hard work:"

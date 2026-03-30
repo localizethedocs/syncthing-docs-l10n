@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../rest/config.rst:2
 msgid "Config Endpoints"
-msgstr ""
+msgstr "組態端點"
 
 #: ../../../rest/config.rst:6
 msgid ""
@@ -51,7 +51,7 @@ msgstr ""
 
 #: ../../../rest/config.rst:30
 msgid "/rest/config/restart-required"
-msgstr ""
+msgstr "/rest/config/restart-required"
 
 #: ../../../rest/config.rst:32
 msgid ""
@@ -96,7 +96,7 @@ msgstr ""
 
 #: ../../../rest/config.rst:59
 msgid "/rest/config/defaults/ignores"
-msgstr ""
+msgstr "/rest/config/defaults/ignores"
 
 #: ../../../rest/config.rst:63
 msgid ""
