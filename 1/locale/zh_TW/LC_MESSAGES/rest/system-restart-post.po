@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../rest/system-restart-post.rst:2
 msgid "POST /rest/system/restart"
-msgstr ""
+msgstr "POST /rest/system/restart"
 
 #: ../../../rest/system-restart-post.rst:4
 msgid "Post with empty body to immediately restart Syncthing."
