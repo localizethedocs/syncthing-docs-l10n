@@ -396,12 +396,24 @@ This project is currently maintained by:
     <tr>
       <th rowspan="1" colspan="1" align="center" style="text-align: center;"><div>Name</div></th>
       <th rowspan="1" colspan="1" align="center" style="text-align: center;"><div>GitHub Username</div></th>
+      <th rowspan="1" colspan="1" align="center" style="text-align: center;"><div>Role</div></th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td rowspan="1" colspan="1" align="center" style="text-align: center;"><div>Haowei Hsu</div></td>
       <td rowspan="1" colspan="1" align="center" style="text-align: center;"><div>@hwhsu1231</div></td>
+      <td rowspan="1" colspan="1" align="center" style="text-align: center;"><div>Coordinator of All Languages</div></td>
+    </tr>
+    <tr>
+      <td rowspan="1" colspan="1" align="center" style="text-align: center;"><div>Haowei Hsu</div></td>
+      <td rowspan="1" colspan="1" align="center" style="text-align: center;"><div>@hwhsu1231</div></td>
+      <td rowspan="1" colspan="1" align="center" style="text-align: center;"><div>Proofreader of <code>zh_TW</code> Languages</div></td>
+    </tr>
+    <tr>
+      <td rowspan="1" colspan="1" align="center" style="text-align: center;"><div>Haowei Hsu</div></td>
+      <td rowspan="1" colspan="1" align="center" style="text-align: center;"><div>@hwhsu1231</div></td>
+      <td rowspan="1" colspan="1" align="center" style="text-align: center;"><div>Proofreader of <code>ko_KR</code> Languages</div></td>
     </tr>
   </tbody>
 </table>
