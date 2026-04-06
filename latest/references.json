@@ -37,9 +37,9 @@
     "branch" : "main",
     "commit" : 
     {
-      "date" : "2026-03-04 08:02:02 +0000",
-      "hash" : "5bb28eaf2f7c8f2133f4038dbf979ebca61c1871",
-      "title" : "Update version list"
+      "date" : "2026-04-04 18:04:50 +0200",
+      "hash" : "84bd2345511faa0c62bbf3c2b1ff25f7703c231c",
+      "title" : "fix(stdiscosrv): remove unused ssl headers when proxying"
     }
   },
   "type" : "branch",
