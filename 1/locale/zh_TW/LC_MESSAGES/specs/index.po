@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../specs/index.rst:4
 msgid "Specifications"
-msgstr ""
+msgstr "規格"
 
 #: ../../../specs/index.rst:15
 msgid ":ref:`bep-v1`"

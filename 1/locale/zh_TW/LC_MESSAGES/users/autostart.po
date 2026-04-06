@@ -254,7 +254,7 @@ msgstr ""
 
 #: ../../../users/autostart.rst:107
 msgid "Additional configuration in Task Scheduler"
-msgstr ""
+msgstr "任務排程器的額外組態"
 
 #: ../../../users/autostart.rst:109
 msgid ""
@@ -486,7 +486,7 @@ msgstr ""
 
 #: ../../../users/autostart.rst:492
 msgid "Windows NSSM Configuration Screenshot"
-msgstr ""
+msgstr "Windows NSSM 組態螢幕擷圖"
 
 #: ../../../users/autostart.rst:223
 msgid "Details Tab"

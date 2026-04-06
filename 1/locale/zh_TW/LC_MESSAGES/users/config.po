@@ -585,7 +585,7 @@ msgstr ""
 
 #: ../../../users/config.rst:441
 msgid "Specifies a versioning configuration."
-msgstr ""
+msgstr "指定版本控制組態。"
 
 #: ../../../users/config.rst:444
 msgid ":doc:`versioning`"
@@ -1480,7 +1480,7 @@ msgstr ""
 #: ../../../users/config.rst:1061
 msgid ""
 "The ``options`` element contains all other global configuration options."
-msgstr ""
+msgstr "``options`` 元素包含所有其他全域組態選項。"
 
 #: ../../../users/config.rst:1066
 msgid ""
@@ -2054,7 +2054,7 @@ msgstr ""
 
 #: ../../../users/config.rst:1516
 msgid "Syncing Configuration Files"
-msgstr ""
+msgstr "同步組態檔"
 
 #: ../../../users/config.rst:1518
 msgid ""

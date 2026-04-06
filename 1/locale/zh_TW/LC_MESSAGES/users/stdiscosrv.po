@@ -229,7 +229,7 @@ msgstr ""
 
 #: ../../../users/stdiscosrv.rst:154
 msgid "Reverse Proxy Setup"
-msgstr ""
+msgstr "反向代理設定"
 
 #: ../../../users/stdiscosrv.rst:158
 msgid "A new \"X-Client-Port\" HTTP header was added."

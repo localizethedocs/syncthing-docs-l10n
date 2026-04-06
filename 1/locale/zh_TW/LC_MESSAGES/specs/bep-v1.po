@@ -36,6 +36,11 @@ msgid ""
 "with the global model by requesting missing or outdated blocks from the "
 "other devices in the cluster."
 msgstr ""
+"區塊交換協定（BEP）用於兩台或多台 *裝置* 之間，從而形成一個 *叢集* 。每台裝置"
+"擁有一個或多個由 *區域模型* 描述的檔案 *資料夾* ，其中包含元資料與區塊雜湊"
+"值。本地模型會被傳送至叢集中的其他裝置。所有區域模型中的檔案集合，以選取最高"
+"變更版本為準，形成 *全域模型* 。每台裝置透過向叢集中的其他裝置請求缺失或過時"
+"的區塊，致力使其資料夾與全域模型同步。"
 
 #: ../../../specs/bep-v1.rst:18
 msgid ""
@@ -44,6 +49,9 @@ msgid ""
 "block size may vary between files but is constant in any given file, except "
 "for the last block which may be smaller."
 msgstr ""
+"檔案資料以 *區塊* 為單位進行描述與傳輸，每個區塊大小從 128 KiB（131072 位元"
+"組）到 16 MiB 不等，以 2 的冪次為增量步進。區塊大小可能因檔案而異，但在任一特"
+"定檔案中保持恆定，最後一個區塊可能較小除外。"
 
 #: ../../../specs/bep-v1.rst:23
 msgid ""
@@ -52,10 +60,14 @@ msgid ""
 "\"OPTIONAL\" in this document are to be interpreted as described in :rfc:"
 "`2119`."
 msgstr ""
+"本文件中關鍵字「必須（MUST）」、「不得（MUST NOT）」、「必要（REQUIRED）」、"
+"「應（SHALL）」、「不應（SHALL NOT）」、「應該（SHOULD）」、「不應該（SHOULD "
+"NOT）」、「建議（RECOMMENDED）」、「可以（MAY）」與「可選（OPTIONAL）」的解釋"
+"方式遵循 :rfc:`2119` 的定義。"
 
 #: ../../../specs/bep-v1.rst:28
 msgid "Transport and Authentication"
-msgstr ""
+msgstr "傳輸與認證"
 
 #: ../../../specs/bep-v1.rst:30
 msgid ""
@@ -208,7 +220,7 @@ msgstr ""
 
 #: ../../../specs/bep-v1.rst:123
 msgid "Fields (Hello message)"
-msgstr ""
+msgstr "欄位（Hello 訊息）"
 
 #: ../../../specs/bep-v1.rst:125
 msgid ""
@@ -354,7 +366,7 @@ msgstr ""
 
 #: ../../../specs/bep-v1.rst:214
 msgid "Cluster Config"
-msgstr ""
+msgstr "叢集組態"
 
 #: ../../../specs/bep-v1.rst:221
 msgid ""
@@ -371,7 +383,7 @@ msgstr ""
 #: ../../../specs/bep-v1.rst:594 ../../../specs/bep-v1.rst:675
 #: ../../../specs/bep-v1.rst:691
 msgid "Protocol Buffer Schema"
-msgstr ""
+msgstr "Protocol Buffer 綱要"
 
 #: ../../../specs/bep-v1.rst:231
 msgid ""
@@ -413,7 +425,7 @@ msgstr ""
 
 #: ../../../specs/bep-v1.rst:269
 msgid "Fields (Cluster Config Message)"
-msgstr ""
+msgstr "欄位（Cluster Config 訊息）"
 
 #: ../../../specs/bep-v1.rst:275
 msgid ""
@@ -423,7 +435,7 @@ msgstr ""
 
 #: ../../../specs/bep-v1.rst:279
 msgid "Fields (Folder Message)"
-msgstr ""
+msgstr "欄位（Folder 訊息）"
 
 #: ../../../specs/bep-v1.rst:281
 msgid ""
@@ -435,7 +447,7 @@ msgstr ""
 msgid ""
 "The **label** field contains the folder label, the human readable name of "
 "the folder."
-msgstr ""
+msgstr "**label** 欄位包含資料夾標籤，也就是資料夾的人類可讀名稱。"
 
 #: ../../../specs/bep-v1.rst:287
 msgid ""
@@ -474,7 +486,7 @@ msgstr ""
 
 #: ../../../specs/bep-v1.rst:306
 msgid "Fields (Device Message)"
-msgstr ""
+msgstr "欄位（Device 訊息）"
 
 #: ../../../specs/bep-v1.rst:308
 msgid ""
@@ -482,12 +494,16 @@ msgid ""
 "device. For instance, the reference implementation uses the SHA-256 of the "
 "device X.509 certificate."
 msgstr ""
+"裝置的 **id** 欄位是一個 32 位元組的數字，用於唯一識別該裝置。舉例來說，參考"
+"實作使用了裝置 X.509 證書的 SHA-256 雜湊值。"
 
 #: ../../../specs/bep-v1.rst:312
 msgid ""
 "The **name** field is a human readable name assigned to the described device "
 "by the sending device. It MAY be empty and it need not be unique."
 msgstr ""
+"**name** 欄位是由發送裝置為所描述裝置指定的人類可讀名稱。此欄位可為空值，且無"
+"需具備唯一性。"
 
 #: ../../../specs/bep-v1.rst:315
 msgid ""
@@ -572,7 +588,7 @@ msgstr ""
 
 #: ../../../specs/bep-v1.rst:348
 msgid "Index and Index Update"
-msgstr ""
+msgstr "索引與索引更新"
 
 #: ../../../specs/bep-v1.rst:350
 msgid ""
@@ -648,13 +664,13 @@ msgstr ""
 
 #: ../../../specs/bep-v1.rst:420
 msgid "Fields (Index Message)"
-msgstr ""
+msgstr "欄位（Index 訊息）"
 
 #: ../../../specs/bep-v1.rst:422
 msgid ""
 "The **folder** field identifies the folder that the index message pertains "
 "to."
-msgstr ""
+msgstr "**folder** 欄位標示索引訊息所屬的資料夾。"
 
 #: ../../../specs/bep-v1.rst:424
 msgid "The **files** field is a list of files making up the index information."
@@ -662,7 +678,7 @@ msgstr ""
 
 #: ../../../specs/bep-v1.rst:427
 msgid "Fields (FileInfo Message)"
-msgstr ""
+msgstr "欄位（FileInfo 訊息）"
 
 #: ../../../specs/bep-v1.rst:429
 msgid ""
@@ -899,7 +915,7 @@ msgstr ""
 
 #: ../../../specs/bep-v1.rst:585
 msgid "DownloadProgress"
-msgstr ""
+msgstr "DownloadProgress"
 
 #: ../../../specs/bep-v1.rst:587
 msgid ""
@@ -932,7 +948,7 @@ msgstr ""
 
 #: ../../../specs/bep-v1.rst:616
 msgid "Fields (DownloadProgress Message)"
-msgstr ""
+msgstr "欄位（DownloadProgress 訊息）"
 
 #: ../../../specs/bep-v1.rst:618
 msgid ""
@@ -946,7 +962,7 @@ msgstr ""
 
 #: ../../../specs/bep-v1.rst:624
 msgid "Fields (FileDownloadProgressUpdate Message)"
-msgstr ""
+msgstr "欄位（FileDownloadProgressUpdate 訊息）"
 
 #: ../../../specs/bep-v1.rst:626
 msgid ""
