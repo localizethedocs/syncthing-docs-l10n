@@ -233,7 +233,7 @@ msgstr ""
 
 #: ../../../dev/intro.rst:97
 msgid "Parses, validates and saves configuration files."
-msgstr ""
+msgstr "剖析、驗證並儲存組態檔。"
 
 #: ../../../dev/intro.rst:99
 msgid "db/"

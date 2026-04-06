@@ -23,7 +23,7 @@ msgstr "命令行操作"
 
 #: ../../../users/index.rst:4
 msgid "Configuration"
-msgstr ""
+msgstr "組態"
 
 #: ../../../users/index.rst:2
 msgid "Usage"

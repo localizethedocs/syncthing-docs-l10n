@@ -93,7 +93,7 @@ msgstr ""
 
 #: ../../../users/proxying.rst:50
 msgid "Caveats"
-msgstr ""
+msgstr "注意事項"
 
 #: ../../../users/proxying.rst:52
 msgid ""
@@ -107,3 +107,5 @@ msgid ""
 "If this is not desired, make sure to undefine the ``http_proxy`` / "
 "``https_proxy`` variables for syncthing."
 msgstr ""
+"若不希望如此，請確保為 Syncthing 取消定義 ``http_proxy`` / ``https_proxy`` 變"
+"數。"
