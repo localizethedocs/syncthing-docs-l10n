@@ -51,7 +51,7 @@ msgstr ""
 
 #: ../../../specs/bep-v1.rst:26
 msgid "Transport and Authentication"
-msgstr ""
+msgstr "傳輸與認證"
 
 #: ../../../specs/bep-v1.rst:28
 msgid ""
@@ -916,7 +916,7 @@ msgstr ""
 
 #: ../../../specs/bep-v1.rst:641
 msgid "Fields (Index Message)"
-msgstr ""
+msgstr "欄位（Index 訊息）"
 
 #: ../../../specs/bep-v1.rst:643
 msgid ""
@@ -1378,7 +1378,7 @@ msgstr ""
 
 #: ../../../specs/bep-v1.rst:976
 msgid "Fields (DownloadProgress Message)"
-msgstr ""
+msgstr "欄位（DownloadProgress 訊息）"
 
 #: ../../../specs/bep-v1.rst:977
 msgid ""

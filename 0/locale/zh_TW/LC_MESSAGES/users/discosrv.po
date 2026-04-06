@@ -183,7 +183,7 @@ msgstr ""
 
 #: ../../../users/discosrv.rst:112
 msgid "Reverse Proxy Setup"
-msgstr ""
+msgstr "反向代理設定"
 
 #: ../../../users/discosrv.rst:114
 msgid ""

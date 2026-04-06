@@ -293,7 +293,7 @@ msgstr ""
 
 #: ../../../users/autostart.rst:316
 msgid "Windows NSSM Configuration Screenshot"
-msgstr ""
+msgstr "Windows NSSM 組態螢幕擷圖"
 
 #: ../../../users/autostart.rst:114
 msgid "Details Tab"

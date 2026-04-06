@@ -269,7 +269,7 @@ msgstr ""
 
 #: ../../../users/contrib.rst:149
 msgid "Configuration management"
-msgstr ""
+msgstr "組態管理"
 
 #: ../../../users/contrib.rst:151
 msgid "Puppet: https://github.com/whefter/puppet-syncthing"
