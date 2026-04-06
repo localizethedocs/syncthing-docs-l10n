@@ -217,7 +217,7 @@ msgstr ""
 
 #: ../../../users/strelaysrv.rst:159
 msgid "Client configuration"
-msgstr ""
+msgstr "客戶端組態"
 
 #: ../../../users/strelaysrv.rst:161
 msgid ""

@@ -63,7 +63,7 @@ msgstr ""
 
 #: ../../../includes/metrics-list.rst:31
 msgid "Package *model*"
-msgstr ""
+msgstr "軟體包 *model*"
 
 #: ../../../includes/metrics-list.rst:34
 msgid "Metric *syncthing_model_folder_processed_bytes_total* (counter vector)"
@@ -89,7 +89,7 @@ msgstr ""
 
 #: ../../../includes/metrics-list.rst:47
 msgid "Total number of folder pull iterations, per folder ID."
-msgstr ""
+msgstr "每個資料夾 ID 的資料夾拉取疊代總數。"
 
 #: ../../../includes/metrics-list.rst:50
 msgid "Metric *syncthing_model_folder_scan_seconds_total* (counter vector)"
