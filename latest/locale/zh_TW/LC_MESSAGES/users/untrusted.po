@@ -73,7 +73,7 @@ msgstr ""
 
 #: ../../../users/untrusted.rst:87
 msgid "Configuration"
-msgstr ""
+msgstr "組態"
 
 #: ../../../users/untrusted.rst:90
 msgid "GUI"
@@ -150,7 +150,7 @@ msgstr ""
 
 #: ../../../users/untrusted.rst:135
 msgid "Caveats"
-msgstr ""
+msgstr "注意事項"
 
 #: ../../../users/untrusted.rst:137
 msgid ""

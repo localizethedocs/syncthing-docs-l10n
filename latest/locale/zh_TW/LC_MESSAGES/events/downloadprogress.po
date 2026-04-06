@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../events/downloadprogress.rst:4
 msgid "DownloadProgress"
-msgstr ""
+msgstr "DownloadProgress"
 
 #: ../../../events/downloadprogress.rst:6
 msgid ""

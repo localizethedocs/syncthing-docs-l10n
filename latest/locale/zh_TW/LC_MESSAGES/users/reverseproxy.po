@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../users/reverseproxy.rst:4
 msgid "Reverse Proxy Setup"
-msgstr ""
+msgstr "反向代理設定"
 
 #: ../../../users/reverseproxy.rst:6
 msgid ""

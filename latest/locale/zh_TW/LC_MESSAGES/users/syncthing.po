@@ -616,7 +616,7 @@ msgstr ""
 
 #: ../../../includes/env-vars.rst:17
 msgid "Configuration loading and saving"
-msgstr ""
+msgstr "組態載入與儲存"
 
 #: ../../../includes/env-vars.rst:18
 msgid "connections"

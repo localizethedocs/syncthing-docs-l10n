@@ -35,7 +35,7 @@ msgstr ""
 
 #: ../../../users/config.rst:13
 msgid "Configuration File Locations"
-msgstr ""
+msgstr "組態檔位置"
 
 #: ../../../users/config.rst:15
 msgid "The default configuration and database directory locations are:"
@@ -761,7 +761,7 @@ msgstr ""
 
 #: ../../../users/config.rst:442
 msgid "Specifies a versioning configuration."
-msgstr ""
+msgstr "指定版本控制組態。"
 
 #: ../../../users/config.rst:445
 msgid ":doc:`versioning`"
@@ -1634,7 +1634,7 @@ msgstr ""
 #: ../../../users/config.rst:1043
 msgid ""
 "The ``options`` element contains all other global configuration options."
-msgstr ""
+msgstr "``options`` 元素包含所有其他全域組態選項。"
 
 #: ../../../users/config.rst:1048
 msgid ""
@@ -2198,7 +2198,7 @@ msgstr ""
 
 #: ../../../users/config.rst:1489
 msgid "Syncing Configuration Files"
-msgstr ""
+msgstr "同步組態檔"
 
 #: ../../../users/config.rst:1491
 msgid ""
