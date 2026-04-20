@@ -198,13 +198,13 @@ msgstr ""
 msgid ""
 "``syncthing/syncthing:latest`` points to the latest stable release, e.g. "
 "``v1.9.0``"
-msgstr ""
+msgstr "``syncthing/syncthing:latest`` 指向最新的穩定發行版，例如 ``v1.9.0``"
 
 #: ../../../users/releases.rst:86
 msgid ""
 "``syncthing/syncthing:rc`` points to the latest release candidate, e.g. "
 "``v1.10.0-rc.3``"
-msgstr ""
+msgstr "``syncthing/syncthing:rc`` 指向最新的發行候選版，例如 ``v1.10.0-rc.3``"
 
 #: ../../../users/releases.rst:87
 msgid ""
