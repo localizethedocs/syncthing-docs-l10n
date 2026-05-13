@@ -16,9 +16,9 @@
       "branch" : "main",
       "commit" : 
       {
-        "date" : "2026-04-04 18:04:50 +0200",
-        "hash" : "84bd2345511faa0c62bbf3c2b1ff25f7703c231c",
-        "title" : "fix(stdiscosrv): remove unused ssl headers when proxying"
+        "date" : "2026-04-30 09:35:33 +0000",
+        "hash" : "b7ce2d6437163b586d425a3866545dea68d61048",
+        "title" : "Update author list"
       }
     },
     "zh_TW" : 
@@ -26,9 +26,9 @@
       "branch" : "main",
       "commit" : 
       {
-        "date" : "2026-04-04 18:04:50 +0200",
-        "hash" : "84bd2345511faa0c62bbf3c2b1ff25f7703c231c",
-        "title" : "fix(stdiscosrv): remove unused ssl headers when proxying"
+        "date" : "2026-04-30 09:35:33 +0000",
+        "hash" : "b7ce2d6437163b586d425a3866545dea68d61048",
+        "title" : "Update author list"
       }
     }
   },
