@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Syncthing stable\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-05 08:14+0000\n"
+"POT-Creation-Date: 2026-05-21 06:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -67,62 +67,71 @@ msgid ""
 "`Release Policy <https://go.dev/doc/devel/release#policy>`__."
 msgstr ""
 
-#: ../../../dev/building.rst:35
+#: ../../../dev/building.rst:36
 msgid ""
 "Usually, a C compiler. Syncthing uses SQLite for storing data and the most "
 "common implementation is written in C."
 msgstr ""
 
-#: ../../../dev/building.rst:37
+#: ../../../dev/building.rst:41
+msgid ""
+"Don't skip the C compiler, and make sure to build syncthing with "
+"``CGO_ENABLED=1`` if you are cross compiling. While the build will succeed "
+"with ``CGO_ENABLED=0`` and the resulting binary will work, it will run with "
+"significantly lower performance and higher memory usage when the C "
+"implementation of SQLite couldn't be used. Your users will not thank you."
+msgstr ""
+
+#: ../../../dev/building.rst:47
 msgid ""
 "Git, unless you're building from a downloaded source tarball that includes a "
 "``RELEASE`` marker with the version information."
 msgstr ""
 
-#: ../../../dev/building.rst:39
+#: ../../../dev/building.rst:50
 msgid ""
 "If you want to build Debian packages FPM is required. See FPM's "
 "`installation information <https://fpm.readthedocs.io/en/latest/installation."
 "html>`__."
 msgstr ""
 
-#: ../../../dev/building.rst:41
+#: ../../../dev/building.rst:53
 msgid ""
 "To build Windows executables, installing `goversioninfo <https://github.com/"
 "josephspurrier/goversioninfo>`__ is recommended in order to add file "
 "properties and icon to the compiled binaries."
 msgstr ""
 
-#: ../../../dev/building.rst:44
+#: ../../../dev/building.rst:57
 msgid ""
 "Building Android binaries requires `Android NDK <https://developer.android."
 "com/ndk>`__."
 msgstr ""
 
-#: ../../../dev/building.rst:46
+#: ../../../dev/building.rst:59
 msgid ""
 "If you're not already a Go developer, the easiest way to get going is to "
 "download the latest version of Go as instructed in https://go.dev/doc/"
 "install."
 msgstr ""
 
-#: ../../../dev/building.rst:51
+#: ../../../dev/building.rst:64
 msgid "Building (Unix)"
 msgstr ""
 
-#: ../../../dev/building.rst:53 ../../../dev/building.rst:78
+#: ../../../dev/building.rst:66 ../../../dev/building.rst:91
 msgid "Install the prerequisites."
 msgstr ""
 
-#: ../../../dev/building.rst:54
+#: ../../../dev/building.rst:67
 msgid "Open a terminal."
 msgstr ""
 
-#: ../../../dev/building.rst:55 ../../../dev/building.rst:80
+#: ../../../dev/building.rst:68 ../../../dev/building.rst:93
 msgid "Run the commands below."
 msgstr ""
 
-#: ../../../dev/building.rst:57
+#: ../../../dev/building.rst:70
 msgid ""
 "# Pick a place for your Syncthing source.\n"
 "$ mkdir -p ~/dev\n"
@@ -138,21 +147,21 @@ msgid ""
 "$ go run build.go"
 msgstr ""
 
-#: ../../../dev/building.rst:72
+#: ../../../dev/building.rst:85
 msgid ""
 "Unless something goes wrong, you will have a ``syncthing`` binary built and "
 "ready in ``~/dev/syncthing/bin``."
 msgstr ""
 
-#: ../../../dev/building.rst:76
+#: ../../../dev/building.rst:89
 msgid "Building (Windows)"
 msgstr ""
 
-#: ../../../dev/building.rst:79
+#: ../../../dev/building.rst:92
 msgid "Open a ``cmd`` Window."
 msgstr ""
 
-#: ../../../dev/building.rst:82
+#: ../../../dev/building.rst:95
 msgid ""
 "# Pick a place for your Syncthing source.\n"
 "> md \"%USERPROFILE%\\dev\"\n"
@@ -166,35 +175,35 @@ msgid ""
 "> go run build.go"
 msgstr ""
 
-#: ../../../dev/building.rst:95
+#: ../../../dev/building.rst:108
 msgid ""
 "Unless something goes wrong, you will have a ``syncthing.exe`` binary built "
 "and ready in ``%USERPROFILE%\\dev\\syncthing\\bin``."
 msgstr ""
 
-#: ../../../dev/building.rst:99
+#: ../../../dev/building.rst:112
 msgid "Subcommands and Options"
 msgstr ""
 
-#: ../../../dev/building.rst:101
+#: ../../../dev/building.rst:114
 msgid "The following ``build.go`` subcommands and options exist."
 msgstr ""
 
-#: ../../../dev/building.rst:103
+#: ../../../dev/building.rst:116
 msgid "``go run build.go install``"
 msgstr ""
 
-#: ../../../dev/building.rst:104
+#: ../../../dev/building.rst:117
 msgid ""
 "Installs binaries in ``./bin`` (default command, this is what happens when "
 "build.go is run without any commands or parameters)."
 msgstr ""
 
-#: ../../../dev/building.rst:107
+#: ../../../dev/building.rst:120
 msgid "``go run build.go build``"
 msgstr ""
 
-#: ../../../dev/building.rst:108
+#: ../../../dev/building.rst:121
 msgid ""
 "Builds just the named target, or ``syncthing`` by default, to the current "
 "directory. Use this when cross compiling, with parameters for what to cross "
@@ -207,83 +216,92 @@ msgid ""
 "build``."
 msgstr ""
 
-#: ../../../dev/building.rst:118
+#: ../../../dev/building.rst:131
 msgid "``go run build.go test``"
 msgstr ""
 
-#: ../../../dev/building.rst:119
+#: ../../../dev/building.rst:132
 msgid "Runs the tests."
 msgstr ""
 
-#: ../../../dev/building.rst:121
+#: ../../../dev/building.rst:134
 msgid "``go run build.go deb``"
 msgstr ""
 
-#: ../../../dev/building.rst:122
+#: ../../../dev/building.rst:135
 msgid ""
 "Creates a Debian package in the current directory. Requires FPM and a Unixy "
 "build."
 msgstr ""
 
-#: ../../../dev/building.rst:125
+#: ../../../dev/building.rst:138
 msgid "``go run build.go tar``"
 msgstr ""
 
-#: ../../../dev/building.rst:126
+#: ../../../dev/building.rst:139
 msgid ""
 "Creates a Syncthing tar.gz dist file in the current directory. Assumes a "
 "Unixy build. Otherwise same considerations and parameters as for the "
 "``build`` subcommand."
 msgstr ""
 
-#: ../../../dev/building.rst:130
+#: ../../../dev/building.rst:143
 msgid "``go run build.go zip``"
 msgstr ""
 
-#: ../../../dev/building.rst:131
+#: ../../../dev/building.rst:144
 msgid ""
 "Creates a Syncthing zip dist file in the current directory. Assumes a "
 "Windows build. Otherwise same considerations and parameters as for the "
 "``build`` subcommand."
 msgstr ""
 
-#: ../../../dev/building.rst:135
+#: ../../../dev/building.rst:148
 msgid ""
 "The options ``--no-upgrade``, ``--goos`` and ``--goarch`` can be given to "
 "influence ``build``, ``tar`` and ``zip``. Examples:"
 msgstr ""
 
-#: ../../../dev/building.rst:138
+#: ../../../dev/building.rst:151
 msgid "``go run build.go --goos linux --goarch 386 tar``"
 msgstr ""
 
-#: ../../../dev/building.rst:139
+#: ../../../dev/building.rst:152
 msgid "Builds a tar.gz distribution of Syncthing for linux-386."
 msgstr ""
 
-#: ../../../dev/building.rst:141
+#: ../../../dev/building.rst:154
 msgid "``go run build.go --goos windows --no-upgrade zip``"
 msgstr ""
 
-#: ../../../dev/building.rst:142
+#: ../../../dev/building.rst:155
 msgid ""
 "Builds a zip distribution of Syncthing for Windows (current architecture) "
 "with upgrading disabled."
 msgstr ""
 
-#: ../../../dev/building.rst:148
+#: ../../../dev/building.rst:160
+msgid ""
+"Cross compiling with C (``CGO_ENABLED=1``) can be non-trivial; nonetheless "
+"you should try to do so when at all possible. We use Zig to ease the pain; "
+"you can check our `build workflows <https://github.com/syncthing/syncthing/"
+"blob/main/.github/workflows/build-syncthing.yaml>`__ for inspiration."
+msgstr ""
+
+#: ../../../dev/building.rst:169
 msgid "Version Tagging"
 msgstr ""
 
-#: ../../../dev/building.rst:150
+#: ../../../dev/building.rst:171
 msgid ""
 "The binaries are \"tagged\" with a version derived from the current Git "
-"commit (or the ``RELEASE`` file, see below) and the current username and "
-"hostname. The username and hostname can be overridden by the ``BUILD_USER`` "
-"and ``BUILD_HOST`` environment variables, for example::"
+"commit, the most recent Git tag, and the current username and hostname. The "
+"Git commit and tag can be replaced by a ``RELEASE`` file; see below. The "
+"username and hostname can be overridden by the ``BUILD_USER`` and "
+"``BUILD_HOST`` environment variables, for example::"
 msgstr ""
 
-#: ../../../dev/building.rst:155
+#: ../../../dev/building.rst:177
 msgid ""
 "$ BUILD_USER=builder BUILD_HOST=buildhost.local go run build.go\n"
 "$ ./bin/syncthing --version\n"
@@ -293,17 +311,37 @@ msgstr ""
 "$ ./bin/syncthing --version\n"
 "syncthing v1.8.0 ... builder@buildhost.local 2020-07-30 11:49:14 UTC"
 
-#: ../../../dev/building.rst:159
+#: ../../../dev/building.rst:181
 msgid ""
 "In addition the timestamp (by default taken from the current Git commit) can "
 "be overridden by the ``SOURCE_DATE_EPOCH`` variable, in Unix epoch seconds."
 msgstr ""
 
-#: ../../../dev/building.rst:163
+#: ../../../dev/building.rst:185
+msgid ""
+"If your built binary fails with an ``Invalid version string`` error, you "
+"probably did not fetch the Git tags with the code. This can happen when "
+"forking the repository on GitHub if you select the option to \"Copy the "
+"``main`` branch only\". To fetch the tags on a fork, run these commands:"
+msgstr ""
+
+#: ../../../dev/building.rst:190
+msgid ""
+"# Add the upstream repository as a remote\n"
+"$ git remote add upstream https://github.com/syncthing/syncthing.git\n"
+"\n"
+"# Fetch all tags from the upstream remote\n"
+"$ git fetch --tags upstream\n"
+"\n"
+"# Rebuild\n"
+"$ go run build.go"
+msgstr ""
+
+#: ../../../dev/building.rst:203
 msgid "Building without Git"
 msgstr ""
 
-#: ../../../dev/building.rst:165
+#: ../../../dev/building.rst:205
 msgid ""
 "Syncthing can be built perfectly fine from a source tarball of course. If "
 "the tarball is from our build server it contains a file called ``RELEASE`` "
@@ -312,18 +350,18 @@ msgid ""
 "GitHub, you must instead pass the ``--version`` flag to ``build.go``."
 msgstr ""
 
-#: ../../../dev/building.rst:172
+#: ../../../dev/building.rst:212
 msgid ""
 "If you are building something that will be installed as a package (Debian, "
 "RPM, ...) you almost certainly want to use ``--no-upgrade`` as well to "
 "prevent the built in upgrade system from being activated."
 msgstr ""
 
-#: ../../../dev/building.rst:176
+#: ../../../dev/building.rst:216
 msgid "``go run build.go --version v0.10.26 --no-upgrade tar``"
 msgstr ""
 
-#: ../../../dev/building.rst:177
+#: ../../../dev/building.rst:217
 msgid ""
 "Builds a tar.gz distribution of Syncthing for the current OS/arch, tagged as "
 "``v0.10.26``, with upgrades disabled."
