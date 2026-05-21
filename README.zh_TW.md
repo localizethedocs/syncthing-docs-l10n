@@ -5,7 +5,7 @@
 </div>
 
 <div align="center">
-<h1 id="localization-of-syncthing-documentation">Localization of Syncthing Documentation</h1>
+<h1 id="localization-of-the-syncthing-documentation">Localization of The Syncthing Documentation</h1>
 </div>
 
 <details><summary><strong>切換語言</strong></summary>
@@ -64,7 +64,7 @@
 
 <p></p>
 
-The goal of this project is to translate the Syncthing Documentation into multiple languages. 翻譯是在 Crowdin 平臺上進行貢獻，然後會自動與 GitHub 儲存庫進行同步，並且可以在 GitHub Pages 上進行預覽。
+The goal of this project is to translate The Syncthing Documentation into multiple languages. 翻譯是在 Crowdin 平臺上進行貢獻，然後會自動與 GitHub 儲存庫進行同步，並且可以在 GitHub Pages 上進行預覽。
 
 > [!NOTE]
 > The translation is <strong>unofficial</strong> and <strong>community-driven</strong>. If you find any inaccuracies, always refer to the <a href="http://docs.syncthing.net">official documentation</a> or the <a href="https://github.com/syncthing/docs">source repository</a> of the upstream project for the most reliable information.
