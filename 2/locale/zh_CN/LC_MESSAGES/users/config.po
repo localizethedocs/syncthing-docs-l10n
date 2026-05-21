@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Syncthing 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-05 08:15+0000\n"
+"POT-Creation-Date: 2026-05-21 06:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,15 +17,31 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../../users/config.rst:4
+#: ../../../users/config.rst:5
 msgid "Syncthing Configuration"
 msgstr ""
 
-#: ../../../users/config.rst:7
-msgid "Synopsis"
+#: ../../../users/config.rst:8
+msgid "Overview"
 msgstr ""
 
-#: ../../../users/config.rst:11
+#: ../../../users/config.rst:10
+msgid ""
+"This page covers how to configure Syncthing for file synchronization, "
+"including device setup, folder configuration, connection settings, and "
+"various configuration methods through the web GUI, command-line, or direct "
+"file editing."
+msgstr ""
+
+#: ../../../users/config.rst:13
+msgid "Configuration File Locations"
+msgstr ""
+
+#: ../../../users/config.rst:15
+msgid "The default configuration and database directory locations are:"
+msgstr ""
+
+#: ../../../users/config.rst:19
 msgid ""
 "$XDG_STATE_HOME/syncthing\n"
 "$HOME/.local/state/syncthing\n"
@@ -33,11 +49,11 @@ msgid ""
 "%LOCALAPPDATA%\\Syncthing"
 msgstr ""
 
-#: ../../../users/config.rst:20
+#: ../../../users/config.rst:28
 msgid "Description"
 msgstr ""
 
-#: ../../../users/config.rst:24
+#: ../../../users/config.rst:32
 msgid ""
 "The default location of the configuration and database directory on Unix-"
 "like systems was changed to ``$XDG_STATE_HOME/syncthing`` or ``$HOME/.local/"
@@ -48,20 +64,20 @@ msgid ""
 "still use these directories instead of the newer defaults."
 msgstr ""
 
-#: ../../../users/config.rst:35
+#: ../../../users/config.rst:43
 msgid ""
 "Database and config can now be set separately. Previously the database was "
 "always located in the same directory as the config."
 msgstr ""
 
-#: ../../../users/config.rst:38
+#: ../../../users/config.rst:46
 msgid ""
 "Syncthing uses a single directory to store configuration and crypto keys. "
 "Syncthing also keeps an index database with file metadata which is by "
 "default stored in the same directory, though this can be overridden."
 msgstr ""
 
-#: ../../../users/config.rst:42
+#: ../../../users/config.rst:50
 msgid ""
 "The location defaults to ``$XDG_STATE_HOME/syncthing`` or ``$HOME/.local/"
 "state/syncthing`` (Unix-like), ``$HOME/Library/Application Support/"
@@ -71,103 +87,103 @@ msgid ""
 "following files are located in this directory:"
 msgstr ""
 
-#: ../../../users/config.rst:49
+#: ../../../users/config.rst:57
 msgid ":file:`config.xml`"
 msgstr ""
 
-#: ../../../users/config.rst:50
+#: ../../../users/config.rst:58
 msgid "The configuration file, in XML format."
 msgstr ""
 
-#: ../../../users/config.rst:52
+#: ../../../users/config.rst:60
 msgid ":file:`cert.pem`, :file:`key.pem`"
 msgstr ""
 
-#: ../../../users/config.rst:53
+#: ../../../users/config.rst:61
 msgid ""
 "The device's ECDSA public and private key. These form the basis for the "
 "device ID. The key must be kept private."
 msgstr ""
 
-#: ../../../users/config.rst:56
+#: ../../../users/config.rst:64
 msgid ":file:`https-cert.pem`, :file:`https-key.pem`"
 msgstr ""
 
-#: ../../../users/config.rst:57
+#: ../../../users/config.rst:65
 msgid ""
 "The certificate and key for HTTPS GUI connections. These may be replaced "
 "with a custom certificate for HTTPS as desired."
 msgstr ""
 
-#: ../../../users/config.rst:60
+#: ../../../users/config.rst:68
 msgid ""
 "The database is by default stored in the same directory as the config, but "
 "the location may be overridden by the ``--data`` or ``--home`` flags or the "
 "corresponding environment variables (``$STDATADIR`` or ``STHOMEDIR``)."
 msgstr ""
 
-#: ../../../users/config.rst:64
+#: ../../../users/config.rst:72
 msgid "The database directory contains the following files, among others:"
 msgstr ""
 
-#: ../../../users/config.rst:66
+#: ../../../users/config.rst:74
 msgid ":file:`index-{*}`"
 msgstr ""
 
-#: ../../../users/config.rst:67
+#: ../../../users/config.rst:75
 msgid ""
 "The database with metadata and hashes of the files currently on disk and "
 "available from peers."
 msgstr ""
 
-#: ../../../users/config.rst:70
+#: ../../../users/config.rst:78
 msgid ":file:`syncthing.log`"
 msgstr ""
 
-#: ../../../users/config.rst:71
+#: ../../../users/config.rst:79
 msgid "Log output, on some systems."
 msgstr ""
 
-#: ../../../users/config.rst:73
+#: ../../../users/config.rst:81
 msgid ":file:`audit-{*}.log`"
 msgstr ""
 
-#: ../../../users/config.rst:74
+#: ../../../users/config.rst:82
 msgid "Audit log data, when enabled."
 msgstr ""
 
-#: ../../../users/config.rst:76
+#: ../../../users/config.rst:84
 msgid ":file:`panic-{*}.log`"
 msgstr ""
 
-#: ../../../users/config.rst:77
+#: ../../../users/config.rst:85
 msgid "Crash log data, when required."
 msgstr ""
 
-#: ../../../users/config.rst:81
+#: ../../../users/config.rst:89
 msgid "Config File Format"
 msgstr ""
 
-#: ../../../users/config.rst:83
+#: ../../../users/config.rst:91
 msgid ""
 "The following shows an example of a default configuration file (IDs will "
 "differ):"
 msgstr ""
 
-#: ../../../users/config.rst:87
+#: ../../../users/config.rst:95
 msgid ""
 "The config examples are present for illustration. Do **not** copy them "
 "entirely to use as your config. They are likely out-of-date and the values "
 "may no longer correspond to the defaults."
 msgstr ""
 
-#: ../../../users/config.rst:92
+#: ../../../users/config.rst:100
 msgid ""
 "<configuration version=\"37\">\n"
-"    <folder id=\"default\" label=\"Default Folder\" path=\"/Users/jb/Sync/\" "
-"type=\"sendreceive\" rescanIntervalS=\"3600\" fsWatcherEnabled=\"true\" "
-"fsWatcherDelayS=\"10\" fsWatcherTimeoutS=\"0\" ignorePerms=\"false\" "
-"autoNormalize=\"true\">\n"
+"    <folder id=\"default\" label=\"Default Folder\" group=\"Home\" path=\"/"
+"Users/jb/Sync/\" type=\"sendreceive\" rescanIntervalS=\"3600\" "
+"fsWatcherEnabled=\"true\" fsWatcherDelayS=\"10\" fsWatcherTimeoutS=\"0\" "
+"ignorePerms=\"false\" autoNormalize=\"true\">\n"
 "        <filesystemType>basic</filesystemType>\n"
 "        <device id=\"S7UKX27-GI7ZTXS-GC6RKUA-7AJGZ44-C6NAYEB-HSKTJQK-KJHU2NO-"
 "CWV7EQW\" introducedBy=\"\">\n"
@@ -192,7 +208,7 @@ msgid ""
 "        <markerName>.stfolder</markerName>\n"
 "        <copyOwnershipFromParent>false</copyOwnershipFromParent>\n"
 "        <modTimeWindowS>0</modTimeWindowS>\n"
-"        <maxConcurrentWrites>2</maxConcurrentWrites>\n"
+"        <maxConcurrentWrites>16</maxConcurrentWrites>\n"
 "        <disableFsync>false</disableFsync>\n"
 "        <blockPullOrder>standard</blockPullOrder>\n"
 "        <copyRangeMethod>standard</copyRangeMethod>\n"
@@ -204,8 +220,8 @@ msgid ""
 "        <sendXattrs>false</sendXattrs>\n"
 "    </folder>\n"
 "    <device id=\"S7UKX27-GI7ZTXS-GC6RKUA-7AJGZ44-C6NAYEB-HSKTJQK-KJHU2NO-"
-"CWV7EQW\" name=\"syno\" compression=\"metadata\" introducer=\"false\" "
-"skipIntroductionRemovals=\"false\" introducedBy=\"\">\n"
+"CWV7EQW\" name=\"syno\" group=\"Personal\" compression=\"metadata\" "
+"introducer=\"false\" skipIntroductionRemovals=\"false\" introducedBy=\"\">\n"
 "        <address>dynamic</address>\n"
 "        <paused>false</paused>\n"
 "        <autoAcceptFolders>false</autoAcceptFolders>\n"
@@ -306,7 +322,7 @@ msgid ""
 "            <markerName>.stfolder</markerName>\n"
 "            <copyOwnershipFromParent>false</copyOwnershipFromParent>\n"
 "            <modTimeWindowS>0</modTimeWindowS>\n"
-"            <maxConcurrentWrites>2</maxConcurrentWrites>\n"
+"            <maxConcurrentWrites>16</maxConcurrentWrites>\n"
 "            <disableFsync>false</disableFsync>\n"
 "            <blockPullOrder>standard</blockPullOrder>\n"
 "            <copyRangeMethod>standard</copyRangeMethod>\n"
@@ -332,11 +348,11 @@ msgid ""
 "</configuration>"
 msgstr ""
 
-#: ../../../users/config.rst:247
+#: ../../../users/config.rst:255
 msgid "Configuration Element"
 msgstr ""
 
-#: ../../../users/config.rst:249
+#: ../../../users/config.rst:257
 msgid ""
 "<configuration version=\"37\">\n"
 "    <folder></folder>\n"
@@ -349,39 +365,39 @@ msgid ""
 "</configuration>"
 msgstr ""
 
-#: ../../../users/config.rst:261
+#: ../../../users/config.rst:269
 msgid "This is the root element. It has one attribute:"
 msgstr ""
 
-#: ../../../users/config.rst:265
+#: ../../../users/config.rst:273
 msgid ""
 "The config version. Increments whenever a change is made that requires "
 "migration from previous formats."
 msgstr ""
 
-#: ../../../users/config.rst:268
+#: ../../../users/config.rst:276
 msgid ""
 "It contains the elements described in the following sections and any number "
 "of this additional child element:"
 msgstr ""
 
-#: ../../../users/config.rst:273
+#: ../../../users/config.rst:281
 msgid ""
 "Contains the ID of the device that should be ignored. Connection attempts "
 "from this device are logged to the console but never displayed in the web "
 "GUI."
 msgstr ""
 
-#: ../../../users/config.rst:279
+#: ../../../users/config.rst:287
 msgid "Folder Element"
 msgstr ""
 
-#: ../../../users/config.rst:281
+#: ../../../users/config.rst:289
 msgid ""
-"<folder id=\"default\" label=\"Default Folder\" path=\"/Users/jb/Sync/\" "
-"type=\"sendreceive\" rescanIntervalS=\"3600\" fsWatcherEnabled=\"true\" "
-"fsWatcherDelayS=\"10\" fsWatcherTimeoutS=\"0\" ignorePerms=\"false\" "
-"autoNormalize=\"true\">\n"
+"<folder id=\"default\" label=\"Default Folder\" group=\"Home\" path=\"/Users/"
+"jb/Sync/\" type=\"sendreceive\" rescanIntervalS=\"3600\" "
+"fsWatcherEnabled=\"true\" fsWatcherDelayS=\"10\" fsWatcherTimeoutS=\"0\" "
+"ignorePerms=\"false\" autoNormalize=\"true\">\n"
 "    <filesystemType>basic</filesystemType>\n"
 "    <device id=\"S7UKX27-GI7ZTXS-GC6RKUA-7AJGZ44-C6NAYEB-HSKTJQK-KJHU2NO-"
 "CWV7EQW\" introducedBy=\"\">\n"
@@ -406,7 +422,7 @@ msgid ""
 "    <markerName>.stfolder</markerName>\n"
 "    <copyOwnershipFromParent>false</copyOwnershipFromParent>\n"
 "    <modTimeWindowS>0</modTimeWindowS>\n"
-"    <maxConcurrentWrites>2</maxConcurrentWrites>\n"
+"    <maxConcurrentWrites>16</maxConcurrentWrites>\n"
 "    <disableFsync>false</disableFsync>\n"
 "    <blockPullOrder>standard</blockPullOrder>\n"
 "    <copyRangeMethod>standard</copyRangeMethod>\n"
@@ -419,108 +435,115 @@ msgid ""
 "</folder>"
 msgstr ""
 
-#: ../../../users/config.rst:319
+#: ../../../users/config.rst:327
 msgid ""
 "One or more ``folder`` elements must be present in the file. Each element "
 "describes one folder. The following attributes may be set on the ``folder`` "
 "element:"
 msgstr ""
 
-#: ../../../users/config.rst:326
+#: ../../../users/config.rst:334
 msgid "The folder ID, which must be unique."
 msgstr ""
 
-#: ../../../users/config.rst:330
+#: ../../../users/config.rst:338
 msgid ""
 "The label of a folder is a human readable and descriptive local name. May be "
 "different on each device, empty, and/or identical to other folder labels. "
 "(optional)"
 msgstr ""
 
-#: ../../../users/config.rst:336
+#: ../../../users/config.rst:346
+msgid ""
+"The group for a folder is a human readable and descriptive local name. "
+"Allows folders to be grouped together locally. May be different on each "
+"device, empty, and/or identical to other folder groups. (optional)"
+msgstr ""
+
+#: ../../../users/config.rst:352
 msgid ""
 "The internal file system implementation used to access this folder, detailed "
 "in a :doc:`separate chapter </advanced/folder-filesystem-type>`."
 msgstr ""
 
-#: ../../../users/config.rst:342
+#: ../../../users/config.rst:358
 msgid ""
 "The path to the directory where the folder is stored on this device; not "
 "sent to other devices."
 msgstr ""
 
-#: ../../../users/config.rst:347
+#: ../../../users/config.rst:363
 msgid "Controls how the folder is handled by Syncthing. Possible values are:"
 msgstr ""
 
-#: ../../../users/config.rst:349
+#: ../../../users/config.rst:365
 msgid "``sendreceive``"
 msgstr ""
 
-#: ../../../users/config.rst:350
+#: ../../../users/config.rst:366
 msgid ""
 "The folder is in default mode. Sending local and accepting remote changes. "
 "Note that this type was previously called \"readwrite\" which is deprecated "
 "but still accepted in incoming configs."
 msgstr ""
 
-#: ../../../users/config.rst:354
+#: ../../../users/config.rst:370
 msgid "``sendonly``"
 msgstr ""
 
-#: ../../../users/config.rst:355
+#: ../../../users/config.rst:371
 msgid ""
 "The folder is in \"send only\" mode -- it will not be modified by Syncthing "
 "on this device. Note that this type was previously called \"readonly\" which "
 "is deprecated but still accepted in incoming configs."
 msgstr ""
 
-#: ../../../users/config.rst:360
+#: ../../../users/config.rst:376
 msgid "``receiveonly``"
 msgstr ""
 
-#: ../../../users/config.rst:361
+#: ../../../users/config.rst:377
 msgid ""
 "The folder is in \"receive only\" mode -- it will not propagate changes to "
 "other devices."
 msgstr ""
 
-#: ../../../users/config.rst:364
+#: ../../../users/config.rst:380
 msgid "``receiveencrypted``"
 msgstr ""
 
-#: ../../../users/config.rst:365
+#: ../../../users/config.rst:381
 msgid ""
 "Must be used on untrusted devices, where the data cannot be decrypted "
 "because no folder password was entered.  See :doc:`untrusted`."
 msgstr ""
 
-#: ../../../users/config.rst:370
+#: ../../../users/config.rst:386
 msgid ""
 "The rescan interval, in seconds. Can be set to ``0`` to disable when "
 "external plugins are used to trigger rescans."
 msgstr ""
 
-#: ../../../users/config.rst:375
+#: ../../../users/config.rst:391
 msgid ""
 "If set to ``true``, this detects changes to files in the folder and scans "
 "them."
 msgstr ""
 
-#: ../../../users/config.rst:379
+#: ../../../users/config.rst:395
 msgid ""
 "The duration during which changes detected are accumulated, before a scan is "
 "scheduled (only takes effect if :opt:`fsWatcherEnabled` is set to ``true``)."
 msgstr ""
 
-#: ../../../users/config.rst:384
+#: ../../../users/config.rst:400
 msgid ""
 "The maximum delay before a scan is triggered when a file is continuously "
 "changing. If unset or zero a default value is calculated based on :opt:"
 "`fsWatcherDelayS`."
 msgstr ""
 
-#: ../../../users/config.rst:390
+#: ../../../users/config.rst:406
 msgid ""
 "If ``true``, files originating from this folder will be announced to remote "
 "devices with the \"no permission bits\" flag.  The remote devices will use "
@@ -529,18 +552,18 @@ msgid ""
 "as FAT, or environments where changing permissions is impossible."
 msgstr ""
 
-#: ../../../users/config.rst:398
+#: ../../../users/config.rst:414
 msgid ""
 "Automatically correct UTF-8 normalization errors found in file names.  The "
 "mechanism and how to set it up is described in a :doc:`separate chapter </"
 "advanced/folder-autonormalize>`."
 msgstr ""
 
-#: ../../../users/config.rst:402
+#: ../../../users/config.rst:418
 msgid "The following child elements may exist:"
 msgstr ""
 
-#: ../../../users/config.rst:407
+#: ../../../users/config.rst:423
 msgid ""
 "These must have the ``id`` attribute and can have an ``introducedBy`` "
 "attribute, identifying the device that introduced us to share this folder "
@@ -549,7 +572,7 @@ msgid ""
 "`skipIntroductionRemovals` being ``false`` on the introducer device)."
 msgstr ""
 
-#: ../../../users/config.rst:413
+#: ../../../users/config.rst:429
 msgid ""
 "All mentioned devices are those that will be sharing the folder in question. "
 "Each mentioned device must have a separate ``device`` element later in the "
@@ -558,7 +581,7 @@ msgid ""
 "configuration file."
 msgstr ""
 
-#: ../../../users/config.rst:419
+#: ../../../users/config.rst:435
 msgid ""
 "The ``encryptionPassword`` sub-element contains the secret needed to decrypt "
 "this folder's data on the remote device.  If left empty, the data is plainly "
@@ -566,7 +589,7 @@ msgid ""
 "and how to set it up is described in a :doc:`separate chapter <untrusted>`."
 msgstr ""
 
-#: ../../../users/config.rst:426
+#: ../../../users/config.rst:442
 msgid ""
 "The minimum required free space that should be available on the disk this "
 "folder resides.  The folder will be stopped when the value drops below the "
@@ -576,15 +599,15 @@ msgid ""
 "disable."
 msgstr ""
 
-#: ../../../users/config.rst:434
+#: ../../../users/config.rst:450
 msgid "Specifies a versioning configuration."
 msgstr ""
 
-#: ../../../users/config.rst:437
+#: ../../../users/config.rst:453
 msgid ":doc:`versioning`"
 msgstr ""
 
-#: ../../../users/config.rst:442
+#: ../../../users/config.rst:458
 msgid ""
 "The number of copier and hasher routines to use, or ``0`` for the system "
 "determined optimums. These are low-level performance options for advanced "
@@ -592,57 +615,57 @@ msgid ""
 "understood the code yourself. :)"
 msgstr ""
 
-#: ../../../users/config.rst:449
+#: ../../../users/config.rst:465
 msgid ""
 "Controls when we stop sending requests to other devices once we’ve got this "
 "much unserved requests.  The number of pullers is automatically adjusted "
 "based on this desired amount of outstanding request data."
 msgstr ""
 
-#: ../../../users/config.rst:455
+#: ../../../users/config.rst:471
 msgid ""
 "The order in which needed files should be pulled from the cluster.  It has "
 "no effect when the folder type is \"send only\".  The possibles values are:"
 msgstr ""
 
-#: ../../../users/config.rst:458
+#: ../../../users/config.rst:474
 msgid "``random`` (default)"
 msgstr ""
 
-#: ../../../users/config.rst:459
+#: ../../../users/config.rst:475
 msgid ""
 "Pull files in random order. This optimizes for balancing resources among the "
 "devices in a cluster."
 msgstr ""
 
-#: ../../../users/config.rst:462
+#: ../../../users/config.rst:478
 msgid "``alphabetic``"
 msgstr ""
 
-#: ../../../users/config.rst:463
+#: ../../../users/config.rst:479
 msgid "Pull files ordered by file name alphabetically."
 msgstr ""
 
-#: ../../../users/config.rst:465
+#: ../../../users/config.rst:481
 msgid "``smallestFirst``, ``largestFirst``"
 msgstr ""
 
-#: ../../../users/config.rst:466
+#: ../../../users/config.rst:482
 msgid ""
 "Pull files ordered by file size; smallest and largest first respectively."
 msgstr ""
 
-#: ../../../users/config.rst:468
+#: ../../../users/config.rst:484
 msgid "``oldestFirst``, ``newestFirst``"
 msgstr ""
 
-#: ../../../users/config.rst:469
+#: ../../../users/config.rst:485
 msgid ""
 "Pull files ordered by modification time; oldest and newest first "
 "respectively."
 msgstr ""
 
-#: ../../../users/config.rst:472
+#: ../../../users/config.rst:488
 msgid ""
 "Note that the scanned files are sent in batches and the sorting is applied "
 "only to the already discovered files. This means the sync might start with a "
@@ -650,58 +673,58 @@ msgid ""
 "the 1 KB becomes known to the pulling device."
 msgstr ""
 
-#: ../../../users/config.rst:480
+#: ../../../users/config.rst:496
 msgid ""
 "Enabling this is highly discouraged - use at your own risk. You have been "
 "warned."
 msgstr ""
 
-#: ../../../users/config.rst:482
+#: ../../../users/config.rst:498
 msgid ""
 "When set to ``true``, this device will pretend not to see instructions to "
 "delete files from other devices.  The mechanism is described in a :doc:"
 "`separate chapter </advanced/folder-ignoredelete>`."
 msgstr ""
 
-#: ../../../users/config.rst:488
+#: ../../../users/config.rst:504
 msgid ""
 "The interval in seconds with which scan progress information is sent to the "
 "GUI. Setting to ``0`` will cause Syncthing to use the default value of two. "
 "If you don't need to see scan progress, set this to ``-1`` to disable it."
 msgstr ""
 
-#: ../../../users/config.rst:494
+#: ../../../users/config.rst:510
 msgid ""
 "Tweak for rate limiting the puller when it retries pulling files. Don't "
 "change this unless you know what you're doing."
 msgstr ""
 
-#: ../../../users/config.rst:499
+#: ../../../users/config.rst:515
 msgid ""
 "The maximum number of conflict copies to keep around for any given file. The "
 "default is ``10``. ``-1``, means an unlimited number. Setting this to ``0`` "
 "disables conflict copies altogether."
 msgstr ""
 
-#: ../../../users/config.rst:505
+#: ../../../users/config.rst:521
 msgid ""
 "By default, blocks containing all zeros are not written, causing files to be "
 "sparse on filesystems that support this feature. When set to ``true``, "
 "sparse files will not be created."
 msgstr ""
 
-#: ../../../users/config.rst:511
+#: ../../../users/config.rst:527
 msgid "True if this folder is (temporarily) suspended."
 msgstr ""
 
-#: ../../../users/config.rst:515
+#: ../../../users/config.rst:531
 msgid ""
 "Name of a directory or file in the folder root to be used as a marker - see :"
 "ref:`marker FAQ <marker-faq>` for its purpose. A marker directory is only "
 "created by Syncthing for the default ``.stfolder``, not otherwise."
 msgstr ""
 
-#: ../../../users/config.rst:521
+#: ../../../users/config.rst:537
 msgid ""
 "On Unix systems, tries to copy file/folder ownership from the parent "
 "directory (the directory it's located in). Requires running Syncthing as a "
@@ -709,7 +732,7 @@ msgid ""
 "Linux)."
 msgstr ""
 
-#: ../../../users/config.rst:526
+#: ../../../users/config.rst:542
 msgid ""
 "Allowed modification timestamp difference when comparing files for "
 "equivalence. To be used on file systems which have unstable modification "
@@ -718,40 +741,40 @@ msgid ""
 "partition, and ``0`` otherwise."
 msgstr ""
 
-#: ../../../users/config.rst:534
+#: ../../../users/config.rst:550
 msgid ""
 "Maximum number of concurrent write operations while syncing. Increasing this "
 "might increase or decrease disk performance, depending on the underlying "
-"storage. Default is ``2``."
+"storage. Default is ``16``."
 msgstr ""
 
-#: ../../../users/config.rst:540
+#: ../../../users/config.rst:556
 msgid "This is a known insecure option - use at your own risk."
 msgstr ""
 
-#: ../../../users/config.rst:542
+#: ../../../users/config.rst:558
 msgid ""
 "Disables committing file operations to disk before recording them in the "
 "database.  Disabling fsync can lead to data corruption.  The mechanism is "
 "described in a :doc:`separate chapter </advanced/folder-disable-fsync>`."
 msgstr ""
 
-#: ../../../users/config.rst:548
+#: ../../../users/config.rst:564
 msgid ""
 "Order in which the blocks of a file are downloaded. This option controls how "
 "quickly different parts of the file spread between the connected devices, at "
 "the cost of causing strain on the storage."
 msgstr ""
 
-#: ../../../users/config.rst:551
+#: ../../../users/config.rst:567
 msgid "Available options:"
 msgstr ""
 
-#: ../../../users/config.rst:553
+#: ../../../users/config.rst:569
 msgid "``standard`` (default)"
 msgstr ""
 
-#: ../../../users/config.rst:554
+#: ../../../users/config.rst:570
 msgid ""
 "The blocks of a file are split into N equal continuous sequences, where N is "
 "the number of connected devices. Each device starts downloading its own "
@@ -759,28 +782,28 @@ msgid ""
 "acceptable data distribution and minimal spinning disk strain."
 msgstr ""
 
-#: ../../../users/config.rst:558
+#: ../../../users/config.rst:574
 msgid "``random``"
 msgstr ""
 
-#: ../../../users/config.rst:559
+#: ../../../users/config.rst:575
 msgid ""
 "The blocks of a file are downloaded in a random order. Provides great data "
 "distribution, but very taxing on spinning disk drives."
 msgstr ""
 
-#: ../../../users/config.rst:562
+#: ../../../users/config.rst:578
 msgid "``inOrder``"
 msgstr ""
 
-#: ../../../users/config.rst:563
+#: ../../../users/config.rst:579
 msgid ""
 "The blocks of a file are downloaded sequentially, from start to finish. "
 "Spinning disk drive friendly, but provides no improvements to data "
 "distribution."
 msgstr ""
 
-#: ../../../users/config.rst:568
+#: ../../../users/config.rst:584
 msgid ""
 "Provides a choice of method for copying data between files.  This can be "
 "used to optimise copies on network filesystems, improve speed of large "
@@ -789,54 +812,65 @@ msgid ""
 "chapter </advanced/folder-copyrangemethod>`."
 msgstr ""
 
-#: ../../../users/config.rst:576
+#: ../../../users/config.rst:592
 msgid ""
 "Affects performance by disabling the extra safety checks for case "
 "insensitive filesystems.  The mechanism and how to set it up is described in "
 "a :doc:`separate chapter </advanced/folder-caseSensitiveFS>`."
 msgstr ""
 
-#: ../../../users/config.rst:582
+#: ../../../users/config.rst:598
 msgid ""
 "NTFS directory junctions are treated as ordinary directories, if this is set "
 "to ``true``."
 msgstr ""
 
-#: ../../../users/config.rst:587
+#: ../../../users/config.rst:603
 msgid ""
 "File and directory ownership is synced when this is set to ``true``. See :"
 "doc:`/advanced/folder-sync-ownership` for more information."
 msgstr ""
 
-#: ../../../users/config.rst:592
+#: ../../../users/config.rst:608
 msgid ""
 "File and directory ownership information is scanned when this is set to "
 "``true``. See :doc:`/advanced/folder-send-ownership` for more information."
 msgstr ""
 
-#: ../../../users/config.rst:597
+#: ../../../users/config.rst:613
 msgid ""
 "File and directory extended attributes are synced when this is set to "
 "``true``. See :doc:`/advanced/folder-sync-xattrs` for more information."
 msgstr ""
 
-#: ../../../users/config.rst:602
+#: ../../../users/config.rst:618
 msgid ""
 "File and directory extended attributes are scanned and sent to other devices "
 "when this is set to ``true``. See :doc:`/advanced/folder-send-xattrs` for "
 "more information."
 msgstr ""
 
-#: ../../../users/config.rst:608
+#: ../../../users/config.rst:626
+msgid ""
+"Whether to use block indexing for the folder; defaults to ``true`` for send-"
+"only and receive-only folders. Block indexing makes it possible for "
+"Syncthing to reuse data blocks between files (even in different folders), "
+"but requires maintaining an index of every individual block's hash. This "
+"index can be costly for large folders, so indexing can be disabled with the "
+"tradeoff of using more bandwidth for transfers."
+msgstr ""
+
+#: ../../../users/config.rst:635
 msgid "Device Element"
 msgstr ""
 
-#: ../../../users/config.rst:610
+#: ../../../users/config.rst:637
 msgid ""
 "<device id=\"S7UKX27-GI7ZTXS-GC6RKUA-7AJGZ44-C6NAYEB-HSKTJQK-KJHU2NO-"
-"CWV7EQW\" name=\"syno\" compression=\"metadata\" introducer=\"false\" "
-"skipIntroductionRemovals=\"false\" introducedBy=\"2CYF2WQ-AKZO2QZ-JAKWLYD-"
-"AGHMQUM-BGXUOIS-GYILW34-HJG3DUK-LRRYQAR\">\n"
+"CWV7EQW\" name=\"syno\" group=\"Personal\" compression=\"metadata\" "
+"introducer=\"false\" skipIntroductionRemovals=\"false\" "
+"introducedBy=\"2CYF2WQ-AKZO2QZ-JAKWLYD-AGHMQUM-BGXUOIS-GYILW34-HJG3DUK-"
+"LRRYQAR\">\n"
 "    <address>dynamic</address>\n"
 "    <paused>false</paused>\n"
 "    <autoAcceptFolders>false</autoAcceptFolders>\n"
@@ -865,7 +899,7 @@ msgid ""
 "</device>"
 msgstr ""
 
-#: ../../../users/config.rst:637
+#: ../../../users/config.rst:664
 msgid ""
 "One or more ``device`` elements must be present in the file. Each element "
 "describes a device participating in the cluster. It is customary to include "
@@ -874,60 +908,67 @@ msgid ""
 "element:"
 msgstr ""
 
-#: ../../../users/config.rst:647
+#: ../../../users/config.rst:674
 msgid "The :ref:`device ID <device-ids>`."
 msgstr ""
 
-#: ../../../users/config.rst:651
+#: ../../../users/config.rst:678
 msgid "A friendly name for the device. (optional)"
 msgstr ""
 
-#: ../../../users/config.rst:655
+#: ../../../users/config.rst:684
+msgid ""
+"The group for a device is a human readable and descriptive local name. "
+"Allows devices to be grouped together locally. May be different on each "
+"device, empty, and/or identical to other device groups. (optional)"
+msgstr ""
+
+#: ../../../users/config.rst:690
 msgid ""
 "Whether to use protocol compression when sending messages to this device. "
 "The possible values are:"
 msgstr ""
 
-#: ../../../users/config.rst:658
+#: ../../../users/config.rst:693
 msgid "``metadata``"
 msgstr ""
 
-#: ../../../users/config.rst:659
+#: ../../../users/config.rst:694
 msgid ""
 "Compress metadata packets, such as index information. Metadata is usually "
 "very compression friendly so this is a good default."
 msgstr ""
 
-#: ../../../users/config.rst:662
+#: ../../../users/config.rst:697
 msgid "``always``"
 msgstr ""
 
-#: ../../../users/config.rst:663
+#: ../../../users/config.rst:698
 msgid ""
 "Compress all packets, including file data. This is recommended if the "
 "folders contents are mainly compressible data such as documents or text "
 "files."
 msgstr ""
 
-#: ../../../users/config.rst:667
+#: ../../../users/config.rst:702
 msgid "``never``"
 msgstr ""
 
-#: ../../../users/config.rst:668
+#: ../../../users/config.rst:703
 msgid "Disable all compression."
 msgstr ""
 
-#: ../../../users/config.rst:672
+#: ../../../users/config.rst:707
 msgid ""
 "Set to true if this device should be trusted as an introducer, i.e. we "
 "should copy their list of devices per folder when connecting."
 msgstr ""
 
-#: ../../../users/config.rst:676
+#: ../../../users/config.rst:711
 msgid ":doc:`introducer`"
 msgstr ""
 
-#: ../../../users/config.rst:680
+#: ../../../users/config.rst:715
 msgid ""
 "Set to true if you wish to follow only introductions and not de-"
 "introductions. For example, if this is set, we would not remove a device "
@@ -935,23 +976,23 @@ msgid ""
 "listing the remote device as known."
 msgstr ""
 
-#: ../../../users/config.rst:686
+#: ../../../users/config.rst:721
 msgid ""
 "Defines which device has introduced us to this device. Used only for "
 "following de-introductions."
 msgstr ""
 
-#: ../../../users/config.rst:690
+#: ../../../users/config.rst:725
 msgid ""
 "The device certificate's common name, if it is not the default \"syncthing\"."
 msgstr ""
 
-#: ../../../users/config.rst:692
+#: ../../../users/config.rst:727
 msgid ""
 "From the following child elements at least one ``address`` child must exist."
 msgstr ""
 
-#: ../../../users/config.rst:698
+#: ../../../users/config.rst:733
 msgid ""
 "Contains an address or host name to use when attempting to connect to this "
 "device. Entries other than ``dynamic`` need a protocol specific prefix. For "
@@ -962,79 +1003,79 @@ msgid ""
 "Accepted formats are:"
 msgstr ""
 
-#: ../../../users/config.rst:704
+#: ../../../users/config.rst:739
 msgid "IPv4 address (``tcp://192.0.2.42``)"
 msgstr ""
 
-#: ../../../users/config.rst:705
+#: ../../../users/config.rst:740
 msgid "The default port (22000) is used."
 msgstr ""
 
-#: ../../../users/config.rst:707
+#: ../../../users/config.rst:742
 msgid "IPv4 address and port (``tcp://192.0.2.42:12345``)"
 msgstr ""
 
-#: ../../../users/config.rst:708
+#: ../../../users/config.rst:743
 msgid "The address and port is used as given."
 msgstr ""
 
-#: ../../../users/config.rst:710
+#: ../../../users/config.rst:745
 msgid "IPv6 address (``tcp://[2001:db8::23:42]``)"
 msgstr ""
 
-#: ../../../users/config.rst:711
+#: ../../../users/config.rst:746
 msgid ""
 "The default port (22000) is used. The address must be enclosed in square "
 "brackets."
 msgstr ""
 
-#: ../../../users/config.rst:714
+#: ../../../users/config.rst:749
 msgid "IPv6 address and port (``tcp://[2001:db8::23:42]:12345``)"
 msgstr ""
 
-#: ../../../users/config.rst:715
+#: ../../../users/config.rst:750
 msgid ""
 "The address and port is used as given. The address must be enclosed in "
 "square brackets."
 msgstr ""
 
-#: ../../../users/config.rst:718
+#: ../../../users/config.rst:753
 msgid "Host name (``tcp6://fileserver``)"
 msgstr ""
 
-#: ../../../users/config.rst:719
+#: ../../../users/config.rst:754
 msgid ""
 "The host name will be used on the default port (22000) and connections will "
 "be attempted only via IPv6."
 msgstr ""
 
-#: ../../../users/config.rst:722
+#: ../../../users/config.rst:757
 msgid "Host name and port (``tcp://fileserver:12345``)"
 msgstr ""
 
-#: ../../../users/config.rst:723
+#: ../../../users/config.rst:758
 msgid ""
 "The host name will be used on the given port and connections will be "
 "attempted via both IPv4 and IPv6, depending on name resolution."
 msgstr ""
 
-#: ../../../users/config.rst:726
+#: ../../../users/config.rst:761
 msgid "``dynamic``"
 msgstr ""
 
-#: ../../../users/config.rst:727
+#: ../../../users/config.rst:762
 msgid ""
 "The word ``dynamic`` (without any prefix) means to use local and global "
 "discovery to find the device."
 msgstr ""
 
-#: ../../../users/config.rst:730
+#: ../../../users/config.rst:765
 msgid ""
 "You can set multiple addresses *and* combine it with the ``dynamic`` keyword "
 "for example:"
 msgstr ""
 
-#: ../../../users/config.rst:733
+#: ../../../users/config.rst:768
 msgid ""
 "<device id=\"...\">\n"
 "    <address>tcp://192.0.2.1:22001</address>\n"
@@ -1043,15 +1084,15 @@ msgid ""
 "</device>"
 msgstr ""
 
-#: ../../../users/config.rst:741
+#: ../../../users/config.rst:776
 msgid "In the GUI, multiple values are separated by commas."
 msgstr ""
 
-#: ../../../users/config.rst:745
+#: ../../../users/config.rst:780
 msgid "True if synchronization with this devices is (temporarily) suspended."
 msgstr ""
 
-#: ../../../users/config.rst:750
+#: ../../../users/config.rst:785
 msgid ""
 "If given, this restricts connections to this device to only this network. "
 "The mechanism is described in detail in a :doc:`separate chapter </advanced/"
@@ -1060,7 +1101,7 @@ msgid ""
 "networks separated by commas in the GUI."
 msgstr ""
 
-#: ../../../users/config.rst:758
+#: ../../../users/config.rst:793
 msgid ""
 "If ``true``, folders shared from this remote device are automatically added "
 "and synced locally under the :opt:`default path <defaults.folder>`.  For the "
@@ -1071,19 +1112,19 @@ msgid ""
 "created separately."
 msgstr ""
 
-#: ../../../users/config.rst:768
+#: ../../../users/config.rst:803
 msgid ""
 "Maximum send rate to use for this device. Unit is kibibytes/second, despite "
 "the config name looking like kilobits/second."
 msgstr ""
 
-#: ../../../users/config.rst:773
+#: ../../../users/config.rst:808
 msgid ""
 "Maximum receive rate to use for this device. Unit is kibibytes/second, "
 "despite the config name looking like kilobits/second."
 msgstr ""
 
-#: ../../../users/config.rst:779
+#: ../../../users/config.rst:814
 msgid ""
 "Contains the ID of the folder that should be ignored. This folder will "
 "always be skipped when advertised from the containing remote device, i.e. "
@@ -1092,13 +1133,13 @@ msgid ""
 "tags in the configuration file."
 msgstr ""
 
-#: ../../../users/config.rst:787
+#: ../../../users/config.rst:822
 msgid ""
 "Maximum amount of data to have outstanding in requests towards this device. "
 "Unit is kibibytes."
 msgstr ""
 
-#: ../../../users/config.rst:792
+#: ../../../users/config.rst:827
 msgid ""
 "If set to a positive integer, the GUI will display an HTTP link to the IP "
 "address which is currently used for synchronization.  Only the TCP port is "
@@ -1107,7 +1148,7 @@ msgid ""
 "work for link-local IPv6 addresses because of modern browser limitations."
 msgstr ""
 
-#: ../../../users/config.rst:800
+#: ../../../users/config.rst:835
 msgid ""
 "This boolean value marks a particular device as untrusted, which disallows "
 "ever sharing any unencrypted data with it.  Every folder shared with that "
@@ -1116,17 +1157,17 @@ msgid ""
 "under :doc:`untrusted`."
 msgstr ""
 
-#: ../../../users/config.rst:808
+#: ../../../users/config.rst:843
 msgid ""
 "The number of connections to this device. See :doc:`/advanced/device-"
 "numconnections` for more information."
 msgstr ""
 
-#: ../../../users/config.rst:813
+#: ../../../users/config.rst:848
 msgid "GUI Element"
 msgstr ""
 
-#: ../../../users/config.rst:815
+#: ../../../users/config.rst:850
 msgid ""
 "<gui enabled=\"true\" tls=\"false\">\n"
 "    <address>127.0.0.1:8384</address>\n"
@@ -1135,137 +1176,137 @@ msgid ""
 "</gui>"
 msgstr ""
 
-#: ../../../users/config.rst:824
+#: ../../../users/config.rst:859
 msgid ""
 "There must be exactly one ``gui`` element. The GUI configuration is also "
 "used by the :doc:`/dev/rest` and the :doc:`/dev/events`. The following "
 "attributes may be set on the ``gui`` element:"
 msgstr ""
 
-#: ../../../users/config.rst:830
+#: ../../../users/config.rst:865
 msgid "If not ``true``, the GUI and API will not be started."
 msgstr ""
 
-#: ../../../users/config.rst:835
+#: ../../../users/config.rst:870
 msgid ""
 "If set to ``true``, TLS (HTTPS) will be enforced. Non-HTTPS requests will be "
 "redirected to HTTPS. When set to ``false``, TLS connections are still "
 "possible but not required."
 msgstr ""
 
-#: ../../../users/config.rst:839
+#: ../../../users/config.rst:874
 msgid "The following child elements may be present:"
 msgstr ""
 
-#: ../../../users/config.rst:844
+#: ../../../users/config.rst:879
 msgid "Set the listen address.  Allowed address formats are:"
 msgstr ""
 
-#: ../../../users/config.rst:846
+#: ../../../users/config.rst:881
 msgid "IPv4 address and port (``127.0.0.1:8384``)"
 msgstr ""
 
-#: ../../../users/config.rst:847
+#: ../../../users/config.rst:882
 msgid "The address and port are used as given."
 msgstr ""
 
-#: ../../../users/config.rst:849
+#: ../../../users/config.rst:884
 msgid "IPv6 address and port (``[::1]:8384``)"
 msgstr ""
 
-#: ../../../users/config.rst:850
+#: ../../../users/config.rst:885
 msgid ""
 "The address and port are used as given. The address must be enclosed in "
 "square brackets."
 msgstr ""
 
-#: ../../../users/config.rst:853
+#: ../../../users/config.rst:888
 msgid "Wildcard and port (``0.0.0.0:12345``, ``[::]:12345``, ``:12345``)"
 msgstr ""
 
-#: ../../../users/config.rst:854
+#: ../../../users/config.rst:889
 msgid ""
 "These are equivalent and will result in Syncthing listening on all "
 "interfaces via both IPv4 and IPv6."
 msgstr ""
 
-#: ../../../users/config.rst:857
+#: ../../../users/config.rst:892
 msgid "UNIX socket location (``/var/run/st.sock``)"
 msgstr ""
 
-#: ../../../users/config.rst:858
+#: ../../../users/config.rst:893
 msgid ""
 "If the address is an absolute path it is interpreted as the path to a UNIX "
 "socket."
 msgstr ""
 
-#: ../../../users/config.rst:862
+#: ../../../users/config.rst:897
 msgid ""
 "When ``address`` is set to a UNIX socket location, set this to an octal "
 "value to override the default permissions of the socket."
 msgstr ""
 
-#: ../../../users/config.rst:867
+#: ../../../users/config.rst:902
 msgid "Set to require authentication."
 msgstr ""
 
-#: ../../../users/config.rst:871
+#: ../../../users/config.rst:906
 msgid "Contains the bcrypt hash of the real password."
 msgstr ""
 
-#: ../../../users/config.rst:875
+#: ../../../users/config.rst:910
 msgid "If set, this is the API key that enables usage of the REST interface."
 msgstr ""
 
-#: ../../../users/config.rst:879
+#: ../../../users/config.rst:914
 msgid ""
 "If true, this allows access to the web GUI from outside (i.e. not localhost) "
 "without authorization. A warning will displayed about this setting on "
 "startup."
 msgstr ""
 
-#: ../../../users/config.rst:884
+#: ../../../users/config.rst:919
 msgid ""
 "When the GUI / API is bound to localhost, we enforce that the ``Host`` "
 "header looks like localhost.  This option bypasses that check."
 msgstr ""
 
-#: ../../../users/config.rst:889
+#: ../../../users/config.rst:924
 msgid ""
 "Allow rendering the GUI within an ``<iframe>``, ``<frame>`` or ``<object>`` "
 "by not setting the ``X-Frame-Options: SAMEORIGIN`` HTTP header.  This may be "
 "needed for serving the Syncthing GUI as part of a website through a proxy."
 msgstr ""
 
-#: ../../../users/config.rst:895
+#: ../../../users/config.rst:930
 msgid "The name of the theme to use."
 msgstr ""
 
-#: ../../../users/config.rst:899
+#: ../../../users/config.rst:934
 msgid ""
 "Authentication mode to use. If not present, the authentication mode (static) "
 "is controlled by the presence of user/password fields for backward "
 "compatibility."
 msgstr ""
 
-#: ../../../users/config.rst:902
+#: ../../../users/config.rst:937
 msgid "``static``"
 msgstr ""
 
-#: ../../../users/config.rst:903
+#: ../../../users/config.rst:938
 msgid "Authentication using user and password."
 msgstr ""
 
-#: ../../../users/config.rst:905
+#: ../../../users/config.rst:940
 msgid "``ldap``"
 msgstr ""
 
-#: ../../../users/config.rst:906
+#: ../../../users/config.rst:941
 msgid ""
 "LDAP authentication. Requires ldap top level config section to be present."
 msgstr ""
 
-#: ../../../users/config.rst:912
+#: ../../../users/config.rst:947
 msgid ""
 "Prior to version 1.26.0 the GUI used HTTP Basic Authorization for login, but "
 "starting in version 1.26.0 it uses an HTML form by default. Basic "
@@ -1274,7 +1315,7 @@ msgid ""
 "prompted by a 401 response."
 msgstr ""
 
-#: ../../../users/config.rst:918
+#: ../../../users/config.rst:953
 msgid ""
 "When this setting is enabled, the GUI will respond to unauthenticated "
 "requests with a 401 response prompting for Basic Authorization, so that "
@@ -1283,21 +1324,33 @@ msgid ""
 "header do not need this setting."
 msgstr ""
 
-#: ../../../users/config.rst:924
+#: ../../../users/config.rst:959
 msgid ""
 "When this setting is disabled, the GUI will not send 401 responses so users "
 "won't see browser popups prompting for username and password."
 msgstr ""
 
-#: ../../../users/config.rst:929
+#: ../../../users/config.rst:964
 msgid "If true, this allows access to the '/metrics' without authentication."
 msgstr ""
 
-#: ../../../users/config.rst:932
+#: ../../../users/config.rst:970
+msgid ""
+"How long to remain logged in when \"stay logged in\" is checked in the GUI "
+"login form. In seconds, default 604800 (one week)."
+msgstr ""
+
+#: ../../../users/config.rst:977
+msgid ""
+"Path for session cookie; default \"/\", change only if the GUI is served vi "
+"a proxy at a subpath."
+msgstr ""
+
+#: ../../../users/config.rst:981
 msgid "LDAP Element"
 msgstr ""
 
-#: ../../../users/config.rst:934
+#: ../../../users/config.rst:983
 msgid ""
 "<ldap>\n"
 "    <address>localhost:389</address>\n"
@@ -1307,63 +1360,63 @@ msgid ""
 "</ldap>"
 msgstr ""
 
-#: ../../../users/config.rst:943
+#: ../../../users/config.rst:992
 msgid ""
 "The ``ldap`` element contains LDAP configuration options.  The mechanism is "
 "described in detail under :doc:`ldap`."
 msgstr ""
 
-#: ../../../users/config.rst:949
+#: ../../../users/config.rst:998
 msgid "LDAP server address (server:port)."
 msgstr ""
 
-#: ../../../users/config.rst:954
+#: ../../../users/config.rst:1003
 msgid ""
 "BindDN for user authentication. Special ``%s`` variable should be used to "
 "pass username to LDAP."
 msgstr ""
 
-#: ../../../users/config.rst:959
+#: ../../../users/config.rst:1008
 msgid "``nontls``"
 msgstr ""
 
-#: ../../../users/config.rst:960
+#: ../../../users/config.rst:1009
 msgid "Non secure connection."
 msgstr ""
 
-#: ../../../users/config.rst:962
+#: ../../../users/config.rst:1011
 msgid "``tls``"
 msgstr ""
 
-#: ../../../users/config.rst:963
+#: ../../../users/config.rst:1012
 msgid "TLS secured connection."
 msgstr ""
 
-#: ../../../users/config.rst:965
+#: ../../../users/config.rst:1014
 msgid "``starttls``"
 msgstr ""
 
-#: ../../../users/config.rst:966
+#: ../../../users/config.rst:1015
 msgid "StartTLS connection mode."
 msgstr ""
 
-#: ../../../users/config.rst:970
+#: ../../../users/config.rst:1019
 msgid "Skip verification (``true`` or ``false``)."
 msgstr ""
 
-#: ../../../users/config.rst:974
+#: ../../../users/config.rst:1023
 msgid "Base DN for user searches."
 msgstr ""
 
-#: ../../../users/config.rst:978
+#: ../../../users/config.rst:1027
 msgid "Search filter for user searches."
 msgstr ""
 
-#: ../../../users/config.rst:982
+#: ../../../users/config.rst:1031
 msgid "Options Element"
 msgstr ""
 
-#: ../../../users/config.rst:984
+#: ../../../users/config.rst:1033
 msgid ""
 "<options>\n"
 "    <listenAddress>default</listenAddress>\n"
@@ -1418,12 +1471,12 @@ msgid ""
 "</options>"
 msgstr ""
 
-#: ../../../users/config.rst:1035
+#: ../../../users/config.rst:1084
 msgid ""
 "The ``options`` element contains all other global configuration options."
 msgstr ""
 
-#: ../../../users/config.rst:1040
+#: ../../../users/config.rst:1089
 msgid ""
 "The listen address for incoming sync connections. See :ref:`listen-"
 "addresses` for the allowed syntax.  To configure multiple addresses, you can "
@@ -1431,7 +1484,7 @@ msgid ""
 "several addresses separated by commas in the GUI."
 msgstr ""
 
-#: ../../../users/config.rst:1049
+#: ../../../users/config.rst:1098
 msgid ""
 "A URI to a global announce (discovery) server, or the word ``default`` to "
 "include the default servers. Any number of globalAnnounceServer elements may "
@@ -1444,76 +1497,76 @@ msgid ""
 "file or enter several servers separated by commas in the GUI."
 msgstr ""
 
-#: ../../../users/config.rst:1062
+#: ../../../users/config.rst:1111
 msgid ""
 "Whether to announce this device to the global announce (discovery) server, "
 "and also use it to look up other devices."
 msgstr ""
 
-#: ../../../users/config.rst:1067
+#: ../../../users/config.rst:1116
 msgid ""
 "Whether to send announcements to the local LAN, also use such announcements "
 "to find other devices."
 msgstr ""
 
-#: ../../../users/config.rst:1072
+#: ../../../users/config.rst:1121
 msgid "The port on which to listen and send IPv4 broadcast announcements to."
 msgstr ""
 
-#: ../../../users/config.rst:1076
+#: ../../../users/config.rst:1125
 msgid ""
 "The group address and port to join and send IPv6 multicast announcements on."
 msgstr ""
 
-#: ../../../users/config.rst:1080
+#: ../../../users/config.rst:1129
 msgid "Outgoing data rate limit, in kibibytes per second."
 msgstr ""
 
-#: ../../../users/config.rst:1084
+#: ../../../users/config.rst:1133
 msgid "Incoming data rate limits, in kibibytes per second."
 msgstr ""
 
-#: ../../../users/config.rst:1088
+#: ../../../users/config.rst:1137
 msgid ""
 "The number of seconds to wait between each attempt to connect to currently "
 "unconnected devices."
 msgstr ""
 
-#: ../../../users/config.rst:1093
+#: ../../../users/config.rst:1142
 msgid ""
 "When ``true``, relays will be connected to and potentially used for device "
 "to device connections."
 msgstr ""
 
-#: ../../../users/config.rst:1097
+#: ../../../users/config.rst:1146
 msgid "Sets the interval, in minutes, between relay reconnect attempts."
 msgstr ""
 
-#: ../../../users/config.rst:1101
+#: ../../../users/config.rst:1150
 msgid ""
 "Whether to attempt to start a browser to show the GUI when Syncthing starts."
 msgstr ""
 
-#: ../../../users/config.rst:1105
+#: ../../../users/config.rst:1154
 msgid ""
 "Whether to attempt to perform a UPnP and NAT-PMP port mapping for incoming "
 "sync connections."
 msgstr ""
 
-#: ../../../users/config.rst:1110
+#: ../../../users/config.rst:1159
 msgid ""
 "Request a lease for this many minutes; zero to request a permanent lease."
 msgstr ""
 
-#: ../../../users/config.rst:1114
+#: ../../../users/config.rst:1163
 msgid "Attempt to renew the lease after this many minutes."
 msgstr ""
 
-#: ../../../users/config.rst:1118
+#: ../../../users/config.rst:1167
 msgid "When scanning for UPnP devices, wait this long for responses."
 msgstr ""
 
-#: ../../../users/config.rst:1122
+#: ../../../users/config.rst:1171
 msgid ""
 "Whether the user has accepted to submit anonymous usage data. The default, "
 "``0``, mean the user has not made a choice, and Syncthing will ask at some "
@@ -1521,60 +1574,60 @@ msgid ""
 "version of usage reporting has been accepted."
 msgstr ""
 
-#: ../../../users/config.rst:1129
+#: ../../../users/config.rst:1178
 msgid ""
 "The highest usage reporting version that has already been shown in the web "
 "GUI."
 msgstr ""
 
-#: ../../../users/config.rst:1133
+#: ../../../users/config.rst:1182
 msgid ""
 "The unique ID sent together with the usage report. Generated when usage "
 "reporting is enabled."
 msgstr ""
 
-#: ../../../users/config.rst:1138
+#: ../../../users/config.rst:1187
 msgid "The URL to post usage report data to, when enabled."
 msgstr ""
 
-#: ../../../users/config.rst:1142
+#: ../../../users/config.rst:1191
 msgid ""
 "When true, the UR URL can be http instead of https, or have a self-signed "
 "certificate. The default is ``false``."
 msgstr ""
 
-#: ../../../users/config.rst:1147
+#: ../../../users/config.rst:1196
 msgid ""
 "The time to wait from startup for the first usage report to be sent. Allows "
 "the system to stabilize before reporting statistics."
 msgstr ""
 
-#: ../../../users/config.rst:1152
+#: ../../../users/config.rst:1201
 msgid ""
 "Check for a newer version after this many hours. Set to ``0`` to disable "
 "automatic upgrades."
 msgstr ""
 
-#: ../../../users/config.rst:1157
+#: ../../../users/config.rst:1206
 msgid ""
 "If ``true``, automatic upgrades include release candidates (see :ref:"
 "`releases`)."
 msgstr ""
 
-#: ../../../users/config.rst:1162
+#: ../../../users/config.rst:1211
 msgid ""
 "Keep temporary failed transfers for this many hours. While the temporaries "
 "are kept, the data they contain need not be transferred again."
 msgstr ""
 
-#: ../../../users/config.rst:1167
+#: ../../../users/config.rst:1216
 msgid ""
 "Whether to cache the results of ignore pattern evaluation. Performance at "
 "the price of memory. Defaults to ``false`` as the cost for evaluating "
 "ignores is usually not significant."
 msgstr ""
 
-#: ../../../users/config.rst:1173
+#: ../../../users/config.rst:1222
 msgid ""
 "How often in seconds the progress of ongoing downloads is made available to "
 "the GUI. Set to ``-1`` to disable. Note that when disabled, the detailed "
@@ -1582,13 +1635,13 @@ msgid ""
 "been reused, copied, and downloaded will not work."
 msgstr ""
 
-#: ../../../users/config.rst:1180
+#: ../../../users/config.rst:1229
 msgid ""
 "Whether to apply bandwidth limits to devices in the same broadcast domain as "
 "the local device."
 msgstr ""
 
-#: ../../../users/config.rst:1185
+#: ../../../users/config.rst:1234
 msgid ""
 "The minimum required free space that should be available on the partition "
 "holding the configuration and index.  The element content is interpreted "
@@ -1597,12 +1650,12 @@ msgid ""
 "``TB``.  Set to zero to disable."
 msgstr ""
 
-#: ../../../users/config.rst:1193
+#: ../../../users/config.rst:1242
 msgid ""
 "The URL from which release information is loaded, for automatic upgrades."
 msgstr ""
 
-#: ../../../users/config.rst:1198
+#: ../../../users/config.rst:1247
 msgid ""
 "Network that should be considered as local given in CIDR notation.  To "
 "configure multiple networks, you can either: repeat ``<alwaysLocalNet>`` "
@@ -1610,20 +1663,20 @@ msgid ""
 "in the GUI."
 msgstr ""
 
-#: ../../../users/config.rst:1205
+#: ../../../users/config.rst:1254
 msgid ""
 "If set, device names will always be overwritten with the name given by "
 "remote on each connection. By default, the name that the remote device "
 "announces will only be adopted when a name has not already been set."
 msgstr ""
 
-#: ../../../users/config.rst:1211
+#: ../../../users/config.rst:1260
 msgid ""
 "When exchanging index information for incomplete transfers, only take into "
 "account files that have at least this many blocks."
 msgstr ""
 
-#: ../../../users/config.rst:1217
+#: ../../../users/config.rst:1266
 msgid ""
 "ID of a notification to be displayed in the web GUI. Will be removed once "
 "the user acknowledged it (e.g. a transition notice on an upgrade).  Multiple "
@@ -1631,7 +1684,7 @@ msgid ""
 "configuration file."
 msgstr ""
 
-#: ../../../users/config.rst:1224
+#: ../../../users/config.rst:1273
 msgid ""
 "Specify an IPv4 type of service (TOS)/IPv6 traffic class for outgoing "
 "packets. To specify a differentiated services code point (DSCP) the value "
@@ -1639,21 +1692,21 @@ msgid ""
 "bits into account."
 msgstr ""
 
-#: ../../../users/config.rst:1232
+#: ../../../users/config.rst:1281
 msgid ""
 "Server to use for STUN, given as ip:port. The keyword ``default`` gets "
 "expanded to a set of public STUN servers, with preference given to those "
 "hosted by the Syncthing project."
 msgstr ""
 
-#: ../../../users/config.rst:1236
+#: ../../../users/config.rst:1285
 msgid ""
 "To configure multiple servers, you can either: repeat ``<stunServer>`` tags "
 "in the configuration file or enter several servers separated by commas in "
 "the GUI."
 msgstr ""
 
-#: ../../../users/config.rst:1242
+#: ../../../users/config.rst:1291
 msgid ""
 "Interval in seconds between contacting a STUN server to maintain NAT "
 "mapping. Default is ``180`` and you can set it to ``0`` to disable "
@@ -1661,11 +1714,11 @@ msgid ""
 "down to a minimum of :opt:`stunKeepaliveMinS`."
 msgstr ""
 
-#: ../../../users/config.rst:1249
+#: ../../../users/config.rst:1298
 msgid "Minimum for the :opt:`stunKeepaliveStartS` interval, in seconds."
 msgstr ""
 
-#: ../../../users/config.rst:1253
+#: ../../../users/config.rst:1302
 msgid ""
 "Syncthing will attempt to lower its process priority at startup. "
 "Specifically: on Linux, set itself to a separate process group, set the "
@@ -1676,39 +1729,39 @@ msgid ""
 "launching Syncthing, set this option to ``false``."
 msgstr ""
 
-#: ../../../users/config.rst:1263
+#: ../../../users/config.rst:1312
 msgid ""
 "This option controls how many folders may concurrently be in I/O-intensive "
 "operations such as syncing or scanning.  The mechanism is described in "
 "detail in a :doc:`separate chapter </advanced/option-max-concurrency>`."
 msgstr ""
 
-#: ../../../users/config.rst:1270
+#: ../../../users/config.rst:1319
 msgid ""
 "Server URL where :doc:`automatic crash reports <crashrep>` will be sent if "
 "enabled."
 msgstr ""
 
-#: ../../../users/config.rst:1275
+#: ../../../users/config.rst:1324
 msgid ""
 "Switch to opt out from the :doc:`automatic crash reporting <crashrep>` "
 "feature. Set ``false`` to keep Syncthing from sending panic logs on serious "
 "troubles.  Defaults to ``true``, to help the developers troubleshoot."
 msgstr ""
 
-#: ../../../users/config.rst:1281
+#: ../../../users/config.rst:1330
 msgid ""
 "This limits how many bytes we have \"in the air\" in the form of response "
 "data being read and processed."
 msgstr ""
 
-#: ../../../users/config.rst:1286
+#: ../../../users/config.rst:1335
 msgid ""
 "Enable (the default) or disable announcing private (RFC1918) LAN IP "
 "addresses to global discovery."
 msgstr ""
 
-#: ../../../users/config.rst:1291
+#: ../../../users/config.rst:1340
 msgid ""
 "Controls whether all index data is resent when an upgrade has happened, "
 "equivalent to starting Syncthing with :option:`--reset-deltas`.  This used "
@@ -1717,7 +1770,7 @@ msgid ""
 "``false``."
 msgstr ""
 
-#: ../../../users/config.rst:1300
+#: ../../../users/config.rst:1349
 msgid ""
 "Feature flags are simple strings that, when added to the configuration, may "
 "unleash unfinished or still-in-development features to allow early user "
@@ -1727,7 +1780,7 @@ msgid ""
 "file or enter several flags separated by commas in the GUI."
 msgstr ""
 
-#: ../../../users/config.rst:1309
+#: ../../../users/config.rst:1358
 msgid ""
 "The number of connections at which we stop trying to connect to more "
 "devices, zero meaning no limit.  Does not affect incoming connections.  The "
@@ -1735,7 +1788,7 @@ msgid ""
 "option-connection-limits>`."
 msgstr ""
 
-#: ../../../users/config.rst:1316
+#: ../../../users/config.rst:1365
 msgid ""
 "The maximum number of connections which we will allow in total, zero meaning "
 "no limit.  Affects incoming connections and prevents attempting outgoing "
@@ -1743,33 +1796,33 @@ msgid ""
 "chapter </advanced/option-connection-limits>`."
 msgstr ""
 
-#: ../../../users/config.rst:1323
+#: ../../../users/config.rst:1372
 msgid ""
 "When ``true``, analogous to :option:`--audit` being set. Defaults to "
 "``false``."
 msgstr ""
 
-#: ../../../users/config.rst:1326
+#: ../../../users/config.rst:1375
 msgid ""
 "When either this option, or :option:`--audit` (or both) are enabled, "
 "auditing is enabled."
 msgstr ""
 
-#: ../../../users/config.rst:1331
+#: ../../../users/config.rst:1380
 msgid "Analogous to :option:`--auditfile`. Defaults to being unset."
 msgstr ""
 
-#: ../../../users/config.rst:1333
+#: ../../../users/config.rst:1382
 msgid ""
 "For compatibility reasons, if both this option and :option:`--auditfile` are "
 "set, :option:`--auditfile` takes priority."
 msgstr ""
 
-#: ../../../users/config.rst:1337
+#: ../../../users/config.rst:1386
 msgid "Defaults Element"
 msgstr ""
 
-#: ../../../users/config.rst:1339
+#: ../../../users/config.rst:1388
 msgid ""
 "<defaults>\n"
 "    <folder id=\"\" label=\"\" path=\"~\" type=\"sendreceive\" "
@@ -1799,7 +1852,7 @@ msgid ""
 "        <markerName>.stfolder</markerName>\n"
 "        <copyOwnershipFromParent>false</copyOwnershipFromParent>\n"
 "        <modTimeWindowS>0</modTimeWindowS>\n"
-"        <maxConcurrentWrites>2</maxConcurrentWrites>\n"
+"        <maxConcurrentWrites>16</maxConcurrentWrites>\n"
 "        <disableFsync>false</disableFsync>\n"
 "        <blockPullOrder>standard</blockPullOrder>\n"
 "        <copyRangeMethod>standard</copyRangeMethod>\n"
@@ -1828,7 +1881,7 @@ msgid ""
 "</defaults>"
 msgstr ""
 
-#: ../../../users/config.rst:1393
+#: ../../../users/config.rst:1442
 msgid ""
 "The ``defaults`` element describes a template for newly added device and "
 "folder options.  These will be used when adding a new remote device or "
@@ -1836,34 +1889,34 @@ msgid ""
 "child elements can be present in the ``defaults`` element:"
 msgstr ""
 
-#: ../../../users/config.rst:1400
+#: ../../../users/config.rst:1449
 msgid ""
 "Template for a ``device`` element, with the same internal structure.  Any "
 "fields here will be used for a newly added remote device.  The ``id`` "
 "attribute is meaningless in this context."
 msgstr ""
 
-#: ../../../users/config.rst:1406
+#: ../../../users/config.rst:1455
 msgid ""
 "Template for a ``folder`` element, with the same internal structure.  Any "
 "fields here will be used for a newly added shared folder.  The ``id`` "
 "attribute is meaningless in this context."
 msgstr ""
 
-#: ../../../users/config.rst:1410
+#: ../../../users/config.rst:1459
 msgid ""
 "The UI will propose to create new folders at the path given in the ``path`` "
 "attribute (used to be ``defaultFolderPath`` under ``options``).  It also "
 "applies to folders automatically accepted from a remote device."
 msgstr ""
 
-#: ../../../users/config.rst:1414
+#: ../../../users/config.rst:1463
 msgid ""
 "Even sharing with other remote devices can be done in the template by "
 "including the appropriate :opt:`folder.device` element underneath."
 msgstr ""
 
-#: ../../../users/config.rst:1422
+#: ../../../users/config.rst:1471
 msgid ""
 "Template for the :ref:`ignore patterns <ignoring-files>` applied to new "
 "folders.  These are copied to the ``.stignore`` file when a folder is "
@@ -1872,11 +1925,11 @@ msgid ""
 "line is represented as by a ``<line>`` element."
 msgstr ""
 
-#: ../../../users/config.rst:1432
+#: ../../../users/config.rst:1481
 msgid "Listen Addresses"
 msgstr ""
 
-#: ../../../users/config.rst:1434
+#: ../../../users/config.rst:1483
 msgid ""
 "The following address types are accepted in sync protocol listen addresses. "
 "If you want Syncthing to listen on multiple addresses, you can either: "
@@ -1884,110 +1937,110 @@ msgid ""
 "addresses separated by commas in the GUI."
 msgstr ""
 
-#: ../../../users/config.rst:1439
+#: ../../../users/config.rst:1488
 msgid "Default listen addresses (``default``)"
 msgstr ""
 
-#: ../../../users/config.rst:1440
+#: ../../../users/config.rst:1489
 msgid ""
 "This is equivalent to ``tcp://0.0.0.0:22000``, ``quic://0.0.0.0:22000`` and "
 "``dynamic+https://relays.syncthing.net/endpoint``."
 msgstr ""
 
-#: ../../../users/config.rst:1443
+#: ../../../users/config.rst:1492
 msgid "TCP wildcard and port (``tcp://0.0.0.0:22000``, ``tcp://:22000``)"
 msgstr ""
 
-#: ../../../users/config.rst:1444
+#: ../../../users/config.rst:1493
 msgid ""
 "These are equivalent and will result in Syncthing listening on all "
 "interfaces, IPv4 and IPv6, on the specified port."
 msgstr ""
 
-#: ../../../users/config.rst:1447
+#: ../../../users/config.rst:1496
 msgid ""
 "TCP IPv4 wildcard and port (``tcp4://0.0.0.0:22000``, ``tcp4://:22000``)"
 msgstr ""
 
-#: ../../../users/config.rst:1448
+#: ../../../users/config.rst:1497
 msgid ""
 "These are equivalent and will result in Syncthing listening on all "
 "interfaces via IPv4 only."
 msgstr ""
 
-#: ../../../users/config.rst:1451
+#: ../../../users/config.rst:1500
 msgid "TCP IPv4 address and port (``tcp4://192.0.2.1:22000``)"
 msgstr ""
 
-#: ../../../users/config.rst:1452
+#: ../../../users/config.rst:1501
 msgid ""
 "This results in Syncthing listening on the specified address and port, IPv4 "
 "only."
 msgstr ""
 
-#: ../../../users/config.rst:1455
+#: ../../../users/config.rst:1504
 msgid "TCP IPv6 wildcard and port (``tcp6://[::]:22000``, ``tcp6://:22000``)"
 msgstr ""
 
-#: ../../../users/config.rst:1456
+#: ../../../users/config.rst:1505
 msgid ""
 "These are equivalent and will result in Syncthing listening on all "
 "interfaces via IPv6 only."
 msgstr ""
 
-#: ../../../users/config.rst:1459
+#: ../../../users/config.rst:1508
 msgid "TCP IPv6 address and port (``tcp6://[2001:db8::42]:22000``)"
 msgstr ""
 
-#: ../../../users/config.rst:1460
+#: ../../../users/config.rst:1509
 msgid ""
 "This results in Syncthing listening on the specified address and port, IPv6 "
 "only."
 msgstr ""
 
-#: ../../../users/config.rst:1463
+#: ../../../users/config.rst:1512
 msgid "QUIC address and port (e.g. ``quic://0.0.0.0:22000``)"
 msgstr ""
 
-#: ../../../users/config.rst:1464
+#: ../../../users/config.rst:1513
 msgid ""
 "Syntax is the same as for TCP, also ``quic4`` and ``quic6`` can be used."
 msgstr ""
 
-#: ../../../users/config.rst:1466
+#: ../../../users/config.rst:1515
 msgid "Static relay address (``relay://192.0.2.42:22067?id=abcd123...``)"
 msgstr ""
 
-#: ../../../users/config.rst:1467
+#: ../../../users/config.rst:1516
 msgid ""
 "Syncthing will connect to and listen for incoming connections via the "
 "specified relay address."
 msgstr ""
 
-#: ../../../users/config.rst:1470 ../../../users/config.rst:1477
+#: ../../../users/config.rst:1519 ../../../users/config.rst:1526
 msgid "Todo"
 msgstr ""
 
-#: ../../../users/config.rst:1470 ../../../users/config.rst:1477
+#: ../../../users/config.rst:1519 ../../../users/config.rst:1526
 msgid "Document available URL parameters."
 msgstr ""
 
-#: ../../../users/config.rst:1472
+#: ../../../users/config.rst:1521
 msgid "Dynamic relay pool (``dynamic+https://192.0.2.42/relays``)"
 msgstr ""
 
-#: ../../../users/config.rst:1473
+#: ../../../users/config.rst:1522
 msgid ""
 "Syncthing will fetch the specified HTTPS URL, parse it for a JSON payload "
 "describing relays, select a relay from the available ones and listen via "
 "that as if specified as a static relay above."
 msgstr ""
 
-#: ../../../users/config.rst:1481
+#: ../../../users/config.rst:1530
 msgid "Syncing Configuration Files"
 msgstr ""
 
-#: ../../../users/config.rst:1483
+#: ../../../users/config.rst:1532
 msgid ""
 "Syncing configuration files between devices (such that multiple devices are "
 "using the same configuration files) can cause issues. This is easy to do "
@@ -1996,7 +2049,7 @@ msgid ""
 "ID."
 msgstr ""
 
-#: ../../../users/config.rst:1488
+#: ../../../users/config.rst:1537
 msgid ""
 "If you want to use Syncthing to backup your configuration files, it is "
 "recommended that the files you are backing up are in a :ref:`folder-"
@@ -2005,7 +2058,7 @@ msgid ""
 "configuration for the remote devices."
 msgstr ""
 
-#: ../../../users/config.rst:1493
+#: ../../../users/config.rst:1542
 msgid ""
 "If you'd like to sync your home folder in non-send only mode, you may add "
 "the folder that stores the configuration files to the :ref:`ignore list "

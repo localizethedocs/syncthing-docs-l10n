@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Syncthing 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-05 08:15+0000\n"
+"POT-Creation-Date: 2026-05-21 06:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -42,37 +42,21 @@ msgid "Jakob Borg / :user:`calmh`"
 msgstr ""
 
 #: ../../../intro/project-presentation.rst:16
-#: ../../../intro/project-presentation.rst:26
 msgid "Audrius Butkevicius / :user:`AudriusButkevicius`"
 msgstr ""
 
 #: ../../../intro/project-presentation.rst:17
-#: ../../../intro/project-presentation.rst:25
 msgid "Simon Frei / :user:`imsodin`"
 msgstr ""
 
 #: ../../../intro/project-presentation.rst:20
-msgid "syncthing-android"
-msgstr ""
-
-#: ../../../intro/project-presentation.rst:22
-msgid ""
-"`syncthing-android`_ is the Android packaging and native UI on top of "
-"Syncthing."
-msgstr ""
-
-#: ../../../intro/project-presentation.rst:27
-msgid ":user:`Catfriend1`"
-msgstr ""
-
-#: ../../../intro/project-presentation.rst:30
 msgid "syncthing-macos"
 msgstr ""
 
-#: ../../../intro/project-presentation.rst:32
+#: ../../../intro/project-presentation.rst:22
 msgid "`syncthing-macos`_ is a native macOS Syncthing application bundle."
 msgstr ""
 
-#: ../../../intro/project-presentation.rst:34
+#: ../../../intro/project-presentation.rst:24
 msgid "Jerry Jacobs / :user:`xor-gate`"
 msgstr ""

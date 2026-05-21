@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Syncthing 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-05 08:15+0000\n"
+"POT-Creation-Date: 2026-05-21 06:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,14 +23,18 @@ msgstr ""
 
 #: ../../../users/proxying.rst:8
 msgid ""
-"Syncthing can run behind a SOCKS5 proxy. This enables use behind some "
-"corporate firewalls, tunneling via SSH, and over Tor. The Syncthing instance "
-"that is behind the proxy is limited to outbound connections - it can not "
-"listen for incoming connections via the proxy. It is however possible to "
-"receive incoming connections via :ref:`relaying`."
+"Syncthing can run behind a SOCKS5, HTTP, or HTTPS proxy. This enables use "
+"behind some corporate firewalls, tunneling via SSH, and over Tor. The "
+"Syncthing instance that is behind the proxy is limited to outbound "
+"connections - it can not listen for incoming connections via the proxy. It "
+"is however possible to receive incoming connections via :ref:`relaying`."
 msgstr ""
 
-#: ../../../users/proxying.rst:14
+#: ../../../users/proxying.rst:16
+msgid "Support for HTTP and HTTPS proxies via ``all_proxy``."
+msgstr ""
+
+#: ../../../users/proxying.rst:18
 msgid ""
 "There is no graphical configuration to enable proxy usage in Syncthing. "
 "Instead, an environment variable ``all_proxy`` must be set that points to "
@@ -38,7 +42,7 @@ msgid ""
 "Linux-like system::"
 msgstr ""
 
-#: ../../../users/proxying.rst:19
+#: ../../../users/proxying.rst:23
 msgid ""
 "$ export all_proxy=socks5://10.20.30.40:5060\n"
 "$ syncthing\n"
@@ -52,18 +56,37 @@ msgstr ""
 "...\n"
 "[monitor] 11:25:40 INFO: Proxy settings detected"
 
-#: ../../../users/proxying.rst:25
+#: ../../../users/proxying.rst:29
+msgid "Or for an HTTP/HTTPS proxy::"
+msgstr ""
+
+#: ../../../users/proxying.rst:31
+msgid ""
+"$ export all_proxy=http://10.20.30.40:8080\n"
+"$ # Or with authentication and encryption\n"
+"$ export all_proxy=https://user:password@proxy.example.com:8443\n"
+"$ syncthing"
+msgstr ""
+
+#: ../../../users/proxying.rst:36
+msgid ""
+"HTTP proxies requiring basic authentication can be specified by embedding "
+"credentials in the proxy URL. When credentials are used over a cleartext "
+"HTTP proxy, a warning will be logged."
+msgstr ""
+
+#: ../../../users/proxying.rst:40
 msgid ""
 "Note that this environment variable is *not* named with capital letters - it "
 "must be exactly ``all_proxy``. The \"Proxy settings detected\" log message "
 "indicates that Syncthing is using the proxy configuration."
 msgstr ""
 
-#: ../../../users/proxying.rst:30
+#: ../../../users/proxying.rst:45
 msgid "Disabling Fallback"
 msgstr ""
 
-#: ../../../users/proxying.rst:34
+#: ../../../users/proxying.rst:49
 msgid ""
 "By default, Syncthing will attempt a direct connection if a connection via "
 "the proxy fails. This is desirable when moving frequently between a proxied "
@@ -73,7 +96,7 @@ msgid ""
 "letters) will prevent the fallback behavior. For example::"
 msgstr ""
 
-#: ../../../users/proxying.rst:41
+#: ../../../users/proxying.rst:56
 msgid ""
 "$ export all_proxy=socks5://10.20.30.40:5060\n"
 "$ export ALL_PROXY_NO_FALLBACK=1\n"
@@ -91,21 +114,28 @@ msgstr ""
 "[monitor] 11:33:13 INFO: Proxy settings detected\n"
 "[monitor] 11:33:13 INFO: Proxy fallback disabled"
 
-#: ../../../users/proxying.rst:50
+#: ../../../users/proxying.rst:65
 msgid "Caveats"
 msgstr "注意事項"
 
-#: ../../../users/proxying.rst:52
+#: ../../../users/proxying.rst:67
 msgid ""
 "Syncthing will use the ``http_proxy`` / ``https_proxy`` settings in "
 "combination with ``all_proxy``. Proxies specified with ``http_`` variants "
-"will be used behind the socks proxy."
+"will be used behind the configured proxy."
 msgstr ""
 
-#: ../../../users/proxying.rst:55
+#: ../../../users/proxying.rst:71
 msgid ""
 "If this is not desired, make sure to undefine the ``http_proxy`` / "
 "``https_proxy`` variables for syncthing."
 msgstr ""
 "若不希望如此，請確保為 Syncthing 取消定義 ``http_proxy`` / ``https_proxy`` 變"
 "數。"
+
+#: ../../../users/proxying.rst:74
+msgid ""
+"When using an HTTP proxy via ``all_proxy``, only outbound TCP connections "
+"are supported. Non-TCP transports and listening sockets are not supported "
+"through HTTP or HTTPS proxies."
+msgstr ""
