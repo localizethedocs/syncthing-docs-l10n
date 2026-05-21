@@ -8,10 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Syncthing 2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-05 08:15+0000\n"
+"POT-Creation-Date: 2026-05-21 06:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -70,8 +71,8 @@ msgid ""
 "taking into account the inherent concurrency of the underlying storage "
 "system. If two folders are on the same underlying spinning disk, syncing "
 "them concurrently will be a strict loss of performance. If the underlying "
-"storage is a large array of disk, then syncing many folders concurrently may "
-"be beneficial."
+"storage is a large array of disks, then syncing many folders concurrently "
+"may be beneficial."
 msgstr ""
 
 #: ../../../users/tuning.rst:35 ../../../users/tuning.rst:143
@@ -84,7 +85,7 @@ msgid ""
 "transmitted over the network) concurrently at any given time. This is a "
 "global limiter, not per folder. If you have a lot of folders and/or a lot of "
 "devices and memory to spare you may want to increase this value. The default "
-"is 256 MiB, consider values of 1024 MiB or more."
+"is 262144 KiB (256 MiB), consider values of 1048576 KiB (1024 MiB) or more."
 msgstr ""
 
 #: ../../../users/tuning.rst:43
@@ -136,7 +137,7 @@ msgstr ""
 msgid ""
 "The maximum amount of data to have outstanding requests for at any given "
 "time. Higher values may improve performance, especially if the network or I/"
-"O latency is high. The default is 32 MiB."
+"O latency is high. The default is 32768 KiB (32 MiB)."
 msgstr ""
 
 #: ../../../users/tuning.rst:69 ../../../users/tuning.rst:161
@@ -159,7 +160,7 @@ msgid ""
 "Synchting limits the number of outstanding write system calls at any given "
 "time to avoid overloading the I/O system. If you increased copiers, "
 "outstanding network requests, or other settings that increase the number of "
-"concurrent writes, you may need to increase this value. The default is 2."
+"concurrent writes, you may need to increase this value. The default is 16."
 msgstr ""
 
 #: ../../../users/tuning.rst:81
@@ -278,8 +279,8 @@ msgstr ""
 
 #: ../../../users/tuning.rst:144
 msgid ""
-"Set to 32 MiB to reduce the amount of memory used for buffering responses to "
-"incoming requests."
+"Set to 32768 KiB (32 MiB) to reduce the amount of memory used for buffering "
+"responses to incoming requests."
 msgstr ""
 
 #: ../../../users/tuning.rst:147
@@ -304,8 +305,8 @@ msgstr ""
 
 #: ../../../users/tuning.rst:158
 msgid ""
-"Set to 16 MiB to reduce the amount of memory used for buffering while "
-"syncing."
+"Set to 16384 KiB (16 MiB) to reduce the amount of memory used for buffering "
+"while syncing."
 msgstr ""
 
 #: ../../../users/tuning.rst:162
