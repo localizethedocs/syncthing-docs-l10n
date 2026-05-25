@@ -110,7 +110,7 @@ msgstr ""
 
 #: ../../../dev/debugging.rst:57
 msgid "Debug logs"
-msgstr ""
+msgstr "除錯日誌"
 
 #: ../../../dev/debugging.rst:59
 msgid ""
@@ -144,7 +144,7 @@ msgstr ""
 
 #: ../../../dev/debugging.rst:78
 msgid "Environment variables"
-msgstr ""
+msgstr "環境變數"
 
 #: ../../../includes/env-vars.rst:1
 msgid "STTRACE"
@@ -235,7 +235,7 @@ msgstr ""
 
 #: ../../../includes/env-vars.rst:29
 msgid "Filesystem access"
-msgstr ""
+msgstr "檔案系統存取"
 
 #: ../../../includes/env-vars.rst:30
 msgid "main"
