@@ -35,7 +35,7 @@ msgstr ""
 
 #: ../../../users/config.rst:13
 msgid "Configuration File Locations"
-msgstr ""
+msgstr "組態檔位置"
 
 #: ../../../users/config.rst:15
 msgid "The default configuration and database directory locations are:"

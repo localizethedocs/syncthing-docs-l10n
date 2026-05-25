@@ -58,7 +58,7 @@ msgstr ""
 
 #: ../../../includes/env-vars.rst:17
 msgid "Configuration loading and saving"
-msgstr ""
+msgstr "組態載入與儲存"
 
 #: ../../../includes/env-vars.rst:18
 msgid "connections"
@@ -74,7 +74,7 @@ msgstr ""
 
 #: ../../../includes/env-vars.rst:21
 msgid "SQLite database"
-msgstr ""
+msgstr "SQLite 資料庫"
 
 #: ../../../includes/env-vars.rst:22
 msgid "dialer"
@@ -106,7 +106,7 @@ msgstr ""
 
 #: ../../../includes/env-vars.rst:29
 msgid "Filesystem access"
-msgstr ""
+msgstr "檔案系統存取"
 
 #: ../../../includes/env-vars.rst:30
 msgid "main"
