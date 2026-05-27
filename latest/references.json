@@ -11,6 +11,16 @@
         "title" : ""
       }
     },
+    "sr_RS" : 
+    {
+      "branch" : "main",
+      "commit" : 
+      {
+        "date" : "2026-04-30 09:35:33 +0000",
+        "hash" : "b7ce2d6437163b586d425a3866545dea68d61048",
+        "title" : "Update author list"
+      }
+    },
     "zh_CN" : 
     {
       "branch" : "main",
