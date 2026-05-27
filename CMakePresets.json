@@ -30,6 +30,15 @@
       }
     },
     {
+      "name" : "sr_RS",
+      "displayName" : "Serbian",
+      "description" : "Српски",
+      "inherits" : "default",
+      "cacheVariables" : {
+        "LANGUAGE" : "sr_RS"
+      }
+    },
+    {
       "name" : "zh_CN",
       "displayName" : "Simplified Chinese",
       "description" : "简体中文",
