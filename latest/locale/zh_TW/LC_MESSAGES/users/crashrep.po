@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../users/crashrep.rst:3
 msgid "Automatic crash reporting is available from version 1.2.0."
-msgstr ""
+msgstr "自動當機回報自 1.2.0 版起可用。"
 
 #: ../../../users/crashrep.rst:8
 msgid "Automatic Crash Reporting"
@@ -33,6 +33,9 @@ msgid ""
 "technical trace of what the various threads / routines in Syncthing were "
 "doing at the time of the crash."
 msgstr ""
+"自動當機回報會將當機或「panic」報告傳送給 Syncthing 開發者。此當機報告包含 "
+"Syncthing 的版本資訊（等同 ``syncthing --version`` 的輸出），以及當機當下 "
+"Syncthing 各執行緒／程序正在執行內容的技術追蹤。"
 
 #: ../../../users/crashrep.rst:13
 msgid ""
@@ -41,10 +44,13 @@ msgid ""
 "information. Crash reporting is enabled out of the box for most users, but "
 "can be disabled in the :ref:`advanced configuration dialog <advanced>`."
 msgstr ""
+"當機報告不包含日誌資料、檔名、裝置 ID、統計資料、唯一識別碼或任何其他可識別個"
+"人身分的資訊。對多數使用者而言，當機回報預設已啟用，但可在 :ref:`進階組態對話"
+"框 <advanced>` 中停用。"
 
 #: ../../../users/crashrep.rst:16
 msgid "The following is an example of a crash report as sent::"
-msgstr ""
+msgstr "以下為實際傳送的當機報告範例::"
 
 #: ../../../users/crashrep.rst:18
 msgid ""
@@ -100,6 +106,9 @@ msgid ""
 "If you compile Syncthing locally and want to prevent your build from having "
 "such data embedded, see :ref:`versiontagging`."
 msgstr ""
+"請注意，建置 Syncthing 的機器之使用者名稱與主機名稱會作為版本字串的一部分，包"
+"含在當機日誌中。這些資訊對開發者在對應脈絡下解讀日誌非常重要。若您在本機編譯 "
+"Syncthing，並希望避免嵌入此類資料，請參閱 :ref:`versiontagging`。"
 
 #: ../../../users/crashrep.rst:49
 msgid ""
