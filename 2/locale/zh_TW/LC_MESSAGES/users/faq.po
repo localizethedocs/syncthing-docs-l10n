@@ -23,7 +23,7 @@ msgstr "常見問題"
 
 #: ../../../users/faq-parts/general.rst:2
 msgid "General"
-msgstr ""
+msgstr "一般"
 
 #: ../../../users/faq-parts/general.rst:5
 msgid "What is Syncthing?"
@@ -42,7 +42,7 @@ msgstr ""
 
 #: ../../../users/faq-parts/general.rst:15
 msgid "Is it \"syncthing\", \"Syncthing\" or \"SyncThing\"?"
-msgstr ""
+msgstr "到底是「syncthing」、「Syncthing」還是「SyncThing」？"
 
 #: ../../../users/faq-parts/general.rst:17
 msgid ""
@@ -54,11 +54,11 @@ msgstr ""
 
 #: ../../../users/faq-parts/general.rst:23
 msgid "What things are synced?"
-msgstr ""
+msgstr "哪些內容會被同步？"
 
 #: ../../../users/faq-parts/general.rst:25
 msgid "The following things are *always* synchronized:"
-msgstr ""
+msgstr "以下項目會*一定*被同步："
 
 #: ../../../users/faq-parts/general.rst:27
 msgid "File contents"
@@ -66,11 +66,11 @@ msgstr "檔案內容"
 
 #: ../../../users/faq-parts/general.rst:28
 msgid "File modification times"
-msgstr ""
+msgstr "檔案修改時間"
 
 #: ../../../users/faq-parts/general.rst:30
 msgid "The following may be synchronized or not, depending:"
-msgstr ""
+msgstr "以下項目是否同步則視情況而定："
 
 #: ../../../users/faq-parts/general.rst:32
 msgid ""
@@ -80,19 +80,19 @@ msgstr ""
 
 #: ../../../users/faq-parts/general.rst:34
 msgid "Symbolic links (synced, except on Windows, but never followed)"
-msgstr ""
+msgstr "符號連結（會同步，Windows 除外，但永不跟隨）"
 
 #: ../../../users/faq-parts/general.rst:35
 msgid "File or directory owners and groups (when enabled)"
-msgstr ""
+msgstr "檔案或目錄擁有者與群組（啟用時）"
 
 #: ../../../users/faq-parts/general.rst:36
 msgid "Extended attributes (when enabled)"
-msgstr ""
+msgstr "延伸屬性（啟用時）"
 
 #: ../../../users/faq-parts/general.rst:37
 msgid "POSIX or NFS ACLs (as part of extended attributes)"
-msgstr ""
+msgstr "POSIX 或 NFS ACL（作為延伸屬性的一部分）"
 
 #: ../../../users/faq-parts/general.rst:41
 msgid ""
@@ -104,15 +104,15 @@ msgstr ""
 
 #: ../../../users/faq-parts/general.rst:46
 msgid "The following are *not* synchronized;"
-msgstr ""
+msgstr "以下項目*不會*被同步："
 
 #: ../../../users/faq-parts/general.rst:48
 msgid "Directory modification times (not preserved)"
-msgstr ""
+msgstr "目錄修改時間（不保留）"
 
 #: ../../../users/faq-parts/general.rst:49
 msgid "Hard links (followed, not preserved)"
-msgstr ""
+msgstr "硬連結（會跟隨，但不保留）"
 
 #: ../../../users/faq-parts/general.rst:50
 msgid ""
@@ -123,15 +123,15 @@ msgstr ""
 
 #: ../../../users/faq-parts/general.rst:53
 msgid "Resource forks (not preserved)"
-msgstr ""
+msgstr "資源分支（不保留）"
 
 #: ../../../users/faq-parts/general.rst:54
 msgid "Windows ACLs (not preserved)"
-msgstr ""
+msgstr "Windows ACL（不保留）"
 
 #: ../../../users/faq-parts/general.rst:55
 msgid "Devices, FIFOs, and other specials (ignored)"
-msgstr ""
+msgstr "裝置檔、FIFO 與其他特殊檔（忽略）"
 
 #: ../../../users/faq-parts/general.rst:56
 msgid ""
@@ -147,7 +147,7 @@ msgstr ""
 
 #: ../../../users/faq-parts/general.rst:61
 msgid "Is synchronization fast?"
-msgstr ""
+msgstr "同步速度快嗎？"
 
 #: ../../../users/faq-parts/general.rst:63
 msgid ""
@@ -176,7 +176,7 @@ msgstr ""
 
 #: ../../../users/faq-parts/general.rst:80
 msgid "How does Syncthing differ from BitTorrent/Resilio Sync?"
-msgstr ""
+msgstr "Syncthing 與 BitTorrent/Resilio Sync 有何不同？"
 
 #: ../../../users/faq-parts/general.rst:82
 msgid ""
@@ -206,7 +206,7 @@ msgstr "https://en.wikipedia.org/wiki/Resilio_Sync"
 
 #: ../../../users/faq-parts/general.rst:97
 msgid "Is there an iOS client?"
-msgstr ""
+msgstr "有 iOS 客戶端嗎？"
 
 #: ../../../users/faq-parts/general.rst:99
 msgid ""
@@ -245,7 +245,7 @@ msgstr "https://www.mobiussync.com"
 
 #: ../../../users/faq-parts/general.rst:116
 msgid "Should I keep my device IDs secret?"
-msgstr ""
+msgstr "我應該把裝置 ID 保密嗎？"
 
 #: ../../../users/faq-parts/general.rst:118
 msgid ""
@@ -270,11 +270,11 @@ msgstr ""
 
 #: ../../../users/faq-parts/troubleshooting.rst:2
 msgid "Troubleshooting"
-msgstr ""
+msgstr "疑難排解"
 
 #: ../../../users/faq-parts/troubleshooting.rst:5
 msgid "Where are the Syncthing logs?"
-msgstr ""
+msgstr "Syncthing 日誌在哪裡？"
 
 #: ../../../users/faq-parts/troubleshooting.rst:7
 msgid ""
@@ -294,7 +294,7 @@ msgstr ""
 
 #: ../../../users/faq-parts/troubleshooting.rst:17
 msgid "Why is the sync so slow?"
-msgstr ""
+msgstr "為什麼同步這麼慢？"
 
 #: ../../../users/faq-parts/troubleshooting.rst:19
 msgid ""
@@ -310,7 +310,7 @@ msgstr ""
 
 #: ../../../users/faq-parts/troubleshooting.rst:25
 msgid "Here is an example of a device connected via a relay:"
-msgstr ""
+msgstr "以下是透過中繼連線的裝置範例："
 
 #: ../../../users/faq-parts/troubleshooting.rst:29
 msgid ""
@@ -334,7 +334,7 @@ msgstr ""
 
 #: ../../../users/faq-parts/troubleshooting.rst:41
 msgid "Why does it use so much CPU?"
-msgstr ""
+msgstr "為什麼會使用這麼多 CPU？"
 
 #: ../../../users/faq-parts/troubleshooting.rst:43
 msgid ""
@@ -388,7 +388,7 @@ msgstr ""
 
 #: ../../../users/faq-parts/troubleshooting.rst:74
 msgid "Why is the setup more complicated than BitTorrent/Resilio Sync?"
-msgstr ""
+msgstr "為什麼設定比 BitTorrent/Resilio Sync 更複雜？"
 
 #: ../../../users/faq-parts/troubleshooting.rst:76
 msgid ""
@@ -400,11 +400,11 @@ msgstr ""
 
 #: ../../../users/faq-parts/troubleshooting.rst:81
 msgid "This is an area that we are working to improve in the long term."
-msgstr ""
+msgstr "這是我們長期持續改善的方向。"
 
 #: ../../../users/faq-parts/troubleshooting.rst:84
 msgid "Why do I get \"Host check error\" in the GUI/API?"
-msgstr ""
+msgstr "為什麼我在 GUI/API 看到「Host check error」？"
 
 #: ../../../users/faq-parts/troubleshooting.rst:86
 msgid ""
@@ -430,7 +430,7 @@ msgstr ""
 
 #: ../../../users/faq-parts/troubleshooting.rst:99
 msgid "Make sure the proxy sets a ``Host`` header containing ``localhost``, or"
-msgstr ""
+msgstr "確認代理伺服器有設定包含 ``localhost`` 的 ``Host`` 標頭，或"
 
 #: ../../../users/faq-parts/troubleshooting.rst:100
 msgid ""
@@ -439,7 +439,7 @@ msgstr ""
 
 #: ../../../users/faq-parts/troubleshooting.rst:101
 msgid "Bind the GUI/API to a non-localhost listen port."
-msgstr ""
+msgstr "將 GUI/API 綁定到非 localhost 的監聽埠。"
 
 #: ../../../users/faq-parts/troubleshooting.rst:103
 msgid ""
@@ -448,7 +448,7 @@ msgstr ""
 
 #: ../../../users/faq-parts/troubleshooting.rst:106
 msgid "My Syncthing database is corrupt"
-msgstr ""
+msgstr "我的 Syncthing 資料庫損毀了"
 
 #: ../../../users/faq-parts/troubleshooting.rst:108
 msgid ""
@@ -463,7 +463,7 @@ msgstr ""
 
 #: ../../../users/faq-parts/troubleshooting.rst:118
 msgid "Why do I see Syncthing twice in task manager?"
-msgstr ""
+msgstr "為什麼我在工作管理員看到兩個 Syncthing？"
 
 #: ../../../users/faq-parts/troubleshooting.rst:120
 msgid ""
@@ -475,7 +475,7 @@ msgstr ""
 
 #: ../../../users/faq-parts/troubleshooting.rst:126
 msgid "How can I view the history of changes?"
-msgstr ""
+msgstr "我要如何查看變更歷史？"
 
 #: ../../../users/faq-parts/troubleshooting.rst:128
 msgid ""
@@ -488,7 +488,7 @@ msgstr ""
 
 #: ../../../users/faq-parts/troubleshooting.rst:135
 msgid "Does the audit log contain every change?"
-msgstr ""
+msgstr "稽核日誌會包含每一項變更嗎？"
 
 #: ../../../users/faq-parts/troubleshooting.rst:137
 msgid ""
@@ -510,7 +510,7 @@ msgstr ""
 
 #: ../../../users/faq-parts/troubleshooting.rst:154
 msgid "Why does Syncthing connect to this unknown/suspicious address?"
-msgstr ""
+msgstr "為什麼 Syncthing 會連到這個未知／可疑位址？"
 
 #: ../../../users/faq-parts/troubleshooting.rst:156
 msgid ""
@@ -525,7 +525,7 @@ msgstr ""
 
 #: ../../../users/faq-parts/troubleshooting.rst:165
 msgid "I am seeing the error message \"folder marker missing\". What do I do?"
-msgstr ""
+msgstr "我看到「folder marker missing」錯誤訊息，該怎麼辦？"
 
 #: ../../../users/faq-parts/troubleshooting.rst:167
 msgid ""
@@ -592,7 +592,7 @@ msgstr ""
 
 #: ../../../users/faq-parts/troubleshooting.rst:200
 msgid "Why do my Windows computers always connect through a relay?"
-msgstr ""
+msgstr "為什麼我的 Windows 電腦總是透過中繼連線？"
 
 #: ../../../users/faq-parts/troubleshooting.rst:202
 msgid ""
@@ -608,11 +608,11 @@ msgstr ""
 
 #: ../../../users/faq-parts/usage.rst:2
 msgid "Usage"
-msgstr ""
+msgstr "使用方式"
 
 #: ../../../users/faq-parts/usage.rst:5
 msgid "What if there is a conflict?"
-msgstr ""
+msgstr "如果發生衝突怎麼辦？"
 
 #: ../../../users/faq-parts/usage.rst:8
 msgid ":ref:`conflict-handling`"
@@ -620,7 +620,7 @@ msgstr ""
 
 #: ../../../users/faq-parts/usage.rst:13
 msgid "How do I serve a folder from a read only filesystem?"
-msgstr ""
+msgstr "如何從唯讀檔案系統提供資料夾？"
 
 #: ../../../users/faq-parts/usage.rst:15
 msgid ""
@@ -634,15 +634,15 @@ msgstr ""
 
 #: ../../../users/faq-parts/usage.rst:23
 msgid "I really hate the ``.stfolder`` directory, can I remove it?"
-msgstr ""
+msgstr "我真的很討厭 ``.stfolder`` 目錄，可以移除嗎？"
 
 #: ../../../users/faq-parts/usage.rst:25
 msgid "See the previous question."
-msgstr ""
+msgstr "請參考上一題。"
 
 #: ../../../users/faq-parts/usage.rst:28
 msgid "Am I able to nest shared folders in Syncthing?"
-msgstr ""
+msgstr "我可以在 Syncthing 中巢狀共享資料夾嗎？"
 
 #: ../../../users/faq-parts/usage.rst:30
 msgid ""
@@ -655,7 +655,7 @@ msgstr ""
 
 #: ../../../users/faq-parts/usage.rst:37
 msgid "How do I rename/move a synced folder?"
-msgstr ""
+msgstr "如何重新命名／移動已同步的資料夾？"
 
 #: ../../../users/faq-parts/usage.rst:39
 msgid ""
@@ -690,7 +690,7 @@ msgstr ""
 
 #: ../../../users/faq-parts/usage.rst:58
 msgid "How do I configure multiple users on a single machine?"
-msgstr ""
+msgstr "如何在同一台機器上設定多位使用者？"
 
 #: ../../../users/faq-parts/usage.rst:60
 msgid ""
@@ -701,7 +701,7 @@ msgstr ""
 
 #: ../../../users/faq-parts/usage.rst:64
 msgid "Does Syncthing support syncing between folders on the same system?"
-msgstr ""
+msgstr "Syncthing 支援同一系統內資料夾間同步嗎？"
 
 #: ../../../users/faq-parts/usage.rst:66
 msgid ""
@@ -747,7 +747,7 @@ msgstr ""
 
 #: ../../../users/faq-parts/usage.rst:91
 msgid "Can I help initial sync by copying files manually?"
-msgstr ""
+msgstr "我可以手動複製檔案來加快初始同步嗎？"
 
 #: ../../../users/faq-parts/usage.rst:93
 msgid ""
@@ -799,7 +799,7 @@ msgstr ""
 
 #: ../../../users/faq-parts/usage.rst:110
 msgid "How can I exclude files with brackets (``[]``) in the name?"
-msgstr ""
+msgstr "如何排除檔名中含括號（``[]``）的檔案？"
 
 #: ../../../users/faq-parts/usage.rst:112
 msgid ""
@@ -822,7 +822,7 @@ msgstr ""
 
 #: ../../../users/faq-parts/usage.rst:123
 msgid "How do I access the web GUI from another computer?"
-msgstr ""
+msgstr "如何從另一台電腦存取 Web GUI？"
 
 #: ../../../users/faq-parts/usage.rst:125
 msgid ""
@@ -842,7 +842,7 @@ msgstr ""
 
 #: ../../../users/faq-parts/usage.rst:135
 msgid "to"
-msgstr ""
+msgstr "到"
 
 #: ../../../users/faq-parts/usage.rst:137
 msgid ""
@@ -895,7 +895,7 @@ msgstr ""
 
 #: ../../../users/faq-parts/usage.rst:168
 msgid "I don't like the GUI or the theme. Can it be changed?"
-msgstr ""
+msgstr "我不喜歡 GUI 或主題，可以更改嗎？"
 
 #: ../../../users/faq-parts/usage.rst:170
 msgid ""
@@ -951,7 +951,7 @@ msgstr ""
 
 #: ../../../users/faq-parts/usage.rst:202
 msgid "To force an upgrade from the command line, run ``syncthing --upgrade``."
-msgstr ""
+msgstr "若要從命令列強制升級，請執行 ``syncthing --upgrade``。"
 
 #: ../../../users/faq-parts/usage.rst:204
 msgid ""
@@ -977,7 +977,7 @@ msgstr ""
 
 #: ../../../users/faq-parts/usage.rst:221
 msgid "How do I run Syncthing as a daemon process on Linux?"
-msgstr ""
+msgstr "如何在 Linux 上以 daemon 程序執行 Syncthing？"
 
 #: ../../../users/faq-parts/usage.rst:223
 msgid ""
@@ -1026,7 +1026,7 @@ msgstr ""
 
 #: ../../../users/faq-parts/usage.rst:249
 msgid "On many Linux distributions you can run the following to fix it::"
-msgstr ""
+msgstr "在許多 Linux 發行版上，您可以執行以下指令修正::"
 
 #: ../../../users/faq-parts/usage.rst:251
 msgid ""
@@ -1068,7 +1068,7 @@ msgstr ""
 
 #: ../../../users/faq-parts/usage.rst:270
 msgid "Stop Syncthing: ``syncthing cli operations shutdown``"
-msgstr ""
+msgstr "停止 Syncthing：``syncthing cli operations shutdown``"
 
 #: ../../../users/faq-parts/usage.rst:271
 msgid ""

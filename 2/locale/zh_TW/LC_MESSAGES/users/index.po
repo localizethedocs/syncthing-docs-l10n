@@ -27,4 +27,4 @@ msgstr "組態"
 
 #: ../../../users/index.rst:2
 msgid "Usage"
-msgstr ""
+msgstr "使用方式"
