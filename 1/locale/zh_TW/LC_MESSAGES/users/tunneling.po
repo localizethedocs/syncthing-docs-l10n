@@ -109,7 +109,7 @@ msgstr ""
 
 #: ../../../users/tunneling.rst:35
 msgid "Troubleshooting"
-msgstr ""
+msgstr "疑難排解"
 
 #: ../../../users/tunneling.rst:36
 msgid ""
