@@ -23,7 +23,7 @@ msgstr "常見問題"
 
 #: ../../../users/faq.rst:9
 msgid "General"
-msgstr ""
+msgstr "一般"
 
 #: ../../../users/faq.rst:12
 msgid "What is Syncthing?"
@@ -42,7 +42,7 @@ msgstr ""
 
 #: ../../../users/faq.rst:22
 msgid "Is it \"syncthing\", \"Syncthing\" or \"SyncThing\"?"
-msgstr ""
+msgstr "到底是「syncthing」、「Syncthing」還是「SyncThing」？"
 
 #: ../../../users/faq.rst:24
 msgid ""
@@ -85,15 +85,15 @@ msgstr ""
 
 #: ../../../users/faq.rst:47
 msgid "Usage"
-msgstr ""
+msgstr "使用方式"
 
 #: ../../../users/faq.rst:50
 msgid "What things are synced?"
-msgstr ""
+msgstr "哪些內容會被同步？"
 
 #: ../../../users/faq.rst:52
 msgid "The following things are *always* synchronized:"
-msgstr ""
+msgstr "以下項目會*一定*被同步："
 
 #: ../../../users/faq.rst:54
 msgid "File Contents"
@@ -105,7 +105,7 @@ msgstr ""
 
 #: ../../../users/faq.rst:57
 msgid "The following may be synchronized or not, depending:"
-msgstr ""
+msgstr "以下項目是否同步則視情況而定："
 
 #: ../../../users/faq.rst:59
 msgid ""
@@ -153,7 +153,7 @@ msgstr ""
 
 #: ../../../users/faq.rst:76
 msgid "Is synchronization fast?"
-msgstr ""
+msgstr "同步速度快嗎？"
 
 #: ../../../users/faq.rst:78
 msgid ""
@@ -183,7 +183,7 @@ msgstr ""
 
 #: ../../../users/faq.rst:95
 msgid "Why is the sync so slow?"
-msgstr ""
+msgstr "為什麼同步這麼慢？"
 
 #: ../../../users/faq.rst:97
 msgid ""
@@ -225,7 +225,7 @@ msgstr ""
 
 #: ../../../users/faq.rst:123
 msgid "Why does it use so much CPU?"
-msgstr ""
+msgstr "為什麼會使用這麼多 CPU？"
 
 #: ../../../users/faq.rst:125
 msgid ""
@@ -279,7 +279,7 @@ msgstr ""
 
 #: ../../../users/faq.rst:156
 msgid "Should I keep my device IDs secret?"
-msgstr ""
+msgstr "我應該把裝置 ID 保密嗎？"
 
 #: ../../../users/faq.rst:158
 msgid ""
@@ -304,7 +304,7 @@ msgstr ""
 
 #: ../../../users/faq.rst:173
 msgid "What if there is a conflict?"
-msgstr ""
+msgstr "如果發生衝突怎麼辦？"
 
 #: ../../../users/faq.rst:175
 msgid ""
@@ -341,7 +341,7 @@ msgstr ""
 
 #: ../../../users/faq.rst:198
 msgid "Does Syncthing support syncing between folders on the same system?"
-msgstr ""
+msgstr "Syncthing 支援同一系統內資料夾間同步嗎？"
 
 #: ../../../users/faq.rst:200
 msgid ""
@@ -376,7 +376,7 @@ msgstr ""
 
 #: ../../../users/faq.rst:221
 msgid "How can I exclude files with brackets (``[]``) in the name?"
-msgstr ""
+msgstr "如何排除檔名中含括號（``[]``）的檔案？"
 
 #: ../../../users/faq.rst:223
 msgid ""
@@ -412,11 +412,11 @@ msgstr ""
 
 #: ../../../users/faq.rst:242
 msgid "This is an area that we are working to improve in the long term."
-msgstr ""
+msgstr "這是我們長期持續改善的方向。"
 
 #: ../../../users/faq.rst:245
 msgid "How do I access the web GUI from another computer?"
-msgstr ""
+msgstr "如何從另一台電腦存取 Web GUI？"
 
 #: ../../../users/faq.rst:247
 msgid ""
@@ -436,7 +436,7 @@ msgstr ""
 
 #: ../../../users/faq.rst:257
 msgid "to"
-msgstr ""
+msgstr "到"
 
 #: ../../../users/faq.rst:259
 msgid ""
@@ -469,7 +469,7 @@ msgstr ""
 
 #: ../../../users/faq.rst:279
 msgid "Why do I see Syncthing twice in task manager?"
-msgstr ""
+msgstr "為什麼我在工作管理員看到兩個 Syncthing？"
 
 #: ../../../users/faq.rst:281
 msgid ""

@@ -72,7 +72,7 @@ msgstr "聯絡方式"
 msgid ""
 "If you're looking for specific people to talk to, check out the :ref:"
 "`project-presentation`."
-msgstr ""
+msgstr "如果您想聯絡特定的人員，請參閱 :ref:`project-presentation`。"
 
 #: ../../../index.rst:24
 msgid ""

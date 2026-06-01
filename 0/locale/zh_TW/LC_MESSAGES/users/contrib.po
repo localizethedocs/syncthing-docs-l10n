@@ -27,14 +27,16 @@ msgid ""
 "the community. Like all documentation pages, it's wiki editable so please do "
 "edit and add your own."
 msgstr ""
+"本頁列出由社群建立的 Syncthing 整合、附加元件與封裝。與其他文件頁面相同，本頁"
+"可像 wiki 一樣編輯，歡迎直接修改並加入您的項目。"
 
 #: ../../../users/contrib.rst:11
 msgid "GUI Wrappers"
-msgstr ""
+msgstr "GUI 包裝程式"
 
 #: ../../../users/contrib.rst:16
 msgid "Cross-platform"
-msgstr ""
+msgstr "跨平台"
 
 #: ../../../users/contrib.rst:18
 msgid "https://github.com/syncthing/syncthing-gtk"
@@ -76,7 +78,7 @@ msgstr ""
 
 #: ../../../users/contrib.rst:40
 msgid "https://github.com/m0ppers/syncthing-bar (OSX 10.10 only)"
-msgstr ""
+msgstr "https://github.com/m0ppers/syncthing-bar（僅 OSX 10.10）"
 
 #: ../../../users/contrib.rst:43
 msgid "Kindle Touch"
@@ -88,7 +90,7 @@ msgstr ""
 
 #: ../../../users/contrib.rst:48
 msgid "Packages and Bundlings"
-msgstr ""
+msgstr "套件與封裝"
 
 #: ../../../users/contrib.rst:51
 msgid "Debian / Ubuntu"
@@ -237,11 +239,11 @@ msgstr ""
 
 #: ../../../users/contrib.rst:134
 msgid "Integrations"
-msgstr ""
+msgstr "整合"
 
 #: ../../../users/contrib.rst:137
 msgid "REST API Bindings"
-msgstr ""
+msgstr "REST API 繫結"
 
 #: ../../../users/contrib.rst:139
 msgid "Ruby: https://github.com/retgoat/syncthing-ruby"
@@ -289,7 +291,7 @@ msgstr ""
 
 #: ../../../users/contrib.rst:157
 msgid "Older, Possibly Unmaintained"
-msgstr ""
+msgstr "較舊、可能未維護"
 
 #: ../../../users/contrib.rst:160
 msgid ""
@@ -297,6 +299,8 @@ msgid ""
 "usable, or they may be in disrepair. If you are the maintainer of one of "
 "these and you have revived the project, please update this page accordingly."
 msgstr ""
+"這些專案已有一段時間未更新，可能仍可使用，也可能已難以維護。若您是其中某專案"
+"的維護者且已重新啟動開發，請更新本頁內容。"
 
 #: ../../../users/contrib.rst:165
 msgid "https://github.com/alex2108/syncthing-tray"

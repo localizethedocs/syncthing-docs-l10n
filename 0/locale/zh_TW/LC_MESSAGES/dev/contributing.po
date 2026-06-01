@@ -132,7 +132,7 @@ msgstr ""
 
 #: ../../../dev/contributing.rst:69
 msgid "General"
-msgstr ""
+msgstr "一般"
 
 #: ../../../dev/contributing.rst:71
 msgid ""

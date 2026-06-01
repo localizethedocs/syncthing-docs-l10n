@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../users/custom-upgrades.rst:2
 msgid "Custom Upgrade Server"
-msgstr ""
+msgstr "自訂升級伺服器"
 
 #: ../../../users/custom-upgrades.rst:5
 msgid "Description"
@@ -35,7 +35,7 @@ msgstr ""
 
 #: ../../../users/custom-upgrades.rst:14
 msgid "Usage"
-msgstr ""
+msgstr "使用方式"
 
 #: ../../../users/custom-upgrades.rst:16
 msgid ""
@@ -43,6 +43,8 @@ msgid ""
 "under the name ``releasesURL``. The URL should point to a location serving a "
 "valid release list. The release list is a JSON file on the following format::"
 msgstr ""
+"用來取得發行資訊的 URL 可在 :ref:`advanced` 中以 ``releasesURL`` 名稱設定。"
+"該 URL 應指向可提供有效發行清單的位置。發行清單為以下格式的 JSON 檔案::"
 
 #: ../../../users/custom-upgrades.rst:20
 msgid ""
