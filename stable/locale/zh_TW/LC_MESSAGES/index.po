@@ -51,7 +51,7 @@ msgstr "聯絡方式"
 msgid ""
 "If you're looking for specific people to talk to, check out the :ref:"
 "`project-presentation`."
-msgstr ""
+msgstr "如果您想聯絡特定的人員，請參閱 :ref:`project-presentation`。"
 
 #: ../../../index.rst:24
 msgid ""
@@ -83,6 +83,8 @@ msgid ""
 "For other concerns you may reach out to members of the maintainers, "
 "currently :user:`calmh`, :user:`AudriusButkevicius` and :user:`imsodin`."
 msgstr ""
+"如有其他事項，您可以聯絡維護者成員，目前為 :user:`calmh`、:user:"
+"`AudriusButkevicius` 與 :user:`imsodin`。"
 
 #: ../../../index.rst:49
 msgid "Thanks"
@@ -90,7 +92,7 @@ msgstr "感謝"
 
 #: ../../../index.rst:51
 msgid "We thank all the documentation contributors for their hard work:"
-msgstr ""
+msgstr "我們感謝所有文件貢獻者的辛勞："
 
 #: ../../../thanks.txt:1
 msgid ""
