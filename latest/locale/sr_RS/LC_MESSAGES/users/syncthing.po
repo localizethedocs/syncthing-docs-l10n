@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Syncthing latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-06 09:56+0000\n"
+"POT-Creation-Date: 2026-06-08 13:47+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -477,26 +477,70 @@ msgstr ""
 #: ../../../includes/cli-commands.rst:26
 msgid ""
 "Various tools to aid in diagnosing problems or collection information for "
-"bug reports.  Some of these commands access the database directly and can "
-"therefore only work when Syncthing is not running."
+"bug reports."
 msgstr ""
 
-#: ../../../includes/cli-commands.rst:30
+#: ../../../includes/cli-commands.rst:29
 msgid "``-`` (a single dash)"
 msgstr ""
 
-#: ../../../includes/cli-commands.rst:31
+#: ../../../includes/cli-commands.rst:30
 msgid ""
 "Reads subsequent commands from the standard input stream, without needing to "
 "call the ``syncthing cli`` command over and over.  Exits on any invalid "
 "command or when EOF (end-of-file) is received."
 msgstr ""
 
-#: ../../../users/syncthing.rst:327
+#: ../../../users/syncthing.rst:326
+msgid ""
+"For troubleshooting issues, the ``debug`` subcommand provides some commonly "
+"needed actions for data analysis and repair.  Some of these commands access "
+"the database directly and can therefore only work when Syncthing is not "
+"running. Not to be confused with the ``cli debug`` subcommand group, which "
+"works via the REST API."
+msgstr ""
+
+#: ../../../includes/debug-commands.rst:3
+msgid "debug reset-database"
+msgstr ""
+
+#: ../../../includes/debug-commands.rst:4
+msgid ""
+"Reset the database, forcing a full rescan and resync.  **Must only be used "
+"when Syncthing is not running.**  More granular reset operations are "
+"available on the REST API while Syncthing is running: :doc:`../rest/system-"
+"reset-post`"
+msgstr ""
+
+#: ../../../includes/debug-commands.rst:9
+msgid "debug database-statistics"
+msgstr ""
+
+#: ../../../includes/debug-commands.rst:10
+msgid "Display database size statistics."
+msgstr ""
+
+#: ../../../includes/debug-commands.rst:12
+msgid "debug database-counts"
+msgstr ""
+
+#: ../../../includes/debug-commands.rst:13
+msgid "Display database folder counts."
+msgstr ""
+
+#: ../../../includes/debug-commands.rst:15
+msgid "debug database-file"
+msgstr ""
+
+#: ../../../includes/debug-commands.rst:16
+msgid "Display database file metadata."
+msgstr ""
+
+#: ../../../users/syncthing.rst:335
 msgid "Proxies"
 msgstr ""
 
-#: ../../../users/syncthing.rst:329
+#: ../../../users/syncthing.rst:337
 msgid ""
 "Syncthing can use a SOCKS, HTTP, or HTTPS proxy to talk to the outside "
 "world. The proxy is used for outgoing connections only - it is not possible "
@@ -506,15 +550,15 @@ msgid ""
 "For example::"
 msgstr ""
 
-#: ../../../users/syncthing.rst:336
+#: ../../../users/syncthing.rst:344
 msgid "$ export all_proxy=socks://192.0.2.42:8081"
 msgstr ""
 
-#: ../../../users/syncthing.rst:339
+#: ../../../users/syncthing.rst:347
 msgid "Development Settings"
 msgstr ""
 
-#: ../../../users/syncthing.rst:341
+#: ../../../users/syncthing.rst:349
 msgid ""
 "The following environment variables modify Syncthing's behavior in ways that "
 "are mostly useful for developers. Use with care. If you start Syncthing from "
@@ -773,11 +817,11 @@ msgid ""
 "to any nonempty value to use it."
 msgstr ""
 
-#: ../../../users/syncthing.rst:349
+#: ../../../users/syncthing.rst:357
 msgid "See Also"
 msgstr ""
 
-#: ../../../users/syncthing.rst:351
+#: ../../../users/syncthing.rst:359
 msgid ""
 ":manpage:`syncthing-config(5)`, :manpage:`syncthing-stignore(5)`, :manpage:"
 "`syncthing-device-ids(7)`, :manpage:`syncthing-security(7)`, :manpage:"

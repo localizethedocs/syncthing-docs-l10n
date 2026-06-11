@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Syncthing latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-11 11:49+0000\n"
+"POT-Creation-Date: 2026-06-08 13:47+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1763,14 +1763,13 @@ msgstr ""
 
 #: ../../../users/config.rst:1340
 msgid ""
-"Controls whether all index data is resent when an upgrade has happened, "
-"equivalent to starting Syncthing with :option:`--reset-deltas`.  This used "
-"to be the default behavior in older versions, but is mainly useful as a "
-"troubleshooting step and causes high database churn. The default is now "
+"Controls whether all index data is resent when an upgrade has happened. This "
+"used to be the default behavior in older versions, but is mainly useful as a "
+"troubleshooting step and causes high database churn.  The default is now "
 "``false``."
 msgstr ""
 
-#: ../../../users/config.rst:1349
+#: ../../../users/config.rst:1348
 msgid ""
 "Feature flags are simple strings that, when added to the configuration, may "
 "unleash unfinished or still-in-development features to allow early user "
@@ -1780,7 +1779,7 @@ msgid ""
 "file or enter several flags separated by commas in the GUI."
 msgstr ""
 
-#: ../../../users/config.rst:1358
+#: ../../../users/config.rst:1357
 msgid ""
 "The number of connections at which we stop trying to connect to more "
 "devices, zero meaning no limit.  Does not affect incoming connections.  The "
@@ -1788,7 +1787,7 @@ msgid ""
 "option-connection-limits>`."
 msgstr ""
 
-#: ../../../users/config.rst:1365
+#: ../../../users/config.rst:1364
 msgid ""
 "The maximum number of connections which we will allow in total, zero meaning "
 "no limit.  Affects incoming connections and prevents attempting outgoing "
@@ -1796,33 +1795,33 @@ msgid ""
 "chapter </advanced/option-connection-limits>`."
 msgstr ""
 
-#: ../../../users/config.rst:1372
+#: ../../../users/config.rst:1371
 msgid ""
 "When ``true``, analogous to :option:`--audit` being set. Defaults to "
 "``false``."
 msgstr ""
 
-#: ../../../users/config.rst:1375
+#: ../../../users/config.rst:1374
 msgid ""
 "When either this option, or :option:`--audit` (or both) are enabled, "
 "auditing is enabled."
 msgstr ""
 
-#: ../../../users/config.rst:1380
+#: ../../../users/config.rst:1379
 msgid "Analogous to :option:`--auditfile`. Defaults to being unset."
 msgstr ""
 
-#: ../../../users/config.rst:1382
+#: ../../../users/config.rst:1381
 msgid ""
 "For compatibility reasons, if both this option and :option:`--auditfile` are "
 "set, :option:`--auditfile` takes priority."
 msgstr ""
 
-#: ../../../users/config.rst:1386
+#: ../../../users/config.rst:1385
 msgid "Defaults Element"
 msgstr ""
 
-#: ../../../users/config.rst:1388
+#: ../../../users/config.rst:1387
 msgid ""
 "<defaults>\n"
 "    <folder id=\"\" label=\"\" path=\"~\" type=\"sendreceive\" "
@@ -1881,7 +1880,7 @@ msgid ""
 "</defaults>"
 msgstr ""
 
-#: ../../../users/config.rst:1442
+#: ../../../users/config.rst:1441
 msgid ""
 "The ``defaults`` element describes a template for newly added device and "
 "folder options.  These will be used when adding a new remote device or "
@@ -1889,34 +1888,34 @@ msgid ""
 "child elements can be present in the ``defaults`` element:"
 msgstr ""
 
-#: ../../../users/config.rst:1449
+#: ../../../users/config.rst:1448
 msgid ""
 "Template for a ``device`` element, with the same internal structure.  Any "
 "fields here will be used for a newly added remote device.  The ``id`` "
 "attribute is meaningless in this context."
 msgstr ""
 
-#: ../../../users/config.rst:1455
+#: ../../../users/config.rst:1454
 msgid ""
 "Template for a ``folder`` element, with the same internal structure.  Any "
 "fields here will be used for a newly added shared folder.  The ``id`` "
 "attribute is meaningless in this context."
 msgstr ""
 
-#: ../../../users/config.rst:1459
+#: ../../../users/config.rst:1458
 msgid ""
 "The UI will propose to create new folders at the path given in the ``path`` "
 "attribute (used to be ``defaultFolderPath`` under ``options``).  It also "
 "applies to folders automatically accepted from a remote device."
 msgstr ""
 
-#: ../../../users/config.rst:1463
+#: ../../../users/config.rst:1462
 msgid ""
 "Even sharing with other remote devices can be done in the template by "
 "including the appropriate :opt:`folder.device` element underneath."
 msgstr ""
 
-#: ../../../users/config.rst:1471
+#: ../../../users/config.rst:1470
 msgid ""
 "Template for the :ref:`ignore patterns <ignoring-files>` applied to new "
 "folders.  These are copied to the ``.stignore`` file when a folder is "
@@ -1925,11 +1924,11 @@ msgid ""
 "line is represented as by a ``<line>`` element."
 msgstr ""
 
-#: ../../../users/config.rst:1481
+#: ../../../users/config.rst:1480
 msgid "Listen Addresses"
 msgstr ""
 
-#: ../../../users/config.rst:1483
+#: ../../../users/config.rst:1482
 msgid ""
 "The following address types are accepted in sync protocol listen addresses. "
 "If you want Syncthing to listen on multiple addresses, you can either: "
@@ -1937,110 +1936,110 @@ msgid ""
 "addresses separated by commas in the GUI."
 msgstr ""
 
-#: ../../../users/config.rst:1488
+#: ../../../users/config.rst:1487
 msgid "Default listen addresses (``default``)"
 msgstr ""
 
-#: ../../../users/config.rst:1489
+#: ../../../users/config.rst:1488
 msgid ""
 "This is equivalent to ``tcp://0.0.0.0:22000``, ``quic://0.0.0.0:22000`` and "
 "``dynamic+https://relays.syncthing.net/endpoint``."
 msgstr ""
 
-#: ../../../users/config.rst:1492
+#: ../../../users/config.rst:1491
 msgid "TCP wildcard and port (``tcp://0.0.0.0:22000``, ``tcp://:22000``)"
 msgstr ""
 
-#: ../../../users/config.rst:1493
+#: ../../../users/config.rst:1492
 msgid ""
 "These are equivalent and will result in Syncthing listening on all "
 "interfaces, IPv4 and IPv6, on the specified port."
 msgstr ""
 
-#: ../../../users/config.rst:1496
+#: ../../../users/config.rst:1495
 msgid ""
 "TCP IPv4 wildcard and port (``tcp4://0.0.0.0:22000``, ``tcp4://:22000``)"
 msgstr ""
 
-#: ../../../users/config.rst:1497
+#: ../../../users/config.rst:1496
 msgid ""
 "These are equivalent and will result in Syncthing listening on all "
 "interfaces via IPv4 only."
 msgstr ""
 
-#: ../../../users/config.rst:1500
+#: ../../../users/config.rst:1499
 msgid "TCP IPv4 address and port (``tcp4://192.0.2.1:22000``)"
 msgstr ""
 
-#: ../../../users/config.rst:1501
+#: ../../../users/config.rst:1500
 msgid ""
 "This results in Syncthing listening on the specified address and port, IPv4 "
 "only."
 msgstr ""
 
-#: ../../../users/config.rst:1504
+#: ../../../users/config.rst:1503
 msgid "TCP IPv6 wildcard and port (``tcp6://[::]:22000``, ``tcp6://:22000``)"
 msgstr ""
 
-#: ../../../users/config.rst:1505
+#: ../../../users/config.rst:1504
 msgid ""
 "These are equivalent and will result in Syncthing listening on all "
 "interfaces via IPv6 only."
 msgstr ""
 
-#: ../../../users/config.rst:1508
+#: ../../../users/config.rst:1507
 msgid "TCP IPv6 address and port (``tcp6://[2001:db8::42]:22000``)"
 msgstr ""
 
-#: ../../../users/config.rst:1509
+#: ../../../users/config.rst:1508
 msgid ""
 "This results in Syncthing listening on the specified address and port, IPv6 "
 "only."
 msgstr ""
 
-#: ../../../users/config.rst:1512
+#: ../../../users/config.rst:1511
 msgid "QUIC address and port (e.g. ``quic://0.0.0.0:22000``)"
 msgstr ""
 
-#: ../../../users/config.rst:1513
+#: ../../../users/config.rst:1512
 msgid ""
 "Syntax is the same as for TCP, also ``quic4`` and ``quic6`` can be used."
 msgstr ""
 
-#: ../../../users/config.rst:1515
+#: ../../../users/config.rst:1514
 msgid "Static relay address (``relay://192.0.2.42:22067?id=abcd123...``)"
 msgstr ""
 
-#: ../../../users/config.rst:1516
+#: ../../../users/config.rst:1515
 msgid ""
 "Syncthing will connect to and listen for incoming connections via the "
 "specified relay address."
 msgstr ""
 
-#: ../../../users/config.rst:1519 ../../../users/config.rst:1526
+#: ../../../users/config.rst:1518 ../../../users/config.rst:1525
 msgid "Todo"
 msgstr ""
 
-#: ../../../users/config.rst:1519 ../../../users/config.rst:1526
+#: ../../../users/config.rst:1518 ../../../users/config.rst:1525
 msgid "Document available URL parameters."
 msgstr ""
 
-#: ../../../users/config.rst:1521
+#: ../../../users/config.rst:1520
 msgid "Dynamic relay pool (``dynamic+https://192.0.2.42/relays``)"
 msgstr ""
 
-#: ../../../users/config.rst:1522
+#: ../../../users/config.rst:1521
 msgid ""
 "Syncthing will fetch the specified HTTPS URL, parse it for a JSON payload "
 "describing relays, select a relay from the available ones and listen via "
 "that as if specified as a static relay above."
 msgstr ""
 
-#: ../../../users/config.rst:1530
+#: ../../../users/config.rst:1529
 msgid "Syncing Configuration Files"
 msgstr "同步組態檔"
 
-#: ../../../users/config.rst:1532
+#: ../../../users/config.rst:1531
 msgid ""
 "Syncing configuration files between devices (such that multiple devices are "
 "using the same configuration files) can cause issues. This is easy to do "
@@ -2049,7 +2048,7 @@ msgid ""
 "ID."
 msgstr ""
 
-#: ../../../users/config.rst:1537
+#: ../../../users/config.rst:1536
 msgid ""
 "If you want to use Syncthing to backup your configuration files, it is "
 "recommended that the files you are backing up are in a :ref:`folder-"
@@ -2058,7 +2057,7 @@ msgid ""
 "configuration for the remote devices."
 msgstr ""
 
-#: ../../../users/config.rst:1542
+#: ../../../users/config.rst:1541
 msgid ""
 "If you'd like to sync your home folder in non-send only mode, you may add "
 "the folder that stores the configuration files to the :ref:`ignore list "

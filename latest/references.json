@@ -16,9 +16,9 @@
       "branch" : "main",
       "commit" : 
       {
-        "date" : "2026-04-30 09:35:33 +0000",
-        "hash" : "b7ce2d6437163b586d425a3866545dea68d61048",
-        "title" : "Update author list"
+        "date" : "2026-06-08 11:38:20 +0200",
+        "hash" : "bb2c76201eddfc9773178fbd6ae16fcf7584379a",
+        "title" : "chore: cleanup obsolete Transifex mention (#1015)"
       }
     },
     "zh_CN" : 
@@ -26,9 +26,9 @@
       "branch" : "main",
       "commit" : 
       {
-        "date" : "2026-04-30 09:35:33 +0000",
-        "hash" : "b7ce2d6437163b586d425a3866545dea68d61048",
-        "title" : "Update author list"
+        "date" : "2026-06-08 11:38:20 +0200",
+        "hash" : "bb2c76201eddfc9773178fbd6ae16fcf7584379a",
+        "title" : "chore: cleanup obsolete Transifex mention (#1015)"
       }
     },
     "zh_TW" : 
@@ -36,9 +36,9 @@
       "branch" : "main",
       "commit" : 
       {
-        "date" : "2026-04-30 09:35:33 +0000",
-        "hash" : "b7ce2d6437163b586d425a3866545dea68d61048",
-        "title" : "Update author list"
+        "date" : "2026-06-08 11:38:20 +0200",
+        "hash" : "bb2c76201eddfc9773178fbd6ae16fcf7584379a",
+        "title" : "chore: cleanup obsolete Transifex mention (#1015)"
       }
     }
   },
