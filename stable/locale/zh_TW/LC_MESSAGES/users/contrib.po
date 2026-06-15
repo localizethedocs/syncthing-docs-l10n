@@ -112,7 +112,7 @@ msgstr ""
 
 #: ../../../users/contrib.rst:52
 msgid "GNOME Shell extension: A Syncthing status icon in the top bar."
-msgstr "GNOME Shell 擴充套件：在頂端列顯示 Syncthing 狀態圖示。"
+msgstr ""
 
 #: ../../../users/contrib.rst:54
 msgid ""
