@@ -749,6 +749,3 @@ msgstr ""
 #: ../../../users/contrib.rst:310
 msgid "`munin-syncthing <https://gitlab.com/daftaupe/munin-syncthing>`_"
 msgstr ""
-
-#~ msgid "GNOME Shell extension: A Syncthing status icon in the top bar."
-#~ msgstr "GNOME Shell 擴充套件：在頂端列顯示 Syncthing 狀態圖示。"
