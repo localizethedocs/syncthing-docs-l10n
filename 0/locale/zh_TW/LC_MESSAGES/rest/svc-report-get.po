@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../rest/svc-report-get.rst:2
 msgid "GET /rest/svc/report"
-msgstr ""
+msgstr "GET /rest/svc/report"
 
 #: ../../../rest/svc-report-get.rst:4
 msgid "Returns the data sent in the anonymous usage report."

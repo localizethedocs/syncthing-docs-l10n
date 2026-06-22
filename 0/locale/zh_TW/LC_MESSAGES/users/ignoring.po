@@ -147,7 +147,7 @@ msgstr ""
 
 #: ../../../users/ignoring.rst:88
 msgid "Example"
-msgstr ""
+msgstr "範例"
 
 #: ../../../users/ignoring.rst:90
 msgid "Given a directory layout::"

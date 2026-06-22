@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../rest/stats-folder-get.rst:2
 msgid "GET /rest/stats/folder"
-msgstr ""
+msgstr "GET /rest/stats/folder"
 
 #: ../../../rest/stats-folder-get.rst:4
 msgid ""

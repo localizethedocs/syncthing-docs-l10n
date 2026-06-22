@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../rest/system-log-get.rst:2
 msgid "GET /rest/system/log"
-msgstr ""
+msgstr "GET /rest/system/log"
 
 #: ../../../rest/system-log-get.rst:6
 msgid "Returns the list of recent log entries."

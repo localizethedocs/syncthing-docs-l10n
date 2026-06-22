@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../rest/db-ignores-post.rst:2
 msgid "POST /rest/db/ignores"
-msgstr ""
+msgstr "POST /rest/db/ignores"
 
 #: ../../../rest/db-ignores-post.rst:4
 msgid ""

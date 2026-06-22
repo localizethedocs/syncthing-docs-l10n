@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../rest/db-scan-post.rst:2
 msgid "POST /rest/db/scan"
-msgstr ""
+msgstr "POST /rest/db/scan"
 
 #: ../../../rest/db-scan-post.rst:4
 msgid ""
@@ -49,3 +49,4 @@ msgstr ""
 msgid ""
 "curl -X POST http://127.0.0.1:8384/rest/db/scan?folder=default&sub=foo/bar"
 msgstr ""
+"curl -X POST http://127.0.0.1:8384/rest/db/scan?folder=default&sub=foo/bar"

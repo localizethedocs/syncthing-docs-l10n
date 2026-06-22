@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../rest/system-error-clear-post.rst:2
 msgid "POST /rest/system/error/clear"
-msgstr ""
+msgstr "POST /rest/system/error/clear"
 
 #: ../../../rest/system-error-clear-post.rst:4
 msgid "Post with empty to body to remove all recent errors."
