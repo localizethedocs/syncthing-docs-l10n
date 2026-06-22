@@ -183,6 +183,8 @@ msgid ""
 "$ syncthing decrypt --to <plaintext-destination> --password <your-password> "
 "<encrypted-folder-path>"
 msgstr ""
+"$ syncthing decrypt --to <plaintext-destination> --password <your-password> "
+"<encrypted-folder-path>"
 
 #: ../../../users/untrusted.rst:163
 msgid "Technicals"
@@ -195,7 +197,7 @@ msgstr ""
 
 #: ../../../users/untrusted.rst:167
 msgid "File data"
-msgstr ""
+msgstr "檔案資料"
 
 #: ../../../users/untrusted.rst:168
 msgid "File metadata, including name, times and hashes"

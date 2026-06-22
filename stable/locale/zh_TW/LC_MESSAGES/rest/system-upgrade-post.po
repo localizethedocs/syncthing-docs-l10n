@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../rest/system-upgrade-post.rst:2
 msgid "POST /rest/system/upgrade"
-msgstr ""
+msgstr "POST /rest/system/upgrade"
 
 #: ../../../rest/system-upgrade-post.rst:4
 msgid ""

@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../rest/system-error-post.rst:2
 msgid "POST /rest/system/error"
-msgstr ""
+msgstr "POST /rest/system/error"
 
 #: ../../../rest/system-error-post.rst:4
 msgid ""

@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../rest/system-version-get.rst:2
 msgid "GET /rest/system/version"
-msgstr ""
+msgstr "GET /rest/system/version"
 
 #: ../../../rest/system-version-get.rst:4
 msgid "Returns the current Syncthing version information."

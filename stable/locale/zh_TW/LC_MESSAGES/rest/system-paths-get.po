@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../rest/system-paths-get.rst:2
 msgid "GET /rest/system/paths"
-msgstr ""
+msgstr "GET /rest/system/paths"
 
 #: ../../../rest/system-paths-get.rst:6
 msgid ""

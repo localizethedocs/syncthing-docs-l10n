@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../rest/folder-versions-post.rst:2
 msgid "POST /rest/folder/versions"
-msgstr ""
+msgstr "POST /rest/folder/versions"
 
 #: ../../../rest/folder-versions-post.rst:4
 msgid ""
@@ -44,3 +44,8 @@ msgid ""
 "  \"baz\": \"2022-02-06T20:44:20+01:00\"\n"
 "}'"
 msgstr ""
+"curl -X POST -H X-API-key:... http://127.0.0.1:8384/rest/folder/versions?"
+"folder=default -d '{\n"
+"  \"dir1/dir2/bar\": \"2022-02-06T20:44:12+01:00\",\n"
+"  \"baz\": \"2022-02-06T20:44:20+01:00\"\n"
+"}'"

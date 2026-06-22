@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../rest/system-error-get.rst:2
 msgid "GET /rest/system/error"
-msgstr ""
+msgstr "GET /rest/system/error"
 
 #: ../../../rest/system-error-get.rst:4
 msgid "Return format changed in 0.12.0."

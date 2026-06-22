@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../rest/db-browse-get.rst:2
 msgid "GET /rest/db/browse"
-msgstr ""
+msgstr "GET /rest/db/browse"
 
 #: ../../../rest/db-browse-get.rst:4
 msgid ""
