@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../rest/system-pause-post.rst:2
 msgid "POST /rest/system/pause"
-msgstr ""
+msgstr "POST /rest/system/pause"
 
 #: ../../../rest/system-pause-post.rst:4
 msgid "Pause the given device or all devices."

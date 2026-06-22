@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../rest/db-revert-post.rst:2
 msgid "POST /rest/db/revert"
-msgstr ""
+msgstr "POST /rest/db/revert"
 
 #: ../../../rest/db-revert-post.rst:6
 msgid ""
@@ -37,3 +37,5 @@ msgid ""
 "curl -X POST -H X-API-Key:... http://127.0.0.1:8384/rest/db/revert?"
 "folder=default"
 msgstr ""
+"curl -X POST -H X-API-Key:... http://127.0.0.1:8384/rest/db/revert?"
+"folder=default"

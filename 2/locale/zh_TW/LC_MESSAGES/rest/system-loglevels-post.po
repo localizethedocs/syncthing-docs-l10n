@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../rest/system-loglevels-post.rst:2
 msgid "POST /rest/system/loglevels"
-msgstr ""
+msgstr "POST /rest/system/loglevels"
 
 #: ../../../rest/system-loglevels-post.rst:6
 msgid ""

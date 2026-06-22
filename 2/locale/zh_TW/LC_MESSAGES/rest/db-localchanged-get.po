@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../rest/db-localchanged-get.rst:2
 msgid "GET /rest/db/localchanged"
-msgstr ""
+msgstr "GET /rest/db/localchanged"
 
 #: ../../../rest/db-localchanged-get.rst:6
 msgid ""

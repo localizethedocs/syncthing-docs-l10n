@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../rest/noauth-health-get.rst:2
 msgid "GET /rest/noauth/health"
-msgstr ""
+msgstr "GET /rest/noauth/health"
 
 #: ../../../rest/noauth-health-get.rst:4
 msgid "Returns a ``{\"status\": \"OK\"}`` object."
