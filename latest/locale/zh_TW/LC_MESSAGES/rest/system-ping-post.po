@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../rest/system-ping-post.rst:2
 msgid "POST /rest/system/ping"
-msgstr ""
+msgstr "POST /rest/system/ping"
 
 #: ../../../rest/system-ping-post.rst:4
 msgid "Returns a ``{\"ping\": \"pong\"}`` object."

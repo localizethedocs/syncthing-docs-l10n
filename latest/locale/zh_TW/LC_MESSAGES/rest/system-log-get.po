@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../rest/system-log-get.rst:2
 msgid "GET /rest/system/log"
-msgstr ""
+msgstr "GET /rest/system/log"
 
 #: ../../../rest/system-log-get.rst:6
 msgid ""
@@ -42,7 +42,7 @@ msgstr ""
 
 #: ../../../rest/system-log-get.rst:21
 msgid "GET /rest/system/log.txt"
-msgstr ""
+msgstr "GET /rest/system/log.txt"
 
 #: ../../../rest/system-log-get.rst:23
 msgid ""

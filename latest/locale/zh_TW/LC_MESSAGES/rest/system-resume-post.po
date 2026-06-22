@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../rest/system-resume-post.rst:2
 msgid "POST /rest/system/resume"
-msgstr ""
+msgstr "POST /rest/system/resume"
 
 #: ../../../rest/system-resume-post.rst:4
 msgid "Resume the given device or all devices."

@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../rest/events-get.rst:2
 msgid "GET /rest/events"
-msgstr ""
+msgstr "GET /rest/events"
 
 #: ../../../rest/events-get.rst:4
 msgid "To receive events, perform a HTTP GET of ``/rest/events``."
@@ -64,7 +64,7 @@ msgstr ""
 
 #: ../../../rest/events-get.rst:33
 msgid "GET /rest/events/disk"
-msgstr ""
+msgstr "GET /rest/events/disk"
 
 #: ../../../rest/events-get.rst:35
 msgid ""

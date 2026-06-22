@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../rest/system-shutdown-post.rst:2
 msgid "POST /rest/system/shutdown"
-msgstr ""
+msgstr "POST /rest/system/shutdown"
 
 #: ../../../rest/system-shutdown-post.rst:4
 msgid "Post with empty body to cause Syncthing to exit and not restart."

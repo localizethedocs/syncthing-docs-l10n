@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../rest/system-ping-get.rst:2
 msgid "GET /rest/system/ping"
-msgstr ""
+msgstr "GET /rest/system/ping"
 
 #: ../../../rest/system-ping-get.rst:4
 msgid "Returns a ``{\"ping\": \"pong\"}`` object."
