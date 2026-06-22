@@ -49,7 +49,7 @@ msgstr ""
 
 #: ../../../rest/debug.rst:23
 msgid "GET /rest/debug/cpuprof"
-msgstr ""
+msgstr "GET /rest/debug/cpuprof"
 
 #: ../../../rest/debug.rst:25
 msgid ""
@@ -59,7 +59,7 @@ msgstr ""
 
 #: ../../../rest/debug.rst:30
 msgid "GET /rest/debug/heapprof"
-msgstr ""
+msgstr "GET /rest/debug/heapprof"
 
 #: ../../../rest/debug.rst:32
 msgid ""
@@ -69,7 +69,7 @@ msgstr ""
 
 #: ../../../rest/debug.rst:37
 msgid "GET /rest/debug/support"
-msgstr ""
+msgstr "GET /rest/debug/support"
 
 #: ../../../rest/debug.rst:39
 msgid ""
@@ -82,7 +82,7 @@ msgstr ""
 
 #: ../../../rest/debug.rst:46
 msgid "GET /rest/debug/file"
-msgstr ""
+msgstr "GET /rest/debug/file"
 
 #: ../../../rest/debug.rst:48
 msgid ""

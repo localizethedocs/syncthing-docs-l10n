@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../rest/db-remoteneed-get.rst:2
 msgid "GET /rest/db/remoteneed"
-msgstr ""
+msgstr "GET /rest/db/remoteneed"
 
 #: ../../../rest/db-remoteneed-get.rst:6
 msgid ""

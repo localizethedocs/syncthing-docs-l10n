@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../rest/system-discovery-get.rst:2
 msgid "GET /rest/system/discovery"
-msgstr ""
+msgstr "GET /rest/system/discovery"
 
 #: ../../../rest/system-discovery-get.rst:4
 msgid "Returns the contents of the local discovery cache."

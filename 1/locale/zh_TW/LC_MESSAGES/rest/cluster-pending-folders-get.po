@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../rest/cluster-pending-folders-get.rst:2
 msgid "GET /rest/cluster/pending/folders"
-msgstr ""
+msgstr "GET /rest/cluster/pending/folders"
 
 #: ../../../rest/cluster-pending-folders-get.rst:6
 msgid ""

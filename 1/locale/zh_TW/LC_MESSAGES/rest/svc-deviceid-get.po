@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../rest/svc-deviceid-get.rst:2
 msgid "GET /rest/svc/deviceid"
-msgstr ""
+msgstr "GET /rest/svc/deviceid"
 
 #: ../../../rest/svc-deviceid-get.rst:4
 msgid ""

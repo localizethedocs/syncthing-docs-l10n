@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../rest/db-completion-get.rst:2
 msgid "GET /rest/db/completion"
-msgstr ""
+msgstr "GET /rest/db/completion"
 
 #: ../../../rest/db-completion-get.rst:4
 msgid ""

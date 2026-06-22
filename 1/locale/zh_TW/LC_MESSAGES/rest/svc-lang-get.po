@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../rest/svc-lang-get.rst:2
 msgid "GET /rest/svc/lang"
-msgstr ""
+msgstr "GET /rest/svc/lang"
 
 #: ../../../rest/svc-lang-get.rst:4
 msgid ""

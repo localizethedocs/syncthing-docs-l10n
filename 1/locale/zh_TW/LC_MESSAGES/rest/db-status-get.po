@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../rest/db-status-get.rst:2
 msgid "GET /rest/db/status"
-msgstr ""
+msgstr "GET /rest/db/status"
 
 #: ../../../rest/db-status-get.rst:4
 msgid "Returns information about the current status of a folder."
