@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Syncthing latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-11 11:49+0000\n"
+"POT-Creation-Date: 2026-08-31 16:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -72,9 +72,10 @@ msgstr ""
 
 #: ../../../users/proxying.rst:40
 msgid ""
-"Note that this environment variable is *not* named with capital letters - it "
-"must be exactly ``all_proxy``. The \"Proxy settings detected\" log message "
-"indicates that Syncthing is using the proxy configuration."
+"Both the uppercase ``ALL_PROXY`` and lowercase ``all_proxy`` spellings are "
+"supported. If both are set, ``ALL_PROXY`` takes precedence. The \"Proxy "
+"settings detected\" log message indicates that Syncthing is using the proxy "
+"configuration."
 msgstr ""
 
 #: ../../../users/proxying.rst:45
