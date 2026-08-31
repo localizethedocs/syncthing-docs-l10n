@@ -1,0 +1,125 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing 0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../users/firewall.rst:4
+msgid "Firewall Setup"
+msgstr "防火牆設定"
+
+#: ../../../users/firewall.rst:7
+msgid "Port Forwards"
+msgstr ""
+
+#: ../../../users/firewall.rst:9
+msgid ""
+"If you have a NAT router which supports UPnP, the easiest way to get a "
+"working port forward is to make sure UPnP setting is enabled on both "
+"Syncthing and the router – Syncthing will try to handle the rest. If it "
+"succeeds you will see a message in the console saying::"
+msgstr ""
+
+#: ../../../users/firewall.rst:14
+msgid "Created UPnP port mapping for external port XXXXX on UPnP device YYYYY."
+msgstr ""
+
+#: ../../../users/firewall.rst:16
+msgid ""
+"If this is not possible or desirable you should set up a port forward for "
+"port **22000/TCP**, or the port set in the *Sync Protocol Listen Address* "
+"setting. The external forwarded port and the internal destination port has "
+"to be the same (i.e. 22000/TCP)."
+msgstr ""
+
+#: ../../../users/firewall.rst:21
+msgid ""
+"Communication in Syncthing works both ways. Therefore if you set up port "
+"forwards for one device, other devices will be able to connect to it even "
+"when they are behind a NAT network or firewall."
+msgstr ""
+
+#: ../../../users/firewall.rst:25
+msgid ""
+"In the absence of port forwarding, :ref:`relaying` may work well enough to "
+"get devices connected and synced, but will perform poorly in comparison to a "
+"direct connection."
+msgstr ""
+
+#: ../../../users/firewall.rst:30
+msgid "Local Firewall"
+msgstr ""
+
+#: ../../../users/firewall.rst:32
+msgid ""
+"If your PC has a local firewall, you will need to open the following ports "
+"for incoming and outgoing traffic:"
+msgstr ""
+
+#: ../../../users/firewall.rst:35
+msgid ""
+"Port **22000/TCP** (or the actual listening port if you have changed the "
+"*Sync Protocol Listen Address* setting.)"
+msgstr ""
+
+#: ../../../users/firewall.rst:37
+msgid ""
+"Port **21027/UDP** (for discovery broadcasts on IPv4 and multicasts on IPv6)"
+msgstr ""
+
+#: ../../../users/firewall.rst:40
+msgid "Remote Web GUI"
+msgstr ""
+
+#: ../../../users/firewall.rst:42
+msgid ""
+"To be able to access the web GUI from other computers, you need to change "
+"the *GUI Listen Address* setting from the default ``127.0.0.1:8384`` to "
+"``0.0.0.0:8384``. You also need to open the port in your local firewall if "
+"you have one."
+msgstr ""
+
+#: ../../../users/firewall.rst:48
+msgid "Tunneling via SSH"
+msgstr ""
+
+#: ../../../users/firewall.rst:50
+msgid ""
+"If you have SSH access to the machine running Syncthing but would rather not "
+"open the web GUI port to the outside world, you can access it through a SSH "
+"tunnel instead. You can start a tunnel with a command like the following::"
+msgstr ""
+
+#: ../../../users/firewall.rst:54
+msgid "ssh -L 9999:localhost:8384 machine"
+msgstr ""
+
+#: ../../../users/firewall.rst:56
+msgid ""
+"This will bind to your local port 9999 and forward all connections from "
+"there to port 8384 on the target machine. This still works even if Syncthing "
+"is bound to listen on localhost only."
+msgstr ""
+
+#: ../../../users/firewall.rst:61
+msgid "Via a Proxy"
+msgstr ""
+
+#: ../../../users/firewall.rst:63
+msgid ""
+"Syncthing can use a SOCKS5 proxy for outbound connections. Please see :ref:"
+"`proxying`."
+msgstr ""

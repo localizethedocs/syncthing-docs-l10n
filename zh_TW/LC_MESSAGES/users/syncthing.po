@@ -1,0 +1,450 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing 0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../users/syncthing.rst:2
+msgid "Syncthing"
+msgstr ""
+
+#: ../../../users/syncthing.rst:5
+msgid "Synopsis"
+msgstr "概要"
+
+#: ../../../users/syncthing.rst:9
+msgid ""
+"syncthing [-audit] [-browser-only] [-generate=<dir>] [-gui-"
+"address=<address>] [-gui-apikey=<key>]\n"
+"          [-home=<dir>] [-logfile=<filename>] [-logflags=<flags>] [-no-"
+"browser]\n"
+"          [-no-console] [-no-restart] [-paths] [-paused] [-reset] [-upgrade] "
+"[-upgrade-check]\n"
+"          [-upgrade-to=<url>] [-verbose] [-version]"
+msgstr ""
+
+#: ../../../users/syncthing.rst:15
+msgid "Description"
+msgstr "描述"
+
+#: ../../../users/syncthing.rst:17
+msgid ""
+"Syncthing is an application that lets you synchronize your files across "
+"multiple devices. This means the creation, modification or deletion of files "
+"on one machine will automatically be replicated to your other devices. We "
+"believe your data is your data alone and you deserve to choose where it is "
+"stored. Therefore Syncthing does not upload your data to the cloud but "
+"exchanges your data across your machines as soon as they are online at the "
+"same time."
+msgstr ""
+
+#: ../../../users/syncthing.rst:25
+msgid "Options"
+msgstr ""
+
+#: ../../../users/syncthing.rst:29
+msgid "Write events to audit file."
+msgstr ""
+
+#: ../../../users/syncthing.rst:33
+msgid "Generate key and config in specified dir, then exit."
+msgstr ""
+
+#: ../../../users/syncthing.rst:37
+msgid "Override GUI address."
+msgstr ""
+
+#: ../../../users/syncthing.rst:41
+msgid ""
+"Set configuration directory. The default configuration directory is: "
+"``$HOME/.config/syncthing``."
+msgstr ""
+
+#: ../../../users/syncthing.rst:46
+msgid ""
+"Set destination filename for logging (use ``\"-\"`` for stdout, which is the "
+"default option)."
+msgstr ""
+
+#: ../../../users/syncthing.rst:50
+msgid ""
+"Select information in log line prefix, default 2. The ``-logflags`` value is "
+"a sum of the following:"
+msgstr ""
+
+#: ../../../users/syncthing.rst:53
+msgid "1: Date"
+msgstr ""
+
+#: ../../../users/syncthing.rst:54
+msgid "2: Time"
+msgstr ""
+
+#: ../../../users/syncthing.rst:55
+msgid "4: Microsecond time"
+msgstr ""
+
+#: ../../../users/syncthing.rst:56
+msgid "8: Long filename"
+msgstr ""
+
+#: ../../../users/syncthing.rst:57
+msgid "16: Short filename"
+msgstr ""
+
+#: ../../../users/syncthing.rst:59
+msgid ""
+"To prefix each log line with date and time, set ``-logflags=3`` (1 + 2 from "
+"above). The value 0 is used to disable all of the above. The default is to "
+"show time only (2)."
+msgstr ""
+
+#: ../../../users/syncthing.rst:65
+msgid "Do not start a browser."
+msgstr "不要啟動瀏覽器。"
+
+#: ../../../users/syncthing.rst:69
+msgid "Hide the console window. (On Windows only)"
+msgstr "隱藏主控台視窗。（僅限 Windows）"
+
+#: ../../../users/syncthing.rst:73
+msgid "Do not restart; just exit."
+msgstr ""
+
+#: ../../../users/syncthing.rst:77
+msgid ""
+"Print the paths used for configuration, keys, database, GUI overrides, "
+"default sync folder and the log file."
+msgstr ""
+
+#: ../../../users/syncthing.rst:81
+msgid "Reset the database."
+msgstr ""
+
+#: ../../../users/syncthing.rst:85
+msgid "Perform upgrade."
+msgstr ""
+
+#: ../../../users/syncthing.rst:89
+msgid "Check for available upgrade."
+msgstr ""
+
+#: ../../../users/syncthing.rst:93
+msgid "Force upgrade directly from specified URL."
+msgstr ""
+
+#: ../../../users/syncthing.rst:97
+msgid "Print verbose log output."
+msgstr ""
+
+#: ../../../users/syncthing.rst:101
+msgid "Show version."
+msgstr ""
+
+#: ../../../users/syncthing.rst:104
+msgid "Deprecated Options"
+msgstr ""
+
+#: ../../../users/syncthing.rst:108
+msgid ""
+"Override GUI API key (deprecated as of v0.13, to be removed in the future - "
+"do not use)."
+msgstr ""
+
+#: ../../../users/syncthing.rst:111
+msgid "Exit Codes"
+msgstr ""
+
+#: ../../../users/syncthing.rst:113
+msgid "0"
+msgstr ""
+
+#: ../../../users/syncthing.rst:114
+msgid "Success / Shutdown"
+msgstr ""
+
+#: ../../../users/syncthing.rst:115
+msgid "1"
+msgstr ""
+
+#: ../../../users/syncthing.rst:116
+msgid "Error"
+msgstr ""
+
+#: ../../../users/syncthing.rst:117
+msgid "2"
+msgstr ""
+
+#: ../../../users/syncthing.rst:118
+msgid "Upgrade not available"
+msgstr ""
+
+#: ../../../users/syncthing.rst:119
+msgid "3"
+msgstr ""
+
+#: ../../../users/syncthing.rst:120
+msgid "Restarting"
+msgstr ""
+
+#: ../../../users/syncthing.rst:121
+msgid "4"
+msgstr ""
+
+#: ../../../users/syncthing.rst:122
+msgid "Upgrading"
+msgstr ""
+
+#: ../../../users/syncthing.rst:124
+msgid ""
+"Some of these exit codes are only returned when running without a monitor "
+"process (with environment variable ``STNORESTART`` set). Exit codes over 125 "
+"are usually returned by the shell/binary loader/default signal handler. Exit "
+"codes over 128+N on Unix usually represent the signal which caused the "
+"process to exit. For example, ``128 + 9 (SIGKILL) = 137``."
+msgstr ""
+
+#: ../../../users/syncthing.rst:131
+msgid "Development Settings"
+msgstr "開發設定"
+
+#: ../../../users/syncthing.rst:133
+msgid ""
+"The following environment variables modify Syncthing's behavior in ways that "
+"are mostly useful for developers. Use with care. If you start syncthing from "
+"within service managers like systemd or supervisor path expansion may not be "
+"supported."
+msgstr ""
+
+#: ../../../users/syncthing.rst:138
+msgid "STNODEFAULTFOLDER"
+msgstr ""
+
+#: ../../../users/syncthing.rst:139
+msgid ""
+"Don't create a default folder when starting for the first time. This "
+"variable will be ignored anytime after the first run."
+msgstr ""
+
+#: ../../../users/syncthing.rst:141
+msgid "STGUIASSETS"
+msgstr ""
+
+#: ../../../users/syncthing.rst:142
+msgid "Directory to load GUI assets from. Overrides compiled in assets."
+msgstr ""
+
+#: ../../../users/syncthing.rst:143
+msgid "STTRACE"
+msgstr "STTRACE"
+
+#: ../../../users/syncthing.rst:144
+msgid ""
+"A comma separated string of facilities to trace. The valid facility strings "
+"are:"
+msgstr ""
+
+#: ../../../users/syncthing.rst:147
+msgid "beacon"
+msgstr ""
+
+#: ../../../users/syncthing.rst:148
+msgid "the beacon package"
+msgstr ""
+
+#: ../../../users/syncthing.rst:149
+msgid "discover"
+msgstr ""
+
+#: ../../../users/syncthing.rst:150
+msgid "the discover package"
+msgstr ""
+
+#: ../../../users/syncthing.rst:151
+msgid "events"
+msgstr ""
+
+#: ../../../users/syncthing.rst:152
+msgid "the events package"
+msgstr ""
+
+#: ../../../users/syncthing.rst:153
+msgid "files"
+msgstr ""
+
+#: ../../../users/syncthing.rst:154
+msgid "the files package"
+msgstr ""
+
+#: ../../../users/syncthing.rst:155
+msgid "http"
+msgstr ""
+
+#: ../../../users/syncthing.rst:156
+msgid "the main package; HTTP requests"
+msgstr ""
+
+#: ../../../users/syncthing.rst:157
+msgid "locks"
+msgstr ""
+
+#: ../../../users/syncthing.rst:158
+msgid "the sync package; trace long held locks"
+msgstr ""
+
+#: ../../../users/syncthing.rst:159
+msgid "net"
+msgstr ""
+
+#: ../../../users/syncthing.rst:160
+msgid "the main package; connections & network messages"
+msgstr ""
+
+#: ../../../users/syncthing.rst:161
+msgid "model"
+msgstr ""
+
+#: ../../../users/syncthing.rst:162
+msgid "the model package"
+msgstr ""
+
+#: ../../../users/syncthing.rst:163
+msgid "scanner"
+msgstr ""
+
+#: ../../../users/syncthing.rst:164
+msgid "the scanner package"
+msgstr ""
+
+#: ../../../users/syncthing.rst:165
+msgid "stats"
+msgstr ""
+
+#: ../../../users/syncthing.rst:166
+msgid "the stats package"
+msgstr ""
+
+#: ../../../users/syncthing.rst:167
+msgid "upnp"
+msgstr ""
+
+#: ../../../users/syncthing.rst:168
+msgid "the upnp package"
+msgstr ""
+
+#: ../../../users/syncthing.rst:169
+msgid "xdr"
+msgstr ""
+
+#: ../../../users/syncthing.rst:170
+msgid "the xdr package"
+msgstr ""
+
+#: ../../../users/syncthing.rst:171
+msgid "all"
+msgstr ""
+
+#: ../../../users/syncthing.rst:172
+msgid "all of the above"
+msgstr ""
+
+#: ../../../users/syncthing.rst:174
+msgid "STPROFILER"
+msgstr ""
+
+#: ../../../users/syncthing.rst:175
+msgid ""
+"Set to a listen address such as \"127.0.0.1:9090\" to start the profiler "
+"with HTTP access."
+msgstr ""
+
+#: ../../../users/syncthing.rst:177
+msgid "STCPUPROFILE"
+msgstr ""
+
+#: ../../../users/syncthing.rst:178
+msgid "Write a CPU profile to cpu-$pid.pprof on exit."
+msgstr ""
+
+#: ../../../users/syncthing.rst:179
+msgid "STHEAPPROFILE"
+msgstr ""
+
+#: ../../../users/syncthing.rst:180
+msgid ""
+"Write heap profiles to ``heap-$pid-$timestamp.pprof`` each time heap usage "
+"increases."
+msgstr ""
+
+#: ../../../users/syncthing.rst:182
+msgid "STBLOCKPROFILE"
+msgstr ""
+
+#: ../../../users/syncthing.rst:183
+msgid ""
+"Write block profiles to ``block-$pid-$timestamp.pprof`` every 20 seconds."
+msgstr ""
+
+#: ../../../users/syncthing.rst:184
+msgid "STPERFSTATS"
+msgstr ""
+
+#: ../../../users/syncthing.rst:185
+msgid ""
+"Write running performance statistics to ``perf-$pid.csv``. Not supported on "
+"Windows."
+msgstr ""
+
+#: ../../../users/syncthing.rst:187
+msgid "STNOUPGRADE"
+msgstr ""
+
+#: ../../../users/syncthing.rst:188
+msgid "Disable automatic upgrades."
+msgstr "停用自動升級。"
+
+#: ../../../users/syncthing.rst:189
+msgid "GOMAXPROCS"
+msgstr ""
+
+#: ../../../users/syncthing.rst:190
+msgid ""
+"Set the maximum number of CPU cores to use. Defaults to all available CPU "
+"cores."
+msgstr ""
+
+#: ../../../users/syncthing.rst:192
+msgid "GOGC"
+msgstr ""
+
+#: ../../../users/syncthing.rst:193
+msgid ""
+"Percentage of heap growth at which to trigger GC. Default is 100. Lower "
+"numbers keep peak memory usage down, at the price of CPU usage (ie. "
+"performance)."
+msgstr ""
+
+#: ../../../users/syncthing.rst:198
+msgid "See Also"
+msgstr ""
+
+#: ../../../users/syncthing.rst:200
+msgid ""
+":manpage:`syncthing-config(5)`, :manpage:`syncthing-stignore(5)`, :manpage:"
+"`syncthing-device-ids(7)`, :manpage:`syncthing-security(7)`, :manpage:"
+"`syncthing-networking(7)`, :manpage:`syncthing-versioning(7)`, :manpage:"
+"`syncthing-faq(7)`"
+msgstr ""
