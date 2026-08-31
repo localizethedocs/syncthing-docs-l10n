@@ -1,0 +1,212 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="sr-RS" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>An intro to the GUI &mdash; документација Syncthing v0.13</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/syncthing.css?v=21f33da5" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://projects.localizethedocs.org/syncthing-docs-l10n/intro/gui.html" />
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=563f8401"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/translations.js?v=96356656"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Индекс" href="../genindex.html" />
+    <link rel="search" title="Претрага" href="../search.html" />
+    <link rel="next" title="Project Presentation" href="project-presentation.html" />
+    <link rel="prev" title="Getting Started" href="getting-started.html" />
+ 
+<script type="text/javascript" src="../ltd-provenance.js"></script>
+<script type="text/javascript" src="../ltd-current.js"></script>
+<script type="text/javascript" src="../../../ltd-config.js"></script>
+<script type="text/javascript" src="../../../ltd-flyout.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Syncthing
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">An intro to the GUI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#folder-view">Folder View</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#device-view">Device View</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="project-presentation.html">Project Presentation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">For Users</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../users/syncthing.html">Command Line Operation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/config.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/advanced.html">Advanced Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/foldermaster.html">Folder Master Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/syncing.html">Understanding Synchronization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/firewall.html">Firewall Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/relaying.html">Relaying</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/proxying.html">Using Proxies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/ignoring.html">Ignoring Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/versioning.html">File Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/discosrv.html">Custom Discovery Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/relaysrv.html">Custom Relay Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/custom-upgrades.html">Custom Upgrade Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/autostart.html">Starting Syncthing Automatically</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/contrib.html">Community Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/reverseproxy.html">Reverse Proxy Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/security.html">Security Principles</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">For Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../dev/intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/building.html">Building Syncthing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/contributing.html">Contribution Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/debugging.html">Debugging Syncthing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/device-ids.html">Understanding Device IDs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/events.html">Event API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/infrastructure.html">Syncthing Infrastructure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/issues.html">Issue Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/jenkins.html">Interacting with Jenkins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/mergebot.html">Interacting with the Merge Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/release-creation.html">Creating a Release</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/release-schedule.html">Release Schedule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/release-signing.html">Release Signing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/rest.html">REST API</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Specifications</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../specs/index.html">Specifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../specs/bep-v1.html">Block Exchange Protocol v1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../specs/globaldisco-v3.html">Global Discovery v3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../specs/localdisco-v3.html">Local Discovery Protocol v3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../specs/relay-v1.html">Relay Protocol v1</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Syncthing</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">An intro to the GUI</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/syncthing/docs/blob/master/intro/gui.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="an-intro-to-the-gui">
+<h1>An intro to the GUI<a class="headerlink" href="#an-intro-to-the-gui" title="Link to this heading"></a></h1>
+<section id="folder-view">
+<h2>Folder View<a class="headerlink" href="#folder-view" title="Link to this heading"></a></h2>
+<p>The left side of the screen shows the ID and current state of all configured
+folders. Clicking the folder name makes that section expand to show more
+detailed folder information, and buttons for editing the configuration or
+forcing a rescan.</p>
+<img alt="../_images/gui1.png" src="../_images/gui1.png" />
+<p>A folder can be in any one of these states:</p>
+<dl class="simple">
+<dt>Unknown</dt><dd><p>while the GUI is loading.</p>
+</dd>
+<dt>Unshared</dt><dd><p>when you have not shared this folder,</p>
+</dd>
+<dt>Stopped</dt><dd><p>when the folder has experienced an error,</p>
+</dd>
+<dt>Scanning</dt><dd><p>while Syncthing is looking in the folder for local changes,</p>
+</dd>
+<dt>Up to Date</dt><dd><p>when the folder is in sync with the rest of the cluster,</p>
+</dd>
+<dt>Syncing</dt><dd><p>when this device is downloading changes from the network.</p>
+</dd>
+</dl>
+<p>Among the folder details, you can see the current „Global State” and „Local State” summaries, as well as the amount of „Out of Sync” data if the the folder state is not up to date.</p>
+<dl class="simple">
+<dt>Global State</dt><dd><p>indicates how much data the fully up to date folder contains - this is basically the sum of the newest versions of all files from all connected devices. This is the size of the folder on your computer when it is fully in sync with the cluster.</p>
+</dd>
+<dt>Local State</dt><dd><p>shows how much data the folder actually contains right now. This can be more or less than the global state, if the folder is currently synchronizing with other devices.</p>
+</dd>
+<dt>Out of Sync</dt><dd><p>shows how much data needs to be synchronized from other devices. Note that this is the sum of all out of sync <em>files</em> - if you already have parts of such a file, or an older version of the file, less data than this will need to be transferred over the network.</p>
+</dd>
+</dl>
+</section>
+<section id="device-view">
+<h2>Device View<a class="headerlink" href="#device-view" title="Link to this heading"></a></h2>
+<p>The right side of the screen shows the overall state of all configured
+devices. The local device (your computer) is always at the top, with remote
+devices in alphabetical order below. For each device you see its current state
+and, when expanded, more detailed information. All transfer rates („Download
+Rate” and „Upload Rate”) are from the perspective of your computer, even those
+shown for remote devices. The rates for your local device is the sum of those
+for the remote devices.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="getting-started.html" class="btn btn-neutral float-left" title="Getting Started" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="project-presentation.html" class="btn btn-neutral float-right" title="Project Presentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+      <span class="lastupdated">Last updated on јул 27, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,267 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-TW" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selective Sync &mdash; Syncthing v0.13 說明文件</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/syncthing.css?v=21f33da5" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://projects.localizethedocs.org/syncthing-docs-l10n/draft/selective.html" />
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=53319032"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/translations.js?v=cbf116e0"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜尋" href="../search.html" />
+ 
+<script type="text/javascript" src="../ltd-provenance.js"></script>
+<script type="text/javascript" src="../ltd-current.js"></script>
+<script type="text/javascript" src="../../../ltd-config.js"></script>
+<script type="text/javascript" src="../../../ltd-flyout.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Syncthing
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro/getting-started.html">開始使用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/gui.html">An intro to the GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/project-presentation.html">Project Presentation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">For Users</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../users/syncthing.html">Command Line Operation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/faq.html">常見問題</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/config.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/advanced.html">進階組態</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/foldermaster.html">Folder Master Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/syncing.html">Understanding Synchronization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/firewall.html">防火牆設定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/relaying.html">Relaying</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/proxying.html">Using Proxies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/ignoring.html">忽略檔案</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/versioning.html">File Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/discosrv.html">Custom Discovery Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/relaysrv.html">Custom Relay Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/custom-upgrades.html">自訂升級伺服器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/autostart.html">自動啟動 Syncthing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/contrib.html">社群貢獻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/reverseproxy.html">反向代理設定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/security.html">Security Principles</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">For Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../dev/intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/building.html">建置 Syncthing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/contributing.html">Contribution Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/debugging.html">除錯 Syncthing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/device-ids.html">理解裝置 ID</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/events.html">Event API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/infrastructure.html">Syncthing 基礎設施</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/issues.html">議題管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/jenkins.html">Interacting with Jenkins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/mergebot.html">Interacting with the Merge Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/release-creation.html">Creating a Release</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/release-schedule.html">Release Schedule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/release-signing.html">Release Signing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/rest.html">REST API</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Specifications</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../specs/index.html">規格</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../specs/bep-v1.html">區塊交換協定 v1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../specs/globaldisco-v3.html">Global Discovery v3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../specs/localdisco-v3.html">Local Discovery Protocol v3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../specs/relay-v1.html">Relay Protocol v1</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Syncthing</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Selective Sync</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/syncthing/docs/blob/master/draft/selective.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="admonition note">
+<p class="admonition-title">備註</p>
+<p>This describes an incomplete feature under development.</p>
+</div>
+<section id="selective-sync">
+<h1>Selective Sync<a class="headerlink" href="#selective-sync" title="連結到這個標頭"></a></h1>
+<p>This is for when you don't want to synchronize <em>all</em> files from the cluster
+onto your device, or you want only some directories of yours to be synced
+<em>to</em> the cluster. There are two mechanisms that support this usage; <em>Directory
+Selection</em> and <em>Excluded Files</em>.</p>
+<section id="directory-selection">
+<h2>Directory Selection<a class="headerlink" href="#directory-selection" title="連結到這個標頭"></a></h2>
+<p>By default, all directories in a given folder are synchronized. Using
+directory selection, the synchronization can be limited to a subset of
+directories. The selection is done by using a tree browser. The tree
+represents the cluster wide contents of a folder. The default is represented
+by the top level being checked and directories underneath the top level thus
+being implicitly included:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">X</span><span class="p">]</span> <span class="o">~/</span><span class="n">Sync</span>
+    <span class="p">[</span> <span class="p">]</span> <span class="n">Documents</span>
+        <span class="p">[</span> <span class="p">]</span> <span class="n">Processes</span>
+        <span class="p">[</span> <span class="p">]</span> <span class="n">Standards</span>
+    <span class="p">[</span> <span class="p">]</span> <span class="n">Pictures</span>
+        <span class="p">[</span> <span class="p">]</span> <span class="n">Vacation</span>
+        <span class="p">[</span> <span class="p">]</span> <span class="n">Work</span>
+    <span class="p">[</span> <span class="p">]</span> <span class="n">Music</span>
+        <span class="p">[</span> <span class="p">]</span> <span class="n">Classical</span>
+        <span class="p">[</span> <span class="p">]</span> <span class="n">Rock</span>
+</pre></div>
+</div>
+<p>To only synchronize documents and vacation pictures, the following selection can be made:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="o">/</span><span class="p">]</span> <span class="o">~/</span><span class="n">Sync</span>
+    <span class="p">[</span><span class="n">X</span><span class="p">]</span> <span class="n">Documents</span>
+        <span class="p">[</span> <span class="p">]</span> <span class="n">Processes</span>
+        <span class="p">[</span> <span class="p">]</span> <span class="n">Standards</span>
+    <span class="p">[</span><span class="o">/</span><span class="p">]</span> <span class="n">Pictures</span>
+        <span class="p">[</span><span class="n">X</span><span class="p">]</span> <span class="n">Vacation</span>
+        <span class="p">[</span> <span class="p">]</span> <span class="n">Work</span>
+    <span class="p">[</span> <span class="p">]</span> <span class="n">Music</span>
+        <span class="p">[</span> <span class="p">]</span> <span class="n">Classical</span>
+        <span class="p">[</span> <span class="p">]</span> <span class="n">Rock</span>
+</pre></div>
+</div>
+<p>The top level shows a partial checkbox to indicate that selections have been
+made at a lower level. With this configuration Syncthing will ignore any files
+and directories no in ~/Sync/Documents or ~/Sync/Pictures/Vacation -- no
+changes will be downloaded from the cluster and local changes will not be
+tracked.</p>
+<div class="admonition note">
+<p class="admonition-title">備註</p>
+<p>When displaying the tree we must merge what we actually have on disk
+with what is in the global state, or we will not be able to show new
+directories to the user as we don't know about them...</p>
+</div>
+</section>
+<section id="excluded-files">
+<h2>Excluded Files<a class="headerlink" href="#excluded-files" title="連結到這個標頭"></a></h2>
+<p>In addition to using directory selection, specific files can be excluded by
+adding patterns to match them. Excluded files are:</p>
+<ul class="simple">
+<li><p>Ignored when found on disk (i.e. not hashed and not announced to other
+devices).</p></li>
+<li><p>Ignored when announced by other devices (i.e. will not contribute to an &quot;out
+of sync&quot; status or be fetched from the network).</p></li>
+<li><p><em>Removed</em> when present in a directory that is marked for deletion by another
+device.</p></li>
+</ul>
+<p>Patterns are in &quot;glob&quot; form, with the following allowed syntax elements:</p>
+<dl class="simple">
+<dt>Asterisk (<code class="docutils literal notranslate"><span class="pre">*</span></code>)</dt><dd><p>Matches zero or more characters.</p>
+</dd>
+<dt>Question mark (<code class="docutils literal notranslate"><span class="pre">?</span></code>)</dt><dd><p>Matches exactly one character.</p>
+</dd>
+<dt>Ranges (<code class="docutils literal notranslate"><span class="pre">[a-f]</span></code>)</dt><dd><p>Matches any of the characters in the range exactly once.</p>
+</dd>
+<dt>Exclamation mark (<code class="docutils literal notranslate"><span class="pre">!</span></code>)</dt><dd><p>At the start of a pattern, inverts the pattern (i.e. make matched file <em>not</em> be excluded).</p>
+</dd>
+</dl>
+<p>Examples:</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">*.jpg</span></code></dt><dd><p>Matches all files with the <code class="docutils literal notranslate"><span class="pre">jpg</span></code> extension.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">[0-9]*</span></code></dt><dd><p>Matches all files with names starting with a digit.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">!*.doc</span></code></dt><dd><p>Do not exclude <code class="docutils literal notranslate"><span class="pre">.doc</span></code> files.</p>
+</dd>
+</dl>
+<p>File exclusions apply only to files, not to directories, and apply equally in
+all directories in the folder. Patterns are searched in the order given and
+the first match wins.</p>
+</section>
+<section id="use-cases">
+<h2>Use Cases<a class="headerlink" href="#use-cases" title="連結到這個標頭"></a></h2>
+<dl class="simple">
+<dt>Sync only specific directories</dt><dd><p>This is covered perfectly by the &quot;directory selection&quot; part</p>
+</dd>
+<dt>Exclude common crap files like Thumbs.db</dt><dd><p>This is covered perfectly by the &quot;excluded files&quot; part</p>
+</dd>
+<dt>Sync only a specific file type</dt><dd><p>Covered by <code class="docutils literal notranslate"><span class="pre">!</span></code>-pattern plus exclude everything</p>
+</dd>
+<dt>Exclude a specific directory only</dt><dd><p>Possible by using directory selection and selecting all other directories.</p>
+</dd>
+<dt>Sync only a specific file in a specific directory; i.e. only one movie out of lots</dt><dd><p>Not really possible... Do we need this?</p>
+</dd>
+<dt>Syncing ignore and exclusion patterns between devices</dt><dd><p>Not supported. However not impossible in the future, given that we store the above in the config.</p>
+</dd>
+</dl>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+      <span class="lastupdated">最後更新於 7月 27, 2026。
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

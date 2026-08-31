@@ -1,0 +1,407 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-TW" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Syncthing &mdash; Syncthing v0.13 說明文件</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/syncthing.css?v=21f33da5" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://projects.localizethedocs.org/syncthing-docs-l10n/users/syncthing.html" />
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=53319032"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/translations.js?v=cbf116e0"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜尋" href="../search.html" />
+    <link rel="next" title="常見問題" href="faq.html" />
+    <link rel="prev" title="Project Presentation" href="../intro/project-presentation.html" />
+ 
+<script type="text/javascript" src="../ltd-provenance.js"></script>
+<script type="text/javascript" src="../ltd-current.js"></script>
+<script type="text/javascript" src="../../../ltd-config.js"></script>
+<script type="text/javascript" src="../../../ltd-flyout.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Syncthing
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro/getting-started.html">開始使用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/gui.html">An intro to the GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/project-presentation.html">Project Presentation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">For Users</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Command Line Operation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#synopsis">概要</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#description">描述</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#options">Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#deprecated-options">Deprecated Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#exit-codes">Exit Codes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#development-settings">開發設定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#see-also">See Also</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">常見問題</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced.html">進階組態</a></li>
+<li class="toctree-l1"><a class="reference internal" href="foldermaster.html">Folder Master Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="syncing.html">Understanding Synchronization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="firewall.html">防火牆設定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="relaying.html">Relaying</a></li>
+<li class="toctree-l1"><a class="reference internal" href="proxying.html">Using Proxies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ignoring.html">忽略檔案</a></li>
+<li class="toctree-l1"><a class="reference internal" href="versioning.html">File Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="discosrv.html">Custom Discovery Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="relaysrv.html">Custom Relay Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom-upgrades.html">自訂升級伺服器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autostart.html">自動啟動 Syncthing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contrib.html">社群貢獻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reverseproxy.html">反向代理設定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="security.html">Security Principles</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">For Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../dev/intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/building.html">建置 Syncthing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/contributing.html">Contribution Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/debugging.html">除錯 Syncthing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/device-ids.html">理解裝置 ID</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/events.html">Event API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/infrastructure.html">Syncthing 基礎設施</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/issues.html">議題管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/jenkins.html">Interacting with Jenkins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/mergebot.html">Interacting with the Merge Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/release-creation.html">Creating a Release</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/release-schedule.html">Release Schedule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/release-signing.html">Release Signing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/rest.html">REST API</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Specifications</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../specs/index.html">規格</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../specs/bep-v1.html">區塊交換協定 v1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../specs/globaldisco-v3.html">Global Discovery v3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../specs/localdisco-v3.html">Local Discovery Protocol v3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../specs/relay-v1.html">Relay Protocol v1</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Syncthing</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Syncthing</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/syncthing/docs/blob/master/users/syncthing.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="syncthing">
+<h1>Syncthing<a class="headerlink" href="#syncthing" title="連結到這個標頭"></a></h1>
+<section id="synopsis">
+<h2>概要<a class="headerlink" href="#synopsis" title="連結到這個標頭"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">syncthing</span> <span class="p">[</span><span class="o">-</span><span class="n">audit</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">browser</span><span class="o">-</span><span class="n">only</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">generate</span><span class="o">=&lt;</span><span class="nb">dir</span><span class="o">&gt;</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">gui</span><span class="o">-</span><span class="n">address</span><span class="o">=&lt;</span><span class="n">address</span><span class="o">&gt;</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">gui</span><span class="o">-</span><span class="n">apikey</span><span class="o">=&lt;</span><span class="n">key</span><span class="o">&gt;</span><span class="p">]</span>
+          <span class="p">[</span><span class="o">-</span><span class="n">home</span><span class="o">=&lt;</span><span class="nb">dir</span><span class="o">&gt;</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">logfile</span><span class="o">=&lt;</span><span class="n">filename</span><span class="o">&gt;</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">logflags</span><span class="o">=&lt;</span><span class="n">flags</span><span class="o">&gt;</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">no</span><span class="o">-</span><span class="n">browser</span><span class="p">]</span>
+          <span class="p">[</span><span class="o">-</span><span class="n">no</span><span class="o">-</span><span class="n">console</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">no</span><span class="o">-</span><span class="n">restart</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">paths</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">paused</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">reset</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">upgrade</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">upgrade</span><span class="o">-</span><span class="n">check</span><span class="p">]</span>
+          <span class="p">[</span><span class="o">-</span><span class="n">upgrade</span><span class="o">-</span><span class="n">to</span><span class="o">=&lt;</span><span class="n">url</span><span class="o">&gt;</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">verbose</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">version</span><span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<section id="description">
+<h2>描述<a class="headerlink" href="#description" title="連結到這個標頭"></a></h2>
+<p>Syncthing is an application that lets you synchronize your files across multiple
+devices. This means the creation, modification or deletion of files on one
+machine will automatically be replicated to your other devices. We believe your
+data is your data alone and you deserve to choose where it is stored. Therefore
+Syncthing does not upload your data to the cloud but exchanges your data across
+your machines as soon as they are online at the same time.</p>
+</section>
+<section id="options">
+<h2>Options<a class="headerlink" href="#options" title="連結到這個標頭"></a></h2>
+<dl class="std cmdoption">
+<dt class="sig sig-object std" id="cmdoption-audit">
+<span class="sig-name descname"><span class="pre">-audit</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-audit" title="連結到這個定義"></a></dt>
+<dd><p>Write events to audit file.</p>
+</dd></dl>
+
+<dl class="std cmdoption">
+<dt class="sig sig-object std" id="cmdoption-generate">
+<span class="sig-name descname"><span class="pre">-generate</span></span><span class="sig-prename descclassname"><span class="pre">=&lt;dir&gt;</span></span><a class="headerlink" href="#cmdoption-generate" title="連結到這個定義"></a></dt>
+<dd><p>Generate key and config in specified dir, then exit.</p>
+</dd></dl>
+
+<dl class="std cmdoption">
+<dt class="sig sig-object std" id="cmdoption-gui-address">
+<span class="sig-name descname"><span class="pre">-gui-address</span></span><span class="sig-prename descclassname"><span class="pre">=&lt;address&gt;</span></span><a class="headerlink" href="#cmdoption-gui-address" title="連結到這個定義"></a></dt>
+<dd><p>Override GUI address.</p>
+</dd></dl>
+
+<dl class="std cmdoption">
+<dt class="sig sig-object std" id="cmdoption-home">
+<span class="sig-name descname"><span class="pre">-home</span></span><span class="sig-prename descclassname"><span class="pre">=&lt;dir&gt;</span></span><a class="headerlink" href="#cmdoption-home" title="連結到這個定義"></a></dt>
+<dd><p>Set configuration directory. The default configuration directory is:
+<code class="docutils literal notranslate"><span class="pre">$HOME/.config/syncthing</span></code>.</p>
+</dd></dl>
+
+<dl class="std cmdoption">
+<dt class="sig sig-object std" id="cmdoption-logfile">
+<span class="sig-name descname"><span class="pre">-logfile</span></span><span class="sig-prename descclassname"><span class="pre">=&lt;filename&gt;</span></span><a class="headerlink" href="#cmdoption-logfile" title="連結到這個定義"></a></dt>
+<dd><p>Set destination filename for logging (use <code class="docutils literal notranslate"><span class="pre">&quot;-&quot;</span></code> for stdout, which is the default option).</p>
+</dd></dl>
+
+<dl class="std cmdoption">
+<dt class="sig sig-object std" id="cmdoption-logflags">
+<span class="sig-name descname"><span class="pre">-logflags</span></span><span class="sig-prename descclassname"><span class="pre">=&lt;flags&gt;</span></span><a class="headerlink" href="#cmdoption-logflags" title="連結到這個定義"></a></dt>
+<dd><p>Select information in log line prefix, default 2. The <code class="docutils literal notranslate"><span class="pre">-logflags</span></code> value is
+a sum of the following:</p>
+<ul class="simple">
+<li><p>1: Date</p></li>
+<li><p>2: Time</p></li>
+<li><p>4: Microsecond time</p></li>
+<li><p>8: Long filename</p></li>
+<li><p>16: Short filename</p></li>
+</ul>
+<p>To prefix each log line with date and time, set <code class="docutils literal notranslate"><span class="pre">-logflags=3</span></code> (1 + 2 from
+above). The value 0 is used to disable all of the above. The default is to
+show time only (2).</p>
+</dd></dl>
+
+<dl class="std cmdoption">
+<dt class="sig sig-object std" id="cmdoption-no-browser">
+<span class="sig-name descname"><span class="pre">-no-browser</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-no-browser" title="連結到這個定義"></a></dt>
+<dd><p>不要啟動瀏覽器。</p>
+</dd></dl>
+
+<dl class="std cmdoption">
+<dt class="sig sig-object std" id="cmdoption-no-console">
+<span class="sig-name descname"><span class="pre">-no-console</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-no-console" title="連結到這個定義"></a></dt>
+<dd><p>隱藏主控台視窗。（僅限 Windows）</p>
+</dd></dl>
+
+<dl class="std cmdoption">
+<dt class="sig sig-object std" id="cmdoption-no-restart">
+<span class="sig-name descname"><span class="pre">-no-restart</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-no-restart" title="連結到這個定義"></a></dt>
+<dd><p>Do not restart; just exit.</p>
+</dd></dl>
+
+<dl class="std cmdoption">
+<dt class="sig sig-object std" id="cmdoption-paths">
+<span class="sig-name descname"><span class="pre">-paths</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-paths" title="連結到這個定義"></a></dt>
+<dd><p>Print the paths used for configuration, keys, database, GUI overrides, default sync folder and the log file.</p>
+</dd></dl>
+
+<dl class="std cmdoption">
+<dt class="sig sig-object std" id="cmdoption-reset">
+<span class="sig-name descname"><span class="pre">-reset</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-reset" title="連結到這個定義"></a></dt>
+<dd><p>Reset the database.</p>
+</dd></dl>
+
+<dl class="std cmdoption">
+<dt class="sig sig-object std" id="cmdoption-upgrade">
+<span class="sig-name descname"><span class="pre">-upgrade</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-upgrade" title="連結到這個定義"></a></dt>
+<dd><p>Perform upgrade.</p>
+</dd></dl>
+
+<dl class="std cmdoption">
+<dt class="sig sig-object std" id="cmdoption-upgrade-check">
+<span class="sig-name descname"><span class="pre">-upgrade-check</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-upgrade-check" title="連結到這個定義"></a></dt>
+<dd><p>Check for available upgrade.</p>
+</dd></dl>
+
+<dl class="std cmdoption">
+<dt class="sig sig-object std" id="cmdoption-upgrade-to">
+<span class="sig-name descname"><span class="pre">-upgrade-to</span></span><span class="sig-prename descclassname"><span class="pre">=&lt;url&gt;</span></span><a class="headerlink" href="#cmdoption-upgrade-to" title="連結到這個定義"></a></dt>
+<dd><p>Force upgrade directly from specified URL.</p>
+</dd></dl>
+
+<dl class="std cmdoption">
+<dt class="sig sig-object std" id="cmdoption-verbose">
+<span class="sig-name descname"><span class="pre">-verbose</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-verbose" title="連結到這個定義"></a></dt>
+<dd><p>Print verbose log output.</p>
+</dd></dl>
+
+<dl class="std cmdoption">
+<dt class="sig sig-object std" id="cmdoption-version">
+<span class="sig-name descname"><span class="pre">-version</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-version" title="連結到這個定義"></a></dt>
+<dd><p>Show version.</p>
+</dd></dl>
+
+</section>
+<section id="deprecated-options">
+<h2>Deprecated Options<a class="headerlink" href="#deprecated-options" title="連結到這個標頭"></a></h2>
+<dl class="std cmdoption">
+<dt class="sig sig-object std" id="cmdoption-gui-apikey">
+<span class="sig-name descname"><span class="pre">-gui-apikey</span></span><span class="sig-prename descclassname"><span class="pre">=&lt;key&gt;</span></span><a class="headerlink" href="#cmdoption-gui-apikey" title="連結到這個定義"></a></dt>
+<dd><p>Override GUI API key (deprecated as of v0.13, to be removed in the future - do not use).</p>
+</dd></dl>
+
+</section>
+<section id="exit-codes">
+<h2>Exit Codes<a class="headerlink" href="#exit-codes" title="連結到這個標頭"></a></h2>
+<dl class="simple">
+<dt>0</dt><dd><p>Success / Shutdown</p>
+</dd>
+<dt>1</dt><dd><p>Error</p>
+</dd>
+<dt>2</dt><dd><p>Upgrade not available</p>
+</dd>
+<dt>3</dt><dd><p>Restarting</p>
+</dd>
+<dt>4</dt><dd><p>Upgrading</p>
+</dd>
+</dl>
+<p>Some of these exit codes are only returned when running without a monitor
+process (with environment variable <code class="docutils literal notranslate"><span class="pre">STNORESTART</span></code> set). Exit codes over 125 are
+usually returned by the shell/binary loader/default signal handler. Exit codes
+over 128+N on Unix usually represent the signal which caused the process to
+exit. For example, <code class="docutils literal notranslate"><span class="pre">128</span> <span class="pre">+</span> <span class="pre">9</span> <span class="pre">(SIGKILL)</span> <span class="pre">=</span> <span class="pre">137</span></code>.</p>
+</section>
+<section id="development-settings">
+<h2>開發設定<a class="headerlink" href="#development-settings" title="連結到這個標頭"></a></h2>
+<p>The following environment variables modify Syncthing's behavior in ways that
+are mostly useful for developers. Use with care.
+If you start syncthing from within service managers like systemd or supervisor
+path expansion may not be supported.</p>
+<dl>
+<dt>STNODEFAULTFOLDER</dt><dd><p>Don't create a default folder when starting for the first time. This
+variable will be ignored anytime after the first run.</p>
+</dd>
+<dt>STGUIASSETS</dt><dd><p>Directory to load GUI assets from. Overrides compiled in assets.</p>
+</dd>
+<dt>STTRACE</dt><dd><p>A comma separated string of facilities to trace. The valid facility strings
+are:</p>
+<dl class="simple">
+<dt>beacon</dt><dd><p>the beacon package</p>
+</dd>
+<dt>discover</dt><dd><p>the discover package</p>
+</dd>
+<dt>events</dt><dd><p>the events package</p>
+</dd>
+<dt>files</dt><dd><p>the files package</p>
+</dd>
+<dt>http</dt><dd><p>the main package; HTTP requests</p>
+</dd>
+<dt>locks</dt><dd><p>the sync package; trace long held locks</p>
+</dd>
+<dt>net</dt><dd><p>the main package; connections &amp; network messages</p>
+</dd>
+<dt>model</dt><dd><p>the model package</p>
+</dd>
+<dt>scanner</dt><dd><p>the scanner package</p>
+</dd>
+<dt>stats</dt><dd><p>the stats package</p>
+</dd>
+<dt>upnp</dt><dd><p>the upnp package</p>
+</dd>
+<dt>xdr</dt><dd><p>the xdr package</p>
+</dd>
+<dt>all</dt><dd><p>all of the above</p>
+</dd>
+</dl>
+</dd>
+<dt>STPROFILER</dt><dd><p>Set to a listen address such as &quot;127.0.0.1:9090&quot; to start the profiler with
+HTTP access.</p>
+</dd>
+<dt>STCPUPROFILE</dt><dd><p>Write a CPU profile to cpu-$pid.pprof on exit.</p>
+</dd>
+<dt>STHEAPPROFILE</dt><dd><p>Write heap profiles to <code class="docutils literal notranslate"><span class="pre">heap-$pid-$timestamp.pprof</span></code> each time heap usage
+increases.</p>
+</dd>
+<dt>STBLOCKPROFILE</dt><dd><p>Write block profiles to <code class="docutils literal notranslate"><span class="pre">block-$pid-$timestamp.pprof</span></code> every 20 seconds.</p>
+</dd>
+<dt>STPERFSTATS</dt><dd><p>Write running performance statistics to <code class="docutils literal notranslate"><span class="pre">perf-$pid.csv</span></code>. Not supported on
+Windows.</p>
+</dd>
+<dt>STNOUPGRADE</dt><dd><p>停用自動升級。</p>
+</dd>
+<dt>GOMAXPROCS</dt><dd><p>Set the maximum number of CPU cores to use. Defaults to all available CPU
+cores.</p>
+</dd>
+<dt>GOGC</dt><dd><p>Percentage of heap growth at which to trigger GC. Default is 100. Lower
+numbers keep peak memory usage down, at the price of CPU usage
+(ie. performance).</p>
+</dd>
+</dl>
+</section>
+<section id="see-also">
+<h2>See Also<a class="headerlink" href="#see-also" title="連結到這個標頭"></a></h2>
+<p><em class="manpage">syncthing-config(5)</em>, <em class="manpage">syncthing-stignore(5)</em>,
+<em class="manpage">syncthing-device-ids(7)</em>, <em class="manpage">syncthing-security(7)</em>,
+<em class="manpage">syncthing-networking(7)</em>, <em class="manpage">syncthing-versioning(7)</em>,
+<em class="manpage">syncthing-faq(7)</em></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../intro/project-presentation.html" class="btn btn-neutral float-left" title="Project Presentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="faq.html" class="btn btn-neutral float-right" title="常見問題" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+      <span class="lastupdated">最後更新於 7月 27, 2026。
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
