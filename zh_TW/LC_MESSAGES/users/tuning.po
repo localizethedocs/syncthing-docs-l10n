@@ -1,0 +1,518 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2019, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../users/tuning.rst:4
+msgid "Configuration Tuning"
+msgstr ""
+
+#: ../../../users/tuning.rst:6
+msgid ""
+"Syncthing ships with a set of default values designed to work well for most "
+"users under common circumstances. However, there are a number of "
+"configuration options that can be tweaked to improve performance or to "
+"reduce resource consumption. This article makes recommendations, but you "
+"will need to experiment to find the best settings for your particular setup."
+msgstr ""
+
+#: ../../../users/tuning.rst:13
+msgid "Tuning for High Performance"
+msgstr ""
+
+#: ../../../users/tuning.rst:15
+msgid ""
+"You have resources to spare and want to optimize for performance. To begin "
+"with, make sure you are running a 64 bit build and that the index database "
+"is on an SSD. First some general options:"
+msgstr ""
+
+#: ../../../users/tuning.rst:19 ../../../users/tuning.rst:148
+msgid ":opt:`progressUpdateIntervalS`"
+msgstr ":opt:`progressUpdateIntervalS`"
+
+#: ../../../users/tuning.rst:20
+msgid ""
+"Set to -1 to disable progress updates. Time spent on progress updates is "
+"time not spent on syncing."
+msgstr ""
+
+#: ../../../users/tuning.rst:23
+msgid ":opt:`setLowPriority`"
+msgstr ":opt:`setLowPriority`"
+
+#: ../../../users/tuning.rst:24
+msgid ""
+"Set to false to run Syncthing with normal priority. This may allow Syncthing "
+"to use more CPU time, which can improve performance."
+msgstr ""
+
+#: ../../../users/tuning.rst:27 ../../../users/tuning.rst:152
+msgid ":opt:`maxFolderConcurrency`"
+msgstr ""
+
+#: ../../../users/tuning.rst:28
+msgid ""
+"Find an appropriate setting for the number of folders to sync concurrently, "
+"taking into account the inherent concurrency of the underlying storage "
+"system. If two folders are on the same underlying spinning disk, syncing "
+"them concurrently will be a strict loss of performance. If the underlying "
+"storage is a large array of disk, then syncing many folders concurrently may "
+"be beneficial."
+msgstr ""
+
+#: ../../../users/tuning.rst:35 ../../../users/tuning.rst:155
+msgid ":opt:`databaseTuning`"
+msgstr ""
+
+#: ../../../users/tuning.rst:36
+msgid ""
+"Set to ``large``. Regardless of the size of the actual database, this "
+"increases a number of buffers and settings to optimize for higher throughput."
+msgstr ""
+
+#: ../../../users/tuning.rst:40 ../../../users/tuning.rst:160
+msgid ":opt:`maxConcurrentIncomingRequestKiB`"
+msgstr ""
+
+#: ../../../users/tuning.rst:41
+msgid ""
+"This sets the maximum amount of data being processed (loaded from disk and "
+"transmitted over the network) concurrently at any given time. This is a "
+"global limiter, not per folder. If you have a lot of folders and/or a lot of "
+"devices and memory to spare you may want to increase this value. The default "
+"is 256 MiB, consider values of 1024 MiB or more."
+msgstr ""
+
+#: ../../../users/tuning.rst:48
+msgid "These options are folder specific and should be set on each folder:"
+msgstr ""
+
+#: ../../../users/tuning.rst:50 ../../../users/tuning.rst:166
+msgid ":opt:`fsWatcherEnabled`"
+msgstr ""
+
+#: ../../../users/tuning.rst:51
+msgid ""
+"When possible, using filesystem notifications avoids unnecessary I/O in "
+"large periodic scans. Changes are detected faster using notifications than "
+"scans."
+msgstr ""
+
+#: ../../../users/tuning.rst:55
+msgid ":opt:`copiers`"
+msgstr ""
+
+#: ../../../users/tuning.rst:56
+msgid ""
+"The number of routines used for the copy stage of file syncing. Similar to "
+"other concurrency options, if there are a lot of files to sync and if the I/"
+"O system can handle it it you may see increased performance by increasing "
+"this value. The default is system dependent, somewhere between 1 and the "
+"number of CPU cores available."
+msgstr ""
+
+#: ../../../users/tuning.rst:62
+msgid ":opt:`hashers`"
+msgstr ""
+
+#: ../../../users/tuning.rst:63
+msgid ""
+"When hashing locally changed files, the number of hashing routines to use. "
+"Higher values mean more I/O and CPU load and may increase performance when "
+"there are a lot of files to hash, assuming I/O bandwidth and CPU are "
+"available. The default is system dependent, somewhere between 1 and the "
+"number of CPU cores available."
+msgstr ""
+
+#: ../../../users/tuning.rst:69 ../../../users/tuning.rst:174
+msgid ":opt:`pullerMaxPendingKiB`"
+msgstr ""
+
+#: ../../../users/tuning.rst:70
+msgid ""
+"The maximum amount of data to have outstanding requests for at any given "
+"time. Higher values may improve performance, especially if the network or I/"
+"O latency is high. The default is 32 MiB."
+msgstr ""
+
+#: ../../../users/tuning.rst:74 ../../../users/tuning.rst:178
+msgid ":opt:`scanProgressIntervalS`"
+msgstr ""
+
+#: ../../../users/tuning.rst:75
+msgid ""
+"Providing the GUI with scan progress updates is not very expensive, but is "
+"effort that could be spent on something more productive. If you don't need "
+"to see scan progress, set this to -1 to disable it."
+msgstr ""
+
+#: ../../../users/tuning.rst:79 ../../../users/tuning.rst:182
+msgid ":opt:`weakHashThresholdPct`"
+msgstr ""
+
+#: ../../../users/tuning.rst:80
+msgid ""
+"Syncthing will by default look for rolling (weak) hash matches to detect "
+"data shifted in a file if a lot of data has changed in the file. If your use "
+"case doesn't cause data to shift in a file, and if the files are large "
+"(movies, VM images, ...) it is unnecessary to spend time checking weak "
+"hashes. Set the threshold to 101% to disable use of weak hashes."
+msgstr ""
+
+#: ../../../users/tuning.rst:86
+msgid ":opt:`maxConcurrentWrites`"
+msgstr ""
+
+#: ../../../users/tuning.rst:87
+msgid ""
+"Synchting limits the number of outstanding write system calls at any given "
+"time to avoid overloading the I/O system. If you increased copiers, "
+"outstanding network requests, or other settings that increase the number of "
+"concurrent writes, you may need to increase this value. The default is 2."
+msgstr ""
+
+#: ../../../users/tuning.rst:93
+msgid ":opt:`disableFsync`"
+msgstr ""
+
+#: ../../../users/tuning.rst:94
+msgid ""
+"Syncthing calls ``fsync()`` on files and directories after syncing them to "
+"ensure they are safe and sound on stable storage. This is a good thing, but "
+"it can be expensive. If you have a lot of files to sync and/or a lot of I/O "
+"bandwidth available, you may see a performance increase by disabling "
+"``fsync()``. This is not recommended for most setups, as you are increasing "
+"the risk of data loss in case of a power outage or system crash."
+msgstr ""
+
+#: ../../../users/tuning.rst:102
+msgid ":opt:`blockPullOrder`"
+msgstr ""
+
+#: ../../../users/tuning.rst:103
+msgid ""
+"Syncthing by default uses a pseudo-random block order when pulling in order "
+"to distribute load over multiple devices better. If you are generally "
+"downloading files from only one device, and if you have spinning disks as "
+"the underlying storage, you may see a performance increase by setting this "
+"to ``inOrder``."
+msgstr ""
+
+#: ../../../users/tuning.rst:109 ../../../users/tuning.rst:186
+msgid ":opt:`copyRangeMethod`"
+msgstr ""
+
+#: ../../../users/tuning.rst:110
+msgid ""
+"If your underlying filesystem supports it, you may see a performance "
+"increase by enabling a copy-on-write method, as it reduces the amount of "
+"data actually copied on disk when syncing files."
+msgstr ""
+
+#: ../../../users/tuning.rst:114 ../../../users/tuning.rst:190
+msgid ":opt:`caseSensitiveFS`"
+msgstr ""
+
+#: ../../../users/tuning.rst:115
+msgid ""
+"If your underlying filesystem is case sensitive, you may see a performance "
+"increase by enabling this option. This disables a number of safety checks "
+"that are required for case insensitive filesystems, and can cause data loss "
+"if your underlying filesystem is *not* in fact case sensitive."
+msgstr ""
+
+#: ../../../users/tuning.rst:121
+msgid ""
+":opt:`syncOwnership`/:opt:`syncXattrs`, :opt:`sendOwnership`/:opt:"
+"`sendXattrs`"
+msgstr ""
+
+#: ../../../users/tuning.rst:122
+msgid ""
+"Use these if they are required for your use case, but keep in mind they have "
+"a fairly high performance cost."
+msgstr ""
+
+#: ../../../users/tuning.rst:125
+msgid "For devices, consider the following:"
+msgstr ""
+
+#: ../../../users/tuning.rst:127 ../../../users/tuning.rst:199
+msgid ":opt:`numConnections`"
+msgstr ""
+
+#: ../../../users/tuning.rst:128
+msgid ""
+"Set at or above the number of CPU cores available. This allows maximum "
+"concurrency for TLS connections and may improve performance."
+msgstr ""
+
+#: ../../../users/tuning.rst:131 ../../../users/tuning.rst:203
+msgid "Other things:"
+msgstr "其他事項："
+
+#: ../../../users/tuning.rst:133
+msgid ""
+"``GOMEMLIMIT`` and ``GOGC``: These environment variables can be used to "
+"control the garbage collector. For large setups, setting ``GOMEMLIMIT`` to "
+"the desired max amount of memory Syncthing should use can improve "
+"performance. The reason is that this reduces garbage collector frequency "
+"during lower memory usage. Read more in the `Go GC guide <https://golang.org/"
+"doc/gc-guide>`__."
+msgstr ""
+
+#: ../../../users/tuning.rst:141
+msgid "Tuning for Low Resources"
+msgstr ""
+
+#: ../../../users/tuning.rst:143
+msgid ""
+"You have limited resources and want Syncthing to use as few as possible. You "
+"care less about performance."
+msgstr ""
+
+#: ../../../users/tuning.rst:146
+msgid "General options:"
+msgstr "一般選項："
+
+#: ../../../users/tuning.rst:149
+msgid ""
+"Set to -1 to disable progress updates. Progress updates aren't absolutely "
+"essential and consume some amount of CPU and memory."
+msgstr ""
+
+#: ../../../users/tuning.rst:153
+msgid "Set to 1 to sync folders sequentially, reducing the peak memory usage."
+msgstr ""
+
+#: ../../../users/tuning.rst:156
+msgid ""
+"Set to ``small``. Regardless of the size of the actual database size, this "
+"reduces the size of a number of buffers to optimize for reduced memory usage."
+msgstr ""
+
+#: ../../../users/tuning.rst:161
+msgid ""
+"Set to 32 MiB to reduce the amount of memory used for buffering responses to "
+"incoming requests."
+msgstr ""
+
+#: ../../../users/tuning.rst:164
+msgid "Folders options:"
+msgstr "資料夾選項："
+
+#: ../../../users/tuning.rst:167
+msgid ""
+"If possible, using the filesystem notifications is more efficient than doing "
+"full periodic scans."
+msgstr ""
+
+#: ../../../users/tuning.rst:170
+msgid ":opt:`copiers`, :opt:`hashers`"
+msgstr ""
+
+#: ../../../users/tuning.rst:171
+msgid ""
+"Set to 1 to reduce the amount of concurrency when syncing and hashing a "
+"folder, reducing peak memory usage."
+msgstr ""
+
+#: ../../../users/tuning.rst:175
+msgid ""
+"Set to 16 MiB to reduce the amount of memory used for buffering while "
+"syncing."
+msgstr ""
+
+#: ../../../users/tuning.rst:179
+msgid ""
+"Set to -1 to disable scan progress updates. Keeping track of scan progress "
+"uses memory and CPU."
+msgstr ""
+
+#: ../../../users/tuning.rst:183
+msgid ""
+"Set to 101% to disable use of weak hashes. Using weak hashes has a memory "
+"cost."
+msgstr ""
+
+#: ../../../users/tuning.rst:187
+msgid ""
+"If your underlying filesystem supports it, using copyrange is more efficient "
+"than having Syncthing do the data copying."
+msgstr ""
+
+#: ../../../users/tuning.rst:191
+msgid ""
+"If your underlying filesystem is case sensitive, set this to skip a number "
+"of checks which have a memory cost due to caching. These checks are required "
+"for case insensitive filesystems, and disabling them can cause data loss if "
+"your underlying filesystem is *not* in fact case sensitive."
+msgstr ""
+
+#: ../../../users/tuning.rst:197
+msgid "Device options:"
+msgstr "裝置選項："
+
+#: ../../../users/tuning.rst:200
+msgid ""
+"Set to 1 to reduce the amount of overhead per device, as each connection has "
+"a memory and CPU cost."
+msgstr "設為 1 來降低每個裝置的開銷，因為每個連線都會消耗記憶體和 CPU 資源。"
+
+#: ../../../users/tuning.rst:205
+msgid "``GOMEMLIMIT`` and ``GOGC``"
+msgstr ""
+
+#: ../../../users/tuning.rst:206
+msgid ""
+"These environment variables can be used to control the garbage collector. "
+"For small setups, setting ``GOMEMLIMIT`` to the desired max amount of memory "
+"Syncthing should use can make the garbage collector adhere more closely to "
+"the desired limit. Read more in the `Go GC guide <https://golang.org/doc/gc-"
+"guide>`__."
+msgstr ""
+
+#: ../../../users/tuning.rst:212
+msgid "``GOMAXPROCS``"
+msgstr ""
+
+#: ../../../users/tuning.rst:213
+msgid ""
+"This environment variable can be used to control the maximum number number "
+"concurrently running threads Syncthing uses. Setting it to 1 (or any number "
+"lower than your actual number of cores) will reduce the amount of CPU used "
+"by Syncthing at any given moment."
+msgstr ""
+
+#: ../../../users/tuning.rst:219
+msgid "Tuning for LAN-only"
+msgstr ""
+
+#: ../../../users/tuning.rst:221
+msgid ""
+"You are paranoid about security and/or privacy, and want to keep Syncthing's "
+"communication constrained to your local network only."
+msgstr ""
+
+#: ../../../users/tuning.rst:224
+msgid "For restricting sync traffic to only LAN:"
+msgstr ""
+
+#: ../../../users/tuning.rst:226
+msgid ":opt:`relaysEnabled`"
+msgstr ""
+
+#: ../../../users/tuning.rst:227
+msgid ""
+"Set to false to disable relaying sync traffic through servers other than "
+"your sync partners. When relays are used, those that you connect to can see "
+"your device ID and public IP address, but not the synchronized data, as that "
+"is encrypted."
+msgstr ""
+
+#: ../../../users/tuning.rst:232
+msgid ":ref:`unknown-suspicious-address`"
+msgstr ""
+
+#: ../../../users/tuning.rst:234
+msgid ":opt:`natEnabled`"
+msgstr ""
+
+#: ../../../users/tuning.rst:235
+msgid ""
+"Set to false to disable opening up UPnP and NAT-PMP port mappings and "
+"pinholes, and to disable hole punching. This reduces the ability for sync "
+"partners to connect on the Internet."
+msgstr ""
+
+#: ../../../users/tuning.rst:239
+msgid "For restricting other things to only LAN:"
+msgstr ""
+
+#: ../../../users/tuning.rst:241
+msgid ":opt:`globalAnnounceEnabled`"
+msgstr ""
+
+#: ../../../users/tuning.rst:242
+msgid ""
+"Set to false to disable use of Global Discovery servers, which know your "
+"device ID and public IP address when being used. The discovery servers are "
+"used by your sync partners to discover your IP address from your device ID."
+msgstr ""
+
+#: ../../../users/tuning.rst:247
+msgid ""
+"On Android, local discovery is known to usually not work, so either global "
+"discovery or hardcoding IP addresses is often required."
+msgstr ""
+
+#: ../../../users/tuning.rst:250
+msgid ":opt:`urAccepted`"
+msgstr ""
+
+#: ../../../users/tuning.rst:251
+msgid ""
+"Set to -1 to disable usage reporting. When usage reporting is enabled, usage "
+"reporting servers can know your public IP address, :opt:`urUniqueID`, and "
+"(obviously) the contents of the usage report (which depend on the version "
+"you chose)."
+msgstr ""
+
+#: ../../../users/tuning.rst:256
+msgid ":opt:`crashReportingEnabled`"
+msgstr ""
+
+#: ../../../users/tuning.rst:257
+msgid ""
+"Set to false to disable automatic crash reporting. Crash reporting servers "
+"can know your public IP address, the version of Syncthing that crashed, and "
+"the username and hostname of the machine that Syncthing was built on."
+msgstr ""
+
+#: ../../../users/tuning.rst:261
+msgid ":doc:`crashrep`"
+msgstr ""
+
+#: ../../../users/tuning.rst:263
+msgid ":opt:`autoUpgradeIntervalH`"
+msgstr ""
+
+#: ../../../users/tuning.rst:264
+msgid ""
+"Set to 0 to disable automatic upgrades. Syncthing will still automatically "
+"contact the Internet to check for upgrades when you open up the Web GUI, so "
+"it knows when to show the upgrade button, unless you follow the procedure "
+"for :opt:`releasesURL`."
+msgstr ""
+
+#: ../../../users/tuning.rst:269
+msgid ":opt:`releasesURL`"
+msgstr ""
+
+#: ../../../users/tuning.rst:270
+msgid ""
+"Unset (set to blank) to disable upgrade checks. With upgrade checks "
+"disabled, to upgrade Syncthing, you have to manually replace the executable "
+"and restart Syncthing."
+msgstr ""
+
+#: ../../../users/tuning.rst:274
+msgid ""
+"If it's not obvious, do *not* hardcode non-LAN IP addresses, if you want to "
+"keep LAN-only."
+msgstr ""
