@@ -1,0 +1,3378 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2026, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing stable\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-21 06:27+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../users/releases.rst:4
+msgid "Versions & Releases"
+msgstr ""
+
+#: ../../../users/releases.rst:9
+msgid "Major, Minor, or Patch"
+msgstr ""
+
+#: ../../../users/releases.rst:11
+msgid ""
+"Since the 1.0.0 release, Syncthing has used a `semver <https://semver.org/"
+">`__-like [1]_ three part version number, **x.y.z** where *x* is the major "
+"version, *y* is the minor version, and *z* is the patch version. We decide "
+"the version number for a new release based on the following criteria:"
+msgstr ""
+
+#: ../../../users/releases.rst:17
+msgid ""
+"Is the new version protocol incompatible with the previous one, so that they "
+"cannot connect to each other or otherwise can't sync files for some reason? "
+"That's a new *major* version. (This hasn't happened yet.)"
+msgstr ""
+
+#: ../../../users/releases.rst:21
+msgid ""
+"Are there changes in the REST API so that integrations or wrappers need "
+"changes, or did the database schema or configuration change so that a "
+"downgrade might be problematic? That's a new *minor* version."
+msgstr ""
+
+#: ../../../users/releases.rst:25
+msgid "If there are no specific concerns as above, it's a new *patch* version."
+msgstr ""
+
+#: ../../../users/releases.rst:28
+msgid "Release Channels"
+msgstr ""
+
+#: ../../../users/releases.rst:30
+msgid ""
+"There are two different release channels that can be selected. The *stable* "
+"channel is the more stable one, while *candidate* releases are closer to "
+"development. Candidate releases get promoted to stable after a certain "
+"period of testing."
+msgstr ""
+
+#: ../../../users/releases.rst:35
+msgid "There are a few trade-offs between the two:"
+msgstr ""
+
+#: ../../../users/releases.rst:38
+msgid "Stable"
+msgstr ""
+
+#: ../../../users/releases.rst:38
+msgid "Candidate"
+msgstr ""
+
+#: ../../../users/releases.rst:40
+msgid "**Stability**"
+msgstr ""
+
+#: ../../../users/releases.rst:40
+msgid "More Stable"
+msgstr ""
+
+#: ../../../users/releases.rst:40
+msgid "More Experimental"
+msgstr ""
+
+#: ../../../users/releases.rst:41
+msgid "**Features & Fixes**"
+msgstr ""
+
+#: ../../../users/releases.rst:41
+msgid "One month behind"
+msgstr ""
+
+#: ../../../users/releases.rst:41
+msgid "Latest"
+msgstr ""
+
+#: ../../../users/releases.rst:42
+msgid "**Auto Upgrades**"
+msgstr ""
+
+#: ../../../users/releases.rst:42 ../../../users/releases.rst:43
+msgid "Optional"
+msgstr ""
+
+#: ../../../users/releases.rst:42
+msgid "Mandatory [#]_"
+msgstr ""
+
+#: ../../../users/releases.rst:43
+msgid "**Anon. Usage Reporting**"
+msgstr ""
+
+#: ../../../users/releases.rst:43
+msgid "Mandatory"
+msgstr ""
+
+#: ../../../users/releases.rst:44
+msgid "**Support**"
+msgstr ""
+
+#: ../../../users/releases.rst:44
+msgid "Fully supported"
+msgstr ""
+
+#: ../../../users/releases.rst:44
+msgid "Fully supported [#]_"
+msgstr ""
+
+#: ../../../users/releases.rst:47
+msgid ""
+"Run the candidate channel if you are technically savvy and enjoy new "
+"features. Run the stable channel if you want to minimize the amount of "
+"surprises you might run into."
+msgstr ""
+
+#: ../../../users/releases.rst:51
+msgid "Auto upgrades are not enabled in builds delivered via APT."
+msgstr ""
+
+#: ../../../users/releases.rst:52
+msgid "Yes, there is intentionally no difference here."
+msgstr ""
+
+#: ../../../users/releases.rst:55
+msgid "Schedule"
+msgstr ""
+
+#: ../../../users/releases.rst:57
+msgid ""
+"Barring blocking issues, stable versions are released *on the first Tuesday "
+"of the month*. A new candidate releases is made *on the second Tuesday of "
+"the month*."
+msgstr ""
+
+#: ../../../users/releases.rst:62
+msgid "How to Choose"
+msgstr ""
+
+#: ../../../users/releases.rst:65
+msgid "Built-in / GitHub"
+msgstr ""
+
+#: ../../../users/releases.rst:67
+msgid ""
+"For releases obtained from Syncthing.net or GitHub, with built-in upgrade "
+"functionality, the choice is made in the \"Settings\" dialog. Set the "
+"\"Automatic upgrade\" drop down to either \"Stable releases only\" or "
+"\"Stable releases and release candidates\"."
+msgstr ""
+
+#: ../../../users/releases.rst:73
+msgid "APT (Debian)"
+msgstr ""
+
+#: ../../../users/releases.rst:75
+msgid ""
+"The choice between stable and candidate is done in the APT source "
+"configuration. Please see `our APT instructions <https://apt.syncthing.net/"
+">`__."
+msgstr ""
+
+#: ../../../users/releases.rst:80
+msgid "Docker"
+msgstr ""
+
+#: ../../../users/releases.rst:82
+msgid ""
+"Docker images are pushed to several tags. By pulling a specific tag you can "
+"select the release channel you want:"
+msgstr ""
+
+#: ../../../users/releases.rst:85
+msgid ""
+"``syncthing/syncthing:latest`` points to the latest stable release, e.g. "
+"``v1.9.0``"
+msgstr ""
+
+#: ../../../users/releases.rst:86
+msgid ""
+"``syncthing/syncthing:rc`` points to the latest release candidate, e.g. "
+"``v1.10.0-rc.3``"
+msgstr ""
+
+#: ../../../users/releases.rst:87
+msgid ""
+"``syncthing/syncthing:nightly`` points to the latest nightly development "
+"build, e.g. ``v1.10.0-rc.3.dev.1.gd2e32957``"
+msgstr ""
+
+#: ../../../users/releases.rst:89
+msgid ""
+"There are also tags for the major and minor versions, for example "
+"``syncthing/syncthing:1.9`` for the latest stable 1.9 patch release and "
+"``syncthing/syncthing:1`` for the latest stable release with major version "
+"one."
+msgstr ""
+
+#: ../../../users/releases.rst:95
+msgid "Some Other Distribution Channel"
+msgstr ""
+
+#: ../../../users/releases.rst:97
+msgid ""
+"If you are getting packages from your Linux distribution, NAS vendor, etc., "
+"then you should be getting the *stable* channel. If you get a release "
+"candidate you should complain to your distributor or vendor and refer them "
+"to this page."
+msgstr ""
+
+#: ../../../users/releases.rst:103
+msgid "Nightly Builds"
+msgstr ""
+
+#: ../../../users/releases.rst:105
+msgid ""
+"It's also possible to run the nightly development builds. These are not "
+"releases in any sense of the word, they are simply builds of the current "
+"``main`` branch of the repository. These builds are not supported and may "
+"contain functionality that is changed or removed before the actual release."
+msgstr ""
+
+#: ../../../users/releases.rst:110
+msgid "To use nightly releases, in Advanced Settings -> Options,"
+msgstr ""
+
+#: ../../../users/releases.rst:112
+msgid ""
+"Change \"Releases URL\" to ``https://upgrades.syncthing.net/nightly.json``"
+msgstr ""
+
+#: ../../../users/releases.rst:113
+msgid "Enable \"Upgrade To Pre Releases\""
+msgstr ""
+
+#: ../../../users/releases.rst:115
+msgid ""
+"Restart Syncthing and it will upgrade to the latest nightly. New nightlies "
+"are published at midnight UTC."
+msgstr ""
+
+#: ../../../users/releases.rst:119
+msgid "FAQ"
+msgstr ""
+
+#: ../../../users/releases.rst:122
+msgid "What's the relationship between candidate and release exactly?"
+msgstr ""
+
+#: ../../../users/releases.rst:124
+msgid ""
+"Every new feature and bugfix begins its life in the development branch, "
+"``main``. Once a month the current ``main`` becomes a *release candidate*. "
+"This version is identified by \"-rc\" in its name, for example ``v1.5.0-"
+"rc.1``."
+msgstr ""
+
+#: ../../../users/releases.rst:129
+msgid ""
+"Those running the candidate channel will update to this release candidate. "
+"For the next three weeks it is tested \"in the wild\". Any new, serious "
+"issues that are discovered are fixed, and new release candidates ``v1.5.0-"
+"rc.2`` etc are created as needed. These release candidates do not include "
+"any new features or non-essential bugfixes added to ``main`` in the meantime."
+msgstr ""
+
+#: ../../../users/releases.rst:135
+msgid ""
+"Stable releases are given version numbers without any suffix - ``v1.5.0``. "
+"Unless any serious issues were discovered, this release is exactly identical "
+"to the \"-rc.1\" release candidate three weeks prior."
+msgstr ""
+
+#: ../../../users/releases.rst:139
+msgid ""
+"The cycle then restarts one week later with a new release candidate based on "
+"the current ``main`` branch."
+msgstr ""
+
+#: ../../../users/releases.rst:143
+msgid "Which bugfixes trigger a new release candidate?"
+msgstr ""
+
+#: ../../../users/releases.rst:145
+msgid ""
+"Those that fix a regression since the last release. Lets say the current "
+"release is ``v1.5.0``. We release ``v1.5.1-rc.1`` and discover a new problem "
+"that is not present in ``v1.5.0``. This gets fixed and we release a new "
+"``v1.5.1-rc.2`` candidate. However, if we discover and fix a problem that's "
+"been present since ``v1.4.0``, this fix will instead be incorporated in the "
+"next regular cycle."
+msgstr ""
+
+#: ../../../users/releases.rst:153
+msgid ""
+"What's the difference between the latest candidate and the following stable "
+"release?"
+msgstr ""
+
+#: ../../../users/releases.rst:155
+msgid ""
+"Nothing. If we release ``v1.5.1-rc.1`` and no serious problems are "
+"discovered during the next twelve days, this is the exact software that will "
+"become ``v1.5.1`` for general consumption. Since the version number is "
+"different it requires a rebuild and the release signatures / hashes are "
+"different. If you are on the candidate channel, your Syncthing will "
+"\"upgrade\" from ``v1.5.1-rc.1`` to ``v1.5.1`` when we make the release. "
+"This is normal."
+msgstr ""
+
+#: ../../../users/releases.rst:162
+msgid "---"
+msgstr ""
+
+#: ../../../users/releases.rst:164
+msgid ""
+"SemVer-*like* because semver is absolutist about what constitutes an API "
+"change, in a way that isn't super helpful to the average user of a program "
+"like Syncthing."
+msgstr ""
+
+#: ../../../users/releases.rst:169
+msgid "Historical Releases"
+msgstr ""
+
+#: ../../../users/releases.rst:171
+msgid ""
+"This table lists the historically released versions of Syncthing, which Go "
+"version they were built with, and which date they were released."
+msgstr ""
+
+#: ../../../users/releases.rst:174
+msgid "Syncthing Releases"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "Version"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "Runtime"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "Date"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v2.0.16"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.26.1"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2026-03-13"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v2.0.15"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**go1.26.0**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2026-02-11"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v2.0.14"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.25.6"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2026-02-02"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v2.0.13"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.25.5"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2025-12-23"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v2.0.12"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.25.4"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2025-11-24"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v2.0.11"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.25.3"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2025-10-27"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v2.0.10"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.25.1"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2025-09-23"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v2.0.9"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2025-09-12"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v2.0.8"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2025-09-08"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v2.0.7"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2025-09-05"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v2.0.6"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.25.0"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2025-09-03"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v2.0.5"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2025-09-02"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v2.0.4"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2025-09-01"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v2.0.3"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2025-08-22"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v2.0.2"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**go1.25.0**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2025-08-16"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v2.0.1"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.24.6"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2025-08-14"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**v2.0.0**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2025-08-11"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**v1.30.0**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.24.4"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2025-06-20"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.29.7"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.24.3"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2025-05-29"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.29.6"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.24.2"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2025-04-30"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.29.5"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2025-04-12"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.29.4"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.24.1"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2025-03-27"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.29.3"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**go1.24.1**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2025-03-07"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.29.2"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.23.4"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2025-01-11"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.29.1"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2025-01-09"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**v1.29.0**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2024-12-30"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.28.1"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.23.3"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2024-11-24"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**v1.28.0**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**go1.23.2**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2024-10-04"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.27.12"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.22.6"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2024-09-06"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.27.11"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2024-08-28"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.27.10"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.22.5"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2024-07-22"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.27.9"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.22.4"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2024-07-01"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.27.8"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.22.3"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2024-05-30"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.27.7"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2024-05-08"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.27.6"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.22.2"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2024-04-08"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.27.5"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.22.1"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2024-03-25"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.27.4"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**go1.22.0**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2024-02-27"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.27.3"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.21.6"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2024-01-15"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.27.2"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.21.5"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2023-12-25"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.27.1"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2023-12-11"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**v1.27.0**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.21.4"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2023-11-27"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.26.1"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2023-11-15"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**v1.26.0**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.21.3"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2023-10-24"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**v1.25.0**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.21.1"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2023-09-25"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**v1.24.0**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**go1.21.0**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2023-08-23"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.23.7"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.20.7"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2023-07-31"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.23.6"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.20.5"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2023-07-03"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.23.5"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.20.4"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2023-06-06"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.23.4"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.20.2"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2023-04-05"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.23.3"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2023-04-03"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.23.2"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**go1.20.1**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2023-02-27"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.23.1"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.19.5"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2023-01-16"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**v1.23.0**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.19.4"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2023-01-02"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.22.2"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.19.2"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2022-11-28"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.22.1"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2022-11-02"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**v1.22.0**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.19.1"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2022-10-02"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**v1.21.0**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**go1.19**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2022-08-16"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.20.4"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.18.4"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2022-08-02"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.20.3"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.18.3"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2022-06-27"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.20.2"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2022-05-31"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.20.1"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.18.1"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2022-05-04"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**v1.20.0**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**go1.18.1**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.19.2"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.17.7"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2022-03-21"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.19.1"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2022-02-21"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**v1.19.0**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.17.6"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2022-01-24"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.18.6"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2021-12-30"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.18.5"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.17.3"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2021-11-22"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.18.4"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.17.2"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2021-10-24"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.18.3"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.17.1"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2021-09-28"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.18.2"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**go1.17**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2021-08-22"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.18.1"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.16.6"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2021-07-30"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**v1.18.0**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.16.5"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2021-06-21"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**v1.17.0**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.16.4"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2021-05-22"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.16.1"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.16.3"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2021-05-05"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**v1.16.0**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2021-04-26"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.15.1"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2021-04-06"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**v1.15.0**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**v1.14.0**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**go1.16**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2021-02-26"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.13.1"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.15.7"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2021-01-11"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**v1.13.0**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.12.1"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.15.6"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2020-12-06"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**v1.12.0**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.15.5"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2020-11-27"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.11.1"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.15.3"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2020-11-03"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**v1.11.0**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2020-10-22"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**v1.10.0**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.15.2"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2020-09-15"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**v1.9.0**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**go1.15.1**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2020-08-28"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**v1.8.0**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.14.7"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2020-08-07"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.7.1"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.14.4"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2020-07-11"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**v1.7.0**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2020-06-08"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.6.1"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2020-06-02"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**v1.6.0**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**go1.14.3**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**v1.5.0**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.13.10"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2020-04-21"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.4.2"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.13.9"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2020-04-07"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.4.1"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2020-03-20"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**v1.4.0**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.13.8"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2020-03-06"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.3.4"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.13.7"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2020-01-14"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.3.3"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.13.5"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2019-12-08"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.3.2"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.13.4"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2019-11-24"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.3.1"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.13.3"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2019-10-07"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**v1.3.0**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**go1.13.1**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2019-10-01"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.2.2"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.12.9"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2019-08-15"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.2.1"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.12.7"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2019-07-27"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**v1.2.0**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.12.6"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2019-06-28"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.1.4"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.12.5"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2019-05-12"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.1.3"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2019-05-08"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.1.2"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.12.2"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2019-04-29"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.1.1"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.12.1"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2019-03-25"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**v1.1.0**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**go1.12**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2019-02-25"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v1.0.1"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.11.5"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2019-01-18"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**v1.0.0**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.11.4"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2018-12-26"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.14.54"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.11.1"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2018-12-05"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.14.53"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2018-11-13"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.14.52"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2018-10-11"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.14.51"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.11"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2018-09-24"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.14.50"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**go1.11**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2018-09-02"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.14.49"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.10.3"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2018-07-10"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.14.48"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.10.2"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2018-05-14"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.14.47"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.10.1"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2018-04-21"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.14.46"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2018-03-27"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.14.45"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**go1.10**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2018-02-14"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.14.44"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.9.2"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2018-01-19"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.14.43"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2017-12-29"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.14.42"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2017-12-07"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.14.41"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2017-11-23"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.14.40"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2017-10-28"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.14.39"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.9"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2017-09-25"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.14.38"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2017-09-07"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.14.37"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**go1.9**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2017-08-24"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.14.36"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.8.3"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2017-08-10"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.14.35"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2017-08-08"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.14.33"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2017-07-13"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.14.32"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2017-06-29"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.14.31"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2017-06-14"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.14.30"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2017-05-31"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.14.29"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2017-05-18"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.14.28"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.8.1"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2017-05-06"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.14.27"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2017-04-15"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.14.26"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.8"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2017-03-23"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.14.25"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2017-03-09"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.14.24"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2017-02-23"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.14.23"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2017-02-07"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.14.22"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.14.21"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2017-01-25"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.14.20"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2017-01-24"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.14.19"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2017-01-10"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.14.18"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2017-01-01"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.14.17"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2016-12-27"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.14.16"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2016-12-21"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.14.15"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**go1.8**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2016-12-17"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.14.14"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.7.4"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2016-12-13"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.14.13"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.7.3"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2016-11-29"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.14.12"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2016-11-22"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.14.11"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2016-11-15"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.14.10"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2016-11-01"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.14.9"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.7.1"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2016-10-17"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.14.8"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2016-10-03"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.14.7"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2016-09-18"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.14.6"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.7"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2016-09-04"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.14.5"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**go1.7**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2016-08-23"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.14.4"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.6.3"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2016-08-10"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.14.3"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2016-07-28"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.14.2"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2016-07-26"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.14.1"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**v0.14.0**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2016-07-17"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.13.10"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.6.2"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2016-07-03"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.13.9"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2016-06-26"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.13.8"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.13.7"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2016-06-13"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.13.6"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2016-06-12"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.13.5"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2016-06-03"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.13.4"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2016-05-26"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.13.3"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.13.2"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2016-05-21"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.13.1"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**v0.13.0**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.12.25"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.12.24"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.12.23"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2016-05-06"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.12.22"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.6.1"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2016-04-13"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.12.21"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.6"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2016-03-23"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.12.20"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**go1.6**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2016-03-06"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.12.19"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.5.3"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2016-02-14"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.12.18"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2016-02-08"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.12.17"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2016-01-31"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.12.16"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2016-01-24"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.12.15"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2016-01-17"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.12.14"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2016-01-13"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.12.13"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.12.12"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.5.2"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2016-01-10"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.12.11"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2016-01-03"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.12.10"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2015-12-27"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.12.9"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2015-12-20"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.12.8"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2015-12-13"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.12.7"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2015-12-06"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.12.6"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.5.1"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2015-12-01"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.12.5"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2015-11-29"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.12.4"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**go1.5.1**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2015-11-22"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.12.3"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.4.3"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2015-11-15"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.12.2"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2015-11-09"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.12.1"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2015-11-06"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**v0.12.0**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2015-11-05"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.11.26"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.4.2"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2015-10-02"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.11.25"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2015-09-13"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.11.24"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2015-09-06"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.11.23"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2015-08-30"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.11.22"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**go1.4.2**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2015-08-24"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.11.21"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**go1.5**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2015-08-23"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.11.20"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2015-08-16"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.11.19"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2015-08-09"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.11.18"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2015-08-02"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.11.17"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2015-07-26"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.11.16"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2015-07-19"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.11.15"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2015-07-13"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.11.14"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.11.13"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2015-07-05"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.11.12"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.11.11"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2015-06-28"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.11.10"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2015-06-21"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.11.9"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2015-06-14"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.11.8"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2015-06-07"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.11.7"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2015-05-31"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.11.6"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2015-05-23"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.11.5"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2015-05-15"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.11.4"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.11.3"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2015-05-10"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.11.2"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2015-05-03"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.11.1"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2015-04-26"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**v0.11.0**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2015-04-22"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.10.31"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.10.30"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2015-03-29"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.10.29"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2015-03-22"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.10.28"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.10.27"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2015-03-15"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.10.26"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2015-03-11"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.10.25"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2015-03-08"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.10.24"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2015-03-01"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.10.23"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.4.1"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2015-02-15"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.10.22"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2015-02-09"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.10.21"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2015-01-19"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.10.20"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.4"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2015-01-13"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.10.19"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2015-01-11"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.10.18"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2015-01-06"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.10.17"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2015-01-04"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.10.15"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2015-01-03"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.10.14"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-12-29"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.10.13"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-12-18"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.10.12"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**go1.4**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-12-16"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.10.11"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.4rc2"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-12-08"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.10.10"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**go1.4rc2**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-12-07"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.10.9"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.3.3"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-11-30"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.10.8"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-11-24"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.10.7"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.10.6"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-11-18"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.10.5"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-11-04"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.10.4"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-10-27"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.10.3"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-10-24"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.10.2"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-10-18"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.10.1"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-10-12"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**v0.10.0**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-10-08"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.9.19"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.3.1"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-09-28"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.9.18"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-09-24"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.9.17"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-09-18"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.9.16"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-09-17"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.9.15"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-09-11"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.9.14"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-09-10"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.9.13"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-09-06"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.9.12"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.9.11"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-09-05"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.9.10"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-08-31"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.9.9"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-08-27"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.9.8"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-08-23"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.9.7"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.9.6"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-08-22"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.9.5"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-08-16"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.9.4"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.3"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-08-12"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.9.2"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-08-07"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.9.1"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**v0.9.0**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-08-02"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.8.21"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-07-24"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.8.20"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-07-22"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.8.19"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-07-08"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.8.18"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-07-03"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.8.17"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-06-26"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.8.16"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**go1.3**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-06-22"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.8.15"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**go1.3rc2**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-06-15"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.8.14"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.3rc1"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-06-08"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.8.13"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**go1.3rc1**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-06-04"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.8.12"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.2.2"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-05-28"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.8.11"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-05-26"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.8.10"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-05-25"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.8.9"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-05-21"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.8.8"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.8.7"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-05-16"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.8.5"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-05-11"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.8.4"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.2.1"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-05-04"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.8.3"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-05-02"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.8.2"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-04-27"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.8.1"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-04-19"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**v0.8.0**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-04-14"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.7.3"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-04-08"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.7.2"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-04-04"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**v0.7.1**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-03-30"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.6.6"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-03-16"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.6.4"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-03-09"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.6.3"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-03-04"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.6.2"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.6.1"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "go1.2"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-03-02"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**v0.6.0**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-02-23"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.5.6"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-02-17"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.5.5"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-02-13"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.5.4"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-02-07"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.5.3"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-02-03"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.5.2"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-01-29"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**v0.5.1**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-01-26"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.4.3"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-01-20"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.4.2"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-01-13"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.4.1"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-01-09"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**v0.4.0**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.3.2"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-01-07"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.3.1"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-01-06"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**v0.3.0**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-01-05"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "v0.2.2"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2014-01-01"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**v0.2.1**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**v0.2**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "**go1.2**"
+msgstr ""
+
+#: ../../../users/releases.csv:1
+msgid "2013-12-30"
+msgstr ""

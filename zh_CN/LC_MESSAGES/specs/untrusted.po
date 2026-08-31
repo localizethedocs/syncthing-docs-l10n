@@ -1,0 +1,365 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2026, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing stable\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-21 06:27+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../specs/untrusted.rst:2
+msgid "This feature should still be considered beta / testing only."
+msgstr ""
+
+#: ../../../specs/untrusted.rst:7
+msgid "Untrusted Device Encryption"
+msgstr ""
+
+#: ../../../specs/untrusted.rst:10
+msgid "Threat Model / Primary Goals"
+msgstr ""
+
+#: ../../../specs/untrusted.rst:12
+msgid ""
+"An \"untrusted\" device can participate in a Syncthing cluster with the "
+"following assumptions and limitations;"
+msgstr ""
+
+#: ../../../specs/untrusted.rst:15
+msgid "The untrusted device can *not* observe:"
+msgstr ""
+
+#: ../../../specs/untrusted.rst:17
+msgid "File data"
+msgstr ""
+
+#: ../../../specs/untrusted.rst:19
+msgid "File or directory names, symlink names, symlink targets"
+msgstr ""
+
+#: ../../../specs/untrusted.rst:21
+msgid ""
+"File modification time, permissions, or modification history (version "
+"vectors)"
+msgstr ""
+
+#: ../../../specs/untrusted.rst:24
+msgid "The untrusted device *will* be able to observe:"
+msgstr ""
+
+#: ../../../specs/untrusted.rst:26
+msgid "File sizes [#sizes]_"
+msgstr ""
+
+#: ../../../specs/untrusted.rst:28
+msgid "Which parts of files are changed by the other devices and when"
+msgstr ""
+
+#: ../../../specs/untrusted.rst:30
+msgid ""
+"The last point is required by the syncing mechanism, in order to avoid "
+"transferring all unchanged file data when a file block changes. Blocks and "
+"block hashes are encrypted with a per-file key and depends on the block "
+"offset, so correlation is not possible between blocks at different offsets "
+"or different files."
+msgstr ""
+
+#: ../../../specs/untrusted.rst:36
+msgid ""
+"In addition the untrusted device *must not* be able to modify, remove or "
+"introduce data by itself without detection."
+msgstr ""
+
+#: ../../../specs/untrusted.rst:40
+msgid "Primitives Used"
+msgstr ""
+
+#: ../../../specs/untrusted.rst:42
+msgid ""
+"The user input to the system is the *folder ID*, which is a short string "
+"identifying a given folder between devices, and the *password*. From this we "
+"generate a *folder key* (32 bytes) using ``scrypt``::"
+msgstr ""
+
+#: ../../../specs/untrusted.rst:46
+msgid "folderKey = scrypt.Key(password, \"syncthing\" + folderID)"
+msgstr ""
+
+#: ../../../specs/untrusted.rst:48
+msgid ""
+"The string \"syncthing\" with the folder ID concatenated make up the salt. "
+"The folder key is used to encrypt file names using AES-SIV without nonce::"
+msgstr ""
+
+#: ../../../specs/untrusted.rst:51
+msgid "encryptedFilename = AES-SIV(filename, folderKey)"
+msgstr ""
+
+#: ../../../specs/untrusted.rst:53
+msgid ""
+"Given the key length of 32 bytes the algorithm in use will be AES-128 (\"AES-"
+"SIV-256\"). To make the encrypted file name usable again as a file name, we "
+"encode it using base32 and add slashes at strategic places."
+msgstr ""
+
+#: ../../../specs/untrusted.rst:57
+msgid ""
+"From the folder key and the plaintext file name we derive the *file key* by "
+"HKDF of the folder key and the plaintext file name::"
+msgstr ""
+
+#: ../../../specs/untrusted.rst:60
+msgid ""
+"fileKey = HKDF(SHA256, folderKey+filename, salt: \"syncthing\", info: nil)"
+msgstr ""
+
+#: ../../../specs/untrusted.rst:62
+msgid ""
+"This file key is used for all other encryption, specifically file block "
+"hashes and data blocks. In file metadata, block hashes are encrypted using "
+"AES-SIV with the file key::"
+msgstr ""
+
+#: ../../../specs/untrusted.rst:66
+msgid "encryptedBlockHash = AES-SIV(blockHash, fileKey)"
+msgstr ""
+
+#: ../../../specs/untrusted.rst:68
+msgid ""
+"Data blocks are encrypted using XChaCha20-Poly1305 with random nonces and "
+"appended to the nonce itself::"
+msgstr ""
+
+#: ../../../specs/untrusted.rst:71
+msgid "encryptedBlock = nonce + XChaCha20-Poly1305.Seal(block, nonce, fileKey)"
+msgstr ""
+
+#: ../../../specs/untrusted.rst:73
+msgid ""
+"The original file metadata descriptor is encrypted in the same manner and "
+"attached to the encrypted-file metadata."
+msgstr ""
+
+#: ../../../specs/untrusted.rst:76
+msgid ""
+"Devices sharing a folder need to use the same password. To ensure that a "
+"*password token* in the form of an arbitrary, but commonly known string "
+"encrypted using AES-SIV with the folder key is sent in the :ref:`cluster-"
+"config`::"
+msgstr ""
+
+#: ../../../specs/untrusted.rst:81
+msgid "passwordToken = AES-SIV(\"syncthing\" + folderID, folderKey)"
+msgstr ""
+
+#: ../../../specs/untrusted.rst:83
+msgid ""
+"Thus an encrypted device can verify all its connected devices use the same "
+"password comparing the encrypted token, without knowing the password itself."
+msgstr ""
+
+#: ../../../specs/untrusted.rst:88
+msgid ""
+"In Syncthing a file is made up of a number of equal size data blocks, "
+"followed by a usually shorter last data block. The full size data blocks are "
+"at minimum 128 KiB, ranging up to 16 MiB in multiples of two. The last data "
+"block can in principle be as small as one byte. For untrusted folders the "
+"size of the last data block is padded up to a kilobyte if it was shorter to "
+"begin with. The untrusted device isn't allowed to request less than a "
+"kilobyte of data."
+msgstr ""
+
+#: ../../../specs/untrusted.rst:96
+msgid ""
+"I don't actually know if this block padding serves a purpose. It was added "
+"to address a worry that something might break or leak if an attacker is "
+"allowed to repeatedly request single-byte data blocks of their choosing. If "
+"there is nothing to worry about here we can remove the padding. //jb"
+msgstr ""
+
+#: ../../../specs/untrusted.rst:104
+msgid ""
+"While a well behaved implementation is expected to request data blocks "
+"precisely as announced in the file metadata there is no enforcement of this. "
+"This means that an attacker on the untrusted side can repeatedly request "
+"arbitrary ranges of a file and receive the encrypted result. With the "
+"restriction above, the minimum block size that can be requested in 1024 "
+"bytes."
+msgstr ""
+
+#: ../../../specs/untrusted.rst:113
+msgid "Implementation Details"
+msgstr ""
+
+#: ../../../specs/untrusted.rst:116
+msgid "Metadata Encryption"
+msgstr ""
+
+#: ../../../specs/untrusted.rst:118
+msgid "The Syncthing protocol is essentially two-phase:"
+msgstr ""
+
+#: ../../../specs/untrusted.rst:120
+msgid ""
+"A device sends file metadata (a ``FileInfo`` structure) for a new or changed "
+"file"
+msgstr ""
+
+#: ../../../specs/untrusted.rst:122
+msgid ""
+"The other side determines which blocks it needs to construct the new file, "
+"and requests these blocks"
+msgstr ""
+
+#: ../../../specs/untrusted.rst:124
+msgid ""
+"For untrusted devices a fake FileInfo is constructed, with an encrypted name "
+"and block list and other metadata such as modification time and permissions "
+"set to static values."
+msgstr ""
+
+#: ../../../specs/untrusted.rst:128
+msgid "An original file metadata structure looks something like this:"
+msgstr ""
+
+#: ../../../specs/untrusted.rst:147
+msgid "The fake FileInfo encrypts and adjusts a couple of attributes:"
+msgstr ""
+
+#: ../../../specs/untrusted.rst:149
+msgid ""
+"The name is encrypted (with the folder key), base32 encoded, and slashes are "
+"inserted after the first and third characters, and then every 200 characters."
+msgstr ""
+
+#: ../../../specs/untrusted.rst:153
+msgid ""
+"The file size is adjusted for the per block overhead, and rounded up so that "
+"the last block is a multiple of 1024 bytes."
+msgstr ""
+
+#: ../../../specs/untrusted.rst:156
+msgid "The block size is adjusted for block overhead."
+msgstr ""
+
+#: ../../../specs/untrusted.rst:158
+msgid ""
+"Other file attributes are set to static values, for example the modification "
+"time is set to UNIX epoch time 1234567890 and permissions are set to 0644."
+msgstr ""
+
+#: ../../../specs/untrusted.rst:161
+msgid "The block list is encrypted and adjusted:"
+msgstr ""
+
+#: ../../../specs/untrusted.rst:163
+msgid "The offset and size are adjusted to account for block overhead"
+msgstr ""
+
+#: ../../../specs/untrusted.rst:165
+msgid "The hash is encrypted using AES-SIV (with the file key)"
+msgstr ""
+
+#: ../../../specs/untrusted.rst:167
+msgid ""
+"The resulting encrypted hash can't be used for data verification by the "
+"untrusted device, but it can be used as a form of \"token\" referring to a "
+"given data block for reuse purposes."
+msgstr ""
+
+#: ../../../specs/untrusted.rst:171
+msgid ""
+"Finally, the whole original FileInfo (in protobuf form) is encrypted using "
+"XChaCha20-Poly1305 with the file key and attached to the fake FileInfo. This "
+"is retained on the untrusted side and passed along to trusted devices, where "
+"it will be used in place of the fake FileInfo."
+msgstr ""
+
+#: ../../../specs/untrusted.rst:194
+msgid "Incoming Metadata"
+msgstr ""
+
+#: ../../../specs/untrusted.rst:196
+msgid ""
+"File metadata sent from the untrusted device is always decrypted. This means "
+"the original FileInfo is discarded and the attached encrypted FileInfo is "
+"decrypted and used instead. If the FileInfo does not decrypt it's considered "
+"a protocol error and the connection is dropped. This means only file "
+"metadata created by a trusted device is accepted."
+msgstr ""
+
+#: ../../../specs/untrusted.rst:203
+msgid "Data Encryption"
+msgstr ""
+
+#: ../../../specs/untrusted.rst:205
+msgid ""
+"When an untrusted device makes a request for a data block, the trusted "
+"device:"
+msgstr ""
+
+#: ../../../specs/untrusted.rst:208
+msgid "decrypts the given filename,"
+msgstr ""
+
+#: ../../../specs/untrusted.rst:209
+msgid "reads the corresponding plaintext data block,"
+msgstr ""
+
+#: ../../../specs/untrusted.rst:210
+msgid ""
+"pads the block with random data if the read returned less than 1024 bytes,"
+msgstr ""
+
+#: ../../../specs/untrusted.rst:211
+msgid "encrypts it using the file encryption key and a random nonce, and"
+msgstr ""
+
+#: ../../../specs/untrusted.rst:212
+msgid "responds with the result."
+msgstr ""
+
+#: ../../../specs/untrusted.rst:231
+msgid ""
+"This is repeated for all required blocks. At the end, the untrusted device "
+"appends the fake FileInfo (which includes the original, encrypted, FileInfo) "
+"to the file. This serves no purpose during normal operations, but enables "
+"offline decryption of an encrypted folder without database access and, in "
+"principle, scanning an encrypted folder to populate the database should it "
+"be lost or corrupted."
+msgstr ""
+
+#: ../../../specs/untrusted.rst:257
+msgid "Incoming Data"
+msgstr ""
+
+#: ../../../specs/untrusted.rst:259
+msgid ""
+"Making a request to an untrusted device is mostly the reverse of the above. "
+"The file name is encrypted and the block offset and size adjusted. The "
+"resulting data is decrypted and thereby also authenticated, meaning it must "
+"have originated on a trusted device. Contrary to the usual case we cannot "
+"simply make arbitrary range requests -- only the precise blocks that were "
+"encrypted to begin with will decrypt properly."
+msgstr ""
+
+#: ../../../specs/untrusted.rst:266
+msgid "---"
+msgstr ""
+
+#: ../../../specs/untrusted.rst:268
+msgid ""
+"Although files grow slightly due to block overhead, and some files are "
+"padded up to an even kilobyte, file sizes can be determined at least to the "
+"closest kilobyte."
+msgstr ""
