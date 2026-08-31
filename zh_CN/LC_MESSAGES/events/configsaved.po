@@ -1,0 +1,47 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2026, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-21 06:27+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../events/configsaved.rst:2
+msgid "ConfigSaved"
+msgstr ""
+
+#: ../../../events/configsaved.rst:4
+msgid ""
+"Emitted after the config has been saved by the user or by Syncthing itself."
+msgstr ""
+
+#: ../../../events/configsaved.rst:7
+msgid ""
+"{\n"
+"    \"id\": 50,\n"
+"    \"globalID\": 50,\n"
+"    \"type\": \"ConfigSaved\",\n"
+"    \"time\": \"2014-12-13T00:09:13.5166486Z\",\n"
+"    \"data\": {\n"
+"        \"version\": 7,\n"
+"        \"folders\": [{\"...\"}],\n"
+"        \"devices\": [{\"...\"}],\n"
+"        \"gui\": {\"...\"},\n"
+"        \"ldap\": {\"...\"},\n"
+"        \"options\": {\"...\"},\n"
+"        \"remoteIgnoredDevices\": [{\"...\"}],\n"
+"        \"defaults\": {\"...\"}\n"
+"    }\n"
+"}"
+msgstr ""
