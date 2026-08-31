@@ -47,9 +47,9 @@
     "branch" : "main",
     "commit" : 
     {
-      "date" : "2026-06-08 11:38:20 +0200",
-      "hash" : "bb2c76201eddfc9773178fbd6ae16fcf7584379a",
-      "title" : "chore: cleanup obsolete Transifex mention (#1015)"
+      "date" : "2026-08-12 08:50:15 +0000",
+      "hash" : "56d35a660de1fb027346351f311260be9e6fe7f3",
+      "title" : "Update version list"
     }
   },
   "type" : "branch",
