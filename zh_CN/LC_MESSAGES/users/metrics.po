@@ -1,0 +1,293 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2026, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-08 13:47+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../users/metrics.rst:2
+msgid "Prometheus-Style Metrics"
+msgstr ""
+
+#: ../../../users/metrics.rst:4
+msgid ""
+"Syncthing provides an endpoint for Prometheus-style metrics. Metrics are "
+"served on the ``/metrics`` path on the GUI / API address. The metrics "
+"endpoint requires authentication when the GUI / API is configured to require "
+"authentication; see :doc:`/dev/rest` for details."
+msgstr ""
+
+#: ../../../users/metrics.rst:10
+msgid "Metrics"
+msgstr ""
+
+#: ../../../users/metrics.rst:12
+msgid "The following metrics are available."
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:2
+msgid "Package *build*"
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:5
+msgid "Metric *syncthing_build_info* (gauge vector)"
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:7
+msgid ""
+"A metric with a constant '1' value labeled by version information from when "
+"the binary was built."
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:11
+msgid "Package *connections*"
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:14
+msgid "Metric *syncthing_connections_active* (gauge vector)"
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:16
+msgid ""
+"Number of currently active connections, per device. If value is 0, the "
+"device is disconnected."
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:20
+msgid "Package *db*"
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:23
+msgid "Metric *syncthing_db_files_updated_total* (counter vector)"
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:25
+msgid "Total number of files updated."
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:28
+msgid "Metric *syncthing_db_operation_seconds_total* (counter vector)"
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:30
+msgid "Total time spent in database operations, per folder and operation."
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:33
+msgid "Metric *syncthing_db_operations_current* (gauge vector)"
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:35
+msgid ""
+"Number of database operations currently ongoing, per folder and operation."
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:39
+msgid "Metric *syncthing_db_operations_total* (counter vector)"
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:41
+msgid "Total number of database operations, per folder and operation."
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:44
+msgid "Package *events*"
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:47
+msgid "Metric *syncthing_events_total* (counter vector)"
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:49
+msgid "Total number of created/forwarded/dropped events."
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:52
+msgid "Package *fs*"
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:55
+msgid "Metric *syncthing_fs_operation_bytes_total* (counter vector)"
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:57
+msgid ""
+"Total number of filesystem bytes transferred, per filesystem root and "
+"operation."
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:61
+msgid "Metric *syncthing_fs_operation_seconds_total* (counter vector)"
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:63
+msgid ""
+"Total time spent in filesystem operations, per filesystem root and operation."
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:67
+msgid "Metric *syncthing_fs_operations_total* (counter vector)"
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:69
+msgid ""
+"Total number of filesystem operations, per filesystem root and operation."
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:73
+msgid "Package *model*"
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:76
+msgid "Metric *syncthing_model_folder_conflicts_total* (counter vector)"
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:78
+msgid "Total number of conflicts."
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:81
+msgid "Metric *syncthing_model_folder_processed_bytes_total* (counter vector)"
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:83
+msgid ""
+"Total amount of data processed during folder syncing, per folder ID and data "
+"source (network/local_origin/local_other/skipped)."
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:87
+msgid "Metric *syncthing_model_folder_pull_seconds_total* (counter vector)"
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:89
+msgid "Total time spent in folder pull iterations, per folder ID."
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:92
+msgid "Metric *syncthing_model_folder_pulls_total* (counter vector)"
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:94
+msgid "Total number of folder pull iterations, per folder ID."
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:97
+msgid "Metric *syncthing_model_folder_scan_seconds_total* (counter vector)"
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:99
+msgid "Total time spent in folder scan iterations, per folder ID."
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:102
+msgid "Metric *syncthing_model_folder_scans_total* (counter vector)"
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:104
+msgid "Total number of folder scan iterations, per folder ID."
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:107
+msgid "Metric *syncthing_model_folder_state* (gauge vector)"
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:109
+msgid "Current folder state."
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:112
+msgid "Metric *syncthing_model_folder_summary* (gauge vector)"
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:114
+msgid ""
+"Current folder summary data (counts for global/local/need files/directories/"
+"symlinks/deleted/bytes)."
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:118
+msgid "Package *protocol*"
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:121
+msgid "Metric *syncthing_protocol_recv_bytes_total* (counter vector)"
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:123
+msgid "Total amount of data received, per device."
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:126
+msgid ""
+"Metric *syncthing_protocol_recv_decompressed_bytes_total* (counter vector)"
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:128
+msgid "Total amount of data received, after decompression, per device."
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:131
+msgid "Metric *syncthing_protocol_recv_messages_total* (counter vector)"
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:133
+msgid "Total number of messages received, per device."
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:136
+msgid "Metric *syncthing_protocol_sent_bytes_total* (counter vector)"
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:138
+msgid "Total amount of data sent, per device."
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:141
+msgid "Metric *syncthing_protocol_sent_messages_total* (counter vector)"
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:143
+msgid "Total number of messages sent, per device."
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:146
+msgid ""
+"Metric *syncthing_protocol_sent_uncompressed_bytes_total* (counter vector)"
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:148
+msgid "Total amount of data sent, before compression, per device."
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:151
+msgid "Package *scanner*"
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:154
+msgid "Metric *syncthing_scanner_hashed_bytes_total* (counter vector)"
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:156
+msgid "Total amount of data hashed, per folder."
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:159
+msgid "Metric *syncthing_scanner_scanned_items_total* (counter vector)"
+msgstr ""
+
+#: ../../../includes/metrics-list.rst:161
+msgid "Total number of items (files/directories) inspected, per folder."
+msgstr ""
