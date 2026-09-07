@@ -1,0 +1,146 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2026, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-21 06:27+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: sr_RS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../advanced/folder-sync-ownership.rst:2
+msgid "syncOwnership"
+msgstr ""
+
+#: ../../../advanced/folder-sync-ownership.rst:6
+msgid ""
+"When enabled, Syncthing attempts to also synchronise ownership between "
+"devices. Ownership is divided into two kinds:"
+msgstr ""
+
+#: ../../../advanced/folder-sync-ownership.rst:9
+msgid "\"Unix\" ownership, which is the Unix style UID and GID, and"
+msgstr ""
+
+#: ../../../advanced/folder-sync-ownership.rst:10
+msgid "\"Windows\" ownership, which the Windows file ownership concept."
+msgstr ""
+
+#: ../../../advanced/folder-sync-ownership.rst:12
+msgid ""
+"The two are not mixed -- that is, ownership information is not synchronised "
+"between POSIX and Windows systems, only POSIX-to-POSIX and Windows-to-"
+"Windows. Nonetheless Syncthing attempts to leave unknown ownership data "
+"intact: POSIX systems will not overwrite Windows ownership data but pass it "
+"on unmodified, and vice versa."
+msgstr ""
+
+#: ../../../advanced/folder-sync-ownership.rst:19
+msgid ""
+"In order for there to be ownership information to apply, the peer device "
+"must have either ``syncOwnership`` or :doc:`folder-send-ownership` enabled."
+msgstr ""
+
+#: ../../../advanced/folder-sync-ownership.rst:23
+msgid "Unix implementation"
+msgstr ""
+
+#: ../../../advanced/folder-sync-ownership.rst:25
+msgid ""
+"Syncthing records both the numerical UID and GID for a file and the "
+"corresponding user and group names, when they are known. When applying "
+"ownership Syncthing will first attempt to look up a local user or group with "
+"the given name, and if that fails it will fall back to the numerical UID and "
+"GID."
+msgstr ""
+
+#: ../../../advanced/folder-sync-ownership.rst:32
+msgid "Elevated permissions"
+msgstr ""
+
+#: ../../../advanced/folder-sync-ownership.rst:34
+msgid ""
+"Syncthing, when running as a normal user account, doesn't have permission to "
+"alter file ownership. There are several reasonable ways of running Syncthing "
+"with elevated permissions to enable ownership sync:"
+msgstr ""
+
+#: ../../../advanced/folder-sync-ownership.rst:38
+msgid ""
+"As root, in a Docker container, with the synced data mounted as a volume."
+msgstr ""
+
+#: ../../../advanced/folder-sync-ownership.rst:40
+msgid "As a normal user, with extra capabilities granted to the executable."
+msgstr ""
+
+#: ../../../advanced/folder-sync-ownership.rst:42
+msgid "To grant extra capabilities, the following steps must be taken:"
+msgstr ""
+
+#: ../../../advanced/folder-sync-ownership.rst:44
+msgid "The executable must be owned by root and not writable by normal users."
+msgstr ""
+
+#: ../../../advanced/folder-sync-ownership.rst:45
+msgid ""
+"The executable must be granted the CHOWN and FOWNER capabilities. The CHOWN "
+"capability is required to be able to change ownership on the file. However, "
+"once that has been done Syncthing may no longer have permission to act on "
+"the file in other ways while running as anonymous user. The FOWNER "
+"capability overrides this."
+msgstr ""
+
+#: ../../../advanced/folder-sync-ownership.rst:51
+msgid "Example commands of setting Syncthing up in this manner::"
+msgstr ""
+
+#: ../../../advanced/folder-sync-ownership.rst:53
+msgid ""
+"% sudo chown root /usr/local/bin/syncthing\n"
+"% sudo chmod 755 /usr/local/bin/syncthing\n"
+"% sudo setcap CAP_CHOWN,CAP_FOWNER=pe /usr/local/bin/syncthing"
+msgstr ""
+
+#: ../../../advanced/folder-sync-ownership.rst:57
+msgid ""
+"Note that automated upgrades cannot be used with Syncthing elevated in this "
+"manner as any automated upgrade would undo the capabilities granted."
+msgstr ""
+
+#: ../../../advanced/folder-sync-ownership.rst:60
+msgid ""
+"When using systemd to start the service automatically, the capabilities can "
+"be set in the unit file instead of touching the executable, see :ref:"
+"`autostart-systemd-permissions`."
+msgstr ""
+
+#: ../../../advanced/folder-sync-ownership.rst:65
+msgid "Windows implementation"
+msgstr ""
+
+#: ../../../advanced/folder-sync-ownership.rst:67
+msgid ""
+"Syncthing records the account name of the owner, and whether it is a group "
+"or user. On the receiving side a user or group with the corresponding name "
+"is looked up and set as the owner."
+msgstr ""
+
+#: ../../../advanced/folder-sync-ownership.rst:71
+msgid ""
+"On Windows, syncing ownership has a fairly significant performance impact on "
+"scan times."
+msgstr ""
+
+#: ../../../advanced/folder-sync-ownership.rst:74
+msgid ":doc:`folder-send-ownership`"
+msgstr ""

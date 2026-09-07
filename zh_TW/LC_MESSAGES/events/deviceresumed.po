@@ -1,0 +1,40 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2026, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-21 06:27+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../events/deviceresumed.rst:2
+msgid "DeviceResumed"
+msgstr ""
+
+#: ../../../events/deviceresumed.rst:4
+msgid "Generated each time a device was resumed."
+msgstr ""
+
+#: ../../../events/deviceresumed.rst:6
+msgid ""
+"{\n"
+"    \"id\": 2,\n"
+"    \"globalID\": 2,\n"
+"    \"type\": \"DeviceResumed\",\n"
+"    \"time\": \"2014-07-13T21:04:33.687836696+02:00\",\n"
+"    \"data\": {\n"
+"        \"device\": \"NFGKEKE-7Z6RTH7-I3PRZXS-DEJF3UJ-FRWJBFO-"
+"VBBTDND-4SGNGVZ-QUQHJAG\"\n"
+"    }\n"
+"}"
+msgstr ""
