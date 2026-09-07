@@ -1,0 +1,128 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing 0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../dev/events.rst:4
+msgid "Event API"
+msgstr ""
+
+#: ../../../dev/events.rst:7
+msgid "Description"
+msgstr "描述"
+
+#: ../../../dev/events.rst:9
+msgid ""
+"Syncthing provides a simple long polling interface for exposing events from "
+"the core utility towards a GUI."
+msgstr ""
+
+#: ../../../dev/events.rst:12
+msgid ""
+"To receive events, perform a HTTP GET of ``/rest/events?"
+"since=<lastSeenID>``, where ``<lastSeenID>`` is the ID of the last event "
+"you've already seen or zero. Syncthing returns a JSON encoded array of event "
+"objects, starting at the event just after the one with the last seen ID. "
+"There is a limit to the number of events buffered, so if the rate of events "
+"is high or the time between polling calls is long some events might be "
+"missed. This can be detected by noting a discontinuity in the event IDs."
+msgstr ""
+
+#: ../../../dev/events.rst:20
+msgid ""
+"If no new events are produced since ``<lastSeenID>``, the HTTP call blocks "
+"and waits for new events to happen before returning, or if no new events are "
+"produced within 60 seconds, times out."
+msgstr ""
+
+#: ../../../dev/events.rst:24
+msgid ""
+"To receive only a limited number of events, add the ``limit=n`` parameter "
+"with a suitable value for ``n`` and only the *last* ``n`` events will be "
+"returned. This can be used to catch up with the latest event ID after a "
+"disconnection for example: ``/rest/events?since=0&limit=1``."
+msgstr ""
+
+#: ../../../dev/events.rst:30
+msgid "Event Structure"
+msgstr ""
+
+#: ../../../dev/events.rst:32
+msgid "Each event is represented by an object similar to the following::"
+msgstr ""
+
+#: ../../../dev/events.rst:34
+msgid ""
+"{\n"
+"    \"id\": 2,\n"
+"    \"type\": \"DeviceConnected\",\n"
+"    \"time\": \"2014-07-13T21:04:33.687836696+02:00\",\n"
+"    \"data\": {\n"
+"        \"addr\": \"172.16.32.25:22000\",\n"
+"        \"id\": \"NFGKEKE-7Z6RTH7-I3PRZXS-DEJF3UJ-FRWJBFO-VBBTDND-4SGNGVZ-"
+"QUQHJAG\"\n"
+"    }\n"
+"}"
+msgstr ""
+
+#: ../../../dev/events.rst:44
+msgid ""
+"The top level keys ``id``, ``time``, ``type`` and ``data`` are always "
+"present, though ``data`` may be ``null``."
+msgstr ""
+
+#: ../../../dev/events.rst:47
+msgid "id"
+msgstr ""
+
+#: ../../../dev/events.rst:48
+msgid ""
+"A monotonically increasing integer. The first event generated has id ``1``, "
+"the next has id ``2`` etc."
+msgstr ""
+
+#: ../../../dev/events.rst:50
+msgid "time"
+msgstr ""
+
+#: ../../../dev/events.rst:51
+msgid "The time the event was generated."
+msgstr ""
+
+#: ../../../dev/events.rst:52
+msgid "type"
+msgstr ""
+
+#: ../../../dev/events.rst:53
+msgid ""
+"Indicates the type of (i.e. reason for) the event and is one of the event "
+"types below."
+msgstr ""
+
+#: ../../../dev/events.rst:55
+msgid "data"
+msgstr ""
+
+#: ../../../dev/events.rst:56
+msgid ""
+"An object containing optional extra information; the exact structure is "
+"determined by the event type."
+msgstr ""
+
+#: ../../../dev/events.rst:60
+msgid "Events"
+msgstr ""
