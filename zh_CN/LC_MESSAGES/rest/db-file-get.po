@@ -1,0 +1,147 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2026, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-06 09:56+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../rest/db-file-get.rst:2
+msgid "GET /rest/db/file"
+msgstr ""
+
+#: ../../../rest/db-file-get.rst:4
+msgid ""
+"Returns most data about a given file, including version and availability."
+msgstr ""
+
+#: ../../../rest/db-file-get.rst:7
+msgid "Request"
+msgstr ""
+
+#: ../../../rest/db-file-get.rst:9
+msgid ""
+"The call requires parameters for ``folder`` and ``file`` in the query string:"
+msgstr ""
+
+#: ../../../rest/db-file-get.rst:11
+msgid ""
+"``folder`` is the folder ID which you can find in the Syncthing Web GUI, e."
+"g. ``5camp-slpa8``."
+msgstr ""
+
+#: ../../../rest/db-file-get.rst:14
+msgid ""
+"``file`` is the relative path of the file starting from the folder root to "
+"the file you are interested in.  The path and filename must be correctly URL-"
+"encoded."
+msgstr ""
+
+#: ../../../rest/db-file-get.rst:19
+msgid "Example Request"
+msgstr ""
+
+#: ../../../rest/db-file-get.rst:21
+msgid ""
+"$ curl -s -H X-API-KEY:... \"http://localhost:8384/rest/db/file?"
+"folder=YOUR_FOLDER_ID\" --url-query \"file=path/to/file.pdf\""
+msgstr ""
+
+#: ../../../rest/db-file-get.rst:26
+msgid "Response"
+msgstr ""
+
+#: ../../../rest/db-file-get.rst:28
+msgid ""
+"{\n"
+"  \"availability\": [\n"
+"    {\n"
+"      \"id\": \"ITZRNXE-YNROGBZ-HXTH5P7-VK5NYE5-QHRQGE2-7JQ6VNJ-"
+"KZUEDIU-5PPR5AM\",\n"
+"      \"fromTemporary\": false\n"
+"    }\n"
+"  ],\n"
+"  \"global\": { /* a file entry */ },\n"
+"  \"local\": { /* a file entry */ },\n"
+"  \"mtime\": {\n"
+"    \"err\": null,\n"
+"    \"value\": {\n"
+"      \"real\": \"0001-01-01T00:00:00Z\",\n"
+"      \"virtual\": \"0001-01-01T00:00:00Z\"\n"
+"  }\n"
+"}"
+msgstr ""
+
+#: ../../../rest/db-file-get.rst:47
+msgid ""
+"``local`` and ``global`` refer to the current file on the local device and "
+"the globally newest file, respectively.  A file entry looks like this:"
+msgstr ""
+
+#: ../../../rest/db-file-get.rst:50
+msgid ""
+"{\n"
+"  \"deleted\": false,\n"
+"  \"ignored\": false,\n"
+"  \"inodeChange\": \"1970-01-01T01:00:00+01:00\",\n"
+"  \"invalid\": false,\n"
+"  \"localFlags\": 0,\n"
+"  \"modified\": \"2022-09-28T08:07:19.979723+02:00\",\n"
+"  \"modifiedBy\": \"523ITIE\",\n"
+"  \"mustRescan\": false,\n"
+"  \"name\": \"img\",\n"
+"  \"noPermissions\": false,\n"
+"  \"numBlocks\": 0,\n"
+"  \"permissions\": \"0755\",\n"
+"  \"platform\": { /* platform specific data */ },\n"
+"  \"sequence\": 914,\n"
+"  \"size\": 128,\n"
+"  \"type\": \"FILE_INFO_TYPE_DIRECTORY\",\n"
+"  \"version\": [\n"
+"    \"523ITIE:1664345275\"\n"
+"  ]\n"
+"}"
+msgstr ""
+
+#: ../../../rest/db-file-get.rst:74
+msgid ""
+"Platform specific data may be ownership, extended attributes, etc. and is "
+"divided into entries per operating system / platform.  An example platform "
+"entry containing ownership information for Unix systems and an extended "
+"attribute for macOS (\"darwin\") looks as follows:"
+msgstr ""
+
+#: ../../../rest/db-file-get.rst:79
+msgid ""
+"{\n"
+"  \"darwin\": {\n"
+"    \"xattrs\": [\n"
+"      {\n"
+"        \"name\": \"net.kastelo.xattrtest\",\n"
+"        \"value\": \"aGVsbG8=\"\n"
+"      }\n"
+"    ]\n"
+"  },\n"
+"  \"freebsd\": null,\n"
+"  \"linux\": null,\n"
+"  \"netbsd\": null,\n"
+"  \"unix\": {\n"
+"    \"gid\": 20,\n"
+"    \"groupName\": \"staff\",\n"
+"    \"ownerName\": \"jb\",\n"
+"    \"uid\": 501\n"
+"  },\n"
+"  \"windows\": null\n"
+"}"
+msgstr ""

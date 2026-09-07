@@ -1,0 +1,42 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2026, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-06 09:56+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: sr_RS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../rest/system-error-get.rst:2
+msgid "GET /rest/system/error"
+msgstr ""
+
+#: ../../../rest/system-error-get.rst:4
+msgid "Return format changed in 0.12.0."
+msgstr ""
+
+#: ../../../rest/system-error-get.rst:6
+msgid "Returns the list of recent errors."
+msgstr ""
+
+#: ../../../rest/system-error-get.rst:8
+msgid ""
+"{\n"
+"  \"errors\": [\n"
+"    {\n"
+"      \"when\": \"2014-09-18T12:59:26.549953186+02:00\",\n"
+"      \"message\": \"This is an error string\"\n"
+"    }\n"
+"  ]\n"
+"}"
+msgstr ""
