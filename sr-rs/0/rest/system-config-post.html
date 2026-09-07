@@ -1,0 +1,201 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="sr-RS" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>POST /rest/system/config &mdash; документација Syncthing v0.13</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/syncthing.css?v=21f33da5" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://projects.localizethedocs.org/syncthing-docs-l10n/rest/system-config-post.html" />
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=563f8401"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/translations.js?v=96356656"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Индекс" href="../genindex.html" />
+    <link rel="search" title="Претрага" href="../search.html" />
+    <link rel="next" title="GET /rest/system/connections" href="system-connections-get.html" />
+    <link rel="prev" title="GET /rest/system/config/insync" href="system-config-insync-get.html" />
+ 
+<script type="text/javascript" src="../ltd-provenance.js"></script>
+<script type="text/javascript" src="../ltd-current.js"></script>
+<script type="text/javascript" src="../../../ltd-config.js"></script>
+<script type="text/javascript" src="../../../ltd-flyout.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Syncthing
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro/getting-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/gui.html">An intro to the GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/project-presentation.html">Project Presentation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">For Users</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../users/syncthing.html">Command Line Operation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/config.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/advanced.html">Advanced Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/foldermaster.html">Folder Master Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/syncing.html">Understanding Synchronization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/firewall.html">Firewall Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/relaying.html">Relaying</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/proxying.html">Using Proxies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/ignoring.html">Ignoring Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/versioning.html">File Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/discosrv.html">Custom Discovery Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/relaysrv.html">Custom Relay Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/custom-upgrades.html">Custom Upgrade Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/autostart.html">Starting Syncthing Automatically</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/contrib.html">Community Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/reverseproxy.html">Reverse Proxy Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/security.html">Security Principles</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">For Developers</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../dev/intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/building.html">Building Syncthing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/contributing.html">Contribution Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/debugging.html">Debugging Syncthing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/device-ids.html">Understanding Device IDs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/events.html">Event API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/infrastructure.html">Syncthing Infrastructure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/issues.html">Issue Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/jenkins.html">Interacting with Jenkins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/mergebot.html">Interacting with the Merge Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/release-creation.html">Creating a Release</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/release-schedule.html">Release Schedule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/release-signing.html">Release Signing</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../dev/rest.html">REST API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../dev/rest.html#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dev/rest.html#api-key">API Key</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../dev/rest.html#system-endpoints">System Endpoints</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="system-config-get.html">GET /rest/system/config</a></li>
+<li class="toctree-l3"><a class="reference internal" href="system-config-insync-get.html">GET /rest/system/config/insync</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">POST /rest/system/config</a></li>
+<li class="toctree-l3"><a class="reference internal" href="system-connections-get.html">GET /rest/system/connections</a></li>
+<li class="toctree-l3"><a class="reference internal" href="system-debug-get.html">GET /rest/system/debug</a></li>
+<li class="toctree-l3"><a class="reference internal" href="system-debug-post.html">POST /rest/system/debug</a></li>
+<li class="toctree-l3"><a class="reference internal" href="system-discovery-get.html">GET /rest/system/discovery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="system-discovery-post.html">POST /rest/system/discovery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="system-error-clear-post.html">POST /rest/system/error/clear</a></li>
+<li class="toctree-l3"><a class="reference internal" href="system-error-get.html">GET /rest/system/error</a></li>
+<li class="toctree-l3"><a class="reference internal" href="system-error-post.html">POST /rest/system/error</a></li>
+<li class="toctree-l3"><a class="reference internal" href="system-log-get.html">GET /rest/system/log</a></li>
+<li class="toctree-l3"><a class="reference internal" href="system-ping-get.html">GET /rest/system/ping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="system-ping-post.html">POST /rest/system/ping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="system-reset-post.html">POST /rest/system/reset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="system-restart-post.html">POST /rest/system/restart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="system-shutdown-post.html">POST /rest/system/shutdown</a></li>
+<li class="toctree-l3"><a class="reference internal" href="system-status-get.html">GET /rest/system/status</a></li>
+<li class="toctree-l3"><a class="reference internal" href="system-upgrade-get.html">GET /rest/system/upgrade</a></li>
+<li class="toctree-l3"><a class="reference internal" href="system-upgrade-post.html">POST /rest/system/upgrade</a></li>
+<li class="toctree-l3"><a class="reference internal" href="system-version-get.html">GET /rest/system/version</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../dev/rest.html#database-endpoints">Database Endpoints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dev/rest.html#statistics-endpoints">Statistics Endpoints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dev/rest.html#misc-services-endpoints">Misc Services Endpoints</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Specifications</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../specs/index.html">Specifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../specs/bep-v1.html">Block Exchange Protocol v1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../specs/globaldisco-v3.html">Global Discovery v3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../specs/localdisco-v3.html">Local Discovery Protocol v3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../specs/relay-v1.html">Relay Protocol v1</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Syncthing</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../dev/rest.html">REST API</a></li>
+      <li class="breadcrumb-item active">POST /rest/system/config</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/syncthing/docs/blob/master/rest/system-config-post.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="post-rest-system-config">
+<h1>POST /rest/system/config<a class="headerlink" href="#post-rest-system-config" title="Link to this heading"></a></h1>
+<p>Post the full contents of the configuration, in the same format as returned by
+the corresponding GET request. The configuration will be saved to disk and the
+<code class="docutils literal notranslate"><span class="pre">configInSync</span></code> flag set to false. Restart Syncthing to activate.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="system-config-insync-get.html" class="btn btn-neutral float-left" title="GET /rest/system/config/insync" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="system-connections-get.html" class="btn btn-neutral float-right" title="GET /rest/system/connections" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+      <span class="lastupdated">Last updated on јул 27, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

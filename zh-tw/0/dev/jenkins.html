@@ -1,0 +1,191 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-TW" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interacting with Jenkins &mdash; Syncthing v0.13 說明文件</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/syncthing.css?v=21f33da5" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://projects.localizethedocs.org/syncthing-docs-l10n/dev/jenkins.html" />
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=53319032"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/translations.js?v=cbf116e0"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜尋" href="../search.html" />
+    <link rel="next" title="Interacting with the Merge Bot" href="mergebot.html" />
+    <link rel="prev" title="議題管理" href="issues.html" />
+ 
+<script type="text/javascript" src="../ltd-provenance.js"></script>
+<script type="text/javascript" src="../ltd-current.js"></script>
+<script type="text/javascript" src="../../../ltd-config.js"></script>
+<script type="text/javascript" src="../../../ltd-flyout.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Syncthing
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro/getting-started.html">開始使用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/gui.html">An intro to the GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/project-presentation.html">Project Presentation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">For Users</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../users/syncthing.html">Command Line Operation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/faq.html">常見問題</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/config.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/advanced.html">進階組態</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/foldermaster.html">Folder Master Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/syncing.html">Understanding Synchronization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/firewall.html">防火牆設定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/relaying.html">Relaying</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/proxying.html">Using Proxies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/ignoring.html">忽略檔案</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/versioning.html">File Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/discosrv.html">Custom Discovery Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/relaysrv.html">Custom Relay Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/custom-upgrades.html">自訂升級伺服器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/autostart.html">自動啟動 Syncthing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/contrib.html">社群貢獻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/reverseproxy.html">反向代理設定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/security.html">Security Principles</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">For Developers</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="building.html">建置 Syncthing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contribution Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debugging.html">除錯 Syncthing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="device-ids.html">理解裝置 ID</a></li>
+<li class="toctree-l1"><a class="reference internal" href="events.html">Event API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="infrastructure.html">Syncthing 基礎設施</a></li>
+<li class="toctree-l1"><a class="reference internal" href="issues.html">議題管理</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Interacting with Jenkins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mergebot.html">Interacting with the Merge Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="release-creation.html">Creating a Release</a></li>
+<li class="toctree-l1"><a class="reference internal" href="release-schedule.html">Release Schedule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="release-signing.html">Release Signing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rest.html">REST API</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Specifications</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../specs/index.html">規格</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../specs/bep-v1.html">區塊交換協定 v1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../specs/globaldisco-v3.html">Global Discovery v3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../specs/localdisco-v3.html">Local Discovery Protocol v3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../specs/relay-v1.html">Relay Protocol v1</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Syncthing</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Interacting with Jenkins</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/syncthing/docs/blob/master/dev/jenkins.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="interacting-with-jenkins">
+<h1>Interacting with Jenkins<a class="headerlink" href="#interacting-with-jenkins" title="連結到這個標頭"></a></h1>
+<p>Jenkins will test pull requests from recognized authors. If the pull
+request is not from a recognized author, an <em>admin</em> needs to tell
+Jenkins to perform the tests, after giving the patch a manual look over
+to prevent shenanigans. A number of tests are performed, ranging from
+verifying correct code formatting and that the author is included in the
+AUTHORS file to that the code in fact builds and passes tests. A pull
+request should usually only be merged if all tests return green,
+although there are exceptions.</p>
+<p>To enable testing for this pull request only:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@st</span><span class="o">-</span><span class="n">jenkins</span> <span class="n">ok</span> <span class="n">to</span> <span class="n">test</span>
+</pre></div>
+</div>
+<p>To enable testing for this pull request, and all future pull requests
+from the same author:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@st</span><span class="o">-</span><span class="n">jenkins</span> <span class="n">add</span> <span class="n">to</span> <span class="n">whitelist</span>
+</pre></div>
+</div>
+<p>For pull requests where Jenkins has already run it's tests, but should
+run them again:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@st</span><span class="o">-</span><span class="n">jenkins</span> <span class="n">test</span> <span class="n">this</span> <span class="n">please</span>
+</pre></div>
+</div>
+<p>This is not necessary when new commits are pushed (tests will be rerun
+for the new commits), but is useful if something has changed server side
+or to verify that everything is still OK if <code class="docutils literal notranslate"><span class="pre">master</span></code> has been updated.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="issues.html" class="btn btn-neutral float-left" title="議題管理" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="mergebot.html" class="btn btn-neutral float-right" title="Interacting with the Merge Bot" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+      <span class="lastupdated">最後更新於 7月 27, 2026。
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

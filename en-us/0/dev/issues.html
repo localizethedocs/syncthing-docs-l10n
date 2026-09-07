@@ -1,0 +1,251 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Issue Management &mdash; Syncthing v0.13 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/syncthing.css?v=21f33da5" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://projects.localizethedocs.org/syncthing-docs-l10n/dev/issues.html" />
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=9279f2c6"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Interacting with Jenkins" href="jenkins.html" />
+    <link rel="prev" title="Syncthing Infrastructure" href="infrastructure.html" />
+ 
+<script type="text/javascript" src="../ltd-provenance.js"></script>
+<script type="text/javascript" src="../ltd-current.js"></script>
+<script type="text/javascript" src="../../../ltd-config.js"></script>
+<script type="text/javascript" src="../../../ltd-flyout.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Syncthing
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro/getting-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/gui.html">An intro to the GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/project-presentation.html">Project Presentation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">For Users</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../users/syncthing.html">Command Line Operation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/config.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/advanced.html">Advanced Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/foldermaster.html">Folder Master Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/syncing.html">Understanding Synchronization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/firewall.html">Firewall Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/relaying.html">Relaying</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/proxying.html">Using Proxies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/ignoring.html">Ignoring Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/versioning.html">File Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/discosrv.html">Custom Discovery Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/relaysrv.html">Custom Relay Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/custom-upgrades.html">Custom Upgrade Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/autostart.html">Starting Syncthing Automatically</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/contrib.html">Community Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/reverseproxy.html">Reverse Proxy Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/security.html">Security Principles</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">For Developers</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="building.html">Building Syncthing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contribution Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debugging.html">Debugging Syncthing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="device-ids.html">Understanding Device IDs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="events.html">Event API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="infrastructure.html">Syncthing Infrastructure</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Issue Management</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#labels">Labels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#milestone">Milestone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#assignee">Assignee</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#locking">Locking</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="jenkins.html">Interacting with Jenkins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mergebot.html">Interacting with the Merge Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="release-creation.html">Creating a Release</a></li>
+<li class="toctree-l1"><a class="reference internal" href="release-schedule.html">Release Schedule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="release-signing.html">Release Signing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rest.html">REST API</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Specifications</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../specs/index.html">Specifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../specs/bep-v1.html">Block Exchange Protocol v1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../specs/globaldisco-v3.html">Global Discovery v3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../specs/localdisco-v3.html">Local Discovery Protocol v3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../specs/relay-v1.html">Relay Protocol v1</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Syncthing</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Issue Management</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/syncthing/docs/blob/master/dev/issues.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="issue-management">
+<h1>Issue Management<a class="headerlink" href="#issue-management" title="Link to this heading"></a></h1>
+<p>Bugs, feature requests and other things we need to do are tracked as
+Github issues. Issues can be of various types and in various states, and
+also belong to milestones or not. This page is an attempt to document
+the current practice.</p>
+<section id="labels">
+<h2>Labels<a class="headerlink" href="#labels" title="Link to this heading"></a></h2>
+<p>Issues without labels are undecided - that is, we don’t yet know if it’s
+a bug, a configuration issue, a feature request or what. Issues that are
+invalid for whatever reason are closed with a short explanation of why.
+Examples include “Duplicate of #123”, “Discovered to be configuration
+error”, “Rendered moot by #123” and so on. We don’t use the “invalid” or
+“wontfix” labels.</p>
+<dl class="simple">
+<dt>android</dt><dd><p>Marks an issue as occurring on the Android platform only.</p>
+</dd>
+<dt>bug</dt><dd><p>The issue is a verified bug.</p>
+</dd>
+<dt>build</dt><dd><p>The issue is caused by or requires changes to the build system
+(scripts or Docker image).</p>
+</dd>
+<dt>docs</dt><dd><p>Something requires documenting.</p>
+</dd>
+<dt>easy</dt><dd><p>This could be easily fixed, probably an hour’s work or less.
+These issues are good starting points for new contributors.</p>
+</dd>
+<dt>enhancement</dt><dd><p>This is a new feature or an improvement of some kind, as
+opposed to a problem (bug).</p>
+</dd>
+<dt>help-wanted</dt><dd><p>The core team can’t or won’t do this, but someone else is welcome
+to. This does not mean that help is not wanted on the <em>other</em>
+issues. You can see this as a soft <code class="docutils literal notranslate"><span class="pre">wontfix</span></code>. (A hard <code class="docutils literal notranslate"><span class="pre">wontfix</span></code>
+is simply a close with a short explanation why.)</p>
+</dd>
+<dt>pr-bugfix</dt><dd><p>This pull request <em>fixes</em> a bug. This is different from the <code class="docutils literal notranslate"><span class="pre">bug</span></code>
+label, as there may also be pull requests with for example tests
+that <em>prove</em> a bug which would then be labeled <code class="docutils literal notranslate"><span class="pre">bug</span></code>.</p>
+</dd>
+<dt>pr-refactor</dt><dd><p>This pull request is a refactoring, i.e. not supposed to change
+behavior.</p>
+</dd>
+<dt>pr-WIP</dt><dd><p>This pull request is not ready for merging, even if the tests
+pass and it looks good. It is incomplete or requires more
+discussion.</p>
+</dd>
+<dt>protocol</dt><dd><p>This requires a change to the protocol.</p>
+</dd>
+</dl>
+</section>
+<section id="milestone">
+<h2>Milestone<a class="headerlink" href="#milestone" title="Link to this heading"></a></h2>
+<p>There are milestones for major and sometimes minor versions. An issue
+being assigned to a milestone means it is a blocker - the release can’t
+be made without the issue being closed. Issues not assigned to a
+milestone can be handled whenever.</p>
+</section>
+<section id="assignee">
+<h2>Assignee<a class="headerlink" href="#assignee" title="Link to this heading"></a></h2>
+<p>Users can be assigned to issues. We don’t usually do so. Sometimes
+someone assigns themself to an issue to indicate “I’m working on this”
+to avoid others doing so too. It’s not mandatory.</p>
+</section>
+<section id="locking">
+<h2>Locking<a class="headerlink" href="#locking" title="Link to this heading"></a></h2>
+<p>We don’t normally lock issues (prevent further discussion on them).
+There are some exceptions though;</p>
+<ul class="simple">
+<li><p>“Popular” issues that attract lots of “me too” and “+1” comments.
+These are noise and annoy people with useless notifications via mail
+and in the Github interface. Once the issue is clear and it suffers
+from this symptom I may lock it.</p></li>
+<li><p>Contentious bikeshedding discussions. After two sides in a discussion
+have clarified their points, there is no point arguing endlessly
+about it. As above, this may get closed.</p></li>
+<li><p>Duplicates. Once an issue has been identified as a duplicate of
+another issue, it may be locked to prevent further discussion there.
+The intention is to move the discussion to the other (referenced)
+issue, while someone just doing a search and jumping on the first
+match might otherwise resurrect discussion in the duplicate.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="infrastructure.html" class="btn btn-neutral float-left" title="Syncthing Infrastructure" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="jenkins.html" class="btn btn-neutral float-right" title="Interacting with Jenkins" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+      <span class="lastupdated">Last updated on Jul 27, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
