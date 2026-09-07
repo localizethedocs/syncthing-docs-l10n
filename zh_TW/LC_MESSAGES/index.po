@@ -1,0 +1,152 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2026, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing stable\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-21 06:27+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../index.rst:6
+msgid "Welcome to Syncthing's documentation!"
+msgstr "歡迎閱讀 Syncthing 文件！"
+
+#: ../../../index.rst:8
+msgid ""
+"As a new user, the :ref:`getting started guide <getting-started>` is a good "
+"place to start, then perhaps moving on to :ref:`the FAQ <faq>`. If you run "
+"into trouble getting devices to connect to each other, the page about :ref:"
+"`firewall setup <firewall-setup>` explains the networking necessary to get "
+"it to work."
+msgstr ""
+"新使用者可以從\\ :ref:`開始使用指南 <getting-started>`\\ 開始，接著或許可以參"
+"考\\ :ref:`常見問題 <faq>`\\ 。如果在裝置之間連接遇到問題，\\ :ref:`防火牆設"
+"定 <firewall-setup>`\\ 頁面會解釋需要哪些網路設定才能讓它正常運作。"
+
+#: ../../../index.rst:14
+msgid ""
+"As a developer looking to get started with a contribution, see :ref:`how to "
+"build <building>`, :ref:`how to debug <debugging>` and the `contribution "
+"guidelines`_. This documentation site can be edited on GitHub_."
+msgstr ""
+"開發人員如果想要開始貢獻，請參見\\ :ref:`如何建置 <building>`\\ 、\\ :ref:`如"
+"何偵錯 <debugging>`\\ ，以及\\ `貢獻指南 <contribution guidelines_>`_\\ 。本"
+"文件網站可以在 GitHub_ 上編輯。"
+
+#: ../../../index.rst:19
+msgid "Contact"
+msgstr "聯絡方式"
+
+#: ../../../index.rst:21
+msgid ""
+"If you're looking for specific people to talk to, check out the :ref:"
+"`project-presentation`."
+msgstr "如果您想聯絡特定的人員，請參閱 :ref:`project-presentation`。"
+
+#: ../../../index.rst:24
+msgid ""
+"To report bugs or request features, please use the `issue tracker`_. Before "
+"you do so, make sure you are running the `latest version`_, and please do a "
+"quick search to see if the issue has already been reported."
+msgstr ""
+"若要回報臭蟲或請求功能，請使用\\ `議題追蹤器 <issue tracker_>`_\\ 。在進行之"
+"前，請確認您正在執行\\ `最新版本 <latest version_>`_\\ ，並快速搜尋以確認該議"
+"題是否已經被回報。"
+
+#: ../../../index.rst:30
+msgid ""
+"To report security issues, please follow the instructions on the `Security "
+"page`_."
+msgstr ""
+"若要回報安全性議題，請依照\\ `安全頁面 <Security page_>`_\\ 上的指示操作。"
+
+#: ../../../index.rst:33
+msgid ""
+"To get help and support, discuss scenarios, or just connect with other users "
+"and developers you can head over to the `friendly forum`_."
+msgstr ""
+"若要獲得幫助與支援、討論使用情境，或是與其他使用者及開發者聯繫，您可以前往\\ "
+"`友善的論壇 <friendly forum_>`_。"
+
+#: ../../../index.rst:36
+msgid ""
+"For other concerns you may reach out to members of the maintainers, "
+"currently :user:`calmh`, :user:`AudriusButkevicius` and :user:`imsodin`."
+msgstr ""
+"如有其他事項，您可以聯絡維護者成員，目前為 :user:`calmh`、:user:"
+"`AudriusButkevicius` 與 :user:`imsodin`。"
+
+#: ../../../index.rst:49
+msgid "Thanks"
+msgstr "感謝"
+
+#: ../../../index.rst:51
+msgid "We thank all the documentation contributors for their hard work:"
+msgstr "我們感謝所有文件貢獻者的辛勞："
+
+#: ../../../thanks.txt:1
+msgid ""
+"Jakob Borg (calmh), Audrius Butkevicius, Syncthing Release Automation, "
+"Tomasz Wilczyński, Simon Frei (imsodin), Adam Piggott (ProactiveServices), "
+"André Colomb (acolomb), Stefan Tatschner (rumpelsepp), Marcus B Spencer, "
+"Ross Smith II, Lode Hoste (Zillode), Max, Jerry Jacobs (xor-gate), "
+"JohnVeness, Nate Morrison (nrm21), Lars K.W. Gohlke (lkwg82), Stefan Kuntz "
+"(Stefan-Code), Alexandre Viau (aviau), Scott Klupfel (kluppy), Martchus, "
+"Marc Laporte, Cedric Staniewski (xduugu), bt90, camoz, Antony Male "
+"(canton7), Otto Jongerius, Alex Chan, Peter Kaminski, Andrey D (scienmind), "
+"Peter Gervai, Peter Badida, raferobinson, Austin S. Hemmelgarn, Emil "
+"Lundberg, novoid, sa3dany, Salim B, Matt Sieren, Matt Burke (burkemw3), "
+"Matic Potočnik, Martin Lazarov, Scott Hansen, Brian, Stephen, bugith, C "
+"Bhushan, alex2108, Tom Hale, Pierre-Alain TORET, Catfriend1, Tommy van der "
+"Vorst, Majed Abdulaziz (majedev), Louis Sautier, Unrud, Leo Arias (elopio), "
+"Laurent Etiemble (letiemble), Valerii Hiora, Ken Marsh, Wulf Weich (wweich), "
+"jodusnodus, Jesse Lucas, 93-infinity, Daniel Clay Smith, zertrin, Iliyan, "
+"hlovdal, Gal Szkolnik, DavidFair, Frank Sachsenheim, Evgeny Kuznetsov, Eric "
+"P, Daniel O'Connor, bestlibre, djtm, Dominik Schrempf, Duncan Smart, Dylan "
+"Sprague, Edd Barrett, eddsalkield, digital, dertalai, Ethan, Dennis Gaida, "
+"fejese, Felix Ableitner (Nutomic), fferrann, Filip Harald, Francois-Xavier "
+"Gsell (zukoo), Frank Harper, Dawid Wróbel, Function-10, David Rimmer "
+"(dinosore), Gavrilov Aleksej, Girish Ramakrishnan, Gleb Zakharov, graboluk, "
+"Gusted, Göran Roseen, Heiko Zuerker (Smiley73), Dave Holland, Ian Sullivan, "
+"2nv2u, iTob191, Ivan Vyshnevskyi, Daniel Krol, Jakob Egger, James Hartshorn, "
+"Jason, Jason Lingohr, jbratu, Jean-Denis Vauguet, Jeroen Evens, dan2468, Dan "
+"Dascalescu, Jimmy Jones, Jip-Hop, Jo Wouters, Dakota, John Buckley, Johnny "
+"Rock, daftaupe, Jonathan Cross, Jonathan Vasquez, JsBergbau, jtagcat, ka7, "
+"kaitlyn, Karol Pucyński, Kelong Cong (kc1212), cron410, Kiryuu Sakuya, "
+"Kramoule, krmathis, Kyle Manna, Cromefire\\_, Cristian Mircea Messel, Cory "
+"Salveson, Leo Famulari, Linger206, Liu Siyuan (liusy182), cmillsa2, "
+"Christian Kellermann, Luiz Angelo Daros de Luca, Luni, chaosORCHESTRA, "
+"Cameron Steffen, Marcin Orlowski, Marco Köpcke, marco-m, calvin ardi, "
+"Mariano Rodríguez, Marius Volkhart, Brandon Zylstra, Martin Freund, "
+"brad2014, Martin Michlmayr, Marwâne Chahed, Boris Rybalkin, bitinerant, Matt "
+"Kantor, bigscoop, Matthew Davis, Matthew Harris, Matthias Braun, dinosore, "
+"Michael Vorburger ⛑️, Mike Nolta, MikeLund, Mingwei Samuel, Morphy99, "
+"Moviuro, MrChenWithCapsule, mseravalli, Benjamin Schmid, NCDanielH, ngirard, "
+"NickPyz, Nico Stapelbroek, Nicolas Perraut, Benjamin Masters, nware-lab, "
+"Oliver Freyermuth, Ooker, Oskar Okuno, Ben Norcombe, Pander, Paul Donald, "
+"Paweł Woźniak, Arthur Lutz, Peter Butkovic, Peter Dave Hello, arneko, Antoni "
+"Sawicki, Phil Davis, André-Patrick Bubel, Pitxyoki, Quentin Hibon, Andrew "
+"Colin Kissa, Rahmi Pruitt, Rajshekhar K, realtobman, Reto Kaiser, "
+"RichardUUU, Rikiub%, rollbrettler, Romain Gay, Andrej Shadura, rrosini, "
+"Andreas Gohr, Andreas Deininger, Samuel Li, Samuel Smoker, Sanjeev Gupta, "
+"sapient\\_cogbag, schnappijedi, Anderson Mesquita (andersonvom), Anatoli "
+"Babenia, Sergio Livi, Amin Vakil, sliterok, Stefaan Ghysels, alexvoda, "
+"Alexandre Maurer, StefanKopieczek, Stefano Probst, Alexander Graf "
+"(alex2108), Alexander Baumann, Sébastien Wains, Sébastien WENSKE, Tamás "
+"Sallai, terrycloth, terzinnorbert, theincogtion, Thomas Dalichow, Thomas De "
+"Rocker, Thovthe, Tim Abell, Tim Boudreau, Tobbe, Tobi, Alex Scammon, Alex "
+"Gorichev, AJ ONeal, tuathail, twomice, Tyler Kropp, uglygus, Adrian Rudnik, "
+"abdeoliveira, Vincent Ardern, Vincent Rischmann, Vium, Wieland Hoffmann, "
+"Willem Oosting, Wojciech Geisler, Abdelrahman Abdelhafez, Yakov Litvin, "
+"4cdn, zocker-160"
+msgstr ""
