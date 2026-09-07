@@ -47,9 +47,9 @@
     "branch" : "main",
     "commit" : 
     {
-      "date" : "2026-06-08 11:38:20 +0200",
-      "hash" : "bb2c76201eddfc9773178fbd6ae16fcf7584379a",
-      "title" : "chore: cleanup obsolete Transifex mention (#1015)"
+      "date" : "2026-09-06 13:33:39 -0500",
+      "hash" : "2cbe4c4c1013b6b0cd9fb2cc72b983795855aff5",
+      "title" : "fix(dev): update device ID documentation to Ed25519 (fixes #1028) (#1029)"
     }
   },
   "type" : "branch",
