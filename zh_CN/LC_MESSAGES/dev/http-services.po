@@ -1,0 +1,63 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2026, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-06 09:56+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../dev/http-services.rst:2
+msgid "HTTP Utility Services API"
+msgstr ""
+
+#: ../../../dev/http-services.rst:4
+msgid ""
+"These services are available via HTTP on the GUI listen address, but in "
+"contrast to the REST API do not require any form of authentication or an API "
+"key."
+msgstr ""
+
+#: ../../../dev/http-services.rst:9
+msgid "GET /meta.js"
+msgstr ""
+
+#: ../../../dev/http-services.rst:11
+msgid ""
+"Returns a JavaScript snippet defining a ``metadata`` variable with "
+"information about the serving Syncthing instance.  It is meant to be "
+"consumed directly from an HTML ``<script>`` tag, such as for generating the "
+"needed CSRF token header name."
+msgstr ""
+
+#: ../../../dev/http-services.rst:16
+msgid ""
+"$ curl http://localhost:8384/meta.js\n"
+"var metadata = {\"deviceID\":\"S7UKX27-GI7ZTXS-GC6RKUA-7AJGZ44-C6NAYEB-"
+"HSKTJQK-KJHU2NO-CWV7EQW\"};"
+msgstr ""
+
+#: ../../../dev/http-services.rst:23
+msgid "GET /qr/"
+msgstr ""
+
+#: ../../../dev/http-services.rst:25
+msgid ""
+"Encodes the content given in the ``text`` URL parameter into a QR code and "
+"returns it as a black-and-white PNG image.  Can be used to encode device IDs "
+"for quick exchange in a machine-readable optical format."
+msgstr ""
+
+#: ../../../dev/http-services.rst:29
+msgid "$ curl http://localhost:8384/qr/?text=Hello%2C%20world%21 | display"
+msgstr ""
