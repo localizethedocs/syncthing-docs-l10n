@@ -1,0 +1,411 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2019, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../includes/env-vars.rst:1
+msgid "STTRACE"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:2
+msgid ""
+"Used to increase the debugging verbosity in specific or all facilities, "
+"generally mapping to a Go package. Enabling any of these also enables "
+"microsecond timestamps, file names plus line numbers. Enter a comma-"
+"separated string of facilities to trace. ``syncthing --help`` always outputs "
+"an up-to-date list. The valid facility strings are:"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:8
+msgid "Main and operational facilities:"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:9
+msgid "config"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:10
+msgid "Configuration loading and saving."
+msgstr ""
+
+#: ../../../includes/env-vars.rst:11
+msgid "db"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:12
+msgid "The database layer."
+msgstr ""
+
+#: ../../../includes/env-vars.rst:13
+msgid "main"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:14
+msgid "Main package."
+msgstr ""
+
+#: ../../../includes/env-vars.rst:15
+msgid "model"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:16
+msgid ""
+"The root hub; the largest chunk of the system. File pulling, index "
+"transmission and requests for chunks."
+msgstr ""
+
+#: ../../../includes/env-vars.rst:18
+msgid "scanner"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:19
+msgid "File change detection and hashing."
+msgstr ""
+
+#: ../../../includes/env-vars.rst:20
+msgid "versioner"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:21
+msgid "File versioning."
+msgstr ""
+
+#: ../../../includes/env-vars.rst:23
+msgid "Networking facilities:"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:24
+msgid "beacon"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:25
+msgid ""
+"Multicast and broadcast UDP discovery packets: Selected interfaces and "
+"addresses."
+msgstr ""
+
+#: ../../../includes/env-vars.rst:27
+msgid "connections"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:28
+msgid "Connection handling."
+msgstr ""
+
+#: ../../../includes/env-vars.rst:29
+msgid "dialer"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:30
+msgid "Dialing connections."
+msgstr ""
+
+#: ../../../includes/env-vars.rst:31
+msgid "discover"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:32
+msgid "Remote device discovery requests, replies and registration of devices."
+msgstr ""
+
+#: ../../../includes/env-vars.rst:34
+msgid "nat"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:35
+msgid "NAT discovery and port mapping."
+msgstr ""
+
+#: ../../../includes/env-vars.rst:36
+msgid "pmp"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:37
+msgid "NAT-PMP discovery and port mapping."
+msgstr ""
+
+#: ../../../includes/env-vars.rst:38
+msgid "protocol"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:39
+msgid "The BEP protocol."
+msgstr ""
+
+#: ../../../includes/env-vars.rst:40
+msgid "relay"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:41
+msgid "Relay interaction (``strelaysrv``)."
+msgstr ""
+
+#: ../../../includes/env-vars.rst:42
+msgid "upnp"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:43
+msgid "UPnP discovery and port mapping."
+msgstr ""
+
+#: ../../../includes/env-vars.rst:45
+msgid "Other facilities:"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:46
+msgid "fs"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:47
+msgid "Filesystem access."
+msgstr ""
+
+#: ../../../includes/env-vars.rst:48
+msgid "events"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:49
+msgid "Event generation and logging."
+msgstr ""
+
+#: ../../../includes/env-vars.rst:50
+msgid "http"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:51
+msgid "REST API."
+msgstr ""
+
+#: ../../../includes/env-vars.rst:52
+msgid "sha256"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:53
+msgid "SHA256 hashing package (this facility currently unused)."
+msgstr ""
+
+#: ../../../includes/env-vars.rst:54
+msgid "stats"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:55
+msgid "Persistent device and folder statistics."
+msgstr ""
+
+#: ../../../includes/env-vars.rst:56
+msgid "sync"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:57
+msgid "Mutexes. Used for debugging race conditions and deadlocks."
+msgstr ""
+
+#: ../../../includes/env-vars.rst:58
+msgid "upgrade"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:59
+msgid "Binary upgrades."
+msgstr ""
+
+#: ../../../includes/env-vars.rst:60
+msgid "walkfs"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:61
+msgid "Filesystem access while walking."
+msgstr ""
+
+#: ../../../includes/env-vars.rst:63
+msgid "all"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:64
+msgid "All of the above."
+msgstr ""
+
+#: ../../../includes/env-vars.rst:66
+msgid "STBLOCKPROFILE"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:67
+msgid ""
+"Write block profiles to ``block-$pid-$timestamp.pprof`` every 20 seconds."
+msgstr ""
+
+#: ../../../includes/env-vars.rst:69
+msgid "STCPUPROFILE"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:70
+msgid "Write a CPU profile to ``cpu-$pid.pprof`` on exit."
+msgstr ""
+
+#: ../../../includes/env-vars.rst:72
+msgid "STDEADLOCKTIMEOUT"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:73 ../../../includes/env-vars.rst:77
+msgid ""
+"Used for debugging internal deadlocks; sets debug sensitivity. Use only "
+"under direction of a developer."
+msgstr ""
+
+#: ../../../includes/env-vars.rst:76
+msgid "STLOCKTHRESHOLD"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:80
+msgid "STGUIADDRESS"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:81
+msgid ""
+"Override GUI listen address.  Equivalent to passing :option:`--gui-address`."
+msgstr ""
+
+#: ../../../includes/env-vars.rst:83
+msgid "STGUIAPIKEY"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:84
+msgid ""
+"Override the API key needed to access the GUI / REST API.  Equivalent to "
+"passing :option:`--gui-apikey`."
+msgstr ""
+
+#: ../../../includes/env-vars.rst:87
+msgid "STGUIASSETS"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:88
+msgid ""
+"Directory to load GUI assets from. Overrides compiled in assets. Useful for "
+"developing webgui, commonly use ``STGUIASSETS=gui bin/syncthing``."
+msgstr ""
+
+#: ../../../includes/env-vars.rst:91
+msgid "STHEAPPROFILE"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:92
+msgid ""
+"Write heap profiles to ``heap-$pid-$timestamp.pprof`` each time heap usage "
+"increases."
+msgstr ""
+
+#: ../../../includes/env-vars.rst:95
+msgid "STNODEFAULTFOLDER"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:96
+msgid ""
+"Don't create a default folder when starting for the first time. This "
+"variable will be ignored anytime after the first run.  Equivalent to the :"
+"option:`--no-default-folder` flag."
+msgstr ""
+
+#: ../../../includes/env-vars.rst:100
+msgid "STNORESTART"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:101
+msgid "Equivalent to the :option:`--no-restart` flag."
+msgstr ""
+
+#: ../../../includes/env-vars.rst:103
+msgid "STNOUPGRADE"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:104
+msgid ""
+"Disable automatic upgrades.  Equivalent to the :option:`--no-upgrade` flag."
+msgstr ""
+
+#: ../../../includes/env-vars.rst:106
+msgid "STPROFILER"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:107
+msgid ""
+"Set to a listen address such as \"127.0.0.1:9090\" to start the profiler "
+"with HTTP access, which then can be reached at http://localhost:9090/debug/"
+"pprof. See ``go tool pprof`` for more information."
+msgstr ""
+
+#: ../../../includes/env-vars.rst:112
+msgid "STPERFSTATS"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:113
+msgid ""
+"Write running performance statistics to ``perf-$pid.csv``. Not supported on "
+"Windows."
+msgstr ""
+
+#: ../../../includes/env-vars.rst:116
+msgid "STRECHECKDBEVERY"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:117
+msgid ""
+"Time before folder statistics (file, dir, ... counts) are recalculated from "
+"scratch. The given duration must be parseable by Go's ``time."
+"ParseDuration``. If missing or not parseable, the default value of 1 month "
+"is used. To force recalculation on every startup, set it to ``1s``."
+msgstr ""
+
+#: ../../../includes/env-vars.rst:122
+msgid "STGCINDIRECTEVERY"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:123
+msgid ""
+"Sets the time interval in between database garbage collection runs.  The "
+"given duration must be parseable by Go's ``time.ParseDuration``."
+msgstr ""
+
+#: ../../../includes/env-vars.rst:126
+msgid "GOMAXPROCS"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:127
+msgid ""
+"Set the maximum number of CPU cores to use. Defaults to all available CPU "
+"cores."
+msgstr ""
+
+#: ../../../includes/env-vars.rst:130
+msgid "GOGC"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:131
+msgid ""
+"Percentage of heap growth at which to trigger GC. Default is 100. Lower "
+"numbers keep peak memory usage down, at the price of CPU usage (i.e. "
+"performance)."
+msgstr ""
+
+#: ../../../includes/env-vars.rst:135
+msgid "LOGGER_DISCARD"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:136
+msgid ""
+"Hack to completely disable logging, for example when running benchmarks. Set "
+"to any nonempty value to use it."
+msgstr ""

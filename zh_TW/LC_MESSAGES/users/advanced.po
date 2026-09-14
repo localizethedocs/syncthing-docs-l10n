@@ -1,0 +1,55 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2019, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../users/advanced.rst:4
+msgid "Advanced Configuration"
+msgstr "進階組態"
+
+#: ../../../users/advanced.rst:6
+msgid ""
+"Syncthing has settings that are available but not exposed in the usual "
+"folder and device configuration screens. The reason for not exposing these "
+"settings more prominently varies from them simply being rarely useful, to "
+"them being actively dangerous when used improperly."
+msgstr ""
+"Syncthing 有一些可用的設定，但不會在一般的資料夾與裝置組態畫面中顯示。這些設"
+"定之所以沒有更明顯地呈現，原因不一，從僅是較少用到，到在使用不當時可能帶來實"
+"際風險。"
+
+#: ../../../users/advanced.rst:12
+msgid ""
+"Use care when changing advanced configuration settings and make sure that "
+"you understand the resulting effects and consequences."
+msgstr "變更進階組態設定時請務必謹慎，並確認您了解其帶來的影響與後果。"
+
+#: ../../../users/advanced.rst:15
+msgid "The advanced settings dialog is accessed from the main menu:"
+msgstr "可從主選單進入進階設定對話框："
+
+#: ../../../users/advanced.rst:20
+msgid "General Settings"
+msgstr "一般設定"
+
+#: ../../../users/advanced.rst:29
+msgid "Per Folder Settings"
+msgstr "個別資料夾設定"
+
+#: ../../../users/advanced.rst:38
+msgid "Per Device Settings"
+msgstr "個別裝置設定"

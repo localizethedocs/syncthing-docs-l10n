@@ -1,0 +1,56 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2019, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../rest/system-debug-get.rst:2
+msgid "GET /rest/system/debug"
+msgstr ""
+
+#: ../../../rest/system-debug-get.rst:6
+msgid ""
+"Returns the set of debug facilities and which of them are currently enabled."
+msgstr ""
+
+#: ../../../rest/system-debug-get.rst:8
+msgid ""
+"{\n"
+"  \"enabled\": [\n"
+"    \"beacon\"\n"
+"  ],\n"
+"  \"facilities\": {\n"
+"    \"beacon\": \"Multicast and broadcast discovery\",\n"
+"    \"config\": \"Configuration loading and saving\",\n"
+"    \"connections\": \"Connection handling\",\n"
+"    \"db\": \"The database layer\",\n"
+"    \"dialer\": \"Dialing connections\",\n"
+"    \"discover\": \"Remote device discovery\",\n"
+"    \"events\": \"Event generation and logging\",\n"
+"    \"http\": \"REST API\",\n"
+"    \"main\": \"Main package\",\n"
+"    \"model\": \"The root hub\",\n"
+"    \"protocol\": \"The BEP protocol\",\n"
+"    \"relay\": \"Relay connection handling\",\n"
+"    \"scanner\": \"File change detection and hashing\",\n"
+"    \"stats\": \"Persistent device and folder statistics\",\n"
+"    \"sync\": \"Mutexes\",\n"
+"    \"upgrade\": \"Binary upgrades\",\n"
+"    \"upnp\": \"UPnP discovery and port mapping\",\n"
+"    \"versioner\": \"File versioning\"\n"
+"  }\n"
+"}"
+msgstr ""

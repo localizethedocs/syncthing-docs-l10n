@@ -1,0 +1,736 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2019, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../users/contrib.rst:4
+msgid "Community Contributions"
+msgstr "社群貢獻"
+
+#: ../../../users/contrib.rst:6
+msgid ""
+"This page lists integrations, addons and packagings of Syncthing created by "
+"the community. Like all documentation pages, it's wiki editable so please do "
+"edit and add your own."
+msgstr ""
+"本頁列出由社群建立的 Syncthing 整合、附加元件與封裝。與其他文件頁面相同，本頁"
+"可像 wiki 一樣編輯，歡迎直接修改並加入您的項目。"
+
+#: ../../../users/contrib.rst:11
+msgid "GUI Wrappers"
+msgstr "GUI 包裝程式"
+
+#: ../../../users/contrib.rst:16 ../../../users/contrib.rst:101
+msgid "Cross-platform"
+msgstr "跨平台"
+
+#: ../../../users/contrib.rst:18
+msgid "`Syncthing Tray <https://martchus.github.io/syncthingtray>`__"
+msgstr ""
+
+#: ../../../users/contrib.rst:21
+msgid "Android"
+msgstr ""
+
+#: ../../../users/contrib.rst:23
+msgid "`Syncthing-Fork <https://github.com/catfriend1/syncthing-android>`_"
+msgstr ""
+
+#: ../../../users/contrib.rst:25
+msgid "An Android app for the Syncthing binary with extended functionality."
+msgstr "提供擴充功能的 Android 應用程式，搭配 Syncthing 執行檔使用。"
+
+#: ../../../users/contrib.rst:30 ../../../users/contrib.rst:116
+msgid "Windows"
+msgstr ""
+
+#: ../../../users/contrib.rst:32
+msgid ""
+"We currently don't have any actively updated Windows-specific GUI wrappers "
+"here."
+msgstr ""
+
+#: ../../../users/contrib.rst:34
+msgid ":ref:`Cross-platform GUI Wrappers <contrib-all>`."
+msgstr ""
+
+#: ../../../users/contrib.rst:37
+msgid "macOS / iOS"
+msgstr ""
+
+#: ../../../users/contrib.rst:39
+msgid "`syncthing-macos <https://github.com/syncthing/syncthing-macos>`_"
+msgstr ""
+
+#: ../../../users/contrib.rst:41
+msgid ""
+"syncthing-macos is a native macOS Syncthing tray application bundle. It "
+"hosts and wraps Syncthing, making it behave more like a native macOS "
+"application and less like a command-line utility with a web browser "
+"interface."
+msgstr ""
+"syncthing-macos 是原生 macOS 的 Syncthing 系統匣應用程式封裝。它可承載並包裝 "
+"Syncthing，使其更像原生 macOS 應用程式，而非需透過網頁瀏覽器操作的命令列工"
+"具。"
+
+#: ../../../users/contrib.rst:44
+msgid "`Synctrain <https://github.com/pixelspark/sushitrain>`_"
+msgstr ""
+
+#: ../../../users/contrib.rst:46
+msgid ""
+"Synctrain is an open source, native app for iOS, iPadOS and macOS that "
+"combines Syncthing with a file-centered UI with focus on selective and on-"
+"demand file synchronization. It can be installed from the `App Store "
+"<https://apps.apple.com/app/synctrain/id6553985316>`_."
+msgstr ""
+"Synctrain 是一款開源的 iOS、iPadOS 與 macOS 原生應用程式，結合 Syncthing 與以"
+"檔案為中心的 UI，聚焦於選擇性與隨選同步。可從 `App Store <https://apps.apple."
+"com/app/synctrain/id6553985316>`_ 安裝。"
+
+#: ../../../users/contrib.rst:50
+msgid "Linux"
+msgstr ""
+
+#: ../../../users/contrib.rst:52
+msgid ""
+"`Syncthing Icon <https://extensions.gnome.org/extension/989/syncthing-icon/"
+">`_"
+msgstr ""
+
+#: ../../../users/contrib.rst:54
+msgid "GNOME Shell extension: A Syncthing status icon in the top bar."
+msgstr ""
+
+#: ../../../users/contrib.rst:56
+msgid ""
+"`Syncthing Indicator <https://extensions.gnome.org/extension/1070/syncthing-"
+"indicator/>`_"
+msgstr ""
+
+#: ../../../users/contrib.rst:58
+msgid ""
+"GNOME Shell extension: A Syncthing indicator for starting, monitoring and "
+"controlling the Syncthing daemon using systemd."
+msgstr ""
+"GNOME Shell 擴充套件：提供 Syncthing 指示器，可透過 systemd 啟動、監控與控制 "
+"Syncthing 常駐程式。"
+
+#: ../../../users/contrib.rst:60
+msgid ""
+"`Syncthing Toggle <https://extensions.gnome.org/extension/7180/syncthing-"
+"toggle/>`_"
+msgstr ""
+
+#: ../../../users/contrib.rst:62
+msgid ""
+"GNOME Shell extension: A quick setting for turning on and off the Syncthing "
+"systemd service and opening the Web GUI."
+msgstr ""
+"GNOME Shell 擴充套件：可快速開關 Syncthing systemd 服務並開啟 Web GUI。"
+
+#: ../../../users/contrib.rst:64
+msgid "`SyncThingy <https://github.com/zocker-160/SyncThingy>`_"
+msgstr ""
+
+#: ../../../users/contrib.rst:66
+msgid "Simple tray indicator written in C++ targeted at Flatpak users."
+msgstr "以 C++ 撰寫的簡易系統匣指示器，面向 Flatpak 使用者。"
+
+#: ../../../users/contrib.rst:68
+msgid ""
+"`syncthing-quick-status <https://github.com/serl/syncthing-quick-status>`_"
+msgstr ""
+
+#: ../../../users/contrib.rst:70
+msgid ""
+"Small bash application with minimal dependencies, for a simple colorful "
+"representation of the current status."
+msgstr "小型 bash 應用程式，依賴極少，以簡單彩色方式呈現目前狀態。"
+
+#: ../../../users/contrib.rst:72
+msgid ""
+"`steamdeck-decky-syncthing  <https://github.com/theCapypara/steamdeck-decky-"
+"syncthing>`_"
+msgstr ""
+
+#: ../../../users/contrib.rst:74
+msgid ""
+"A Steam Deck (Decky Loader) plugin for controlling Syncthing from the Steam "
+"Big Picture / Steam Deck UI."
+msgstr ""
+"可在 Steam Big Picture／Steam Deck UI 中控制 Syncthing 的 Steam Deck（Decky "
+"Loader）外掛。"
+
+#: ../../../users/contrib.rst:78
+msgid "Command Line Tools"
+msgstr "命令列工具"
+
+#: ../../../users/contrib.rst:80
+msgid "`STC <https://github.com/tenox7/stc>`_"
+msgstr ""
+
+#: ../../../users/contrib.rst:82
+msgid ""
+"Syncthing Cli - a simple command line tool for getting status and performing "
+"basic operations from the shell / terminal without need of a web browser."
+msgstr ""
+"Syncthing Cli：簡單的命令列工具，可在 shell／終端機中查詢狀態並執行基本操作，"
+"無需網頁瀏覽器。"
+
+#: ../../../users/contrib.rst:85
+msgid "`syncthing-graph <https://gitlab.com/andrea-trentini/syncthing-graph>`_"
+msgstr ""
+
+#: ../../../users/contrib.rst:87
+msgid "Very simple graph (dot format) generator for Syncthing ``config.xml``."
+msgstr "為 Syncthing ``config.xml`` 產生非常簡單圖表（dot 格式）的工具。"
+
+#: ../../../users/contrib.rst:89
+msgid "`syncthing-map <https://github.com/wsw70/syncthing-map>`_"
+msgstr ""
+
+#: ../../../users/contrib.rst:91
+msgid ""
+"A cross-platform utility to map Syncthing devices and shared folders. "
+"Generates a visual representation of the relationships between several "
+"devices and their respective folders, including special folder types (send-"
+"only, receive-only).  Requires each device's XML configuration file as input."
+msgstr ""
+"用於描繪 Syncthing 裝置與共享資料夾的跨平台工具。可產生多個裝置與其資料夾關係"
+"的視覺化圖示，包含特殊資料夾類型（僅傳送、僅接收）。需以各裝置的 XML 設定檔作"
+"為輸入。"
+
+#: ../../../users/contrib.rst:98
+msgid "Packages and Bundlings"
+msgstr "套件與封裝"
+
+#: ../../../users/contrib.rst:103
+msgid "Webi: `syncthing <https://webinstall.dev/syncthing>`__"
+msgstr "Webi：`syncthing <https://webinstall.dev/syncthing>`__"
+
+#: ../../../users/contrib.rst:105
+msgid "Mac, Linux: ::"
+msgstr "Mac、Linux：::"
+
+#: ../../../users/contrib.rst:107
+msgid "$ curl -sS https://webinstall.dev/syncthing | bash"
+msgstr ""
+
+#: ../../../users/contrib.rst:109
+msgid "Windows 10 (build 1803) or later ::"
+msgstr "Windows 10（build 1803）或更新版本::"
+
+#: ../../../users/contrib.rst:111
+msgid "> curl.exe -A MS https://webinstall.dev/syncthing | powershell"
+msgstr ""
+
+#: ../../../users/contrib.rst:118
+msgid ""
+"`Syncthing Windows Setup <https://github.com/Bill-Stewart/"
+"SyncthingWindowsSetup>`_"
+msgstr ""
+
+#: ../../../users/contrib.rst:120
+msgid ""
+"A lightweight yet full-featured Windows installer built using Inno Setup.  "
+"Supports both admin and regular user installation, auto-start, firewall "
+"integration as well as silent installation."
+msgstr ""
+"使用 Inno Setup 建立的輕量但功能完整的 Windows 安裝程式。支援管理員與一般使用"
+"者安裝、自動啟動、防火牆整合與靜默安裝。"
+
+#: ../../../users/contrib.rst:126
+msgid "Debian / Ubuntu"
+msgstr ""
+
+#: ../../../users/contrib.rst:129
+msgid "Official packages: https://apt.syncthing.net/"
+msgstr "官方套件：https://apt.syncthing.net/"
+
+#: ../../../users/contrib.rst:131
+msgid ""
+"Debian packages: `syncthing <https://packages.debian.org/search?"
+"keywords=syncthing>`__, `syncthing-discosrv <https://packages.debian.org/"
+"search?keywords=syncthing-discosrv>`__ and `syncthing-relaysrv <https://"
+"packages.debian.org/search?keywords=syncthing-relaysrv>`_"
+msgstr ""
+"Debian 套件：`syncthing <https://packages.debian.org/search?"
+"keywords=syncthing>`__、`syncthing-discosrv <https://packages.debian.org/"
+"search?keywords=syncthing-discosrv>`__ 與 `syncthing-relaysrv <https://"
+"packages.debian.org/search?keywords=syncthing-relaysrv>`_"
+
+#: ../../../users/contrib.rst:135
+msgid "Fedora / CentOS"
+msgstr ""
+
+#: ../../../users/contrib.rst:137
+msgid ""
+"For Fedora Syncthing is now in the official repo : https://src.fedoraproject."
+"org/rpms/syncthing"
+msgstr ""
+"對於 Fedora，Syncthing 現已在官方套件庫：https://src.fedoraproject.org/rpms/"
+"syncthing"
+
+#: ../../../users/contrib.rst:139
+msgid ""
+"Unofficial `RPM repo of Syncthing <https://copr.fedorainfracloud.org/coprs/"
+"daftaupe/syncthing/>`_ (`sources <https://gitlab.com/daftaupe/syncthing-"
+"rpm>`_)"
+msgstr ""
+"非官方 `Syncthing RPM 套件庫 <https://copr.fedorainfracloud.org/coprs/"
+"daftaupe/syncthing/>`_（`原始碼 <https://gitlab.com/daftaupe/syncthing-"
+"rpm>`_）"
+
+#: ../../../users/contrib.rst:142
+msgid "Arch Linux"
+msgstr ""
+
+#: ../../../users/contrib.rst:144
+msgid ""
+"Official Extra Repository: `syncthing <https://archlinux.org/packages/?"
+"name=syncthing>`__"
+msgstr ""
+"官方 Extra 套件庫：`syncthing <https://archlinux.org/packages/?"
+"name=syncthing>`__"
+
+#: ../../../users/contrib.rst:146
+msgid ""
+"Arch User Repository: `syncthingtray-qt6 <https://aur.archlinux.org/packages/"
+"syncthingtray-qt6>`__"
+msgstr ""
+"Arch User Repository：`syncthingtray-qt6 <https://aur.archlinux.org/packages/"
+"syncthingtray-qt6>`__"
+
+#: ../../../users/contrib.rst:149
+msgid "Docker"
+msgstr ""
+
+#: ../../../users/contrib.rst:151
+msgid ""
+"`docker-syncthing <https://docs.linuxserver.io/images/docker-syncthing>`_ "
+"from `LinuxServer <https://www.linuxserver.io>`__"
+msgstr ""
+"`docker-syncthing <https://docs.linuxserver.io/images/docker-syncthing>`_"
+"（由 `LinuxServer <https://www.linuxserver.io>`__ 提供）"
+
+#: ../../../users/contrib.rst:153
+msgid ""
+"Dockerfiles for `Syncthing <https://github.com/firecat53/dockerfiles/tree/"
+"main/syncthing>`_ and `Syncthing Discovery Server <https://github.com/"
+"firecat53/dockerfiles/tree/main/syncthing_discovery>`_. Latest binary "
+"releases used for both."
+msgstr ""
+"`Syncthing <https://github.com/firecat53/dockerfiles/tree/main/syncthing>`_ "
+"與 `Syncthing Discovery Server <https://github.com/firecat53/dockerfiles/"
+"tree/main/syncthing_discovery>`_ 的 Dockerfile。兩者皆使用最新二進位發行版。"
+
+#: ../../../users/contrib.rst:156
+msgid ""
+"`docker-syncthing <https://github.com/joeybaker/docker-syncthing>`__ A fully "
+"baked docker container that allows custom config and will keep your settings "
+"and data past docker image restarts."
+msgstr ""
+"`docker-syncthing <https://github.com/joeybaker/docker-syncthing>`__：完整可"
+"用的 Docker 容器，支援自訂設定，且在 Docker 映像重啟後仍保留設定與資料。"
+
+#: ../../../users/contrib.rst:160
+msgid ""
+"`syncthing-docker-scratch <https://github.com/djtm/syncthing-docker-"
+"scratch>`_ Builds docker containers from scratch base and/or runs the "
+"containers in docker or rkt."
+msgstr ""
+"`syncthing-docker-scratch <https://github.com/djtm/syncthing-docker-"
+"scratch>`_：從 scratch 基底建置 Docker 容器，並可在 docker 或 rkt 中執行。"
+
+#: ../../../users/contrib.rst:164
+msgid ""
+"`rpi-syncthing <https://github.com/funkyfuture/docker-rpi-syncthing>`_ "
+"Configurable image for the Raspberry Pi."
+msgstr ""
+"`rpi-syncthing <https://github.com/funkyfuture/docker-rpi-syncthing>`_：可設"
+"定的 Raspberry Pi 映像。"
+
+#: ../../../users/contrib.rst:167
+msgid ""
+"`Syncthing for Home Assistant OS <https://github.com/Poeschl/Hassio-Addons/"
+"tree/master/syncthing>`_ A docker based addon for `Home Assistant Operating "
+"System <https://www.home-assistant.io/installation/#compare-installation-"
+"methods>`_"
+msgstr ""
+"`Syncthing for Home Assistant OS <https://github.com/Poeschl/Hassio-Addons/"
+"tree/master/syncthing>`_：`Home Assistant Operating System <https://www.home-"
+"assistant.io/installation/#compare-installation-methods>`_ 的 Docker 型附加元"
+"件"
+
+#: ../../../users/contrib.rst:171
+msgid "Gentoo"
+msgstr ""
+
+#: ../../../users/contrib.rst:173
+msgid ""
+"Official net-p2p package: `syncthing <https://packages.gentoo.org/packages/"
+"net-p2p/syncthing>`__"
+msgstr ""
+"官方 net-p2p 套件：`syncthing <https://packages.gentoo.org/packages/net-p2p/"
+"syncthing>`__"
+
+#: ../../../users/contrib.rst:176
+msgid "FreeBSD"
+msgstr ""
+
+#: ../../../users/contrib.rst:178
+msgid "FreshPorts: `syncthing <https://www.freshports.org/net/syncthing>`__"
+msgstr "FreshPorts：`syncthing <https://www.freshports.org/net/syncthing>`__"
+
+#: ../../../users/contrib.rst:181
+msgid "macOS"
+msgstr ""
+
+#: ../../../users/contrib.rst:183
+msgid "MacPorts: `syncthing <https://ports.macports.org/port/syncthing/>`__ ::"
+msgstr ""
+"MacPorts：`syncthing <https://ports.macports.org/port/syncthing/>`__ ::"
+
+#: ../../../users/contrib.rst:185
+msgid "$ sudo port install syncthing"
+msgstr ""
+
+#: ../../../users/contrib.rst:188
+msgid "OpenBSD"
+msgstr ""
+
+#: ../../../users/contrib.rst:190
+msgid ""
+"Official ports: `syncthing <https://cvsweb.openbsd.org/cgi-bin/cvsweb/ports/"
+"net/syncthing>`__ and `QSyncthingTray <https://cvsweb.openbsd.org/cgi-bin/"
+"cvsweb/ports/net/qsyncthingtray>`__"
+msgstr ""
+"官方 ports：`syncthing <https://cvsweb.openbsd.org/cgi-bin/cvsweb/ports/net/"
+"syncthing>`__ 與 `QSyncthingTray <https://cvsweb.openbsd.org/cgi-bin/cvsweb/"
+"ports/net/qsyncthingtray>`__"
+
+#: ../../../users/contrib.rst:193
+msgid "OpenSUSE"
+msgstr ""
+
+#: ../../../users/contrib.rst:195
+msgid ""
+"Official packages: `syncthing <https://software.opensuse.org/package/"
+"syncthing>`__ and `qsyncthingtray <https://software.opensuse.org/package/"
+"qsyncthingtray>`__"
+msgstr ""
+"官方套件：`syncthing <https://software.opensuse.org/package/syncthing>`__ 與 "
+"`qsyncthingtray <https://software.opensuse.org/package/qsyncthingtray>`__"
+
+#: ../../../users/contrib.rst:198
+msgid "Synology NAS (DSM)"
+msgstr "Synology NAS（DSM）"
+
+#: ../../../users/contrib.rst:200
+msgid ""
+"Synocommunity: add ``http://packages.synocommunity.com/`` to the Package "
+"Center in DSM or view the `browsable repository <https://synocommunity.com/"
+"packages>`__. Numerous CPU architectures are supported. SPK's may be older "
+"versions, however you can execute a Syncthing version upgrade via the web "
+"GUI after installation."
+msgstr ""
+"Synocommunity：在 DSM 的套件中心加入 ``http://packages.synocommunity.com/``，"
+"或查看 `可瀏覽的套件庫 <https://synocommunity.com/packages>`__。支援多種 CPU "
+"架構。SPK 版本可能較舊，但安裝後可透過 Web GUI 進行 Syncthing 升級。"
+
+#: ../../../users/contrib.rst:207
+msgid "QNAP NAS (QTS)"
+msgstr "QNAP NAS（QTS）"
+
+#: ../../../users/contrib.rst:209
+msgid ""
+"`Syncthing QPKG <https://www.myqnap.org/product/syncthing/>`__ (Qnap "
+"Package) available for ALL models x86, x86\\_64, Arm (all including new "
+"models). Syncthing running as root <https://www.myqnap.org/product/syncthing-"
+"run-as-root/>"
+msgstr ""
+"`Syncthing QPKG <https://www.myqnap.org/product/syncthing/>`__（Qnap "
+"Package）可用於所有 x86、x86\\_64、Arm 機型（含新機型）。另見以 root 執行 "
+"Syncthing：<https://www.myqnap.org/product/syncthing-run-as-root/>"
+
+#: ../../../users/contrib.rst:214
+msgid "RockStor"
+msgstr ""
+
+#: ../../../users/contrib.rst:216
+msgid ""
+"`Docker container <https://rockstor.com/docs/docker-based-rock-ons/syncthing."
+"html>`_ and `registry entry <https://github.com/rockstor/rockon-registry/"
+"blob/master/syncthing.json>`_"
+msgstr ""
+"`Docker 容器 <https://rockstor.com/docs/docker-based-rock-ons/syncthing."
+"html>`_ 與 `registry 條目 <https://github.com/rockstor/rockon-registry/blob/"
+"master/syncthing.json>`_"
+
+#: ../../../users/contrib.rst:219
+msgid "Cloudron"
+msgstr ""
+
+#: ../../../users/contrib.rst:221
+msgid ""
+"Syncthing is available as a 1-click install on `Cloudron <https://www."
+"cloudron.io>`_. For those unaware, Cloudron makes it easy to run apps on "
+"your server and keep them up-to-date and secure."
+msgstr ""
+"Syncthing 可在 `Cloudron <https://www.cloudron.io>`_ 以一鍵安裝。若您不熟悉，"
+"Cloudron 可讓您更容易在伺服器上執行應用程式，並保持更新與安全。"
+
+#: ../../../users/contrib.rst:227
+msgid ""
+"There is a `demo available <https://my.demo.cloudron.io>`_ (username: "
+"cloudron password: cloudron)"
+msgstr ""
+"提供 `示範站點 <https://my.demo.cloudron.io>`_（username: cloudron password: "
+"cloudron）"
+
+#: ../../../users/contrib.rst:229
+msgid ""
+"The Cloudron package is developed `here <https://git.cloudron.io/cloudron/"
+"syncthing-app>`_."
+msgstr ""
+"Cloudron 套件開發位置在 `這裡 <https://git.cloudron.io/cloudron/syncthing-"
+"app>`_。"
+
+#: ../../../users/contrib.rst:232
+msgid "WD My Cloud NAS"
+msgstr ""
+
+#: ../../../users/contrib.rst:234
+msgid "Packages for OS3 available on `WDCommunity <https://wdcommunity.com>`_."
+msgstr "可在 `WDCommunity <https://wdcommunity.com>`_ 取得 OS3 套件。"
+
+#: ../../../users/contrib.rst:237
+msgid "Integrations"
+msgstr "整合"
+
+#: ../../../users/contrib.rst:240
+msgid "REST API Bindings"
+msgstr "REST API 繫結"
+
+#: ../../../users/contrib.rst:242
+msgid ""
+"Python: https://github.com/blakev/python-syncthing (https://pypi.org/project/"
+"syncthing/)"
+msgstr ""
+"Python：https://github.com/blakev/python-syncthing（https://pypi.org/project/"
+"syncthing/）"
+
+#: ../../../users/contrib.rst:243
+msgid "PHP: https://github.com/terzinnorbert/syncthing-rest"
+msgstr "PHP：https://github.com/terzinnorbert/syncthing-rest"
+
+#: ../../../users/contrib.rst:246
+msgid "Configuration management"
+msgstr "組態管理"
+
+#: ../../../users/contrib.rst:248
+msgid "`puppet-syncthing <https://github.com/whefter/puppet-syncthing>`_"
+msgstr ""
+
+#: ../../../users/contrib.rst:249
+msgid "`ansible-syncthing <https://github.com/le9i0nx/ansible-syncthing>`_"
+msgstr ""
+
+#: ../../../users/contrib.rst:250
+msgid ""
+"Command line interface: `syncthingmanager <https://github.com/classicsc/"
+"syncthingmanager>`_"
+msgstr ""
+"命令列介面：`syncthingmanager <https://github.com/classicsc/"
+"syncthingmanager>`_"
+
+#: ../../../users/contrib.rst:251
+msgid "`syncthing-configd <https://github.com/kastelo/syncthing-configd>`_"
+msgstr ""
+
+#: ../../../users/contrib.rst:253
+msgid ""
+"A daemon that automatically manages certain aspects of the Syncthing "
+"configuration, such as automatically accepting or removing devices / folders "
+"based on patterns."
+msgstr ""
+"可自動管理 Syncthing 組態部分項目的常駐程式，例如依規則自動接受或移除裝置／資"
+"料夾。"
+
+#: ../../../users/contrib.rst:257
+msgid "Monitoring"
+msgstr "監控"
+
+#: ../../../users/contrib.rst:259
+msgid ""
+"`sm² (Syncthing Multi Server Monitor) <https://github.com/nware-lab/sm2>`_"
+msgstr ""
+"`sm²（Syncthing Multi Server Monitor）<https://github.com/nware-lab/sm2>`_"
+
+#: ../../../users/contrib.rst:261
+msgid ""
+"A Docker container made to \"monitor multiple Syncthing instances while "
+"using as little diskspace & memory while doing it.\""
+msgstr ""
+"一個用於「以盡可能少的磁碟空間與記憶體監控多個 Syncthing instance」的 Docker "
+"容器。"
+
+#: ../../../users/contrib.rst:265
+msgid "Resolving conflicts"
+msgstr "解決衝突"
+
+#: ../../../users/contrib.rst:267
+msgid ""
+"`syncthing-resolve-conflicts <https://github.com/dschrempf/syncthing-resolve-"
+"conflicts>`_"
+msgstr ""
+
+#: ../../../users/contrib.rst:269
+msgid ""
+"A small bash script that handles synchronization conflicts in text files "
+"that may pop up when using Syncthing.  It is inspired by the `pacdiff` "
+"utility from Arch Linux.  A diff utility can be used to merge the files and "
+"keep them up to date."
+msgstr ""
+"用來處理使用 Syncthing 時可能出現之文字檔同步衝突的小型 bash 腳本。靈感來自 "
+"Arch Linux 的 `pacdiff` 工具。可搭配 diff 工具合併檔案並保持最新。"
+
+#: ../../../users/contrib.rst:275
+msgid "Older, Possibly Unmaintained"
+msgstr "較舊、可能未維護"
+
+#: ../../../users/contrib.rst:278
+msgid ""
+"These projects have not been updated in quite a while. They may still be "
+"usable, or they may be in disrepair. If you are the maintainer of one of "
+"these and you have revived the project, please update this page accordingly."
+msgstr ""
+"這些專案已有一段時間未更新，可能仍可使用，也可能已難以維護。若您是其中某專案"
+"的維護者且已重新啟動開發，請更新本頁內容。"
+
+#: ../../../users/contrib.rst:283
+msgid ""
+"`syncthing-android <https://github.com/syncthing/syncthing-android>`_ "
+"(Archived on 2024-12-03)"
+msgstr ""
+"`syncthing-android <https://github.com/syncthing/syncthing-android>`_（已於 "
+"2024-12-03 封存）"
+
+#: ../../../users/contrib.rst:284
+msgid "`SyncTrayzor <https://github.com/canton7/SyncTrayzor>`_"
+msgstr ""
+
+#: ../../../users/contrib.rst:285
+msgid "`a-sync <https://github.com/davide-imbriaco/a-sync>`_"
+msgstr ""
+
+#: ../../../users/contrib.rst:286
+msgid ""
+"`syncthing-tray-gtk3 <https://github.com/abdeoliveira/syncthing-tray-gtk3>`_ "
+"(Archived as of 2023-12-29)"
+msgstr ""
+"`syncthing-tray-gtk3 <https://github.com/abdeoliveira/syncthing-tray-gtk3>`_"
+"（截至 2023-12-29 已封存）"
+
+#: ../../../users/contrib.rst:287
+msgid ""
+"`Syncthing-GTK <https://github.com/syncthing-gtk/syncthing-gtk>`_ (Fork from "
+"`Kozec <https://github.com/kozec/syncthing-gtk>`_)"
+msgstr ""
+"`Syncthing-GTK <https://github.com/syncthing-gtk/syncthing-gtk>`_（從 `Kozec "
+"<https://github.com/kozec/syncthing-gtk>`_ 分支）"
+
+#: ../../../users/contrib.rst:288
+msgid "https://github.com/syncthing/syncthing-lite"
+msgstr ""
+
+#: ../../../users/contrib.rst:289
+msgid "https://github.com/sieren/QSyncthingTray"
+msgstr ""
+
+#: ../../../users/contrib.rst:290
+msgid "https://github.com/akissa/pysyncthing"
+msgstr ""
+
+#: ../../../users/contrib.rst:291
+msgid "https://github.com/retgoat/syncthing-ruby"
+msgstr ""
+
+#: ../../../users/contrib.rst:292
+msgid "https://github.com/codabrink/Windows-Syncthing-Installer"
+msgstr ""
+
+#: ../../../users/contrib.rst:293
+msgid "https://github.com/gutenye/syncthing-kindle"
+msgstr ""
+
+#: ../../../users/contrib.rst:294
+msgid "https://github.com/m0ppers/syncthing-bar (OSX 10.10 only)"
+msgstr "https://github.com/m0ppers/syncthing-bar（僅 OSX 10.10）"
+
+#: ../../../users/contrib.rst:295
+msgid "https://github.com/graboluk/stiko"
+msgstr ""
+
+#: ../../../users/contrib.rst:296
+msgid "https://www.asustor.com/apps/app_detail?id=552"
+msgstr ""
+
+#: ../../../users/contrib.rst:297
+msgid "https://source.small-tech.org/project/pulse-swift/tree/master"
+msgstr ""
+
+#: ../../../users/contrib.rst:298
+msgid "https://github.com/icaruseffect/syncthing-ubuntu-indicator"
+msgstr ""
+
+#: ../../../users/contrib.rst:299
+msgid "https://github.com/bloones/SyncThingWin"
+msgstr ""
+
+#: ../../../users/contrib.rst:300
+msgid "https://github.com/thunderbirdtr/syncthing_rpm"
+msgstr ""
+
+#: ../../../users/contrib.rst:301
+msgid "https://github.com/dapperstout/pulse-java"
+msgstr ""
+
+#: ../../../users/contrib.rst:302
+msgid "https://github.com/cebe/pulse-php-discover"
+msgstr ""
+
+#: ../../../users/contrib.rst:303
+msgid "https://github.com/sebw/bitbar-plugins"
+msgstr ""
+
+#: ../../../users/contrib.rst:304
+msgid "https://github.com/nhojb/SyncthingBar"
+msgstr ""
+
+#: ../../../users/contrib.rst:305
+msgid "https://github.com/jastBytes/SyncthingTray"
+msgstr ""
+
+#: ../../../users/contrib.rst:306
+msgid "https://github.com/alex2108/syncthing-tray"
+msgstr ""
+
+#: ../../../users/contrib.rst:307
+msgid "`munin-syncthing <https://gitlab.com/daftaupe/munin-syncthing>`_"
+msgstr ""
