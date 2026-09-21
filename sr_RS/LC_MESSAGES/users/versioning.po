@@ -1,0 +1,252 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing 0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: sr_RS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../users/versioning.rst:4
+msgid "File Versioning"
+msgstr ""
+
+#: ../../../users/versioning.rst:6
+msgid "Todo"
+msgstr ""
+
+#: ../../../users/versioning.rst:7
+msgid "External versioning needs example for Windows."
+msgstr ""
+
+#: ../../../users/versioning.rst:10
+msgid "Description"
+msgstr ""
+
+#: ../../../users/versioning.rst:12
+msgid ""
+"Syncthing supports archiving the old version of a file when it is deleted or "
+"replaced with a newer version from the cluster. This is called \"file "
+"versioning\" and uses one of the available *versioning strategies* described "
+"below. File versioning is configured per folder and defaults to \"no file "
+"versioning\", i.e. no old copies of files are kept."
+msgstr ""
+
+#: ../../../users/versioning.rst:19
+msgid "Trash Can File Versioning"
+msgstr ""
+
+#: ../../../users/versioning.rst:21
+msgid ""
+"This versioning strategy emulates the common \"trash can\" approach. When a "
+"file is deleted or replaced due to a change on a remote device, it is a "
+"moved to the trash can in the ``.stversions`` folder. If a file with the "
+"same name was already in the trash can it is replaced."
+msgstr ""
+
+#: ../../../users/versioning.rst:26
+msgid ""
+"A configuration option is available to clean the trash can from files older "
+"than a specified number of days. If this is set to a positive number of "
+"days, files will be removed when they have been in the trash can that long. "
+"Setting this to zero prevents any files from being removed from the trash "
+"can automatically."
+msgstr ""
+
+#: ../../../users/versioning.rst:33
+msgid "Simple File Versioning"
+msgstr ""
+
+#: ../../../users/versioning.rst:35
+msgid ""
+"With \"Simple File Versioning\" files are moved to the ``.stversions`` "
+"folder (inside your shared folder) when replaced or deleted on a remote "
+"device. This option also takes a value in an input titled \"Keep Versions\" "
+"which tells Syncthing how many old versions of the file it should keep. For "
+"example, if you set this value to 5, if a file is replaced 5 times on a "
+"remote device, you will see 5 time-stamped versions on that file in the \"."
+"stversions\" folder on the other devices sharing the same folder."
+msgstr ""
+
+#: ../../../users/versioning.rst:44
+msgid "Staggered File Versioning"
+msgstr ""
+
+#: ../../../users/versioning.rst:46
+msgid ""
+"With \"Staggered File Versioning\" files are also moved to a different "
+"folder when replaced or deleted on a remote device (just like \"Simple File "
+"Versioning\"), however, versions are automatically deleted if they are older "
+"than the maximum age or exceed the number of files allowed in an interval."
+msgstr ""
+
+#: ../../../users/versioning.rst:51
+msgid ""
+"With this versioning method it's possible to specify where the versions are "
+"stored, with the default being the ``.stversions`` folder inside the normal "
+"folder path. If you set a custom version path, please ensure that it's on "
+"the same partition or filesystem as the regular folder path, as moving files "
+"there may otherwise fail. You can use an absolute path (this is recommended) "
+"or a relative path. Relative paths are interpreted relative to Syncthing's "
+"current or startup directory."
+msgstr ""
+
+#: ../../../users/versioning.rst:59
+msgid ""
+"The following intervals are used and they each have a maximum number of "
+"files that will be kept for each."
+msgstr ""
+
+#: ../../../users/versioning.rst:62
+msgid "1 Hour"
+msgstr ""
+
+#: ../../../users/versioning.rst:63
+msgid "For the first hour, the most recent version is kept every 30 seconds."
+msgstr ""
+
+#: ../../../users/versioning.rst:64
+msgid "1 Day"
+msgstr ""
+
+#: ../../../users/versioning.rst:65
+msgid "For the first day, the most recent version is kept every hour."
+msgstr ""
+
+#: ../../../users/versioning.rst:66
+msgid "30 Days"
+msgstr ""
+
+#: ../../../users/versioning.rst:67
+msgid "For the first 30 days, the most recent version is kept every day."
+msgstr ""
+
+#: ../../../users/versioning.rst:68
+msgid "Until Maximum Age"
+msgstr ""
+
+#: ../../../users/versioning.rst:69
+msgid ""
+"The maximum time to keep a version in days. For example, to keep replaced or "
+"deleted files in the \".stversions\" folder for an entire year, use 365. If "
+"only or 10 days, use 10. **Note: Set to 0 to keep versions forever.**"
+msgstr ""
+
+#: ../../../users/versioning.rst:74
+msgid "External File Versioning"
+msgstr ""
+
+#: ../../../users/versioning.rst:76
+msgid ""
+"This versioning method delegates the decision on what to do to an external "
+"command (program or script). The only configuration option is the name of "
+"the command. This should be an absolute path name. Just prior to a file "
+"being replaced, the command will be run with two parameters: the path to the "
+"folder, and the path to the file within the folder."
+msgstr ""
+
+#: ../../../users/versioning.rst:83
+msgid "Example for Unixes"
+msgstr ""
+
+#: ../../../users/versioning.rst:85
+msgid ""
+"Lets say I want to keep the latest version of each file as they are replaced "
+"or removed; essentially I want a \"trash can\"-like behavior. For this, I "
+"create the following script and store it as ``/Users/jb/bin/onlylatest.sh`` "
+"(i.e. the ``bin`` directory in my home directory):"
+msgstr ""
+
+#: ../../../users/versioning.rst:90
+msgid ""
+"#!/bin/sh\n"
+"set -eu\n"
+"\n"
+"# Where I want my versions stored\n"
+"versionspath=~/.trashcan\n"
+"\n"
+"# The parameters we get from Syncthing\n"
+"folderpath=\"$1\"\n"
+"filepath=\"$2\"\n"
+"\n"
+"# First ensure the dir where we need to store the file exists\n"
+"outpath=`dirname \"$versionspath/$filepath\"`\n"
+"mkdir -p \"$outpath\"\n"
+"# Then move the file there\n"
+"mv -f \"$folderpath/$filepath\" \"$versionspath/$filepath\""
+msgstr ""
+
+#: ../../../users/versioning.rst:108
+msgid ""
+"I must ensure that the script has execute permissions (``chmod 755 "
+"onlylatest.sh``), then configure Syncthing with the above path as the "
+"command name."
+msgstr ""
+
+#: ../../../users/versioning.rst:112
+msgid ""
+"Lets assume I have a folder \"default\" in ~/Sync, and that within that "
+"folder there is a file ``docs/letter.txt`` that is being replaced or "
+"deleted. The script will be called as if I ran this from the command line::"
+msgstr ""
+
+#: ../../../users/versioning.rst:116
+msgid "$ /Users/jb/bin/onlylatest.sh /Users/jb/Sync docs/letter.txt"
+msgstr ""
+
+#: ../../../users/versioning.rst:118
+msgid ""
+"The script will then move the file in question to ``~/.trashcan/docs/letter."
+"txt``, replacing any previous version of that letter that may already have "
+"been there."
+msgstr ""
+
+#: ../../../users/versioning.rst:123
+msgid "Example for Windows"
+msgstr ""
+
+#: ../../../users/versioning.rst:125
+msgid ""
+"On Windows we can use a batch script to perform the same \"trash can\"-like "
+"behavior as mentioned above. I created the following script and saved it as "
+"``C:\\Users\\mfrnd\\Scripts\\onlylatest.bat``."
+msgstr ""
+
+#: ../../../users/versioning.rst:129
+msgid ""
+"@echo off\n"
+"\n"
+":: We need command extensions for mkdir to create intermediate folders in "
+"one go\n"
+"setlocal EnableExtensions\n"
+"\n"
+":: Where I want my versions stored\n"
+"set VERSIONS_PATH=%USERPROFILE%\\.trashcan\n"
+"\n"
+":: The parameters we get from Syncthing, '~' removes quotes if any\n"
+"set FOLDER_PATH=%~1\n"
+"set FILE_PATH=%~2\n"
+"\n"
+":: First ensure the dir where we need to store the file exists\n"
+"for %%F in (\"%VERSIONS_PATH%\\%FILE_PATH%\") do set OUTPUT_PATH=%%~dpF\n"
+"if not exist \"%OUTPUT_PATH%\" mkdir \"%OUTPUT_PATH%\" || exit /B\n"
+"\n"
+":: Finally move the file, overwrite existing file if any\n"
+"move /Y \"%FOLDER_PATH%\\%FILE_PATH%\" \"%VERSIONS_PATH%\\%FILE_PATH%\""
+msgstr ""
+
+#: ../../../users/versioning.rst:150
+msgid ""
+"Finally, I set ``C:\\Users\\mfrnd\\Scripts\\onlylatest.bat`` as command name "
+"in Syncthing."
+msgstr ""
