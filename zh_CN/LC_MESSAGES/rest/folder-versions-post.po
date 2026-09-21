@@ -1,0 +1,46 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2019, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../rest/folder-versions-post.rst:2
+msgid "POST /rest/folder/versions"
+msgstr ""
+
+#: ../../../rest/folder-versions-post.rst:4
+msgid ""
+"Restore archived versions of a given set of files.  Expects an object with "
+"attributes named after the relative file paths, with timestamps as values "
+"matching valid ``versionTime`` entries in the corresponding :doc:`folder-"
+"versions-get` response object."
+msgstr ""
+
+#: ../../../rest/folder-versions-post.rst:9
+msgid ""
+"Takes the mandatory parameter ``folder`` (folder ID).  Returns an object "
+"containing any error messages that occurred during restoration of the file, "
+"with the file path as attribute name."
+msgstr ""
+
+#: ../../../rest/folder-versions-post.rst:13
+msgid ""
+"curl -X POST -H X-API-key:... http://127.0.0.1:8384/rest/folder/versions?"
+"folder=default -d '{\n"
+"  \"dir1/dir2/bar\": \"2022-02-06T20:44:12+01:00\",\n"
+"  \"baz\": \"2022-02-06T20:44:20+01:00\"\n"
+"}'"
+msgstr ""
