@@ -1,0 +1,107 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2026, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-06 09:56+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../advanced/folder-xattr-filter.rst:2
+msgid "xattrFilter"
+msgstr ""
+
+#: ../../../advanced/folder-xattr-filter.rst:4
+msgid ""
+"The extended attributes filter is used to manage which attributes should be "
+"synced and which ones should not be."
+msgstr ""
+
+#: ../../../advanced/folder-xattr-filter.rst:8
+msgid "When the filter shows"
+msgstr ""
+
+#: ../../../advanced/folder-xattr-filter.rst:10
+msgid ""
+"The ability to manipulate the extended attributes filter in the advanced "
+"panel of a folder configuration only appears after enabling the ``Sync "
+"Extended Attributes`` option."
+msgstr ""
+
+#: ../../../advanced/folder-xattr-filter.rst:15
+msgid "Default Behaviour"
+msgstr ""
+
+#: ../../../advanced/folder-xattr-filter.rst:17
+msgid ""
+"When setting filters it's good to understand the default behaviour, this "
+"default behaviour changes once you add rules. When no rules are present "
+"everything is permitted. However, once a single rule is set this default "
+"behaviour flips to denying everything that does not match a rule."
+msgstr ""
+
+#: ../../../advanced/folder-xattr-filter.rst:22
+msgid ""
+"These rules work on a 'first-match'-principle. This means that once it "
+"matches any rule (going from top to bottom), that rule is applied and the "
+"other rules won't be checked further. When no rules result in a match, then "
+"the default is deny unless stated otherwise (or when no rules are present at "
+"all. In that case the default is to permit everything)."
+msgstr ""
+
+#: ../../../advanced/folder-xattr-filter.rst:28
+msgid ""
+"To override this default behaviour when adding rules, you should add a rule "
+"in the bottom which permits everything (*)."
+msgstr ""
+
+#: ../../../advanced/folder-xattr-filter.rst:31
+msgid ""
+"The GUI reminds you of the default behaviour when you don't have an any-rule "
+"set."
+msgstr ""
+
+#: ../../../advanced/folder-xattr-filter.rst:35
+msgid "Setting rules"
+msgstr "設定規則"
+
+#: ../../../advanced/folder-xattr-filter.rst:37
+msgid ""
+"To set a rule press the button 'Add new rule' to append an empty rule to the "
+"list. The check-box indicates whether to permit (checked) or deny "
+"(unchecked) the matching pattern and the text-field is the pattern to be "
+"matched. Adding a rule while already having a wild-card (*) added will "
+"result in the new rule being added as second-last item. When saving the "
+"configuration, empty rules will be removed. Closing the window without "
+"pressing save will cause your made changes to be reset."
+msgstr ""
+
+#: ../../../advanced/folder-xattr-filter.rst:45
+msgid ""
+"Be aware that the rules aren't being validated on correctness beyond the "
+"point of cleaning out empty rules."
+msgstr ""
+
+#: ../../../advanced/folder-xattr-filter.rst:49
+msgid "Removing rules"
+msgstr "移除規則"
+
+#: ../../../advanced/folder-xattr-filter.rst:51
+msgid ""
+"To remove a rule simply press on the trash bin on the right hand side of the "
+"rule that you want to remove."
+msgstr ""
+
+#: ../../../advanced/folder-xattr-filter.rst:54
+msgid ":doc:`folder-send-xattrs`, :doc:`folder-sync-xattrs`"
+msgstr ""
