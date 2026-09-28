@@ -1,0 +1,124 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2026, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-21 06:27+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../rest/config.rst:2
+msgid "Config Endpoints"
+msgstr "組態端點"
+
+#: ../../../rest/config.rst:6
+msgid ""
+"These endpoints facilitate access and modification of the :doc:"
+"`configuration </users/config>` in a granular way. Config sent to the "
+"endpoints must be in the same format as returned by the corresponding GET "
+"request. When posting the configuration succeeds, the posted configuration "
+"is immediately applied, except for changes that require a restart. Query :"
+"ref:`rest-config-insync` to check if a restart is required."
+msgstr ""
+
+#: ../../../rest/config.rst:13
+msgid ""
+"For all endpoints supporting ``PATCH``, it takes the existing config and "
+"unmarshals the given JSON object on top of it. This means all child objects "
+"will replace the existing objects, not extend them. For example for "
+"``RawListenAddresses`` in options, which is an array of strings, sending "
+"``{RawListenAddresses: [\"tcp://10.0.0.2\"]}`` will replace all existing "
+"listen addresses."
+msgstr ""
+
+#: ../../../rest/config.rst:23
+msgid "/rest/config"
+msgstr ""
+
+#: ../../../rest/config.rst:25
+msgid "``GET`` returns the entire config and ``PUT`` replaces it."
+msgstr ""
+
+#: ../../../rest/config.rst:30
+msgid "/rest/config/restart-required"
+msgstr "/rest/config/restart-required"
+
+#: ../../../rest/config.rst:32
+msgid ""
+"``GET`` returns whether a restart of Syncthing is required for the current "
+"config to take effect."
+msgstr ""
+
+#: ../../../rest/config.rst:36
+msgid "/rest/config/folders, /rest/config/devices"
+msgstr ""
+
+#: ../../../rest/config.rst:38
+msgid ""
+"``GET`` returns all folders respectively devices as an array. ``PUT`` takes "
+"an array and ``POST`` a single object. In both cases if a given folder/"
+"device already exists, it's replaced, otherwise a new one is added."
+msgstr ""
+
+#: ../../../rest/config.rst:43
+msgid "/rest/config/folders/\\*id\\*, /rest/config/devices/\\*id\\*"
+msgstr ""
+
+#: ../../../rest/config.rst:45
+msgid ""
+"Put the desired folder- respectively device-ID in place of \\*id\\*. ``GET`` "
+"returns the folder/device for the given ID, ``PUT`` replaces the entire "
+"config, ``PATCH`` replaces only the given child objects and ``DELETE`` "
+"removes the folder/device."
+msgstr ""
+
+#: ../../../rest/config.rst:51
+msgid "/rest/config/defaults/folder, /rest/config/defaults/device"
+msgstr ""
+
+#: ../../../rest/config.rst:53
+msgid ""
+"``GET`` returns a template folder / device configuration object with all "
+"default values, which only needs a unique ID to be applied.  ``PUT`` "
+"replaces the default config (omitted values are reset to the hard-coded "
+"defaults), ``PATCH`` replaces only the given child objects."
+msgstr ""
+
+#: ../../../rest/config.rst:59
+msgid "/rest/config/defaults/ignores"
+msgstr "/rest/config/defaults/ignores"
+
+#: ../../../rest/config.rst:63
+msgid ""
+"``GET`` returns an object with a single ``lines`` attribute listing ignore "
+"patterns to be used by default on folders, as an array of single-line "
+"strings. ``PUT`` replaces the default ignore patterns from an object of the "
+"same format."
+msgstr ""
+
+#: ../../../rest/config.rst:68
+msgid "/rest/config/options, /rest/config/ldap, /rest/config/gui"
+msgstr ""
+
+#: ../../../rest/config.rst:70
+msgid ""
+"``GET`` returns the respective object, ``PUT`` replaces the entire object "
+"and ``PATCH`` replaces only the given child objects."
+msgstr ""
+
+#: ../../../rest/config.rst:74
+msgid ""
+"The :stconf:opt:`gui.password` configuration option has special handling to "
+"accept already hashed passwords.  Any valid bcrypt hash is stored verbatim, "
+"while a plaintext password is first hashed."
+msgstr ""
