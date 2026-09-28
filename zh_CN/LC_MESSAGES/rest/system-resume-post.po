@@ -1,0 +1,33 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2019, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../rest/system-resume-post.rst:2
+msgid "POST /rest/system/resume"
+msgstr ""
+
+#: ../../../rest/system-resume-post.rst:4
+msgid "Resume the given device or all devices."
+msgstr ""
+
+#: ../../../rest/system-resume-post.rst:6
+msgid ""
+"Takes the optional parameter ``device`` (device ID). When omitted, resumes "
+"all devices.  Returns status 200 and no content upon success, or status 500 "
+"and a plain text error on failure."
+msgstr ""
