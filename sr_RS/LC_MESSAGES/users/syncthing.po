@@ -1,0 +1,786 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2026, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing stable\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-21 06:27+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: sr_RS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../users/syncthing.rst:5
+msgid "Command Line Operation"
+msgstr ""
+
+#: ../../../users/syncthing.rst:8
+msgid "Synopsis"
+msgstr ""
+
+#: ../../../users/syncthing.rst:12
+msgid ""
+"syncthing [serve]\n"
+"          [--home=<dir> | --config=<dir> --data=<dir>]\n"
+"          [--allow-newer-config] [--audit] [--auditfile=<file|-|-->]\n"
+"          [--db-maintenance-interval=<interval>]\n"
+"          [--db-delete-retention-interval=<interval>]\n"
+"          [--gui-address=<address>] [--gui-apikey=<key>]\n"
+"          [--log-level=<level>] [--log-file=<filename>]\n"
+"          [--log-max-old-files=<num>] [--log-max-size=<num>]\n"
+"          [--log-format-timestamp=<format>] [--no-log-format-level-string]\n"
+"          [--log-format-level-syslog]\n"
+"          [--no-browser] [--no-console]\n"
+"          [--no-port-probing] [--no-restart] [--no-upgrade]\n"
+"          [--paused] [--unpaused]\n"
+"          [--version] [--help] [--debug-*]\n"
+"\n"
+"syncthing cli\n"
+"          [--home=<dir> | --config=<dir> --data=<dir>]\n"
+"          [--gui-address=<address>] [--gui-apikey=<key>]\n"
+"          [--help]\n"
+"          <command> [command options...] [arguments...]\n"
+"\n"
+"syncthing browser\n"
+"          [--home=<dir> | --config=<dir> --data=<dir>]\n"
+"          [--help]\n"
+"\n"
+"syncthing decrypt (--to=<dir> | --verify-only)\n"
+"          [--home=<dir> | --config=<dir> --data=<dir>]\n"
+"          [--password=<pw>] [--folder-id=<id>] [--token-path=<file>]\n"
+"          [--continue] [--verbose] [--help]\n"
+"          <path>\n"
+"\n"
+"syncthing device-id\n"
+"          [--home=<dir> | --config=<dir> --data=<dir>]\n"
+"          [--help]\n"
+"\n"
+"syncthing generate\n"
+"          [--home=<dir> | --config=<dir> --data=<dir>]\n"
+"          [--gui-user=<username>] [--gui-password=<password|->]\n"
+"          [--no-port-probing]\n"
+"          [--help]\n"
+"\n"
+"syncthing paths\n"
+"          [--home=<dir> | --config=<dir> --data=<dir>]\n"
+"          [--help]\n"
+"\n"
+"syncthing upgrade\n"
+"          [--home=<dir> | --config=<dir> --data=<dir>]\n"
+"          [--check-only] [--from=<url>]\n"
+"          [--help]\n"
+"\n"
+"syncthing version\n"
+"          [--home=<dir> | --config=<dir> --data=<dir>]\n"
+"          [--help]\n"
+"\n"
+"syncthing debug <command>\n"
+"          [--home=<dir> | --config=<dir> --data=<dir>]\n"
+"          [--help]"
+msgstr ""
+
+#: ../../../users/syncthing.rst:71
+msgid "Description"
+msgstr ""
+
+#: ../../../users/syncthing.rst:73
+msgid ""
+"Syncthing lets you synchronize your files bidirectionally across multiple "
+"devices. This means the creation, modification or deletion of files on one "
+"machine will automatically be replicated to your other devices. We believe "
+"your data is your data alone and you deserve to choose where it is stored. "
+"Therefore Syncthing does not upload your data to the cloud but exchanges "
+"your data across your machines as soon as they are online at the same time."
+msgstr ""
+
+#: ../../../users/syncthing.rst:80
+msgid ""
+"The ``syncthing`` core application is a command-line program which usually "
+"runs in the background and handles the synchronization. It provides a built-"
+"in, HTML and JavaScript based user interface to be controlled from a web "
+"browser. This frontend communicates with the core application through some "
+"HTTP APIs, which other apps like graphical system integration helpers can "
+"use as well, for greatest flexibility. A link to reach the GUI and API is "
+"printed among the first few log messages."
+msgstr ""
+
+#: ../../../users/syncthing.rst:89
+msgid "Common options"
+msgstr ""
+
+#: ../../../users/syncthing.rst:93
+msgid ""
+"Set common configuration and data directory. The default configuration "
+"directory is ``$XDG_STATE_HOME/syncthing`` or ``$HOME/.local/state/"
+"syncthing`` (Unix-like), ``$HOME/Library/Application Support/Syncthing`` "
+"(Mac) and ``%LOCALAPPDATA%\\Syncthing`` (Windows)."
+msgstr ""
+
+#: ../../../users/syncthing.rst:101
+msgid ""
+"Set configuration directory. Alternative to ``--home`` and must be used "
+"together with ``--data``."
+msgstr ""
+
+#: ../../../users/syncthing.rst:106
+msgid ""
+"Set data (e.g. database) directory. Alternative to ``--home`` and must be "
+"used together with ``--config``."
+msgstr ""
+
+#: ../../../users/syncthing.rst:111
+msgid ""
+"Show help text about command line usage.  Context-sensitive depending on the "
+"given subcommand."
+msgstr ""
+
+#: ../../../users/syncthing.rst:115
+msgid "Serve options"
+msgstr ""
+
+#: ../../../users/syncthing.rst:119
+msgid ""
+"Try loading a config file written by a newer program version, instead of "
+"failing immediately."
+msgstr ""
+
+#: ../../../users/syncthing.rst:124
+msgid "Write events to timestamped file ``audit-YYYYMMDD-HHMMSS.log``."
+msgstr ""
+
+#: ../../../users/syncthing.rst:128
+msgid ""
+"Use specified file or stream (``\"-\"`` for stdout, ``\"--\"`` for stderr) "
+"for audit events, rather than the timestamped default file name."
+msgstr ""
+
+#: ../../../users/syncthing.rst:133
+msgid ""
+"Database maintenance interval -- internal database maintenance routines run "
+"this often. The format is that of a Go duration string (see https://pkg.go."
+"dev/time#ParseDuration)."
+msgstr ""
+
+#: ../../../users/syncthing.rst:139
+msgid ""
+"Database deleted item retention interval -- deleted items are forgotten from "
+"the database after this interval. The format is that of a Go duration string "
+"(see https://pkg.go.dev/time#ParseDuration)."
+msgstr ""
+
+#: ../../../users/syncthing.rst:145
+msgid ""
+"Override GUI listen address. Set this to an address (``0.0.0.0:8384``) or a "
+"URL (``http://0.0.0.0:8384``). Supported schemes are ``http`` for plain "
+"HTTP, ``https`` for HTTP over TLS, ``unix`` for plain Unix sockets or "
+"``unixs`` for TLS over Unix sockets. A Unix socket could look like this: "
+"``unix:///run/syncthing/syncthing.socket`` (notice the three slashes: two as "
+"part of the URL structure, one to specify an absolute path)."
+msgstr ""
+
+#: ../../../users/syncthing.rst:154
+msgid "Override the API key needed to access the GUI / REST API."
+msgstr ""
+
+#: ../../../users/syncthing.rst:158
+msgid ""
+"Set destination filename for logging (use ``\"-\"`` for stdout, which is the "
+"default option)."
+msgstr ""
+
+#: ../../../users/syncthing.rst:163
+msgid ""
+"Set the log level for all packages. Valid levels are DEBUG, INFO, WARN, and "
+"ERROR."
+msgstr ""
+
+#: ../../../users/syncthing.rst:168
+msgid ""
+"Number of old files to keep (zero to keep only current).  Applies only when "
+"log rotation is enabled through ``--log-max-size``."
+msgstr ""
+
+#: ../../../users/syncthing.rst:173
+msgid "Maximum size in bytes of any log file (zero to disable log rotation)."
+msgstr ""
+
+#: ../../../users/syncthing.rst:177
+msgid ""
+"Format for timestamp, set to empty to disable timestamps. The format is that "
+"of the Go time formatter (see https://pkg.go.dev/time#Layout)."
+msgstr ""
+
+#: ../../../users/syncthing.rst:182
+msgid "Whether to include level string (e.g. \"INF\") in log line."
+msgstr ""
+
+#: ../../../users/syncthing.rst:186
+msgid "Whether to include level as syslog prefix (e.g. \"<6>\") in log line."
+msgstr ""
+
+#: ../../../users/syncthing.rst:190
+msgid "Do not start a browser."
+msgstr ""
+
+#: ../../../users/syncthing.rst:194
+msgid "Hide the console window. (On Windows only)"
+msgstr ""
+
+#: ../../../users/syncthing.rst:198
+msgid ""
+"Don't try to find unused random ports for the GUI and listen address when "
+"generating an initial configuration / starting for the first time."
+msgstr ""
+
+#: ../../../users/syncthing.rst:203
+msgid ""
+"Do not restart Syncthing when it exits. The monitor process will still run "
+"to handle crashes and writing to logfiles (if configured to)."
+msgstr ""
+
+#: ../../../users/syncthing.rst:208
+msgid "Disable automatic upgrades."
+msgstr ""
+
+#: ../../../users/syncthing.rst:212
+msgid "Start with all devices and folders paused."
+msgstr ""
+
+#: ../../../users/syncthing.rst:216
+msgid "Start with all devices and folders unpaused."
+msgstr ""
+
+#: ../../../users/syncthing.rst:220
+msgid "Show the current version information, then exit."
+msgstr ""
+
+#: ../../../users/syncthing.rst:224
+msgid ""
+"Several debug options exist. See ``syncthing serve --help`` for the flags "
+"that apply to your version."
+msgstr ""
+
+#: ../../../users/syncthing.rst:228
+msgid "Decrypt options"
+msgstr ""
+
+#: ../../../users/syncthing.rst:232
+msgid "Destination directory where files should be stored after decryption."
+msgstr ""
+
+#: ../../../users/syncthing.rst:236
+msgid "Don't write decrypted files to disk (but verify plaintext hashes)."
+msgstr ""
+
+#: ../../../users/syncthing.rst:240
+msgid ""
+"Folder password for decryption / verification.  Can be passed through the "
+"``FOLDER_PASSWORD`` environment variable instead to avoid recording in a "
+"shell's history buffer or sniffing from the running processes list."
+msgstr ""
+
+#: ../../../users/syncthing.rst:246
+msgid ""
+"Folder ID of the encrypted folder, if it cannot be determined automatically."
+msgstr ""
+
+#: ../../../users/syncthing.rst:250
+msgid "Path to the token file within the folder (used to determine folder ID)."
+msgstr ""
+
+#: ../../../users/syncthing.rst:254
+msgid "Continue processing next file in case of error, instead of aborting."
+msgstr ""
+
+#: ../../../users/syncthing.rst:257
+msgid "Generate options"
+msgstr ""
+
+#: ../../../users/syncthing.rst:261
+msgid ""
+"Specify new GUI authentication password, to update the config file.  Read "
+"from the standard input stream if only a single dash (``-``) is given.  A "
+"plaintext password is hashed before writing to the config file, but an "
+"already bcrypt-hashed input is stored verbatim.  As a special case, giving "
+"the existing password hash as password will leave it untouched."
+msgstr ""
+
+#: ../../../users/syncthing.rst:269
+msgid "Specify new GUI authentication user name, to update the config file."
+msgstr ""
+
+#: ../../../users/syncthing.rst:272
+msgid "Upgrade options"
+msgstr ""
+
+#: ../../../users/syncthing.rst:276
+msgid "Do not upgrade, only indicate whether an upgrade is available."
+msgstr ""
+
+#: ../../../users/syncthing.rst:280
+msgid ""
+"Upgrade to the Syncthing version available from loading the package at the "
+"given URL."
+msgstr ""
+
+#: ../../../users/syncthing.rst:284
+msgid "Exit Codes"
+msgstr ""
+
+#: ../../../users/syncthing.rst:286
+msgid "0"
+msgstr ""
+
+#: ../../../users/syncthing.rst:287
+msgid "Success / Shutdown"
+msgstr ""
+
+#: ../../../users/syncthing.rst:288
+msgid "1"
+msgstr ""
+
+#: ../../../users/syncthing.rst:289
+msgid "Error"
+msgstr ""
+
+#: ../../../users/syncthing.rst:290
+msgid "2"
+msgstr ""
+
+#: ../../../users/syncthing.rst:291
+msgid "Upgrade not available"
+msgstr ""
+
+#: ../../../users/syncthing.rst:292
+msgid "3"
+msgstr ""
+
+#: ../../../users/syncthing.rst:293
+msgid "Restarting"
+msgstr ""
+
+#: ../../../users/syncthing.rst:294
+msgid "4"
+msgstr ""
+
+#: ../../../users/syncthing.rst:295
+msgid "Upgrading"
+msgstr ""
+
+#: ../../../users/syncthing.rst:297
+msgid ""
+"Exit codes over 125 are usually returned by the shell/binary loader/default "
+"signal handler. Exit codes over 128+N on Unix usually represent the signal "
+"which caused the process to exit. For example, ``128 + 9 (SIGKILL) = 137``."
+msgstr ""
+
+#: ../../../users/syncthing.rst:302
+msgid "Subcommands"
+msgstr ""
+
+#: ../../../users/syncthing.rst:304
+msgid ""
+"The command line syntax supports different modes of operation through "
+"several subcommands, specified as the first argument.  If omitted, the "
+"default ``serve`` is assumed."
+msgstr ""
+
+#: ../../../users/syncthing.rst:308
+msgid ""
+"The initial setup of a device ID and default configuration can be called "
+"explicitly with the ``generate`` subcommand.  It can also update the "
+"configured GUI authentication credentials, without going through the REST "
+"API.  An existing device certificate is left untouched.  If the "
+"configuration file already exists, it is validated and updated to the latest "
+"configuration schema, including adding default values for any new options."
+msgstr ""
+
+#: ../../../users/syncthing.rst:315
+msgid ""
+"The ``decrypt`` subcommand is used in conjunction with untrusted (encrypted) "
+"devices, see the relevant section on :ref:`decryption <untrusted-decrypt>` "
+"for details.  It does not depend on Syncthing to be running, but works on "
+"offline data."
+msgstr ""
+
+#: ../../../users/syncthing.rst:320
+msgid ""
+"To work with the REST API for debugging or automating things in Syncthing, "
+"the ``cli`` subcommand provides easy access to individual features.  It "
+"basically saves the hassle of handling HTTP connections and API "
+"authentication."
+msgstr ""
+
+#: ../../../includes/cli-commands.rst:1
+msgid ""
+"The available subcommands are grouped into several nested hierarchies and "
+"some parts dynamically generated from the running Syncthing instance.  On "
+"every level, the ``--help`` option lists the available properties, actions "
+"and commands for the user to discover interactively.  The top-level groups "
+"are:"
+msgstr ""
+
+#: ../../../includes/cli-commands.rst:6 ../../../includes/env-vars.rst:16
+msgid "config"
+msgstr ""
+
+#: ../../../includes/cli-commands.rst:7
+msgid ""
+"Access the live configuration in a running instance over the REST API to "
+"retrieve (get) or update (set) values in a fine-grained way.  The hierarchy "
+"is based on the same structure as used in the JSON / XML representations."
+msgstr ""
+
+#: ../../../includes/cli-commands.rst:11
+msgid "show"
+msgstr ""
+
+#: ../../../includes/cli-commands.rst:12
+msgid ""
+"Show system properties and status of a running instance.  The output is "
+"passed on directly from the REST API response and therefore requires parsing "
+"JSON format."
+msgstr ""
+
+#: ../../../includes/cli-commands.rst:16
+msgid "operations"
+msgstr ""
+
+#: ../../../includes/cli-commands.rst:17
+msgid ""
+"Control the overall program operation such as restarting or handling "
+"upgrades, as well as triggering some actions on a per-folder basis.  Can "
+"also configure the default ignore patterns from a plain text ignore file."
+msgstr ""
+
+#: ../../../includes/cli-commands.rst:21
+msgid "errors"
+msgstr ""
+
+#: ../../../includes/cli-commands.rst:22
+msgid ""
+"Examine pending error conditions that need attention from the user, or "
+"acknowledge (clear) them."
+msgstr ""
+
+#: ../../../includes/cli-commands.rst:25
+msgid "debug"
+msgstr ""
+
+#: ../../../includes/cli-commands.rst:26
+msgid ""
+"Various tools to aid in diagnosing problems or collection information for "
+"bug reports.  Some of these commands access the database directly and can "
+"therefore only work when Syncthing is not running."
+msgstr ""
+
+#: ../../../includes/cli-commands.rst:30
+msgid "``-`` (a single dash)"
+msgstr ""
+
+#: ../../../includes/cli-commands.rst:31
+msgid ""
+"Reads subsequent commands from the standard input stream, without needing to "
+"call the ``syncthing cli`` command over and over.  Exits on any invalid "
+"command or when EOF (end-of-file) is received."
+msgstr ""
+
+#: ../../../users/syncthing.rst:327
+msgid "Proxies"
+msgstr ""
+
+#: ../../../users/syncthing.rst:329
+msgid ""
+"Syncthing can use a SOCKS, HTTP, or HTTPS proxy to talk to the outside "
+"world. The proxy is used for outgoing connections only - it is not possible "
+"to accept incoming connections through the proxy. The proxy is configured "
+"through the environment variable ``all_proxy``. Somewhat unusually, this "
+"variable must be named in lower case - it is not \":strike:`ALL_PROXY`\". "
+"For example::"
+msgstr ""
+
+#: ../../../users/syncthing.rst:336
+msgid "$ export all_proxy=socks://192.0.2.42:8081"
+msgstr ""
+
+#: ../../../users/syncthing.rst:339
+msgid "Development Settings"
+msgstr ""
+
+#: ../../../users/syncthing.rst:341
+msgid ""
+"The following environment variables modify Syncthing's behavior in ways that "
+"are mostly useful for developers. Use with care. If you start Syncthing from "
+"within service managers like systemd or supervisor, path expansion may not "
+"be supported."
+msgstr ""
+
+#: ../../../includes/env-vars.rst:1
+msgid "STTRACE"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:2
+msgid ""
+"Used to increase the debugging verbosity in specific facilities, generally "
+"mapping to a Go package. Enter a comma-separated string of facilities to "
+"trace: ``api,beacon``. Optionally, a log level can be given per facility to "
+"specify something other than DEBUG: ``api:WARN,beacon:ERROR``, potentially "
+"overriding a global ``--log-level`` adjustment."
+msgstr ""
+
+#: ../../../includes/env-vars.rst:9
+msgid ""
+"The valid facility strings are listed below; additionally, ``syncthing serve "
+"--help`` always outputs the most up-to-date list."
+msgstr ""
+
+#: ../../../includes/env-vars.rst:12
+msgid "api"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:13
+msgid "REST API"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:14
+msgid "beacon"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:15
+msgid "Multicast and broadcast discovery"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:17
+msgid "Configuration loading and saving"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:18
+msgid "connections"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:19
+msgid "Connection handling"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:20
+msgid "db/sqlite"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:21
+msgid "SQLite database"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:22
+msgid "dialer"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:23
+msgid "Dialing connections"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:24
+msgid "discover"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:25
+msgid "Remote device discovery"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:26
+msgid "events"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:27
+msgid "Event generation and logging"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:28
+msgid "fs"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:29
+msgid "Filesystem access"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:30
+msgid "main"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:31
+msgid "Main package"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:32
+msgid "model"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:33
+msgid "The root hub"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:34
+msgid "nat"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:35
+msgid "NAT discovery and port mapping"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:36
+msgid "pmp"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:37
+msgid "NAT-PMP discovery and port mapping"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:38
+msgid "protocol"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:39
+msgid "The BEP protocol"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:40
+msgid "relay/client"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:41
+msgid "Relay client"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:42
+msgid "scanner"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:43
+msgid "File change detection and hashing"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:44
+msgid "stun"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:45
+msgid "STUN functionality"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:46
+msgid "syncthing"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:47
+msgid "Main run facility"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:48
+msgid "upgrade"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:49
+msgid "Binary upgrades"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:50
+msgid "upnp"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:51
+msgid "UPnP discovery and port mapping"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:52
+msgid "ur"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:53
+msgid "Usage reporting"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:54
+msgid "versioner"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:55
+msgid "File versioning"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:56
+msgid "watchaggregator"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:57
+msgid "Filesystem event watcher"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:59
+msgid "STLOCKTHRESHOLD"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:60
+msgid ""
+"Used for debugging internal deadlocks; sets debug sensitivity. Use only "
+"under direction of a developer."
+msgstr ""
+
+#: ../../../includes/env-vars.rst:63
+msgid "STVERSIONEXTRA"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:64
+msgid ""
+"Add extra information to the version string in logs and the version line in "
+"the GUI. Can be set to the name of a wrapper or tool controlling syncthing "
+"to communicate this to the end user."
+msgstr ""
+
+#: ../../../includes/env-vars.rst:68
+msgid "GOMAXPROCS"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:69
+msgid ""
+"Set the maximum number of CPU cores to use. Defaults to all available CPU "
+"cores."
+msgstr ""
+
+#: ../../../includes/env-vars.rst:72
+msgid "GOGC"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:73
+msgid ""
+"Percentage of heap growth at which to trigger GC. Default is 100. Lower "
+"numbers keep peak memory usage down, at the price of CPU usage (i.e. "
+"performance)."
+msgstr ""
+
+#: ../../../includes/env-vars.rst:77
+msgid "LOGGER_DISCARD"
+msgstr ""
+
+#: ../../../includes/env-vars.rst:78
+msgid ""
+"Hack to completely disable logging, for example when running benchmarks. Set "
+"to any nonempty value to use it."
+msgstr ""
+
+#: ../../../users/syncthing.rst:349
+msgid "See Also"
+msgstr ""
+
+#: ../../../users/syncthing.rst:351
+msgid ""
+":manpage:`syncthing-config(5)`, :manpage:`syncthing-stignore(5)`, :manpage:"
+"`syncthing-device-ids(7)`, :manpage:`syncthing-security(7)`, :manpage:"
+"`syncthing-networking(7)`, :manpage:`syncthing-versioning(7)`, :manpage:"
+"`syncthing-faq(7)`"
+msgstr ""
