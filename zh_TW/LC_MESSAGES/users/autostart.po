@@ -1,0 +1,716 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing 0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../users/autostart.rst:2
+msgid "Starting Syncthing Automatically"
+msgstr "自動啟動 Syncthing"
+
+#: ../../../users/autostart.rst:5
+msgid "This page may be outdated and requires review."
+msgstr ""
+
+#: ../../../users/autostart.rst:8
+msgid "Windows"
+msgstr ""
+
+#: ../../../users/autostart.rst:10
+msgid ""
+"There is currently no official installer available for Windows. However, "
+"there are a number of easy solutions."
+msgstr ""
+
+#: ../../../users/autostart.rst:14
+msgid "Task Scheduler"
+msgstr ""
+
+#: ../../../users/autostart.rst:16
+msgid ""
+"Start the `Task Scheduler <https://en.wikipedia.org/wiki/"
+"Windows_Task_Scheduler>`__"
+msgstr ""
+
+#: ../../../users/autostart.rst:17
+msgid "Create a New Task (\"Action\" menu -> \"Create Task...\")"
+msgstr ""
+
+#: ../../../users/autostart.rst:18
+msgid "General Tab:"
+msgstr ""
+
+#: ../../../users/autostart.rst:19
+msgid "Name the task (for example 'Syncthing')"
+msgstr ""
+
+#: ../../../users/autostart.rst:20
+msgid "Check \"Run whether user is logged on or not\""
+msgstr ""
+
+#: ../../../users/autostart.rst:21
+msgid "Triggers Tab:"
+msgstr ""
+
+#: ../../../users/autostart.rst:22 ../../../users/autostart.rst:28
+msgid "Click \"New...\""
+msgstr ""
+
+#: ../../../users/autostart.rst:23
+msgid "Set \"Begin the task\" to \"At Startup\""
+msgstr ""
+
+#: ../../../users/autostart.rst:24
+msgid "(optional) choose a delay"
+msgstr ""
+
+#: ../../../users/autostart.rst:25
+msgid "Make sure Enabled is checked"
+msgstr ""
+
+#: ../../../users/autostart.rst:26 ../../../users/autostart.rst:32
+msgid "Click \"OK\""
+msgstr ""
+
+#: ../../../users/autostart.rst:27
+msgid "Actions Tab:"
+msgstr ""
+
+#: ../../../users/autostart.rst:29
+msgid "[Action] should be set as \"Start a program\""
+msgstr ""
+
+#: ../../../users/autostart.rst:30
+msgid "Enter the path to syncthing.exe in \"Program/Script\""
+msgstr ""
+
+#: ../../../users/autostart.rst:31
+msgid ""
+"(optional) Enter \"-no-console -no-browser\" for \"Add arguments (optional)\""
+msgstr ""
+
+#: ../../../users/autostart.rst:33
+msgid "Settings Tab:"
+msgstr ""
+
+#: ../../../users/autostart.rst:34
+msgid "(recommended) Keep the checkbox on \"Allow task to be run on demand\""
+msgstr ""
+
+#: ../../../users/autostart.rst:35
+msgid "Clear checkbox from \"Stop task if it runs longer than:\""
+msgstr ""
+
+#: ../../../users/autostart.rst:36
+msgid ""
+"(recommended) Keep \"Do not start a new instance\" for \"If the task is "
+"already running, then the following rule applies\""
+msgstr ""
+
+#: ../../../users/autostart.rst:37
+msgid "Click OK"
+msgstr ""
+
+#: ../../../users/autostart.rst:38
+msgid "Enter password for the user."
+msgstr ""
+
+#: ../../../users/autostart.rst:41
+msgid "Third-party Tools"
+msgstr ""
+
+#: ../../../users/autostart.rst:43
+msgid ""
+"There are a number of third-party utilities which aim to address this issue. "
+"These typically provide an installer, let Syncthing start automatically, and "
+"a more polished user experience (e.g. by behaving as a \"proper\" Windows "
+"application, rather than forcing you to start your browser to interact with "
+"Syncthing)."
+msgstr ""
+
+#: ../../../users/autostart.rst:49
+msgid ""
+":ref:`Windows GUI Wrappers <contrib-windows>`, :ref:`Cross-platform GUI "
+"Wrappers <contrib-all>`."
+msgstr ""
+
+#: ../../../users/autostart.rst:52
+msgid "Start on Login"
+msgstr ""
+
+#: ../../../users/autostart.rst:54
+msgid ""
+"Starting Syncthing on login, without a console window or browser opening on "
+"start, is relatively easy."
+msgstr ""
+
+#: ../../../users/autostart.rst:57
+msgid ""
+"Find the correct link of the Windows binary from the `Syncthing website "
+"<https://github.com/syncthing/syncthing/releases>`__ (choose **amd64** if "
+"you have a 64-bit version of Windows)"
+msgstr ""
+
+#: ../../../users/autostart.rst:60
+msgid ""
+"Extract the files in the folder (``syncthing-windows-*``) in the zip to the "
+"folder ``C:\\syncthing``"
+msgstr ""
+
+#: ../../../users/autostart.rst:62
+msgid "Go to the ``C:\\syncthing`` folder, make a file named ``syncthing.bat``"
+msgstr ""
+
+#: ../../../users/autostart.rst:64
+msgid ""
+"Right-click the file and choose **Edit**. The file should open in Notepad or "
+"your default text editor."
+msgstr ""
+
+#: ../../../users/autostart.rst:66
+msgid ""
+"Paste the following command into the file and save the changes: ``start "
+"\"Syncthing\" syncthing.exe -no-console -no-browser``"
+msgstr ""
+
+#: ../../../users/autostart.rst:68
+msgid "Right-click on ``syncthing.bat`` and press \"Create Shortcut\""
+msgstr ""
+
+#: ../../../users/autostart.rst:69
+msgid ""
+"Right-click the shortcut file ``syncthing.bat - Shortcut`` and click **Copy**"
+msgstr ""
+
+#: ../../../users/autostart.rst:71
+msgid ""
+"Click **Start**, click **All Programs**, then click **Startup**. Right-click "
+"on **Startup** then click **Open**. |Setup Screenshot|"
+msgstr ""
+
+#: ../../../users/autostart.rst:317
+msgid "Setup Screenshot"
+msgstr ""
+
+#: ../../../users/autostart.rst:74
+msgid ""
+"Paste the shortcut (right-click in the folder and choose **Paste**, or press "
+"``CTRL+V``)"
+msgstr ""
+
+#: ../../../users/autostart.rst:77
+msgid ""
+"Syncthing will now automatically start the next time you open a new Windows "
+"session. No console or browser window will pop-up. Access the interface by "
+"browsing to http://localhost:8384/"
+msgstr ""
+
+#: ../../../users/autostart.rst:81
+msgid ""
+"If you prefer slower indexing but a more responsive system during scans, "
+"copy the following command instead of the command in step 5::"
+msgstr ""
+
+#: ../../../users/autostart.rst:84
+msgid "start \"Syncthing\" /low syncthing.exe -no-console -no-browser"
+msgstr ""
+
+#: ../../../users/autostart.rst:87
+msgid "Run as a service independent of user login"
+msgstr ""
+
+#: ../../../users/autostart.rst:90
+msgid ""
+"There are important security considerations with this approach. If you do "
+"not secure Syncthing's GUI (and REST API), then **any** process running with "
+"**any** permissions can read/write **any** file on your filesystem, by "
+"opening a connection with Syncthing."
+msgstr ""
+
+#: ../../../users/autostart.rst:95
+msgid ""
+"Therefore, you **must** ensure that you set a GUI password, or run Syncthing "
+"as an unprivileged user."
+msgstr ""
+
+#: ../../../users/autostart.rst:98
+msgid ""
+"With the above configuration, Syncthing only starts when a user logs on to "
+"the machine. This is not optimal on servers where a machine can run long "
+"times after a reboot without anyone logged in. In this case it is best to "
+"create a service that runs as soon as Windows starts. This can be achieved "
+"using NSSM, the \"Non-Sucking Service Manager\"."
+msgstr ""
+
+#: ../../../users/autostart.rst:103
+msgid ""
+"Note that starting Syncthing on login is the preferred approach for almost "
+"any end-user scenario. The only scenario where running Syncthing as a "
+"service makes sense is for (mostly) headless servers, administered by a "
+"sysadmin who knows enough to understand the security implications."
+msgstr ""
+
+#: ../../../users/autostart.rst:108
+msgid ""
+"Download and extract `nssm <http://nssm.cc/download>`__ to a folder where it "
+"can stay. The NSSM executable performs administration as well as executing "
+"as the Windows service so it will need to be kept in a suitable location."
+msgstr ""
+
+#: ../../../users/autostart.rst:109
+msgid ""
+"From an administrator Command Prompt, CD to the NSSM folder and run ``nssm."
+"exe install syncthing``"
+msgstr ""
+
+#: ../../../users/autostart.rst:110
+msgid "Application Tab"
+msgstr ""
+
+#: ../../../users/autostart.rst:112
+msgid ""
+"Set *Path* to your ``syncthing.exe`` and enter ``-no-restart -no-browser -"
+"home=\"<path to your Syncthing folder>\"`` as Arguments. Note: Logging is "
+"set later on. ``-logfile`` here will not be applied."
+msgstr ""
+
+#: ../../../users/autostart.rst:113
+msgid "|Windows NSSM Configuration Screenshot|"
+msgstr ""
+
+#: ../../../users/autostart.rst:316
+msgid "Windows NSSM Configuration Screenshot"
+msgstr "Windows NSSM 組態螢幕擷圖"
+
+#: ../../../users/autostart.rst:114
+msgid "Details Tab"
+msgstr ""
+
+#: ../../../users/autostart.rst:116
+msgid ""
+"Optional: Set *Startup type* to *Automatic (Delayed Start)* to delay the "
+"start of Syncthing when the system first boots, to improve boot speed."
+msgstr ""
+
+#: ../../../users/autostart.rst:117
+msgid "Log On Tab"
+msgstr ""
+
+#: ../../../users/autostart.rst:119
+msgid ""
+"Enter the user account to run Syncthing as. This user needs to have access "
+"to all the synced folders. You can leave this as *Local System* but doing so "
+"poses security risks. Setting this to your Windows user account will reduce "
+"this; ideally create a dedicated user account with minimal permissions."
+msgstr ""
+
+#: ../../../users/autostart.rst:120
+msgid "Process Tab"
+msgstr ""
+
+#: ../../../users/autostart.rst:122
+msgid ""
+"Optional: Change priority to *Low* if you want a more responsive system at "
+"the cost of somewhat longer sync time when the system is busy."
+msgstr ""
+
+#: ../../../users/autostart.rst:123
+msgid "Optional: To enable logging enable \"Console window\"."
+msgstr ""
+
+#: ../../../users/autostart.rst:124
+msgid "Shutdown Tab"
+msgstr ""
+
+#: ../../../users/autostart.rst:126
+msgid ""
+"To ensure Syncthing is shut down gracefully select all of the checkboxes and "
+"set all *Timeouts* to *10000ms*."
+msgstr ""
+
+#: ../../../users/autostart.rst:127
+msgid "Exit Actions Tab"
+msgstr ""
+
+#: ../../../users/autostart.rst:129
+msgid ""
+"Set *Restart Action* to *Stop service (oneshot mode)*. Specific settings are "
+"used later for handling Syncthing exits, restarts and upgrades."
+msgstr ""
+
+#: ../../../users/autostart.rst:130
+msgid "I/O Tab"
+msgstr ""
+
+#: ../../../users/autostart.rst:132
+msgid ""
+"Optional: To enable logging set *Output (stdout)* to the file desired for "
+"logging. The *Error* field will be automatically set to the same file."
+msgstr ""
+
+#: ../../../users/autostart.rst:133
+msgid "File Rotation Tab"
+msgstr ""
+
+#: ../../../users/autostart.rst:135
+msgid "Optional: Set the rotation settings to your preferences."
+msgstr ""
+
+#: ../../../users/autostart.rst:136
+msgid "Click the *Install Service* Button"
+msgstr ""
+
+#: ../../../users/autostart.rst:137
+msgid ""
+"To ensure that Syncthing exits, restarts and upgrades are handled correctly "
+"by the Windows service manager, some final settings are needed. Execute "
+"these in the same Commant Prompt:"
+msgstr ""
+
+#: ../../../users/autostart.rst:139
+msgid "``nssm set syncthing AppExit Default Exit``"
+msgstr ""
+
+#: ../../../users/autostart.rst:140
+msgid "``nssm set syncthing AppExit 0 Exit``"
+msgstr ""
+
+#: ../../../users/autostart.rst:141
+msgid "``nssm set syncthing AppExit 3 Restart``"
+msgstr ""
+
+#: ../../../users/autostart.rst:142
+msgid "``nssm set syncthing AppExit 4 Restart``"
+msgstr ""
+
+#: ../../../users/autostart.rst:143
+msgid "Start the service via ``sc start syncthing`` in the Command Prompt."
+msgstr ""
+
+#: ../../../users/autostart.rst:144
+msgid ""
+"Connect to the Syncthing UI, enable HTTPS, and set a secure username and "
+"password."
+msgstr ""
+
+#: ../../../users/autostart.rst:147
+msgid "Mac OS X"
+msgstr ""
+
+#: ../../../users/autostart.rst:150
+msgid "Using `homebrew <http://brew.sh>`__"
+msgstr ""
+
+#: ../../../users/autostart.rst:152
+msgid "``brew install syncthing``"
+msgstr ""
+
+#: ../../../users/autostart.rst:153
+msgid ""
+"Follow the information presented by ``brew`` to autostart Syncthing using "
+"launchctl."
+msgstr ""
+
+#: ../../../users/autostart.rst:156
+msgid "Without homebrew"
+msgstr ""
+
+#: ../../../users/autostart.rst:158
+msgid ""
+"Download and extract Syncthing for Mac: https://github.com/syncthing/"
+"syncthing/releases/latest."
+msgstr ""
+
+#: ../../../users/autostart.rst:161
+msgid ""
+"Copy the syncthing binary (the file you would open to launch Syncthing) into "
+"a directory called ``bin`` in your home directory i.e. into /home/<username>/"
+"bin. If \"bin\" does not exist, create it."
+msgstr ""
+
+#: ../../../users/autostart.rst:164
+msgid ""
+"Open ``syncthing.plist`` located in /etc/macosx-launchd. Replace the four "
+"occurrences of /Users/USERNAME with your actual home directory location."
+msgstr ""
+
+#: ../../../users/autostart.rst:165
+msgid ""
+"Copy the ``syncthing.plist`` file to ``~/Library/LaunchAgents``. If you have "
+"trouble finding this location select the \"Go\" menu in Finder and choose "
+"\"Go to folder...\" and then type ``~/Library/LaunchAgents``. Copying to ~/"
+"Library/LaunchAgents will require admin password in most cases."
+msgstr ""
+
+#: ../../../users/autostart.rst:170
+msgid ""
+"Log out and back in again. Or, if you do not want to log out, you can run "
+"this command in terminal: ``launchctl load ~/Library/LaunchAgents/syncthing."
+"plist``"
+msgstr ""
+
+#: ../../../users/autostart.rst:174
+msgid ""
+"**Note:** You probably want to turn off \"Start Browser\" in the web GUI "
+"settings to avoid it opening a browser window on each login. Then, to access "
+"the GUI type 127.0.0.1:8384 (by default) into Safari."
+msgstr ""
+
+#: ../../../users/autostart.rst:179
+msgid "Linux"
+msgstr ""
+
+#: ../../../users/autostart.rst:182
+msgid "On Ubuntu-like systems"
+msgstr ""
+
+#: ../../../users/autostart.rst:184
+msgid "Launch the program 'Startup Applications'."
+msgstr ""
+
+#: ../../../users/autostart.rst:185
+msgid "Click 'Add'."
+msgstr ""
+
+#: ../../../users/autostart.rst:186
+msgid "Fill out the form:"
+msgstr ""
+
+#: ../../../users/autostart.rst:188
+msgid "Name: Syncthing"
+msgstr ""
+
+#: ../../../users/autostart.rst:189
+msgid ""
+"Command: ``/path/to/syncthing/binary -no-browser -home=\"/home/your\\_user/."
+"config/syncthing\"``"
+msgstr ""
+
+#: ../../../users/autostart.rst:192
+msgid "Using Supervisord"
+msgstr ""
+
+#: ../../../users/autostart.rst:194
+msgid "Add the following to your ``/etc/supervisord.conf`` file::"
+msgstr ""
+
+#: ../../../users/autostart.rst:196
+msgid ""
+"[program:syncthing]\n"
+"command = /path/to/syncthing/binary -no-browser -home=\"/home/some_user/."
+"config/syncthing\"\n"
+"directory = /home/some_user/\n"
+"autorestart = True\n"
+"user = some_user\n"
+"environment = STNORESTART=\"1\", HOME=\"/home/some_user\""
+msgstr ""
+
+#: ../../../users/autostart.rst:204
+msgid "Using systemd"
+msgstr ""
+
+#: ../../../users/autostart.rst:206
+msgid ""
+"systemd is a suite of system management daemons, libraries, and utilities "
+"designed as a central management and configuration platform for the Linux "
+"computer operating system. It also offers users the ability to manage "
+"services under the user's control with a per-user systemd instance, enabling "
+"users to start, stop, enable, and disable their own units. Service files for "
+"systemd are provided by Syncthing and can be found in `etc/linux-systemd "
+"<https://github.com/syncthing/syncthing/tree/master/etc/linux-systemd>`_."
+msgstr ""
+
+#: ../../../users/autostart.rst:215
+msgid ""
+"You have two primary options: You can set up Syncthing as a system service, "
+"or a user service."
+msgstr ""
+
+#: ../../../users/autostart.rst:218
+msgid ""
+"Running Syncthing as a system service ensures that Syncthing is run at "
+"startup even if the Syncthing user has no active session. Since the system "
+"service keeps Syncthing running even without an active user session, it is "
+"intended to be used on a *server*."
+msgstr ""
+
+#: ../../../users/autostart.rst:223
+msgid ""
+"Running Syncthing as a user service ensures that Syncthing only starts after "
+"the user has logged into the system (e.g., via the graphical login screen, "
+"or ssh). Thus, the user service is intended to be used on a *(multiuser) "
+"desktop computer*. It avoids unnecessarily running Syncthing instances."
+msgstr ""
+
+#: ../../../users/autostart.rst:228
+msgid ""
+"Several distros (including arch linux) ship the needed service files with "
+"the Syncthing package. If your distro provides a systemd service file for "
+"Syncthing, you can skip step 2 when you setting up either the system service "
+"or the user service, as described below."
+msgstr ""
+
+#: ../../../users/autostart.rst:234
+msgid "How to set up a system service"
+msgstr ""
+
+#: ../../../users/autostart.rst:236
+msgid "Create the user who should run the service, or choose an existing one."
+msgstr ""
+
+#: ../../../users/autostart.rst:237
+msgid ""
+"Copy the ``Syncthing/etc/system/syncthing@.service`` file into the `load "
+"path of the system instance <http://www.freedesktop.org/software/systemd/man/"
+"systemd.unit.html#Unit%20Load%20Path>`__."
+msgstr ""
+
+#: ../../../users/autostart.rst:240
+msgid ""
+"Enable and start the service. Replace \"myuser\" with the actual Syncthing "
+"user after the ``@``::"
+msgstr ""
+
+#: ../../../users/autostart.rst:243
+msgid ""
+"systemctl enable syncthing@myuser.service\n"
+"systemctl start syncthing@myuser.service"
+msgstr ""
+
+#: ../../../users/autostart.rst:247
+msgid "How to set up a user service"
+msgstr ""
+
+#: ../../../users/autostart.rst:249
+msgid ""
+"Create the user who should run the service, or choose an existing one. "
+"*Probably this will be your own user account.*"
+msgstr ""
+
+#: ../../../users/autostart.rst:251
+msgid ""
+"Copy the ``Syncthing/etc/user/syncthing.service`` file into the `load path "
+"of the user instance <http://www.freedesktop.org/software/systemd/man/"
+"systemd.unit.html#Unit%20Load%20Path>`__. To do this without root privileges "
+"you can just use this folder under your home directory: ``~/.config/systemd/"
+"user/``."
+msgstr ""
+
+#: ../../../users/autostart.rst:256
+msgid "Enable and start the service::"
+msgstr ""
+
+#: ../../../users/autostart.rst:258
+msgid ""
+"systemctl --user enable syncthing.service\n"
+"systemctl --user start syncthing.service"
+msgstr ""
+
+#: ../../../users/autostart.rst:262
+msgid "Checking the service status"
+msgstr ""
+
+#: ../../../users/autostart.rst:264
+msgid ""
+"To check if Syncthing runs properly you can use the ``status`` subcommand. "
+"To check the status of a system service::"
+msgstr ""
+
+#: ../../../users/autostart.rst:267
+msgid "systemctl status syncthing@myuser.service"
+msgstr ""
+
+#: ../../../users/autostart.rst:269
+msgid "To check the status of a user service::"
+msgstr ""
+
+#: ../../../users/autostart.rst:271
+msgid "systemctl --user status syncthing.service"
+msgstr ""
+
+#: ../../../users/autostart.rst:274
+msgid "Using the journal"
+msgstr ""
+
+#: ../../../users/autostart.rst:276
+msgid ""
+"Systemd logs everything into the journal, so you can easily access Syncthing "
+"log messages. In both of the following examples, ``-e`` tells the pager to "
+"jump to the very end, so that you see the most recent logs."
+msgstr ""
+
+#: ../../../users/autostart.rst:280
+msgid "To see the logs for the system service::"
+msgstr ""
+
+#: ../../../users/autostart.rst:282
+msgid "journalctl -e -u syncthing@myuser.service"
+msgstr ""
+
+#: ../../../users/autostart.rst:284
+msgid "To see the logs for the user service::"
+msgstr ""
+
+#: ../../../users/autostart.rst:286
+msgid "journalctl -e --user-unit=syncthing.service"
+msgstr ""
+
+#: ../../../users/autostart.rst:289
+msgid "Permissions"
+msgstr ""
+
+#: ../../../users/autostart.rst:291
+msgid ""
+"If you enabled the ``Ignore Permissions`` option in the Syncthing client's "
+"folder settings, then you will also need to add the line ``UMask=0002`` (or "
+"any other `umask setting <http://www.tech-faq.com/umask.html>` you like) in "
+"the ``[Service]`` section of the ``syncthing@.service`` file."
+msgstr ""
+
+#: ../../../users/autostart.rst:297
+msgid "Debugging"
+msgstr ""
+
+#: ../../../users/autostart.rst:299
+msgid ""
+"If you are asked on the bugtracker to start Syncthing with specific "
+"environment variables it will not work the normal way. Systemd isolates each "
+"service and it cannot access global environment variables. The solution is "
+"to add the variables to the service file instead."
+msgstr ""
+
+#: ../../../users/autostart.rst:304
+msgid "To edit the system service, run::"
+msgstr ""
+
+#: ../../../users/autostart.rst:306
+msgid "systemctl edit syncthing@myuser.service"
+msgstr ""
+
+#: ../../../users/autostart.rst:308
+msgid "To edit the user service, run::"
+msgstr ""
+
+#: ../../../users/autostart.rst:310
+msgid "systemctl --user edit syncthing.service"
+msgstr ""
+
+#: ../../../users/autostart.rst:312
+msgid ""
+"This will create an additional configuration file automatically and you can "
+"define (or overwrite) further service parameters like e.g. "
+"``Environment=STTRACE=model``."
+msgstr ""

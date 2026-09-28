@@ -1,0 +1,42 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing 0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../rest/stats-folder-get.rst:2
+msgid "GET /rest/stats/folder"
+msgstr "GET /rest/stats/folder"
+
+#: ../../../rest/stats-folder-get.rst:4
+msgid ""
+"Returns general statistics about folders. Currently contains the last scan "
+"time and the last synced file."
+msgstr ""
+
+#: ../../../rest/stats-folder-get.rst:7
+msgid ""
+"$ curl -s http://localhost:8384/rest/stats/folder | json\n"
+"{\n"
+"  \"folderid\" : {\n"
+"    \"lastScan\": \"2016-06-02T13:28:01.288181412-04:00\",\n"
+"    \"lastFile\" : {\n"
+"      \"filename\" : \"file/name\",\n"
+"        \"at\" : \"2015-04-16T22:04:18.3066971+01:00\"\n"
+"      }\n"
+"  }\n"
+"}"
+msgstr ""
