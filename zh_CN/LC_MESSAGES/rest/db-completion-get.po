@@ -1,0 +1,120 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2026, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-06 09:56+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../rest/db-completion-get.rst:2
+msgid "GET /rest/db/completion"
+msgstr ""
+
+#: ../../../rest/db-completion-get.rst:4
+msgid ""
+"Returns the completion percentage (0 to 100) and byte / item counts. Takes "
+"optional ``device`` and ``folder`` parameters:"
+msgstr ""
+
+#: ../../../rest/db-completion-get.rst:7
+msgid ""
+"``folder`` specifies the folder ID to calculate completion for. An empty or "
+"absent ``folder`` parameter means all folders as an aggregate."
+msgstr ""
+
+#: ../../../rest/db-completion-get.rst:10
+msgid ""
+"``device`` specifies the device ID to calculate completion for. An empty or "
+"absent ``device`` parameter means the local device."
+msgstr ""
+
+#: ../../../rest/db-completion-get.rst:13
+msgid ""
+"If a device is specified but no folder, completion is calculated for all "
+"folders shared with that device."
+msgstr ""
+
+#: ../../../rest/db-completion-get.rst:17
+msgid "Example Queries"
+msgstr ""
+
+#: ../../../rest/db-completion-get.rst:19
+msgid ""
+"Completion status for folder ``abcd-1234`` on device "
+"``I6KAH76-...-3PSROAU``::"
+msgstr ""
+
+#: ../../../rest/db-completion-get.rst:21
+msgid "/rest/db/completion?folder=abcd-1234&device=I6KAH76-...-3PSROAU"
+msgstr ""
+
+#: ../../../rest/db-completion-get.rst:23
+msgid ""
+"Aggregated completion status for device ``I6KAH76-...-3PSROAU`` (all folders "
+"shared with them)::"
+msgstr ""
+
+#: ../../../rest/db-completion-get.rst:25
+msgid "/rest/db/completion?device=I6KAH76-...-3PSROAU"
+msgstr ""
+
+#: ../../../rest/db-completion-get.rst:27
+msgid "Completion status for folder ``abcd-1234`` on the local device::"
+msgstr ""
+
+#: ../../../rest/db-completion-get.rst:29
+msgid "/rest/db/completion?folder=abcd-1234"
+msgstr ""
+
+#: ../../../rest/db-completion-get.rst:31
+msgid "Aggregated completion status for all folders on the local device::"
+msgstr ""
+
+#: ../../../rest/db-completion-get.rst:33
+msgid "/rest/db/completion"
+msgstr ""
+
+#: ../../../rest/db-completion-get.rst:36
+msgid "Example Response"
+msgstr ""
+
+#: ../../../rest/db-completion-get.rst:38
+msgid ""
+"{\n"
+"  \"completion\": 99.9937565835,\n"
+"  \"globalBytes\": 156793013575,\n"
+"  \"needBytes\": 9789241,\n"
+"  \"globalItems\": 7823,\n"
+"  \"needItems\": 412,\n"
+"  \"needDeletes\": 0,\n"
+"  \"remoteState\": \"valid\",\n"
+"  \"sequence\": 12\n"
+"}"
+msgstr ""
+
+#: ../../../rest/db-completion-get.rst:53
+msgid ""
+"The ability to aggregate multiple folders by leaving out the folder ID. "
+"Querying data for the local device by leaving out the device ID. Returning "
+"the ``globalItems`` counter in the response."
+msgstr ""
+
+#: ../../../rest/db-completion-get.rst:59
+msgid ""
+"Indication whether the remote device has accepted the folder (shares it with "
+"us) as well, and whether it is paused.  The ``remoteState`` field is "
+"meaningless for aggregated responses, ``unknown`` when the remote device is "
+"not connected.  Otherwise it can be either ``paused``, ``notSharing``, or "
+"``valid`` if the remote is sharing back."
+msgstr ""
