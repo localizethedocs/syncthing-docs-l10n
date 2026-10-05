@@ -1,0 +1,60 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2026, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing stable\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-21 06:27+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../events/remotechangedetected.rst:2
+msgid "RemoteChangeDetected"
+msgstr ""
+
+#: ../../../events/remotechangedetected.rst:4
+msgid ""
+"Generated upon scan whenever a file is locally updated due to a remote "
+"change. Files that are updated locally produce a :doc:`localchangedetected` "
+"event."
+msgstr ""
+
+#: ../../../events/remotechangedetected.rst:7
+msgid ""
+"This event is not included in :doc:`/rest/events-get` endpoint without a "
+"mask specified, but needs to be selected explicitly."
+msgstr ""
+
+#: ../../../events/remotechangedetected.rst:10
+msgid ""
+"{\n"
+"   \"time\" : \"2017-03-06T23:58:21.844739891+01:00\",\n"
+"   \"globalID\" : 123,\n"
+"   \"data\" : {\n"
+"      \"type\" : \"file\",\n"
+"      \"action\" : \"deleted\",\n"
+"      \"folder\": \"Dokumente\",\n"
+"      \"folderID\" : \"Dokumente\",\n"
+"      \"path\" : \"testfile\",\n"
+"      \"label\" : \"Dokumente\",\n"
+"      \"modifiedBy\" : \"BPDFDTU\"\n"
+"   },\n"
+"   \"type\" : \"RemoteChangeDetected\",\n"
+"   \"id\" : 2\n"
+"}"
+msgstr ""
+
+#: ../../../events/remotechangedetected.rst:28
+msgid ""
+"The ``folderID`` field is a legacy name kept only for compatibility.  Use "
+"the ``folder`` field with identical content instead."
+msgstr ""
