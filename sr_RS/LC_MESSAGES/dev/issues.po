@@ -1,0 +1,239 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2026, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-21 06:27+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: sr_RS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../dev/issues.rst:2
+msgid "Issue Management"
+msgstr ""
+
+#: ../../../dev/issues.rst:4
+msgid ""
+"Bugs, feature requests and other things we need to do are tracked as GitHub "
+"issues. Issues can be of various types and in various states, and also "
+"belong to milestones or not. This page is an attempt to document the current "
+"practice."
+msgstr ""
+
+#: ../../../dev/issues.rst:10
+msgid "Labels"
+msgstr ""
+
+#: ../../../dev/issues.rst:12
+msgid ""
+"Issues without labels are undecided - that is, we don't yet know if it's a "
+"bug, a configuration issue, a feature request or what. Issues that are "
+"invalid for whatever reason are closed with a short explanation of why. "
+"Examples include \"Duplicate of #123\", \"Discovered to be configuration "
+"error\", \"Rendered moot by #123\" and so on. We don't use the \"invalid\" "
+"or \"wontfix\" labels."
+msgstr ""
+
+#: ../../../dev/issues.rst:19
+msgid "api"
+msgstr ""
+
+#: ../../../dev/issues.rst:20
+msgid ""
+"Issues or pull requests that change public APIs (config, REST). Used to "
+"highlight these specifically in the release notes, and ensure we don't miss "
+"to bump the minor version."
+msgstr ""
+
+#: ../../../dev/issues.rst:24
+msgid "bug"
+msgstr ""
+
+#: ../../../dev/issues.rst:25
+msgid ""
+"A problem with current functionality, as opposed to missing functionality "
+"(enhancement)."
+msgstr ""
+
+#: ../../../dev/issues.rst:28
+msgid "build"
+msgstr ""
+
+#: ../../../dev/issues.rst:29
+msgid ""
+"Issues caused by or requiring changes to the build system (scripts or Docker "
+"image)."
+msgstr ""
+
+#: ../../../dev/issues.rst:32
+msgid "dependencies"
+msgstr ""
+
+#: ../../../dev/issues.rst:33
+msgid "Pull requests that update a dependency file."
+msgstr ""
+
+#: ../../../dev/issues.rst:35
+msgid "documentation"
+msgstr ""
+
+#: ../../../dev/issues.rst:36
+msgid "Issues related to the documentation."
+msgstr ""
+
+#: ../../../dev/issues.rst:38
+msgid "enhancement"
+msgstr ""
+
+#: ../../../dev/issues.rst:39
+msgid ""
+"New features or improvements of some kind, as opposed to a problem (bug)."
+msgstr ""
+
+#: ../../../dev/issues.rst:42
+msgid "frozen-due-to-age"
+msgstr ""
+
+#: ../../../dev/issues.rst:43
+msgid ""
+"Set automatically on issues when they have been closed untouched for a long "
+"time, together with being locked for discussion."
+msgstr ""
+
+#: ../../../dev/issues.rst:46
+msgid "good first issue"
+msgstr ""
+
+#: ../../../dev/issues.rst:47
+msgid ""
+"Good starting points for new contributors, contained in scope and size, and "
+"clear about what is the desired outcome."
+msgstr ""
+
+#: ../../../dev/issues.rst:50
+msgid "needs-triage"
+msgstr ""
+
+#: ../../../dev/issues.rst:51
+msgid "New issues needed to be validated."
+msgstr ""
+
+#: ../../../dev/issues.rst:53
+msgid "not-our-bug"
+msgstr ""
+
+#: ../../../dev/issues.rst:54
+msgid ""
+"Rare and temporary label used only when we want to keep an issue open for "
+"visibility, but the real problem is somewhere else."
+msgstr ""
+
+#: ../../../dev/issues.rst:57
+msgid "pr-merged"
+msgstr ""
+
+#: ../../../dev/issues.rst:58
+msgid ""
+"Legacy label used in the past for pull requests merged to the main tree."
+msgstr ""
+
+#: ../../../dev/issues.rst:61
+msgid "protocol"
+msgstr ""
+
+#: ../../../dev/issues.rst:62
+msgid "Issues that require a change to the protocol."
+msgstr ""
+
+#: ../../../dev/issues.rst:64
+msgid "skip-changelog"
+msgstr ""
+
+#: ../../../dev/issues.rst:65
+msgid ""
+"Set on bugs that have never been in a released stable version, i.e. a bug "
+"introduced in v1.8.0-rc.1 and fixed in v1.8.0-rc.2, and as such excluded "
+"from the release notes for v1.8.0."
+msgstr ""
+
+#: ../../../dev/issues.rst:69
+msgid "ui"
+msgstr ""
+
+#: ../../../dev/issues.rst:70
+msgid "Issues related to the graphical user interface."
+msgstr ""
+
+#: ../../../dev/issues.rst:72
+msgid "waiting-for-info"
+msgstr ""
+
+#: ../../../dev/issues.rst:73
+msgid ""
+"Issues that require more information from the author on how to reproduce."
+msgstr ""
+
+#: ../../../dev/issues.rst:77
+msgid "Milestones"
+msgstr ""
+
+#: ../../../dev/issues.rst:79
+msgid ""
+"Each released version gets a milestone. Issues that are resolved and will be "
+"released as that version get added to the milestone. The release notes are "
+"based on the issues present in the milestone."
+msgstr ""
+
+#: ../../../dev/issues.rst:84
+msgid "Assignee"
+msgstr ""
+
+#: ../../../dev/issues.rst:86
+msgid ""
+"Users can be assigned to issues. We don't usually do so. Sometimes someone "
+"assigns themself to an issue to indicate \"I'm working on this\" to avoid "
+"others doing so too. It's not mandatory."
+msgstr ""
+
+#: ../../../dev/issues.rst:91
+msgid "Locking"
+msgstr ""
+
+#: ../../../dev/issues.rst:93
+msgid ""
+"We don't normally lock issues (prevent further discussion on them). There "
+"are some exceptions though;"
+msgstr ""
+
+#: ../../../dev/issues.rst:96
+msgid ""
+"\"Popular\" issues that attract lots of \"me too\" and \"+1\" comments. "
+"These are noise and annoy people with useless notifications via mail and in "
+"the GitHub interface. Once the issue is clear and it suffers from this "
+"symptom I may lock it."
+msgstr ""
+
+#: ../../../dev/issues.rst:101
+msgid ""
+"Contentious bikeshedding discussions. After two sides in a discussion have "
+"clarified their points, there is no point arguing endlessly about it. As "
+"above, this may get closed."
+msgstr ""
+
+#: ../../../dev/issues.rst:105
+msgid ""
+"Duplicates. Once an issue has been identified as a duplicate of another "
+"issue, it may be locked to prevent further discussion there. The intention "
+"is to move the discussion to the other (referenced) issue, while someone "
+"just doing a search and jumping on the first match might otherwise resurrect "
+"discussion in the duplicate."
+msgstr ""
