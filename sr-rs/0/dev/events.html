@@ -1,0 +1,269 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="sr-RS" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event API &mdash; документација Syncthing v0.13</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/syncthing.css?v=21f33da5" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://projects.localizethedocs.org/syncthing-docs-l10n/dev/events.html" />
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=563f8401"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/translations.js?v=96356656"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Индекс" href="../genindex.html" />
+    <link rel="search" title="Претрага" href="../search.html" />
+    <link rel="next" title="ConfigSaved" href="../events/configsaved.html" />
+    <link rel="prev" title="Understanding Device IDs" href="device-ids.html" />
+ 
+<script type="text/javascript" src="../ltd-provenance.js"></script>
+<script type="text/javascript" src="../ltd-current.js"></script>
+<script type="text/javascript" src="../../../ltd-config.js"></script>
+<script type="text/javascript" src="../../../ltd-flyout.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Syncthing
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro/getting-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/gui.html">An intro to the GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/project-presentation.html">Project Presentation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">For Users</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../users/syncthing.html">Command Line Operation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/config.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/advanced.html">Advanced Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/foldermaster.html">Folder Master Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/syncing.html">Understanding Synchronization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/firewall.html">Firewall Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/relaying.html">Relaying</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/proxying.html">Using Proxies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/ignoring.html">Ignoring Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/versioning.html">File Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/discosrv.html">Custom Discovery Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/relaysrv.html">Custom Relay Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/custom-upgrades.html">Custom Upgrade Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/autostart.html">Starting Syncthing Automatically</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/contrib.html">Community Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/reverseproxy.html">Reverse Proxy Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/security.html">Security Principles</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">For Developers</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="building.html">Building Syncthing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contribution Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debugging.html">Debugging Syncthing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="device-ids.html">Understanding Device IDs</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Event API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#event-structure">Event Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#events">Events</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../events/configsaved.html">ConfigSaved</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../events/deviceconnected.html">DeviceConnected</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../events/devicedisconnected.html">DeviceDisconnected</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../events/devicediscovered.html">DeviceDiscovered</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../events/devicepaused.html">DevicePaused</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../events/devicerejected.html">DeviceRejected</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../events/deviceresumed.html">DeviceResumed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../events/downloadprogress.html">DownloadProgress</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../events/foldercompletion.html">FolderCompletion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../events/foldererrors.html">FolderErrors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../events/folderrejected.html">FolderRejected</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../events/foldersummary.html">FolderSummary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../events/itemfinished.html">ItemFinished</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../events/itemstarted.html">ItemStarted</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../events/localindexupdated.html">LocalIndexUpdated</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../events/ping.html">Ping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../events/remoteindexupdated.html">RemoteIndexUpdated</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../events/starting.html">Starting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../events/startupcomplete.html">StartupComplete</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../events/statechanged.html">StateChanged</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="infrastructure.html">Syncthing Infrastructure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="issues.html">Issue Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jenkins.html">Interacting with Jenkins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mergebot.html">Interacting with the Merge Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="release-creation.html">Creating a Release</a></li>
+<li class="toctree-l1"><a class="reference internal" href="release-schedule.html">Release Schedule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="release-signing.html">Release Signing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rest.html">REST API</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Specifications</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../specs/index.html">Specifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../specs/bep-v1.html">Block Exchange Protocol v1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../specs/globaldisco-v3.html">Global Discovery v3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../specs/localdisco-v3.html">Local Discovery Protocol v3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../specs/relay-v1.html">Relay Protocol v1</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Syncthing</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Event API</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/syncthing/docs/blob/master/dev/events.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="event-api">
+<span id="id1"></span><h1>Event API<a class="headerlink" href="#event-api" title="Link to this heading"></a></h1>
+<section id="description">
+<h2>Description<a class="headerlink" href="#description" title="Link to this heading"></a></h2>
+<p>Syncthing provides a simple long polling interface for exposing events from the
+core utility towards a GUI.</p>
+<p>To receive events, perform a HTTP GET of <code class="docutils literal notranslate"><span class="pre">/rest/events?since=&lt;lastSeenID&gt;</span></code>,
+where <code class="docutils literal notranslate"><span class="pre">&lt;lastSeenID&gt;</span></code> is the ID of the last event you’ve already seen or zero.
+Syncthing returns a JSON encoded array of event objects, starting at the event
+just after the one with the last seen ID. There is a limit to the number of
+events buffered, so if the rate of events is high or the time between polling
+calls is long some events might be missed. This can be detected by noting a
+discontinuity in the event IDs.</p>
+<p>If no new events are produced since <code class="docutils literal notranslate"><span class="pre">&lt;lastSeenID&gt;</span></code>, the HTTP call blocks and
+waits for new events to happen before returning, or if no new events are
+produced within 60 seconds, times out.</p>
+<p>To receive only a limited number of events, add the <code class="docutils literal notranslate"><span class="pre">limit=n</span></code> parameter with a
+suitable value for <code class="docutils literal notranslate"><span class="pre">n</span></code> and only the <em>last</em> <code class="docutils literal notranslate"><span class="pre">n</span></code> events will be returned. This
+can be used to catch up with the latest event ID after a disconnection for
+example: <code class="docutils literal notranslate"><span class="pre">/rest/events?since=0&amp;limit=1</span></code>.</p>
+</section>
+<section id="event-structure">
+<h2>Event Structure<a class="headerlink" href="#event-structure" title="Link to this heading"></a></h2>
+<p>Each event is represented by an object similar to the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;DeviceConnected&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;time&quot;</span><span class="p">:</span> <span class="s2">&quot;2014-07-13T21:04:33.687836696+02:00&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;addr&quot;</span><span class="p">:</span> <span class="s2">&quot;172.16.32.25:22000&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;NFGKEKE-7Z6RTH7-I3PRZXS-DEJF3UJ-FRWJBFO-VBBTDND-4SGNGVZ-QUQHJAG&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The top level keys <code class="docutils literal notranslate"><span class="pre">id</span></code>, <code class="docutils literal notranslate"><span class="pre">time</span></code>, <code class="docutils literal notranslate"><span class="pre">type</span></code> and <code class="docutils literal notranslate"><span class="pre">data</span></code> are always present,
+though <code class="docutils literal notranslate"><span class="pre">data</span></code> may be <code class="docutils literal notranslate"><span class="pre">null</span></code>.</p>
+<dl class="simple">
+<dt>id</dt><dd><p>A monotonically increasing integer. The first event generated has id <code class="docutils literal notranslate"><span class="pre">1</span></code>,
+the next has id <code class="docutils literal notranslate"><span class="pre">2</span></code> etc.</p>
+</dd>
+<dt>time</dt><dd><p>The time the event was generated.</p>
+</dd>
+<dt>type</dt><dd><p>Indicates the type of (i.e. reason for) the event and is one of the event
+types below.</p>
+</dd>
+<dt>data</dt><dd><p>An object containing optional extra information; the exact structure is
+determined by the event type.</p>
+</dd>
+</dl>
+</section>
+<section id="events">
+<h2>Events<a class="headerlink" href="#events" title="Link to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../events/configsaved.html">ConfigSaved</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../events/deviceconnected.html">DeviceConnected</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../events/devicedisconnected.html">DeviceDisconnected</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../events/devicediscovered.html">DeviceDiscovered</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../events/devicepaused.html">DevicePaused</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../events/devicerejected.html">DeviceRejected</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../events/deviceresumed.html">DeviceResumed</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../events/downloadprogress.html">DownloadProgress</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../events/foldercompletion.html">FolderCompletion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../events/foldererrors.html">FolderErrors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../events/folderrejected.html">FolderRejected</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../events/foldersummary.html">FolderSummary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../events/itemfinished.html">ItemFinished</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../events/itemstarted.html">ItemStarted</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../events/localindexupdated.html">LocalIndexUpdated</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../events/ping.html">Ping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../events/remoteindexupdated.html">RemoteIndexUpdated</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../events/starting.html">Starting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../events/startupcomplete.html">StartupComplete</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../events/statechanged.html">StateChanged</a></li>
+</ul>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="device-ids.html" class="btn btn-neutral float-left" title="Understanding Device IDs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../events/configsaved.html" class="btn btn-neutral float-right" title="ConfigSaved" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+      <span class="lastupdated">Last updated on јул 27, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

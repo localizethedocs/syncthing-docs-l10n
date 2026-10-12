@@ -1,0 +1,207 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="sr-RS" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DeviceRejected &mdash; документација Syncthing v0.13</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/syncthing.css?v=21f33da5" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://projects.localizethedocs.org/syncthing-docs-l10n/events/devicerejected.html" />
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=563f8401"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/translations.js?v=96356656"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Индекс" href="../genindex.html" />
+    <link rel="search" title="Претрага" href="../search.html" />
+    <link rel="next" title="DeviceResumed" href="deviceresumed.html" />
+    <link rel="prev" title="DevicePaused" href="devicepaused.html" />
+ 
+<script type="text/javascript" src="../ltd-provenance.js"></script>
+<script type="text/javascript" src="../ltd-current.js"></script>
+<script type="text/javascript" src="../../../ltd-config.js"></script>
+<script type="text/javascript" src="../../../ltd-flyout.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Syncthing
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro/getting-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/gui.html">An intro to the GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/project-presentation.html">Project Presentation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">For Users</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../users/syncthing.html">Command Line Operation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/config.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/advanced.html">Advanced Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/foldermaster.html">Folder Master Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/syncing.html">Understanding Synchronization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/firewall.html">Firewall Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/relaying.html">Relaying</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/proxying.html">Using Proxies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/ignoring.html">Ignoring Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/versioning.html">File Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/discosrv.html">Custom Discovery Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/relaysrv.html">Custom Relay Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/custom-upgrades.html">Custom Upgrade Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/autostart.html">Starting Syncthing Automatically</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/contrib.html">Community Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/reverseproxy.html">Reverse Proxy Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/security.html">Security Principles</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">For Developers</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../dev/intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/building.html">Building Syncthing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/contributing.html">Contribution Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/debugging.html">Debugging Syncthing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/device-ids.html">Understanding Device IDs</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../dev/events.html">Event API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../dev/events.html#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dev/events.html#event-structure">Event Structure</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../dev/events.html#events">Events</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="configsaved.html">ConfigSaved</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deviceconnected.html">DeviceConnected</a></li>
+<li class="toctree-l3"><a class="reference internal" href="devicedisconnected.html">DeviceDisconnected</a></li>
+<li class="toctree-l3"><a class="reference internal" href="devicediscovered.html">DeviceDiscovered</a></li>
+<li class="toctree-l3"><a class="reference internal" href="devicepaused.html">DevicePaused</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">DeviceRejected</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deviceresumed.html">DeviceResumed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="downloadprogress.html">DownloadProgress</a></li>
+<li class="toctree-l3"><a class="reference internal" href="foldercompletion.html">FolderCompletion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="foldererrors.html">FolderErrors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="folderrejected.html">FolderRejected</a></li>
+<li class="toctree-l3"><a class="reference internal" href="foldersummary.html">FolderSummary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="itemfinished.html">ItemFinished</a></li>
+<li class="toctree-l3"><a class="reference internal" href="itemstarted.html">ItemStarted</a></li>
+<li class="toctree-l3"><a class="reference internal" href="localindexupdated.html">LocalIndexUpdated</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ping.html">Ping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="remoteindexupdated.html">RemoteIndexUpdated</a></li>
+<li class="toctree-l3"><a class="reference internal" href="starting.html">Starting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="startupcomplete.html">StartupComplete</a></li>
+<li class="toctree-l3"><a class="reference internal" href="statechanged.html">StateChanged</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/infrastructure.html">Syncthing Infrastructure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/issues.html">Issue Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/jenkins.html">Interacting with Jenkins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/mergebot.html">Interacting with the Merge Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/release-creation.html">Creating a Release</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/release-schedule.html">Release Schedule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/release-signing.html">Release Signing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/rest.html">REST API</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Specifications</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../specs/index.html">Specifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../specs/bep-v1.html">Block Exchange Protocol v1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../specs/globaldisco-v3.html">Global Discovery v3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../specs/localdisco-v3.html">Local Discovery Protocol v3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../specs/relay-v1.html">Relay Protocol v1</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Syncthing</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../dev/events.html">Event API</a></li>
+      <li class="breadcrumb-item active">DeviceRejected</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/syncthing/docs/blob/master/events/devicerejected.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="devicerejected">
+<h1>DeviceRejected<a class="headerlink" href="#devicerejected" title="Link to this heading"></a></h1>
+<p>Emitted when there is a connection from a device we are not configured
+to talk to.</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">24</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DeviceRejected&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;time&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2014-08-19T10:43:00.562821045+02:00&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;address&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;127.0.0.1:51807&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;device&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;EJHMPAQ-OGCVORE-ISB4IS3-SYYVJXF-TKJGLTU-66DIQPF-GJ5D2GX-GQ3OWQK&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="devicepaused.html" class="btn btn-neutral float-left" title="DevicePaused" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="deviceresumed.html" class="btn btn-neutral float-right" title="DeviceResumed" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+      <span class="lastupdated">Last updated on јул 27, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
