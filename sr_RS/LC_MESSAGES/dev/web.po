@@ -1,0 +1,67 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2026, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing stable\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-21 06:27+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: sr_RS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../dev/web.rst:2
+msgid "Working on the Web GUI"
+msgstr ""
+
+#: ../../../dev/web.rst:4
+msgid ""
+"Syncthing has a Bootstrap & Javascript based frontend that is built from the "
+"``gui/`` directory in the source distribution. The first level of "
+"directories underneath correspond to the currently selected theme. By "
+"default Syncthing will therefore use the files inside ``gui/default/`` for "
+"the GUI, although the other themes (``dark``, ``black``, ``light``) can be "
+"selected in the settings dialog. When Syncthing is compiled all of these "
+"files are packed into the binary."
+msgstr ""
+
+#: ../../../dev/web.rst:12
+msgid ""
+"When working on the GUI it's not convenient to have to rebuild and restart "
+"the binary to see a change. Instead an environment variable can be set "
+"pointing to the raw files, and Syncthing will use these directly from disk "
+"when serving the GUI. Assuming that you have checked out the source code in "
+"``~/dev/syncthing``, you can run Syncthing like this::"
+msgstr ""
+
+#: ../../../dev/web.rst:18
+msgid ""
+"$ export STGUIASSETS=~/dev/syncthing/gui\n"
+"$ syncthing"
+msgstr ""
+
+#: ../../../dev/web.rst:21
+msgid ""
+"When you visit the Syncthing GUI on http://localhost:8384/ the GUI will be "
+"served directly from the source code assets. You can change these and simply "
+"reload in the browser to see your changes applied."
+msgstr ""
+
+#: ../../../dev/web.rst:25
+msgid ""
+"On Windows, assuming a checkout in ``C:\\dev\\syncthing`` the corresponding "
+"sequence is::"
+msgstr ""
+
+#: ../../../dev/web.rst:28
+msgid ""
+"C:\\> SET STGUIASSETS=C:\\dev\\syncthing\\gui\n"
+"C:\\> syncthing"
+msgstr ""
