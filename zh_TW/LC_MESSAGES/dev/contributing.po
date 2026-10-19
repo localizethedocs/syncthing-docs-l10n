@@ -1,0 +1,298 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing 0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../dev/contributing.rst:4
+msgid "Contribution Guidelines"
+msgstr ""
+
+#: ../../../dev/contributing.rst:7
+msgid "Authorship"
+msgstr ""
+
+#: ../../../dev/contributing.rst:9
+msgid ""
+"All code authors are listed in the AUTHORS file. When your first pull "
+"request is accepted, the maintainer will add your details to the AUTHORS "
+"file, the NICKS file and the list of authors in the GUI. Commits must be "
+"made with the same name and email as listed in the AUTHORS file. To "
+"accomplish this, ensure that your git configuration is set correctly prior "
+"to making your first commit::"
+msgstr ""
+
+#: ../../../dev/contributing.rst:16
+msgid ""
+"$ git config --global user.name \"Jane Doe\"\n"
+"$ git config --global user.email janedoe@example.com"
+msgstr ""
+
+#: ../../../dev/contributing.rst:19
+msgid ""
+"You must be reachable on the given email address. If you do not wish to use "
+"your real name for whatever reason, using a nickname or pseudonym is "
+"perfectly acceptable."
+msgstr ""
+
+#: ../../../dev/contributing.rst:24
+msgid "Team Membership"
+msgstr ""
+
+#: ../../../dev/contributing.rst:26
+msgid ""
+"Contributing useful commits via pull requests will at some point get you "
+"invited to the Syncthing core team. This team gives you push access to most "
+"repositories, subject to the guidelines below."
+msgstr ""
+
+#: ../../../dev/contributing.rst:30
+msgid ""
+"The Syncthing maintainers team has the same access permissions, the added "
+"responsibility of reviewing major changes, and the ability to invite members "
+"into the core team."
+msgstr ""
+
+#: ../../../dev/contributing.rst:35
+msgid "Code Review"
+msgstr ""
+
+#: ../../../dev/contributing.rst:37
+msgid ""
+"Commits will generally fall into one of the three categories below, with "
+"different requirements on review."
+msgstr ""
+
+#: ../../../dev/contributing.rst:40
+msgid "Trivial:"
+msgstr ""
+
+#: ../../../dev/contributing.rst:41
+msgid ""
+"A small change or refactor that is obviously correct. These may be pushed "
+"without review by any member of the core team. Examples: `removing dead code "
+"<https://github.com/syncthing/syncthing/commits/master>`__, `updating values "
+"<https://github.com/syncthing/syncthing/"
+"commit/2aa028facb7ccbe48e85c8c444501cc3fb38ef24>`__."
+msgstr ""
+
+#: ../../../dev/contributing.rst:46
+msgid "Minor:"
+msgstr ""
+
+#: ../../../dev/contributing.rst:47
+msgid ""
+"A new feature, bugfix or refactoring that may need extra eyes on it to weed "
+"out mistakes, but is architecturally simple or at least uncontroversial. "
+"Minor changes must go through a pull request and can be merged on approval "
+"by any other developer on the core or maintainers team. Tests must pass. "
+"Examples: `adding caching <https://github.com/syncthing/syncthing/pull/2432/"
+"files>`__, `fixing a small bug <https://github.com/syncthing/syncthing/"
+"pull/2406/files>`__."
+msgstr ""
+
+#: ../../../dev/contributing.rst:54
+msgid "Major:"
+msgstr ""
+
+#: ../../../dev/contributing.rst:55
+msgid ""
+"A complex new feature or bugfix, a large refactoring, or a change to the "
+"underlying architecture of things. A major change must be reviewed by a "
+"member of the *maintainers* team. Tests must pass."
+msgstr ""
+
+#: ../../../dev/contributing.rst:59
+msgid ""
+"The categorization is inherently subjective; we recommend erring on the side "
+"of caution - if you are not sure whether a change is *trivial* or merely "
+"*minor*, it's probably minor."
+msgstr ""
+
+#: ../../../dev/contributing.rst:63
+msgid "First time contributions from new developers are always major."
+msgstr ""
+
+#: ../../../dev/contributing.rst:66
+msgid "Coding Style"
+msgstr ""
+
+#: ../../../dev/contributing.rst:69
+msgid "General"
+msgstr "一般"
+
+#: ../../../dev/contributing.rst:71
+msgid ""
+"All text files use Unix line endings. The git settings already present in "
+"the repository attempts to enforce this."
+msgstr ""
+
+#: ../../../dev/contributing.rst:74
+msgid ""
+"When making changes, follow the brace and parenthesis style of the "
+"surrounding code."
+msgstr ""
+
+#: ../../../dev/contributing.rst:78
+msgid "Go Specific"
+msgstr ""
+
+#: ../../../dev/contributing.rst:80
+msgid ""
+"Follow the conventions laid out in `Effective Go <https://golang.org/doc/"
+"effective_go.html>`__ as much as makes sense. The review guidelines in `Go "
+"Code Review Comments <https://github.com/golang/go/wiki/"
+"CodeReviewComments>`__ should generally be followed."
+msgstr ""
+
+#: ../../../dev/contributing.rst:86
+msgid "Each commit should be ``go fmt`` clean."
+msgstr ""
+
+#: ../../../dev/contributing.rst:88
+msgid ""
+"Imports are grouped per ``goimports`` standard; that is, standard library "
+"first, then third party libraries after a blank line."
+msgstr ""
+
+#: ../../../dev/contributing.rst:92
+msgid "Commits"
+msgstr ""
+
+#: ../../../dev/contributing.rst:94
+msgid ""
+"The commit message subject should be a single short sentence describing the "
+"change, starting with a capital letter but without ending punctuation, and "
+"prefixed with the package name most affected by the change."
+msgstr ""
+
+#: ../../../dev/contributing.rst:99
+msgid ""
+"Commits that resolve an existing issue must include the issue number as "
+"``(fixes #123)`` at the end of the commit message subject. A correctly "
+"formatted commit message looks like this::"
+msgstr ""
+
+#: ../../../dev/contributing.rst:103
+msgid "lib/dialer: Add env var to disable proxy fallback (fixes #3006)"
+msgstr ""
+
+#: ../../../dev/contributing.rst:105
+msgid ""
+"If the commit message subject doesn't say it all, one or more paragraphs of "
+"describing text should be added to the commit message. This should explain "
+"why the change is made and what it accomplishes."
+msgstr ""
+
+#: ../../../dev/contributing.rst:109
+msgid ""
+"When drafting a pull request, please feel free to add commits with "
+"corrections and merge from master when necessary. This provides a clear time "
+"line with changes and simplifies review. Do not, in general, rebase your "
+"commits."
+msgstr ""
+
+#: ../../../dev/contributing.rst:114
+msgid ""
+"Pull requests are merged to master using squash merge. The \"stream of "
+"consciousness\" set of commits described in the previous point will be "
+"reduced to a single commit at merge time."
+msgstr ""
+
+#: ../../../dev/contributing.rst:119
+msgid "Tests"
+msgstr ""
+
+#: ../../../dev/contributing.rst:121
+msgid ""
+"Yes please, do add tests when adding features or fixing bugs. Also, when a "
+"pull request is filed a number of automatic tests are run on the code. This "
+"includes:"
+msgstr ""
+
+#: ../../../dev/contributing.rst:125
+msgid "That the code actually builds and the test suite passes."
+msgstr ""
+
+#: ../../../dev/contributing.rst:127
+msgid "That the code is correctly formatted (``go fmt``)."
+msgstr ""
+
+#: ../../../dev/contributing.rst:129
+msgid "That the commits are based on a reasonably recent ``master``."
+msgstr ""
+
+#: ../../../dev/contributing.rst:131
+msgid "That the author is listed in AUTHORS."
+msgstr ""
+
+#: ../../../dev/contributing.rst:133
+msgid ""
+"That the output from ``go lint`` and ``go vet`` is clean. (This checks for a "
+"number of potential problems the compiler doesn't catch.)"
+msgstr ""
+
+#: ../../../dev/contributing.rst:136
+msgid ""
+"If the pull request is invasive or scary looking, the full integration test "
+"suite can be run as well."
+msgstr ""
+
+#: ../../../dev/contributing.rst:140
+msgid "Branches"
+msgstr ""
+
+#: ../../../dev/contributing.rst:142
+msgid ""
+"``master`` is the main branch containing good code that will end up in the "
+"next release. You should base your work on it. It won't ever be rebased or "
+"force-pushed to."
+msgstr ""
+
+#: ../../../dev/contributing.rst:146
+msgid ""
+"``vx.y`` branches exist to make patch releases on otherwise obsolete minor "
+"releases. Should only contain fixes cherry picked from master. Don't base "
+"any work on them."
+msgstr ""
+
+#: ../../../dev/contributing.rst:150
+msgid ""
+"Other branches are probably topic branches and may be subject to rebasing. "
+"Don't base any work on them unless you specifically know otherwise."
+msgstr ""
+
+#: ../../../dev/contributing.rst:155
+msgid "Tags"
+msgstr ""
+
+#: ../../../dev/contributing.rst:157
+msgid ""
+"All releases are tagged semver style as ``vx.y.z``. The maintainer doing the "
+"release signs the tag using their GPG key."
+msgstr ""
+
+#: ../../../dev/contributing.rst:161
+msgid "Licensing"
+msgstr ""
+
+#: ../../../dev/contributing.rst:163
+msgid ""
+"All contributions are made under the same MPLv2 license as the rest of the "
+"project, except documentation, user interface text and translation strings "
+"which are licensed under the Creative Commons Attribution 4.0 International "
+"License. You retain the copyright to code you have written."
+msgstr ""
