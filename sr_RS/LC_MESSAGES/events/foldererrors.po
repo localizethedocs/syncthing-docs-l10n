@@ -1,0 +1,54 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2026, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing stable\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-21 06:27+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: sr_RS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../events/foldererrors.rst:2
+msgid "FolderErrors"
+msgstr ""
+
+#: ../../../events/foldererrors.rst:4
+msgid ""
+"The ``FolderErrors`` event is emitted when a folder cannot be successfully "
+"synchronized. The event contains the ID of the affected folder and a list of "
+"errors for files or directories therein. This list of errors is obsolete "
+"once the folder changes state to ``syncing`` - if errors remain after the "
+"next synchronization attempt, a new ``FolderErrors`` event is emitted."
+msgstr ""
+
+#: ../../../events/foldererrors.rst:10
+msgid ""
+"{\n"
+"    \"id\": 132,\n"
+"    \"type\": \"FolderErrors\",\n"
+"    \"time\": \"2015-06-26T13:39:24.697401384+02:00\",\n"
+"    \"data\": {\n"
+"        \"errors\": [\n"
+"            {\n"
+"                \"error\": \"open /Users/jb/src/github.com/syncthing/"
+"syncthing/test/s2/h2j/.syncthing.aslkjd.tmp: permission denied\",\n"
+"                \"path\": \"h2j/aslkjd\"\n"
+"            }\n"
+"        ],\n"
+"        \"folder\": \"default\"\n"
+"    }\n"
+"}"
+msgstr ""
+
+#: ../../../events/foldererrors.rst:29
+msgid "The :ref:`statechanged` event."
+msgstr ""
