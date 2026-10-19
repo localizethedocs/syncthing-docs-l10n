@@ -1,0 +1,61 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2019, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../advanced/option-database-tuning.rst:4
+msgid "databaseTuning"
+msgstr ""
+
+#: ../../../advanced/option-database-tuning.rst:8
+msgid ""
+"The ``databaseTuning`` option controls how Syncthing uses the backend key-"
+"value database that stores the index data and other persistent data "
+"Syncthing needs. In most cases this database is fairly small (hundred "
+"megabytes or less) and the default tuning is optimized for this. However in "
+"cases with large folders or many devices the database may grow, and updates "
+"may be more frequent. In these cases it's better to use larger buffers, "
+"allow more memory to be used for cache, allow a larger amount of overhead on "
+"disk in order to improve compaction performance, and so on."
+msgstr ""
+
+#: ../../../advanced/option-database-tuning.rst:17
+msgid "The ``databaseTuning`` option can have one of three values:"
+msgstr ""
+
+#: ../../../advanced/option-database-tuning.rst:19
+msgid ""
+"``small``: This is the old set of tuning parameters, recommended for small "
+"databases."
+msgstr ""
+
+#: ../../../advanced/option-database-tuning.rst:21
+msgid ""
+"``large``: This is a new set of tuning parameters, recommended for large "
+"databases."
+msgstr ""
+
+#: ../../../advanced/option-database-tuning.rst:24
+msgid ""
+"``auto``: Syncthing will automatically use either the large or small tuning "
+"parameters depending on the database size on disk. A database that is 200 "
+"MiB or more in size is considered \"large\" for the purposes of this option."
+msgstr ""
+
+#: ../../../advanced/option-database-tuning.rst:29
+msgid "The default value is ``auto``."
+msgstr ""
