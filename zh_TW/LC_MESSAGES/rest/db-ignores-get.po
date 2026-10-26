@@ -1,0 +1,56 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2026, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-06 09:56+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../rest/db-ignores-get.rst:2
+msgid "GET /rest/db/ignores"
+msgstr "GET /rest/db/ignores"
+
+#: ../../../rest/db-ignores-get.rst:4
+msgid ""
+"Takes one parameter, ``folder``, and returns the content of the ``."
+"stignore`` as the ``ignore`` field. A second field, ``expanded``, provides a "
+"list of strings which represent globbing patterns described by gobwas/glob "
+"(based on standard wildcards) that match the patterns in ``.stignore`` and "
+"all the includes. If appropriate these globs are prepended by the following "
+"modifiers: ``!`` to negate the glob, ``(?i)`` to do case insensitive "
+"matching and ``(?d)`` to enable removing of ignored files in an otherwise "
+"empty directory."
+msgstr ""
+
+#: ../../../rest/db-ignores-get.rst:8
+msgid ""
+"{\n"
+"  \"ignore\": [\n"
+"    \"(?i)/Backups\"\n"
+"  ],\n"
+"  \"expanded\": [\n"
+"    \"(?i)Backups\",\n"
+"    \"(?i)Backups/**\"\n"
+"  ]\n"
+"}"
+msgstr ""
+"{\n"
+"  \"ignore\": [\n"
+"    \"(?i)/Backups\"\n"
+"  ],\n"
+"  \"expanded\": [\n"
+"    \"(?i)Backups\",\n"
+"    \"(?i)Backups/**\"\n"
+"  ]\n"
+"}"
