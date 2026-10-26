@@ -1,0 +1,222 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing 0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../users/relaysrv.rst:4
+msgid "Custom Relay Server"
+msgstr ""
+
+#: ../../../users/relaysrv.rst:6
+msgid ""
+"Syncthing relies on a network of community-contributed relay servers. Anyone "
+"can run a relay server, and it will automatically join the relay pool and be "
+"available to Syncthing users. The current list of relays can be found at "
+"https://relays.syncthing.net."
+msgstr ""
+
+#: ../../../users/relaysrv.rst:11
+msgid ""
+"To run a relay of your own, you will first need a server. Running a relay "
+"from a home computer is not recommended: the relay ideally needs to be "
+"running 24/7, and home internet connections often have poor upload bandwidth."
+msgstr ""
+
+#: ../../../users/relaysrv.rst:15
+msgid "The recommended specifications for a relay are:"
+msgstr ""
+
+#: ../../../users/relaysrv.rst:18
+msgid "CPU"
+msgstr ""
+
+#: ../../../users/relaysrv.rst:18
+msgid "At least 1GHz"
+msgstr ""
+
+#: ../../../users/relaysrv.rst:19
+msgid "RAM"
+msgstr ""
+
+#: ../../../users/relaysrv.rst:19
+msgid "At least 256MB"
+msgstr ""
+
+#: ../../../users/relaysrv.rst:20
+msgid "Bandwidth"
+msgstr ""
+
+#: ../../../users/relaysrv.rst:20
+msgid "At least 1MBit/s in and out, the higher the better"
+msgstr ""
+
+#: ../../../users/relaysrv.rst:21
+msgid "Traffic"
+msgstr ""
+
+#: ../../../users/relaysrv.rst:21
+msgid "At least 1TiB/month, the more the better"
+msgstr ""
+
+#: ../../../users/relaysrv.rst:24
+msgid "VPS's with these specs are available for about $5-$10/month."
+msgstr ""
+
+#: ../../../users/relaysrv.rst:27
+msgid "Installing and Running"
+msgstr ""
+
+#: ../../../users/relaysrv.rst:29
+msgid ""
+"Download the latest release of the `relay server <https://github.com/"
+"syncthing/relaysrv/releases>`__ for your operating system and architecture. "
+"Unpack the archive and save the binary to a convenient place such as `/usr/"
+"local/bin`."
+msgstr ""
+
+#: ../../../users/relaysrv.rst:33
+msgid ""
+"The relay server takes a number of options, some of which are important for "
+"smooth operation::"
+msgstr ""
+
+#: ../../../users/relaysrv.rst:36
+msgid ""
+"$ relaysrv --help\n"
+"Usage of relaysrv:\n"
+"  -debug\n"
+"        Enable debug output\n"
+"  -ext-address string\n"
+"        An optional address to advertising as being available on.\n"
+"        Allows listening on an unprivileged port with port forwarding from e."
+"g.\n"
+"        443, and be connected to on port 443.\n"
+"  -global-rate int\n"
+"        Global rate limit, in bytes/s\n"
+"  -keys string\n"
+"        Directory where cert.pem and key.pem is stored (default \".\")\n"
+"  -listen string\n"
+"        Protocol listen address (default \":22067\")\n"
+"  -message-timeout duration\n"
+"        Maximum amount of time we wait for relevant messages to arrive "
+"(default 1m0s)\n"
+"  -network-timeout duration\n"
+"        Timeout for network operations between the client and the relay.\n"
+"        If no data is received between the client and the relay in this\n"
+"        period of time, the connection is terminated. Furthermore, if no\n"
+"        data is sent between either clients being relayed within this\n"
+"        period of time, the session is also terminated. (default 2m0s)\n"
+"  -per-session-rate int\n"
+"        Per session rate limit, in bytes/s\n"
+"  -ping-interval duration\n"
+"        How often pings are sent (default 1m0s)\n"
+"  -pools string\n"
+"        Comma separated list of relay pool addresses to join (default "
+"\"https://relays.syncthing.net/endpoint\")\n"
+"  -provided-by string\n"
+"        An optional description about who provides the relay\n"
+"  -status-srv string\n"
+"        Listen address for status service (blank to disable) (default "
+"\":22070\")"
+msgstr ""
+
+#: ../../../users/relaysrv.rst:69
+msgid ""
+"Primarily, you need to decide on a directory to store the TLS key and "
+"certificate and a listen port. The default listen port of 22067 works, but "
+"for optimal compatibility a well known port for encrypted traffic such as "
+"443 is recommended. This may require additional setup to work without "
+"running as root or a privileged user, see `Running on port 443 as an "
+"unprivileged user`_ below. In principle something similar to this should "
+"work on a Linux/Unix system::"
+msgstr ""
+
+#: ../../../users/relaysrv.rst:77
+msgid ""
+"$ sudo useradd relaysrv\n"
+"$ sudo mkdir /etc/relaysrv\n"
+"$ sudo chown relaysrv /etc/relaysrv\n"
+"$ sudo -u relaysrv /usr/local/bin/relaysrv -keys /etc/relaysrv"
+msgstr ""
+
+#: ../../../users/relaysrv.rst:82
+msgid ""
+"This creates a user ``relaysrv`` and a directory ``/etc/relaysrv`` to store "
+"the keys. The keys are generated on first startup. The relay will join the "
+"global relay pool, unless a ``-pools=\"\"`` argument is given."
+msgstr ""
+
+#: ../../../users/relaysrv.rst:86
+msgid ""
+"To make the relay server start automatically at boot, use the recommended "
+"procedure for your operating system."
+msgstr ""
+
+#: ../../../users/relaysrv.rst:90
+msgid "Running on port 443 as an unprivileged user"
+msgstr ""
+
+#: ../../../users/relaysrv.rst:92
+msgid ""
+"It is recommended that you run the relay on port 443 (or another port which "
+"is commonly allowed through corporate firewalls), in order to maximise the "
+"chances that people are able to connect. However, binding to ports below "
+"1024 requires root privileges, and running a relay as root is not "
+"recommended. Thankfully there are a couple of approaches available to you."
+msgstr ""
+
+#: ../../../users/relaysrv.rst:98
+msgid ""
+"One option is to run the relay on port 22067, and use an ``iptables`` rule "
+"to forward traffic from port 443 to port 22067, for example::"
+msgstr ""
+
+#: ../../../users/relaysrv.rst:101
+msgid ""
+"iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 443 -j REDIRECT --to-"
+"port 22067"
+msgstr ""
+
+#: ../../../users/relaysrv.rst:103
+msgid ""
+"Or, if you're using ``ufw``, add the following to ``/etc/ufw/before.rules``::"
+msgstr ""
+
+#: ../../../users/relaysrv.rst:105
+msgid ""
+"*nat\n"
+":PREROUTING ACCEPT [0:0]\n"
+":POSTROUTING ACCEPT [0:0]\n"
+"\n"
+"-A PREROUTING -i eth0 -p tcp --dport 443 -j REDIRECT --to-port 22067\n"
+"\n"
+"COMMIT"
+msgstr ""
+
+#: ../../../users/relaysrv.rst:113
+msgid ""
+"You will need to start ``relaysrv`` with ``-ext-address \":443\"``. This "
+"tells ``relaysrv`` that it can be contacted on port 443, even though it is "
+"listening on port 22067. You will also need to let both port 443 and 22067 "
+"through your firewall."
+msgstr ""
+
+#: ../../../users/relaysrv.rst:118
+msgid ""
+"Another option is `described here <https://wiki.apache.org/httpd/"
+"NonRootPortBinding>`__, although your milage may vary."
+msgstr ""
