@@ -1,0 +1,138 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2019, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: sr_RS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../advanced/folder-copyrangemethod.rst:4
+msgid "copyRangeMethod"
+msgstr ""
+
+#: ../../../advanced/folder-copyrangemethod.rst:8
+msgid ""
+"Provides a choice of method for copying data between files. This can be used "
+"to optimise copies on network filesystems, improve speed of large copies or "
+"clone the data using copy-on-write functionality if the underlying "
+"filesystem supports it."
+msgstr ""
+
+#: ../../../advanced/folder-copyrangemethod.rst:13
+msgid "The following values are accepted:"
+msgstr ""
+
+#: ../../../advanced/folder-copyrangemethod.rst:15
+msgid "``standard`` (default)"
+msgstr ""
+
+#: ../../../advanced/folder-copyrangemethod.rst:16
+msgid ""
+"Reads the data from source file into application memory, writes the data "
+"from application memory into the destination file. (This is the method used "
+"by Syncthing prior to this option being introduced.)"
+msgstr ""
+
+#: ../../../advanced/folder-copyrangemethod.rst:20
+#: ../../../advanced/folder-copyrangemethod.rst:66
+msgid "*Available on: All platforms*"
+msgstr ""
+
+#: ../../../advanced/folder-copyrangemethod.rst:22
+msgid "``copy_file_range``"
+msgstr ""
+
+#: ../../../advanced/folder-copyrangemethod.rst:23
+msgid ""
+"Uses the Linux ``copy_file_range`` syscall which, if the underlying "
+"filesystem supports it, uses copy-on-write semantics to clone the data. "
+"Introduced in Linux 4.5 and tested on XFS and BTRFS. Some network "
+"filesystems might use this to perform server-side copies."
+msgstr ""
+
+#: ../../../advanced/folder-copyrangemethod.rst:28
+msgid "*Tested on: BTRFS, EXT4, XFS, ZFS*"
+msgstr ""
+
+#: ../../../advanced/folder-copyrangemethod.rst:29
+#: ../../../advanced/folder-copyrangemethod.rst:42
+msgid "*Available on: Linux*"
+msgstr ""
+
+#: ../../../advanced/folder-copyrangemethod.rst:31
+msgid "``ioctl``"
+msgstr ""
+
+#: ../../../advanced/folder-copyrangemethod.rst:32
+msgid ""
+"Uses the ``ioctl`` syscall with ``FICLONERANGE`` option which, if the "
+"underlying filesystem supports it, uses copy-on-write semantics to clone the "
+"data. Officially introduced in Linux 4.5, but was previously known as "
+"``BTRFS_IOC_CLONE_RANGE``, which was used to provide copy-on-write semantics "
+"to BTRFS filesystems since Linux 2.6.29. Some network filesystems might use "
+"this to perform server-side copies. Will fail if not supported by the "
+"underlying filesystem."
+msgstr ""
+
+#: ../../../advanced/folder-copyrangemethod.rst:41
+msgid "*Tested on: BTRFS*"
+msgstr ""
+
+#: ../../../advanced/folder-copyrangemethod.rst:44
+msgid "``sendfile``"
+msgstr ""
+
+#: ../../../advanced/folder-copyrangemethod.rst:45
+msgid ""
+"Uses the ``sendfile`` syscall which performs in-kernel copy, avoiding having "
+"to copy the data into application memory."
+msgstr ""
+
+#: ../../../advanced/folder-copyrangemethod.rst:48
+msgid "*Tested on: BTRFS, XFS, EXT4*"
+msgstr ""
+
+#: ../../../advanced/folder-copyrangemethod.rst:49
+msgid "*Available on: Linux, Solaris*"
+msgstr ""
+
+#: ../../../advanced/folder-copyrangemethod.rst:51
+msgid "``duplicate_extents``"
+msgstr ""
+
+#: ../../../advanced/folder-copyrangemethod.rst:52
+msgid ""
+"Uses Windows Block Cloning via ``FSCTL_DUPLICATE_EXTENTS_TO_FILE``, which "
+"provides copy-on-write semantics to clone the data. Requires Windows 10 "
+"v1607 / Windows Server 2016 or later, and a compatible filesystem (ReFS, SMB "
+"3.1.1, CsvFS). Will fail if not supported by the underlying filesystem."
+msgstr ""
+
+#: ../../../advanced/folder-copyrangemethod.rst:58
+msgid "*Tested on: ReFS*"
+msgstr ""
+
+#: ../../../advanced/folder-copyrangemethod.rst:59
+msgid "*Available on: Windows*"
+msgstr ""
+
+#: ../../../advanced/folder-copyrangemethod.rst:61
+msgid "``all``"
+msgstr ""
+
+#: ../../../advanced/folder-copyrangemethod.rst:62
+msgid ""
+"Tries all of the copy methods in the following order: ``ioctl``, "
+"``copy_file_range``, ``sendfile``, ``duplicate_extents``, ``standard``."
+msgstr ""
