@@ -1,0 +1,74 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2026, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-21 06:27+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../rest/events-get.rst:2
+msgid "GET /rest/events"
+msgstr "GET /rest/events"
+
+#: ../../../rest/events-get.rst:4
+msgid "To receive events, perform a HTTP GET of ``/rest/events``."
+msgstr ""
+
+#: ../../../rest/events-get.rst:6
+msgid ""
+"To filter the event list, in effect creating a specific subscription for "
+"only the desired event types, add a parameter ``events=EventTypeA,"
+"EventTypeB,...`` where the event types are any of the :ref:`event-types`.  "
+"If no filter is specified, all events *except* :doc:`/events/"
+"localchangedetected` and :doc:`/events/remotechangedetected` are included."
+msgstr ""
+
+#: ../../../rest/events-get.rst:12
+msgid ""
+"The optional parameter ``since=<lastSeenID>`` sets the ID of the last event "
+"you've already seen. Syncthing returns a JSON encoded array of event "
+"objects, starting at the event just after the one with this last seen ID. "
+"The default value is 0, which returns all events. There is a limit to the "
+"number of events buffered, so if the rate of events is high or the time "
+"between polling calls is long some events might be missed. This can be "
+"detected by noting a discontinuity in the event IDs."
+msgstr ""
+
+#: ../../../rest/events-get.rst:20
+msgid ""
+"If no new events are produced since ``<lastSeenID>``, the HTTP call blocks "
+"and waits for new events to happen before returning. If ``<lastSeenID>`` is "
+"a future ID, the HTTP call blocks until such ID is reached or timeouts. By "
+"default it times out after 60 seconds returning an empty array. The time out "
+"duration can be customized with the optional parameter ``timeout=<seconds>``."
+msgstr ""
+
+#: ../../../rest/events-get.rst:26
+msgid ""
+"To receive only a limited number of events, add the ``limit=<n>`` parameter "
+"with a suitable value for ``n`` and only the *last* ``n`` events will be "
+"returned. This can be used to catch up with the latest event ID after a "
+"disconnection for example: ``/rest/events?since=0&limit=1``."
+msgstr ""
+
+#: ../../../rest/events-get.rst:33
+msgid "GET /rest/events/disk"
+msgstr "GET /rest/events/disk"
+
+#: ../../../rest/events-get.rst:35
+msgid ""
+"This convenience endpoint provides the same event stream, but pre-filtered "
+"to show only :doc:`/events/localchangedetected` and :doc:`/events/"
+"remotechangedetected` event types.  The ``events`` parameter is not used."
+msgstr ""
