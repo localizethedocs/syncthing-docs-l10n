@@ -1,0 +1,36 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing 0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: sr_RS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../rest/system-debug-post.rst:2
+msgid "POST /rest/system/debug"
+msgstr ""
+
+#: ../../../rest/system-debug-post.rst:6
+msgid ""
+"Enables or disables debugging for specified facilities. Give one or both of "
+"``enable`` and ``disable`` query parameters, with comma separated facility "
+"names. To disable debugging of the beacon and discovery packages, and enable "
+"it for config and db:"
+msgstr ""
+
+#: ../../../rest/system-debug-post.rst:11
+msgid ""
+"$ curl -H X-API-Key:abc123 -X POST 'http://localhost:8384/rest/system/debug?"
+"disable=beacon,discovery&enable=config,db'"
+msgstr ""

@@ -1,0 +1,278 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing 0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../dev/debugging.rst:3
+msgid "Todo"
+msgstr ""
+
+#: ../../../dev/debugging.rst:4
+msgid "This page mostly duplicates syncthing(1). Needs merging."
+msgstr ""
+
+#: ../../../dev/debugging.rst:7
+msgid "Debugging Syncthing"
+msgstr ""
+
+#: ../../../dev/debugging.rst:9
+msgid ""
+"There's a lot that happens behind the covers, and Syncthing is generally "
+"quite silent about it. A number of environment variables can be used to set "
+"the logging to verbose for various parts of the program, and to enable "
+"profiling."
+msgstr ""
+
+#: ../../../dev/debugging.rst:15
+msgid "Environment Variables"
+msgstr ""
+
+#: ../../../dev/debugging.rst:18
+msgid "STTRACE"
+msgstr ""
+
+#: ../../../dev/debugging.rst:20
+msgid ""
+"The environment variable ``STTRACE`` can be set to a comma separated list of "
+"\"facilities\", to enable extra debugging information for said facility. A "
+"facility generally maps to a Go package, although there are a few extra that "
+"map to parts of the ``main`` package. Currently, the following facilities "
+"are supported (an up to date list is always printed by ``syncthing --help``):"
+msgstr ""
+
+#: ../../../dev/debugging.rst:27
+msgid "``beacon`` (the beacon package)"
+msgstr ""
+
+#: ../../../dev/debugging.rst:28
+msgid "``discover`` (the discover package)"
+msgstr ""
+
+#: ../../../dev/debugging.rst:29
+msgid "``events`` (the events package)"
+msgstr ""
+
+#: ../../../dev/debugging.rst:30
+msgid "``files`` (the files package)"
+msgstr ""
+
+#: ../../../dev/debugging.rst:31
+msgid "``http`` (the main package; HTTP requests)"
+msgstr ""
+
+#: ../../../dev/debugging.rst:32
+msgid "``net`` (the main package; connections & network messages)"
+msgstr ""
+
+#: ../../../dev/debugging.rst:33
+msgid "``model`` (the model package)"
+msgstr ""
+
+#: ../../../dev/debugging.rst:34
+msgid "``scanner`` (the scanner package)"
+msgstr ""
+
+#: ../../../dev/debugging.rst:35
+msgid "``stats`` (the stats package)"
+msgstr ""
+
+#: ../../../dev/debugging.rst:36
+msgid "``upnp`` (the upnp package)"
+msgstr ""
+
+#: ../../../dev/debugging.rst:37
+msgid "``xdr`` (the xdr package)"
+msgstr ""
+
+#: ../../../dev/debugging.rst:38
+msgid "``all`` (all of the above)"
+msgstr ""
+
+#: ../../../dev/debugging.rst:40
+msgid ""
+"The debug output is often of the kind that it doesn't make much sense "
+"without looking at the code. The purpose of the different packages / "
+"facilities are something like this:"
+msgstr ""
+
+#: ../../../dev/debugging.rst:44
+msgid ""
+"``beacon`` sends and receives UDP broadcasts used by the local discovery "
+"system. Debugging here will show which interfaces and addresses are selected "
+"for broadcasts, etc."
+msgstr ""
+
+#: ../../../dev/debugging.rst:47
+msgid ""
+"``discover`` sends and receives local discovery packets. Debugging here will "
+"output the parsed packets, nodes that get registered etc."
+msgstr ""
+
+#: ../../../dev/debugging.rst:49
+msgid ""
+"``files`` keeps track of lists of files with metadata and figures out which "
+"is the newest version of each."
+msgstr ""
+
+#: ../../../dev/debugging.rst:51
+msgid ""
+"``net`` shows connection attempts, incoming connections, and the low level "
+"error when connection attempts fail."
+msgstr ""
+
+#: ../../../dev/debugging.rst:53
+msgid ""
+"``model`` is the largest chunk of the system; this is where pulling of out "
+"of date files happens, indexes are sent and received, and incoming requests "
+"for file chunks are logged."
+msgstr ""
+
+#: ../../../dev/debugging.rst:56
+msgid ""
+"``scanner`` is the local filesystem scanner. Debugging here will output "
+"information about changed and unchanged files."
+msgstr ""
+
+#: ../../../dev/debugging.rst:58
+msgid "``upnp`` is the upnp talker."
+msgstr ""
+
+#: ../../../dev/debugging.rst:59
+msgid ""
+"``xdr`` is the low level protocol encoder. Debugging here will output all "
+"bytes sent/received over the sync connection. Very verbose."
+msgstr ""
+
+#: ../../../dev/debugging.rst:61
+msgid "``all`` simply enables debugging of all facilities."
+msgstr ""
+
+#: ../../../dev/debugging.rst:63
+msgid ""
+"Enabling any of the facilities will also change the log format to include "
+"microsecond timestamps and file names plus line numbers. This can be used to "
+"enable this extra information on the normal logging level, without enabling "
+"any debugging: ``STTRACE=somethingnonexistent`` for example."
+msgstr ""
+
+#: ../../../dev/debugging.rst:69
+msgid ""
+"Under Unix (including Mac) the easiest way to run Syncthing with an "
+"environment variable set is to prepend the variable to the command line. I.e:"
+msgstr ""
+
+#: ../../../dev/debugging.rst:73
+msgid "``$ STTRACE=model syncthing``"
+msgstr ""
+
+#: ../../../dev/debugging.rst:75
+msgid "On windows, it needs to be set prior to running Syncthing."
+msgstr ""
+
+#: ../../../dev/debugging.rst:79
+msgid ""
+"C:\\> set STTRACE=model\n"
+"C:\\> syncthing"
+msgstr ""
+
+#: ../../../dev/debugging.rst:83
+msgid "STPROFILER"
+msgstr ""
+
+#: ../../../dev/debugging.rst:85
+msgid ""
+"The ``STPROFILER`` environment variable sets the listen address for the HTTP "
+"profiler. If set to for example ``:9090`` the profiler will start and listen "
+"on port 9090. http://localhost:9090/debug/pprof is then the address to the "
+"profiler. Se ``go tool pprof`` for more information."
+msgstr ""
+
+#: ../../../dev/debugging.rst:91
+msgid "STGUIASSETS"
+msgstr ""
+
+#: ../../../dev/debugging.rst:93
+msgid ""
+"Directory to load GUI assets from. Overrides compiled in assets. Useful for "
+"developing webgui, commonly use ``STGUIASSETS=gui bin/syncthing``"
+msgstr ""
+
+#: ../../../dev/debugging.rst:97
+msgid "STCPUPROFILE"
+msgstr ""
+
+#: ../../../dev/debugging.rst:99
+msgid "Write a CPU profile to ``cpu-$pid.pprof`` on exit."
+msgstr ""
+
+#: ../../../dev/debugging.rst:102
+msgid "STHEAPPROFILE"
+msgstr ""
+
+#: ../../../dev/debugging.rst:104
+msgid ""
+"Write heap profiles to ``heap-$pid-$timestamp.pprof`` each time heap usage "
+"increases."
+msgstr ""
+
+#: ../../../dev/debugging.rst:108
+msgid "STBLOCKPROFILE"
+msgstr ""
+
+#: ../../../dev/debugging.rst:110
+msgid ""
+"Write block profiles to ``block-$pid-$timestamp.pprof`` every 20 seconds."
+msgstr ""
+
+#: ../../../dev/debugging.rst:114
+msgid "STPERFSTATS"
+msgstr ""
+
+#: ../../../dev/debugging.rst:116
+msgid ""
+"Write running performance statistics to ``perf-$pid.csv``. Not supported on "
+"Windows."
+msgstr ""
+
+#: ../../../dev/debugging.rst:120
+msgid "STNOUPGRADE"
+msgstr ""
+
+#: ../../../dev/debugging.rst:122
+msgid "Disable automatic upgrades."
+msgstr ""
+
+#: ../../../dev/debugging.rst:125
+msgid "GOMAXPROCS"
+msgstr ""
+
+#: ../../../dev/debugging.rst:127
+msgid ""
+"Set the maximum number of CPU cores to use. Defaults to all available CPU "
+"cores."
+msgstr ""
+
+#: ../../../dev/debugging.rst:131
+msgid "GOGC"
+msgstr ""
+
+#: ../../../dev/debugging.rst:133
+msgid ""
+"Percentage of heap growth at which to trigger GC. Default is 100. Lower "
+"numbers keep peak memory usage down, at the price of CPU usage (ie. "
+"performance)"
+msgstr ""
