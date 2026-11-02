@@ -24,8 +24,8 @@ msgstr ""
 #: ../../../rest/cluster-pending-devices-delete.rst:6
 msgid ""
 "Remove records about a pending remote device which tried to connect.  Valid "
-"values for the ``device`` parameter are those from the corresponding :doc:"
-"`cluster-pending-devices-get` endpoint."
+"values for the ``device`` parameter are those from the "
+"corresponding :doc:`cluster-pending-devices-get` endpoint."
 msgstr ""
 
 #: ../../../rest/cluster-pending-devices-delete.rst:10

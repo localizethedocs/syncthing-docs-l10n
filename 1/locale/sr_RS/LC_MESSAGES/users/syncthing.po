@@ -811,8 +811,8 @@ msgstr ""
 #: ../../../includes/env-vars.rst:96
 msgid ""
 "Don't create a default folder when starting for the first time. This "
-"variable will be ignored anytime after the first run.  Equivalent to the :"
-"option:`--no-default-folder` flag."
+"variable will be ignored anytime after the first run.  Equivalent to "
+"the :option:`--no-default-folder` flag."
 msgstr ""
 
 #: ../../../includes/env-vars.rst:100
@@ -860,9 +860,9 @@ msgstr ""
 #: ../../../includes/env-vars.rst:117
 msgid ""
 "Time before folder statistics (file, dir, ... counts) are recalculated from "
-"scratch. The given duration must be parseable by Go's ``time."
-"ParseDuration``. If missing or not parseable, the default value of 1 month "
-"is used. To force recalculation on every startup, set it to ``1s``."
+"scratch. The given duration must be parseable by Go's "
+"``time.ParseDuration``. If missing or not parseable, the default value of 1 "
+"month is used. To force recalculation on every startup, set it to ``1s``."
 msgstr ""
 
 #: ../../../includes/env-vars.rst:122
@@ -912,8 +912,8 @@ msgstr ""
 
 #: ../../../users/syncthing.rst:332
 msgid ""
-":manpage:`syncthing-config(5)`, :manpage:`syncthing-stignore(5)`, :manpage:"
-"`syncthing-device-ids(7)`, :manpage:`syncthing-security(7)`, :manpage:"
-"`syncthing-networking(7)`, :manpage:`syncthing-versioning(7)`, :manpage:"
-"`syncthing-faq(7)`"
+":manpage:`syncthing-config(5)`, :manpage:`syncthing-"
+"stignore(5)`, :manpage:`syncthing-device-ids(7)`, :manpage:`syncthing-"
+"security(7)`, :manpage:`syncthing-networking(7)`, :manpage:`syncthing-"
+"versioning(7)`, :manpage:`syncthing-faq(7)`"
 msgstr ""

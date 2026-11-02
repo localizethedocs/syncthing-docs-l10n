@@ -104,8 +104,8 @@ msgstr ""
 
 #: ../../../rest/db-status-get.rst:58
 msgid ""
-"Data that is needed to become up to date with the cluster latest version (i."
-"e., data that is out of sync)."
+"Data that is needed to become up to date with the cluster latest version "
+"(i.e., data that is out of sync)."
 msgstr ""
 
 #: ../../../rest/db-status-get.rst:60

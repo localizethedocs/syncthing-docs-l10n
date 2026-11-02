@@ -119,8 +119,8 @@ msgstr ""
 #: ../../../users/syncing.rst:71
 msgid ""
 "This information is kept in the *index database*, which is stored in the "
-"configuration directory and called ``index-vx.y.z.db`` (for some version x.y."
-"z which may not be exactly the version of Syncthing you're running)."
+"configuration directory and called ``index-vx.y.z.db`` (for some version "
+"x.y.z which may not be exactly the version of Syncthing you're running)."
 msgstr ""
 
 #: ../../../users/syncing.rst:75

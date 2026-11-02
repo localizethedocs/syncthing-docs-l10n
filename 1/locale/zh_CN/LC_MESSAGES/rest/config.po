@@ -23,12 +23,12 @@ msgstr ""
 
 #: ../../../rest/config.rst:6
 msgid ""
-"These endpoints facilitate access and modification of the :doc:"
-"`configuration </users/config>` in a granular way. Config sent to the "
-"endpoints must be in the same format as returned by the corresponding GET "
-"request. When posting the configuration succeeds, the posted configuration "
-"is immediately applied, except for changes that require a restart. Query :"
-"ref:`rest-config-insync` to check if a restart is required."
+"These endpoints facilitate access and modification of "
+"the :doc:`configuration </users/config>` in a granular way. Config sent to "
+"the endpoints must be in the same format as returned by the corresponding "
+"GET request. When posting the configuration succeeds, the posted "
+"configuration is immediately applied, except for changes that require a "
+"restart. Query :ref:`rest-config-insync` to check if a restart is required."
 msgstr ""
 
 #: ../../../rest/config.rst:13
