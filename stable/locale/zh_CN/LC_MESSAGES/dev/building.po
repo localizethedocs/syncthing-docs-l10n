@@ -91,8 +91,8 @@ msgstr ""
 #: ../../../dev/building.rst:50
 msgid ""
 "If you want to build Debian packages FPM is required. See FPM's "
-"`installation information <https://fpm.readthedocs.io/en/latest/installation."
-"html>`__."
+"`installation information <https://fpm.readthedocs.io/en/latest/"
+"installation.html>`__."
 msgstr ""
 
 #: ../../../dev/building.rst:53
@@ -104,8 +104,8 @@ msgstr ""
 
 #: ../../../dev/building.rst:57
 msgid ""
-"Building Android binaries requires `Android NDK <https://developer.android."
-"com/ndk>`__."
+"Building Android binaries requires `Android NDK <https://"
+"developer.android.com/ndk>`__."
 msgstr ""
 
 #: ../../../dev/building.rst:59

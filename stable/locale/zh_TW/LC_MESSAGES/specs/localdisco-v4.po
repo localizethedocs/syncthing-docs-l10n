@@ -135,9 +135,9 @@ msgstr ""
 
 #: ../../../specs/localdisco-v4.rst:77
 msgid ""
-"When interpreting addresses with an unspecified address, e.g., "
-"``tcp://0.0.0.0:22000`` or ``tcp://:42424``, the source address of the "
-"discovery announcement is to be used."
+"When interpreting addresses with an unspecified address, e.g., ``tcp://"
+"0.0.0.0:22000`` or ``tcp://:42424``, the source address of the discovery "
+"announcement is to be used."
 msgstr ""
 
 #: ../../../specs/localdisco-v4.rst:81

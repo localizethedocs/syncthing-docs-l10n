@@ -120,8 +120,8 @@ msgstr ""
 #: ../../../advanced/folder-sync-ownership.rst:60
 msgid ""
 "When using systemd to start the service automatically, the capabilities can "
-"be set in the unit file instead of touching the executable, see :ref:"
-"`autostart-systemd-permissions`."
+"be set in the unit file instead of touching the executable, "
+"see :ref:`autostart-systemd-permissions`."
 msgstr ""
 
 #: ../../../advanced/folder-sync-ownership.rst:65

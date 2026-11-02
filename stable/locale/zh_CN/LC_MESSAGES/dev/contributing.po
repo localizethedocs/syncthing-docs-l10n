@@ -130,8 +130,8 @@ msgid ""
 "Minor changes must go through a pull request and can be merged on approval "
 "by any other developer on the ``contributors`` or ``maintainers`` team. "
 "Examples: `adding caching <https://github.com/syncthing/syncthing/pull/2432/"
-"files>`__, `fixing a small bug <https://github.com/syncthing/syncthing/"
-"pull/2406/files>`__."
+"files>`__, `fixing a small bug <https://github.com/syncthing/syncthing/pull/"
+"2406/files>`__."
 msgstr ""
 
 #: ../../../dev/contributing.rst:72

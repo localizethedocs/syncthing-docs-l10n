@@ -221,8 +221,8 @@ msgstr ""
 #: ../../../users/syncthing.rst:133
 msgid ""
 "Database maintenance interval -- internal database maintenance routines run "
-"this often. The format is that of a Go duration string (see https://pkg.go."
-"dev/time#ParseDuration)."
+"this often. The format is that of a Go duration string (see https://"
+"pkg.go.dev/time#ParseDuration)."
 msgstr ""
 
 #: ../../../users/syncthing.rst:139
@@ -836,8 +836,8 @@ msgstr ""
 
 #: ../../../users/syncthing.rst:351
 msgid ""
-":manpage:`syncthing-config(5)`, :manpage:`syncthing-stignore(5)`, :manpage:"
-"`syncthing-device-ids(7)`, :manpage:`syncthing-security(7)`, :manpage:"
-"`syncthing-networking(7)`, :manpage:`syncthing-versioning(7)`, :manpage:"
-"`syncthing-faq(7)`"
+":manpage:`syncthing-config(5)`, :manpage:`syncthing-"
+"stignore(5)`, :manpage:`syncthing-device-ids(7)`, :manpage:`syncthing-"
+"security(7)`, :manpage:`syncthing-networking(7)`, :manpage:`syncthing-"
+"versioning(7)`, :manpage:`syncthing-faq(7)`"
 msgstr ""

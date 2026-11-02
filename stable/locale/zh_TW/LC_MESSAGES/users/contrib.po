@@ -97,8 +97,8 @@ msgid ""
 "<https://apps.apple.com/app/synctrain/id6553985316>`_."
 msgstr ""
 "Synctrain 是一款開源的 iOS、iPadOS 與 macOS 原生應用程式，結合 Syncthing 與以"
-"檔案為中心的 UI，聚焦於選擇性與隨選同步。可從 `App Store <https://apps.apple."
-"com/app/synctrain/id6553985316>`_ 安裝。"
+"檔案為中心的 UI，聚焦於選擇性與隨選同步。可從 `App Store <https://"
+"apps.apple.com/app/synctrain/id6553985316>`_ 安裝。"
 
 #: ../../../users/contrib.rst:48
 msgid "Linux"
@@ -278,8 +278,8 @@ msgstr ""
 
 #: ../../../users/contrib.rst:135
 msgid ""
-"For Fedora Syncthing is now in the official repo : https://src.fedoraproject."
-"org/rpms/syncthing"
+"For Fedora Syncthing is now in the official repo : https://"
+"src.fedoraproject.org/rpms/syncthing"
 msgstr ""
 "對於 Fedora，Syncthing 現已在官方套件庫：https://src.fedoraproject.org/rpms/"
 "syncthing"
@@ -472,13 +472,13 @@ msgstr ""
 
 #: ../../../users/contrib.rst:214
 msgid ""
-"`Docker container <https://rockstor.com/docs/docker-based-rock-ons/syncthing."
-"html>`_ and `registry entry <https://github.com/rockstor/rockon-registry/"
-"blob/master/syncthing.json>`_"
+"`Docker container <https://rockstor.com/docs/docker-based-rock-ons/"
+"syncthing.html>`_ and `registry entry <https://github.com/rockstor/rockon-"
+"registry/blob/master/syncthing.json>`_"
 msgstr ""
-"`Docker 容器 <https://rockstor.com/docs/docker-based-rock-ons/syncthing."
-"html>`_ 與 `registry 條目 <https://github.com/rockstor/rockon-registry/blob/"
-"master/syncthing.json>`_"
+"`Docker 容器 <https://rockstor.com/docs/docker-based-rock-ons/"
+"syncthing.html>`_ 與 `registry 條目 <https://github.com/rockstor/rockon-"
+"registry/blob/master/syncthing.json>`_"
 
 #: ../../../users/contrib.rst:217
 msgid "Cloudron"
@@ -486,8 +486,8 @@ msgstr ""
 
 #: ../../../users/contrib.rst:219
 msgid ""
-"Syncthing is available as a 1-click install on `Cloudron <https://www."
-"cloudron.io>`_. For those unaware, Cloudron makes it easy to run apps on "
+"Syncthing is available as a 1-click install on `Cloudron <https://"
+"www.cloudron.io>`_. For those unaware, Cloudron makes it easy to run apps on "
 "your server and keep them up-to-date and secure."
 msgstr ""
 "Syncthing 可在 `Cloudron <https://www.cloudron.io>`_ 以一鍵安裝。若您不熟悉，"

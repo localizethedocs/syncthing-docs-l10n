@@ -91,8 +91,8 @@ msgstr ""
 
 #: ../../../users/autostart.rst:37
 msgid ""
-"For technical information about Task Scheduler visit https://docs.microsoft."
-"com/windows/win32/taskschd."
+"For technical information about Task Scheduler visit https://"
+"docs.microsoft.com/windows/win32/taskschd."
 msgstr ""
 
 #: ../../../users/autostart.rst:40
@@ -419,9 +419,9 @@ msgstr ""
 msgid ""
 "There are a number of third-party utilities which aim to help install and "
 "run Syncthing more easily. These typically provide an installer, an option "
-"to start the program automatically, and a more polished user experience (e."
-"g. by behaving as a \"proper\" Windows application, rather than forcing you "
-"to start a Web browser to interact with Syncthing)."
+"to start the program automatically, and a more polished user experience "
+"(e.g. by behaving as a \"proper\" Windows application, rather than forcing "
+"you to start a Web browser to interact with Syncthing)."
 msgstr ""
 
 #: ../../../users/autostart.rst:198
@@ -474,8 +474,8 @@ msgstr ""
 
 #: ../../../users/autostart.rst:226
 msgid ""
-"From an administrator Command Prompt, CD to the NSSM folder and run ``nssm."
-"exe install <syncthing service name>``"
+"From an administrator Command Prompt, CD to the NSSM folder and run "
+"``nssm.exe install <syncthing service name>``"
 msgstr ""
 
 #: ../../../users/autostart.rst:227
@@ -662,8 +662,8 @@ msgstr ""
 #: ../../../users/autostart.rst:287
 msgid ""
 "Log out and back in again. Or, if you do not want to log out, you can run "
-"this command in terminal: ``launchctl load ~/Library/LaunchAgents/syncthing."
-"plist``"
+"this command in terminal: ``launchctl load ~/Library/LaunchAgents/"
+"syncthing.plist``"
 msgstr ""
 
 #: ../../../users/autostart.rst:291
@@ -734,9 +734,9 @@ msgstr ""
 
 #: ../../../users/autostart.rst:324
 msgid ""
-"Go to ``/etc/supervisor/conf.d/`` and create a new file named ``syncthing."
-"conf`` with the following content (ensure you replaced ``<USERNAME>`` with "
-"valid username)::"
+"Go to ``/etc/supervisor/conf.d/`` and create a new file named "
+"``syncthing.conf`` with the following content (ensure you replaced "
+"``<USERNAME>`` with valid username)::"
 msgstr ""
 
 #: ../../../users/autostart.rst:326
@@ -877,8 +877,8 @@ msgid ""
 "linux-systemd/user/>`__ copy the ``syncthing.service`` file into the `load "
 "path of the user instance <https://www.freedesktop.org/software/systemd/man/"
 "systemd.unit.html#Unit%20File%20Load%20Path>`__. To do this without root "
-"privileges you can just use this folder under your home directory: ``~/."
-"config/systemd/user/``."
+"privileges you can just use this folder under your home directory: "
+"``~/.config/systemd/user/``."
 msgstr ""
 
 #: ../../../users/autostart.rst:407
@@ -894,10 +894,10 @@ msgstr ""
 #: ../../../users/autostart.rst:411
 msgid ""
 "If your home directory is encrypted with eCryptfs on Debian/Ubuntu, then you "
-"will need to make the change described in `Ubuntu bug 1734290 <https://bugs."
-"launchpad.net/ecryptfs/+bug/1734290>`__. Otherwise the user service will not "
-"start, because by default, systemd checks for user services before your home "
-"directory has been decrypted."
+"will need to make the change described in `Ubuntu bug 1734290 <https://"
+"bugs.launchpad.net/ecryptfs/+bug/1734290>`__. Otherwise the user service "
+"will not start, because by default, systemd checks for user services before "
+"your home directory has been decrypted."
 msgstr ""
 
 #: ../../../users/autostart.rst:416
