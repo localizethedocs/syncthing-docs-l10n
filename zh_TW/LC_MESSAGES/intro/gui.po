@@ -1,0 +1,265 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2019, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../intro/gui.rst:2
+msgid "An Intro to the GUI"
+msgstr "GUI 介紹"
+
+#: ../../../intro/gui.rst:7
+msgid "Folder View"
+msgstr "資料夾檢視"
+
+#: ../../../intro/gui.rst:9
+msgid ""
+"The left side of the screen shows the ID and current state of all configured "
+"folders. Clicking the folder name makes that section expand to show more "
+"detailed folder information, and buttons for pausing the folder, forcing a "
+"rescan, or editing the configuration."
+msgstr ""
+
+#: ../../../intro/gui.rst:14
+msgid "A folder can be in any one of these states:"
+msgstr ""
+
+#: ../../../intro/gui.rst:16
+msgid "Unknown"
+msgstr "未知"
+
+#: ../../../intro/gui.rst:17
+msgid "while the GUI is loading,"
+msgstr ""
+
+#: ../../../intro/gui.rst:19
+msgid "Unshared"
+msgstr "未共享"
+
+#: ../../../intro/gui.rst:20
+msgid "when you have not shared this folder yet,"
+msgstr ""
+
+#: ../../../intro/gui.rst:22
+msgid "Paused"
+msgstr "已暫停"
+
+#: ../../../intro/gui.rst:23
+msgid "when the folder's activity has been put on hold,"
+msgstr ""
+
+#: ../../../intro/gui.rst:25
+msgid "Stopped"
+msgstr ""
+
+#: ../../../intro/gui.rst:26
+msgid "when the folder has experienced an error,"
+msgstr ""
+
+#: ../../../intro/gui.rst:28
+msgid "Up to Date"
+msgstr ""
+
+#: ../../../intro/gui.rst:29
+msgid "when the folder is in sync with the rest of the devices,"
+msgstr ""
+
+#: ../../../intro/gui.rst:31
+msgid "Waiting to Scan"
+msgstr ""
+
+#: ../../../intro/gui.rst:32
+msgid "when waiting for other folders to idle before scanning the folder,"
+msgstr ""
+
+#: ../../../intro/gui.rst:34
+msgid "Scanning"
+msgstr ""
+
+#: ../../../intro/gui.rst:35
+msgid "while Syncthing is looking in the folder for local changes,"
+msgstr ""
+
+#: ../../../intro/gui.rst:37
+msgid "Waiting to Sync"
+msgstr ""
+
+#: ../../../intro/gui.rst:38
+msgid "when waiting for other folders to idle before syncing the folder,"
+msgstr ""
+
+#: ../../../intro/gui.rst:40
+msgid "Preparing to Sync"
+msgstr ""
+
+#: ../../../intro/gui.rst:41
+msgid "when Syncthing is gathering file changes to synchronize,"
+msgstr ""
+
+#: ../../../intro/gui.rst:43
+msgid "Syncing"
+msgstr ""
+
+#: ../../../intro/gui.rst:44
+msgid "when this device is downloading changes from the network,"
+msgstr ""
+
+#: ../../../intro/gui.rst:46
+msgid "Waiting to Clean"
+msgstr ""
+
+#: ../../../intro/gui.rst:47
+msgid "when waiting for the folder to idle before cleaning versions,"
+msgstr ""
+
+#: ../../../intro/gui.rst:49
+msgid "Cleaning Versions"
+msgstr ""
+
+#: ../../../intro/gui.rst:50
+msgid "while removing obsolete files from the .stversions folder."
+msgstr ""
+
+#: ../../../intro/gui.rst:52
+msgid "Local Additions"
+msgstr ""
+
+#: ../../../intro/gui.rst:53
+msgid ""
+"when locally added or modified items are present in a receive-only folder, "
+"thus not synced to remote machines.  The red button \"Revert Local Changes\" "
+"will revert and delete all local changes to the state advertised by remote "
+"devices."
+msgstr ""
+
+#: ../../../intro/gui.rst:58
+msgid ""
+"Among the folder details, you can see the current \"Global State\" and "
+"\"Local State\" summaries, as well as the amount of \"Out of Sync\" data if "
+"the folder state is not up to date."
+msgstr ""
+
+#: ../../../intro/gui.rst:62
+msgid "Global State"
+msgstr ""
+
+#: ../../../intro/gui.rst:63
+msgid ""
+"indicates how much data the fully up to date folder contains, which is "
+"basically the sum of the newest versions of all files from all connected "
+"devices. This is the size of the folder on your computer when it is fully in "
+"sync with the remote devices."
+msgstr ""
+
+#: ../../../intro/gui.rst:68
+msgid "Local State"
+msgstr ""
+
+#: ../../../intro/gui.rst:69
+msgid ""
+"shows how much data the folder actually contains right now. This can be more "
+"or less than the global state, if the folder is currently synchronizing with "
+"other devices."
+msgstr ""
+
+#: ../../../intro/gui.rst:73
+msgid "Out of Sync"
+msgstr ""
+
+#: ../../../intro/gui.rst:74
+msgid ""
+"shows how much data needs to be synchronized from other devices. Note that "
+"this is the sum of all out of sync *files* - if you already have parts of "
+"such a file, or an older version of the file, less data than this will need "
+"to be transferred over the network."
+msgstr ""
+
+#: ../../../intro/gui.rst:79
+msgid "Error"
+msgstr ""
+
+#: ../../../intro/gui.rst:80
+msgid ""
+"describes the problem when the folder is in state Stopped. One possible "
+"message is \"folder marker missing\". This means that the root directory of "
+"this folder does not contain a file or directory called ``.stfolder`` "
+"(marker). Syncthing stops when this marker goes missing to prevent data loss "
+"e.g. when the folder path was unmounted. If the marker was deleted "
+"accidentally, just recreate it and press the rescan button in the UI."
+msgstr ""
+
+#: ../../../intro/gui.rst:89
+msgid "Creating a new synced folder"
+msgstr ""
+
+#: ../../../intro/gui.rst:91
+msgid ""
+"Use the Syncthing Web interface. Click the \"Add Folder\" button which will "
+"bring up a dialogue with the following options:"
+msgstr ""
+
+#: ../../../intro/gui.rst:94
+msgid "Folder Label"
+msgstr "資料夾標籤"
+
+#: ../../../intro/gui.rst:95
+msgid ""
+"should be set to something descriptive. This label will initially be shared "
+"with remote devices, but can be changed on each device, as desired."
+msgstr ""
+
+#: ../../../intro/gui.rst:99
+msgid "Folder ID"
+msgstr ""
+
+#: ../../../intro/gui.rst:100
+msgid ""
+"has to be the same across all devices, as it is the unique identifier of the "
+"folder. Best practice is to keep the auto-generated ID to avoid conflicts "
+"with equally named folders on other devices."
+msgstr ""
+
+#: ../../../intro/gui.rst:104
+msgid "Folder Path"
+msgstr "資料夾路徑"
+
+#: ../../../intro/gui.rst:105
+msgid "designates the physical path to the folder, i.e. on your hard drive."
+msgstr ""
+
+#: ../../../intro/gui.rst:107
+msgid ""
+"Next select with which devices to share the folder with and press add, which "
+"will add the folder and start syncing."
+msgstr ""
+
+#: ../../../intro/gui.rst:111
+msgid "Device View"
+msgstr ""
+
+#: ../../../intro/gui.rst:113
+msgid ""
+"The right side of the screen shows the overall state of all configured "
+"devices. The local device is always at the top, with remote devices in "
+"alphabetical order below. For each device you see its current state and, "
+"when expanded, more detailed information. All transfer rates (\"Download "
+"Rate\" and \"Upload Rate\") are from the perspective of the local device, "
+"even those shown for remote devices. The rates for the local device are the "
+"sum of those for the remote devices. For each rate, you can see the current "
+"transfer speed, followed by the total amount of data transferred so far. You "
+"can click the current transfer speed to toggle the units between bytes and "
+"bits."
+msgstr ""
