@@ -1,0 +1,228 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Firewall Setup &mdash; Syncthing v0.13 文档</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/syncthing.css?v=21f33da5" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://projects.localizethedocs.org/syncthing-docs-l10n/users/firewall.html" />
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=232eb0c5"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/translations.js?v=540d3cec"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="Relaying" href="relaying.html" />
+    <link rel="prev" title="Understanding Synchronization" href="syncing.html" />
+ 
+<script type="text/javascript" src="../ltd-provenance.js"></script>
+<script type="text/javascript" src="../ltd-current.js"></script>
+<script type="text/javascript" src="../../../ltd-config.js"></script>
+<script type="text/javascript" src="../../../ltd-flyout.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Syncthing
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+              <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro/getting-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/gui.html">An intro to the GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/project-presentation.html">Project Presentation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">For Users</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="syncthing.html">Command Line Operation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced.html">Advanced Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="foldermaster.html">Folder Master Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="syncing.html">Understanding Synchronization</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Firewall Setup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#port-forwards">Port Forwards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#local-firewall">Local Firewall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#remote-web-gui">Remote Web GUI</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#tunneling-via-ssh">Tunneling via SSH</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#via-a-proxy">Via a Proxy</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="relaying.html">Relaying</a></li>
+<li class="toctree-l1"><a class="reference internal" href="proxying.html">Using Proxies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ignoring.html">Ignoring Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="versioning.html">File Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="discosrv.html">Custom Discovery Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="relaysrv.html">Custom Relay Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom-upgrades.html">Custom Upgrade Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autostart.html">Starting Syncthing Automatically</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contrib.html">Community Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reverseproxy.html">Reverse Proxy Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="security.html">Security Principles</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">For Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../dev/intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/building.html">Building Syncthing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/contributing.html">Contribution Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/debugging.html">Debugging Syncthing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/device-ids.html">Understanding Device IDs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/events.html">Event API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/infrastructure.html">Syncthing Infrastructure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/issues.html">Issue Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/jenkins.html">Interacting with Jenkins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/mergebot.html">Interacting with the Merge Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/release-creation.html">Creating a Release</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/release-schedule.html">Release Schedule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/release-signing.html">Release Signing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/rest.html">REST API</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Specifications</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../specs/index.html">Specifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../specs/bep-v1.html">Block Exchange Protocol v1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../specs/globaldisco-v3.html">Global Discovery v3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../specs/localdisco-v3.html">Local Discovery Protocol v3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../specs/relay-v1.html">Relay Protocol v1</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Syncthing</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Firewall Setup</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/syncthing/docs/blob/master/users/firewall.rst" class="fa fa-github"> 在 GitHub 上编辑</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="firewall-setup">
+<span id="id1"></span><h1>Firewall Setup<a class="headerlink" href="#firewall-setup" title="链接到此标题。"></a></h1>
+<section id="port-forwards">
+<h2>Port Forwards<a class="headerlink" href="#port-forwards" title="链接到此标题。"></a></h2>
+<p>If you have a NAT router which supports UPnP, the easiest way to get a working
+port forward is to make sure UPnP setting is enabled on both Syncthing and the
+router – Syncthing will try to handle the rest. If it succeeds you will see a
+message in the console saying:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Created</span> <span class="n">UPnP</span> <span class="n">port</span> <span class="n">mapping</span> <span class="k">for</span> <span class="n">external</span> <span class="n">port</span> <span class="n">XXXXX</span> <span class="n">on</span> <span class="n">UPnP</span> <span class="n">device</span> <span class="n">YYYYY</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>If this is not possible or desirable you should set up a port forward for port
+<strong>22000/TCP</strong>, or the port set in the <em>Sync Protocol Listen Address</em> setting.
+The external forwarded port and the internal destination port has to be the same
+(i.e. 22000/TCP).</p>
+<p>Communication in Syncthing works both ways. Therefore if you set up port
+forwards for one device, other devices will be able to connect to it even when
+they are behind a NAT network or firewall.</p>
+<p>In the absence of port forwarding, <a class="reference internal" href="relaying.html#relaying"><span class="std std-ref">Relaying</span></a> may work well enough to get
+devices connected and synced, but will perform poorly in comparison to a
+direct connection.</p>
+</section>
+<section id="local-firewall">
+<h2>Local Firewall<a class="headerlink" href="#local-firewall" title="链接到此标题。"></a></h2>
+<p>If your PC has a local firewall, you will need to open the following ports for
+incoming and outgoing traffic:</p>
+<ul class="simple">
+<li><p>Port <strong>22000/TCP</strong> (or the actual listening port if you have changed
+the <em>Sync Protocol Listen Address</em> setting.)</p></li>
+<li><p>Port <strong>21027/UDP</strong> (for discovery broadcasts on IPv4 and multicasts on IPv6)</p></li>
+</ul>
+</section>
+<section id="remote-web-gui">
+<h2>Remote Web GUI<a class="headerlink" href="#remote-web-gui" title="链接到此标题。"></a></h2>
+<p>To be able to access the web GUI from other computers, you need to change the
+<em>GUI Listen Address</em> setting from the default <code class="docutils literal notranslate"><span class="pre">127.0.0.1:8384</span></code> to
+<code class="docutils literal notranslate"><span class="pre">0.0.0.0:8384</span></code>. You also need to open the port in your local firewall if you
+have one.</p>
+<section id="tunneling-via-ssh">
+<h3>Tunneling via SSH<a class="headerlink" href="#tunneling-via-ssh" title="链接到此标题。"></a></h3>
+<p>If you have SSH access to the machine running Syncthing but would rather not
+open the web GUI port to the outside world, you can access it through a SSH
+tunnel instead. You can start a tunnel with a command like the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="o">-</span><span class="n">L</span> <span class="mi">9999</span><span class="p">:</span><span class="n">localhost</span><span class="p">:</span><span class="mi">8384</span> <span class="n">machine</span>
+</pre></div>
+</div>
+<p>This will bind to your local port 9999 and forward all connections from there to
+port 8384 on the target machine. This still works even if Syncthing is bound to
+listen on localhost only.</p>
+</section>
+</section>
+<section id="via-a-proxy">
+<h2>Via a Proxy<a class="headerlink" href="#via-a-proxy" title="链接到此标题。"></a></h2>
+<p>Syncthing can use a SOCKS5 proxy for outbound connections. Please see <a class="reference internal" href="proxying.html#proxying"><span class="std std-ref">Using Proxies</span></a>.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
+        <a href="syncing.html" class="btn btn-neutral float-left" title="Understanding Synchronization" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="relaying.html" class="btn btn-neutral float-right" title="Relaying" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+      <span class="lastupdated">最后更新于 7月 27, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

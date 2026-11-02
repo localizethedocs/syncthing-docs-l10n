@@ -1,0 +1,468 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-TW" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>常見問題 &mdash; Syncthing v0.13 說明文件</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/syncthing.css?v=21f33da5" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://projects.localizethedocs.org/syncthing-docs-l10n/users/faq.html" />
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=53319032"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/translations.js?v=cbf116e0"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜尋" href="../search.html" />
+    <link rel="next" title="Syncthing 組態" href="config.html" />
+    <link rel="prev" title="Syncthing" href="syncthing.html" />
+ 
+<script type="text/javascript" src="../ltd-provenance.js"></script>
+<script type="text/javascript" src="../ltd-current.js"></script>
+<script type="text/javascript" src="../../../ltd-config.js"></script>
+<script type="text/javascript" src="../../../ltd-flyout.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Syncthing
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro/getting-started.html">開始使用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/gui.html">An intro to the GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/project-presentation.html">Project Presentation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">For Users</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="syncthing.html">Command Line Operation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">常見問題</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#general">一般</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#what-is-syncthing">什麼是 Syncthing？</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#is-it-syncthing-syncthing-or-syncthing">到底是「syncthing」、「Syncthing」還是「SyncThing」？</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-does-syncthing-differ-from-bittorrent-sync">How does Syncthing differ from BitTorrent Sync?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#usage">使用方式</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#what-things-are-synced">哪些內容會被同步？</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#is-synchronization-fast">同步速度快嗎？</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#why-is-the-sync-so-slow">為什麼同步這麼慢？</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#why-does-it-use-so-much-cpu">為什麼會使用這麼多 CPU？</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#should-i-keep-my-device-ids-secret">我應該把裝置 ID 保密嗎？</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#what-if-there-is-a-conflict">如果發生衝突怎麼辦？</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-configure-multiple-users-on-a-single-machine">How to configure multiple users on a single machine?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#does-syncthing-support-syncing-between-folders-on-the-same-system">Syncthing 支援同一系統內資料夾間同步嗎？</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#is-syncthing-my-ideal-backup-application">Syncthing 是我理想的備份應用程式嗎？</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#why-is-there-no-ios-client">Why is there no iOS client?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-can-i-exclude-files-with-brackets-in-the-name">如何排除檔名中含括號（<code class="docutils literal notranslate"><span class="pre">[]</span></code>）的檔案？</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#why-is-the-setup-more-complicated-than-btsync">Why is the setup more complicated than BTSync?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-do-i-access-the-web-gui-from-another-computer">如何從另一台電腦存取 Web GUI？</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#why-do-i-see-syncthing-twice-in-task-manager">為什麼我在工作管理員看到兩個 Syncthing？</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#where-do-syncthing-logs-go-to">Where do Syncthing logs go to?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-do-i-upgrade-syncthing">我要如何升級 Syncthing？</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#where-do-i-find-the-latest-release">我在哪裡可以找到最新發行版？</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced.html">進階組態</a></li>
+<li class="toctree-l1"><a class="reference internal" href="foldermaster.html">Folder Master Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="syncing.html">Understanding Synchronization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="firewall.html">防火牆設定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="relaying.html">Relaying</a></li>
+<li class="toctree-l1"><a class="reference internal" href="proxying.html">Using Proxies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ignoring.html">忽略檔案</a></li>
+<li class="toctree-l1"><a class="reference internal" href="versioning.html">File Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="discosrv.html">Custom Discovery Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="relaysrv.html">Custom Relay Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom-upgrades.html">自訂升級伺服器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autostart.html">自動啟動 Syncthing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contrib.html">社群貢獻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reverseproxy.html">反向代理設定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="security.html">Security Principles</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">For Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../dev/intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/building.html">建置 Syncthing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/contributing.html">Contribution Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/debugging.html">除錯 Syncthing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/device-ids.html">理解裝置 ID</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/events.html">Event API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/infrastructure.html">Syncthing 基礎設施</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/issues.html">議題管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/jenkins.html">Interacting with Jenkins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/mergebot.html">Interacting with the Merge Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/release-creation.html">Creating a Release</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/release-schedule.html">Release Schedule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/release-signing.html">Release Signing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/rest.html">REST API</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Specifications</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../specs/index.html">規格</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../specs/bep-v1.html">區塊交換協定 v1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../specs/globaldisco-v3.html">Global Discovery v3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../specs/localdisco-v3.html">Local Discovery Protocol v3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../specs/relay-v1.html">Relay Protocol v1</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Syncthing</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">常見問題</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/syncthing/docs/blob/master/users/faq.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="faq">
+<span id="id1"></span><h1>常見問題<a class="headerlink" href="#faq" title="連結到這個標頭"></a></h1>
+<section id="general">
+<h2>一般<a class="headerlink" href="#general" title="連結到這個標頭"></a></h2>
+<section id="what-is-syncthing">
+<h3>什麼是 Syncthing？<a class="headerlink" href="#what-is-syncthing" title="連結到這個標頭"></a></h3>
+<p>Syncthing is an application that lets you synchronize your files across multiple
+devices. This means the creation, modification or deletion of files on one
+machine will automatically be replicated to your other devices. We believe your
+data is your data alone and you deserve to choose where it is stored. Therefore
+Syncthing does not upload your data to the cloud but exchanges your data across
+your machines as soon as they are online at the same time.</p>
+</section>
+<section id="is-it-syncthing-syncthing-or-syncthing">
+<h3>到底是「syncthing」、「Syncthing」還是「SyncThing」？<a class="headerlink" href="#is-it-syncthing-syncthing-or-syncthing" title="連結到這個標頭"></a></h3>
+<p>It's <strong>Syncthing</strong>, although the command and source repository is spelled
+<code class="docutils literal notranslate"><span class="pre">syncthing</span></code> so it may be referred to in that way as well. It's definitely not
+<span class="strike">SyncThing</span>, even though the abbreviation <code class="docutils literal notranslate"><span class="pre">st</span></code> is used in some
+circumstances and file names.</p>
+</section>
+<section id="how-does-syncthing-differ-from-bittorrent-sync">
+<h3>How does Syncthing differ from BitTorrent Sync?<a class="headerlink" href="#how-does-syncthing-differ-from-bittorrent-sync" title="連結到這個標頭"></a></h3>
+<p>The two are different and not related. Syncthing and BitTorrent Sync accomplish
+some of the same things, namely syncing files between two or more computers.</p>
+<p>BitTorrent Sync by BitTorrent, Inc is a proprietary peer-to-peer file
+synchronization tool available for Windows, Mac, Linux, Android, iOS, Windows
+Phone, Amazon Kindle Fire and BSD. <a class="footnote-reference brackets" href="#btsync" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> Syncthing is an open source file
+synchronization tool.</p>
+<p>Syncthing uses an open and documented protocol, and likewise the security
+mechanisms in use are well defined and visible in the source code. BitTorrent
+Sync uses an undocumented, closed protocol with unknown security properties.</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="btsync" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="http://en.wikipedia.org/wiki/BitTorrent_Sync">http://en.wikipedia.org/wiki/BitTorrent_Sync</a></p>
+</aside>
+</aside>
+</section>
+</section>
+<section id="usage">
+<h2>使用方式<a class="headerlink" href="#usage" title="連結到這個標頭"></a></h2>
+<section id="what-things-are-synced">
+<h3>哪些內容會被同步？<a class="headerlink" href="#what-things-are-synced" title="連結到這個標頭"></a></h3>
+<p>以下項目會*一定*被同步：</p>
+<ul class="simple">
+<li><p>File Contents</p></li>
+<li><p>File Modification Times</p></li>
+</ul>
+<p>以下項目是否同步則視情況而定：</p>
+<ul class="simple">
+<li><p>File Permissions (When supported by file system. On Windows, only the
+read only bit is synchronized.)</p></li>
+<li><p>Symbolic Links (When supported by the OS. On Windows Vista and up,
+requires administrator privileges. Links are synced as is and are not
+followed.)</p></li>
+</ul>
+<p>The following is <em>not</em> synchronized;</p>
+<ul class="simple">
+<li><p>File or Directory Owners and Groups (not preserved)</p></li>
+<li><p>Directory Modification Times (not preserved)</p></li>
+<li><p>Hard Links (followed, not preserved)</p></li>
+<li><p>Extended Attributes, Resource Forks (not preserved)</p></li>
+<li><p>Windows, POSIX or NFS ACLs (not preserved)</p></li>
+<li><p>Devices, FIFOs, and Other Specials (ignored)</p></li>
+<li><p>Sparse file sparseness (will become unsparse)</p></li>
+</ul>
+</section>
+<section id="is-synchronization-fast">
+<h3>同步速度快嗎？<a class="headerlink" href="#is-synchronization-fast" title="連結到這個標頭"></a></h3>
+<p>Syncthing segments files into pieces, called blocks, to transfer data from one
+device to another. Therefore, multiple devices can share the synchronization
+load, in a similar way as the torrent protocol. The more devices you have online
+(and synchronized), the faster an additional device will receive the data
+because small blocks will be fetched from all devices in parallel.</p>
+<p>Syncthing handles renaming files and updating their metadata in an efficient
+manner. This means that renaming a large file will not cause a retransmission of
+that file. Additionally, appending data to existing large files should be
+handled efficiently as well.</p>
+<p>Temporary files are used to store partial data downloaded from other devices.
+They are automatically removed whenever a file transfer has been completed or
+after the configured amount of time which is set in the configuration file (24
+hours by default).</p>
+</section>
+<section id="why-is-the-sync-so-slow">
+<h3>為什麼同步這麼慢？<a class="headerlink" href="#why-is-the-sync-so-slow" title="連結到這個標頭"></a></h3>
+<p>When troubleshooting a slow sync, there are a number of things to check.</p>
+<p>First of all, verify that you are not connected via a relay. In the &quot;Remote
+Devices&quot; list on the right side of the GUI, double check that you see
+&quot;Address: &lt;some address&gt;&quot; and <em>not</em> &quot;Relay: &lt;some address&gt;&quot;.</p>
+<img alt="../_images/address.png" src="../_images/address.png" />
+<p>If you are connected via a relay, this is because a direct connection could
+not be established. Double check and follow the suggestions in
+<a class="reference internal" href="firewall.html#firewall-setup"><span class="std std-ref">防火牆設定</span></a> to enable direct connections.</p>
+<p>Second, if one of the devices is a very low powered machine (a Raspberry Pi,
+or a phone, or a NAS, or similar) you are likely constrained by the CPU on
+that device. See the next question for reasons Syncthing likes a faster CPU.
+You can verify this by looking at the CPU utilization in the GUI. If it is
+constantly at or close to 100%, you are limited by the CPU speed. In some
+cases a lower CPU usage number can also indicate being limited by the CPU -
+for example constant 25% usage on a four core CPU likely means that
+Syncthing is doing something that is not parallellizable and thus limited to
+a single CPU core.</p>
+<p>Third, verify that the network connection is OK. Tools such as iperf or just
+an Internet speed test can be used to verify the performance here.</p>
+</section>
+<section id="why-does-it-use-so-much-cpu">
+<h3>為什麼會使用這麼多 CPU？<a class="headerlink" href="#why-does-it-use-so-much-cpu" title="連結到這個標頭"></a></h3>
+<ol class="arabic simple">
+<li><p>When new or changed files are detected, or Syncthing starts for the
+first time, your files are hashed using SHA-256.</p></li>
+<li><p>Data that is sent over the network is (optionally) compressed and
+encrypted using AES-128. When receiving data, it must be decrypted.</p></li>
+<li><p>There is a certain amount of housekeeping that must be done to track the
+current and available versions of each file in the index database.</p></li>
+<li><p>By default Syncthing uses periodic scanning every 60 seconds to detect
+file changes. This means checking every file's modification time and
+comparing it to the database. This can cause spikes of CPU usage for large
+folders.</p></li>
+</ol>
+<p>Hashing, compression and encryption cost CPU time. Also, using the GUI
+causes a certain amount of extra CPU usage to calculate the summary data it
+presents. Note however that once things are <em>in sync</em> CPU usage should be
+negligible.</p>
+<p>To limit the amount of CPU used when syncing and scanning, set the
+environment variable <code class="docutils literal notranslate"><span class="pre">GOMAXPROCS</span></code> to the maximum number of CPU cores
+Syncthing should use at any given moment. For example, <code class="docutils literal notranslate"><span class="pre">GOMAXPROCS=2</span></code> on a
+machine with four cores will limit Syncthing to no more than half the
+system's CPU power.</p>
+<p>To reduce CPU spikes from scanning activity, use a filesystem notifications
+plugin. This is delivered by default via Synctrayzor, Syncthing-GTK and on
+Android. For other setups, consider using <a class="reference external" href="https://github.com/syncthing/syncthing-inotify">syncthing-inotify</a>.</p>
+</section>
+<section id="should-i-keep-my-device-ids-secret">
+<h3>我應該把裝置 ID 保密嗎？<a class="headerlink" href="#should-i-keep-my-device-ids-secret" title="連結到這個標頭"></a></h3>
+<p>No. The IDs are not sensitive. Given a device ID it's possible to find the IP
+address for that node, if global discovery is enabled on it. Knowing the device
+ID doesn't help you actually establish a connection to that node or get a list
+of files, etc.</p>
+<p>For a connection to be established, both nodes need to know about the other's
+device ID. It's not possible (in practice) to forge a device ID. (To forge a
+device ID you need to create a TLS certificate with that specific SHA-256 hash.
+If you can do that, you can spoof any TLS certificate. The world is your
+oyster!)</p>
+<div class="admonition seealso">
+<p class="admonition-title">請參閱</p>
+<p><a class="reference internal" href="../dev/device-ids.html#device-ids"><span class="std std-ref">理解裝置 ID</span></a></p>
+</div>
+</section>
+<section id="what-if-there-is-a-conflict">
+<h3>如果發生衝突怎麼辦？<a class="headerlink" href="#what-if-there-is-a-conflict" title="連結到這個標頭"></a></h3>
+<p>Syncthing does recognize conflicts. When a file has been modified on two devices
+simultaneously, one of the files will be renamed to <code class="docutils literal notranslate"><span class="pre">&lt;filename&gt;.sync-</span>
+<span class="pre">conflict-&lt;date&gt;-&lt;time&gt;.&lt;ext&gt;</span></code>. The device which has the larger value of the
+first 63 bits for his device ID will have his file marked as the conflicting
+file. Note that we only create <code class="docutils literal notranslate"><span class="pre">sync-conflict</span></code> files when the actual content
+differs.</p>
+<p>Beware that the <code class="docutils literal notranslate"><span class="pre">&lt;filename&gt;.sync-conflict-&lt;date&gt;-&lt;time&gt;.&lt;ext&gt;</span></code> files are
+treated as normal files after they are created, so they are propagated between
+devices. We do this because the conflict is detected and resolved on one device,
+creating the <code class="docutils literal notranslate"><span class="pre">sync-conflict</span></code> file, but it's just as much of a conflict
+everywhere else and we don't know which of the conflicting files is the &quot;best&quot;
+from the user point of view. Moreover, if there's something that automatically
+causes a conflict on change you'll end up with <code class="docutils literal notranslate"><span class="pre">sync-conflict-...sync-conflict</span>
+<span class="pre">-...-sync-conflict</span></code> files.</p>
+</section>
+<section id="how-to-configure-multiple-users-on-a-single-machine">
+<h3>How to configure multiple users on a single machine?<a class="headerlink" href="#how-to-configure-multiple-users-on-a-single-machine" title="連結到這個標頭"></a></h3>
+<p>Each user should run their own Syncthing instance. Be aware that you might need
+to configure listening ports such that they do not overlap (see <a class="reference internal" href="config.html#config"><span class="std std-ref">Syncthing 組態</span></a>).</p>
+</section>
+<section id="does-syncthing-support-syncing-between-folders-on-the-same-system">
+<h3>Syncthing 支援同一系統內資料夾間同步嗎？<a class="headerlink" href="#does-syncthing-support-syncing-between-folders-on-the-same-system" title="連結到這個標頭"></a></h3>
+<p>No. Syncthing is not designed to sync locally and the overhead involved in
+doing so using Syncthing's method would be wasteful. There are better
+programs to achieve this such as rsync or Unison.</p>
+</section>
+<section id="is-syncthing-my-ideal-backup-application">
+<h3>Syncthing 是我理想的備份應用程式嗎？<a class="headerlink" href="#is-syncthing-my-ideal-backup-application" title="連結到這個標頭"></a></h3>
+<p>No. Syncthing is not a great backup application because all changes to your
+files (modifications, deletions, etc) will be propagated to all your
+devices. You can enable versioning, but we encourage the use of other tools
+to keep your data safe from your (or our) mistakes.</p>
+</section>
+<section id="why-is-there-no-ios-client">
+<h3>Why is there no iOS client?<a class="headerlink" href="#why-is-there-no-ios-client" title="連結到這個標頭"></a></h3>
+<p>There is an alternative implementation of Syncthing (using the same network
+protocol) called <code class="docutils literal notranslate"><span class="pre">fsync()</span></code>. There are no plans by the current Syncthing
+team to support iOS in the foreseeable future, as the code required to do so
+would be quite different from what Syncthing is today.</p>
+</section>
+<section id="how-can-i-exclude-files-with-brackets-in-the-name">
+<h3>如何排除檔名中含括號（<code class="docutils literal notranslate"><span class="pre">[]</span></code>）的檔案？<a class="headerlink" href="#how-can-i-exclude-files-with-brackets-in-the-name" title="連結到這個標頭"></a></h3>
+<p>The patterns in .stignore are glob patterns, where brackets are used to
+denote character ranges. That is, the pattern <code class="docutils literal notranslate"><span class="pre">q[abc]x</span></code> will match the
+files <code class="docutils literal notranslate"><span class="pre">qax</span></code>, <code class="docutils literal notranslate"><span class="pre">qbx</span></code> and <code class="docutils literal notranslate"><span class="pre">qcx</span></code>.</p>
+<p>To match an actual file <em>called</em> <code class="docutils literal notranslate"><span class="pre">q[abc]x</span></code> the pattern needs to &quot;escape&quot;
+the brackets, like so: <code class="docutils literal notranslate"><span class="pre">q\[abc\]x</span></code>.</p>
+<p>On Windows, escaping special characters is not supported as the <code class="docutils literal notranslate"><span class="pre">\</span></code>
+character is used as a path separator. On the other hand, special characters
+such as <code class="docutils literal notranslate"><span class="pre">[</span></code> and <code class="docutils literal notranslate"><span class="pre">?</span></code> are not allowed in file names on Windows.</p>
+</section>
+<section id="why-is-the-setup-more-complicated-than-btsync">
+<h3>Why is the setup more complicated than BTSync?<a class="headerlink" href="#why-is-the-setup-more-complicated-than-btsync" title="連結到這個標頭"></a></h3>
+<p>Security over convenience. In Syncthing you have to setup both sides to
+connect two nodes. An attacker can't do much with a stolen node ID, because
+you have to add the node on the other side too. You have better control
+where your files are transferred.</p>
+<p>這是我們長期持續改善的方向。</p>
+</section>
+<section id="how-do-i-access-the-web-gui-from-another-computer">
+<h3>如何從另一台電腦存取 Web GUI？<a class="headerlink" href="#how-do-i-access-the-web-gui-from-another-computer" title="連結到這個標頭"></a></h3>
+<p>The default listening address is 127.0.0.1:8384, so you can only access the
+GUI from the same machine. This is for security reasons. Change the <code class="docutils literal notranslate"><span class="pre">GUI</span>
+<span class="pre">listen</span> <span class="pre">address</span></code> through the web UI from <code class="docutils literal notranslate"><span class="pre">127.0.0.1:8384</span></code> to
+<code class="docutils literal notranslate"><span class="pre">0.0.0.0:8384</span></code> or change the config.xml:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;gui</span><span class="w"> </span><span class="na">enabled=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="na">tls=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;address&gt;</span>127.0.0.1:8384<span class="nt">&lt;/address&gt;</span>
+</pre></div>
+</div>
+<p>到</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;gui</span><span class="w"> </span><span class="na">enabled=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="na">tls=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;address&gt;</span>0.0.0.0:8384<span class="nt">&lt;/address&gt;</span>
+</pre></div>
+</div>
+<p>Then the GUI is accessible from everywhere. You should set a password and
+enable HTTPS with this configuration. You can do this from inside the GUI.</p>
+<p>If both your computers are Unixy (Linux, Mac, etc) You can also leave the
+GUI settings at default and use an ssh port forward to access it. For
+example,</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>ssh<span class="w"> </span>-L<span class="w"> </span><span class="m">9090</span>:127.0.0.1:8384<span class="w"> </span>user@othercomputer.example.com
+</pre></div>
+</div>
+<p>will log you into othercomputer.example.com, and present the <em>remote</em>
+Syncthing GUI on <a class="reference external" href="http://localhost:9090">http://localhost:9090</a> on your <em>local</em> computer.</p>
+</section>
+<section id="why-do-i-see-syncthing-twice-in-task-manager">
+<h3>為什麼我在工作管理員看到兩個 Syncthing？<a class="headerlink" href="#why-do-i-see-syncthing-twice-in-task-manager" title="連結到這個標頭"></a></h3>
+<p>One process manages the other, to capture logs and manage restarts. This
+makes it easier to handle upgrades from within Syncthing itself, and also
+ensures that we get a nice log file to help us narrow down the cause for
+crashes and other bugs.</p>
+</section>
+<section id="where-do-syncthing-logs-go-to">
+<h3>Where do Syncthing logs go to?<a class="headerlink" href="#where-do-syncthing-logs-go-to" title="連結到這個標頭"></a></h3>
+<p>Syncthing logs to stdout by default. On Windows Syncthing by default also
+creates <code class="docutils literal notranslate"><span class="pre">syncthing.log</span></code> in Syncthing's home directory (run <code class="docutils literal notranslate"><span class="pre">syncthing</span>
+<span class="pre">-paths</span></code> to see where that is). Command line option <code class="docutils literal notranslate"><span class="pre">-logfile</span></code> can be used
+to specify a user-defined logfile.</p>
+</section>
+<section id="how-do-i-upgrade-syncthing">
+<h3>我要如何升級 Syncthing？<a class="headerlink" href="#how-do-i-upgrade-syncthing" title="連結到這個標頭"></a></h3>
+<p>If you use a package manager such as Debian's apt-get, you should upgrade
+using the package manager. If you use the binary packages linked from
+Syncthing.net, you can use Syncthing built in automatic upgrades.</p>
+<ul class="simple">
+<li><p>If automatic upgrades is enabled (which is the default), Syncthing will
+upgrade itself automatically within 24 hours of a new release.</p></li>
+<li><p>The upgrade button appears in the web GUI when a new version has been
+released. Pressing it will perform an upgrade.</p></li>
+<li><p>To force an upgrade from the command line, run <code class="docutils literal notranslate"><span class="pre">syncthing</span> <span class="pre">-upgrade</span></code>.</p></li>
+</ul>
+<p>Note that your system should have CA certificates installed which allow a
+secure connection to GitHub (e.g. FreeBSD requires <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">pkg</span> <span class="pre">install</span>
+<span class="pre">ca_root_nss</span></code>). If <code class="docutils literal notranslate"><span class="pre">curl</span></code> or <code class="docutils literal notranslate"><span class="pre">wget</span></code> works with normal HTTPS sites, then
+so should Syncthing.</p>
+</section>
+<section id="where-do-i-find-the-latest-release">
+<h3>我在哪裡可以找到最新發行版？<a class="headerlink" href="#where-do-i-find-the-latest-release" title="連結到這個標頭"></a></h3>
+<p>We release new versions through GitHub. The latest release is always found
+<a class="reference external" href="https://github.com/syncthing/syncthing/releases/latest">on the release page</a>. Unfortunately
+GitHub does not provide a single URL to automatically download the latest
+version. We suggest to use the GitHub API at
+<a class="reference external" href="https://api.github.com/repos/syncthing/syncthing/releases/latest">https://api.github.com/repos/syncthing/syncthing/releases/latest</a> and parsing
+the JSON response.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="syncthing.html" class="btn btn-neutral float-left" title="Syncthing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="config.html" class="btn btn-neutral float-right" title="Syncthing 組態" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+      <span class="lastupdated">最後更新於 7月 27, 2026。
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
