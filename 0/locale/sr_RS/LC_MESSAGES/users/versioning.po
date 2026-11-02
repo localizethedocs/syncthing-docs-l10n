@@ -74,8 +74,8 @@ msgid ""
 "device. This option also takes a value in an input titled \"Keep Versions\" "
 "which tells Syncthing how many old versions of the file it should keep. For "
 "example, if you set this value to 5, if a file is replaced 5 times on a "
-"remote device, you will see 5 time-stamped versions on that file in the \"."
-"stversions\" folder on the other devices sharing the same folder."
+"remote device, you will see 5 time-stamped versions on that file in the "
+"\".stversions\" folder on the other devices sharing the same folder."
 msgstr ""
 
 #: ../../../users/versioning.rst:44
@@ -206,9 +206,9 @@ msgstr ""
 
 #: ../../../users/versioning.rst:118
 msgid ""
-"The script will then move the file in question to ``~/.trashcan/docs/letter."
-"txt``, replacing any previous version of that letter that may already have "
-"been there."
+"The script will then move the file in question to ``~/.trashcan/docs/"
+"letter.txt``, replacing any previous version of that letter that may already "
+"have been there."
 msgstr ""
 
 #: ../../../users/versioning.rst:123

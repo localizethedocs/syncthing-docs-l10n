@@ -443,8 +443,8 @@ msgstr ""
 
 #: ../../../users/syncthing.rst:200
 msgid ""
-":manpage:`syncthing-config(5)`, :manpage:`syncthing-stignore(5)`, :manpage:"
-"`syncthing-device-ids(7)`, :manpage:`syncthing-security(7)`, :manpage:"
-"`syncthing-networking(7)`, :manpage:`syncthing-versioning(7)`, :manpage:"
-"`syncthing-faq(7)`"
+":manpage:`syncthing-config(5)`, :manpage:`syncthing-"
+"stignore(5)`, :manpage:`syncthing-device-ids(7)`, :manpage:`syncthing-"
+"security(7)`, :manpage:`syncthing-networking(7)`, :manpage:`syncthing-"
+"versioning(7)`, :manpage:`syncthing-faq(7)`"
 msgstr ""

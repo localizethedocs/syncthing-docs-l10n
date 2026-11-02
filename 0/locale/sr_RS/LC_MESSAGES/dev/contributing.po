@@ -85,8 +85,8 @@ msgid ""
 "A small change or refactor that is obviously correct. These may be pushed "
 "without review by any member of the core team. Examples: `removing dead code "
 "<https://github.com/syncthing/syncthing/commits/master>`__, `updating values "
-"<https://github.com/syncthing/syncthing/"
-"commit/2aa028facb7ccbe48e85c8c444501cc3fb38ef24>`__."
+"<https://github.com/syncthing/syncthing/commit/"
+"2aa028facb7ccbe48e85c8c444501cc3fb38ef24>`__."
 msgstr ""
 
 #: ../../../dev/contributing.rst:46
@@ -100,8 +100,8 @@ msgid ""
 "Minor changes must go through a pull request and can be merged on approval "
 "by any other developer on the core or maintainers team. Tests must pass. "
 "Examples: `adding caching <https://github.com/syncthing/syncthing/pull/2432/"
-"files>`__, `fixing a small bug <https://github.com/syncthing/syncthing/"
-"pull/2406/files>`__."
+"files>`__, `fixing a small bug <https://github.com/syncthing/syncthing/pull/"
+"2406/files>`__."
 msgstr ""
 
 #: ../../../dev/contributing.rst:54

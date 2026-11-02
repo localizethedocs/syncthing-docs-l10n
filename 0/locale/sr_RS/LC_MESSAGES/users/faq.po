@@ -200,8 +200,8 @@ msgstr ""
 #: ../../../users/faq.rst:105
 msgid ""
 "If you are connected via a relay, this is because a direct connection could "
-"not be established. Double check and follow the suggestions in :ref:"
-"`firewall-setup` to enable direct connections."
+"not be established. Double check and follow the suggestions "
+"in :ref:`firewall-setup` to enable direct connections."
 msgstr ""
 
 #: ../../../users/faq.rst:109
@@ -273,8 +273,8 @@ msgstr ""
 msgid ""
 "To reduce CPU spikes from scanning activity, use a filesystem notifications "
 "plugin. This is delivered by default via Synctrayzor, Syncthing-GTK and on "
-"Android. For other setups, consider using `syncthing-inotify <https://github."
-"com/syncthing/syncthing-inotify>`_."
+"Android. For other setups, consider using `syncthing-inotify <https://"
+"github.com/syncthing/syncthing-inotify>`_."
 msgstr ""
 
 #: ../../../users/faq.rst:156
@@ -309,11 +309,11 @@ msgstr ""
 #: ../../../users/faq.rst:175
 msgid ""
 "Syncthing does recognize conflicts. When a file has been modified on two "
-"devices simultaneously, one of the files will be renamed to ``<filename>."
-"sync- conflict-<date>-<time>.<ext>``. The device which has the larger value "
-"of the first 63 bits for his device ID will have his file marked as the "
-"conflicting file. Note that we only create ``sync-conflict`` files when the "
-"actual content differs."
+"devices simultaneously, one of the files will be renamed to "
+"``<filename>.sync- conflict-<date>-<time>.<ext>``. The device which has the "
+"larger value of the first 63 bits for his device ID will have his file "
+"marked as the conflicting file. Note that we only create ``sync-conflict`` "
+"files when the actual content differs."
 msgstr ""
 
 #: ../../../users/faq.rst:182
@@ -335,8 +335,8 @@ msgstr ""
 #: ../../../users/faq.rst:194
 msgid ""
 "Each user should run their own Syncthing instance. Be aware that you might "
-"need to configure listening ports such that they do not overlap (see :ref:"
-"`config`)."
+"need to configure listening ports such that they do not overlap "
+"(see :ref:`config`)."
 msgstr ""
 
 #: ../../../users/faq.rst:198
@@ -484,8 +484,8 @@ msgstr ""
 #: ../../../users/faq.rst:289
 msgid ""
 "Syncthing logs to stdout by default. On Windows Syncthing by default also "
-"creates ``syncthing.log`` in Syncthing's home directory (run ``syncthing -"
-"paths`` to see where that is). Command line option ``-logfile`` can be used "
+"creates ``syncthing.log`` in Syncthing's home directory (run ``syncthing "
+"-paths`` to see where that is). Command line option ``-logfile`` can be used "
 "to specify a user-defined logfile."
 msgstr ""
 

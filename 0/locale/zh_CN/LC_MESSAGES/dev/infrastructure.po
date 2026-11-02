@@ -24,8 +24,8 @@ msgstr ""
 #: ../../../dev/infrastructure.rst:4
 msgid ""
 "This is a list of the infrastructure that powers the Syncthing project. "
-"Unless otherwise noted, the default is that it's a VM hosted by :user:"
-"`calmh`."
+"Unless otherwise noted, the default is that it's a VM hosted "
+"by :user:`calmh`."
 msgstr ""
 
 #: ../../../dev/infrastructure.rst:8

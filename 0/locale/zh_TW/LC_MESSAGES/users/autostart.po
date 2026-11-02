@@ -272,8 +272,8 @@ msgstr ""
 
 #: ../../../users/autostart.rst:109
 msgid ""
-"From an administrator Command Prompt, CD to the NSSM folder and run ``nssm."
-"exe install syncthing``"
+"From an administrator Command Prompt, CD to the NSSM folder and run "
+"``nssm.exe install syncthing``"
 msgstr ""
 
 #: ../../../users/autostart.rst:110
@@ -282,8 +282,8 @@ msgstr ""
 
 #: ../../../users/autostart.rst:112
 msgid ""
-"Set *Path* to your ``syncthing.exe`` and enter ``-no-restart -no-browser -"
-"home=\"<path to your Syncthing folder>\"`` as Arguments. Note: Logging is "
+"Set *Path* to your ``syncthing.exe`` and enter ``-no-restart -no-browser "
+"-home=\"<path to your Syncthing folder>\"`` as Arguments. Note: Logging is "
 "set later on. ``-logfile`` here will not be applied."
 msgstr ""
 
@@ -458,8 +458,8 @@ msgstr ""
 #: ../../../users/autostart.rst:170
 msgid ""
 "Log out and back in again. Or, if you do not want to log out, you can run "
-"this command in terminal: ``launchctl load ~/Library/LaunchAgents/syncthing."
-"plist``"
+"this command in terminal: ``launchctl load ~/Library/LaunchAgents/"
+"syncthing.plist``"
 msgstr ""
 
 #: ../../../users/autostart.rst:174
@@ -495,8 +495,8 @@ msgstr ""
 
 #: ../../../users/autostart.rst:189
 msgid ""
-"Command: ``/path/to/syncthing/binary -no-browser -home=\"/home/your\\_user/."
-"config/syncthing\"``"
+"Command: ``/path/to/syncthing/binary -no-browser -home=\"/home/"
+"your\\_user/.config/syncthing\"``"
 msgstr ""
 
 #: ../../../users/autostart.rst:192
@@ -510,8 +510,8 @@ msgstr ""
 #: ../../../users/autostart.rst:196
 msgid ""
 "[program:syncthing]\n"
-"command = /path/to/syncthing/binary -no-browser -home=\"/home/some_user/."
-"config/syncthing\"\n"
+"command = /path/to/syncthing/binary -no-browser -home=\"/home/"
+"some_user/.config/syncthing\"\n"
 "directory = /home/some_user/\n"
 "autorestart = True\n"
 "user = some_user\n"

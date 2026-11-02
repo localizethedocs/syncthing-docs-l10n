@@ -49,9 +49,9 @@ msgstr ""
 msgid ""
 "As a new user, the :ref:`getting started guide <getting-started>` is a good "
 "place to start, then perhaps moving on to :ref:`the FAQ <faq>`. If you run "
-"into trouble getting devices to connect to each other, the page about :ref:"
-"`firewall setup <firewall-setup>` explains the networking necessary to get "
-"it to work."
+"into trouble getting devices to connect to each other, the page "
+"about :ref:`firewall setup <firewall-setup>` explains the networking "
+"necessary to get it to work."
 msgstr ""
 
 #: ../../../index.rst:14
@@ -67,8 +67,8 @@ msgstr ""
 
 #: ../../../index.rst:21
 msgid ""
-"If you're looking for specific people to talk to, check out the :ref:"
-"`project-presentation`."
+"If you're looking for specific people to talk to, check out "
+"the :ref:`project-presentation`."
 msgstr ""
 
 #: ../../../index.rst:24
@@ -98,8 +98,8 @@ msgstr ""
 
 #: ../../../index.rst:39
 msgid ""
-"For other concerns you may reach out to members of the core team, currently :"
-"user:`calmh`, :user:`AudriusButkevicius` and :user:`Zillode`."
+"For other concerns you may reach out to members of the core team, "
+"currently :user:`calmh`, :user:`AudriusButkevicius` and :user:`Zillode`."
 msgstr ""
 
 #: ../../../index.rst:42

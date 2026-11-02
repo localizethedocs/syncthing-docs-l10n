@@ -120,6 +120,6 @@ msgstr ""
 
 #: ../../../users/firewall.rst:63
 msgid ""
-"Syncthing can use a SOCKS5 proxy for outbound connections. Please see :ref:"
-"`proxying`."
+"Syncthing can use a SOCKS5 proxy for outbound connections. Please "
+"see :ref:`proxying`."
 msgstr ""
