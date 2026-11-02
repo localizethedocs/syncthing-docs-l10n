@@ -518,9 +518,3 @@ msgid ""
 "or deleted.  If the path to the application contains spaces, it should be "
 "quoted."
 msgstr ""
-
-#~ msgid "%FOLDER_PATH%"
-#~ msgstr "%FOLDER_PATH%"
-
-#~ msgid "%FILE_PATH%"
-#~ msgstr "%FILE_PATH%"

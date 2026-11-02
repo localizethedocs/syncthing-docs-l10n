@@ -305,9 +305,9 @@ msgstr ""
 #: ../../../users/strelaysrv.rst:206
 msgid ""
 "The relay server listens on two ports by default.  One for data connections "
-"and the other for providing public statistics at https://relays.syncthing."
-"net/.  The firewall, such as ``iptables``, must permit incoming TCP "
-"connections to the following ports:"
+"and the other for providing public statistics at https://"
+"relays.syncthing.net/.  The firewall, such as ``iptables``, must permit "
+"incoming TCP connections to the following ports:"
 msgstr ""
 
 #: ../../../users/strelaysrv.rst:210
@@ -365,6 +365,6 @@ msgstr ""
 
 #: ../../../users/strelaysrv.rst:237
 msgid ""
-":manpage:`syncthing-relay(7)`, :manpage:`syncthing-faq(7)`, :manpage:"
-"`syncthing-networking(7)`"
+":manpage:`syncthing-relay(7)`, :manpage:`syncthing-"
+"faq(7)`, :manpage:`syncthing-networking(7)`"
 msgstr ""

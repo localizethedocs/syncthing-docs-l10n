@@ -116,8 +116,8 @@ msgstr "硬連結（會跟隨，但不保留）"
 
 #: ../../../users/faq-parts/general.rst:50
 msgid ""
-"Windows junctions (synced as ordinary directories; require enabling in :"
-"stconf:opt:`the configuration <folder.junctionsAsDirs>` on a per-folder "
+"Windows junctions (synced as ordinary directories; require enabling "
+"in :stconf:opt:`the configuration <folder.junctionsAsDirs>` on a per-folder "
 "basis)"
 msgstr ""
 
@@ -141,8 +141,8 @@ msgstr ""
 
 #: ../../../users/faq-parts/general.rst:57
 msgid ""
-"Syncthing internal files and folders (e.g. ``.stfolder``, ``.stignore``, ``."
-"stversions``, :ref:`temporary files <temporary-files>`, etc.)"
+"Syncthing internal files and folders (e.g. ``.stfolder``, ``.stignore``, "
+"``.stversions``, :ref:`temporary files <temporary-files>`, etc.)"
 msgstr ""
 
 #: ../../../users/faq-parts/general.rst:61
@@ -315,8 +315,8 @@ msgstr "以下是透過中繼連線的裝置範例："
 #: ../../../users/faq-parts/troubleshooting.rst:29
 msgid ""
 "If you are connected via a relay, this is because a direct connection could "
-"not be established. Double check and follow the suggestions in :ref:"
-"`firewall-setup` to enable direct connections."
+"not be established. Double check and follow the suggestions "
+"in :ref:`firewall-setup` to enable direct connections."
 msgstr ""
 
 #: ../../../users/faq-parts/troubleshooting.rst:33
@@ -410,8 +410,8 @@ msgstr "為什麼我在 GUI/API 看到「Host check error」？"
 msgid ""
 "Since version 0.14.6 Syncthing does an extra security check when the GUI/API "
 "is bound to localhost - namely that the browser is talking to localhost. "
-"This protects against most forms of `DNS rebinding attack <https://en."
-"wikipedia.org/wiki/DNS_rebinding>`__ against the GUI."
+"This protects against most forms of `DNS rebinding attack <https://"
+"en.wikipedia.org/wiki/DNS_rebinding>`__ against the GUI."
 msgstr ""
 
 #: ../../../users/faq-parts/troubleshooting.rst:91
@@ -454,11 +454,12 @@ msgstr "我的 Syncthing 資料庫損毀了"
 msgid ""
 "This is almost always a result of bad RAM, storage device or other hardware. "
 "When the index database is found to be corrupt Syncthing cannot operate and "
-"will note this in the logs and exit. To overcome this delete the :ref:"
-"`database folder <config-locations>` inside Syncthing's data directory and "
-"re-start Syncthing. It will then need to perform a full re-hashing of all "
-"shared folders. You should check your system in case the underlying cause is "
-"indeed faulty hardware which may put the system at risk of further data loss."
+"will note this in the logs and exit. To overcome this delete "
+"the :ref:`database folder <config-locations>` inside Syncthing's data "
+"directory and re-start Syncthing. It will then need to perform a full re-"
+"hashing of all shared folders. You should check your system in case the "
+"underlying cause is indeed faulty hardware which may put the system at risk "
+"of further data loss."
 msgstr ""
 
 #: ../../../users/faq-parts/troubleshooting.rst:118
@@ -482,8 +483,8 @@ msgid ""
 "The web GUI contains a ``Recent Changes`` button under the device list which "
 "displays changes since the last (re)start of Syncthing. With the ``--audit`` "
 "option you can enable a persistent, detailed log of changes and most "
-"activities, which contains a JSON-formatted sequence of events in the ``~/."
-"local/state/syncthing/audit-_date_-_time_.log`` file."
+"activities, which contains a JSON-formatted sequence of events in the "
+"``~/.local/state/syncthing/audit-_date_-_time_.log`` file."
 msgstr ""
 
 #: ../../../users/faq-parts/troubleshooting.rst:135
@@ -569,9 +570,9 @@ msgstr ""
 msgid ""
 "It is possible that a file cleaning software has removed the ``.stfolder``. "
 "Some software removes empty folders, and the ``.stfolder`` is often empty. "
-"This happens particularly often on Android. To remediate, recreate the ``."
-"stfolder`` and add a dummy file in it, or add an exception to your cleaning "
-"software."
+"This happens particularly often on Android. To remediate, recreate the "
+"``.stfolder`` and add a dummy file in it, or add an exception to your "
+"cleaning software."
 msgstr ""
 
 #: ../../../users/faq-parts/troubleshooting.rst:192
@@ -683,9 +684,9 @@ msgstr ""
 #: ../../../users/faq-parts/usage.rst:53
 msgid ""
 "An alternative way is to shut down Syncthing, move the folder on disk "
-"(including the ``.stfolder`` marker), edit the path directly in ``config."
-"xml`` in the configuration folder (see :doc:`/users/config`) and then start "
-"Syncthing again."
+"(including the ``.stfolder`` marker), edit the path directly in "
+"``config.xml`` in the configuration folder (see :doc:`/users/config`) and "
+"then start Syncthing again."
 msgstr ""
 
 #: ../../../users/faq-parts/usage.rst:58
@@ -915,14 +916,16 @@ msgstr ""
 
 #: ../../../users/faq-parts/usage.rst:181
 msgid ""
-"To add e.g. a red theme, you can create the file ``red/assets/css/theme."
-"css`` inside the GUI override directory to override the default CSS styles."
+"To add e.g. a red theme, you can create the file ``red/assets/css/"
+"theme.css`` inside the GUI override directory to override the default CSS "
+"styles."
 msgstr ""
 
 #: ../../../users/faq-parts/usage.rst:184
 msgid ""
-"To create a whole new GUI, you should checkout the files at https://github."
-"com/syncthing/syncthing/tree/main/gui/default to get an idea how to do that."
+"To create a whole new GUI, you should checkout the files at https://"
+"github.com/syncthing/syncthing/tree/main/gui/default to get an idea how to "
+"do that."
 msgstr ""
 
 #: ../../../users/faq-parts/usage.rst:190
@@ -1012,8 +1015,8 @@ msgstr ""
 #: ../../../users/faq-parts/usage.rst:243
 msgid ""
 "Failed to start filesystem watcher for folder yourLabel (yourID): failed to "
-"set up inotify handler. Please increase inotify limits, see https://docs."
-"syncthing.net/users/faq.html#inotify-limits"
+"set up inotify handler. Please increase inotify limits, see https://"
+"docs.syncthing.net/users/faq.html#inotify-limits"
 msgstr ""
 
 #: ../../../users/faq-parts/usage.rst:246
@@ -1060,10 +1063,10 @@ msgstr "我要如何重設 GUI 密碼？"
 
 #: ../../../users/faq-parts/usage.rst:265
 msgid ""
-"If you've forgotten / lost the GUI password, you can reset it using the :"
-"option:`--gui-password` (and possibly :option:`--gui-user`) options to the "
-"``syncthing generate`` subcommand.  This should be done while Syncthing is "
-"not running."
+"If you've forgotten / lost the GUI password, you can reset it using "
+"the :option:`--gui-password` (and possibly :option:`--gui-user`) options to "
+"the ``syncthing generate`` subcommand.  This should be done while Syncthing "
+"is not running."
 msgstr ""
 
 #: ../../../users/faq-parts/usage.rst:270

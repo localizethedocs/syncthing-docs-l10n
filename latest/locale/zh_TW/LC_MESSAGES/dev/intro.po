@@ -62,6 +62,3 @@ msgid ""
 "Please see `the contribution guidelines <https://github.com/syncthing/"
 "syncthing/blob/main/CONTRIBUTING.md>`__ in the main repository."
 msgstr ""
-
-#~ msgid "Parses, validates and saves configuration files."
-#~ msgstr "剖析、驗證並儲存組態檔。"
