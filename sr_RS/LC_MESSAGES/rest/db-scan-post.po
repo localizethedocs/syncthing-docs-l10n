@@ -1,0 +1,50 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2026, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-06 09:56+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: sr_RS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../rest/db-scan-post.rst:2
+msgid "POST /rest/db/scan"
+msgstr ""
+
+#: ../../../rest/db-scan-post.rst:4
+msgid ""
+"Request immediate scan. Takes the optional parameters ``folder`` (folder "
+"ID), ``sub`` (path relative to the folder root) and ``next`` (time in "
+"seconds). If ``folder`` is omitted or empty all folders are scanned. If "
+"``sub`` is given, only this path (and children, in case it's a directory) is "
+"scanned. The ``next`` argument delays Syncthing's automated rescan interval "
+"for a given amount of seconds."
+msgstr ""
+
+#: ../../../rest/db-scan-post.rst:11
+msgid ""
+"Requesting scan of a path that no longer exists, but previously did, is "
+"valid and will result in Syncthing noticing the deletion of the path in "
+"question."
+msgstr ""
+
+#: ../../../rest/db-scan-post.rst:15
+msgid ""
+"Returns status 200 and no content upon success, or status 500 and a plain "
+"text error if an error occurred during scanning."
+msgstr ""
+
+#: ../../../rest/db-scan-post.rst:18
+msgid ""
+"curl -X POST http://127.0.0.1:8384/rest/db/scan?folder=default&sub=foo/bar"
+msgstr ""

@@ -1,0 +1,343 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2026, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-06 09:56+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../users/ignoring.rst:6
+msgid "Ignoring Files"
+msgstr ""
+
+#: ../../../users/ignoring.rst:9
+msgid "Synopsis"
+msgstr ""
+
+#: ../../../users/ignoring.rst:13
+msgid ".stignore"
+msgstr ""
+
+#: ../../../users/ignoring.rst:16
+msgid "Description"
+msgstr ""
+
+#: ../../../users/ignoring.rst:18
+msgid ""
+"If some files should not be synchronized to (or from) other devices, a file "
+"called ``.stignore`` can be created containing file patterns to ignore.  The "
+"``.stignore`` file must be placed in the root of the synced folder (files in "
+"other locations are not applied).  The ``.stignore`` file itself will never "
+"be synced to other devices, although it can ``#include`` files that *are* "
+"synchronized between devices.  All patterns are relative to the synced "
+"folder root.  The contents of the ``.stignore`` file must be UTF-8 encoded."
+msgstr ""
+
+#: ../../../users/ignoring.rst:28
+msgid ""
+"Note that ignored files can block removal of an otherwise empty directory. "
+"See below for the (?d) prefix to allow deletion of ignored files."
+msgstr ""
+
+#: ../../../users/ignoring.rst:32
+msgid "Patterns"
+msgstr ""
+
+#: ../../../users/ignoring.rst:34
+msgid ""
+"The ``.stignore`` file contains a list of file or path patterns. The *first* "
+"pattern that matches will decide the fate of a given file."
+msgstr ""
+
+#: ../../../users/ignoring.rst:37
+msgid ""
+"Regular file names match themselves, i.e. the pattern ``foo`` matches the "
+"files ``foo``, ``subdir/foo`` as well as any directory named ``foo``. Spaces "
+"are treated as regular characters, except for leading and trailing spaces, "
+"which are automatically trimmed."
+msgstr ""
+
+#: ../../../users/ignoring.rst:42
+msgid ""
+"**Asterisk** (``*``) matches zero or more characters in a filename, but does "
+"not match the directory separator. ``te*ne`` matches ``telephone``, ``subdir/"
+"telephone`` but not ``tele/phone``."
+msgstr ""
+
+#: ../../../users/ignoring.rst:46
+msgid ""
+"**Double asterisk** (``**``) matches as above, but also directory "
+"separators. ``te**ne`` matches ``telephone``, ``subdir/telephone`` and "
+"``tele/sub/dir/phone``."
+msgstr ""
+
+#: ../../../users/ignoring.rst:50
+msgid ""
+"**Question mark** (``?``) matches a single character that is not the "
+"directory separator. ``te??st`` matches ``tebest`` but not ``teb/st`` or "
+"``test``."
+msgstr ""
+
+#: ../../../users/ignoring.rst:54
+msgid ""
+"**Square brackets** (``[]``) denote a character range: ``[a-z]`` matches any "
+"lower case character."
+msgstr ""
+
+#: ../../../users/ignoring.rst:57
+msgid ""
+"**Curly brackets** (``{}``) denote a set of comma separated alternatives: "
+"``{banana,pineapple}`` matches either ``banana`` or ``pineapple``."
+msgstr ""
+
+#: ../../../users/ignoring.rst:60
+msgid ""
+"**Backslash** (``\\``) \"escapes\" a special character so that it loses its "
+"special meaning. For example, ``\\{banana\\}`` matches ``{banana}`` exactly "
+"and does not denote a set of alternatives as above."
+msgstr ""
+
+#: ../../../users/ignoring.rst:66
+msgid ""
+"On Windows, ``\\`` is the path separator, so use ``|`` to escape special "
+"characters. For example, ``|{banana|}`` matches ``{banana}``."
+msgstr ""
+
+#: ../../../users/ignoring.rst:70
+msgid ""
+"To use ``\\`` to escape special characters (and use ``/`` as the path "
+"separator), insert a ``#escape=\\`` at the top of the file. Here's a short "
+"example:"
+msgstr ""
+
+#: ../../../users/ignoring.rst:73
+msgid "``#escape=\\``"
+msgstr ""
+
+#: ../../../users/ignoring.rst:74
+msgid "``/foo``"
+msgstr ""
+
+#: ../../../users/ignoring.rst:75
+msgid "``/path/bar/\\{banana\\}``"
+msgstr ""
+
+#: ../../../users/ignoring.rst:76
+msgid "``/path/baz\\[2\\]/ex\\[3\\].txt``"
+msgstr ""
+
+#: ../../../users/ignoring.rst:78
+msgid ""
+"``#escape=\\`` must be placed at the top of the file, before any patterns, "
+"but leading comments, and blank lines are OK."
+msgstr ""
+
+#: ../../../users/ignoring.rst:81
+msgid ""
+"Any files included using ``#include`` (see below) will each need their own "
+"``#escape=\\``."
+msgstr ""
+
+#: ../../../users/ignoring.rst:84
+msgid ""
+"Using ``#escape=\\`` allows the same file to be synced and used on any "
+"operating system."
+msgstr ""
+
+#: ../../../users/ignoring.rst:87
+msgid ""
+"A pattern beginning with ``/`` matches in the root of the synced folder "
+"only. ``/foo`` matches ``foo`` but not ``subdir/foo``."
+msgstr ""
+
+#: ../../../users/ignoring.rst:90
+msgid ""
+"A pattern beginning with ``#include`` results in loading patterns from the "
+"named file. It is an error for a file to not exist or be included more than "
+"once. Note that while this can be used to include patterns from a file in a "
+"subdirectory, the patterns themselves are still relative to the synced "
+"folder *root*. Example: ``#include more-patterns.txt``."
+msgstr ""
+
+#: ../../../users/ignoring.rst:97
+msgid ""
+"Any ``#include`` directives inside a file loaded by ``#include`` require "
+"paths specified relative to the directory containing the loaded file, rather "
+"than the synchronised root directory."
+msgstr ""
+
+#: ../../../users/ignoring.rst:101
+msgid ""
+"A pattern beginning with a ``!`` prefix negates the pattern: matching files "
+"are *included* (that is, *not* ignored). This can be used to override more "
+"general patterns that follow."
+msgstr ""
+
+#: ../../../users/ignoring.rst:107
+msgid ""
+"Negated patterns that can match items below the folder root will cause "
+"Syncthing to traverse otherwise ignored directories. If the :ref:`watcher "
+"<scanning>` is enabled, those directories will also be watched. Directories "
+"ignored before the first negated pattern can however be safely skipped, "
+"since the first matching pattern wins. For example::"
+msgstr ""
+
+#: ../../../users/ignoring.rst:114
+msgid ""
+"/foo\n"
+"/bar\n"
+"!baz\n"
+"*"
+msgstr ""
+
+#: ../../../users/ignoring.rst:119
+msgid ""
+"The directories ``foo`` and ``bar`` will be entirely ignored. However any "
+"other directories present must be scanned entirely to find any items named "
+"`baz`, despite the fact that they will be ignored due to the ``*``. As a "
+"special case, top-level rooted patterns (e.g. ``!/foo``) do not cause this "
+"behaviour::"
+msgstr ""
+
+#: ../../../users/ignoring.rst:125
+msgid ""
+"!/baz\n"
+"*"
+msgstr ""
+
+#: ../../../users/ignoring.rst:128
+msgid ""
+"In this case, only the directory ``baz`` will be scanned, since everything "
+"else is ignored by the ``*`` pattern."
+msgstr ""
+
+#: ../../../users/ignoring.rst:131
+msgid ""
+"A pattern beginning with a ``(?i)`` prefix enables case-insensitive pattern "
+"matching. ``(?i)test`` matches ``test``, ``TEST`` and ``tEsT``. The ``(?i)`` "
+"prefix can be combined with other patterns, for example the pattern ``(?i)!"
+"picture*.png`` indicates that ``Picture1.PNG`` should be synchronized. On "
+"Mac OS and Windows, patterns are always case-insensitive."
+msgstr ""
+
+#: ../../../users/ignoring.rst:137
+msgid ""
+"A pattern beginning with a ``(?d)`` prefix enables removal of these files if "
+"they are preventing directory deletion. This prefix should be used by any OS "
+"generated files which you are happy to be removed."
+msgstr ""
+
+#: ../../../users/ignoring.rst:143
+msgid ""
+"Prefixes can be specified in any order (e.g. ``(?d)(?i)``), but cannot be "
+"combined in a single pair of parentheses like :strike:`(?di)`."
+msgstr ""
+
+#: ../../../users/ignoring.rst:146
+msgid ""
+"A line beginning with ``//`` is a comment and has no effect. The same double "
+"slashes in any other place are interpreted literally, e.g. trying to do "
+"``file // comment`` will make Syncthing look for a file called ``file // "
+"comment``."
+msgstr ""
+
+#: ../../../users/ignoring.rst:151
+msgid "Example"
+msgstr ""
+
+#: ../../../users/ignoring.rst:153
+msgid "Given a directory layout starting at the synced folder's root::"
+msgstr ""
+
+#: ../../../users/ignoring.rst:155
+msgid ""
+".DS_Store\n"
+".stignore\n"
+"foo\n"
+"foofoo\n"
+"bar/\n"
+"    baz\n"
+"    quux\n"
+"    quuz\n"
+"bar2/\n"
+"    baz\n"
+"    frobble\n"
+"My Pictures/\n"
+"    Img15.PNG"
+msgstr ""
+
+#: ../../../users/ignoring.rst:169
+msgid "and an ``.stignore`` file with the contents::"
+msgstr ""
+
+#: ../../../users/ignoring.rst:171
+msgid ""
+"(?d).DS_Store\n"
+"!frobble\n"
+"!quuz\n"
+"foo\n"
+"*2\n"
+"qu*\n"
+"(?i)my pictures"
+msgstr ""
+
+#: ../../../users/ignoring.rst:179
+msgid ""
+"all files and directories called \"foo\", ending in a \"2\" or starting with "
+"\"qu\" will be ignored. The end result becomes::"
+msgstr ""
+
+#: ../../../users/ignoring.rst:182
+msgid ""
+".DS_Store     # ignored, will be deleted if gets in the way of parent "
+"directory removal\n"
+"foo           # ignored, matches \"foo\"\n"
+"foofoo        # synced, does not match \"foo\" but would match \"foo*\" or "
+"\"*foo\"\n"
+"bar/          # synced\n"
+"    baz       # synced\n"
+"    quux      # ignored, matches \"qu*\"\n"
+"    quuz      # synced, matches \"qu*\" but is excluded by the preceding \"!"
+"quuz\"\n"
+"bar2/         # synced, despite matching \"*2\" due to child frobble\n"
+"    baz       # ignored, due to parent being ignored\n"
+"    frobble   # synced, due to \"!frobble\"\n"
+"My Pictures/  # ignored, matched case insensitive \"(?i)my pictures\" "
+"pattern\n"
+"    Img15.PNG # ignored, due to parent being ignored"
+msgstr ""
+
+#: ../../../users/ignoring.rst:196
+msgid ""
+"Please note that directory patterns ending with a slash ``some/directory/`` "
+"matches the content of the directory, but not the directory itself. If you "
+"want the pattern to match the directory and its content, make sure it does "
+"not have a ``/`` at the end of the pattern."
+msgstr ""
+
+#: ../../../users/ignoring.rst:203
+msgid ""
+"Default patterns can be configured which will take effect when automatically "
+"accepting a folder from a remote device.  The GUI suggests the same patterns "
+"when adding a folder manually.  In either case, the ``.stignore`` file is "
+"created with these defaults if none is present yet."
+msgstr ""
+
+#: ../../../users/ignoring.rst:210
+msgid ""
+"Windows users can now use the pipe character (``|``) to escape "
+"metacharacters in the ``.stignore`` file.  Additionally, adding "
+"``#escape=X`` to the top of the file, allows users to define ``X`` as the "
+"escape character for that particular file."
+msgstr ""

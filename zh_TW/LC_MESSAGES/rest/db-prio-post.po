@@ -1,0 +1,36 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2026, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-06 09:56+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../rest/db-prio-post.rst:2
+msgid "POST /rest/db/prio"
+msgstr "POST /rest/db/prio"
+
+#: ../../../rest/db-prio-post.rst:4
+msgid "Moves the file to the top of the download queue."
+msgstr ""
+
+#: ../../../rest/db-prio-post.rst:6
+msgid ""
+"curl -X POST http://127.0.0.1:8384/rest/db/prio?folder=default&file=foo/bar"
+msgstr ""
+"curl -X POST http://127.0.0.1:8384/rest/db/prio?folder=default&file=foo/bar"
+
+#: ../../../rest/db-prio-post.rst:10
+msgid "Response contains the same output as :doc:`db-need-get`."
+msgstr ""
