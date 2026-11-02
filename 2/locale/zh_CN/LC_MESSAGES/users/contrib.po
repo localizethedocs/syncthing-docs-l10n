@@ -252,8 +252,8 @@ msgstr ""
 
 #: ../../../users/contrib.rst:135
 msgid ""
-"For Fedora Syncthing is now in the official repo : https://src.fedoraproject."
-"org/rpms/syncthing"
+"For Fedora Syncthing is now in the official repo : https://"
+"src.fedoraproject.org/rpms/syncthing"
 msgstr ""
 
 #: ../../../users/contrib.rst:137
@@ -408,9 +408,9 @@ msgstr ""
 
 #: ../../../users/contrib.rst:214
 msgid ""
-"`Docker container <https://rockstor.com/docs/docker-based-rock-ons/syncthing."
-"html>`_ and `registry entry <https://github.com/rockstor/rockon-registry/"
-"blob/master/syncthing.json>`_"
+"`Docker container <https://rockstor.com/docs/docker-based-rock-ons/"
+"syncthing.html>`_ and `registry entry <https://github.com/rockstor/rockon-"
+"registry/blob/master/syncthing.json>`_"
 msgstr ""
 
 #: ../../../users/contrib.rst:217
@@ -419,8 +419,8 @@ msgstr ""
 
 #: ../../../users/contrib.rst:219
 msgid ""
-"Syncthing is available as a 1-click install on `Cloudron <https://www."
-"cloudron.io>`_. For those unaware, Cloudron makes it easy to run apps on "
+"Syncthing is available as a 1-click install on `Cloudron <https://"
+"www.cloudron.io>`_. For those unaware, Cloudron makes it easy to run apps on "
 "your server and keep them up-to-date and secure."
 msgstr ""
 

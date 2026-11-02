@@ -37,8 +37,8 @@ msgstr ""
 
 #: ../../../rest/db-file-get.rst:11
 msgid ""
-"``folder`` is the folder ID which you can find in the Syncthing Web GUI, e."
-"g. ``5camp-slpa8``."
+"``folder`` is the folder ID which you can find in the Syncthing Web GUI, "
+"e.g. ``5camp-slpa8``."
 msgstr ""
 
 #: ../../../rest/db-file-get.rst:14

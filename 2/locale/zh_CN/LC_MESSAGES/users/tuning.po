@@ -214,9 +214,7 @@ msgid ""
 msgstr ""
 
 #: ../../../users/tuning.rst:109
-msgid ""
-":opt:`syncOwnership`/:opt:`syncXattrs`, :opt:`sendOwnership`/:opt:"
-"`sendXattrs`"
+msgid ":opt:`syncOwnership`/:opt:`syncXattrs`, :opt:`sendOwnership`/:opt:`sendXattrs`"
 msgstr ""
 
 #: ../../../users/tuning.rst:110

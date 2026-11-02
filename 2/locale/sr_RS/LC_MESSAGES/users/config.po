@@ -539,8 +539,8 @@ msgstr ""
 #: ../../../users/config.rst:400
 msgid ""
 "The maximum delay before a scan is triggered when a file is continuously "
-"changing. If unset or zero a default value is calculated based on :opt:"
-"`fsWatcherDelayS`."
+"changing. If unset or zero a default value is calculated based "
+"on :opt:`fsWatcherDelayS`."
 msgstr ""
 
 #: ../../../users/config.rst:406
@@ -568,8 +568,8 @@ msgid ""
 "These must have the ``id`` attribute and can have an ``introducedBy`` "
 "attribute, identifying the device that introduced us to share this folder "
 "with the given device.  If the original introducer unshares this folder with "
-"this device, our device will follow and unshare the folder (subject to :opt:"
-"`skipIntroductionRemovals` being ``false`` on the introducer device)."
+"this device, our device will follow and unshare the folder (subject "
+"to :opt:`skipIntroductionRemovals` being ``false`` on the introducer device)."
 msgstr ""
 
 #: ../../../users/config.rst:429
@@ -682,8 +682,8 @@ msgstr ""
 #: ../../../users/config.rst:498
 msgid ""
 "When set to ``true``, this device will pretend not to see instructions to "
-"delete files from other devices.  The mechanism is described in a :doc:"
-"`separate chapter </advanced/folder-ignoredelete>`."
+"delete files from other devices.  The mechanism is described in "
+"a :doc:`separate chapter </advanced/folder-ignoredelete>`."
 msgstr ""
 
 #: ../../../users/config.rst:504
@@ -719,9 +719,9 @@ msgstr ""
 
 #: ../../../users/config.rst:531
 msgid ""
-"Name of a directory or file in the folder root to be used as a marker - see :"
-"ref:`marker FAQ <marker-faq>` for its purpose. A marker directory is only "
-"created by Syncthing for the default ``.stfolder``, not otherwise."
+"Name of a directory or file in the folder root to be used as a marker - "
+"see :ref:`marker FAQ <marker-faq>` for its purpose. A marker directory is "
+"only created by Syncthing for the default ``.stfolder``, not otherwise."
 msgstr ""
 
 #: ../../../users/config.rst:537
@@ -827,8 +827,8 @@ msgstr ""
 
 #: ../../../users/config.rst:603
 msgid ""
-"File and directory ownership is synced when this is set to ``true``. See :"
-"doc:`/advanced/folder-sync-ownership` for more information."
+"File and directory ownership is synced when this is set to ``true``. "
+"See :doc:`/advanced/folder-sync-ownership` for more information."
 msgstr ""
 
 #: ../../../users/config.rst:608
@@ -1610,8 +1610,8 @@ msgstr ""
 
 #: ../../../users/config.rst:1206
 msgid ""
-"If ``true``, automatic upgrades include release candidates (see :ref:"
-"`releases`)."
+"If ``true``, automatic upgrades include release candidates "
+"(see :ref:`releases`)."
 msgstr ""
 
 #: ../../../users/config.rst:1211
