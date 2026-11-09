@@ -1,0 +1,158 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing 0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../dev/mergebot.rst:2
+msgid "Interacting with the Merge Bot"
+msgstr ""
+
+#: ../../../dev/mergebot.rst:4
+msgid ""
+"There is a bot that hangs around on the Syncthing Github projects and "
+"assists with doing correct merges of pull requests. Using the merge bot to "
+"accept pull requests is the recommended way in all cases as it enforces some "
+"extra checks that the \"standard\" Github merge button does not. The merge "
+"bot is currently called ``st-review``."
+msgstr ""
+
+#: ../../../dev/mergebot.rst:11
+msgid "Merging a PR"
+msgstr ""
+
+#: ../../../dev/mergebot.rst:13
+msgid ""
+"There are two ways to merge a pull request - by direct ``merge`` command and "
+"by ``lgtm`` consensus."
+msgstr ""
+
+#: ../../../dev/mergebot.rst:16
+msgid "By \"lgtm\""
+msgstr ""
+
+#: ../../../dev/mergebot.rst:18
+msgid ""
+"Any developer with push access can evaluate the pull request and let the bot "
+"know that they approve of it. The word for this is LGTM, \"looks good to "
+"me\"::"
+msgstr ""
+
+#: ../../../dev/mergebot.rst:22
+msgid "@st-review lgtm"
+msgstr ""
+
+#: ../../../dev/mergebot.rst:24
+msgid ""
+"The bot will record the fact that you think so by adding a ``LGTM: calmh`` "
+"footer to the commit message when it gets merged. The pull request is merged "
+"once two developers have given their LGTM's."
+msgstr ""
+
+#: ../../../dev/mergebot.rst:30
+msgid ""
+"The ``lgtm`` is hence a way to say \"I think this is fine and should be "
+"merged, but I'd appreciate a second look from someone else.\""
+msgstr ""
+
+#: ../../../dev/mergebot.rst:33
+msgid ""
+"If the commit message or subject needs to be tweaked, used the ``merge`` "
+"command instead. A previously given ``lgtm`` will still be recorded on the "
+"commit message."
+msgstr ""
+
+#: ../../../dev/mergebot.rst:38
+msgid "By \"merge\""
+msgstr ""
+
+#: ../../../dev/mergebot.rst:40
+msgid ""
+"To merge a pull request, simply tell the bot to do so, making sure that the "
+"first word of the command is ``merge``::"
+msgstr ""
+
+#: ../../../dev/mergebot.rst:43
+msgid "@st-review merge"
+msgstr ""
+
+#: ../../../dev/mergebot.rst:47
+msgid ""
+"It's also possible to override the resulting commit subject and message when "
+"doing this. Just add a blank line, the commit subject, another blank line, "
+"and then the commit body (which can be empty). Don't worry about the text "
+"formatting - the commit body will be reflowed appropriately by the bot::"
+msgstr ""
+
+#: ../../../dev/mergebot.rst:52
+msgid ""
+"@st-review merge\n"
+"\n"
+"lib/dialer: Add env var to disable proxy fallback (fixes #3006)"
+msgstr ""
+
+#: ../../../dev/mergebot.rst:59
+msgid "Handling Check Results"
+msgstr ""
+
+#: ../../../dev/mergebot.rst:61
+msgid ""
+"The merge bot will wait for status checks to resolve, but will refuse to "
+"merge pull requests with unclean statuses:"
+msgstr ""
+
+#: ../../../dev/mergebot.rst:66
+msgid ""
+"It is possible to override this in cases where it's necessary, by adding a "
+"``Skip-check`` command to the commit message body. Note that this must be in "
+"the commit message *body*, which means that you need to supply both a commit "
+"message subject and body. Don't overuse this -- it's better to ask Jenkins "
+"to retest if something spurious happened. It can be used to allow merge of "
+"commits from unregistered authors that only touches comments, for example."
+msgstr ""
+
+#: ../../../dev/mergebot.rst:73
+msgid ""
+"The tag must be exactly ``Skip-check:`` followed by a *space separated* list "
+"of check \"contexts\" as seen in the list on Github. I.e., to skip these two "
+"checks:"
+msgstr ""
+
+#: ../../../dev/mergebot.rst:79
+msgid "Use the following syntax::"
+msgstr ""
+
+#: ../../../dev/mergebot.rst:81
+msgid ""
+"@st-review merge this please\n"
+"\n"
+"all: Correct spelling in comments\n"
+"\n"
+"Skip-check: authors pr-build-mac"
+msgstr ""
+
+#: ../../../dev/mergebot.rst:89
+msgid ""
+"Please note that the exact string ``Skip-check: authors`` is magic in that "
+"it also allows the build to pass, when it would otherwise stop with commits "
+"from unknown authors."
+msgstr ""
+
+#: ../../../dev/mergebot.rst:95
+msgid ""
+"If you want to skip the author check, make sure it's mentioned first and "
+"that the string is *exactly* \"Skip-check: authors\"."
+msgstr ""
