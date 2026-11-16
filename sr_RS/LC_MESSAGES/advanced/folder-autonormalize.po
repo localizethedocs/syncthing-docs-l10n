@@ -1,0 +1,67 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2026, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-06 09:56+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: sr_RS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../advanced/folder-autonormalize.rst:2
+msgid "autoNormalize"
+msgstr ""
+
+#: ../../../advanced/folder-autonormalize.rst:4
+msgid ""
+"``autoNormalize`` is an advanced folder setting that affects the handling of "
+"files with incorrect UTF-8 normalization in their names. When set, such "
+"files are renamed to the correctly normalized form during scanning."
+msgstr ""
+
+#: ../../../advanced/folder-autonormalize.rst:8
+msgid "This option should normally be set to ``true``, which is the default."
+msgstr ""
+
+#: ../../../advanced/folder-autonormalize.rst:11
+msgid "Background"
+msgstr ""
+
+#: ../../../advanced/folder-autonormalize.rst:13
+msgid ""
+"File names can be represented in many different ways. Some systems use an "
+"extended ASCII character set like ISO-8859-1 (Latin), others may use a "
+"different encoding to represent Chinese, Russian and so on. The modern "
+"standard is to use Unicode in UTF-8 encoding, even when the file system "
+"itself doesn't dictate a format, such as is the case on most Unix-like "
+"systems. Syncthing will refuse to synchronize files with names not encoded "
+"in UTF-8."
+msgstr ""
+
+#: ../../../advanced/folder-autonormalize.rst:20
+msgid ""
+"However, there are different ways of encoding the same character even within "
+"UTF-8. These are called normalization forms and differ primarily between Mac "
+"and everything else. Differences in normalization form means that you could "
+"on some systems have three (or more) files all called ``räksmörgås.txt``, "
+"``räksmörgås.txt``,  and ``räksmörgås.txt`` -- those are the same "
+"characters, but expressed in different ways. More commonly an issue arises "
+"when files are copied from a system that uses one normalization form (Mac) "
+"to a system using another normalization form (Windows) without translation; "
+"say, via a USB stick."
+msgstr ""
+
+#: ../../../advanced/folder-autonormalize.rst:30
+msgid ""
+"To avoid such issues, Syncthing automatically corrects normalization errors "
+"when it runs into them, unless this option is set to ``false``."
+msgstr ""
