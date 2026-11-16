@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../users/foldertypes.rst:4
 msgid "Folder Types"
-msgstr ""
+msgstr "資料夾型別"
 
 #: ../../../users/foldertypes.rst:7
 msgid "Send & Receive Folder"
