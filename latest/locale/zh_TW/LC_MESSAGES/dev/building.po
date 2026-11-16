@@ -290,7 +290,7 @@ msgstr ""
 
 #: ../../../dev/building.rst:169
 msgid "Version Tagging"
-msgstr ""
+msgstr "檔案標記"
 
 #: ../../../dev/building.rst:171
 msgid ""
