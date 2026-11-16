@@ -23,7 +23,7 @@ msgstr ""
 
 #: ../../../_templates/layout.html:7
 msgid "Version: %(release)s"
-msgstr ""
+msgstr "版本：%(release)s"
 
 #: ../../../_templates/version.html:1
 msgid "Written for %(version)s"
