@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../users/releases.rst:4
 msgid "Versions & Releases"
-msgstr ""
+msgstr "版本與發行版"
 
 #: ../../../users/releases.rst:9
 msgid "Major, Minor, or Patch"
@@ -355,11 +355,11 @@ msgstr ""
 
 #: ../../../users/releases.rst:174
 msgid "Syncthing Releases"
-msgstr ""
+msgstr "Syncthing 發行版"
 
 #: ../../../users/releases.csv:1
 msgid "Version"
-msgstr ""
+msgstr "版本"
 
 #: ../../../users/releases.csv:1
 msgid "Runtime"
@@ -367,7 +367,7 @@ msgstr ""
 
 #: ../../../users/releases.csv:1
 msgid "Date"
-msgstr ""
+msgstr "日期"
 
 #: ../../../users/releases.csv:1
 msgid "v2.0.16"
