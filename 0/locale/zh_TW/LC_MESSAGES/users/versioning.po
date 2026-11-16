@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../users/versioning.rst:4
 msgid "File Versioning"
-msgstr ""
+msgstr "檔案版本控制"
 
 #: ../../../users/versioning.rst:6
 msgid "Todo"
@@ -144,7 +144,7 @@ msgstr ""
 
 #: ../../../users/versioning.rst:74
 msgid "External File Versioning"
-msgstr ""
+msgstr "外部檔案版本控制"
 
 #: ../../../users/versioning.rst:76
 msgid ""
