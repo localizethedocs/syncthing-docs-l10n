@@ -1,0 +1,298 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-TW" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>除錯 Syncthing &mdash; Syncthing v0.13 說明文件</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/syncthing.css?v=21f33da5" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://projects.localizethedocs.org/syncthing-docs-l10n/dev/debugging.html" />
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=53319032"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/translations.js?v=cbf116e0"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜尋" href="../search.html" />
+    <link rel="next" title="理解裝置 ID" href="device-ids.html" />
+    <link rel="prev" title="Contribution Guidelines" href="contributing.html" />
+ 
+<script type="text/javascript" src="../ltd-provenance.js"></script>
+<script type="text/javascript" src="../ltd-current.js"></script>
+<script type="text/javascript" src="../../../ltd-config.js"></script>
+<script type="text/javascript" src="../../../ltd-flyout.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Syncthing
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro/getting-started.html">開始使用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/gui.html">An intro to the GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/project-presentation.html">Project Presentation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">For Users</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../users/syncthing.html">Command Line Operation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/faq.html">常見問題</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/config.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/advanced.html">進階組態</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/foldermaster.html">Folder Master Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/syncing.html">Understanding Synchronization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/firewall.html">防火牆設定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/relaying.html">Relaying</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/proxying.html">Using Proxies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/ignoring.html">忽略檔案</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/versioning.html">File Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/discosrv.html">Custom Discovery Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/relaysrv.html">Custom Relay Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/custom-upgrades.html">自訂升級伺服器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/autostart.html">自動啟動 Syncthing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/contrib.html">社群貢獻</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/reverseproxy.html">反向代理設定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/security.html">Security Principles</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">For Developers</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="building.html">建置 Syncthing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contribution Guidelines</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">除錯 Syncthing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#environment-variables">Environment Variables</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#sttrace">STTRACE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stprofiler">STPROFILER</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stguiassets">STGUIASSETS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stcpuprofile">STCPUPROFILE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stheapprofile">STHEAPPROFILE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stblockprofile">STBLOCKPROFILE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stperfstats">STPERFSTATS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stnoupgrade">STNOUPGRADE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gomaxprocs">GOMAXPROCS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gogc">GOGC</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="device-ids.html">理解裝置 ID</a></li>
+<li class="toctree-l1"><a class="reference internal" href="events.html">Event API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="infrastructure.html">Syncthing 基礎設施</a></li>
+<li class="toctree-l1"><a class="reference internal" href="issues.html">議題管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jenkins.html">Interacting with Jenkins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mergebot.html">Interacting with the Merge Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="release-creation.html">Creating a Release</a></li>
+<li class="toctree-l1"><a class="reference internal" href="release-schedule.html">Release Schedule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="release-signing.html">Release Signing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rest.html">REST API</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Specifications</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../specs/index.html">規格</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../specs/bep-v1.html">區塊交換協定 v1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../specs/globaldisco-v3.html">Global Discovery v3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../specs/localdisco-v3.html">Local Discovery Protocol v3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../specs/relay-v1.html">Relay Protocol v1</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Syncthing</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">除錯 Syncthing</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/syncthing/docs/blob/master/dev/debugging.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="admonition-todo admonition" id="id1">
+<span id="debugging"></span><p class="admonition-title">Todo</p>
+<p>This page mostly duplicates syncthing(1). Needs merging.</p>
+</div>
+<section id="debugging-syncthing">
+<h1>除錯 Syncthing<a class="headerlink" href="#debugging-syncthing" title="連結到這個標頭"></a></h1>
+<p>There's a lot that happens behind the covers, and Syncthing is generally
+quite silent about it. A number of environment variables can be used to
+set the logging to verbose for various parts of the program, and to
+enable profiling.</p>
+<section id="environment-variables">
+<h2>Environment Variables<a class="headerlink" href="#environment-variables" title="連結到這個標頭"></a></h2>
+<section id="sttrace">
+<h3>STTRACE<a class="headerlink" href="#sttrace" title="連結到這個標頭"></a></h3>
+<p>The environment variable <code class="docutils literal notranslate"><span class="pre">STTRACE</span></code> can be set to a comma separated
+list of &quot;facilities&quot;, to enable extra debugging information for said
+facility. A facility generally maps to a Go package, although there are
+a few extra that map to parts of the <code class="docutils literal notranslate"><span class="pre">main</span></code> package. Currently, the
+following facilities are supported (an up to date list is always printed
+by <code class="docutils literal notranslate"><span class="pre">syncthing</span> <span class="pre">--help</span></code>):</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">beacon</span></code> (the beacon package)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">discover</span></code> (the discover package)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">events</span></code> (the events package)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">files</span></code> (the files package)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">http</span></code> (the main package; HTTP requests)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">net</span></code> (the main package; connections &amp; network messages)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">model</span></code> (the model package)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scanner</span></code> (the scanner package)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stats</span></code> (the stats package)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">upnp</span></code> (the upnp package)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">xdr</span></code> (the xdr package)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">all</span></code> (all of the above)</p></li>
+</ul>
+<p>The debug output is often of the kind that it doesn't make much sense
+without looking at the code. The purpose of the different packages /
+facilities are something like this:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">beacon</span></code> sends and receives UDP broadcasts used by the local
+discovery system. Debugging here will show which interfaces and
+addresses are selected for broadcasts, etc.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">discover</span></code> sends and receives local discovery packets. Debugging
+here will output the parsed packets, nodes that get registered etc.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">files</span></code> keeps track of lists of files with metadata and figures out
+which is the newest version of each.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">net</span></code> shows connection attempts, incoming connections, and the low
+level error when connection attempts fail.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">model</span></code> is the largest chunk of the system; this is where pulling
+of out of date files happens, indexes are sent and received, and incoming
+requests for file chunks are logged.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scanner</span></code> is the local filesystem scanner. Debugging here will
+output information about changed and unchanged files.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">upnp</span></code> is the upnp talker.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">xdr</span></code> is the low level protocol encoder. Debugging here will output
+all bytes sent/received over the sync connection. Very verbose.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">all</span></code> simply enables debugging of all facilities.</p></li>
+</ul>
+<p>Enabling any of the facilities will also change the log format to
+include microsecond timestamps and file names plus line numbers. This
+can be used to enable this extra information on the normal logging
+level, without enabling any debugging: <code class="docutils literal notranslate"><span class="pre">STTRACE=somethingnonexistent</span></code>
+for example.</p>
+<p>Under Unix (including Mac) the easiest way to run Syncthing with an
+environment variable set is to prepend the variable to the command line.
+I.e:</p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">STTRACE=model</span> <span class="pre">syncthing</span></code></p>
+<p>On windows, it needs to be set prior to running Syncthing.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">C</span><span class="p">:</span>\<span class="o">&gt;</span> <span class="nb">set</span> <span class="n">STTRACE</span><span class="o">=</span><span class="n">model</span>
+<span class="n">C</span><span class="p">:</span>\<span class="o">&gt;</span> <span class="n">syncthing</span>
+</pre></div>
+</div>
+</section>
+<section id="stprofiler">
+<h3>STPROFILER<a class="headerlink" href="#stprofiler" title="連結到這個標頭"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">STPROFILER</span></code> environment variable sets the listen address for the
+HTTP profiler. If set to for example <code class="docutils literal notranslate"><span class="pre">:9090</span></code> the profiler will start
+and listen on port 9090. <a class="reference external" href="http://localhost:9090/debug/pprof">http://localhost:9090/debug/pprof</a> is then the
+address to the profiler. Se <code class="docutils literal notranslate"><span class="pre">go</span> <span class="pre">tool</span> <span class="pre">pprof</span></code> for more information.</p>
+</section>
+<section id="stguiassets">
+<h3>STGUIASSETS<a class="headerlink" href="#stguiassets" title="連結到這個標頭"></a></h3>
+<p>Directory to load GUI assets from. Overrides compiled in assets. Useful
+for developing webgui, commonly use <code class="docutils literal notranslate"><span class="pre">STGUIASSETS=gui</span> <span class="pre">bin/syncthing</span></code></p>
+</section>
+<section id="stcpuprofile">
+<h3>STCPUPROFILE<a class="headerlink" href="#stcpuprofile" title="連結到這個標頭"></a></h3>
+<p>Write a CPU profile to <code class="docutils literal notranslate"><span class="pre">cpu-$pid.pprof</span></code> on exit.</p>
+</section>
+<section id="stheapprofile">
+<h3>STHEAPPROFILE<a class="headerlink" href="#stheapprofile" title="連結到這個標頭"></a></h3>
+<p>Write heap profiles to <code class="docutils literal notranslate"><span class="pre">heap-$pid-$timestamp.pprof</span></code> each time
+heap usage increases.</p>
+</section>
+<section id="stblockprofile">
+<h3>STBLOCKPROFILE<a class="headerlink" href="#stblockprofile" title="連結到這個標頭"></a></h3>
+<p>Write block profiles to <code class="docutils literal notranslate"><span class="pre">block-$pid-$timestamp.pprof</span></code> every 20
+seconds.</p>
+</section>
+<section id="stperfstats">
+<h3>STPERFSTATS<a class="headerlink" href="#stperfstats" title="連結到這個標頭"></a></h3>
+<p>Write running performance statistics to <code class="docutils literal notranslate"><span class="pre">perf-$pid.csv</span></code>. Not supported on
+Windows.</p>
+</section>
+<section id="stnoupgrade">
+<h3>STNOUPGRADE<a class="headerlink" href="#stnoupgrade" title="連結到這個標頭"></a></h3>
+<p>Disable automatic upgrades.</p>
+</section>
+<section id="gomaxprocs">
+<h3>GOMAXPROCS<a class="headerlink" href="#gomaxprocs" title="連結到這個標頭"></a></h3>
+<p>Set the maximum number of CPU cores to use. Defaults to all available
+CPU cores.</p>
+</section>
+<section id="gogc">
+<h3>GOGC<a class="headerlink" href="#gogc" title="連結到這個標頭"></a></h3>
+<p>Percentage of heap growth at which to trigger GC. Default is 100. Lower
+numbers keep peak memory usage down, at the price of CPU usage (ie.
+performance)</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="contributing.html" class="btn btn-neutral float-left" title="Contribution Guidelines" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="device-ids.html" class="btn btn-neutral float-right" title="理解裝置 ID" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+      <span class="lastupdated">最後更新於 7月 27, 2026。
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
