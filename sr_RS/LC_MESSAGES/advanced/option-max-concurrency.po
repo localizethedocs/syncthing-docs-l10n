@@ -1,0 +1,64 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2026, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing stable\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-21 06:27+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: sr_RS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../advanced/option-max-concurrency.rst:2
+msgid "maxFolderConcurrency"
+msgstr ""
+
+#: ../../../advanced/option-max-concurrency.rst:6
+msgid ""
+"The ``maxFolderConcurrency`` option controls how many folders may "
+"concurrently be in I/O-intensive operations such as syncing or scanning. The "
+"default value is the same as the number of logical CPU cores in the system. "
+"Folders waiting for their turn to scan or sync will show up as \"Waiting to "
+"Scan\" or \"Waiting to Sync\" until the total number of ongoing such "
+"operations is low enough to let them proceed."
+msgstr ""
+
+#: ../../../advanced/option-max-concurrency.rst:14
+msgid "Valid Values"
+msgstr ""
+
+#: ../../../advanced/option-max-concurrency.rst:16
+msgid "**Zero (0)**:"
+msgstr ""
+
+#: ../../../advanced/option-max-concurrency.rst:17
+msgid ""
+"The default, means the number of logical CPUs in the system (i.e., 2, 4, 8, "
+"etc.), autodetected."
+msgstr ""
+
+#: ../../../advanced/option-max-concurrency.rst:20
+msgid "**Negative (< 0)**:"
+msgstr ""
+
+#: ../../../advanced/option-max-concurrency.rst:21
+msgid ""
+"No limit on the number of concurrent operations. This was the default in "
+"versions < 1.4.0."
+msgstr ""
+
+#: ../../../advanced/option-max-concurrency.rst:24
+msgid "**A positive integer (> 0)**:"
+msgstr ""
+
+#: ../../../advanced/option-max-concurrency.rst:25
+msgid "Use this specific limit."
+msgstr ""
