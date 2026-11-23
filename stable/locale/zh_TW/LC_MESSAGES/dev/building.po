@@ -40,7 +40,7 @@ msgstr ""
 
 #: ../../../dev/building.rst:19
 msgid "Branches and Tags"
-msgstr ""
+msgstr "分支與標記"
 
 #: ../../../dev/building.rst:21
 msgid ""
@@ -159,7 +159,7 @@ msgstr ""
 
 #: ../../../dev/building.rst:92
 msgid "Open a ``cmd`` Window."
-msgstr ""
+msgstr "開啟 ``cmd`` 視窗。"
 
 #: ../../../dev/building.rst:95
 msgid ""
@@ -183,7 +183,7 @@ msgstr ""
 
 #: ../../../dev/building.rst:112
 msgid "Subcommands and Options"
-msgstr ""
+msgstr "子命令與選項"
 
 #: ../../../dev/building.rst:114
 msgid "The following ``build.go`` subcommands and options exist."
@@ -191,7 +191,7 @@ msgstr ""
 
 #: ../../../dev/building.rst:116
 msgid "``go run build.go install``"
-msgstr ""
+msgstr "``go run build.go install``"
 
 #: ../../../dev/building.rst:117
 msgid ""
@@ -201,7 +201,7 @@ msgstr ""
 
 #: ../../../dev/building.rst:120
 msgid "``go run build.go build``"
-msgstr ""
+msgstr "``go run build.go build``"
 
 #: ../../../dev/building.rst:121
 msgid ""
@@ -247,7 +247,7 @@ msgstr ""
 
 #: ../../../dev/building.rst:143
 msgid "``go run build.go zip``"
-msgstr ""
+msgstr "``go run build.go zip``"
 
 #: ../../../dev/building.rst:144
 msgid ""
@@ -264,7 +264,7 @@ msgstr ""
 
 #: ../../../dev/building.rst:151
 msgid "``go run build.go --goos linux --goarch 386 tar``"
-msgstr ""
+msgstr "``go run build.go --goos linux --goarch 386 tar``"
 
 #: ../../../dev/building.rst:152
 msgid "Builds a tar.gz distribution of Syncthing for linux-386."
@@ -272,7 +272,7 @@ msgstr ""
 
 #: ../../../dev/building.rst:154
 msgid "``go run build.go --goos windows --no-upgrade zip``"
-msgstr ""
+msgstr "``go run build.go --goos windows --no-upgrade zip``"
 
 #: ../../../dev/building.rst:155
 msgid ""

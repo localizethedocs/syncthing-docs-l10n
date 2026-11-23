@@ -23,7 +23,7 @@ msgstr ""
 
 #: ../../../dev/crashrep.rst:7
 msgid "Collecting and Sending"
-msgstr ""
+msgstr "收集與發送"
 
 #: ../../../dev/crashrep.rst:9
 msgid ""
@@ -46,7 +46,7 @@ msgstr ""
 
 #: ../../../dev/crashrep.rst:23
 msgid "Report Format"
-msgstr ""
+msgstr "報告格式"
 
 #: ../../../dev/crashrep.rst:25
 msgid ""
