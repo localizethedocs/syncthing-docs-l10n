@@ -1,0 +1,44 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2019, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-05 08:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../advanced/folder-disable-fsync.rst:2
+msgid "disableFsync"
+msgstr ""
+
+#: ../../../advanced/folder-disable-fsync.rst:4
+msgid ""
+"``disableFsync`` is an advanced folder setting that affects file "
+"modifications. Normally, when a file has been modified Syncthing calls "
+"``fsync()`` on that file and the containing directory. This forces file data "
+"that is cached in RAM to be flushed to disk. This ensures that data is "
+"safely stored on disk and thus prevents data loss in the case of a power "
+"failure soon after file modification."
+msgstr ""
+
+#: ../../../advanced/folder-disable-fsync.rst:11
+msgid ""
+"There is however a performance cost to doing this, especially on rotating "
+"disks or network filesystems, especially syncing many small files. Disabling "
+"``fsync()`` improves performance at the price of risking data loss in a "
+"power failure situation."
+msgstr ""
+
+#: ../../../advanced/folder-disable-fsync.rst:16
+msgid "This option should normally be set to ``false``."
+msgstr ""
