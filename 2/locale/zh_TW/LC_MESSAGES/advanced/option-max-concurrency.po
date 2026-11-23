@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../advanced/option-max-concurrency.rst:2
 msgid "maxFolderConcurrency"
-msgstr ""
+msgstr "maxFolderConcurrency"
 
 #: ../../../advanced/option-max-concurrency.rst:6
 msgid ""

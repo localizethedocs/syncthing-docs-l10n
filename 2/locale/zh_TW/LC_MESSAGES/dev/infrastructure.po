@@ -133,7 +133,7 @@ msgstr "secure.syncthing.net"
 
 #: ../../../dev/infrastructure.rst:57
 msgid "External Monitoring"
-msgstr ""
+msgstr "外部監控"
 
 #: ../../../dev/infrastructure.rst:59
 msgid ""

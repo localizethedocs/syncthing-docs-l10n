@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../advanced/folder-caseSensitiveFS.rst:4
 msgid "caseSensitiveFS"
-msgstr ""
+msgstr "caseSensitiveFS"
 
 #: ../../../advanced/folder-caseSensitiveFS.rst:8
 msgid ""
