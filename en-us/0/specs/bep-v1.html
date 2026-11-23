@@ -1,0 +1,1586 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-US" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Block Exchange Protocol v1 &mdash; Syncthing v0.13 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/syncthing.css?v=21f33da5" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="canonical" href="https://projects.localizethedocs.org/syncthing-docs-l10n/specs/bep-v1.html" />
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=9279f2c6"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Global Discovery v3" href="globaldisco-v3.html" />
+    <link rel="prev" title="Specifications" href="index.html" />
+ 
+<script type="text/javascript" src="../ltd-provenance.js"></script>
+<script type="text/javascript" src="../ltd-current.js"></script>
+<script type="text/javascript" src="../../../ltd-config.js"></script>
+<script type="text/javascript" src="../../../ltd-flyout.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Syncthing
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro/getting-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/gui.html">An intro to the GUI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/project-presentation.html">Project Presentation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">For Users</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../users/syncthing.html">Command Line Operation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/config.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/advanced.html">Advanced Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/foldermaster.html">Folder Master Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/syncing.html">Understanding Synchronization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/firewall.html">Firewall Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/relaying.html">Relaying</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/proxying.html">Using Proxies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/ignoring.html">Ignoring Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/versioning.html">File Versioning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/discosrv.html">Custom Discovery Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/relaysrv.html">Custom Relay Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/custom-upgrades.html">Custom Upgrade Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/autostart.html">Starting Syncthing Automatically</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/contrib.html">Community Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/reverseproxy.html">Reverse Proxy Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users/security.html">Security Principles</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">For Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../dev/intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/building.html">Building Syncthing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/contributing.html">Contribution Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/debugging.html">Debugging Syncthing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/device-ids.html">Understanding Device IDs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/events.html">Event API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/infrastructure.html">Syncthing Infrastructure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/issues.html">Issue Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/jenkins.html">Interacting with Jenkins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/mergebot.html">Interacting with the Merge Bot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/release-creation.html">Creating a Release</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/release-schedule.html">Release Schedule</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/release-signing.html">Release Signing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/rest.html">REST API</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Specifications</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Specifications</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Block Exchange Protocol v1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction-and-definitions">Introduction and Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#transport-and-authentication">Transport and Authentication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pre-authentication-messages">Pre-authentication messages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#fields-hellomessage">Fields (HelloMessage)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#xdr">XDR</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#post-authentication-messages">Post-authentication Messages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#cluster-config-type-0">Cluster Config (Type = 0)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#graphical-representation">Graphical Representation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fields-clusterconfigmessage">Fields (ClusterConfigMessage)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fields-folder-structure">Fields (Folder Structure)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fields-device-structure">Fields (Device Structure)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1">XDR</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#index-type-1-and-index-update-type-6">Index (Type = 1) and Index Update (Type = 6)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">Graphical Representation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fields-index-message">Fields (Index Message)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fields-fileinfo-structure">Fields (FileInfo Structure)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">XDR</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#request-type-2">Request (Type = 2)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id4">Graphical Representation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fields">Fields</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">XDR</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#response-type-3">Response (Type = 3)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id6">Graphical Representation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id7">Fields</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id8">XDR</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#downloadprogress-type-8">DownloadProgress (Type = 8)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id9">Graphical Representation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fields-downloadprogress-message">Fields (DownloadProgress Message)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fields-filedownloadprogressupdate-structure">Fields (FileDownloadProgressUpdate Structure)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id10">XDR</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#ping-type-4">Ping (Type = 4)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#close-type-7">Close (Type = 7)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id11">Graphical Representation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id12">Fields</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#sharing-modes">Sharing Modes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#trusted">Trusted</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#read-only">Read Only</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#message-limits">Message Limits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example-exchange">Example Exchange</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#examples-of-strong-cipher-suites">Examples of Strong Cipher Suites</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="globaldisco-v3.html">Global Discovery v3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="localdisco-v3.html">Local Discovery Protocol v3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="relay-v1.html">Relay Protocol v1</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Syncthing</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Block Exchange Protocol v1</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/syncthing/docs/blob/master/specs/bep-v1.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="block-exchange-protocol-v1">
+<span id="bep-v1"></span><h1>Block Exchange Protocol v1<a class="headerlink" href="#block-exchange-protocol-v1" title="Link to this heading"></a></h1>
+<section id="introduction-and-definitions">
+<h2>Introduction and Definitions<a class="headerlink" href="#introduction-and-definitions" title="Link to this heading"></a></h2>
+<p>BEP is used between two or more <em>devices</em> thus forming a <em>cluster</em>. Each
+device has one or more <em>folders</em> of files described by the <em>local
+model</em>, containing metadata and block hashes. The local model is sent to
+the other devices in the cluster. The union of all files in the local
+models, with files selected for highest change version, forms the
+<em>global model</em>. Each device strives to get its folders in sync with the
+global model by requesting missing or outdated blocks from the other
+devices in the cluster.</p>
+<p>File data is described and transferred in units of <em>blocks</em>, each being
+128 KiB (131072 bytes) in size.</p>
+<p>The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”,
+“SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this
+document are to be interpreted as described in RFC 2119.</p>
+</section>
+<section id="transport-and-authentication">
+<h2>Transport and Authentication<a class="headerlink" href="#transport-and-authentication" title="Link to this heading"></a></h2>
+<p>BEP is deployed as the highest level in a protocol stack, with the lower
+level protocols providing encryption and authentication.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+-----------------------------+</span>
+<span class="o">|</span>   <span class="n">Block</span> <span class="n">Exchange</span> <span class="n">Protocol</span>   <span class="o">|</span>
+<span class="o">|-----------------------------|</span>
+<span class="o">|</span> <span class="n">Encryption</span> <span class="o">&amp;</span> <span class="n">Auth</span> <span class="p">(</span><span class="n">TLS</span> <span class="mf">1.2</span><span class="p">)</span> <span class="o">|</span>
+<span class="o">|-----------------------------|</span>
+<span class="o">|</span>             <span class="n">TCP</span>             <span class="o">|</span>
+<span class="o">|-----------------------------|</span>
+<span class="n">v</span>             <span class="o">...</span>             <span class="n">v</span>
+</pre></div>
+</div>
+<p>The encryption and authentication layer SHALL use TLS 1.2 or a higher
+revision. A strong cipher suite SHALL be used, with “strong cipher
+suite” being defined as being without known weaknesses and providing
+Perfect Forward Secrecy (PFS). Examples of strong cipher suites are
+given at the end of this document. This is not to be taken as an
+exhaustive list of allowed cipher suites but represents best practices
+at the time of writing.</p>
+<p>The exact nature of the authentication is up to the application, however
+it SHALL be based on the TLS certificate presented at the start of the
+connection. Possibilities include certificates signed by a common
+trusted CA, preshared certificates, preshared certificate fingerprints
+or certificate pinning combined with some out of band first
+verification. The reference implementation uses preshared certificate
+fingerprints (SHA-256) referred to as “Device IDs”.</p>
+<p>There is no required order or synchronization among BEP messages except
+as noted per message type - any message type may be sent at any time and
+the sender need not await a response to one message before sending
+another.</p>
+<p>The underlying transport protocol MUST guarantee reliable packet delivery.</p>
+</section>
+<section id="pre-authentication-messages">
+<h2>Pre-authentication messages<a class="headerlink" href="#pre-authentication-messages" title="Link to this heading"></a></h2>
+<p>AFTER establishing a connection, but BEFORE performing any authentication,
+<em>devices</em> MUST exchange Hello messages.</p>
+<p>Hello messages are used to carry additional information about the peer, which
+might be of interest to the user even if the peer is not permitted to
+communicate due to failing authentication.</p>
+<p>Hello messages MUST be prefixed with a magic number <strong>0x9F79BC40</strong>
+represented in network byte order (BE), followed by 4 bytes representing the
+size of the message in network byte order (BE), followed by the content of
+the Hello message itself. The size of the contents of Hello message MUST be
+less or equal to 1024 bytes.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Prefix</span> <span class="n">Structure</span><span class="p">:</span>
+
+ <span class="mi">0</span>                   <span class="mi">1</span>                   <span class="mi">2</span>                   <span class="mi">3</span>
+ <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">|</span>                             <span class="n">Magic</span>                             <span class="o">|</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">|</span>                            <span class="n">Length</span>                             <span class="o">|</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">/</span>                                                               <span class="o">/</span>
+\                    <span class="n">Content</span> <span class="n">of</span> <span class="n">HelloMessage</span>                    \
+<span class="o">/</span>                                                               <span class="o">/</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+
+<span class="n">HelloMessage</span> <span class="n">Structure</span><span class="p">:</span>
+
+ <span class="mi">0</span>                   <span class="mi">1</span>                   <span class="mi">2</span>                   <span class="mi">3</span>
+ <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">/</span>                                                               <span class="o">/</span>
+\              <span class="n">Device</span> <span class="n">Name</span> <span class="p">(</span><span class="n">length</span> <span class="o">+</span> <span class="n">padded</span> <span class="n">data</span><span class="p">)</span>               \
+<span class="o">/</span>                                                               <span class="o">/</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">/</span>                                                               <span class="o">/</span>
+\              <span class="n">Client</span> <span class="n">Name</span> <span class="p">(</span><span class="n">length</span> <span class="o">+</span> <span class="n">padded</span> <span class="n">data</span><span class="p">)</span>               \
+<span class="o">/</span>                                                               <span class="o">/</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">/</span>                                                               <span class="o">/</span>
+\             <span class="n">Client</span> <span class="n">Version</span> <span class="p">(</span><span class="n">length</span> <span class="o">+</span> <span class="n">padded</span> <span class="n">data</span><span class="p">)</span>             \
+<span class="o">/</span>                                                               <span class="o">/</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+</pre></div>
+</div>
+<section id="fields-hellomessage">
+<h3>Fields (HelloMessage)<a class="headerlink" href="#fields-hellomessage" title="Link to this heading"></a></h3>
+<p>The <strong>Device Name</strong> is a human readable (configured or auto detected) device
+name or host name, for the remote device.</p>
+<p>The <strong>Client Name</strong> and <strong>Client Version</strong> identifies the implementation. The
+values SHOULD  be simple strings identifying the implementation name, as a
+user would expect to see it, and the version string in the same manner. An
+example Client Name is “syncthing” and an example Client Version is “v0.7.2”.
+The Client Version field SHOULD follow the patterns laid out in the <a class="reference external" href="http://semver.org/">Semantic
+Versioning</a> standard.</p>
+</section>
+<section id="xdr">
+<h3>XDR<a class="headerlink" href="#xdr" title="Link to this heading"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">struct</span> <span class="n">HelloMessage</span> <span class="p">{</span>
+    <span class="n">string</span> <span class="n">DeviceName</span><span class="o">&lt;</span><span class="mi">64</span><span class="o">&gt;</span><span class="p">;</span>
+    <span class="n">string</span> <span class="n">ClientName</span><span class="o">&lt;</span><span class="mi">64</span><span class="o">&gt;</span><span class="p">;</span>
+    <span class="n">string</span> <span class="n">ClientVersion</span><span class="o">&lt;</span><span class="mi">64</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>Immediately after exchanging Hello messages, the connection should be
+dropped if device does not pass authentication.</p>
+</section>
+</section>
+<section id="post-authentication-messages">
+<h2>Post-authentication Messages<a class="headerlink" href="#post-authentication-messages" title="Link to this heading"></a></h2>
+<p>Every message starts with one 32 bit word indicating the message version, type
+and ID, followed by the length of the message. The header is in network byte
+order, i.e. big endian. In this document, in diagrams and text, “bit 0” refers
+to the <em>most significant</em> bit of a word; “bit 31” is thus the least
+significant bit of a 32 bit word.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="mi">0</span>                   <span class="mi">1</span>                   <span class="mi">2</span>                   <span class="mi">3</span>
+ <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">|</span>  <span class="n">Ver</span>  <span class="o">|</span>       <span class="n">Message</span> <span class="n">ID</span>      <span class="o">|</span>      <span class="n">Type</span>     <span class="o">|</span>   <span class="n">Reserved</span>  <span class="o">|</span><span class="n">C</span><span class="o">|</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">|</span>                            <span class="n">Length</span>                             <span class="o">|</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+</pre></div>
+</div>
+<p>For BEP v1 the <strong>Version</strong> field is set to zero. Future versions with
+incompatible message formats will increment the Version field. A message
+with an unknown version is a protocol error and MUST result in the
+connection being terminated. A client supporting multiple versions MAY
+retry with a different protocol version upon disconnection.</p>
+<p>The <strong>Message ID</strong> is set to a unique value for each transmitted Request
+message. In Response messages it is set to the Message ID of the corresponding
+Request message. The uniqueness requirement implies that no more than 4096
+request messages may be outstanding at any given moment. For message types
+that do not have a corresponding response (Cluster Configuration, Index, etc.)
+the Message ID field is irrelevant and SHOULD be set to zero.</p>
+<p>The <strong>Type</strong> field indicates the type of data following the message header
+and is one of the integers defined below. A message of an unknown type
+is a protocol error and MUST result in the connection being terminated.</p>
+<p>The <strong>Compression</strong> bit “C” indicates the compression used for the message.</p>
+<p>For C=0:</p>
+<ul class="simple">
+<li><p>The Length field contains the length, in bytes, of the uncompressed
+message data.</p></li>
+<li><p>The message is not compressed.</p></li>
+</ul>
+<p>For C=1:</p>
+<ul class="simple">
+<li><p>The Length field contains the length, in bytes, of the compressed
+message data plus a four byte uncompressed length field.</p></li>
+<li><p>The compressed message data is preceded by a 32 bit field denoting
+the length of the uncompressed message.</p></li>
+<li><p>The message data is compressed using the LZ4 format and algorithm
+described in <a class="reference external" href="http://www.lz4.org/">http://www.lz4.org/</a>.</p></li>
+</ul>
+<p>All data within the message (post decompression, if compression is in
+use) MUST be in XDR (RFC 1014) encoding. All fields shorter than 32 bits
+and all variable length data MUST be padded to a multiple of 32 bits.
+The actual data types in use by BEP, in XDR naming convention, are the
+following:</p>
+<dl class="simple">
+<dt>(unsigned) int:</dt><dd><p>(unsigned) 32 bit integer</p>
+</dd>
+<dt>(unsigned) hyper:</dt><dd><p>(unsigned) 64 bit integer</p>
+</dd>
+<dt>opaque&lt;&gt;</dt><dd><p>variable length opaque data</p>
+</dd>
+<dt>string&lt;&gt;</dt><dd><p>variable length string</p>
+</dd>
+</dl>
+<p>The transmitted length of string and opaque data is the length of actual
+data, excluding any added padding. The encoding of opaque&lt;&gt; and string&lt;&gt;
+are identical, the distinction being solely one of interpretation.
+Opaque data should not be interpreted but can be compared bytewise to
+other opaque data. All strings MUST use the Unicode UTF-8 encoding,
+normalization form C.</p>
+<section id="cluster-config-type-0">
+<h3>Cluster Config (Type = 0)<a class="headerlink" href="#cluster-config-type-0" title="Link to this heading"></a></h3>
+<p>This informational message provides information about the cluster
+configuration as it pertains to the current connection. A Cluster Config
+message MUST be the first message sent on a BEP connection. Additional
+Cluster Config messages MUST NOT be sent after the initial exchange.</p>
+<section id="graphical-representation">
+<h4>Graphical Representation<a class="headerlink" href="#graphical-representation" title="Link to this heading"></a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ClusterConfigMessage</span> <span class="n">Structure</span><span class="p">:</span>
+
+ <span class="mi">0</span>                   <span class="mi">1</span>                   <span class="mi">2</span>                   <span class="mi">3</span>
+ <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">|</span>                       <span class="n">Number</span> <span class="n">of</span> <span class="n">Folders</span>                       <span class="o">|</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">/</span>                                                               <span class="o">/</span>
+\                <span class="n">Zero</span> <span class="ow">or</span> <span class="n">more</span> <span class="n">Folder</span> <span class="n">Structures</span>                 \
+<span class="o">/</span>                                                               <span class="o">/</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">|</span>                       <span class="n">Number</span> <span class="n">of</span> <span class="n">Options</span>                       <span class="o">|</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">/</span>                                                               <span class="o">/</span>
+\                <span class="n">Zero</span> <span class="ow">or</span> <span class="n">more</span> <span class="n">Option</span> <span class="n">Structures</span>                 \
+<span class="o">/</span>                                                               <span class="o">/</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+
+<span class="n">Folder</span> <span class="n">Structure</span><span class="p">:</span>
+
+ <span class="mi">0</span>                   <span class="mi">1</span>                   <span class="mi">2</span>                   <span class="mi">3</span>
+ <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">|</span>                         <span class="n">Length</span> <span class="n">of</span> <span class="n">ID</span>                          <span class="o">|</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">/</span>                                                               <span class="o">/</span>
+\                     <span class="n">ID</span> <span class="p">(</span><span class="n">variable</span> <span class="n">length</span><span class="p">)</span>                      \
+<span class="o">/</span>                                                               <span class="o">/</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">/</span>                                                               <span class="o">/</span>
+\                 <span class="n">Label</span> <span class="p">(</span><span class="n">length</span> <span class="o">+</span> <span class="n">padded</span> <span class="n">data</span><span class="p">)</span>                  \
+<span class="o">/</span>                                                               <span class="o">/</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">|</span>                       <span class="n">Number</span> <span class="n">of</span> <span class="n">Devices</span>                       <span class="o">|</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">/</span>                                                               <span class="o">/</span>
+\                <span class="n">Zero</span> <span class="ow">or</span> <span class="n">more</span> <span class="n">Device</span> <span class="n">Structures</span>                 \
+<span class="o">/</span>                                                               <span class="o">/</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">|</span>                             <span class="n">Flags</span>                             <span class="o">|</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">|</span>                       <span class="n">Number</span> <span class="n">of</span> <span class="n">Options</span>                       <span class="o">|</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">/</span>                                                               <span class="o">/</span>
+\                <span class="n">Zero</span> <span class="ow">or</span> <span class="n">more</span> <span class="n">Option</span> <span class="n">Structures</span>                 \
+<span class="o">/</span>                                                               <span class="o">/</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+
+<span class="n">Device</span> <span class="n">Structure</span><span class="p">:</span>
+
+ <span class="mi">0</span>                   <span class="mi">1</span>                   <span class="mi">2</span>                   <span class="mi">3</span>
+ <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">|</span>                         <span class="n">Length</span> <span class="n">of</span> <span class="n">ID</span>                          <span class="o">|</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">/</span>                                                               <span class="o">/</span>
+\                     <span class="n">ID</span> <span class="p">(</span><span class="n">variable</span> <span class="n">length</span><span class="p">)</span>                      \
+<span class="o">/</span>                                                               <span class="o">/</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">|</span>                        <span class="n">Length</span> <span class="n">of</span> <span class="n">Name</span>                         <span class="o">|</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">/</span>                                                               <span class="o">/</span>
+\                    <span class="n">Name</span> <span class="p">(</span><span class="n">variable</span> <span class="n">length</span><span class="p">)</span>                     \
+<span class="o">/</span>                                                               <span class="o">/</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">|</span>                      <span class="n">Number</span> <span class="n">of</span> <span class="n">Addresses</span>                      <span class="o">|</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">|</span>                       <span class="n">Length</span> <span class="n">of</span> <span class="n">Address</span>                       <span class="o">|</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">/</span>                                                               <span class="o">/</span>
+\                   <span class="n">Address</span> <span class="p">(</span><span class="n">variable</span> <span class="n">length</span><span class="p">)</span>                   \
+<span class="o">/</span>                                                               <span class="o">/</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">|</span>                          <span class="n">Compression</span>                          <span class="o">|</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">|</span>                      <span class="n">Length</span> <span class="n">of</span> <span class="n">Cert</span> <span class="n">Name</span>                      <span class="o">|</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">/</span>                                                               <span class="o">/</span>
+\                  <span class="n">Cert</span> <span class="n">Name</span> <span class="p">(</span><span class="n">variable</span> <span class="n">length</span><span class="p">)</span>                  \
+<span class="o">/</span>                                                               <span class="o">/</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">|</span>                                                               <span class="o">|</span>
+<span class="o">+</span>                  <span class="n">Max</span> <span class="n">Local</span> <span class="n">Version</span> <span class="p">(</span><span class="mi">64</span> <span class="n">bits</span><span class="p">)</span>                  <span class="o">+</span>
+<span class="o">|</span>                                                               <span class="o">|</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">|</span>                             <span class="n">Flags</span>                             <span class="o">|</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">|</span>                       <span class="n">Number</span> <span class="n">of</span> <span class="n">Options</span>                       <span class="o">|</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">/</span>                                                               <span class="o">/</span>
+\                <span class="n">Zero</span> <span class="ow">or</span> <span class="n">more</span> <span class="n">Option</span> <span class="n">Structures</span>                 \
+<span class="o">/</span>                                                               <span class="o">/</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+
+<span class="n">Option</span> <span class="n">Structure</span><span class="p">:</span>
+
+ <span class="mi">0</span>                   <span class="mi">1</span>                   <span class="mi">2</span>                   <span class="mi">3</span>
+ <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">|</span>                         <span class="n">Length</span> <span class="n">of</span> <span class="n">Key</span>                         <span class="o">|</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">/</span>                                                               <span class="o">/</span>
+\                     <span class="n">Key</span> <span class="p">(</span><span class="n">variable</span> <span class="n">length</span><span class="p">)</span>                     \
+<span class="o">/</span>                                                               <span class="o">/</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">|</span>                        <span class="n">Length</span> <span class="n">of</span> <span class="n">Value</span>                        <span class="o">|</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">/</span>                                                               <span class="o">/</span>
+\                    <span class="n">Value</span> <span class="p">(</span><span class="n">variable</span> <span class="n">length</span><span class="p">)</span>                    \
+<span class="o">/</span>                                                               <span class="o">/</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+</pre></div>
+</div>
+</section>
+<section id="fields-clusterconfigmessage">
+<h4>Fields (ClusterConfigMessage)<a class="headerlink" href="#fields-clusterconfigmessage" title="Link to this heading"></a></h4>
+<p>The <strong>Folders</strong> field contains the list of folders that will be synchronized
+over the current connection.</p>
+<p>The <strong>Options</strong> field is a list of options that apply to the current
+connection. The options are used in an implementation specific manner. The
+options list is conceptually a map of keys to values, although it is
+transmitted in the form of a list of key and value pairs, both of string type.
+Key ID:s are implementation specific. An implementation MUST ignore unknown
+keys. An implementation MAY impose limits on the length keys and values. The
+options list may be used to inform devices of relevant local configuration
+options such as rate limiting or make recommendations about request
+parallelism, device priorities, etc. An empty options list is valid for
+devices not having any such information to share. Devices MAY NOT make any
+assumptions about peers acting in a specific manner as a result of sent
+options.</p>
+</section>
+<section id="fields-folder-structure">
+<h4>Fields (Folder Structure)<a class="headerlink" href="#fields-folder-structure" title="Link to this heading"></a></h4>
+<p>The <strong>ID</strong> field contains the folder ID, as a human readable string.</p>
+<p>The <strong>Label</strong> field contains the folder label, as human readable name for the folder.</p>
+<p>The <strong>Devices</strong> field is list of devices participating in sharing this folder.</p>
+<p>The <strong>Flags</strong> field contains flags that affect the behavior of the folder. The
+folder Flags field contains the following single bit flags:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="mi">0</span>                   <span class="mi">1</span>                   <span class="mi">2</span>                   <span class="mi">3</span>
+ <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">|</span>                           <span class="n">Reserved</span>                    <span class="o">|</span><span class="n">T</span><span class="o">|</span><span class="n">D</span><span class="o">|</span><span class="n">P</span><span class="o">|</span><span class="n">R</span><span class="o">|</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Bit 31 (“R”, Read Only)<span class="colon">:</span></dt>
+<dd class="field-odd"><p>is set for folders that the device will accept no updates from the network
+for.</p>
+</dd>
+<dt class="field-even">Bit 30 (“P”, Ignore Permissions)<span class="colon">:</span></dt>
+<dd class="field-even"><p>is set for folders that the device will not accept or announce file
+permissions for.</p>
+</dd>
+<dt class="field-odd">Bit 29 (“D”, Ignore Deletes)<span class="colon">:</span></dt>
+<dd class="field-odd"><p>is set for folders that the device will ignore deletes for.</p>
+</dd>
+<dt class="field-even">Bit 28 (“T”, Disable Temporary Indexes)<span class="colon">:</span></dt>
+<dd class="field-even"><p>is set for folders that will not dispatch and do not wish to receive
+progress updates about partially downloaded files via DownloadProgress
+messages.</p>
+</dd>
+</dl>
+<p>The <strong>Options</strong> field contains a list of options that apply to the folder.</p>
+</section>
+<section id="fields-device-structure">
+<h4>Fields (Device Structure)<a class="headerlink" href="#fields-device-structure" title="Link to this heading"></a></h4>
+<p>The device <strong>ID</strong> field is a 32 byte number that uniquely identifies the
+device. For instance, the reference implementation uses the SHA-256 of the
+device X.509 certificate.</p>
+<p>The <strong>Name</strong> field is a human readable name assigned to the described device
+by the sending device. It MAY be empty and it need not be unique.</p>
+<p>The list of <strong>Addressess</strong> is that used by the sending device to connect to
+the described device.</p>
+<p>The <strong>Compression</strong> field indicates the compression mode in use for this
+device and folder. The following values are valid:</p>
+<dl class="field-list simple">
+<dt class="field-odd">0<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Compress metadata. This enables compression of metadata messages such as Index.</p>
+</dd>
+<dt class="field-even">1<span class="colon">:</span></dt>
+<dd class="field-even"><p>Compression disabled. No compression is used on any message.</p>
+</dd>
+<dt class="field-odd">2<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Compress always. Metadata messages as well as Response messages are compressed.</p>
+</dd>
+</dl>
+<p>The <strong>Cert Name</strong> field indicates the expected certificate name for this
+device. It is commonly blank, indicating to use the implementation default.</p>
+<p>The <strong>Max Local Version</strong> field contains the highest local file
+version number of the files already known to be in the index sent by
+this device. If nothing is known about the index of a given device, this
+field MUST be set to zero. When receiving a Cluster Config message with
+a non-zero Max Local Version for the local device ID, a device MAY elect
+to send an Index Update message containing only files with higher local
+version numbers in place of the initial Index message.</p>
+<p>The <strong>Flags</strong> field indicates the sharing mode of the folder and other device
+&amp; folder specific settings. See the discussion on Sharing Modes. The Device
+Flags field contains the following single bit flags:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="mi">0</span>                   <span class="mi">1</span>                   <span class="mi">2</span>                   <span class="mi">3</span>
+ <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">|</span>          <span class="n">Reserved</span>         <span class="o">|</span><span class="n">Pri</span><span class="o">|</span>          <span class="n">Reserved</span>       <span class="o">|</span><span class="n">I</span><span class="o">|</span><span class="n">R</span><span class="o">|</span><span class="n">T</span><span class="o">|</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Bit 31 (“T”, Trusted)<span class="colon">:</span></dt>
+<dd class="field-odd"><p>is set for devices that participate in trusted
+mode.</p>
+</dd>
+<dt class="field-even">Bit 30 (“R”, Read Only)<span class="colon">:</span></dt>
+<dd class="field-even"><p>is set for devices that participate in read
+only mode.</p>
+</dd>
+<dt class="field-odd">Bit 29 (“I”, Introducer)<span class="colon">:</span></dt>
+<dd class="field-odd"><p>is set for devices that are trusted as
+cluster introducers.</p>
+</dd>
+<dt class="field-even">Bits 16 through 28<span class="colon">:</span></dt>
+<dd class="field-even"><p>are reserved and MUST be set to zero.</p>
+</dd>
+<dt class="field-odd">Bits 14-15 (“Pri”, Priority)<span class="colon">:</span></dt>
+<dd class="field-odd"><p>indicate the device’s upload priority for this
+folder. Possible values are:</p>
+<dl class="field-list simple">
+<dt class="field-odd">00<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The default. Normal priority.</p>
+</dd>
+<dt class="field-even">01<span class="colon">:</span></dt>
+<dd class="field-even"><p>High priority. Other devices SHOULD favour requesting files
+from this device over devices with normal or low priority.</p>
+</dd>
+<dt class="field-odd">10<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Low priority. Other devices SHOULD avoid requesting files from
+this device when they are available from other devices.</p>
+</dd>
+<dt class="field-even">11<span class="colon">:</span></dt>
+<dd class="field-even"><p>Sharing disabled. Other devices SHOULD NOT request files from
+this device.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Bits 0 through 14<span class="colon">:</span></dt>
+<dd class="field-even"><p>are reserved and MUST be set to zero.</p>
+</dd>
+</dl>
+<p>Exactly one of the T and R bits MUST be set.</p>
+<p>The <strong>Options</strong> field contains a list of options that apply to the device.</p>
+</section>
+<section id="id1">
+<h4>XDR<a class="headerlink" href="#id1" title="Link to this heading"></a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">struct</span> <span class="n">ClusterConfigMessage</span> <span class="p">{</span>
+    <span class="n">Folder</span> <span class="n">Folders</span><span class="o">&lt;</span><span class="mi">1000000</span><span class="o">&gt;</span><span class="p">;</span>
+    <span class="n">Option</span> <span class="n">Options</span><span class="o">&lt;</span><span class="mi">64</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="n">struct</span> <span class="n">Folder</span> <span class="p">{</span>
+    <span class="n">string</span> <span class="n">ID</span><span class="o">&lt;</span><span class="mi">256</span><span class="o">&gt;</span><span class="p">;</span>
+    <span class="n">string</span> <span class="n">Label</span><span class="o">&lt;</span><span class="mi">256</span><span class="o">&gt;</span><span class="p">;</span>
+    <span class="n">Device</span> <span class="n">Devices</span><span class="o">&lt;</span><span class="mi">1000000</span><span class="o">&gt;</span><span class="p">;</span>
+    <span class="n">unsigned</span> <span class="nb">int</span> <span class="n">Flags</span><span class="p">;</span>
+    <span class="n">Option</span> <span class="n">Options</span><span class="o">&lt;</span><span class="mi">64</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="n">struct</span> <span class="n">Device</span> <span class="p">{</span>
+    <span class="n">opaque</span> <span class="n">ID</span><span class="o">&lt;</span><span class="mi">32</span><span class="o">&gt;</span><span class="p">;</span>
+    <span class="n">string</span> <span class="n">Name</span><span class="o">&lt;</span><span class="mi">64</span><span class="o">&gt;</span><span class="p">;</span>
+    <span class="n">string</span> <span class="n">Addresses</span><span class="o">&lt;</span><span class="mi">64</span><span class="o">&gt;</span><span class="p">;</span>
+    <span class="n">unsigned</span> <span class="nb">int</span> <span class="n">Compression</span><span class="p">;</span>
+    <span class="n">string</span> <span class="n">CertName</span><span class="o">&lt;</span><span class="mi">64</span><span class="o">&gt;</span><span class="p">;</span>
+    <span class="n">hyper</span> <span class="n">MaxLocalVersion</span><span class="p">;</span>
+    <span class="n">unsigned</span> <span class="nb">int</span> <span class="n">Flags</span><span class="p">;</span>
+    <span class="n">Option</span> <span class="n">Options</span><span class="o">&lt;</span><span class="mi">64</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="n">struct</span> <span class="n">Option</span> <span class="p">{</span>
+    <span class="n">string</span> <span class="n">Key</span><span class="o">&lt;</span><span class="mi">64</span><span class="o">&gt;</span><span class="p">;</span>
+    <span class="n">string</span> <span class="n">Value</span><span class="o">&lt;</span><span class="mi">1024</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="index-type-1-and-index-update-type-6">
+<h3>Index (Type = 1) and Index Update (Type = 6)<a class="headerlink" href="#index-type-1-and-index-update-type-6" title="Link to this heading"></a></h3>
+<p>The Index and Index Update messages define the contents of the senders
+folder. An Index message represents the full contents of the folder and
+thus supersedes any previous index. An Index Update amends an existing
+index with new information, not affecting any entries not included in
+the message. An Index Update MAY NOT be sent unless preceded by an
+Index, unless a non-zero Max Local Version has been announced for the
+given folder by the peer device.</p>
+<section id="id2">
+<h4>Graphical Representation<a class="headerlink" href="#id2" title="Link to this heading"></a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">IndexMessage</span> <span class="n">Structure</span><span class="p">:</span>
+
+ <span class="mi">0</span>                   <span class="mi">1</span>                   <span class="mi">2</span>                   <span class="mi">3</span>
+ <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">|</span>                       <span class="n">Length</span> <span class="n">of</span> <span class="n">Folder</span>                        <span class="o">|</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">/</span>                                                               <span class="o">/</span>
+\                   <span class="n">Folder</span> <span class="p">(</span><span class="n">variable</span> <span class="n">length</span><span class="p">)</span>                    \
+<span class="o">/</span>                                                               <span class="o">/</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">|</span>                        <span class="n">Number</span> <span class="n">of</span> <span class="n">Files</span>                        <span class="o">|</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">/</span>                                                               <span class="o">/</span>
+\               <span class="n">Zero</span> <span class="ow">or</span> <span class="n">more</span> <span class="n">FileInfo</span> <span class="n">Structures</span>                \
+<span class="o">/</span>                                                               <span class="o">/</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">|</span>                             <span class="n">Flags</span>                             <span class="o">|</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">|</span>                       <span class="n">Number</span> <span class="n">of</span> <span class="n">Options</span>                       <span class="o">|</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">/</span>                                                               <span class="o">/</span>
+\                <span class="n">Zero</span> <span class="ow">or</span> <span class="n">more</span> <span class="n">Option</span> <span class="n">Structures</span>                 \
+<span class="o">/</span>                                                               <span class="o">/</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+
+<span class="n">FileInfo</span> <span class="n">Structure</span><span class="p">:</span>
+
+ <span class="mi">0</span>                   <span class="mi">1</span>                   <span class="mi">2</span>                   <span class="mi">3</span>
+ <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">|</span>                        <span class="n">Length</span> <span class="n">of</span> <span class="n">Name</span>                         <span class="o">|</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">/</span>                                                               <span class="o">/</span>
+\                    <span class="n">Name</span> <span class="p">(</span><span class="n">variable</span> <span class="n">length</span><span class="p">)</span>                     \
+<span class="o">/</span>                                                               <span class="o">/</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">|</span>                             <span class="n">Flags</span>                             <span class="o">|</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">|</span>                                                               <span class="o">|</span>
+<span class="o">+</span>                      <span class="n">Modified</span> <span class="p">(</span><span class="mi">64</span> <span class="n">bits</span><span class="p">)</span>                       <span class="o">+</span>
+<span class="o">|</span>                                                               <span class="o">|</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">/</span>                                                               <span class="o">/</span>
+\                   <span class="n">Version</span> <span class="p">(</span><span class="n">variable</span> <span class="n">length</span><span class="p">)</span>                   \
+<span class="o">/</span>                                                               <span class="o">/</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">|</span>                                                               <span class="o">|</span>
+<span class="o">+</span>                    <span class="n">Local</span> <span class="n">Version</span> <span class="p">(</span><span class="mi">64</span> <span class="n">bits</span><span class="p">)</span>                    <span class="o">+</span>
+<span class="o">|</span>                                                               <span class="o">|</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">|</span>                       <span class="n">Number</span> <span class="n">of</span> <span class="n">Blocks</span>                        <span class="o">|</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">/</span>                                                               <span class="o">/</span>
+\               <span class="n">Zero</span> <span class="ow">or</span> <span class="n">more</span> <span class="n">BlockInfo</span> <span class="n">Structures</span>               \
+<span class="o">/</span>                                                               <span class="o">/</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+
+<span class="n">Vector</span> <span class="n">Structure</span><span class="p">:</span>
+
+ <span class="mi">0</span>                   <span class="mi">1</span>                   <span class="mi">2</span>                   <span class="mi">3</span>
+ <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">|</span>                      <span class="n">Number</span> <span class="n">of</span> <span class="n">Counters</span>                       <span class="o">|</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">/</span>                                                               <span class="o">/</span>
+\                <span class="n">Zero</span> <span class="ow">or</span> <span class="n">more</span> <span class="n">Counter</span> <span class="n">Structures</span>                \
+<span class="o">/</span>                                                               <span class="o">/</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+
+<span class="n">Counter</span> <span class="n">Structure</span><span class="p">:</span>
+
+ <span class="mi">0</span>                   <span class="mi">1</span>                   <span class="mi">2</span>                   <span class="mi">3</span>
+ <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">|</span>                                                               <span class="o">|</span>
+<span class="o">+</span>                          <span class="n">ID</span> <span class="p">(</span><span class="mi">64</span> <span class="n">bits</span><span class="p">)</span>                         <span class="o">+</span>
+<span class="o">|</span>                                                               <span class="o">|</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">|</span>                                                               <span class="o">|</span>
+<span class="o">+</span>                        <span class="n">Value</span> <span class="p">(</span><span class="mi">64</span> <span class="n">bits</span><span class="p">)</span>                        <span class="o">+</span>
+<span class="o">|</span>                                                               <span class="o">|</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+
+
+<span class="n">BlockInfo</span> <span class="n">Structure</span><span class="p">:</span>
+
+ <span class="mi">0</span>                   <span class="mi">1</span>                   <span class="mi">2</span>                   <span class="mi">3</span>
+ <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">|</span>                             <span class="n">Size</span>                              <span class="o">|</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">|</span>                        <span class="n">Length</span> <span class="n">of</span> <span class="n">Hash</span>                         <span class="o">|</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">/</span>                                                               <span class="o">/</span>
+\                    <span class="n">Hash</span> <span class="p">(</span><span class="n">variable</span> <span class="n">length</span><span class="p">)</span>                     \
+<span class="o">/</span>                                                               <span class="o">/</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+</pre></div>
+</div>
+</section>
+<section id="fields-index-message">
+<h4>Fields (Index Message)<a class="headerlink" href="#fields-index-message" title="Link to this heading"></a></h4>
+<p>The <strong>Folder</strong> field identifies the folder that the index message pertains to.</p>
+<p><strong>Files</strong></p>
+<p>The <strong>Flags</strong> field is reserved for future use and MUST currently be set to
+zero.</p>
+<p>The <strong>Options</strong> list is implementation defined and as described in the
+ClusterConfig message section.</p>
+</section>
+<section id="fields-fileinfo-structure">
+<h4>Fields (FileInfo Structure)<a class="headerlink" href="#fields-fileinfo-structure" title="Link to this heading"></a></h4>
+<p>The <strong>Name</strong> is the file name path relative to the folder root. Like all
+strings in BEP, the Name is always in UTF-8 NFC regardless of operating
+system or file system specific conventions. The Name field uses the
+slash character (“/”) as path separator, regardless of the
+implementation’s operating system conventions. The combination of Folder
+and Name uniquely identifies each file in a cluster.</p>
+<p>The <strong>Flags</strong> field is made up of the following single bit flags:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="mi">0</span>                   <span class="mi">1</span>                   <span class="mi">2</span>                   <span class="mi">3</span>
+ <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">|</span>            <span class="n">Reserved</span>       <span class="o">|</span><span class="n">U</span><span class="o">|</span><span class="n">S</span><span class="o">|</span><span class="n">P</span><span class="o">|</span><span class="n">D</span><span class="o">|</span><span class="n">I</span><span class="o">|</span><span class="n">R</span><span class="o">|</span>   <span class="n">Unix</span> <span class="n">Perm</span><span class="o">.</span> <span class="o">&amp;</span> <span class="n">Mode</span>   <span class="o">|</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">The lower 12 bits<span class="colon">:</span></dt>
+<dd class="field-odd"><p>hold the common Unix permission and mode bits. An
+implementation MAY ignore or interpret these as is suitable on the
+host operating system.</p>
+</dd>
+<dt class="field-even">Bit 19 (“R”)<span class="colon">:</span></dt>
+<dd class="field-even"><p>is set when the file has been deleted. The block list
+SHALL be of length zero and the modification time indicates the time
+of deletion or, if the time of deletion is not reliably determinable,
+the last known modification time.</p>
+</dd>
+<dt class="field-odd">Bit 18 (“I”)<span class="colon">:</span></dt>
+<dd class="field-odd"><p>is set when the file is invalid and unavailable for
+synchronization. A peer MAY set this bit to indicate that it can
+temporarily not serve data for the file.</p>
+</dd>
+<dt class="field-even">Bit 17 (“D”)<span class="colon">:</span></dt>
+<dd class="field-even"><p>is set when the item represents a directory. The block
+list SHALL be of length zero.</p>
+</dd>
+<dt class="field-odd">Bit 16 (“P”)<span class="colon">:</span></dt>
+<dd class="field-odd"><p>is set when there is no permission information for the
+file. This is the case when it originates on a file system which
+does not support permissions. Changes to only permission bits SHOULD
+be disregarded on files with this bit set. The permissions bits MUST
+be set to the octal value 0666.</p>
+</dd>
+<dt class="field-even">Bit 15 (“S”)<span class="colon">:</span></dt>
+<dd class="field-even"><p>is set when the file is a symbolic link. The block list
+SHALL be of one or more blocks since the target of the symlink is
+stored within the blocks of the file.</p>
+</dd>
+<dt class="field-odd">Bit 14 (“U”)<span class="colon">:</span></dt>
+<dd class="field-odd"><p>is set when the symbolic links target does not exist. On
+systems where symbolic links have types, this bit being means that
+the default file symlink SHALL be used. If this bit is unset bit 19
+will decide the type of symlink to be created.</p>
+</dd>
+<dt class="field-even">Bit 0 through 13<span class="colon">:</span></dt>
+<dd class="field-even"><p>are reserved for future use and SHALL be set to
+zero.</p>
+</dd>
+</dl>
+<p>The <strong>Modified</strong> time is expressed as the number of seconds since the Unix
+Epoch (1970-01-01 00:00:00 UTC).</p>
+<p>The <strong>Version</strong> field is a version vector describing the updates performed
+to a file by all members in the cluster. Each counter in the version
+vector is an ID-Value tuple. The ID is used the first 64 bits of the
+device ID. The Value is a simple incrementing counter, starting at zero.
+The combination of Folder, Name and Version uniquely identifies the
+contents of a file at a given point in time.</p>
+<p>The <strong>Local Version</strong> field is the value of a device local monotonic clock
+at the time of last local database update to a file. The clock ticks on
+every local database update.</p>
+<p>The <strong>Blocks</strong> list contains the size and hash for each block in the file.
+Each block represents a 128 KiB slice of the file, except for the last
+block which may represent a smaller amount of data.</p>
+<p>The hash algorithm is implied by the <strong>Hash</strong> length. Currently, the hash
+MUST be 32 bytes long and computed by SHA256.</p>
+</section>
+<section id="id3">
+<h4>XDR<a class="headerlink" href="#id3" title="Link to this heading"></a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">struct</span> <span class="n">IndexMessage</span> <span class="p">{</span>
+    <span class="n">string</span> <span class="n">Folder</span><span class="o">&lt;</span><span class="mi">256</span><span class="o">&gt;</span><span class="p">;</span>
+    <span class="n">FileInfo</span> <span class="n">Files</span><span class="o">&lt;</span><span class="mi">1000000</span><span class="o">&gt;</span><span class="p">;</span>
+    <span class="n">unsigned</span> <span class="nb">int</span> <span class="n">Flags</span><span class="p">;</span>
+    <span class="n">Option</span> <span class="n">Options</span><span class="o">&lt;</span><span class="mi">64</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="n">struct</span> <span class="n">FileInfo</span> <span class="p">{</span>
+    <span class="n">string</span> <span class="n">Name</span><span class="o">&lt;</span><span class="mi">8192</span><span class="o">&gt;</span><span class="p">;</span>
+    <span class="n">unsigned</span> <span class="nb">int</span> <span class="n">Flags</span><span class="p">;</span>
+    <span class="n">hyper</span> <span class="n">Modified</span><span class="p">;</span>
+    <span class="n">Vector</span> <span class="n">Version</span><span class="p">;</span>
+    <span class="n">hyper</span> <span class="n">LocalVersion</span><span class="p">;</span>
+    <span class="n">BlockInfo</span> <span class="n">Blocks</span><span class="o">&lt;</span><span class="mi">10000000</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="n">struct</span> <span class="n">Vector</span> <span class="p">{</span>
+    <span class="n">Counter</span> <span class="n">Counters</span><span class="o">&lt;&gt;</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="n">struct</span> <span class="n">Counter</span> <span class="p">{</span>
+    <span class="n">unsigned</span> <span class="n">hyper</span> <span class="n">ID</span><span class="p">;</span>
+    <span class="n">unsigned</span> <span class="n">hyper</span> <span class="n">Value</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="n">struct</span> <span class="n">BlockInfo</span> <span class="p">{</span>
+    <span class="n">unsigned</span> <span class="nb">int</span> <span class="n">Size</span><span class="p">;</span>
+    <span class="n">opaque</span> <span class="n">Hash</span><span class="o">&lt;</span><span class="mi">64</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="request-type-2">
+<h3>Request (Type = 2)<a class="headerlink" href="#request-type-2" title="Link to this heading"></a></h3>
+<p>The Request message expresses the desire to receive a data block
+corresponding to a part of a certain file in the peer’s folder.</p>
+<section id="id4">
+<h4>Graphical Representation<a class="headerlink" href="#id4" title="Link to this heading"></a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">RequestMessage</span> <span class="n">Structure</span><span class="p">:</span>
+
+ <span class="mi">0</span>                   <span class="mi">1</span>                   <span class="mi">2</span>                   <span class="mi">3</span>
+ <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">|</span>                       <span class="n">Length</span> <span class="n">of</span> <span class="n">Folder</span>                        <span class="o">|</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">/</span>                                                               <span class="o">/</span>
+\                   <span class="n">Folder</span> <span class="p">(</span><span class="n">variable</span> <span class="n">length</span><span class="p">)</span>                    \
+<span class="o">/</span>                                                               <span class="o">/</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">|</span>                        <span class="n">Length</span> <span class="n">of</span> <span class="n">Name</span>                         <span class="o">|</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">/</span>                                                               <span class="o">/</span>
+\                    <span class="n">Name</span> <span class="p">(</span><span class="n">variable</span> <span class="n">length</span><span class="p">)</span>                     \
+<span class="o">/</span>                                                               <span class="o">/</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">|</span>                                                               <span class="o">|</span>
+<span class="o">+</span>                       <span class="n">Offset</span> <span class="p">(</span><span class="mi">64</span> <span class="n">bits</span><span class="p">)</span>                        <span class="o">+</span>
+<span class="o">|</span>                                                               <span class="o">|</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">|</span>                             <span class="n">Size</span>                              <span class="o">|</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">|</span>                        <span class="n">Length</span> <span class="n">of</span> <span class="n">Hash</span>                         <span class="o">|</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">/</span>                                                               <span class="o">/</span>
+\                    <span class="n">Hash</span> <span class="p">(</span><span class="n">variable</span> <span class="n">length</span><span class="p">)</span>                     \
+<span class="o">/</span>                                                               <span class="o">/</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">|</span>                             <span class="n">Flags</span>                             <span class="o">|</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">|</span>                       <span class="n">Number</span> <span class="n">of</span> <span class="n">Options</span>                       <span class="o">|</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">/</span>                                                               <span class="o">/</span>
+\                <span class="n">Zero</span> <span class="ow">or</span> <span class="n">more</span> <span class="n">Option</span> <span class="n">Structures</span>                 \
+<span class="o">/</span>                                                               <span class="o">/</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+</pre></div>
+</div>
+</section>
+<section id="fields">
+<h4>Fields<a class="headerlink" href="#fields" title="Link to this heading"></a></h4>
+<p>The Folder and Name fields are as documented for the Index message. The
+Offset and Size fields specify the region of the file to be transferred.
+This SHOULD equate to exactly one block as seen in an Index message.</p>
+<p>The Hash field MAY be set to the expected hash value of the block, or
+may be left empty (zero length). If set, the other device SHOULD ensure
+that the transmitted block matches the requested hash. The other device
+MAY reuse a block from a different file and offset having the same size
+and hash, if one exists.</p>
+<p>The <strong>Flags</strong> field is made up of the following single bit flags:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="mi">0</span>                   <span class="mi">1</span>                   <span class="mi">2</span>                   <span class="mi">3</span>
+ <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">|</span>                           <span class="n">Reserved</span>                          <span class="o">|</span><span class="n">T</span><span class="o">|</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Bit 31 (“T”, Temporary)<span class="colon">:</span></dt>
+<dd class="field-odd"><p>is set to indicate that the read should be performed
+from the temporary file (converting Name to it’s temporary form) and falling
+back to the non temporary file if any error occurs. Knowledge of content
+inside temporary files comes from DownloadProgress messages.</p>
+</dd>
+</dl>
+<p>The Options list is implementation defined and as described in the
+ClusterConfig message section.</p>
+</section>
+<section id="id5">
+<h4>XDR<a class="headerlink" href="#id5" title="Link to this heading"></a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">struct</span> <span class="n">RequestMessage</span> <span class="p">{</span>
+    <span class="n">string</span> <span class="n">Folder</span><span class="o">&lt;</span><span class="mi">64</span><span class="o">&gt;</span><span class="p">;</span>
+    <span class="n">string</span> <span class="n">Name</span><span class="o">&lt;</span><span class="mi">8192</span><span class="o">&gt;</span><span class="p">;</span>
+    <span class="n">hyper</span> <span class="n">Offset</span><span class="p">;</span>
+    <span class="nb">int</span> <span class="n">Size</span><span class="p">;</span>
+    <span class="n">opaque</span> <span class="n">Hash</span><span class="o">&lt;</span><span class="mi">64</span><span class="o">&gt;</span><span class="p">;</span>
+    <span class="n">unsigned</span> <span class="nb">int</span> <span class="n">Flags</span><span class="p">;</span>
+    <span class="n">Option</span> <span class="n">Options</span><span class="o">&lt;</span><span class="mi">64</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="response-type-3">
+<h3>Response (Type = 3)<a class="headerlink" href="#response-type-3" title="Link to this heading"></a></h3>
+<p>The Response message is sent in response to a Request message.</p>
+<section id="id6">
+<h4>Graphical Representation<a class="headerlink" href="#id6" title="Link to this heading"></a></h4>
+<p>ResponseMessage Structure:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="mi">0</span>                   <span class="mi">1</span>                   <span class="mi">2</span>                   <span class="mi">3</span>
+ <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">|</span>                        <span class="n">Length</span> <span class="n">of</span> <span class="n">Data</span>                         <span class="o">|</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">/</span>                                                               <span class="o">/</span>
+\                    <span class="n">Data</span> <span class="p">(</span><span class="n">variable</span> <span class="n">length</span><span class="p">)</span>                     \
+<span class="o">/</span>                                                               <span class="o">/</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">|</span>                             <span class="n">Code</span>                              <span class="o">|</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+</pre></div>
+</div>
+</section>
+<section id="id7">
+<h4>Fields<a class="headerlink" href="#id7" title="Link to this heading"></a></h4>
+<p>The <strong>Data</strong> field contains either a full 128 KiB block, a shorter block in
+the case of the last block in a file, or is empty (zero length) if the
+requested block is not available.</p>
+<p>The <strong>Code</strong> field contains an error code describing the reason a Request
+could not be fulfilled, in the case where a zero length Data was
+returned. The following values are defined:</p>
+<dl class="field-list simple">
+<dt class="field-odd">0<span class="colon">:</span></dt>
+<dd class="field-odd"><p>No Error (Data should be present)</p>
+</dd>
+<dt class="field-even">1<span class="colon">:</span></dt>
+<dd class="field-even"><p>Generic Error</p>
+</dd>
+<dt class="field-odd">2<span class="colon">:</span></dt>
+<dd class="field-odd"><p>No Such File (the requested file does not exist, or the offset is
+outside the acceptable range for the file)</p>
+</dd>
+<dt class="field-even">3<span class="colon">:</span></dt>
+<dd class="field-even"><p>Invalid (file exists but has invalid bit set or is otherwise
+unavailable)</p>
+</dd>
+</dl>
+</section>
+<section id="id8">
+<h4>XDR<a class="headerlink" href="#id8" title="Link to this heading"></a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">struct</span> <span class="n">ResponseMessage</span> <span class="p">{</span>
+    <span class="n">opaque</span> <span class="n">Data</span><span class="o">&lt;&gt;</span><span class="p">;</span>
+    <span class="nb">int</span> <span class="n">Code</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="downloadprogress-type-8">
+<h3>DownloadProgress (Type = 8)<a class="headerlink" href="#downloadprogress-type-8" title="Link to this heading"></a></h3>
+<p>The DownloadProgress message is used to notify remote devices about partial
+availability of files. By default, these messages are sent every 5 seconds,
+and only in the cases where progress or state changes have been detected.
+Each DownloadProgress message is addressed to a specific folder and MUST
+contain zero or more FileDownloadProgressUpdate structures.</p>
+<section id="id9">
+<h4>Graphical Representation<a class="headerlink" href="#id9" title="Link to this heading"></a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DownloadProgressMessage</span> <span class="n">Structure</span><span class="p">:</span>
+
+ <span class="mi">0</span>                   <span class="mi">1</span>                   <span class="mi">2</span>                   <span class="mi">3</span>
+ <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">/</span>                                                               <span class="o">/</span>
+\                 <span class="n">Folder</span> <span class="p">(</span><span class="n">length</span> <span class="o">+</span> <span class="n">padded</span> <span class="n">data</span><span class="p">)</span>                 \
+<span class="o">/</span>                                                               <span class="o">/</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">|</span>                       <span class="n">Number</span> <span class="n">of</span> <span class="n">Updates</span>                       <span class="o">|</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">/</span>                                                               <span class="o">/</span>
+\      <span class="n">Zero</span> <span class="ow">or</span> <span class="n">more</span> <span class="n">FileDownloadProgressUpdate</span> <span class="n">Structures</span>       \
+<span class="o">/</span>                                                               <span class="o">/</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">|</span>                             <span class="n">Flags</span>                             <span class="o">|</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">|</span>                       <span class="n">Number</span> <span class="n">of</span> <span class="n">Options</span>                       <span class="o">|</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">/</span>                                                               <span class="o">/</span>
+\                <span class="n">Zero</span> <span class="ow">or</span> <span class="n">more</span> <span class="n">Option</span> <span class="n">Structures</span>                 \
+<span class="o">/</span>                                                               <span class="o">/</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+
+<span class="n">FileDownloadProgressUpdate</span> <span class="n">Structure</span><span class="p">:</span>
+
+ <span class="mi">0</span>                   <span class="mi">1</span>                   <span class="mi">2</span>                   <span class="mi">3</span>
+ <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">|</span>                          <span class="n">Update</span> <span class="n">Type</span>                          <span class="o">|</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">/</span>                                                               <span class="o">/</span>
+\                  <span class="n">Name</span> <span class="p">(</span><span class="n">length</span> <span class="o">+</span> <span class="n">padded</span> <span class="n">data</span><span class="p">)</span>                  \
+<span class="o">/</span>                                                               <span class="o">/</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">/</span>                                                               <span class="o">/</span>
+\                      <span class="n">Version</span> <span class="n">Structure</span>                        \
+<span class="o">/</span>                                                               <span class="o">/</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">|</span>                    <span class="n">Number</span> <span class="n">of</span> <span class="n">Block</span> <span class="n">Indexes</span>                    <span class="o">|</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">/</span>                                                               <span class="o">/</span>
+<span class="o">|</span>                    <span class="n">Block</span> <span class="n">Indexes</span> <span class="p">(</span><span class="n">n</span> <span class="n">items</span><span class="p">)</span>                    <span class="o">|</span>
+<span class="o">/</span>                                                               <span class="o">/</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+</pre></div>
+</div>
+<p>Each</p>
+</section>
+<section id="fields-downloadprogress-message">
+<h4>Fields (DownloadProgress Message)<a class="headerlink" href="#fields-downloadprogress-message" title="Link to this heading"></a></h4>
+<p><strong>Folder</strong> represents the ID of the folder for which the update is being
+provided.</p>
+<p>The <strong>Flags</strong> field is reserved for future use and MUST currently be set to
+zero. The <strong>Options</strong> field contains a list of options that apply to the update.</p>
+</section>
+<section id="fields-filedownloadprogressupdate-structure">
+<h4>Fields (FileDownloadProgressUpdate Structure)<a class="headerlink" href="#fields-filedownloadprogressupdate-structure" title="Link to this heading"></a></h4>
+<p>The <strong>Update Type</strong> field is made up of the following single bit flags:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="mi">0</span>                   <span class="mi">1</span>                   <span class="mi">2</span>                   <span class="mi">3</span>
+ <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">|</span>                           <span class="n">Reserved</span>                          <span class="o">|</span><span class="n">F</span><span class="o">|</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Bit 31 (“F”, Forget)<span class="colon">:</span></dt>
+<dd class="field-odd"><p>is set to notify that the file that was previously
+advertised is no longer available (at least as a temporary file).</p>
+</dd>
+</dl>
+<p>The <strong>Name</strong> field defines the file name from the global index for which this
+update is being sent.</p>
+<p>The <strong>Version</strong> structure defines the version of the file for which this update
+is being sent.</p>
+<p><strong>Block Indexes</strong> is a list of positive integers, where each integer represents
+the index of the block in the FileInfo structure Blocks array that has become
+available for download.
+For example an integer with with value 3 represents that the data defined in the
+fourth BlockInfo structure of the FileInfo structure of that file is now available.
+Please note that matching should be done on <strong>Name</strong> AND <strong>Version</strong>.
+Furthermore, each update received is incremental, for example the initial update
+structure might contain indexes 0, 1, 2, an update 5 seconds later might contain
+indexes 3, 4, 5 which should be appended to the original list, which implies
+that blocks 0-5 are currently available.</p>
+<p>Block indexes MAY be added in any order.
+An implementation MUST NOT assume that block indexes are added in any specific
+order.</p>
+<p><strong>Forget</strong> bit being set implies that the file that was previously advertised
+is no longer available, therefore the list of block indexes should be truncated.</p>
+<p>Messages with <strong>Forget</strong> bit set MUST NOT have any block indexes.</p>
+<p>Any update message which is being sent for a different <strong>Version</strong> of the same
+file name must be preceded with an update message for the old version of that
+file with the <strong>Forget</strong> bit set.</p>
+<p>As a safeguard on the receiving side, value of <strong>Version</strong> changing between
+update messages implies that the file has changed, and that any indexes
+previously advertised are no longer available. The list of available block
+indexes MUST be replaced (rather than appended) with the indexes specified in
+this message.</p>
+</section>
+<section id="id10">
+<h4>XDR<a class="headerlink" href="#id10" title="Link to this heading"></a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">struct</span> <span class="n">DownloadProgressMessage</span> <span class="p">{</span>
+    <span class="n">string</span> <span class="n">Folder</span><span class="o">&lt;</span><span class="mi">64</span><span class="o">&gt;</span><span class="p">;</span>
+    <span class="n">FileDownloadProgressUpdate</span> <span class="n">Updates</span><span class="o">&lt;</span><span class="mi">1000000</span><span class="o">&gt;</span><span class="p">;</span>
+    <span class="n">unsigned</span> <span class="nb">int</span> <span class="n">Flags</span><span class="p">;</span>
+    <span class="n">Option</span> <span class="n">Options</span><span class="o">&lt;</span><span class="mi">64</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">struct</span> <span class="n">FileDownloadProgressUpdate</span> <span class="p">{</span>
+    <span class="n">unsigned</span> <span class="nb">int</span> <span class="n">UpdateType</span><span class="p">;</span>
+    <span class="n">string</span> <span class="n">Name</span><span class="o">&lt;</span><span class="mi">8192</span><span class="o">&gt;</span><span class="p">;</span>
+    <span class="n">Vector</span> <span class="n">Version</span><span class="p">;</span>
+    <span class="nb">int</span> <span class="n">BlockIndexes</span><span class="o">&lt;</span><span class="mi">1000000</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="ping-type-4">
+<h3>Ping (Type = 4)<a class="headerlink" href="#ping-type-4" title="Link to this heading"></a></h3>
+<p>The Ping message is used to determine that a connection is alive, and to keep
+connections alive through state tracking network elements such as firewalls
+and NAT gateways. The Ping message has no contents. A Ping message is sent
+every 90 seconds, if no other message has been sent in the preceding 90
+seconds.</p>
+</section>
+<section id="close-type-7">
+<h3>Close (Type = 7)<a class="headerlink" href="#close-type-7" title="Link to this heading"></a></h3>
+<p>The Close message MAY be sent to indicate that the connection will be
+torn down due to an error condition. A Close message MUST NOT be
+followed by further messages.</p>
+<section id="id11">
+<h4>Graphical Representation<a class="headerlink" href="#id11" title="Link to this heading"></a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CloseMessage</span> <span class="n">Structure</span><span class="p">:</span>
+
+ <span class="mi">0</span>                   <span class="mi">1</span>                   <span class="mi">2</span>                   <span class="mi">3</span>
+ <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="mi">1</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">|</span>                       <span class="n">Length</span> <span class="n">of</span> <span class="n">Reason</span>                        <span class="o">|</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">/</span>                                                               <span class="o">/</span>
+\                   <span class="n">Reason</span> <span class="p">(</span><span class="n">variable</span> <span class="n">length</span><span class="p">)</span>                    \
+<span class="o">/</span>                                                               <span class="o">/</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+<span class="o">|</span>                             <span class="n">Code</span>                              <span class="o">|</span>
+<span class="o">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span>
+</pre></div>
+</div>
+</section>
+<section id="id12">
+<h4>Fields<a class="headerlink" href="#id12" title="Link to this heading"></a></h4>
+<p>The <strong>Reason</strong> field contains a human description of the error condition,
+suitable for consumption by a human. The <strong>Code</strong> field is for a machine
+readable error code. Codes are reserved for future use and MUST
+currently be set to zero.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">struct</span> <span class="n">CloseMessage</span> <span class="p">{</span>
+    <span class="n">string</span> <span class="n">Reason</span><span class="o">&lt;</span><span class="mi">1024</span><span class="o">&gt;</span><span class="p">;</span>
+    <span class="nb">int</span> <span class="n">Code</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="sharing-modes">
+<h2>Sharing Modes<a class="headerlink" href="#sharing-modes" title="Link to this heading"></a></h2>
+<section id="trusted">
+<h3>Trusted<a class="headerlink" href="#trusted" title="Link to this heading"></a></h3>
+<p>Trusted mode is the default sharing mode. Updates are exchanged in both
+directions.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+------------+</span>     <span class="n">Updates</span>      <span class="o">/---------</span>\
+<span class="o">|</span>            <span class="o">|</span>  <span class="o">-----------&gt;</span>   <span class="o">/</span>           \
+<span class="o">|</span>   <span class="n">Device</span>   <span class="o">|</span>                 <span class="o">|</span>  <span class="n">Cluster</span>  <span class="o">|</span>
+<span class="o">|</span>            <span class="o">|</span>  <span class="o">&lt;-----------</span>   \           <span class="o">/</span>
+<span class="o">+------------+</span>     <span class="n">Updates</span>      \<span class="o">---------/</span>
+</pre></div>
+</div>
+</section>
+<section id="read-only">
+<h3>Read Only<a class="headerlink" href="#read-only" title="Link to this heading"></a></h3>
+<p>In read only mode, a device does not apply any updates from the cluster,
+but publishes changes of its local folder to the cluster as usual.
+The local folder can be seen as a “master copy” that is never affected
+by the actions of other cluster devices.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+------------+</span>     <span class="n">Updates</span>      <span class="o">/---------</span>\
+<span class="o">|</span>            <span class="o">|</span>  <span class="o">-----------&gt;</span>   <span class="o">/</span>           \
+<span class="o">|</span>   <span class="n">Device</span>   <span class="o">|</span>                 <span class="o">|</span>  <span class="n">Cluster</span>  <span class="o">|</span>
+<span class="o">|</span>            <span class="o">|</span>                 \           <span class="o">/</span>
+<span class="o">+------------+</span>                  \<span class="o">---------/</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="message-limits">
+<h2>Message Limits<a class="headerlink" href="#message-limits" title="Link to this heading"></a></h2>
+<p>An implementation MAY impose reasonable limits on the length of messages
+and message fields to aid robustness in the face of corruption or broken
+implementations. These limits, if imposed, SHOULD NOT be more
+restrictive than the following. An implementation should strive to keep
+messages short and to the point, favouring more and smaller messages
+over fewer and larger. For example, favour a smaller Index message
+followed by one or more Index Update messages rather than sending a very
+large Index message.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Message Type</p></th>
+<th class="head"><p>Field</p></th>
+<th class="head"><p>Limit</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td colspan="3"><p><strong>All Messages</strong></p></td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+<td><p>Total length</p></td>
+<td><p>512 MiB</p></td>
+</tr>
+<tr class="row-even"><td colspan="3"><p><strong>Index and Index Update Messages</strong></p></td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+<td><p>Folder</p></td>
+<td><p>64 bytes</p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+<td><p>Number of Files</p></td>
+<td><p>1.000.000</p></td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+<td><p>Name</p></td>
+<td><p>8192 bytes</p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+<td><p>Number of Blocks</p></td>
+<td><p>10.000.000</p></td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+<td><p>Hash</p></td>
+<td><p>64 bytes</p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+<td><p>Number of Counters</p></td>
+<td><p>1.000.000</p></td>
+</tr>
+<tr class="row-odd"><td colspan="3"><p><strong>Request Messages</strong></p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+<td><p>Folder</p></td>
+<td><p>64 bytes</p></td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+<td><p>Name</p></td>
+<td><p>8192 bytes</p></td>
+</tr>
+<tr class="row-even"><td colspan="3"><p><strong>Response Messages</strong></p></td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+<td><p>Data</p></td>
+<td><p>256 KiB</p></td>
+</tr>
+<tr class="row-even"><td colspan="3"><p><strong>Cluster Config Message</strong></p></td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+<td><p>Number of Folders</p></td>
+<td><p>1.000.000</p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+<td><p>Number of Devices</p></td>
+<td><p>1.000.000</p></td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+<td><p>Number of Options</p></td>
+<td><p>64</p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+<td><p>Key</p></td>
+<td><p>64 bytes</p></td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+<td><p>Value</p></td>
+<td><p>1024 bytes</p></td>
+</tr>
+<tr class="row-even"><td colspan="3"><p><strong>Download Progress Messages</strong></p></td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+<td><p>Folder</p></td>
+<td><p>64 bytes</p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+<td><p>Number of Updates</p></td>
+<td><p>1.000.000</p></td>
+</tr>
+<tr class="row-odd"><td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+<td><p>Name</p></td>
+<td><p>8192 bytes</p></td>
+</tr>
+<tr class="row-even"><td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+<td><p>Number of Indexes</p></td>
+<td><p>1.000.000</p></td>
+</tr>
+</tbody>
+</table>
+<p>The currently defined values allow maximum file size of 1220 GiB
+(10.000.000 x 128 KiB). The maximum message size covers an Index message
+for the maximum file.</p>
+</section>
+<section id="example-exchange">
+<h2>Example Exchange<a class="headerlink" href="#example-exchange" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>#</p></th>
+<th class="head"><p>A</p></th>
+<th class="head"><p>B</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>ClusterConfiguration-&gt;</p></td>
+<td><p>&lt;-ClusterConfiguration</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>Index-&gt;</p></td>
+<td><p>&lt;-Index</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>IndexUpdate-&gt;</p></td>
+<td><p>&lt;-IndexUpdate</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>IndexUpdate-&gt;</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>Request-&gt;</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>Request-&gt;</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>Request-&gt;</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>Request-&gt;</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>9</p></td>
+<td></td>
+<td><p>&lt;-Response</p></td>
+</tr>
+<tr class="row-odd"><td><p>10</p></td>
+<td></td>
+<td><p>&lt;-Response</p></td>
+</tr>
+<tr class="row-even"><td><p>11</p></td>
+<td></td>
+<td><p>&lt;-Response</p></td>
+</tr>
+<tr class="row-odd"><td><p>12</p></td>
+<td></td>
+<td><p>&lt;-Response</p></td>
+</tr>
+<tr class="row-even"><td><p>13</p></td>
+<td><p>Index Update-&gt;</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>…</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>14</p></td>
+<td></td>
+<td><p>&lt;-Ping</p></td>
+</tr>
+<tr class="row-odd"><td><p>15</p></td>
+<td><p>Ping-&gt;</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>The connection is established and at 1. both peers send ClusterConfiguration
+messages and then Index records. The Index records are received and both peers
+recompute their knowledge of the data in the cluster. In this example, peer A
+has four missing or outdated blocks. At 5 through 8 peer A sends requests for
+these blocks. The requests are received by peer B, who retrieves the data from
+the folder and transmits Response records (9 through 12). Device A updates
+their folder contents and transmits an Index Update message (13). Both peers
+enter idle state after 13. At some later time 14, the ping timer on device B
+expires and a Ping message is sent. The same process occurs for device A at
+15.</p>
+</section>
+<section id="examples-of-strong-cipher-suites">
+<h2>Examples of Strong Cipher Suites<a class="headerlink" href="#examples-of-strong-cipher-suites" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>ID</p></th>
+<th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0x009F</p></td>
+<td><p>DHE-RSA-AES256-GCM-SHA384</p></td>
+<td><p>TLSv1.2 DH RSA AESGCM(256) AEAD</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x006B</p></td>
+<td><p>DHE-RSA-AES256-SHA256</p></td>
+<td><p>TLSv1.2 DH RSA AES(256) SHA256</p></td>
+</tr>
+<tr class="row-even"><td><p>0xC030</p></td>
+<td><p>ECDHE-RSA-AES256-GCM-SHA384</p></td>
+<td><p>TLSv1.2 ECDH RSA AESGCM(256) AEAD</p></td>
+</tr>
+<tr class="row-odd"><td><p>0xC028</p></td>
+<td><p>ECDHE-RSA-AES256-SHA384</p></td>
+<td><p>TLSv1.2 ECDH RSA AES(256) SHA384</p></td>
+</tr>
+<tr class="row-even"><td><p>0x009E</p></td>
+<td><p>DHE-RSA-AES128-GCM-SHA256</p></td>
+<td><p>TLSv1.2 DH RSA AESGCM(128) AEAD</p></td>
+</tr>
+<tr class="row-odd"><td><p>0x0067</p></td>
+<td><p>DHE-RSA-AES128-SHA256</p></td>
+<td><p>TLSv1.2 DH RSA AES(128) SHA256</p></td>
+</tr>
+<tr class="row-even"><td><p>0xC02F</p></td>
+<td><p>ECDHE-RSA-AES128-GCM-SHA256</p></td>
+<td><p>TLSv1.2 ECDH RSA AESGCM(128) AEAD</p></td>
+</tr>
+<tr class="row-odd"><td><p>0xC027</p></td>
+<td><p>ECDHE-RSA-AES128-SHA256</p></td>
+<td><p>TLSv1.2 ECDH RSA AES(128) SHA256</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Specifications" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="globaldisco-v3.html" class="btn btn-neutral float-right" title="Global Discovery v3" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+      <span class="lastupdated">Last updated on Jul 27, 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
