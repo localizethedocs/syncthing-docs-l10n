@@ -127,7 +127,7 @@ msgstr ""
 
 #: ../../../intro/gui.rst:49
 msgid "Cleaning Versions"
-msgstr ""
+msgstr "清理版本"
 
 #: ../../../intro/gui.rst:50
 msgid "while removing obsolete files from the .stversions folder."
@@ -154,7 +154,7 @@ msgstr ""
 
 #: ../../../intro/gui.rst:62
 msgid "Global State"
-msgstr ""
+msgstr "全局狀態"
 
 #: ../../../intro/gui.rst:63
 msgid ""
@@ -166,7 +166,7 @@ msgstr ""
 
 #: ../../../intro/gui.rst:68
 msgid "Local State"
-msgstr ""
+msgstr "局部狀態"
 
 #: ../../../intro/gui.rst:69
 msgid ""
@@ -223,7 +223,7 @@ msgstr ""
 
 #: ../../../intro/gui.rst:99
 msgid "Folder ID"
-msgstr ""
+msgstr "資料夾 ID"
 
 #: ../../../intro/gui.rst:100
 msgid ""

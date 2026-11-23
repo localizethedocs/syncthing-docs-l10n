@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../advanced/folder-filesystem-type.rst:2
 msgid "filesystemType"
-msgstr ""
+msgstr "filesystemType"
 
 #: ../../../advanced/folder-filesystem-type.rst:4
 msgid ""

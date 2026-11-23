@@ -36,4 +36,4 @@ msgstr ""
 
 #: ../../../advanced/folder-send-ownership.rst:13
 msgid ":doc:`folder-sync-ownership`"
-msgstr ""
+msgstr ":doc:`folder-sync-ownership`"

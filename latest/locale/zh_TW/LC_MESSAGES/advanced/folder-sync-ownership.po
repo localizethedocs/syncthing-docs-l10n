@@ -143,4 +143,4 @@ msgstr ""
 
 #: ../../../advanced/folder-sync-ownership.rst:74
 msgid ":doc:`folder-send-ownership`"
-msgstr ""
+msgstr ":doc:`folder-send-ownership`"

@@ -647,7 +647,7 @@ msgstr ""
 
 #: ../../../includes/env-vars.rst:13
 msgid "REST API"
-msgstr ""
+msgstr "REST API"
 
 #: ../../../includes/env-vars.rst:14
 msgid "beacon"
@@ -811,7 +811,7 @@ msgstr ""
 
 #: ../../../includes/env-vars.rst:55
 msgid "File versioning"
-msgstr ""
+msgstr "檔案版本控制"
 
 #: ../../../includes/env-vars.rst:56
 msgid "watchaggregator"
