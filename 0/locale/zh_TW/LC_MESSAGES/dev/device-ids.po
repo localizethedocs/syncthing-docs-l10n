@@ -113,7 +113,7 @@ msgstr ""
 
 #: ../../../dev/device-ids.rst:71
 msgid "Device IDs"
-msgstr ""
+msgstr "裝置 ID"
 
 #: ../../../dev/device-ids.rst:73
 msgid ""
@@ -134,7 +134,7 @@ msgstr ""
 
 #: ../../../dev/device-ids.rst:84
 msgid "MFZWI3DBONSGYYLTMRWGC43ENRQXGZDMMFZWI3DBONSGYYLTMRWA===="
-msgstr ""
+msgstr "MFZWI3DBONSGYYLTMRWGC43ENRQXGZDMMFZWI3DBONSGYYLTMRWA===="
 
 #: ../../../dev/device-ids.rst:86
 msgid ""

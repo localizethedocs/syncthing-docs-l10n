@@ -31,7 +31,7 @@ msgstr ""
 
 #: ../../../dev/building.rst:13
 msgid "Branches and Tags"
-msgstr ""
+msgstr "分支與標記"
 
 #: ../../../dev/building.rst:15
 msgid ""
@@ -155,7 +155,7 @@ msgstr ""
 
 #: ../../../dev/building.rst:99
 msgid "Subcommands and Options"
-msgstr ""
+msgstr "子命令與選項"
 
 #: ../../../dev/building.rst:101
 msgid "The following ``build.go`` subcommands and options exist."
@@ -163,7 +163,7 @@ msgstr ""
 
 #: ../../../dev/building.rst:103
 msgid "``go run build.go install``"
-msgstr ""
+msgstr "``go run build.go install``"
 
 #: ../../../dev/building.rst:104
 msgid ""
@@ -173,7 +173,7 @@ msgstr ""
 
 #: ../../../dev/building.rst:107
 msgid "``go run build.go build``"
-msgstr ""
+msgstr "``go run build.go build``"
 
 #: ../../../dev/building.rst:108
 msgid ""
@@ -211,7 +211,7 @@ msgstr ""
 
 #: ../../../dev/building.rst:122
 msgid "``go run build.go zip``"
-msgstr ""
+msgstr "``go run build.go zip``"
 
 #: ../../../dev/building.rst:123
 msgid ""

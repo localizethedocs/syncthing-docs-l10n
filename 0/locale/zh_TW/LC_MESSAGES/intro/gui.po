@@ -94,7 +94,7 @@ msgstr ""
 
 #: ../../../intro/gui.rst:36
 msgid "Global State"
-msgstr ""
+msgstr "全局狀態"
 
 #: ../../../intro/gui.rst:37
 msgid ""
@@ -106,7 +106,7 @@ msgstr ""
 
 #: ../../../intro/gui.rst:39
 msgid "Local State"
-msgstr ""
+msgstr "局部狀態"
 
 #: ../../../intro/gui.rst:40
 msgid ""

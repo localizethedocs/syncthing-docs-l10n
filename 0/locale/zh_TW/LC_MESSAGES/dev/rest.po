@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../../dev/rest.rst:4
 msgid "REST API"
-msgstr ""
+msgstr "REST API"
 
 #: ../../../dev/rest.rst:7
 msgid "Description"

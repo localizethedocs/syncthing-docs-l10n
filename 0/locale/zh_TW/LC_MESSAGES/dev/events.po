@@ -59,7 +59,7 @@ msgstr ""
 
 #: ../../../dev/events.rst:30
 msgid "Event Structure"
-msgstr ""
+msgstr "事件結構"
 
 #: ../../../dev/events.rst:32
 msgid "Each event is represented by an object similar to the following::"
