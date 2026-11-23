@@ -169,6 +169,8 @@ msgid ""
 "$ git checkout release\n"
 "$ git merge --ff-only main"
 msgstr ""
+"$ git checkout release\n"
+"$ git merge --ff-only main"
 
 #: ../../../dev/release-creation.rst:66
 msgid ""
@@ -221,7 +223,7 @@ msgstr ""
 
 #: ../../../dev/release-creation.rst:89
 msgid "Build the Packages"
-msgstr ""
+msgstr "建置軟體包"
 
 #: ../../../dev/release-creation.rst:91
 msgid ""
@@ -240,7 +242,7 @@ msgstr ""
 
 #: ../../../dev/release-creation.rst:96
 msgid "Create the GitHub release"
-msgstr ""
+msgstr "創建 GitHub 發行版"
 
 #: ../../../dev/release-creation.rst:98
 msgid ""
@@ -253,6 +255,9 @@ msgid ""
 "jb@secure$ sudo su - release\n"
 "release@secure$"
 msgstr ""
+"jb@laptop$ ssh secure.syncthing.net\n"
+"jb@secure$ sudo su - release\n"
+"release@secure$"
 
 #: ../../../dev/release-creation.rst:106
 msgid ""
@@ -263,7 +268,7 @@ msgstr ""
 
 #: ../../../dev/release-creation.rst:108
 msgid "$ grt release v0.14.50-rc.1"
-msgstr ""
+msgstr "$ grt release v0.14.50-rc.1"
 
 #: ../../../dev/release-creation.rst:112
 msgid ""
@@ -303,7 +308,7 @@ msgstr ""
 
 #: ../../../dev/release-creation.rst:131
 msgid "$ upload-release /home/incoming/build-1234-v0.14.50"
-msgstr ""
+msgstr "$ upload-release /home/incoming/build-1234-v0.14.50"
 
 #: ../../../dev/release-creation.rst:135
 msgid "Publishes the regular release archives to GitHub."
@@ -321,7 +326,7 @@ msgstr ""
 
 #: ../../../dev/release-creation.rst:142
 msgid "$ ./deploy-web"
-msgstr ""
+msgstr "$ ./deploy-web"
 
 #: ../../../dev/release-creation.rst:147
 msgid "Stable Releases - Create a post on the forum"

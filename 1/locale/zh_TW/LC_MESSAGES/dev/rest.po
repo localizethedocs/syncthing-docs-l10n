@@ -19,15 +19,15 @@ msgstr ""
 
 #: ../../../dev/rest.rst:50
 msgid "/rest/config/..."
-msgstr ""
+msgstr "/rest/config/..."
 
 #: ../../../dev/rest.rst:116
 msgid "/rest/debug/..."
-msgstr ""
+msgstr "/rest/debug/..."
 
 #: ../../../dev/rest.rst:2
 msgid "REST API"
-msgstr ""
+msgstr "REST API"
 
 #: ../../../dev/rest.rst:4
 msgid ""

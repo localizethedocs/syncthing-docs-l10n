@@ -34,7 +34,7 @@ msgstr ""
 
 #: ../../../advanced/option-connection-limits.rst:15
 msgid "Mechanism"
-msgstr ""
+msgstr "機制"
 
 #: ../../../advanced/option-connection-limits.rst:17
 msgid ""
