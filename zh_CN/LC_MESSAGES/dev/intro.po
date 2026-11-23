@@ -1,0 +1,64 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2026, The Syncthing Authors
+# This file is distributed under the same license as the Syncthing package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Syncthing latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-26 16:07+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../dev/intro.rst:2
+msgid "Syncthing Development"
+msgstr ""
+
+#: ../../../dev/intro.rst:5
+msgid "Controlling Syncthing from External Applications"
+msgstr ""
+
+#: ../../../dev/intro.rst:7
+msgid ""
+"People all over the world have developed a number of :ref:`useful "
+"applications <contributions>` that build around the Syncthing core, such as "
+"tray notifications and Android support. These are made possible using two "
+"APIs:"
+msgstr ""
+
+#: ../../../dev/intro.rst:11
+msgid ""
+"A long polling interface for exposing events from the core utility to an "
+"external party. This :doc:`/dev/events` is useful for being notified of when "
+"changes to files, network connections or sync status occur."
+msgstr ""
+
+#: ../../../dev/intro.rst:15
+msgid ""
+"A :doc:`/dev/rest` for controlling the operation of Syncthing and directly "
+"querying for current status."
+msgstr ""
+
+#: ../../../dev/intro.rst:18
+msgid ""
+"If this covers what you need to do, there is no need to delve deeper. "
+"However, if you would like to add functionality to Syncthing itself, or "
+"correct a bug or two in there, please read on."
+msgstr ""
+
+#: ../../../dev/intro.rst:24
+msgid "Contributing to Syncthing"
+msgstr ""
+
+#: ../../../dev/intro.rst:26
+msgid ""
+"Please see `the contribution guidelines <https://github.com/syncthing/"
+"syncthing/blob/main/CONTRIBUTING.md>`__ in the main repository."
+msgstr ""
